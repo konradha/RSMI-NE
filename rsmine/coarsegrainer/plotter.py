@@ -157,7 +157,7 @@ def plot_filter_series(coarse_grainer, series_skip=1, filter_index=None, filter_
 def plot_fancy_rsmimax(estimates, filters, opt_params, CG_params, #generator, 
                         mi_bound=r'$\rm InfoNCE$', series_skip=1, EMA_span=100, 
                         filter_lim=0.5, fontsize=9, figsize=[8,6], 
-                        font_family='helvetica', interpolation='none', 
+                        font_family='sans-serif', interpolation='none', 
                         cmap='coolwarm', fig_id=None, save=False):
 
     matplotlib.style.use('classic')
@@ -209,7 +209,7 @@ def plot_fancy_rsmimax(estimates, filters, opt_params, CG_params, #generator,
     ax1.set_xlabel(r'$\rm{iterations}$')
     ax1.set_ylabel(r'$I_\Lambda(\mathcal{H}:\mathcal{E})$')
     p1 = ax1.plot(mis, label=mi_bound, color='black', alpha=0.3)[0]
-    ax1.plot(mis_smooth, c=p1.get_color(), label=mi_bound+r' $\rm{EMA}$')
+    ax1.plot(mis_smooth, c=p1.get_color(), label='EMA')
     #p1 = ax1.plot(mis, label='$\\rm{InfoNCE}$', color='lime', alpha=0.3)[0]
     #ax1.plot(mis_smooth, c=p1.get_color(), label='$\\rm{InfoNCE}$'+' $\\rm{EMA}$')
     ax1.legend(frameon=False, bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -295,7 +295,7 @@ def plot_reference_graph():
 def plot_fancy_rsmimax_graph(estimates, filters, nodes, nodepos, edges, V_edgelist, opt_params, CG_params, #generator, 
                         mi_bound=r'$\rm InfoNCE$', series_skip=1, EMA_span=100, 
                         filter_lim=0.5, fontsize=9, figsize=[8,6], 
-                        font_family='helvetica', interpolation='none', 
+                        font_family='sans-serif', interpolation='none', 
                         cmap='coolwarm', save=False):
 
     matplotlib.style.use('classic')
@@ -345,7 +345,7 @@ def plot_fancy_rsmimax_graph(estimates, filters, nodes, nodepos, edges, V_edgeli
     ax1.set_xlabel(r'$\rm{iterations}$')
     ax1.set_ylabel(r'$I_\Lambda(\mathcal{H}:\mathcal{E})$')
     p1 = ax1.plot(mis, label=mi_bound, color='black', alpha=0.3)[0]
-    ax1.plot(mis_smooth, c=p1.get_color(), label=mi_bound+r' $\rm{EMA}$')
+    ax1.plot(mis_smooth, c=p1.get_color(), label='EMA')
     #p1 = ax1.plot(mis, label='$\\rm{InfoNCE}$', color='lime', alpha=0.3)[0]
     #ax1.plot(mis_smooth, c=p1.get_color(), label='$\\rm{InfoNCE}$'+' $\\rm{EMA}$')
     ax1.legend(frameon=False, bbox_to_anchor=(1.05, 1), loc='upper left')
