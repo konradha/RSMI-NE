@@ -100,18 +100,23 @@ class Conv3DSingle(tfkl.Layer):
 
     self.ws = self.add_weight(
         name="ws",
-        shape=input_shape + (hidden_dim,),
+        shape=input_shape + (visible_dim,) + (hidden_dim,),
         initializer=initializer,
         trainable=True)
 
   def call(self, inputs):
     """Computes the dot product between the input and kernel weights.
 
+    The input is (t, i, j, k, a, d): three spatial axes, the component axis
+    a (visible_dim) and the one-hot/category axis d. The kernel is
+    (i, j, k, a, b); b is the coarse-grained component. The category axis d
+    is preserved, matching Conv2DSingle.
+
     Keyword arguments:
     inputs -- tensor encoding the visible block to be coarse-grained
     """
 
-    return tf.einsum('tijkl,ijks->tsl', inputs, self.ws)
+    return tf.einsum('tijkad,ijkab->tbd', inputs, self.ws)
 
     
 class ConvGraphSingle(tfkl.Layer):
@@ -353,16 +358,20 @@ class CoarseGrainer(tf.keras.Model):
 
         if use_probs:
           self.embedder = tfkl.Lambda(lambda x: tfd.RelaxedOneHotCategorical(
-                                self.tau, logits=tf.nn.log_softmax(x, axis=1)).sample())
-          # stack the convolution, activation and embedding layers
-          self._Λ = tf.keras.Sequential([self.coarse_grainer, 
-                                         self.embedder]) # TODO: squeeze the output?
+                                self.tau, logits=tf.nn.log_softmax(x, axis=-1)).sample())
+          # stack the convolution and embedding layers; flatten the component
+          # axis but keep the categorical axis contiguous (last).
+          self._Λ = tf.keras.Sequential([self.coarse_grainer,
+                                         self.embedder,
+                                         tfkl.Flatten()])
         elif use_logits:
           self.embedder = tfkl.Lambda(lambda x: tfd.RelaxedOneHotCategorical(
-                                      self.tau, logits=x).sample()) 
-          # stack the convolution and embedding layers
-          #self._Λ = tf.keras.Sequential([self.coarse_grainer,self.embedder])  # TODO: squeeze the output?
-          self._Λ = tf.keras.Sequential([self.coarse_grainer,self.embedder])  
+                                      self.tau, logits=x).sample())
+          # stack the convolution and embedding layers; flatten the component
+          # axis but keep the categorical axis contiguous (last).
+          self._Λ = tf.keras.Sequential([self.coarse_grainer,
+                                         self.embedder,
+                                         tfkl.Flatten()])
 
     else:
       # directly use the CNN output as the coarse-grained variable
