@@ -1,0 +1,28 @@
+{
+  "number": 6,
+  "stage": "dev",
+  "sha256": {
+    "space-random-s260511.npz": "3faf7948782efb1d6b10b13867fdfa52dca07b3a278183bead5467661d84e12b",
+    "space-random-s260512.npz": "6c708618949d100f551cba304b00ec1dd9dc449b128bd6a336d61bcafbd0471c",
+    "space-k4-n512-s260511-u256.npz": "82e741f9cf30df2928cd54e522d09ab43c49053cb0c9e9d20b78b28e3c87c6c4",
+    "space-k4-n512-s260511-u512.npz": "f0063403ffe4ec3e6d234be3fa592701aca6cf84d67d592133bade379f9f77b7",
+    "space-k4-n512-s260511-u1024.npz": "f077ae3aea0e6539464ef34b40e0d24d2088828f4fefd3792ca9b76bcaf34d9d",
+    "space-k4-n512-s260512-u256.npz": "4571509cfc484351d8c23c1d62cce55e7a60ab4db7aed5209c8bda39f4fba6ef",
+    "space-k4-n512-s260512-u512.npz": "48ae297871cc44f1b13525e22ff324ba87d86239546d6bda8c64b55da804d4da",
+    "space-k4-n512-s260512-u1024.npz": "f6c56875ec8cb4d64e4dc4acf2f11edba9a8fc14a27589a75554b4b254dae293",
+    "space-k4-n2048-s260511-u256.npz": "63c0fa55f840f6fcfc44b75e6d61b4cff5c52d3a7d70e516f8c562a6b3cd7183",
+    "space-k4-n2048-s260511-u512.npz": "261c496c7338be0a9486fcb28f9f8b8e9dfa4e0df68b66637cec4f9dabf601b0",
+    "space-k4-n2048-s260511-u1024.npz": "c25296abbe62fe3120374060f1fce66c742b7b175dc4c0877f600b8e7fa635c9",
+    "space-k4-n2048-s260512-u256.npz": "b29dab0d5431bddfe23373f3e88c7d247007b7e04721343a60923793c04c47ac",
+    "space-k4-n2048-s260512-u512.npz": "456630525e2f850e9a0657413593d6d1294f2e9fb93759f86866ad22ded960f5",
+    "space-k4-n2048-s260512-u1024.npz": "eeebde15b04dcc944d9a348e9185b24cfad23093812c8c2704899aa13fc9db54",
+    "rosters.npz": "95b2a844ed9da5787264ce7cb092b67f6d4cc1f626e492c32bf325c352f9b1cd",
+    "eligible.npy": "41ea1d6b7abc37b3a8a1116ccdeea97ed3b0f5c73cd0e8cc3046f124f9ae11b9",
+    "dev.npz": "1770a155d56a6b958966b2f36b6ef0972a412dd6a6cacd62528acbfa269a0997",
+    "packing-model-512.joblib": "30a31c233afcc118c75433fe298b794132b92b3bdd07d254c941d4cf8605db36",
+    "packing-model-2048.joblib": "77f9fce4fe893f57ca013f78bae502e7486b499ff37ee18c738ac352c485ea09",
+    "probe-targeted.npz": "fff33d373d92689f05583d5a898ddbecc40d5f57cc448a115deb1751c8fda926",
+    "probe-calibration.npz": "b06575cb85eca4299d180a37244402ff69400a175c9f55fc45cda8c44ad8c1e1"
+  },
+  "scope": "Single descriptive K4 diagnostic on its authorized role, no raw or exam access."
+}
