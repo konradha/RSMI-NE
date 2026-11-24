@@ -1,0 +1,19 @@
+{
+  "schema": "l20.vacancy-selection-run.v1",
+  "vacancy_design_sha256": "58cc0b8b98a20e2177c7e876f50512be2712036a7a3eb6244444ae1b62ff08b0",
+  "near_design_sha256": "19be077ebf35224d60d8f2121ff7f39ae7317df4b97f01727c3848f660c7da5c",
+  "analytic_partition_check": "passed",
+  "far_stencils_disjoint_from_cross": 7975,
+  "implementation_sha256": {
+    "vacancy_selection.py": "c06ca2d06ad73797c1060dc81b21c7616d7424de9c19b83768edd13f7f0cdec1",
+    "vacancy_free_energy.py": "675ac59c4e1eadbe35f0825e61b684bf52b7df1832053a1520d2ac20b952e939",
+    "near_cage_law.py": "13be33dda71bcc7a5c57ee5778353c8fe784328ae4cd7616a5b610de21ee9794",
+    "boundary_bank.py": "7bb66cf0b9fd9efe8de3908fca3ba3f378b60eba11e8463d81afeaf02c2cc123",
+    "near_cage_test.py": "4ee2e656bbf9caaf0286e3e41410719bf86a93b97fe208c5d3f5380cea742bb2",
+    "vacancy_dipole.py": "6f8febee9f164c65538defeb74fcdc7b2ce514fa04e768216dd57118b8f1a015",
+    "rate.py": "6ebaa2a42c7b017187870c64256c2e1f33f9eb2e490f85bfa05ba5cb911cce4c",
+    "boundary_models.py": "a3e1c21d5aa98f684f4e320109027a6e67eb7afcb3c7f147fcd7413990eef603",
+    "l20_pairs.py": "8e6b6d362e34b7c4c229914405c28ede57acc4bceffd3bebb25aba09abd0c497",
+    "l20_operators_static.py": "533d5b61ae851ef8ac6e7999b6e16587622d54acdc2ed2831f4a778d8826e899"
+  }
+}

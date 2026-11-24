@@ -1,0 +1,159 @@
+{
+  "schema": "l20.vacancy-selection-score.v1",
+  "index": 0,
+  "beta": 0.0,
+  "endpoint_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+  "receipt_sha256": "335c5cb074e2bb432744a96ed7591d4fd2373573de2573fc628934ce33df1074",
+  "native_validation_parents": 2048,
+  "split": "native_validation",
+  "vacancy_design_sha256": "58cc0b8b98a20e2177c7e876f50512be2712036a7a3eb6244444ae1b62ff08b0",
+  "vacancy_run_sha256": "1370c95d8463ed7196d918e63352e623477a320e1fabb45718786535857c1bb7",
+  "scores": {
+    "matched_centers": 22694,
+    "ambiguous_centers": 17419,
+    "scored_centers": 8085,
+    "native_parents": 2048,
+    "matched_parents": 2048,
+    "ambiguous_parents": 2047,
+    "scored_parents": 2047,
+    "forced_centers": 5275,
+    "forced_tripods": 1580,
+    "tripod_prevalence_all": {
+      "estimate": 0.4006345289503834,
+      "se": 0.00323780306714775,
+      "lo": 0.39428479707320196,
+      "hi": 0.4069842608275648
+    },
+    "ambiguous_tripods": 7512,
+    "tripod_prevalence_ambiguous": {
+      "estimate": 0.43125322923244735,
+      "se": 0.0036752623940951206,
+      "lo": 0.4240455855627075,
+      "hi": 0.4384608729021872
+    },
+    "forced_fraction": {
+      "estimate": 0.23244029258834933,
+      "se": 0.0028538524636155505,
+      "lo": 0.2268435352855787,
+      "hi": 0.23803704989111996
+    },
+    "colored_log_repairs": 0,
+    "models": {
+      "vacancy": {
+        "log_score": {
+          "estimate": -0.6470516503602534,
+          "se": 0.003524979346058881,
+          "lo": -0.6539645704038413,
+          "hi": -0.6401387303166655
+        },
+        "forecast": {
+          "estimate": 0.4303777484356162,
+          "se": 0.0016221988319552072,
+          "lo": 0.427196416087486,
+          "hi": 0.43355908078374644
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.004305643263103478,
+          "se": 0.005695101570241407,
+          "lo": -0.01547444112831886,
+          "hi": 0.0068631546021119035
+        },
+        "accuracy": {
+          "estimate": 0.6356851713646019,
+          "se": 0.005705543037395186,
+          "lo": 0.6244958964921516,
+          "hi": 0.6468744462370521
+        }
+      },
+      "feasible": {
+        "log_score": {
+          "estimate": -0.6470516503602534,
+          "se": 0.003524979346058881,
+          "lo": -0.6539645704038413,
+          "hi": -0.6401387303166655
+        },
+        "forecast": {
+          "estimate": 0.4303777484356162,
+          "se": 0.0016221988319552072,
+          "lo": 0.427196416087486,
+          "hi": 0.43355908078374644
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.004305643263103478,
+          "se": 0.005695101570241407,
+          "lo": -0.01547444112831886,
+          "hi": 0.0068631546021119035
+        },
+        "accuracy": {
+          "estimate": 0.6356851713646019,
+          "se": 0.005705543037395186,
+          "lo": 0.6244958964921516,
+          "hi": 0.6468744462370521
+        }
+      },
+      "colored": {
+        "log_score": {
+          "estimate": -0.6470516503602534,
+          "se": 0.003524979346058881,
+          "lo": -0.6539645704038413,
+          "hi": -0.6401387303166655
+        },
+        "forecast": {
+          "estimate": 0.4303777484356162,
+          "se": 0.0016221988319552072,
+          "lo": 0.427196416087486,
+          "hi": 0.43355908078374644
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.004305643263103478,
+          "se": 0.005695101570241407,
+          "lo": -0.01547444112831886,
+          "hi": 0.0068631546021119035
+        },
+        "accuracy": {
+          "estimate": 0.6356851713646019,
+          "se": 0.005705543037395186,
+          "lo": 0.6244958964921516,
+          "hi": 0.6468744462370521
+        }
+      }
+    },
+    "paired_gain_nat_per_ambiguous_center": {
+      "vacancy_minus_feasible": {
+        "estimate": 0.0,
+        "se": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "colored_minus_vacancy": {
+        "estimate": 0.0,
+        "se": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "colored_minus_feasible": {
+        "estimate": 0.0,
+        "se": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    }
+  },
+  "direct_far_census_check": {
+    "native_row": 4096,
+    "center": 1820,
+    "far_histogram": [
+      2,
+      33,
+      204,
+      740,
+      1780,
+      2166,
+      1058
+    ],
+    "max_cross_filling_effect_on_far_k": 0
+  },
+  "assessment": "descriptive only",
+  "parent_table_sha256": "a0f5e0f38ea2ef5575ecb64fbd5fca90206637025de323f66461414306aa9a70",
+  "lineage_sha256": "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e"
+}

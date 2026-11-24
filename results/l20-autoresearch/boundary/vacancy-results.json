@@ -1,0 +1,24 @@
+{
+  "schema": "l20.vacancy-selection-results.v1",
+  "vacancy_design_sha256": "58cc0b8b98a20e2177c7e876f50512be2712036a7a3eb6244444ae1b62ff08b0",
+  "vacancy_run_sha256": "1370c95d8463ed7196d918e63352e623477a320e1fabb45718786535857c1bb7",
+  "primary_index": 7,
+  "assessment": "pass",
+  "primary_vacancy_minus_feasible": {
+    "estimate": 0.589595391832149,
+    "se": 0.004542321134426303,
+    "lo": 0.5806873388389603,
+    "hi": 0.5985034448253378
+  },
+  "margin_nat_per_ambiguous_center": 0.01,
+  "interpretation": "Within matched cages where both shapes are geometrically possible, can the rest of the vacancy mask discriminate the realized tripod from the opposite-pair T, beyond counting feasible orientations? This conditions on the event; it is not a forecast of its occurrence. The species-summed Gibbs law sees the entire exterior vacancy mask including the near halo, not only a distant shell. Colored halo and mask are different conditioning sets. This does not reverse the distant-shell negative, establish equilibration, or measure repeated cavities, dynamics or recurrence.",
+  "artifacts_sha256": {
+    "vacancy-parents-07.npz": "81cf04e7ac32f795125c067a32476b1977c0b4b4f231d65bcda0e69d7b110ad3",
+    "vacancy-score-07.json": "f1414b581619cfb4b04aebb89590b22c72d46ec5d73e3680e82de78ac8f1e59b",
+    "vacancy-parents-09.npz": "836e31c6b91f9db91c6bbcceba17297a363375a34aeb9a53f3d78e0c05765d97",
+    "vacancy-score-09.json": "3b21c70e26dabe3330e65a502b5fa72c9a6d4dcd80e74ab6cad23f93253d15b3",
+    "vacancy-parents-00.npz": "a0f5e0f38ea2ef5575ecb64fbd5fca90206637025de323f66461414306aa9a70",
+    "vacancy-score-00.json": "4e654e53852bc0176ccbd0a3ef17d3936ef54f76af023310d51c37c86c7a81f0",
+    "vacancy-ambiguous.png": "8732f9617c86ffa068708ad259ff7898c26fcc00091cb749308e150d33eec0fd"
+  }
+}

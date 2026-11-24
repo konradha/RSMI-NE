@@ -1,0 +1,159 @@
+{
+  "schema": "l20.vacancy-selection-score.v1",
+  "index": 9,
+  "beta": 3.05,
+  "endpoint_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+  "native_validation_parents": 1024,
+  "split": "native_validation_first_1024",
+  "vacancy_design_sha256": "58cc0b8b98a20e2177c7e876f50512be2712036a7a3eb6244444ae1b62ff08b0",
+  "vacancy_run_sha256": "1370c95d8463ed7196d918e63352e623477a320e1fabb45718786535857c1bb7",
+  "scores": {
+    "matched_centers": 12727,
+    "ambiguous_centers": 10613,
+    "scored_centers": 4084,
+    "native_parents": 1024,
+    "matched_parents": 1024,
+    "ambiguous_parents": 1024,
+    "scored_parents": 1024,
+    "forced_centers": 2114,
+    "forced_tripods": 669,
+    "tripod_prevalence_all": {
+      "estimate": 0.38547968885047534,
+      "se": 0.004297626781070954,
+      "lo": 0.37704651761936886,
+      "hi": 0.39391286008158183
+    },
+    "ambiguous_tripods": 4237,
+    "tripod_prevalence_ambiguous": {
+      "estimate": 0.3992273626684255,
+      "se": 0.00467504671789936,
+      "lo": 0.3900535857227124,
+      "hi": 0.4084011396141386
+    },
+    "forced_fraction": {
+      "estimate": 0.16610355936198634,
+      "se": 0.003353764909999773,
+      "lo": 0.15952251470741619,
+      "hi": 0.1726846040165565
+    },
+    "colored_log_repairs": 1,
+    "models": {
+      "vacancy": {
+        "log_score": {
+          "estimate": -0.00923883606141074,
+          "se": 0.0019163137455281319,
+          "lo": -0.012999190966992986,
+          "hi": -0.005478481155828493
+        },
+        "forecast": {
+          "estimate": 0.40097564604888464,
+          "se": 0.007985227474526629,
+          "lo": 0.38530634900600874,
+          "hi": 0.41664494309176053
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.0008295987484040425,
+          "se": 0.0008202636013829094,
+          "lo": -0.0024391902177178047,
+          "hi": 0.0007799927209097195
+        },
+        "accuracy": {
+          "estimate": 0.9963959295203995,
+          "se": 0.0009915907233210917,
+          "lo": 0.9944501453034509,
+          "hi": 0.998341713737348
+        }
+      },
+      "feasible": {
+        "log_score": {
+          "estimate": -0.6500348311955608,
+          "se": 0.004286291168571896,
+          "lo": -0.6584457587172705,
+          "hi": -0.6416239036738511
+        },
+        "forecast": {
+          "estimate": 0.4446221615000471,
+          "se": 0.0019917297477309447,
+          "lo": 0.44071381885785094,
+          "hi": 0.4485305041422432
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.04447611419956655,
+          "se": 0.00781465349906921,
+          "lo": -0.059810696383316264,
+          "hi": -0.02914153201581683
+        },
+        "accuracy": {
+          "estimate": 0.6030811269198153,
+          "se": 0.008060709941475216,
+          "lo": 0.5872637117175107,
+          "hi": 0.6188985421221199
+        }
+      },
+      "colored": {
+        "log_score": {
+          "estimate": -0.00293352110167492,
+          "se": 0.001648435478051416,
+          "lo": -0.0061682223351715824,
+          "hi": 0.00030118013182174304
+        },
+        "forecast": {
+          "estimate": 0.40076183361560963,
+          "se": 0.007997640053423015,
+          "lo": 0.38506817954766265,
+          "hi": 0.4164554876835566
+        },
+        "observed_minus_forecast": {
+          "estimate": -0.0006157863151290901,
+          "se": 0.0004269491337422422,
+          "lo": -0.0014535824605923502,
+          "hi": 0.00022200983033416992
+        },
+        "accuracy": {
+          "estimate": 0.9989635352869123,
+          "se": 0.000475276131382533,
+          "lo": 0.9980309077689388,
+          "hi": 0.9998961628048858
+        }
+      }
+    },
+    "paired_gain_nat_per_ambiguous_center": {
+      "vacancy_minus_feasible": {
+        "estimate": 0.6407959951341501,
+        "se": 0.004696034343318057,
+        "lo": 0.6315810344728874,
+        "hi": 0.6500109557954128
+      },
+      "colored_minus_vacancy": {
+        "estimate": 0.0063053149597358206,
+        "se": 0.001592749363083328,
+        "lo": 0.0031798857888550606,
+        "hi": 0.009430744130616581
+      },
+      "colored_minus_feasible": {
+        "estimate": 0.6471013100938859,
+        "se": 0.004616656165695997,
+        "lo": 0.6380421120890848,
+        "hi": 0.6561605080986871
+      }
+    }
+  },
+  "direct_far_census_check": {
+    "native_row": 8802,
+    "center": 3115,
+    "far_histogram": [
+      0,
+      0,
+      11,
+      2060,
+      406,
+      3387,
+      118
+    ],
+    "max_cross_filling_effect_on_far_k": 0
+  },
+  "assessment": "descriptive only",
+  "parent_table_sha256": "836e31c6b91f9db91c6bbcceba17297a363375a34aeb9a53f3d78e0c05765d97",
+  "lineage_sha256": "811b389498388fdf7e938e9b9c6a8415977e50e4219a868453fb90092ac54470"
+}
