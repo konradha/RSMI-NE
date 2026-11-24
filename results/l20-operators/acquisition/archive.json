@@ -1,0 +1,45 @@
+{
+  "cohorts": {
+    "08": {
+      "beta": 2.711111111111,
+      "source_sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "parents": 256,
+      "replicas": 8,
+      "child_seed": "10964355361686478203",
+      "complete_sweeps": [
+        116,
+        462,
+        4096
+      ],
+      "requested_but_not_saved": [],
+      "component_sha256": {
+        "confirm-08.npz": "8263c39d36134ab79ffd0bbead807a7ada5da518401bc4c6882a68d840745a90",
+        "raw-08/origin.npz": "4b3277be91aadddda38f7549df000fe925b4aef6924788202e5169c2a30b9bd7",
+        "raw-08/local-116.npz": "8d69d99c62ff95d992504d56b45603177e5c9fa8bb706e672d221978d6398146",
+        "raw-08/local-462.npz": "475c8a2dc498a1973ed3eb2341bcfb7761bce3f1cdb8b669f012009abb779ab1",
+        "raw-08/local-4096.npz": "9c34f8e9729f988b856ea63300b55dee8889ff3068fc734dfb2690e5fae76a88"
+      }
+    },
+    "09": {
+      "beta": 3.05,
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "parents": 512,
+      "replicas": 8,
+      "child_seed": "9132934872358363023",
+      "complete_sweeps": [
+        4096
+      ],
+      "requested_but_not_saved": [
+        16384
+      ],
+      "component_sha256": {
+        "confirm-09.npz": "fa33f5e5846cf002d14b540b18ac66f76d7673525ddce4a7e2147dfa713d2aa0",
+        "raw-09/origin.npz": "3c6854c8d9a3f0afa5ee67968c5a01954938038a39c305dec57296845afc12ef",
+        "raw-09/local-4096.npz": "9efc52f6509aad84595632fc4514b309cd33b64400124366f183c2ab8184897a"
+      }
+    }
+  },
+  "bundle_sha256": "79a56d170555c97a9a8667c8aa3f8ad34e4206863439fd8697bffd6787458e6c",
+  "encoding": "raw species at time t = origin species XOR species_xor_origin; counts audited against snapshots",
+  "scope": "Previously completed snapshots only. No new dynamics. Cold secondary was stopped before saving; not analyzed."
+}

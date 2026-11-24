@@ -1,0 +1,18 @@
+{
+  "study": "L20 archived real-space compression; no generation or MCMC of any kind",
+  "start_utc": "2026-11-24T11:45:25Z",
+  "stop_utc": "2026-11-24T21:45:25Z",
+  "wall_seconds": 36000,
+  "allowed_inputs": "read-only l20-16384-v1 endpoints; preexisting frozen results and already-written physical snapshots. Resampling labels, associations and anchors is analysis, not simulation.",
+  "budget": {"modal_usd_ceiling": 25, "paid_jobs_at_lock": 0, "default": "local CPU; pay only for verified training acceleration, not data acquisition"},
+  "discovery": "Use the existing whole-parent training and validation groups from examples/l20_pairs.py:partition. Never use the test group to rank candidates. Patches, orientations, replicas and checkpoints of one parent are not independent samples.",
+  "histories": "Historical papers/commits here already reported aggregate scores on this archive. The final fold is locked against these new searches, not a never-inspected physical population. No new independent configurations are authorized.",
+  "families": {
+    "rg": "Look for separated, scale-dependent physical operators beyond scale-matched species/energy controls. No claim about a thermodynamic exponent from L20.",
+    "information": "Positive lower bound on the shell information remaining after conditioning on the entire ordered ternary vector at the eight block corners. Match the negative sampling distribution to the estimand; report unmatched probability, effective negatives per anchor and parent independence.",
+    "learn": "Search discrete encoders at two or more intervening layers. Compare learned nonlinear encoders with equally sized trained additive codes, handcrafted codes, and shuffled associations; one-layer calibration is not a discovery at two layers."
+  },
+  "confirm": "One frozen choice per primary family using validation only, archive model/choices before test. Freeze all decisions at or before 21:00:25Z. Report paired effects, parent-level uncertainty and multiplicity across the three primary families (Bonferroni 98.333...% two-sided confidence or equivalent). Report cold and unchanged cross-temperature scores separately. Uncalibrated null, underpowered score or nonpositive bound is not evidence of absence.",
+  "reference": "Gökmen et al., https://arxiv.org/abs/2101.11633 and https://arxiv.org/abs/2103.16887. Use symmetry-resolved correlators and independent physical interpretation; no new dimer ensemble or claim of matching their scaling evidence.",
+  "finite_alphabet_calibration": "Prespecified secondary analysis: exactly enumerate all deterministic partitions of the nine ordered opposite-corner species pairs into <=4 labels, with explicit paired ternary exterior targets. Fit on training only; score on validation at buffers 1--5 with disjoint parent groups, beta=0 population null and independent shuffled associations. Report the four-state ceiling for this projected pair only, not a ceiling for the full block/shell. No calibration-fold claim of discovery."
+}

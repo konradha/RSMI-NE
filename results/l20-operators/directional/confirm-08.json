@@ -1,0 +1,19 @@
+{
+  "input_sha256": "8263c39d36134ab79ffd0bbead807a7ada5da518401bc4c6882a68d840745a90",
+  "freeze_sha256": "e8d30f7784e172518a6831add9151f3386ee22cbd273717da6831ee720147570",
+  "csv_sha256": "d1a768d43c15eb3ef48d1b2fc34d340758586246ee504ebde8522a5a3e5a7cf5",
+  "motifs_sha256": "308bde84b7a75f431a00254fc158f3fa6508da4ee361f1dc412b9cc1072d0a1a",
+  "beta": 2.711111111111,
+  "lags": [
+    116,
+    462,
+    4096
+  ],
+  "fit_lags": [
+    4096,
+    16384,
+    4096
+  ],
+  "replicas": 8,
+  "n_parents": 256
+}

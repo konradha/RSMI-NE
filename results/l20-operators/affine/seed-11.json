@@ -1,0 +1,81 @@
+{
+  "method": "affine",
+  "width": 3,
+  "buffer": 1,
+  "seed": 11,
+  "epoch": 33,
+  "validation": 0.14193340372758848,
+  "history": [
+    {
+      "epoch": 0,
+      "validation": -0.00011689981243480738,
+      "training": null
+    },
+    {
+      "epoch": 3,
+      "validation": 0.037159550310002704,
+      "training": 0.03261636813404038
+    },
+    {
+      "epoch": 6,
+      "validation": 0.07288572103700358,
+      "training": 0.06679219220532104
+    },
+    {
+      "epoch": 9,
+      "validation": 0.09535614039995904,
+      "training": 0.08259982450399547
+    },
+    {
+      "epoch": 12,
+      "validation": 0.10800534371310899,
+      "training": 0.09918420263566077
+    },
+    {
+      "epoch": 15,
+      "validation": 0.11292912170367253,
+      "training": 0.11028391034342348
+    },
+    {
+      "epoch": 18,
+      "validation": 0.11640565497680712,
+      "training": 0.1107915697619319
+    },
+    {
+      "epoch": 21,
+      "validation": 0.11955490852488344,
+      "training": 0.12077276734635234
+    },
+    {
+      "epoch": 24,
+      "validation": 0.12570610328567222,
+      "training": 0.12072754283435642
+    },
+    {
+      "epoch": 27,
+      "validation": 0.1376647644261982,
+      "training": 0.13407388813793658
+    },
+    {
+      "epoch": 30,
+      "validation": 0.14021213490967424,
+      "training": 0.1382133866660297
+    },
+    {
+      "epoch": 33,
+      "validation": 0.14193340372758848,
+      "training": 0.13437850410118699
+    },
+    {
+      "epoch": 36,
+      "validation": 0.141447431821678,
+      "training": 0.14216379076242447
+    }
+  ],
+  "initial_corner_zyx": [
+    -1,
+    -1,
+    -1
+  ],
+  "encoder": "softmax(dense(V) @ A + c); no hidden representation or interaction coefficients"
+}

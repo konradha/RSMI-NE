@@ -12,6 +12,18 @@
 
 ![Species enrichment by state and held-out scores under distillation](static/static-motif.png)
 
+### Is the gain just a better linear filter?
+
+No, for the architectures and training budget tested. We trained a matched four-state encoder with **separate affine weights for both independent species indicators at all 27 sites**, using the same training parents, critic architecture, epochs and three starts. Pick each model on cold validation and freeze its encoder and critic. At **β=2.3722**, reserved before scoring this contrast, the nonlinear encoder beats the trained affine encoder by **0.0105 [0.0058, 0.0151] nats** (0.1081 vs 0.0976). At β=3.05 the paired difference is **0.0150 [0.0116, 0.0185]**. This supports a contribution beyond additive weighting under matched training, not the optimality of either parameterization.
+
+On the confirmation temperature the nonlinear code also has a **positive conditional InfoNCE bound of 0.0228 [0.0191, 0.0266] nats**, when every negative shell has the same two corner bits as the positive. That is direct evidence that its association with the environment is not just those bits. It is *not* a subtraction of two variational bounds. The same conclusion holds conditioning on any one of the four body diagonals separately; this does not jointly condition on all eight corners.
+
+![Frozen nonlinear and additive encoders at ten temperatures; conditional corner test](affine/affine-transfer.png)
+
+Conditioning jointly on **eight A-occupancy bits** still leaves a bound of **0.0177 [0.0155, 0.0199] nats** at β=2.3722. Conditioning instead on the **full eight ternary species** gives **0.00020 [−0.00054, 0.00093]** at the same temperature: 87.5% of positives have no matching negative. The cold-only estimate is positive, but this test cannot establish a transferable signal beyond all eight species. [Per-temperature bounds and exact-match counts](all-corners/all-corners.csv).
+
+**Why we call this local structure:** the term $n_i m_i^2$ in the Hamiltonian couples the occupancies of two distinct neighbors of $i$. Across one buffer layer, a block site and a shell site can both be neighbors of the same buffer site; a single Hamiltonian term can therefore involve both. Across two buffer layers, it cannot. This does not force correlations to vanish at larger distances, but the observed range does **not** require a collective explanation. [Matched bounds](affine/bounds.csv), [paired differences](affine/contrasts.csv), [orientation sensitivity](affine/conditional-diagonals.csv).
+
 [Locked design and controls](protocol.md) · [validation selection](static/selection.json) · [all cold scores](static/scores.csv) · [frozen transfer scores](static/transfer.csv) · [filter agreement](static/reproducibility.csv) · [spatial correlations](static/spatial.csv) · [fit histories and weights](static/fit-receipts.zip). Quoted static intervals use 32 disjoint test-parent batches; they are conditional on fitted networks. More patches from a parent do not increase the independent sample count.
 
 **Reproduce the equilibrium search** from the repository root (`numpy`, `scipy`, `scikit-learn`, `matplotlib`, Python 3.11+), with the released endpoints and sidecar checksums:
@@ -21,4 +33,13 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 r=$(mktemp -d); data=$HOME/datasets/lattice-glass/l20-16384-v1
 python examples/l20_operators_static.py --data "$data" --out "$r"
 python examples/l20_operators_static_analysis.py --data "$data" --out "$r"
+python examples/l20_operators_affine.py --data "$data" --static "$r" --out "$r/affine"
 ```
+
+### Do the compressed variables predict where the glass moves?
+
+![Local physical dynamics: frozen predictions, sibling reproducibility and block mobility](confirmation.png)
+
+**Not better than the swap barriers at the tested times.** At β=3.05 and 4,096 local sweeps, two sets of four siblings agree on directional motion (correlation **0.740 [0.724, 0.757]** across 512 independent parents). The barrier model explains **0.742 [0.711, 0.770]** of the repeatable directional variance. Adding the learned four-state neural code *worsens* its log score by **0.0000261 [0.0000135, 0.0000387] nats per target**; the tree code does not improve it either. Adding the frozen *equilibrium* code to a separate block-mobility predictor does not help. At β=2.7111, 256 different parents at the matched primary clock of 116 sweeps give the same sign. These are short-time tests, not a measurement at the structural relaxation time.
+
+[Paired model comparisons](directional-comparisons.csv) · [repeatability and explained fraction](repeatability.csv) · [block mobility](block-comparisons.csv) · [six-face contrastive scores](directional-nce.csv) · [lossless observations](acquisition/physical-observations.zip) and [component checksums](acquisition/archive.json). The requested cold secondary at 16,384 sweeps was stopped before a checkpoint existed; it is **not** plotted or scored. All figures here use recorded observations only.

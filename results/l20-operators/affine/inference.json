@@ -1,0 +1,684 @@
+{
+  "sources": [
+    {
+      "index": 7,
+      "beta": 2.372222222222,
+      "sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "538eedc5f25ab4954a8dc120804a813bffa62c795c95bb7dbabaab365a44c31a",
+        "65357446075472f527535848b403830253cdd0387d8246fea1fb8818654d5b08",
+        "73b41e01e96825407ca23b3229bc119f8b9c9fb36425d6034e187d81246375ea"
+      ]
+    },
+    {
+      "index": 8,
+      "beta": 2.711111111111,
+      "sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "39f999280ec938169232129b343f21984c9fe98b562c4cba8eee919f59087a7e",
+        "ecfa5c615338bc2c2ef1195e7ca993595deda2e73dc7b41b2ca413698fff5383",
+        "2d47d1563052a2df224af072919cae77bc27331964fd00eca809026253fc9cdd"
+      ]
+    },
+    {
+      "index": 9,
+      "beta": 3.05,
+      "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+        "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+        "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+      ]
+    },
+    {
+      "index": 0,
+      "beta": 0.0,
+      "sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "19b3228717d0bcde6ebaacf77584d9c32244f9d315c3ef621378929bf3620a2e",
+        "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e",
+        "51f784fc4f1055d6060ba4360f91690548b5bcc8a4fab669f9f0034204b63d89"
+      ]
+    },
+    {
+      "index": 1,
+      "beta": 0.338888888889,
+      "sha256": "c8b0f8fc8d80002d4f7683e108cd6566bc977204fa579f1316151704943aa6b7",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "cdfb494941ecb7b9d24880864a892aec78043ed63743937c59214950f94de240",
+        "ed769e008f8490d3b00f0164efcd22884906c9dd440980964ad1198c7492a5c6",
+        "1181b6deec809f79c73219b9bdb72d6e95b09beffd8da814085d220716c1a8de"
+      ]
+    },
+    {
+      "index": 2,
+      "beta": 0.677777777778,
+      "sha256": "624e41eb383fbb8d2e9ebb4bcf7bea608cb3cff174ac57f8c4e880e71e0382f9",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "636ea590711d77c65dfdb56a9e8a3f5dbdceeb50ce345e4dea97a1d1651091f6",
+        "e54f9c64f6a17355a71fce7a983a9c7887544feb0bc4d6aa70eaa7a6bbe0943d",
+        "dbaaeb1eed98d275a9122367946eef98b37d76ce5bac1ad4b577e8395f571854"
+      ]
+    },
+    {
+      "index": 3,
+      "beta": 1.016666666667,
+      "sha256": "f6897b2fc41f94cdf712b30b982c9ea604fb33c6e0f418a62d6f11a82d4b8202",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "caf2a6023ddcaab0529faa05d98f072bfb5a1a4f3e4a750827e5d50a1d970c51",
+        "8e1510499488aed30b25c247fb87f15448879ffbab223baecfbb0e1e725ff85b",
+        "7dfb4e7ad9d11b1d7e591b0e11c8847f2d1cf3f05e5f5a0d369156577dec16ae"
+      ]
+    },
+    {
+      "index": 4,
+      "beta": 1.355555555556,
+      "sha256": "5b39b282518db8906675494696f005ecff475490b163d10efee8eed61b0efa76",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "85a0e6c0ad88800da36067d24be1f6fd51ca0cae4fbfb1c3f022f33b5afcd04e",
+        "7798a7a7054d536b99f4b6d6db50c0ef133dedb4a89e95d95414a0819f9089a9",
+        "c78bd40b164e075916f9597a5c1f2f1cd57b72ccc3708b4cd59631addf1daedd"
+      ]
+    },
+    {
+      "index": 5,
+      "beta": 1.694444444444,
+      "sha256": "b8905da4c3b8e788ff9ba4217dc98b2713d7a9b94c5bfce2c84b2962d707c2e3",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "ab87bfb344343970fe41e1fd9a9098c5a6344e1031799acbcc0f0000013ae81e",
+        "5fa5993340b309d3a22e15bb0d338cdd0095b9693ceb5543f5b38a084fd54a44",
+        "c3f96d3bd38215db2f1350c1d0d84c1b2663f2e11a41f2fba694316663014035"
+      ]
+    },
+    {
+      "index": 6,
+      "beta": 2.033333333333,
+      "sha256": "0f01043d3dc27a1bf0402e6e69d2f53b950f381aecef0cdb2949d01f6b0bc214",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "e6304a352ce7bb327745b0d22f294735d2d79d6c02dffb204ce9aede629ea30a",
+        "409493b2069c4b39b386dde4ae08000154158789d3f586321e6a18d2019611c3",
+        "394523ea19b9fb4fb6e53e1295fa22e60eb65fb41c22548e0c7e1dfae09d4266"
+      ]
+    }
+  ],
+  "diagnostics": {
+    "i7_nonlinear": {
+      "stratum_counts": [
+        32220,
+        13571,
+        13959,
+        5786
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.90228271484375,
+      "mean_max_p": 0.9289347550916318,
+      "modal_fractions": [
+        0.2554931640625,
+        0.1687774658203125,
+        0.324554443359375,
+        0.2511749267578125
+      ]
+    },
+    "i7_affine": {
+      "stratum_counts": [
+        32220,
+        13571,
+        13959,
+        5786
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.90228271484375,
+      "mean_max_p": 0.8524046302200077,
+      "modal_fractions": [
+        0.2151641845703125,
+        0.2055511474609375,
+        0.2934417724609375,
+        0.2858428955078125
+      ]
+    },
+    "i7_corners": {
+      "stratum_counts": [
+        32220,
+        13571,
+        13959,
+        5786
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.90228271484375,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.49163818359375,
+        0.2070770263671875,
+        0.2129974365234375,
+        0.088287353515625
+      ]
+    },
+    "i8_nonlinear": {
+      "stratum_counts": [
+        32167,
+        13819,
+        13744,
+        5806
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.8360595703125,
+      "mean_max_p": 0.9300954010309397,
+      "modal_fractions": [
+        0.2565155029296875,
+        0.1612548828125,
+        0.3284912109375,
+        0.2537384033203125
+      ]
+    },
+    "i8_affine": {
+      "stratum_counts": [
+        32167,
+        13819,
+        13744,
+        5806
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.8360595703125,
+      "mean_max_p": 0.8495924753769941,
+      "modal_fractions": [
+        0.2168731689453125,
+        0.2037506103515625,
+        0.2929840087890625,
+        0.2863922119140625
+      ]
+    },
+    "i8_corners": {
+      "stratum_counts": [
+        32167,
+        13819,
+        13744,
+        5806
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.8360595703125,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.4908294677734375,
+        0.2108612060546875,
+        0.209716796875,
+        0.088592529296875
+      ]
+    },
+    "i9_nonlinear": {
+      "stratum_counts": [
+        31931,
+        13971,
+        13906,
+        5728
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.57891845703125,
+      "mean_max_p": 0.9284094987515346,
+      "modal_fractions": [
+        0.2579193115234375,
+        0.160308837890625,
+        0.3293914794921875,
+        0.25238037109375
+      ]
+    },
+    "i9_affine": {
+      "stratum_counts": [
+        31931,
+        13971,
+        13906,
+        5728
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.57891845703125,
+      "mean_max_p": 0.8482339811962447,
+      "modal_fractions": [
+        0.2167510986328125,
+        0.19989013671875,
+        0.2973175048828125,
+        0.286041259765625
+      ]
+    },
+    "i9_corners": {
+      "stratum_counts": [
+        31931,
+        13971,
+        13906,
+        5728
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.57891845703125,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.4872283935546875,
+        0.2131805419921875,
+        0.212188720703125,
+        0.08740234375
+      ]
+    },
+    "i0_nonlinear": {
+      "stratum_counts": [
+        32014,
+        13798,
+        13853,
+        5871
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.624755859375,
+      "mean_max_p": 0.9347707938504755,
+      "modal_fractions": [
+        0.24261474609375,
+        0.2248382568359375,
+        0.2876434326171875,
+        0.244903564453125
+      ]
+    },
+    "i0_affine": {
+      "stratum_counts": [
+        32014,
+        13798,
+        13853,
+        5871
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.624755859375,
+      "mean_max_p": 0.8673269483833792,
+      "modal_fractions": [
+        0.21844482421875,
+        0.2222137451171875,
+        0.28436279296875,
+        0.2749786376953125
+      ]
+    },
+    "i0_corners": {
+      "stratum_counts": [
+        32014,
+        13798,
+        13853,
+        5871
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.624755859375,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.488494873046875,
+        0.210540771484375,
+        0.2113800048828125,
+        0.0895843505859375
+      ]
+    },
+    "i1_nonlinear": {
+      "stratum_counts": [
+        32294,
+        13549,
+        13823,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.946868896484375,
+      "mean_max_p": 0.9350757907882326,
+      "modal_fractions": [
+        0.2499542236328125,
+        0.20782470703125,
+        0.2981109619140625,
+        0.244110107421875
+      ]
+    },
+    "i1_affine": {
+      "stratum_counts": [
+        32294,
+        13549,
+        13823,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.946868896484375,
+      "mean_max_p": 0.8658299313892712,
+      "modal_fractions": [
+        0.2222900390625,
+        0.21990966796875,
+        0.283966064453125,
+        0.273834228515625
+      ]
+    },
+    "i1_corners": {
+      "stratum_counts": [
+        32294,
+        13549,
+        13823,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.946868896484375,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.492767333984375,
+        0.2067413330078125,
+        0.2109222412109375,
+        0.089569091796875
+      ]
+    },
+    "i2_nonlinear": {
+      "stratum_counts": [
+        32014,
+        13701,
+        13730,
+        6091
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.50762939453125,
+      "mean_max_p": 0.9330729168764265,
+      "modal_fractions": [
+        0.2534637451171875,
+        0.19561767578125,
+        0.3045654296875,
+        0.2463531494140625
+      ]
+    },
+    "i2_affine": {
+      "stratum_counts": [
+        32014,
+        13701,
+        13730,
+        6091
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.50762939453125,
+      "mean_max_p": 0.8610865970381383,
+      "modal_fractions": [
+        0.2203369140625,
+        0.21441650390625,
+        0.2874755859375,
+        0.27777099609375
+      ]
+    },
+    "i2_corners": {
+      "stratum_counts": [
+        32014,
+        13701,
+        13730,
+        6091
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.50762939453125,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.488494873046875,
+        0.2090606689453125,
+        0.209503173828125,
+        0.0929412841796875
+      ]
+    },
+    "i3_nonlinear": {
+      "stratum_counts": [
+        32336,
+        13664,
+        13613,
+        5923
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.93206787109375,
+      "mean_max_p": 0.9315312147400618,
+      "modal_fractions": [
+        0.25567626953125,
+        0.1833953857421875,
+        0.3122100830078125,
+        0.24871826171875
+      ]
+    },
+    "i3_affine": {
+      "stratum_counts": [
+        32336,
+        13664,
+        13613,
+        5923
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.93206787109375,
+      "mean_max_p": 0.8595058311757384,
+      "modal_fractions": [
+        0.2191162109375,
+        0.2125701904296875,
+        0.2937469482421875,
+        0.274566650390625
+      ]
+    },
+    "i3_corners": {
+      "stratum_counts": [
+        32336,
+        13664,
+        13613,
+        5923
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.93206787109375,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.493408203125,
+        0.20849609375,
+        0.2077178955078125,
+        0.0903778076171875
+      ]
+    },
+    "i4_nonlinear": {
+      "stratum_counts": [
+        31802,
+        13906,
+        13715,
+        6113
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.302581787109375,
+      "mean_max_p": 0.9308253129743207,
+      "modal_fractions": [
+        0.2584228515625,
+        0.1812896728515625,
+        0.3129425048828125,
+        0.247344970703125
+      ]
+    },
+    "i4_affine": {
+      "stratum_counts": [
+        31802,
+        13906,
+        13715,
+        6113
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.302581787109375,
+      "mean_max_p": 0.856043667342874,
+      "modal_fractions": [
+        0.217742919921875,
+        0.210693359375,
+        0.29052734375,
+        0.281036376953125
+      ]
+    },
+    "i4_corners": {
+      "stratum_counts": [
+        31802,
+        13906,
+        13715,
+        6113
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.302581787109375,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.485260009765625,
+        0.212188720703125,
+        0.2092742919921875,
+        0.0932769775390625
+      ]
+    },
+    "i5_nonlinear": {
+      "stratum_counts": [
+        32154,
+        13644,
+        13868,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7462158203125,
+      "mean_max_p": 0.9310278579755504,
+      "modal_fractions": [
+        0.258941650390625,
+        0.1775665283203125,
+        0.3162689208984375,
+        0.247222900390625
+      ]
+    },
+    "i5_affine": {
+      "stratum_counts": [
+        32154,
+        13644,
+        13868,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7462158203125,
+      "mean_max_p": 0.8542369218916974,
+      "modal_fractions": [
+        0.2169647216796875,
+        0.2074127197265625,
+        0.290435791015625,
+        0.285186767578125
+      ]
+    },
+    "i5_corners": {
+      "stratum_counts": [
+        32154,
+        13644,
+        13868,
+        5870
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7462158203125,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.490631103515625,
+        0.20819091796875,
+        0.21160888671875,
+        0.089569091796875
+      ]
+    },
+    "i6_nonlinear": {
+      "stratum_counts": [
+        32128,
+        13564,
+        13977,
+        5867
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7354736328125,
+      "mean_max_p": 0.9292952512273587,
+      "modal_fractions": [
+        0.2578125,
+        0.171905517578125,
+        0.32147216796875,
+        0.248809814453125
+      ]
+    },
+    "i6_affine": {
+      "stratum_counts": [
+        32128,
+        13564,
+        13977,
+        5867
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7354736328125,
+      "mean_max_p": 0.8522049939801946,
+      "modal_fractions": [
+        0.215240478515625,
+        0.202728271484375,
+        0.297210693359375,
+        0.284820556640625
+      ]
+    },
+    "i6_corners": {
+      "stratum_counts": [
+        32128,
+        13564,
+        13977,
+        5867
+      ],
+      "singleton_positives": 0,
+      "mean_K_per_positive": 43.7354736328125,
+      "mean_max_p": 1.0,
+      "modal_fractions": [
+        0.490234375,
+        0.20697021484375,
+        0.2132720947265625,
+        0.0895233154296875
+      ]
+    }
+  },
+  "columns": [
+    "raw",
+    "shuffle",
+    "conditional_raw",
+    "conditional_shuffle"
+  ],
+  "npz": "per index/model: 32 disjoint groups of 128 independent test parents; average all 16 anchor repeats WITHIN each group. Conditional on fits, pointwise paired t intervals, not simultaneous bands or intervals for true mutual information.",
+  "conditional": "K depends on stratum frequency, so conditional bounds not directly comparable to unconditional bounds by subtraction. Frozen marginal critic need not be optimal conditional critic. All affine/nonlinear contrasts use their own frozen trained critic."
+}

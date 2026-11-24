@@ -1,0 +1,49 @@
+{
+  "test_order": [
+    7,
+    8,
+    9,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "primary_index": 7,
+  "followups": [
+    8,
+    9
+  ],
+  "other_temperatures": "descriptive (including beta=0 null)",
+  "primary": "frozen nonlinear minus frozen validation-selected affine, raw matched-anchor InfoNCE; lower two-sided 95% paired parent-batch limit > 0 indicates gain for this architecture/training budget, not universal necessity",
+  "conditional": "I(H;E | corner bits): first group the 128 distinct test parents by the two opposite-corner species-A bits, then compute denominators and off-diagonal shuffles within stratum; weight each positive equally. Same frozen critic, no retraining, singleton K=1 gives zero. This is a conditional lower bound, NOT a difference of lower bounds.",
+  "secondary": "positive absolute conditional lower limit tests residual shell information beyond the two bits. Constant conditional critic gives exact zero for the corner-only code, independent of the fitted conditional score.",
+  "training": {
+    "index": 9,
+    "beta": 3.05,
+    "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": [
+      10240,
+      2048,
+      4096
+    ],
+    "patch_seed": 769315,
+    "group_lineage_sha256": [
+      "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+    ]
+  },
+  "encoder": "two centered species indicators per site x 27 sites, four affine logits, trainable biases. Exact matching A,c corner start for each seed; no hidden branch (thus full logits at epoch zero need not agree).",
+  "critic": "identical trainable 24-tanh + affine skip; identical critic seed 9601, Adam rate 0.002 then 0.00065 after epoch 24, batch 128",
+  "training_pairs": 368640,
+  "parents_per_epoch": 10240,
+  "epochs": 36,
+  "validation_reps": 6,
+  "test_reps": 16,
+  "validation": "all 3 seeds and checkpoints every 3 epochs including 0, select by raw beta09 validation only",
+  "static_receipt_sha256": "5e6c4724dd6a340cda51a47bcf7c55a20856922d26d034972f42a3b41498e922",
+  "static_selection_sha256": "213655a1de069d25c8679ac82f991542f1407924b8edc1311bf0e298eb83e931"
+}

@@ -77,6 +77,8 @@ Jupyter notebooks demonstrating the basic usage in simple examples are provided 
 
 **[Does static structure predict physical mobility?](results/l20-propensity/README.md)** Local-trajectory tests against species, coordination, swap barriers and untrained filters, including replicated β=3.05 propensity maps.
 
+**[Four-state RSMI operators in the lattice glass](results/l20-operators/README.md)** Frozen nonlinear versus linear and fixed equilibrium codes, and independent tests of whether they can predict physical relaxation.
+
 ## Citation
 
 If you use RSMI-NE in your work, please cite our publications [Phys. Rev. Lett. **127**, 240603 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.240603) and [Phys. Rev. E **104**, 064106 (2021)](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.104.064106):
