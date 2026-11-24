@@ -1,0 +1,28 @@
+{
+  "schema": "hero-full-v3-h100-pilot-release-1",
+  "issuer": "Main",
+  "action": "launch-one-train-only-h100-pilot",
+  "maximum_sandboxes": 1,
+  "incremental_used_or_reserved_before_usd": 0,
+  "exclusive_envelope_lock_usd": 25,
+  "normal_gross_ceiling_usd": 15,
+  "pilot_gross_bound_usd": 1.05,
+  "source_revision": "8e45171a783b0808cf6cf7b279a53d01f9b3f4e6",
+  "expires_utc": "2026-11-24T15:39:43+00:00",
+  "pins": {
+    "design.json": "a4736d10f80fd860318d3b9a933aa01faac079cec30d8ca7f7cb700eefef775f",
+    "split.json": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+    "stream-release-1.json": "817ac3c8de6a2d3adedfb1d9d5a87383881d700a0bc861ad96f83da226a76a16",
+    "pilot-packet.json": "dd646ba6a2e51cb955ad72af33b4b07b166d9d6909c267966b0f01c417ee62da",
+    "training-release-1.json": "0e9c63cd55c1913683ebbeb33053a1dbf63220f60b6ace02c11b74153c607c6a",
+    "sandbox-admission.json": "d02ac7dd1cff5a153c870befc4d4bdff31d68b277c1cf38344ca01f1ee3df5ad",
+    "sandbox-probe.json": "1b81b0492e15058b04d7bf88404534bc5aae0b05b0d35dfaa2f1e3c3b6354905",
+    "full_hero_sandbox_run.py": "9dcb2367d07b2212d9843b9b3ad6a219741eb055305577d568174f89fcbc18ba",
+    "full_hero_sandbox.py": "d7b0723328dd8a43e3e51aaa2e405265165e2fd1f80624d5d53c77cd2f1188f7",
+    "packet.json": "dd646ba6a2e51cb955ad72af33b4b07b166d9d6909c267966b0f01c417ee62da",
+    "full_hero_v3_pilot.py": "8e320ec764a98b8749a1c7476878a7982cb3d76c0efe2e2da2e68820f073819e",
+    "full_hero_train.py": "27119a110e0e574e2d11386ed0c018034843ae0fbe7e059789c76b6e34aa7414",
+    "hero_train.py": "fe262fca23ab5a1f0b62e344066b05da16519a7b62427dbf5183453eab273333",
+    "packet.npz": "5f5211843bb0b154db7a565a1a0bef2308e10e84afc661010e311e7f3844d82b"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "hero-full-v3/modal-h100-read-only/v1",
+  "source_class": "authenticated control-plane metadata only; neither physical nor synthetic observations",
+  "utc": "2026-11-24T15:07:04+00:00",
+  "probe_sha256": "d7b0723328dd8a43e3e51aaa2e405265165e2fd1f80624d5d53c77cd2f1188f7",
+  "sdk_version": "1.6.4",
+  "workspace_sha256": "18bb32de3adaec9428c1dae86d00db8481eff36c88ede41d59ccf9b2f1e29604",
+  "configured_profile_count": 1,
+  "active_profile_name_matches_member_role": [
+    "owner"
+  ],
+  "environments": [
+    {
+      "name_sha256": "0d6e4079e36703ebd37c00722f5891d28b0e2811dc114b129215123adcce3605",
+      "environment_budget": {
+        "read": "permission_denied",
+        "detail": "Environment budgets are not enabled for this workspace"
+      },
+      "named_images": 0,
+      "visible_apps": 1,
+      "visible_study_apps": 0,
+      "deployed_nonstudy_apps": 1
+    },
+    {
+      "name_sha256": "8ba0b90c4caef59ae0b0e2217ed3c0f8f7dc103a9d2131c51fb0703f4c229c8e",
+      "environment_budget": {
+        "read": "permission_denied",
+        "detail": "Environment budgets are not enabled for this workspace"
+      },
+      "named_images": 0,
+      "visible_apps": 0,
+      "visible_study_apps": 0,
+      "deployed_nonstudy_apps": 0
+    }
+  ],
+  "billing_cycle": "2026-11",
+  "workspace_metered_gross_exceeds_25": true,
+  "workspace_metered_noncompute_present": true,
+  "workspace_precredit_usage_limit_returned_by_summary": false,
+  "allocation_metadata_sha256": "9c50c708d34a2b5faee7869957a7eb85168dbfdc10dca2d9e39dc81c0c919e48",
+  "preexisting_image": {
+    "immutable_id": "im-1aUX0dAUmmZQ583Ohg7Icu",
+    "packages": {
+      "torch": "2.5.1+cu124",
+      "numpy": "1.26.4",
+      "scipy": "1.14.1"
+    },
+    "python": "Python 3.11.10",
+    "workdir": "/workspace",
+    "build_steps": 2,
+    "exists_in_probed_workspace": true
+  },
+  "local_gpu_request_encoding": {
+    "gpu_type": "H100!",
+    "count": 1
+  },
+  "authenticated_tariff_usd": {
+    "gpu_hour_cost_h100": "3.95000",
+    "cpu_hour_cost_sandbox": "0.141900",
+    "mem_gib_hour_cost_sandbox": "0.024000",
+    "egress_gib_cost": "0.04000",
+    "volume_storage_gib_month_cost": "0.09000"
+  },
+  "illustrative_300s_one_core_four_gib_not_invoice_or_cap": {
+    "compute_usd": "0.34899167",
+    "compute_plus_1MiB_egress_usd": "0.34903073",
+    "triple_GPU_rate_sensitivity_plus_1MiB_usd": "1.00736406"
+  },
+  "paid_calls_issued_by_probe": 0,
+  "new_sandbox_id": null,
+  "device_or_availability_observed": false,
+  "admission": "NOT_RELEASED; read-only command cannot authorize or launch"
+}
