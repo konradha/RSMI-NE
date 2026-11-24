@@ -1,0 +1,452 @@
+{
+  "passed": false,
+  "finite_difference_max_abs_error": 2.0590877961024212e-11,
+  "fit": {
+    "checkpoints": {
+      "8": {
+        "mean_logscore_nats": {
+          "stratum": -0.6899587822119134,
+          "packing": -0.32590259954697365,
+          "learned": -0.3021350704903228
+        },
+        "gain_vs_packing": 0.02376752905665086,
+        "gain_vs_stratum": 0.38782371172159064,
+        "hard_state_count": [
+          153,
+          1353,
+          6686,
+          0
+        ],
+        "hard_positive_count": [
+          90,
+          548,
+          3450,
+          0
+        ],
+        "hard_entropy_nats": 0.5375671445550834,
+        "noncollapse": true,
+        "eligible": 8192,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              47,
+              43
+            ],
+            [
+              463,
+              246
+            ],
+            [
+              1700,
+              1578
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              16,
+              47
+            ],
+            [
+              342,
+              302
+            ],
+            [
+              1536,
+              1872
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        "steps": 128,
+        "soft_expected_train_logscore": -0.3186753513291478,
+        "soft_decoder": [
+          -0.7324740290641785,
+          -0.27840176224708557,
+          0.18898296356201172,
+          0.7154854536056519
+        ],
+        "hard_decoder": [
+          -2.4379275505739524,
+          -1.2355113786701497,
+          0.3389364056210683,
+          0.0
+        ]
+      },
+      "16": {
+        "mean_logscore_nats": {
+          "stratum": -0.6899587822119134,
+          "packing": -0.32590259954697365,
+          "learned": -0.24350292559838912
+        },
+        "gain_vs_packing": 0.08239967394858452,
+        "gain_vs_stratum": 0.44645585661352427,
+        "hard_state_count": [
+          913,
+          2232,
+          5047,
+          0
+        ],
+        "hard_positive_count": [
+          131,
+          422,
+          3535,
+          0
+        ],
+        "hard_entropy_nats": 0.8972228778948661,
+        "noncollapse": true,
+        "eligible": 8192,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              440,
+              61
+            ],
+            [
+              966,
+              185
+            ],
+            [
+              804,
+              1621
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              342,
+              70
+            ],
+            [
+              844,
+              237
+            ],
+            [
+              708,
+              1914
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        "steps": 256,
+        "soft_expected_train_logscore": -0.2960716085508466,
+        "soft_decoder": [
+          -0.89426589012146,
+          -0.4502478837966919,
+          0.3071136474609375,
+          0.6973326206207275
+        ],
+        "hard_decoder": [
+          -2.936579658028935,
+          -1.6817502621720883,
+          1.0578558171889627,
+          0.0
+        ]
+      },
+      "32": {
+        "mean_logscore_nats": {
+          "stratum": -0.6899587822119134,
+          "packing": -0.32590259954697365,
+          "learned": -0.10894047594884958
+        },
+        "gain_vs_packing": 0.21696212359812406,
+        "gain_vs_stratum": 0.5810183062630638,
+        "hard_state_count": [
+          1959,
+          1936,
+          4297,
+          0
+        ],
+        "hard_positive_count": [
+          32,
+          47,
+          4009,
+          0
+        ],
+        "hard_entropy_nats": 1.0215008026789452,
+        "noncollapse": true,
+        "eligible": 8192,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              1031,
+              9
+            ],
+            [
+              1012,
+              23
+            ],
+            [
+              167,
+              1835
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              896,
+              23
+            ],
+            [
+              877,
+              24
+            ],
+            [
+              121,
+              2174
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        "steps": 512,
+        "soft_expected_train_logscore": -0.22843670472502708,
+        "soft_decoder": [
+          -1.3083293437957764,
+          -0.8064182996749878,
+          0.6949999332427979,
+          0.684998631477356
+        ],
+        "hard_decoder": [
+          -4.7648475732536335,
+          -3.9121415822136685,
+          2.7783778918488675,
+          0.0
+        ]
+      }
+    },
+    "baseline_logistic_tree_steps": [
+      [
+        136,
+        150
+      ],
+      [
+        255,
+        150
+      ],
+      [
+        134,
+        150
+      ]
+    ],
+    "fit_score_scope": "OOF parent-isolated packing offsets, same fit rows used for encoder and hard decoder (not validation)",
+    "eligible_parents": 64,
+    "fold_parent_counts": [
+      32,
+      32
+    ]
+  },
+  "held": {
+    "checkpoints": {
+      "8": {
+        "mean_logscore_nats": {
+          "stratum": -0.6885201338555154,
+          "packing": -0.2940498464740368,
+          "learned": -0.3200675849134376
+        },
+        "gain_vs_packing": -0.026017738439400806,
+        "gain_vs_stratum": 0.36845254894207774,
+        "hard_state_count": [
+          87,
+          674,
+          3335,
+          0
+        ],
+        "hard_positive_count": [
+          76,
+          360,
+          1593,
+          0
+        ],
+        "hard_entropy_nats": 0.5461032413838521,
+        "noncollapse": true,
+        "eligible": 4096,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              8,
+              32
+            ],
+            [
+              179,
+              181
+            ],
+            [
+              951,
+              707
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              3,
+              44
+            ],
+            [
+              135,
+              179
+            ],
+            [
+              791,
+              886
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      "16": {
+        "mean_logscore_nats": {
+          "stratum": -0.6885201338555154,
+          "packing": -0.2940498464740368,
+          "learned": -0.3916607936017736
+        },
+        "gain_vs_packing": -0.09761094712773677,
+        "gain_vs_stratum": 0.2968593402537418,
+        "hard_state_count": [
+          485,
+          1160,
+          2451,
+          0
+        ],
+        "hard_positive_count": [
+          173,
+          353,
+          1503,
+          0
+        ],
+        "hard_entropy_nats": 0.9172056973129572,
+        "noncollapse": true,
+        "eligible": 4096,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              176,
+              72
+            ],
+            [
+              435,
+              159
+            ],
+            [
+              527,
+              689
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              136,
+              101
+            ],
+            [
+              372,
+              194
+            ],
+            [
+              421,
+              814
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      "32": {
+        "mean_logscore_nats": {
+          "stratum": -0.6885201338555154,
+          "packing": -0.2940498464740368,
+          "learned": -0.5865429923911929
+        },
+        "gain_vs_packing": -0.2924931459171561,
+        "gain_vs_stratum": 0.10197714146432246,
+        "hard_state_count": [
+          968,
+          1017,
+          2111,
+          0
+        ],
+        "hard_positive_count": [
+          144,
+          169,
+          1716,
+          0
+        ],
+        "hard_entropy_nats": 1.0284386874046667,
+        "noncollapse": true,
+        "eligible": 4096,
+        "stratum_state_negative_positive": {
+          "0": [
+            [
+              444,
+              51
+            ],
+            [
+              447,
+              63
+            ],
+            [
+              247,
+              806
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "1": [
+            [
+              380,
+              93
+            ],
+            [
+              401,
+              106
+            ],
+            [
+              148,
+              910
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    "eligible_parents": 32,
+    "gain_still_rising_at_32": false,
+    "gains_monotonically_rising": false,
+    "selected_epoch": 32
+  },
+  "scope": "Synthetic positive control, NOT sensitivity bound on physical signal",
+  "code_sha256": "1f0d7b89ae72a43d1754393435d3a6efd5cd5d6ecd905169de90d3a33464b97e"
+}

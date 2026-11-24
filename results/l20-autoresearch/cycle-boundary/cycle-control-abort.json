@@ -1,0 +1,5 @@
+{
+  "scope": "Synthetic control only; no physical files loaded.",
+  "outcome": "Aborted during packing_fit in the OOF loop: scipy L-BFGS-B reported ABNORMAL before encoder initialization, training steps, checkpoints or held synthetic scores; not a failed/passed scientific gate.",
+  "action": "Correct packing logistic objective and gradient to float64 throughout optimization rather than converting trial coefficients and residuals to float32; unchanged objective, initialization, design, controls, threshold, data seeds and optimizer options. Authorized single same-data numerical run; no different example or tuning."
+}

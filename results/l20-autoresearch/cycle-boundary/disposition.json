@@ -1,0 +1,9 @@
+{
+  "decision": "retired at the preregistered positive-control gate",
+  "support": {"pilot_parents":256,"uniform_anchors":32768,"all_positives":8401,"eligible_anchors":15712,"eligible_positives":7831,"parents_with_both_eligible_outcomes":256,"supported_strata":22,"projected_80pct_MDE_1024_parents_nats_for_declared_logit_perturbation":0.0007700},
+  "synthetic_held_gain_nats_vs_packing_epochs_8_16_32":[-0.026018,-0.097611,-0.292493],
+  "required_gain_nats":0.01,
+  "scientific_scope":"The pilot establishes conditional outcome variation, not remote information. Failed planted recovery invalidates physical interpretation of this supervised four-code procedure. It is not a null result for the archived glass. No physical fit, development score, cold, hot, or transfer evaluation was run. No alternate radius or retraining. Do not reassign the six locked cohorts.",
+  "spend_usd":0,
+  "receipts":["lineage.json","pilot.json","pilot-support.npz","hot-law.npz","cycle-control-abort.json","cycle-control.json"]
+}
