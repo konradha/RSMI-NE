@@ -1,0 +1,369 @@
+{
+  "source": "archived-physical",
+  "stage": "train",
+  "beta_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "train_parents": 81920,
+  "opportunities": 5242880,
+  "bytes": 2202343680,
+  "per_beta": {
+    "0": {
+      "beta": "0",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 5.048117654863745,
+      "VmHWM_KiB": 461784,
+      "source_archive_bytes": 31262613,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.47298036934807897,
+        "parents_per_second": 135.31216969578009,
+        "logical_payload_MB_per_second": 3.6371911214225685,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 2023424
+        },
+        "VmHWM_KiB": 90400,
+        "seconds_with_pins": 0.652966498862952
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.8686676979996264,
+        "parents_per_second": 2100.9816904674312,
+        "logical_payload_MB_per_second": 56.474387839764546,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 226271232
+        },
+        "VmHWM_KiB": 264744,
+        "seconds_with_pins": 4.096348634921014
+      }
+    },
+    "1": {
+      "beta": "0.338888888889",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.683592326939106,
+      "VmHWM_KiB": 461952,
+      "source_archive_bytes": 31082198,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.43177411891520023,
+        "parents_per_second": 148.22565132156404,
+        "logical_payload_MB_per_second": 3.9843055075236418,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 2113536
+        },
+        "VmHWM_KiB": 82924,
+        "seconds_with_pins": 0.7190754706971347
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.4545737048611045,
+        "parents_per_second": 2352.822864529618,
+        "logical_payload_MB_per_second": 63.24387859855614,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 222896128
+        },
+        "VmHWM_KiB": 264768,
+        "seconds_with_pins": 3.636067978106439
+      }
+    },
+    "2": {
+      "beta": "0.677777777778",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.7545728222467005,
+      "VmHWM_KiB": 462056,
+      "source_archive_bytes": 30808495,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.4605791582725942,
+        "parents_per_second": 138.95548430813176,
+        "logical_payload_MB_per_second": 3.735123418202582,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 2117632
+        },
+        "VmHWM_KiB": 85420,
+        "seconds_with_pins": 0.7142116050235927
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.5077773039229214,
+        "parents_per_second": 2317.136835029423,
+        "logical_payload_MB_per_second": 62.28463812559088,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 225648640
+        },
+        "VmHWM_KiB": 264708,
+        "seconds_with_pins": 3.7424528850242496
+      }
+    },
+    "3": {
+      "beta": "1.016666666667",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.576656166929752,
+      "VmHWM_KiB": 462104,
+      "source_archive_bytes": 30537250,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.47291566897183657,
+        "parents_per_second": 135.33068197791386,
+        "logical_payload_MB_per_second": 3.6376887315663247,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 2039808
+        },
+        "VmHWM_KiB": 80772,
+        "seconds_with_pins": 0.6629213918931782
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.439455096144229,
+        "parents_per_second": 2363.165028411571,
+        "logical_payload_MB_per_second": 63.521875963703025,
+        "proc_io_delta_bytes": {
+          "read_bytes": 12288,
+          "write_bytes": 223424512
+        },
+        "VmHWM_KiB": 264820,
+        "seconds_with_pins": 3.6057444298639894
+      }
+    },
+    "4": {
+      "beta": "1.355555555556",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.457219475880265,
+      "VmHWM_KiB": 462012,
+      "source_archive_bytes": 30329376,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.46448976499959826,
+        "parents_per_second": 137.7855979238969,
+        "logical_payload_MB_per_second": 3.7036768721943485,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 84424,
+        "seconds_with_pins": 0.6583017851226032
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.2429740079678595,
+        "parents_per_second": 2506.3413952840274,
+        "logical_payload_MB_per_second": 67.37045670523466,
+        "proc_io_delta_bytes": {
+          "read_bytes": 16384,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264676,
+        "seconds_with_pins": 3.472147943917662
+      }
+    },
+    "5": {
+      "beta": "1.694444444444",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.6115420875139534,
+      "VmHWM_KiB": 461968,
+      "source_archive_bytes": 30151586,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.46747868275269866,
+        "parents_per_second": 136.90463835301063,
+        "logical_payload_MB_per_second": 3.679996678928926,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 79080,
+        "seconds_with_pins": 0.6611409732140601
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.4485979098826647,
+        "parents_per_second": 2356.899880008495,
+        "logical_payload_MB_per_second": 63.353468774628354,
+        "proc_io_delta_bytes": {
+          "read_bytes": 4096,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264676,
+        "seconds_with_pins": 3.6341026979498565
+      }
+    },
+    "6": {
+      "beta": "2.033333333333",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.481969464570284,
+      "VmHWM_KiB": 462180,
+      "source_archive_bytes": 29993198,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.42699306178838015,
+        "parents_per_second": 149.8853394290484,
+        "logical_payload_MB_per_second": 4.028917923852822,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 80588,
+        "seconds_with_pins": 0.599566528107971
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.4045654023066163,
+        "parents_per_second": 2387.3825406594406,
+        "logical_payload_MB_per_second": 64.17284269292576,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264708,
+        "seconds_with_pins": 3.5732338041998446
+      }
+    },
+    "7": {
+      "beta": "2.372222222222",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.6608665166422725,
+      "VmHWM_KiB": 462168,
+      "source_archive_bytes": 29844670,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.4877728670835495,
+        "parents_per_second": 131.20861023423345,
+        "logical_payload_MB_per_second": 3.526887443096195,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 100048,
+        "seconds_with_pins": 0.6872442038729787
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.4200333282351494,
+        "parents_per_second": 2376.5850270805163,
+        "logical_payload_MB_per_second": 63.88260552792427,
+        "proc_io_delta_bytes": {
+          "read_bytes": 16384,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264760,
+        "seconds_with_pins": 3.6682648989371955
+      }
+    },
+    "8": {
+      "beta": "2.711111111111",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.3837615991942585,
+      "VmHWM_KiB": 462260,
+      "source_archive_bytes": 29711364,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.4203762048855424,
+        "parents_per_second": 152.2445829621245,
+        "logical_payload_MB_per_second": 4.0923343900219065,
+        "proc_io_delta_bytes": {
+          "read_bytes": 4096,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 100088,
+        "seconds_with_pins": 0.6430721250362694
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.261239935643971,
+        "parents_per_second": 2492.3035901665507,
+        "logical_payload_MB_per_second": 66.99312050367688,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264756,
+        "seconds_with_pins": 3.432017263956368
+      }
+    },
+    "9": {
+      "beta": "3.05",
+      "output_bytes": 220234368,
+      "total_seconds_per_beta": 4.533150603063405,
+      "VmHWM_KiB": 462152,
+      "source_archive_bytes": 29580487,
+      "pilot_projection": {
+        "selected_train_parents": 64,
+        "selected_native_species_bytes": 512000,
+        "seconds_through_fsync": 0.4557541012763977,
+        "parents_per_second": 140.42660246119522,
+        "logical_payload_MB_per_second": 3.7746670741569273,
+        "proc_io_delta_bytes": {
+          "read_bytes": 0,
+          "write_bytes": 1810432
+        },
+        "VmHWM_KiB": 81440,
+        "seconds_with_pins": 0.6786511978134513
+      },
+      "complement_projection": {
+        "selected_train_parents": 8128,
+        "selected_native_species_bytes": 65024000,
+        "seconds_through_fsync": 3.3691336507909,
+        "parents_per_second": 2412.489631597714,
+        "logical_payload_MB_per_second": 64.84772129734655,
+        "proc_io_delta_bytes": {
+          "read_bytes": 8192,
+          "write_bytes": 218611712
+        },
+        "VmHWM_KiB": 264676,
+        "seconds_with_pins": 3.554279309231788
+      }
+    }
+  },
+  "stream_receipts_sha256": {
+    "0": "17894969fa98403831b0e0b6ddbe90b65cade689c012416a65ac45cc0d761343",
+    "1": "1a349f830f80ea594fb2c183525ee01a6d2d8023c852381d93820288ba6770dc",
+    "2": "678840e06edbfe73d7a2e950a596aa3cc131f18326b14a1d0dc8a3a802111eed",
+    "3": "84f47f8fb68560184139e4477f61818ee5d67bc7a0825a2cc0058fe40b1e5510",
+    "4": "ce0423661db0c7664d4fd7b98f67866746dcb191e74e89841f41fc7157433f6d",
+    "5": "f09eaf4947819b25914b22c4ffb5b6760c893698ca39a045514f793498d9a7a3",
+    "6": "7d046c7f2d2a4f45feaa269b6e045603bfa9465d2968806a0903f76b3923a447",
+    "7": "8679d1de2c5d49a16da9d16830f0788e680cf0bfd804c0af6179b99511a467ad",
+    "8": "99a8e08294e23ee3ad68163caf8ab9cadf04a8dd4807dad613dcbcd2ccf73be8",
+    "9": "cf7a4dcf3cf4917c099c367f7eff144abbce5a5c8b4fc899ad59b99da1cb1bf5"
+  },
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+  "release_sha256": "817ac3c8de6a2d3adedfb1d9d5a87383881d700a0bc861ad96f83da226a76a16",
+  "packet_sha256": "5f5211843bb0b154db7a565a1a0bef2308e10e84afc661010e311e7f3844d82b",
+  "test_species_rows_returned": 0,
+  "incremental_fee_usd": 0
+}

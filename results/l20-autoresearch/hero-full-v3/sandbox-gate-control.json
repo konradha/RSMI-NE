@@ -1,0 +1,12 @@
+{
+  "source": "local synthetic transport only, no CUDA or Modal calls",
+  "utc": "2026-11-24T15:08:35.761+00:00",
+  "missing_token_exit": 41,
+  "valid_token_exit": 0,
+  "replay_exit": 1,
+  "exception_control_exit": 44,
+  "diagnostic_bytes": 85,
+  "actual_harmless_child_starts": 1,
+  "physical_rows": 0,
+  "paid_calls": 0
+}
