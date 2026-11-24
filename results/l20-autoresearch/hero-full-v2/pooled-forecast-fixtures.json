@@ -1,0 +1,36 @@
+{
+  "schema": "hero-full-v2-pooled-forecast-fixtures-1",
+  "physical_data": false,
+  "seed": 26112513,
+  "passed": true,
+  "mean_se_df": {
+    "point": 4.5,
+    "se": 0.816496580927726,
+    "df": 3.692307692307693,
+    "lower95": 2.1565590588657257,
+    "upper95": 6.843440941134274
+  },
+  "unequal_beta_fit_mean": -0.9833372748366546,
+  "unequal_beta_fit_variance": 8.329437534190099,
+  "support_cells": [
+    2,
+    2
+  ],
+  "opportunities_per_parent": 8,
+  "whole_parent_gain": {
+    "n": 4,
+    "small_n": true,
+    "parent_sd": 2.183651982499348e-06,
+    "point": 6.514049335000504e-06,
+    "se": 1.091825991249674e-06,
+    "df": 3,
+    "lower95": 3.039371743134651e-06,
+    "upper95": 9.988726926866357e-06
+  },
+  "simulated_Welch_95_coverage": 0.94873046875,
+  "replicates": 4096,
+  "null_passed": true,
+  "planted_leak_passed": false,
+  "ridge_grid_selected_exact_cost": true,
+  "elapsed_seconds": 0.030632501002401114
+}
