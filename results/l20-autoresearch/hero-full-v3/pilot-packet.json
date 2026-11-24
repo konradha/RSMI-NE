@@ -1,0 +1,60 @@
+{
+  "schema": "hero-full-v3-fit-pilot-1",
+  "role": "fit",
+  "source": "archived-physical",
+  "train_only": true,
+  "fit_only": true,
+  "all_ten": true,
+  "train_folds": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "beta_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "packet_sha256": "5f5211843bb0b154db7a565a1a0bef2308e10e84afc661010e311e7f3844d82b",
+  "release_sha256": "817ac3c8de6a2d3adedfb1d9d5a87383881d700a0bc861ad96f83da226a76a16",
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+  "parents_per_beta": {
+    "0": 64,
+    "1": 64,
+    "2": 64,
+    "3": 64,
+    "4": 64,
+    "5": 64,
+    "6": 64,
+    "7": 64,
+    "8": 64,
+    "9": 64
+  },
+  "anchors_per_parent": 64,
+  "partial_receipts_sha256": {
+    "0": "40bab1cb2f3bc45763241485eb65c8827854e0ff9718f7257f4ab2e8feaf2a23",
+    "1": "73e4a680b2f2153641863fc1593b2beb3794e5d6ed74bfec4c6fe0a2721c98d0",
+    "2": "4782cf0d3fc690d255574a1741e6c38572028e3a171874809e5829995591770b",
+    "3": "adee6b3b046ff76472ff6b46722b6154c66ab78db978e641c51b809dd69d13fb",
+    "4": "8c529ffe46534b9bd98030f606e138a407719fd47a1603adccaaf96e41fbc4c8",
+    "5": "56d8adefb6bddeda9efb6c481479626e784cc1cd78f62ee34bf3ad125ba0b861",
+    "6": "b8b003242d7dab138f4ecd896f4d9105befc37b904d6b020f1775d779fc5e050",
+    "7": "054aeaf7d7ae636ab31185416d60e2be7eb22dbdfbed3932090aba7908013219",
+    "8": "e0472fb79a83968da8bd0d47899ffd69d088017eaed9b5307bf9337616097bb1",
+    "9": "2102098767834e08a8d49a4c4e970cd5a682c0012ea31ee05bd81f57b23f9fbe"
+  },
+  "raw_bytes": 16920320,
+  "stored_bytes": 16921294,
+  "test_species_rows_returned": 0
+}
