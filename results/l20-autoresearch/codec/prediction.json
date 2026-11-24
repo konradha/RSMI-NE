@@ -1,0 +1,36 @@
+{
+  "weights_sha256": "71bce3998c88be8cd2b793bc7b79d50c91e38c5ab07740bc4ff0645ca5d0c1cb",
+  "codec_sha256": "1ad644f41c5afcfedeae7b685b6a1687d416fe23eda3291be1286fbf68ac1001",
+  "comparators_sha256": "0f805c88b6b2bac9323000c659c8e6de55bc2cff225063e677fa629e0591741c",
+  "script_sha256": "e01ceb7111e174953bb12be327b3f951fa5709f661f0ba13081169369d03847b",
+  "codec_implementation_sha256": "27fe243fc91c2a25242a0e3bde0e8432fc215553737fd3d6edf7723694b91256",
+  "methods": [
+    "rsmi",
+    "species-A",
+    "species-B",
+    "vacancy",
+    "composition",
+    "checkerboard",
+    "surface",
+    "energy",
+    "tetra_A",
+    "tetra_B",
+    "tetra_vacancy",
+    "kmeans_A_dipole"
+  ],
+  "comparators": [
+    "kmeans_A_dipole",
+    "composition",
+    "composition"
+  ],
+  "primary": "At beta index 8 the frozen 250-byte RSMI representation retains at least half of within-temperature variance of A-species X-star intensity, and separately beats the strongest equal-size cold-selected conventional encoder for it.",
+  "threshold": 0.5,
+  "utility": "R2_centered = 1 - Var(error)/Var(Y) within a temperature. Raw R2 separately retains mean error; no model refitting or new microscopic observations at transfer. Paired whole-parent jackknife normal/t intervals conditional on frozen probes. Beta=0 is a control for RSMI specificity, not an expectation of zero ability to encode occupancies.",
+  "targets": [
+    "mean of S_A(pi,0,0) over three axes",
+    "exact H/L^3",
+    "mean of S_A(2pi/L,0,0) over three axes"
+  ],
+  "readout": "Same fixed ridge on three symbol frequencies, their six quadratic moments, all 48 directed nearest-tile pair frequencies and six reduced first-wave power bilinears. The X target alone can be estimated from counts, so this is not a lower limit on bytes needed for that single quantity.",
+  "format": "Nonoverlapping stride-2 tiles at origin 0. Flatten 10^3 labels z,y,x and pack four labels in each byte, least significant label first. 250 bytes per parent, excluding amortized table/probe and row identifiers. Lossy: never replace microscopic archives. 8x smaller than packing 8000 microscopic species into two bits each."
+}
