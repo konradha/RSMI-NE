@@ -1,0 +1,32 @@
+{
+  "schema": "hero-full-v3-distilled-rule-1",
+  "source": {
+    "version": "v3",
+    "nomination_sha256": "11d9411956ff50a92eb756089c5e77ecceddb92c2a8ca75f58184f30ad783e2d",
+    "folds": "2..7 FIT, 1 rule",
+    "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01"
+  },
+  "feature": "site:1,-1,0:A",
+  "fit_variance": 1.0,
+  "residual_fraction": 0.0,
+  "symbolic_passed": false,
+  "rediscovery": true,
+  "eligible_for_forecast_gate": false,
+  "status": "unstable_teacher_descriptor_only",
+  "formula": "1[V(1,-1,0)=A]",
+  "symmetry": "fixed offset; permuted by proper rotations",
+  "sign": -1,
+  "fit_mean": 0.3003173828125,
+  "fit_sd": 0.45839595590837223,
+  "units": "one global equal-beta FIT population SD of the selected central feature",
+  "domain": "27 open sites in lexicographic (z,y,x), 0=vac,1=A,2=B; signed fixed frame, no beta argument",
+  "teacher_fit_affine": {
+    "intercept": 0.15074186045057886,
+    "slope": -0.5019418424563621
+  },
+  "conventional_model": {
+    "name": "exact_dictionary_identity"
+  },
+  "conventional_feature_order": [],
+  "fit_residual_variance": 0.0
+}
