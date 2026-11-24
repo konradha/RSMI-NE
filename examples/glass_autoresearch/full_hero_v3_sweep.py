@@ -7,15 +7,16 @@ import hashlib
 import json
 import math
 import time
+import os
 from datetime import datetime, timezone
 from itertools import product
 from pathlib import Path
 
 import numpy as np
 import torch
-from hero_train import ARMS, BASELINES, LAWS, SEEDS, dump_new
+from hero_train import ARMS, BASELINES, LAWS, SEEDS, center_logits, hbits, indicators, init_model, objective_grad
 from hero_rule import _control_value, _mapped
-from full_hero_train import Evaluation, Temperature, Trainer, device_setup, sha
+from full_hero_train import Evaluation, Temperature, Trainer, device_setup, loss_fn, pilot_math, sha
 from full_hero_v3_selection import Published, depth_status
 
 BETAS=tuple(range(10))
@@ -44,6 +45,57 @@ def rawsha(a):
     for i in range(0,len(a),128):
         h.update(np.ascontiguousarray(a[i:i+128]).view(np.uint8))
     return h.hexdigest()
+
+
+def dump_new(path,obj):
+    """A complete receipt, never a partially written JSON, is the export barrier."""
+    path.parent.mkdir(parents=True,exist_ok=True)
+    partial=path.with_name('.'+path.name+'.partial')
+    with partial.open('x') as f:
+        json.dump(obj,f,separators=(',',':'),allow_nan=False)
+        f.write('\n');f.flush();os.fsync(f.fileno())
+    os.link(partial,path)
+    partial.unlink()
+
+
+def hard_oracle(dev):
+    rng=np.random.default_rng(8198)
+    v=rng.integers(3,size=(64,27),dtype='u1');e=rng.integers(3,size=(64,386),dtype='u1')
+    hard=v[:,13].astype('i8');m=init_model('affine',6101)
+    expected,g=objective_grad(m,v,e,frozen=hard)
+    p={k:torch.tensor(a,device=dev,requires_grad=True) for k,a in m.items() if k.startswith('e')}
+    loss=loss_fn(p,None,torch.as_tensor(indicators(e),device=dev),torch.as_tensor(hard,device=dev))
+    loss.backward()
+    errs={k:float(abs(a.grad.detach().cpu().numpy()-g[k]).max()) for k,a in p.items()}
+    diff=abs(expected-float(loss.detach().cpu()))
+    if max(diff,*errs.values())>2e-6:
+        raise ArithmeticError('Explicit hard-symbol oracle/gradient mismatch')
+    return dict(abs_loss_error=diff,per_parameter_max_abs_gradient_error=errs)
+
+
+class ShellRows:
+    """Raw or packed shell rows: decode only requested minibatch/eval indices."""
+    dtype=np.dtype('u1')
+
+    def __init__(self,source,parents,packed,flat=False):
+        self.source,self.parents,self.packed,self.flat=source,parents,packed,flat
+        self.q=source.shape[1]
+        self.shape=(len(parents)*self.q,386) if flat else (len(parents),self.q,386)
+
+    def reshape(self,*shape):
+        if shape!=(-1,386):
+            raise ValueError('Shell bank supports only flat opportunity indexing')
+        return ShellRows(self.source,self.parents,self.packed,True)
+
+    def __getitem__(self,ix):
+        if not self.flat:
+            return ShellRows(self.source,self.parents[ix],self.packed)
+        ids=np.asarray(ix)
+        a=self.source[self.parents[ids//self.q],ids%self.q]
+        if self.packed:
+            from full_hero_v3_transport import unpack_e
+            return unpack_e(a)
+        return a
 
 
 def load_arrays(args):
@@ -113,10 +165,8 @@ def load_arrays(args):
                 or fields['E'].shape!=(8192,64,97 if manifest is not None else 386)):
             raise ValueError('Incorrect TRAIN geometry or parent identity duplication')
         for r,ix in role_ids.items():
-            views={k:a if all_train else a[ix] for k,a in fields.items()}
-            if manifest is not None:
-                from full_hero_v3_transport import unpack_e
-                views['E']=unpack_e(views['E'])
+            views={k:(a if all_train else a[ix]) for k,a in fields.items() if k!='E'}
+            views['E']=ShellRows(fields['E'],ix,manifest is not None)
             arrays[r][b]=views
     return arrays,receipt_hashes
 
@@ -130,24 +180,50 @@ def make_data(fields,denominator,eval_only=False):
     return data
 
 
-def frozen_maps(train,dev,control):
+def reference_rate(train,entry,roots):
+    paths=[r/'checkpoints'/entry['path'] for r in roots if (r/'checkpoints'/entry['path']).is_file()]
+    if len(paths)!=1 or sha(paths[0])!=entry['sha256']:
+        raise PermissionError('Missing/ambiguous frozen primary-seed reference weights')
+    with np.load(paths[0],allow_pickle=False) as z:
+        m={k:z[k] for k in z.files if k.startswith('v')}
+    masses={}
+    for b,d in train.items():
+        v=d.v.reshape(-1,27);counts=np.zeros(4,np.int64)
+        for lo in range(0,len(v),8192):
+            h=center_logits(m,v[lo:lo+8192]).argmax(-1)
+            counts+=np.bincount(h,minlength=4)
+        masses[b]=(counts/len(v)).tolist()
+    mass=np.mean(list(masses.values()),axis=0);target=np.sort(mass)[::-1]
+    return dict(primary_seed=6101,weights_sha256=entry['sha256'],hard_mass_by_beta=masses,
+                hard_mass=mass.tolist(),descending_target_mass=target.tolist(),hard_entropy_bits=float(hbits(mass)))
+
+
+def frozen_maps(train,dev,control,reference=None):
     """Exact equal-beta empirical percentile; species ordering and ties follow pilot."""
     values={b:_mapped(d.v,lambda w:_control_value(w,control)) for b,d in train.items()}
+    target=np.full(4,.25)
+    if control.startswith('random_'):
+        if reference is None:
+            raise ValueError('Random controls need the frozen primary-seed empirical hard mass')
+        target=np.asarray(reference['descending_target_mass'])
     if control=='site':
         cuts=[]
     else:
-        vals=np.concatenate([x.ravel() for x in values.values()]); w=np.empty(len(vals),'d'); off=0
-        for x in values.values():
-            w[off:off+x.size]=1./(len(values)*x.size); off+=x.size
-        order=np.argsort(vals,kind='stable')
-        cum=np.cumsum(w[order],dtype=np.float64)
-        cuts=vals[order[np.searchsorted(cum,cum[-1]*np.array([.25,.50,.75]))]].tolist()
+        # V3 is exactly balanced at every beta; pooled ranks equal the beta-macro CDF.
+        if len({x.size for x in values.values()})!=1:
+            raise ValueError('Nonuniform parent/opportunity weights in a V3 bin')
+        vals=np.concatenate([x.ravel() for x in values.values()])
+        cuts=np.quantile(vals,np.clip(target.cumsum()[:-1],0,1),method='inverted_cdf',overwrite_input=True).tolist()
     def label(x):
         return (x if control=='site' else np.searchsorted(cuts,x,side='left')).astype('u1')
     ff={b:label(x) for b,x in values.items()}
     fd={b:label(_mapped(d.v,lambda w:_control_value(w,control))) for b,d in dev.items()}
     spec=dict(control=control,cuts=cuts,fit_beta_weight='equal',use='fit-only thresholds frozen for all folds',
               fit_mass_by_beta={b:(np.bincount(h.ravel(),minlength=4)/h.size).tolist() for b,h in ff.items()})
+    achieved=np.mean(list(spec['fit_mass_by_beta'].values()),axis=0)
+    spec.update(target_mass=None if control=='site' else target.tolist(),achieved_equal_beta_mass=achieved.tolist(),
+                achieved_hard_entropy_bits=float(hbits(achieved)),tie_policy='<= threshold belongs to lower bin; empty bins allowed',
+                random_rate_reference=reference if control.startswith('random_') else None)
     return ff,fd,spec
 
 
@@ -228,7 +304,7 @@ def one_run(args,info,fit,dev,fe,de,den,arch,law,seed,ff=None,fd=None,spec=None,
         if den==1 and depth>=8192 and spec is None:
             opt_sha=save_optimizer(args.out/'optimizer'/(stamp+'.npz'),z)
         full=all(r['full_roster_exposed'] for r in timing['beta_positive_exposures'].values())
-        r=dict(schema='hero-full-v3-learning-1',source='archived-physical',arch=arch,law=law,seed=seed,denominator=den,
+        r=dict(schema='hero-full-v3-learning-1',source=args.source,arch=arch,law=law,seed=seed,denominator=den,
                updates=depth,checkpoint=cp.name,checkpoint_sha256=digest,optimizer_state_sha256=state_hash(z),
                initial_weights_sha256=z.init_hash,optimizer_file_sha256=opt_sha,split_sha256=args.split_sha256,
                release_sha256=args.release_sha256,manifest_sha256=args.manifest_sha256,
@@ -286,7 +362,7 @@ def final_refit(args,info,fields,source_pins):
     if args.seed is not None:
         raise PermissionError('Final frozen path needs all five fixed seeds')
     fit=make_data(fields,1)
-    receipt=dict(schema='hero-full-v3-refit-1',status='complete',source='archived-physical',
+    receipt=dict(schema='hero-full-v3-refit-1',status='complete',source=args.source,
                  primary_seed=6101,indices=list(BETAS),arch=n['arch'],law=n['law'],depth=n['depth'],updates=n['depth'],
                  seeds=list(SEEDS),split_sha256=args.split_sha256,rosters_sha256=args.rosters_sha256,
                  release_sha256=args.release_sha256,nomination_sha256=args.nomination_sha256,
@@ -306,7 +382,7 @@ def final_refit(args,info,fields,source_pins):
         cp=args.out/'checkpoints'/f'refit-{name}-{n["law"]}-s{seed}-u{n["depth"]}.npz'
         entry=dict(path=cp.name,sha256=write_weights(cp,z.weights()),optimizer_state_sha256=state_hash(z))
         dump_new(args.out/'learning'/(cp.stem+'.json'),dict(schema='hero-full-v3-final-refit-curve-1',
-                 source='archived-physical',name=name,law=n['law'],seed=seed,split_sha256=args.split_sha256,
+                 source=args.source,name=name,law=n['law'],seed=seed,split_sha256=args.split_sha256,
                  refit_release_sha256=args.refit_release_sha256,full_positive_exposure=full,frozen_spec=spec,
                  timing=traj,checkpoint=entry,device=info))
         return entry
@@ -314,8 +390,9 @@ def final_refit(args,info,fields,source_pins):
         receipt['checkpoints'][str(seed)]=execute(n['arch'],seed,None,None)
     # Only the v3 registered six fixed controls. Refit their cuts on all TRAIN
     # and replay the primary seed's exact physical opportunity stream.
+    reference=reference_rate(fit,receipt['checkpoints']['6101'],[args.out])
     for name in BASELINES:
-        ff,_,spec=frozen_maps(fit,{},name)
+        ff,_,spec=frozen_maps(fit,{},name,reference)
         receipt['controls'][name]=dict(frozen_spec=spec,seed=6101,**execute(name,6101,ff,spec))
     receipt['wall_sec']=time.monotonic()-started
     dump_new(args.out/'refit.json',receipt)
@@ -332,6 +409,10 @@ def main(args):
     if args.panel in ('full-primary','ladder') and args.seed not in (None,*SEEDS[:3]):
         raise ValueError('Screening seeds restricted to first three starts')
     info=device_setup(args.device)
+    args.source='archived-physical'
+    numeric=dict(source='synthetic-only generated ternary tensors',physical_parents=0,
+                 frozen_hard_symbol_oracle=hard_oracle(args.device),post_log_categorical_oracle=pilot_math(args.device),
+                 effective_device=info,actual_numeric_optimizer_steps=2)
     if args.device=='cpu' and not args.offline_root:
         summary=checked_json(args.source_summary,args.source_summary_sha256)
         args.source_pins=summary['stream_receipts_sha256']
@@ -339,6 +420,7 @@ def main(args):
     data_check_sec=time.monotonic()-wall
     args.out.mkdir(parents=True,exist_ok=True);(args.out/'checkpoints').mkdir();(args.out/'learning').mkdir()
     (args.out/'optimizer').mkdir()
+    dump_new(args.out/'device-numeric.json',numeric)
     if args.panel=='refit':
         return final_refit(args,info,arrays['fit'],source_pins)
     ds=make_data(arrays['dev'],1,True); de=Evaluation(ds,1901)
@@ -362,19 +444,20 @@ def main(args):
     if args.panel in ('all','frozen'):
         control_seeds=seeds
         control_depths=DEPTHS
+        roots=[args.out,*args.prior_root]
+        files=[r/'nomination.json' for r in roots if (r/'nomination.json').exists()]
+        if len(files)!=1:
+            raise ValueError('Random controls require a unique frozen finalist record')
+        nomination=json.loads(files[0].read_text())
+        if nomination['split_sha256']!=args.split_sha256 or nomination['release_sha256']!=args.release_sha256:
+            raise PermissionError('Wrong TRAIN-only finalist record')
+        final_depth=nomination['updates']
+        reference=reference_rate(fit,nomination['checkpoints']['6101'],roots)
         if args.matched_controls:
-            roots=[args.out,*args.prior_root]
-            files=[r/'nomination.json' for r in roots if (r/'nomination.json').exists()]
-            if len(files)!=1:
-                raise ValueError('Matched controls require a unique frozen finalist record')
-            nomination=json.loads(files[0].read_text())
-            if nomination['split_sha256']!=args.split_sha256 or nomination['release_sha256']!=args.release_sha256:
-                raise PermissionError('Wrong TRAIN-only finalist record')
-            final_depth=nomination['updates']
             control_seeds=SEEDS if args.seed is None else (args.seed,)
             control_depths=tuple(2**n for n in range(10,int(math.log2(final_depth))+1))
         for control in BASELINES:
-            cutoff();ff,fd,spec=frozen_maps(fit,ds,control)
+            cutoff();ff,fd,spec=frozen_maps(fit,ds,control,reference)
             for law,seed in product(LAWS,control_seeds):
                 one_run(args,info,fit,ds,fe,de,1,control,law,seed,ff,fd,spec,depths=control_depths)
     curves=[json.loads(p.read_text()) for p in (args.out/'learning').glob('*.json')]
