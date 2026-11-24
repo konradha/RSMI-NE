@@ -73,6 +73,8 @@ import rsmine.coarsegrainer.cg_optimisers as cg_opt
 
 Jupyter notebooks demonstrating the basic usage in simple examples are provided in <https://github.com/RSMI-NE/RSMI-NE/tree/main/examples>.
 
+**[3D lattice-glass results: temperature, buffer and learned operators](results/l20-first-pass/README.md).** First held-out comparison on 163,840 L20 configurations, including single-site controls, filter maps and reproducible fit receipts.
+
 ## Citation
 
 If you use RSMI-NE in your work, please cite our publications [Phys. Rev. Lett. **127**, 240603 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.240603) and [Phys. Rev. E **104**, 064106 (2021)](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.104.064106):
