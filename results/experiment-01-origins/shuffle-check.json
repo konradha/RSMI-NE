@@ -1,0 +1,96 @@
+{
+  "scope": "CPU reference of unmodified stock first-epoch tf.data shuffle/batch with row indices, not live GPU batch instrumentation or extra training",
+  "expected_pair_probability": 0.00010681315327687495,
+  "rows": [
+    {
+      "seed": 6101,
+      "k": 1,
+      "slot_sha": "16ae472cf30cc318ed7a547d3e21210dc164ea0d5266195e0617bb7ad61cbccf",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3522,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010775334579951636
+    },
+    {
+      "seed": 6101,
+      "k": 4,
+      "slot_sha": "16ae472cf30cc318ed7a547d3e21210dc164ea0d5266195e0617bb7ad61cbccf",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3522,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010775334579951636
+    },
+    {
+      "seed": 6101,
+      "k": 8,
+      "slot_sha": "16ae472cf30cc318ed7a547d3e21210dc164ea0d5266195e0617bb7ad61cbccf",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3522,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010775334579951636
+    },
+    {
+      "seed": 6102,
+      "k": 1,
+      "slot_sha": "b7182c62ffb5762647f37c3b5dcd959270c33bbe7f8326ade8a71a11bdeefd1e",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3622,
+      "directed_negatives": 32685760,
+      "frequency": 0.00011081278208002506
+    },
+    {
+      "seed": 6102,
+      "k": 4,
+      "slot_sha": "b7182c62ffb5762647f37c3b5dcd959270c33bbe7f8326ade8a71a11bdeefd1e",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3622,
+      "directed_negatives": 32685760,
+      "frequency": 0.00011081278208002506
+    },
+    {
+      "seed": 6102,
+      "k": 8,
+      "slot_sha": "b7182c62ffb5762647f37c3b5dcd959270c33bbe7f8326ade8a71a11bdeefd1e",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3622,
+      "directed_negatives": 32685760,
+      "frequency": 0.00011081278208002506
+    },
+    {
+      "seed": 6103,
+      "k": 1,
+      "slot_sha": "9fbaeeaea31c8e747c028f4e4d9eeeefd9d7d90c0e468e89fa535a3e522578e7",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3494,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010689670364097393
+    },
+    {
+      "seed": 6103,
+      "k": 4,
+      "slot_sha": "9fbaeeaea31c8e747c028f4e4d9eeeefd9d7d90c0e468e89fa535a3e522578e7",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3494,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010689670364097393
+    },
+    {
+      "seed": 6103,
+      "k": 8,
+      "slot_sha": "9fbaeeaea31c8e747c028f4e4d9eeeefd9d7d90c0e468e89fa535a3e522578e7",
+      "first_epoch_rows": 65536,
+      "parents": 8192,
+      "directed_same_parent_negatives": 3494,
+      "directed_negatives": 32685760,
+      "frequency": 0.00010689670364097393
+    }
+  ]
+}
