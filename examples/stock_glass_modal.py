@@ -160,7 +160,10 @@ def worker(a):
     tf.keras.utils.set_random_seed(a.seed)
     cg=dict(ll=(3,3,3),visible_dim=2,nonlinearCG=None,init_temperature=.75,min_temperature=.1,relaxation_rate=.0001,Nq=None,conv_activation=None,hidden_dim=2,h_embed=True,use_probs=False,use_logits=True)
     critic=dict(layers=3,embed_dim=8,hidden_dim=32,activation='relu',use_dropout=True,dropout_rate=.2)
-    opt=dict(batch_size=500,iterations=EPOCHS,shuffle=100000,learning_rate=.009)
+    cross=a.short_cross
+    if cross and (b,a.seed) not in ((6,81798),(7,81797)): raise ValueError('Only the two missing short crosses are authorized')
+    if not cross and a.seed not in SEEDS: raise ValueError('Unregistered seed')
+    opt=dict(batch_size=500,iterations=100 if cross else EPOCHS,shuffle=100000,learning_rate=.009)
     def encode(v): return np.stack([v==1,v==2],axis=-1).astype('f')  # A,B indicators; vacancy=(0,0)
     meta=json.loads(Path('prepared.json').read_bytes()); beta=meta['betas'][b]
     def path(side):
@@ -171,7 +174,7 @@ def worker(a):
     adam=tf.keras.optimizers.Adam(opt['learning_rate'])  # identical to the stock default; retain its actual iterations
     endpoint=a.endpoint
     if endpoint and (a.seed!=6101 or b not in (0,9)): raise ValueError('Unregistered endpoint replay')
-    progress=Progress(adam,a.seed,b,uid,synchronize=not endpoint)
+    progress=Progress(adam,a.seed,b,uid,synchronize=not (endpoint or cross))
     from rsmine.coarsegrainer import cg_optimisers
     from contextlib import redirect_stderr, nullcontext
     from unittest.mock import patch
@@ -179,20 +182,25 @@ def worker(a):
     def capture(*args,**kwargs):
         if captured: raise RuntimeError('Stock trainer constructed multiple critics')
         obj=original(*args,**kwargs); captured.append(obj); return obj
-    if not endpoint: barrier(a.seed,'ready',b)
+    if not (endpoint or cross): barrier(a.seed,'ready',b)
     start=time.monotonic()
-    with (patch.object(cg_optimisers,'SeparableCritic',capture) if endpoint else nullcontext()), redirect_stderr(progress):
+    with (patch.object(cg_optimisers,'SeparableCritic',capture) if endpoint or cross else nullcontext()), redirect_stderr(progress):
         estimates,h,filters,encoder=train_RSMI_optimiser(cg,critic,opt,dict(N_samples=8192,dimension=3),V=v,E=e,use_GPU=True,optimizer=adam)
     end=time.monotonic(); steps=int(adam.iterations.numpy())
-    if endpoint:
+    if endpoint or cross:
         if len(captured)!=1 or cg_optimisers.SeparableCritic is not original: raise RuntimeError('Stock critic capture failed')
         stored={f'critic_{j:02}':v for j,v in enumerate(captured[0].get_weights())}
         stored.update(estimates=estimates,coarse_vars=h,filters=filters,final_kernel=encoder.get_weights()[0])
-        complete=steps==EPOCHS*BATCHES and len(estimates)==EPOCHS and all(np.isfinite(x).all() for x in stored.values())
+        epochs=opt['iterations']
+        complete=steps==epochs*BATCHES and len(estimates)==epochs and all(np.isfinite(x).all() for x in stored.values())
         rec=dict(beta=beta,index=b,seed=a.seed,base=BASE,split=SPLIT,gpu_uuid=uid,actual_steps=steps,complete=bool(complete),
                  train_wall_s=end-start,optimizer_samples=progress.samples,train_parents=8192,test_parents_scored=0,
                  critic_class=type(captured[0]).__name__,critic_weight_names=[x.name for x in captured[0].weights],
                  test_score=None,status='stock training incomplete or nonfinite; no TEST score')
+        if cross:
+            rec.update(status='complete (TRAIN only)' if complete else 'incomplete (TRAIN only)',cg=cg,critic=critic,opt=opt)
+            np.savez_compressed(f'{tag}-s{a.seed}.npz',receipt=json.dumps(rec),**stored)
+            print('CROSS_RESULT',b,a.seed,steps,rec['status'],flush=True);return
         if complete:
             with np.load(path('test'),allow_pickle=False) as z:
                 test={k:z[k] for k in ('V','E','ids')}
@@ -250,15 +258,16 @@ def launch(a):
     from decimal import Decimal
     from modal.stream_type import StreamType
     from datetime import datetime, timezone
-    ep=a.endpoint_replay; rates=modal.Workspace.from_context().billing.rates()
-    life,cpu,gib=(1800,4,16) if ep else (6000,16,48)
-    carry=Decimal('11.47')+Decimal('.46928229')+(Decimal('.47796996') if ep else 0)
+    ep,cross=a.endpoint_replay,a.short_cross; rates=modal.Workspace.from_context().billing.rates()
+    life,cpu,gib=(900,4,16) if cross else (1800,4,16) if ep else (6000,16,48)
+    carry=Decimal('11.47')+Decimal('.46928229')+(Decimal('.47796996') if ep or cross else 0)+(Decimal('.17780023') if cross else 0)
     cost=Decimal(life)/3600*(rates['gpu_hour_cost_h100']+cpu*rates['cpu_hour_cost_sandbox']+gib*rates['mem_gib_hour_cost_sandbox'])+8*rates['egress_gib_cost']
     if not (cost<=Decimal(str(a.budget))<=Decimal('25')-carry): raise ValueError('Original cumulative budget exceeded')
     meta=json.loads((a.inputs/'prepared.json').read_bytes()); assert meta['base']==BASE and meta['split']==SPLIT and len(meta['inputs'])==20
     for file,digest in meta['inputs'].items():
+        if cross and file not in ('b06-train.npz','b07-train.npz'): continue
         if sha(a.inputs/file)!=digest: raise ValueError(file)
-    repo=Path(__file__).resolve().parents[1]; stage='stock-glass-endpoint-critic' if ep else STUDY
+    repo=Path(__file__).resolve().parents[1]; stage='stock-glass-short-cross' if cross else 'stock-glass-endpoint-critic' if ep else STUDY
     a.out.mkdir(parents=True,exist_ok=False)
     app=modal.App.lookup(stage,create_if_missing=True)
     stamp=lambda:datetime.now(timezone.utc).isoformat(); sb=None
@@ -267,7 +276,7 @@ def launch(a):
         subprocess.run(['bash','-ec','set -o pipefail; tar -C "$1" -cf - . | split -b 384M - "$2/wheels-"','pack',str(a.wheels.resolve()),str(tmp)],check=True)
         parts=sorted(tmp.glob('wheels-*'))
         if not parts or not 0<sum(p.stat().st_size for p in parts)<7*1024**3: raise ValueError('Offline wheel payload outside bounds')
-        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=2.53855756 if ep else 2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=2 if ep else 10,waves=[6101] if ep else SEEDS,epochs=EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,short='stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',readout_plan_sha256=sha(repo/'results/stock-glass-endpoint-critic/readout-plan.json') if ep else None,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
+        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=2.71635779 if cross else 2.53855756 if ep else 2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=2 if ep or cross else 10,waves=[81798,81797] if cross else [6101] if ep else SEEDS,epochs=100 if cross else EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,train_only=cross,short='100 stock epochs' if cross else 'stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',readout_plan_sha256=sha(repo/'results/stock-glass-endpoint-critic/readout-plan.json') if ep else None,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
         try:
             sb=modal.Sandbox.create('/bin/sleep',str(life),name=stage,app=app,image=modal.Image.from_id(IMAGE),gpu='H100!',cpu=(cpu,cpu),memory=(gib*1024,gib*1024),block_network=True,timeout=life,tags={'study':stage})
             print('PROVIDER_ID',app.app_id,sb.object_id,stamp(),'max_usd',cost,flush=True); write_json(a.out/'provider.json',dict(app=app.app_id,sandbox=sb.object_id,utc=stamp(),image=IMAGE))
@@ -281,16 +290,19 @@ def launch(a):
             run('set -o pipefail; mkdir wheels; cat wheels-* | tar -xf - -C wheels; rm wheels-*; tar -xf fork.tar; /opt/conda/bin/python -m venv env; env/bin/pip install --no-index --find-links=wheels --disable-pip-version-check -q '+ ' '.join(repr(x) for x in REQUIREMENTS)+'; echo OFFLINE_RUNTIME_READY',1200)
             env='export PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 TF_USE_LEGACY_KERAS=1 TF_NUM_INTRAOP_THREADS=1 TF_NUM_INTEROP_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TF_CPP_MIN_LOG_LEVEL=2 WANDB_MODE=disabled; export LD_LIBRARY_PATH="$(find "$PWD/env" -path "*/nvidia/*/lib" -type d | paste -sd: -):${LD_LIBRARY_PATH:-}"; '
             for name in meta['inputs']:
+                if cross and name not in ('b06-train.npz','b07-train.npz'): continue
                 if not ep or name.startswith(('b00-','b09-')): fs.copy_from_local(a.inputs/name,REMOTE+'/'+name)
-            if ep:
+            if ep or cross:
                 from concurrent.futures import ThreadPoolExecutor
-                def replay(b):
-                    run(env+f'env/bin/python -u stock_glass_modal.py worker --index {b} --seed 6101 --endpoint',1200)
-                    name=f'b{b:02}-s6101.npz'
+                def replay(pair):
+                    b,seed=pair; mode='--short-cross' if cross else '--endpoint'
+                    run(env+f'env/bin/python -u stock_glass_modal.py worker --index {b} --seed {seed} {mode}',min(1200,life))
+                    name=f'b{b:02}-s{seed}.npz'
                     if not 0<fs.stat(REMOTE+'/'+name).size<8*1024**2: raise ValueError('Unexpected endpoint result size')
                     with (a.out/name).open('xb') as f: f.write(fs.read_bytes(REMOTE+'/'+name))
                     print('SAVED_ENDPOINT',b,sha(a.out/name),flush=True)
-                with ThreadPoolExecutor(max_workers=2) as pool: list(pool.map(replay,(0,9)))
+                pairs=((6,81798),(7,81797)) if cross else ((0,6101),(9,6101))
+                with ThreadPoolExecutor(max_workers=2) as pool: list(pool.map(replay,pairs))
                 return
             for seed in SEEDS:
                 run(env+f'env/bin/python -u stock_glass_modal.py wave --seed {seed}',life)
@@ -307,8 +319,8 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__); sub=parser.add_subparsers(dest='cmd',required=True)
     p=sub.add_parser('prepare'); p.add_argument('--archive',type=Path,required=True); p.add_argument('--split',type=Path,required=True); p.add_argument('--rosters',type=Path,required=True); p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('launch'); p.add_argument('--inputs',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--wheels',type=Path,required=True);p.add_argument('--budget',type=float,required=True)
-    p.add_argument('--endpoint-replay',action='store_true')
-    p=sub.add_parser('worker');p.add_argument('--index',type=int,required=True,choices=range(10));p.add_argument('--seed',type=int,required=True,choices=SEEDS)
-    p.add_argument('--endpoint',action='store_true')
+    g=p.add_mutually_exclusive_group();g.add_argument('--endpoint-replay',action='store_true');g.add_argument('--short-cross',action='store_true')
+    p=sub.add_parser('worker');p.add_argument('--index',type=int,required=True,choices=range(10));p.add_argument('--seed',type=int,required=True,choices=(*SEEDS,81797,81798))
+    g=p.add_mutually_exclusive_group();g.add_argument('--endpoint',action='store_true');g.add_argument('--short-cross',action='store_true')
     p=sub.add_parser('wave');p.add_argument('--seed',type=int,required=True,choices=SEEDS)
     a=parser.parse_args(); {'worker':worker,'prepare':prepare,'launch':launch,'wave':wave}[a.cmd](a)
