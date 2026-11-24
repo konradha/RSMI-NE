@@ -1,0 +1,154 @@
+{
+  "question": "Do two bounded four-action decisions favor opposite face encoders?",
+  "precedent": "https://arxiv.org/abs/1701.07602",
+  "distinction": "Different operational utilities, not the previous face log score.",
+  "beta": 3.05,
+  "parents": 10240,
+  "aggregate_only": true,
+  "anchors_per_parent": 8000,
+  "words_per_direction": [
+    81920000,
+    81920000,
+    81920000,
+    81920000,
+    81920000,
+    81920000
+  ],
+  "supported_words": [
+    81,
+    81,
+    81,
+    81,
+    81,
+    81
+  ],
+  "smallest_word_count": [
+    841,
+    841,
+    803,
+    803,
+    802,
+    802
+  ],
+  "train_sha256": "238702bff9141ea7c45843477e3031ec3588adcb273c3b2517ea62124d9ef989",
+  "encoder_file_sha256": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "witness_sha256": "ce6de1b599bd8a7a19d3af88a54658a327264ebb5b3382fb1424f97c8c162363",
+  "axis_order": "-z,+z,-y,+y,-x,+x",
+  "encoder_order": [
+    "discrete",
+    "affine"
+  ],
+  "payoff_axes": [
+    "payoff naming target encoder",
+    "registered direction (observed)",
+    "unknown ternary word",
+    "action"
+  ],
+  "policy_axes": [
+    "payoff naming target encoder",
+    "evaluated encoder",
+    "registered direction",
+    "observed symbol"
+  ],
+  "garbling_axes": [
+    "target encoder (approximated from opposite encoder)",
+    "registered direction",
+    "source symbol",
+    "target symbol"
+  ],
+  "tv_by_target_and_direction": [
+    [
+      0.022861681560084723,
+      0.02714618928950639,
+      0.03114614490441176,
+      0.03348776637045481,
+      0.03398556335978455,
+      0.035763649266533956
+    ],
+    [
+      0.0324960907621529,
+      0.01597690052654652,
+      0.02684223121157914,
+      0.026427496737386626,
+      0.029618457470445128,
+      0.022989325904308744
+    ]
+  ],
+  "dual_identity_gain": [
+    [
+      0.0228616815600845,
+      0.027146189289506184,
+      0.03114614490441181,
+      0.03348776637045481,
+      0.03398556335978442,
+      0.03576364926653375
+    ],
+    [
+      0.032496090762152596,
+      0.01597690052654488,
+      0.026842231211578915,
+      0.02642749673738648,
+      0.02961845747044456,
+      0.02298932590430869
+    ]
+  ],
+  "train_optimal_utilities": [
+    [
+      [
+        0.5571501362347571,
+        0.5314895980501246,
+        0.5385656732792139,
+        0.5301168788717429,
+        0.48173220804209355,
+        0.5120867063330778
+      ],
+      [
+        0.5342884546746726,
+        0.5043434087606185,
+        0.5074195283748021,
+        0.49662911250128805,
+        0.4477466446823091,
+        0.4763230570665441
+      ]
+    ],
+    [
+      [
+        0.4739181832348576,
+        0.49994914785542977,
+        0.5267346823425791,
+        0.4928633990967704,
+        0.5015674002796464,
+        0.5214770410706238
+      ],
+      [
+        0.5064142739970102,
+        0.5159260483819746,
+        0.5535769135541581,
+        0.5192908958341569,
+        0.531185857750091,
+        0.5444663669749324
+      ]
+    ]
+  ],
+  "train_gains": [
+    0.030731832458462578,
+    0.02572508376873602
+  ],
+  "payoff_range": [
+    0.0,
+    1.0
+  ],
+  "nulls": {
+    "relabel_TV": 5.033281530821866e-17,
+    "independent_information_value": 1.1102230246251565e-16,
+    "max_primal_dual_error": 1.6410484082740595e-15
+  },
+  "evaluation_cohort": "Existing b09 native validation face groups 0..15 ONLY (1024 nonreserved parents), if authorized after public checksum lock; exclude groups 16..31, raw trajectories, test, other cohorts and repeat.",
+  "denominator": "Per opportunity, uniform six registered directions (known to the decision maker) and equal-size parents; utility in [0,1].",
+  "practical_margin": 0.001,
+  "one_sided_alpha_each": 0.0016666666666666668,
+  "contrast": "For each target, use frozen target policy; upper-bound competing optimal value by allowing competitor to choose its optimal action per symbol and direction separately inside EACH validation group. Jensen: expected group maximum >= population maximum. Paired group difference estimates a lower bound, not a plug-in optimality gap.",
+  "inference": "16 disjoint groups of 64 whole parents; within-group optimize competitor over all deterministic policies (also dominates randomization). One-sided paired Student-t lower limit with 15 degrees of freedom across independent groups, approximate; 0.05/(2*15). Both lower bounds > 0.001 required for practical reversal. Also report heldout aggregate maximized opponent, fixed-policy gains, and TV of frozen garblings (not proof of deficiency).",
+  "limitations": "Cold training payoffs are data-adaptive; no population discovery from these fits. Parents are aggregated on disk, so training-cluster SE not identifiable. Opponent oracle is deliberately conservative; existing validation has historical use for OTHER outcomes.",
+  "decision": "Freeze both directional payoff families and policies. Only separate authorized evaluation can test these train witnesses."
+}
