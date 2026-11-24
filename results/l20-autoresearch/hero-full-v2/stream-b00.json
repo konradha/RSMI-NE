@@ -1,0 +1,116 @@
+{
+  "source": "archived-physical",
+  "index": 0,
+  "stage": "fit-dev",
+  "roles": {
+    "fit": {
+      "parents": 4746,
+      "opportunities": 303744,
+      "files": {
+        "E.npy": {
+          "sha256": "a529fc220dd55bc656718e408b0810c92546125c5644fa70bac03dafe4eb2e52",
+          "bytes": 117245312
+        },
+        "I.npy": {
+          "sha256": "6b9f47987448cc65cf143feea51f70da589551386afa24e535de1a75c8907af2",
+          "bytes": 1215104
+        },
+        "V.npy": {
+          "sha256": "7ab8d42fef5bcda6169453c4cab4abe5a4b76ef489926a87710871424861abc5",
+          "bytes": 8201216
+        },
+        "anchor.npy": {
+          "sha256": "0a20e5edc9f25a56d54ce0ca37680642ca68f35791f40a397885ff857acc34e8",
+          "bytes": 911360
+        },
+        "parent.npy": {
+          "sha256": "efe3bb760b2e60013a992193acf4d868f910a24434e7d625ae9153ea0e926a17",
+          "bytes": 19112
+        }
+      }
+    },
+    "dev": {
+      "parents": 791,
+      "opportunities": 50624,
+      "files": {
+        "E.npy": {
+          "sha256": "5137f829066c6a88c075af12a1d4f88958b96d3662eecfcb20866f615c51787e",
+          "bytes": 19540992
+        },
+        "I.npy": {
+          "sha256": "45399983795c8f89e9f4788193b4f3f1170cd9c0130c6e092203b48da284559d",
+          "bytes": 202624
+        },
+        "V.npy": {
+          "sha256": "6e2fc5454cdc33d0035803f68437dc3652d84fb6de9684bfab980c80f9b9b362",
+          "bytes": 1366976
+        },
+        "anchor.npy": {
+          "sha256": "07386769f808137e006100eb2cf154b29e3c9f9e8baee2ed7ea0bd81b335b8ca",
+          "bytes": 152000
+        },
+        "parent.npy": {
+          "sha256": "6279e4bfcf1bf79ff30b75cef3b487a3fb5b8606b43b6d3d52a4bebdd3648d02",
+          "bytes": 3292
+        }
+      },
+      "even_sha256": {
+        "E": "b8c30dc259a2f3309a5307b3283ea967cc05596c0da4565d69165c25b4e7cd0e",
+        "I": "b8df04c15237af254f100b977cc4fe047fd7a5bde8a5825ed29ab32a2e43689a",
+        "V": "5b6065d08b621ef1953bb2284b0904bdac76875d1ab8057b5cc740380da449c2",
+        "anchor": "0178c784b6881dd2edcb8f23ca244f8d9740484d0b4b8f8338273751e9d1a9e8",
+        "parent": "17cfe1db15ce27fa97990161e478a2e103f90acfc4cbc384756830ae4acec970"
+      },
+      "odd_sha256": {
+        "E": "7ab61539d697ba95390b78ceddeb3c9016162afd873952dfbe832dee785fcc9b",
+        "I": "3bc38432a3672b99068ba793584c276b9820dd61793a568d86b23bd8f3346d98",
+        "V": "dd900e21fb1259555902f9ca334f04c8b7765a95e981d80d837bbb24cc880e27",
+        "anchor": "edb8f5b7bdb0a30ba28a1a98b3fe9113a16cbef49579781f2933585ffb1fd0b5",
+        "parent": "433c926718938062a6e99eef03803ae27159f13665b3922da56042cb995fb8b0"
+      }
+    }
+  },
+  "parents": 5537,
+  "opportunities": 354368,
+  "seconds_project_and_fsync": 2.335988210979849,
+  "seconds_through_output_hashes": 2.437404539901763,
+  "parents_per_second": 2370.3030580267614,
+  "native_or_fixture_selected_bytes_returned": 44296000,
+  "species_member_compressed_bytes": 31208329,
+  "species_member_uncompressed_bytes": 131072128,
+  "source_archive_bytes": 31262613,
+  "output_bytes": 148857988,
+  "logical_selected_input_MB_per_second": 18.96242446421409,
+  "output_MB_per_second_including_fsync": 63.72377535996225,
+  "proc_io_delta_bytes_through_hashes": {
+    "read_bytes": 0,
+    "write_bytes": 148877312
+  },
+  "process_peak_RSS_KiB": 2486036,
+  "positive_only_seeks": true,
+  "species_member_open_count": 1,
+  "incremental_fee_usd": 0,
+  "beta": "0",
+  "release_commit": "703000009b50c138e495073944c5856af5cc5308",
+  "release_sha256": "e818286fcf906ffaef74b759eb1abeb17f3d1999f7e48e75b89b4c83ccfa2b6e",
+  "rosters_sha256": "ea3bf383c291c07ecb1e98784d66f34c708fdb248fe4152e66f48d9899d70a8d",
+  "source_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+  "sidecar_sha256": "335c5cb074e2bb432744a96ed7591d4fd2373573de2573fc628934ce33df1074",
+  "lineage_sha256": "d6189a08ea0e5adffc7c598fb19708dad3e5bd482dcf8762bfe7f424f9c0ece7",
+  "utc": "2026-11-24T14:54:36.223194+00:00",
+  "batch_gather": {
+    "stage": "CPU fit mmap sampling + indexed gather; no training, no device transfer",
+    "batches": 256,
+    "groups": 8,
+    "distinct_parents_per_group": 8,
+    "seconds": 0.03411907935515046,
+    "batches_per_second": 7503.133286078993,
+    "opportunities_per_second": 480200.5303090555,
+    "bytes_copied": 6832128,
+    "payload_MB_per_second": 200.24362113887616,
+    "roster_sanity_checksum": 2067647,
+    "peak_RSS_before_KiB": 2486036,
+    "process_peak_RSS_KiB": 2486036
+  },
+  "seconds_end_to_end": 2.5930456463247538
+}
