@@ -1,0 +1,24 @@
+{
+  "schema": "hero-full-v2-training-release-1",
+  "roles": [
+    "fit",
+    "dev_even"
+  ],
+  "stream_receipts": {
+    "0": "eec91a1d4b609ea8b31e8e80d7e5c09918c08e97b585a91cbb317d59d6dc93d3",
+    "1": "a46159b3985b57ac20ccab781d769bfc7f830c2a00c4feb1fa1e9138e7938d68",
+    "2": "7ec210781522abd85a04d1b94011879f4e0fd1153c81051fde8de77dce47756f",
+    "3": "d1e8ed8e4e81cd808f763fefcc3a101d3001a34ba74c9ac5642c3b6d67e960ad",
+    "4": "556e2019e946aa52962cb7bffd131d72ff91e39671a459f4a376070f5b995749",
+    "5": "fd0e534cf73f126097ca3414c63cd7297a000b79bd5208d8af96f7f88f78c484",
+    "7": "4978dab305ed8152f210f5a3fb8b332b7163f902a11ecf087d0d63595a07ac4d",
+    "8": "e74cc91ecf670fd03447759ade5a3fc8b919116a2479030b450f863273219692",
+    "9": "2372c80b6f9f9df38d96ccf682e180ab6fb189327044bcaa59573d2451bb4fee"
+  },
+  "rosters_sha256": "ea3bf383c291c07ecb1e98784d66f34c708fdb248fe4152e66f48d9899d70a8d",
+  "train_design_sha256": "9be0e468b0fcc89cc834257f462d33859cddc2dc3e83641b24cfe4b964062916",
+  "permit_cpu_fallback": true,
+  "physical_training_policy": "Arms, cohorts, seeds fixed. This permits only local FIT plus even DEV. Modal requires a SEPARATE verified sandbox release; no physical CPU learning instead of requested H100 while admissible route is being prepared. User receipt before paid main batch.",
+  "control_gate_sha256": "dc9ed901a39d1e1ad84e24fc999bf35e58f891ec99d8592cb4cb1523fdfe784c",
+  "support_lock_sha256": "3c0787aa613a982c8b4992534e51cc8f96f2de270df91605556a2c38dbd55152"
+}
