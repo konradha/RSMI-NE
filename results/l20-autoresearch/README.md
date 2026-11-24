@@ -2,6 +2,19 @@
 
 This experiment reuses the **frozen L20 endpoint archive**. It trains low-capacity discrete representations of local species blocks and asks what they predict about separated environments. No new physical configurations, dynamics or Monte Carlo runs are part of this campaign. The clock is **11:45:25–21:45:25 UTC on 24 November 2026**; it is a maximum elapsed-time allocation, not a claim about time actually spent training. See the [locked protocol](protocol.json) and the [previous short-range result](../l20-operators/README.md).
 
+### What the glass variable measures
+
+The reproducible four-state code responds to a **vacancy tripod**. Pick the `(-1,-1,-1)` corner of the visible cube and count the empty sites one step inward along its three axes. No network is needed. On 1,024 cold audit parents, the count improved the reproduction of **all three** trained encoders beyond the exact opposite-corner species and the additive site model. This identifies a local coordination pattern, not an independent glass order parameter. [Rule, audited uncertainty and example configurations](mechanism/motif.png) · [explicit formula](mechanism/motif-rule.json).
+
+**The spatial prediction failed in a useful way.** Before opening the β=2.0333 test parents, we [publicly froze](https://github.com/konradha/RSMI-NE/commit/88f682e81d134cf7871c4f7d9ee927a99c92fbea) a prediction: a nonempty vacancy tripod versus an empty one would increase outer A occupancy by at least **0.20 percentage points more** than a conventional predictor of species correlations, coordination and internal swap costs. We compared within the same corner species, total coordination and barrier strata. “Outer” means three steps outward from the corner, across two unseen layers.
+
+| β and cohort | Measured A enrichment (pp) | Conventional prediction (pp) | Measured minus predicted (95% parent interval, pp) |
+|---|---:|---:|---:|
+| 3.05 · cold validation | +1.097 | +1.145 | −0.048 [−0.275, +0.179] |
+| 2.0333 · 4,096 independent test parents | +0.867 | +1.194 | **−0.327 [−0.482, −0.172]** |
+
+The real enrichment transfers; the proposed **extra** enrichment does not. The frozen conventional model **overpredicts** the effect in the warmer glass, so it is not a quantitatively exact explanation either. The test could detect an increment of approximately **0.22 pp** at 80% power; its interval excludes the predicted +0.20 pp and zero. The 28 cold-defined strata had support in both arms and covered 70.1% of transfer anchors. This is a limit on this observable and geometry, not on every form of glass order. No dynamical prediction was made or tested. [Transfer plot](mechanism/transfer.png) · [parent-based estimates](mechanism/transfer.json) · [baseline hierarchy](mechanism/conventional-fits.json).
+
 | Lane | Primary question |
 | --- | --- |
 | `rg` | Does a learned coarse variable retain a separated signal across scales, beyond scale-matched composition and energy controls? |
@@ -15,6 +28,10 @@ At **two** intervening layers the four-state nonlinear encoder has a cold bound 
 **Exact discrete calibration.** Instead of asking a neural critic to find very weak information, take two opposite block corners and two exterior species as the observable. There are only nine possible inputs. We enumerated **every** partition into at most four states on training parents. At β=3.05 the best four-state code across one buffer layer is exactly the two corner-A bits; its validation bound is **0.00902 nats**. Across **two** layers a different partition retains **0.0000974 [0.000089, 0.000106] nats**. The β=0 control is nonpositive; at three layers the cold interval spans zero. Thus the earlier two-layer neural null did **not** mean physical independence. The second-layer signal is about 1/93 as large for this projection; this alone does not establish collective glass order. [Scores](quotient/calibration.csv) · [codes](quotient/codes.json). These are validation diagnostics across 32 whole-parent groups, not the primary frozen tests.
 
 ![Information retained by exact four-state quotients of a ternary species pair](quotient/quotient.png)
+
+**What kind of information?** A finite-channel encoder of eight corners at buffer one used 1.708 bits per block at β=3.05. Of its 0.01023 nats of predictive score per exterior four-site face, 0.01012 came from *arrangement at fixed composition* and 0.00011 from composition itself. This is a statement about achieved scores, not that the arrangement requires many-body interactions. In a separate two-corner/two-exterior-site projection at buffer two, allowing arbitrary interactions instead of pairwise maximum entropy changed the held-out log score by −0.29 × 10⁻⁶ nats (simultaneous fit-and-validation interval [−1.84, +1.25] × 10⁻⁶). [Rate and transfer](rate/transfer.png) · [interaction hierarchy](interactions/interactions.png).
+
+**Scale and independent readouts.** After 96 RG search rounds the frozen winner was a **single** blocking step with one buffer layer, not a deeper iteration. Its gain over the best analytic code (two species-A indicators) was 0.02572 nats at β=3.05 and 0.01509 at β=2.3722. Across **two** intervening layers, a separate decoder without contrastive negatives recovered 0.0000534 [0.0000502, 0.0000566] nats per individual exterior pixel at β=3.05, versus 0.0000384 for the additive code. Neither result demonstrates scale invariance. [RG comparison](rg/confirmation.png) · [frozen pixel decoder](decoder/confirmation.json) · [sector atlas](sectors/sectors.png).
 
 ### Read the checkpoint
 

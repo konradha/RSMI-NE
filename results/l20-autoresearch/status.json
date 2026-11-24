@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-11-24T11:59:46+00:00",
+  "as_of_utc": "2026-11-24T12:23:15+00:00",
   "deadline_utc": "2026-11-24T21:45:25+00:00",
   "discovery_cutoff_utc": "2026-11-24T21:00:25+00:00",
   "lanes": {
@@ -66,32 +66,39 @@
       "state": "confirmed"
     },
     "rg": {
-      "active": {
-        "id": "00027-discover-0026",
-        "mode": "discover",
-        "round": 26,
-        "start_epoch": 1795521584.7558239,
-        "stop_epoch": 1795528784.7500548
-      },
+      "active": null,
       "closure": null,
-      "completed_discoveries": 26,
-      "confirmation": null,
-      "failure": null,
-      "freeze": null,
-      "last_discovery": {
-        "elapsed_seconds": 4.61,
-        "estimate": 0.004283981905487559,
-        "metric": "cold paired validation InfoNCE gain over frozen best analytic code (nats)",
-        "round": 25,
+      "completed_discoveries": 96,
+      "confirmation": {
+        "elapsed_seconds": 3.575,
+        "estimate": 0.025723155753003525,
+        "metric": "cold paired held-out InfoNCE gain over frozen best analytic code (nats)",
+        "round": 95,
         "search_exhausted": false,
-        "sha256": "761ecf679b418783155cb01a121517c883f513e005db27a0e6e6e7290078b4b2",
-        "status": "inconclusive"
+        "sha256": "d52b961c96906b47b50dc3cc7d6b3e613ad49be340fd1cc9d38acb6a63a01d53",
+        "status": "ok"
       },
-      "state": "discover"
+      "failure": null,
+      "freeze": {
+        "epoch": 1795522990.7652407,
+        "last_discovery": 95,
+        "prefix_sha256": "8c0a8f7b0152e262b1961a3caef59f98783beb11cb7093b70b061f83484e668e",
+        "reason": "search budget exhausted"
+      },
+      "last_discovery": {
+        "elapsed_seconds": 15.113,
+        "estimate": 0.03088125004513538,
+        "metric": "cold paired validation InfoNCE gain over frozen best analytic code (nats)",
+        "round": 95,
+        "search_exhausted": true,
+        "sha256": "fb0be7bfb821ba784c8c7c5e2c1559eccee0be1441c51d80fbf4152ff6fcaa0e",
+        "status": "ok"
+      },
+      "state": "confirmed"
     }
   },
   "min_discoveries": 2,
-  "phase": "discovery",
+  "phase": "finished; no schedulable work",
   "release_manifest_sha256": "2a1093760b045cfbb5934720353ab017114d227206db2531ffbedc6d64d2dead",
   "start_utc": "2026-11-24T11:45:25+00:00"
 }

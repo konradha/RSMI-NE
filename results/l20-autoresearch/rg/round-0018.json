@@ -1,0 +1,240 @@
+{
+  "mode": "discover",
+  "round": 18,
+  "status": "inconclusive",
+  "hypothesis": "A hard four-state local RG code retains positive separated-shell information beyond the best validation-selected analytic two-bit code at both cold and warm beta.",
+  "metric": "cold paired validation InfoNCE gain over frozen best analytic code (nats)",
+  "estimate": 0.0009715877879074295,
+  "arm": [
+    2,
+    "slide",
+    "vector",
+    2
+  ],
+  "selection_basis": "Cold training only. With two independent starts per arm, rank by min(validation bound, gain over best analytic, paired minus shuffled). Rank ties by earliest round/seed. No test selection.",
+  "selection_score": -2.118163007415163e-09,
+  "schedule": "forced",
+  "selected": "learned1",
+  "competitor": "composition",
+  "val_learned": -2.118163007415163e-09,
+  "val_competitor": -0.0009715899060704369,
+  "val_bounds": {
+    "species-A": -0.005478363407522748,
+    "species-B": -0.004292559677969501,
+    "vacancy": -0.0033247907652420154,
+    "composition": -0.0009715899060704369,
+    "checkerboard": -0.004439145317132697,
+    "surface": -0.004519343981325966,
+    "energy": -0.0023991316210183345,
+    "learned0": -0.00018656805344204551,
+    "learned1": -2.118163007415163e-09
+  },
+  "val_shuffled": {
+    "species-A": -0.0034164391827793215,
+    "species-B": -0.0036294512174359036,
+    "vacancy": -0.002691248549333511,
+    "composition": -0.0022881485531302194,
+    "checkerboard": -0.003186548988704914,
+    "surface": -0.0026482470683292085,
+    "energy": -0.0021709552126568847,
+    "learned0": -0.00017615954094906045,
+    "learned1": -2.118163007415708e-09
+  },
+  "seed_alignment": {
+    "fixed_frame": {
+      "agreement": 0.99658203125,
+      "marginal_chance": 0.99658203125,
+      "axes": [
+        0,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "label_permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    "cube_and_labels": {
+      "agreement": 0.99658203125,
+      "marginal_chance": 0.99658203125,
+      "axes": [
+        0,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "label_permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    }
+  },
+  "calibration": {
+    "rho": 0.7500534057617188,
+    "composition": [
+      19.0,
+      16.0
+    ],
+    "checkerboard": [
+      -3.0,
+      0.0,
+      3.0
+    ],
+    "surface": [
+      69.0,
+      72.0,
+      75.0
+    ],
+    "energy": [
+      28.623531341552734,
+      31.498210906982422,
+      34.49969291687012
+    ]
+  },
+  "checkpoint_sha256": "7dd9ee329db6ae16f73dcce4bf75630a7d2f59822cc8a253fbbc25e0a5e85f7a",
+  "data": {
+    "index": 9,
+    "beta": 3.05,
+    "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": [
+      10240,
+      2048,
+      4096
+    ],
+    "patch_seed": 769315,
+    "group_lineage_sha256": [
+      "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+    ]
+  },
+  "params": {
+    "batch": 64,
+    "training_parents_per_epoch": 6144,
+    "epochs_per_stage": 24,
+    "seeds": [
+      2456483,
+      2458026
+    ],
+    "arm_axes": [
+      "depth",
+      "layout",
+      "sector",
+      "empty_raw_layers"
+    ],
+    "width": 4,
+    "field_pitch": 1,
+    "signed_channels": true
+  },
+  "counts": {
+    "train_pool": 10240,
+    "validation_parents": 2048,
+    "validation_anchors_per_parent": 4,
+    "validation_hard_state_counts": {
+      "species-A": [
+        4052,
+        1721,
+        1656,
+        763
+      ],
+      "species-B": [
+        2415,
+        1991,
+        2124,
+        1662
+      ],
+      "vacancy": [
+        4656,
+        1549,
+        1481,
+        506
+      ],
+      "composition": [
+        3682,
+        568,
+        1264,
+        2678
+      ],
+      "checkerboard": [
+        2077,
+        2471,
+        2209,
+        1435
+      ],
+      "surface": [
+        2219,
+        2144,
+        2147,
+        1682
+      ],
+      "energy": [
+        2002,
+        2097,
+        2001,
+        2092
+      ],
+      "learned0": [
+        8171,
+        0,
+        21,
+        0
+      ],
+      "learned1": [
+        0,
+        0,
+        0,
+        8192
+      ]
+    }
+  },
+  "provenance": {
+    "version": 1,
+    "hypothesis": "A hard four-state local RG code retains positive separated-shell information beyond the best validation-selected analytic two-bit code at both cold and warm beta.",
+    "metric": "cold paired held-out InfoNCE gain over frozen best analytic code (nats)",
+    "archive_indices": [
+      9,
+      7,
+      0
+    ],
+    "discovery": "Cold training only. With two independent starts per arm, rank by min(validation bound, gain over best analytic, paired minus shuffled). Rank ties by earliest round/seed. No test selection.",
+    "scheduling": "Forced round-robin through 24 depth x sampling x sector x raw-gap arms on rounds not 3 mod 4; repeat the current validation champion's arm otherwise. Refit on independent training parent/anchor batches and initializations. Stop at 96 rounds or external deadline. Round 0: 10 epochs, 2048 parents per epoch. Rounds 1-31: 24 x 6144; 32-63: 36 x 10240; 64-95: 64 x 10240. An epoch uses distinct training parents, not new physical configurations.",
+    "primary": "Before scoring test data, persist the selected round, weights digest, code, critic, competitor and its critic, and orientation/label alignment. At EACH of indices 9 and 7 require learned bound, paired gain, and paired-minus-off-diagonal null all >0 by simultaneous intervals. Index 0 is diagnostic only. Confirmation does not select between geometries, seeds or analytic competitors.",
+    "uncertainty": "Two-sided t intervals over disjoint groups of 64 whole parents (same negative sets, 12 anchors averaged within each group); pointwise 95% and Bonferroni 1-.05/(6*3), six endpoints and three primary lanes. Conditional on fit. Frozen shuffled scores average all off-diagonal assignments in the same negative pool.",
+    "training": "Maximize the exact categorical expectation of 64-way discrete InfoNCE, then discretize by argmax. Refit identical 24-hidden-unit critics on hard codes with identical initialization, number of updates, and ordered batches for all final competitors. The depth-two encoder sees only eight hard applications of its frozen first encoder, trained on its own separated small-block shell.",
+    "sampling": "A one-step 2-cube or a two-step 4-cube made from eight disjoint 2-cubes at stride 2. For the same local operator a translation-covariant sliding map evaluates every raw origin, while a true partition restricts origins to a fixed raw grid of pitch 2 or 4. The registered confirmation also maps the SAME weights under both output pitches, keeping raw supports identical. Only the discovery-selected pitch enters primary inference.",
+    "shell": "Ordered 6 faces x 2x2 patches x (species A,B) densities. At depth 1 each patch is one site, at depth 2 each is a 2-cube. Gaps of 1 or 2 empty raw-lattice layers; check minimum-image separation of every visible/environment raw-site pair. Same target and critic architecture for all competitors in an arm. Gains across different targets are not differences of physical MIs.",
+    "sector": "Inputs to unconstrained categorical network are signed species dipoles (three ordered Cartesian components), signed checkerboard species contrasts, or cubic-invariant species counts and distance-resolved same-species pair counts. Nonlinear categorical labels need not transform as a linear irrep. Report both unrotated and cube-oriented label alignment; pick the permutation/orientation only on validation.",
+    "controls": [
+      "species-A",
+      "species-B",
+      "vacancy",
+      "composition",
+      "checkerboard",
+      "surface",
+      "energy"
+    ],
+    "fixed": "Opposite-corner two-bit indicators of each species including vacancy, thresholded composition counts, checkerboard vacancy/occupancy contrast, surface occupancy weighted by exposed bonds, and block energy closure. Calibrate thresholds only on training components and freeze across beta. Integer ties may leave some states empty; state histograms reported.",
+    "energy": "Block-only closure of occupied-site (coordination-preferred)^2, with missing nearest neighbors independent Bernoulli at training occupancy density; includes conditional variance. Preferred counts are 3 for A and 5 for B. No buffer or halo inputs.",
+    "finite_size": "One L=20 box size. FFT includes contact and overlapping supports; only disjoint buffered minimum-image lags enter the reported connected correlators. Report axis-resolved connected trace, signed eigenvalues of whitened symmetrized connected state matrices, and nonzero-wavevector structure factor. These diagnostics use 48 whole parents per temperature, not sites as independent samples. Tiled second scale side 5 has no exact Nyquist checkerboard mode. No power law, asymptotic length, thermodynamic order parameter or RG fixed point can be inferred.",
+    "optimality": "InfoNCE is a lower bound on MI. A comparison of matched bounds is not a comparison of exact MIs.",
+    "reference": [
+      "https://arxiv.org/abs/2101.11633",
+      "https://arxiv.org/abs/2103.16887",
+      "https://arxiv.org/abs/2301.11934"
+    ]
+  },
+  "search_exhausted": false
+}

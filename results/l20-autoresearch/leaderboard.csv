@@ -1,4 +1,4 @@
 lane,state,discoveries,latest_val_metric,latest_val_estimate,confirmation_metric,confirmation_estimate,scientific_status
-rg,discover,26,cold paired validation InfoNCE gain over frozen best analytic code (nats),0.004283981905487559,,,
+rg,confirmed,96,cold paired validation InfoNCE gain over frozen best analytic code (nats),0.03088125004513538,cold paired held-out InfoNCE gain over frozen best analytic code (nats),0.025723155753003525,ok
 information,confirmed,7,conditional_InfoNCE_nats_per_uniform_positive,0.042087905877159146,conditional_InfoNCE_nats_per_uniform_positive,0.04217130668471085,ok
 learn,confirmed,16,"Raw exact expected hard-state InfoNCE lower bound, nats/anchor, 64 distinct same-temperature parents per contrastive batch.",0.002849555475539624,"Frozen nonlinear raw b=2 InfoNCE (nats), index 9; joint decision requires all 16 adjusted contrasts",0.003105140536302904,inconclusive

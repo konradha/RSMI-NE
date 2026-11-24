@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "id": "r0024-m02",
+  "model_sha256": "a2800f47a2e0aa769dfcf06ee42cf6a2d20065362ac7f2a181e2ce0d9ddfb901",
+  "mask": "corners",
+  "b": 1,
+  "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "last_completed": 32,
+  "criterion": "Pareto-eligible highest nominal lower score minus .004 nats per achieved bit; retrospective exploratory selection, not a gate"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "parents": 4096,
+  "support": {
+    "fraction_frozen_weight_with_both_arms": 0.9999999999999999,
+    "anchor_mass_in_frozen_strata": 0.7006702423095703,
+    "strata": 28,
+    "minimum_parents_per_arm": 397
+  },
+  "contrast": {
+    "observed": {
+      "value": 0.008668279740550199,
+      "se": 0.0007902361576503229,
+      "lo": 0.00711898740814812,
+      "hi": 0.010217572072952277
+    },
+    "conventional": {
+      "value": 0.0119358860907916,
+      "se": 3.888753616975536e-05,
+      "lo": 0.011859645385996527,
+      "hi": 0.012012126795586673
+    },
+    "signed_excess": {
+      "value": -0.003267606350241401,
+      "se": 0.0007903043163193621,
+      "lo": -0.0048170323106764504,
+      "hi": -0.0017181803898063514
+    }
+  },
+  "detectable_absolute_increment_at_80pct": 0.0022144326943268526,
+  "beta": 2.033333333333,
+  "index": 6,
+  "fold": "test",
+  "parent_ids_sha256": "a5b8b6b83b14aadc29681e711c944e72f8179f1127f48397e06d4eceb4a85843",
+  "anchor_rows": 1048576,
+  "fraction_high": 0.5920782089233398,
+  "secondary_logscore_gain_over_matched_species_adjustment_nats": [
+    -3.258554464755612e-06,
+    -5.057040432654157e-06,
+    -1.460068496857067e-06
+  ],
+  "decision": "excludes predicted signed increment",
+  "equivalent_within_two_per_thousand": false,
+  "lock_sha256": "69afc40fdc24f1359686192cc25644387d7181c9e64fd37f617df795db5cd34e"
+}
