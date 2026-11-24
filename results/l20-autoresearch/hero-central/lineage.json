@@ -1,0 +1,589 @@
+{
+  "utc_started": "2026-11-24T14:39:54.372543+00:00",
+  "seconds": 0.8440197207964957,
+  "scope": "metadata only; no native species, energy, time histories, near-halo, outcomes or previous cycle-model results opened",
+  "geometry": {
+    "shells": {
+      "4": {
+        "sites": 386,
+        "offsets_i1_sha256": "8b13d2f380fba24066dd4fbadb31ac703b6e90e1a93f18eca124c33b0c361246",
+        "min_toroidal_L1": 3
+      },
+      "5": {
+        "sites": 386,
+        "offsets_i1_sha256": "d71ed120091169b0de0ac7402aef9d801260d36df55451245d1ac2ee479108ce",
+        "min_toroidal_L1": 4
+      }
+    },
+    "center_i1_sha256": "7839f74f2df80ea3ef11d3004fb5b1b11a852f93a83e9623280dc9b5aa84a593",
+    "interior_i1_sha256": "3d10c4c9383209f3a30e346c1d33769ffa7969d90f88fe821da20c4741b758ee",
+    "center_sites": 27,
+    "interior_sites": 343,
+    "internal_NN_edges": 54,
+    "energy_term_L1_diameter": 2,
+    "proper_group_size": 24,
+    "improper_group_size": 24,
+    "other_core_shell_intersections": 0,
+    "species": "C order z,y,x; uint8 per site; 0=vacancy,1=A,2=B; no bit or base-3 packing, no rotation applied"
+  },
+  "parents": 8448,
+  "cohorts": {
+    "hot": {
+      "index": 0,
+      "beta": "0",
+      "parents": 1024,
+      "Q": 8,
+      "opportunities": 8192,
+      "rows_sha256": "a2e015c4239a8ed3f48e74f4b173a7d7a5c6d3717d184e903fef89656fea9ddb",
+      "ids_sha256": "914d5fa85114ae282c469c933bd4d8a43a39829e5a9c4f7eb4191cc53080dd46",
+      "anchors_u2_sha256": "0dc0826b530ab793fea9218c01c6a9f9fa64d3b20dce70785bb20b54149a4e7c",
+      "roster_sha256": "54655486395c4c1ffed419613e958e5d1d36b8cc98cc39d8cfca814dd1a69bd0",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 1024,
+        "tranche2_train": 0,
+        "preflight_train": 23
+      }
+    },
+    "transfer": {
+      "index": 7,
+      "beta": "2.372222222222",
+      "parents": 1024,
+      "Q": 8,
+      "opportunities": 8192,
+      "rows_sha256": "1fb1c44b6031988b5cc74a3cd3e8e64fb89ef0b59a3087bf07354675fd1dfd08",
+      "ids_sha256": "b26214fa9e875480f895988ed4083b1be1424ff2b4897b34788902bed5a16d6b",
+      "anchors_u2_sha256": "1298641ae1de9258cfa70cc8e5b270cd315de94e710464d7930e0c6493766cfc",
+      "roster_sha256": "505f7fa67c47656d247cf9d7e4bf22f2ec11aed997e296e11249e1fd37779d52",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 1024,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    },
+    "fit": {
+      "index": 8,
+      "beta": "2.711111111111",
+      "parents": 4096,
+      "Q": 64,
+      "opportunities": 262144,
+      "rows_sha256": "7cc03ab7f693421d7b57453c40d220d73eb987acc089dc86d9534386d937b95d",
+      "ids_sha256": "e7bbfb6d00bc5de6f4cf72376351fe2d7b1c3e3bec77acc62ea55a285d073ed7",
+      "anchors_u2_sha256": "e719bd4ded21b6af3da5d8e70a2951341a2f6a3876a8dd700e12b0e275c9252a",
+      "roster_sha256": "d15591a47c563aa2d53dc1e30936a1f9e549024a68aaf9fdda928d6716819225",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 4096,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    },
+    "tune": {
+      "index": 8,
+      "beta": "2.711111111111",
+      "parents": 512,
+      "Q": 64,
+      "opportunities": 32768,
+      "rows_sha256": "1ee7c1b77597a8494794209cfa8207beb538351191061010a5d87199fd2ee418",
+      "ids_sha256": "79df71026357842a48fe2ab7612d388c4b3f557d0faebb86253bdc4047b6a82a",
+      "anchors_u2_sha256": "e6f47234b51f2bfa1c4a8619be2372f6cffa1eb67cddb0bad773e5474ea6cee1",
+      "roster_sha256": "a07e5941c1dbbe03f2cca22d6482b287f3db8b9eeebb2196961cbcbe29982ba1",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 512,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    },
+    "rule": {
+      "index": 8,
+      "beta": "2.711111111111",
+      "parents": 512,
+      "Q": 64,
+      "opportunities": 32768,
+      "rows_sha256": "db6123ba522818d62b4ce64293882e149b46106ac38db3c714c56f1ac958c4c1",
+      "ids_sha256": "f93783f609a0985183607eb14abb49ceaed6f22c19888e3ec9b4b1ee4dfb2984",
+      "anchors_u2_sha256": "00bfea23d1e2196a364191f5e32afaf6630753f23fad49be6868c198ef665c29",
+      "roster_sha256": "ac9e150158ef8a91da51ba62570dc25675bc4a51b0ed070bf84c4c24e0a63a65",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 512,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    },
+    "cold": {
+      "index": 8,
+      "beta": "2.711111111111",
+      "parents": 1024,
+      "Q": 8,
+      "opportunities": 8192,
+      "rows_sha256": "a72e844a4491c18dc6c0344a5c22e2641d50f2d1a1a73c595f49a2d327ab058e",
+      "ids_sha256": "5b5770b963fb4e442a96a79665cc2a232a7bac4781697e6727267affcf00e6da",
+      "anchors_u2_sha256": "72af54c4999fe2b18a1417a11ac27c1ed92c184cecc00c4aa3e7dda081af5652",
+      "roster_sha256": "3d866263e1355eb4f255c40289a734c2b5ce788ab43568982993e307e7f8b032",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 1024,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    },
+    "issue": {
+      "index": 8,
+      "beta": "2.711111111111",
+      "parents": 256,
+      "Q": 1,
+      "opportunities": 256,
+      "rows_sha256": "1f81d13264357e76f1612919dc036435e80bac01ab339d5b446190205cd8d8f1",
+      "ids_sha256": "6419886258b38c385c882f43e65cf390ab998507d5a9e2bc0536bb34d747d4cd",
+      "anchors_u2_sha256": "831e434edcf268326d7d851b1422c0435cc2d2d6f4e5865406f2caf5e3c510a1",
+      "roster_sha256": "127ce4902d731425cb59eb30541013a04a1241c21c932644bf7f143f450a3e76",
+      "forbidden_overlap": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 0,
+        "selected_04": 0,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 0,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "full_trial_role_overlap": {
+        "cycle-boundary": {
+          "pilot": 0,
+          "fit": 0,
+          "dev": 0,
+          "cold": 0,
+          "hot": 0,
+          "transfer": 0
+        },
+        "spatial-cycle": {
+          "cold": 0,
+          "dev": 0,
+          "fit": 0,
+          "calibration": 0,
+          "hot": 0,
+          "transfer": 0
+        }
+      },
+      "history_other_TRAIN": {
+        "first_pass_train": 256,
+        "tranche2_train": 0,
+        "preflight_train": 0
+      }
+    }
+  },
+  "supply": {
+    "0": {
+      "beta": "0",
+      "native_train": 10240,
+      "bulk_TRAIN": 10223,
+      "prep_TRAIN": 17,
+      "after_two_complete_trials": 8175,
+      "after_trials_04_and_tranche2": 7407,
+      "eligible_after_all_exclusions": 7352,
+      "TRAIN_intersections_nonadditive": {
+        "cycle-boundary": 1024,
+        "spatial-cycle": 1024,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 17,
+        "selected_04": 256,
+        "tranche2_dev": 256,
+        "tranche2_audit": 256,
+        "physical_parent_ancestry": 17,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 81
+      },
+      "bulk_key_decimal": "10799778892298965288",
+      "prep_key_decimal": "10340572510626563035",
+      "unused_after_assignment": 6328
+    },
+    "7": {
+      "beta": "2.372222222222",
+      "native_train": 10240,
+      "bulk_TRAIN": 10219,
+      "prep_TRAIN": 21,
+      "after_two_complete_trials": 10219,
+      "after_trials_04_and_tranche2": 9963,
+      "eligible_after_all_exclusions": 9963,
+      "TRAIN_intersections_nonadditive": {
+        "cycle-boundary": 0,
+        "spatial-cycle": 0,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 21,
+        "selected_04": 256,
+        "tranche2_dev": 0,
+        "tranche2_audit": 0,
+        "physical_parent_ancestry": 21,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "bulk_key_decimal": "7566195285069843884",
+      "prep_key_decimal": "10340572510626563035",
+      "unused_after_assignment": 8939
+    },
+    "8": {
+      "beta": "2.711111111111",
+      "native_train": 10240,
+      "bulk_TRAIN": 10205,
+      "prep_TRAIN": 35,
+      "after_two_complete_trials": 8157,
+      "after_trials_04_and_tranche2": 7394,
+      "eligible_after_all_exclusions": 7394,
+      "TRAIN_intersections_nonadditive": {
+        "cycle-boundary": 1024,
+        "spatial-cycle": 1024,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 35,
+        "selected_04": 256,
+        "tranche2_dev": 256,
+        "tranche2_audit": 256,
+        "physical_parent_ancestry": 35,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 0,
+        "preflight_heldout": 0
+      },
+      "bulk_key_decimal": "2151160838659534542",
+      "prep_key_decimal": "16754966904117998283",
+      "unused_after_assignment": 994
+    },
+    "9": {
+      "beta": "3.05",
+      "native_train": 10240,
+      "bulk_TRAIN": 10217,
+      "prep_TRAIN": 23,
+      "after_two_complete_trials": 1385,
+      "after_trials_04_and_tranche2": 106,
+      "eligible_after_all_exclusions": 77,
+      "TRAIN_intersections_nonadditive": {
+        "cycle-boundary": 4864,
+        "spatial-cycle": 3968,
+        "native_validation": 0,
+        "native_TEST": 0,
+        "preparation": 23,
+        "selected_04": 256,
+        "tranche2_dev": 512,
+        "tranche2_audit": 512,
+        "physical_parent_ancestry": 23,
+        "previous_fork_roster": 0,
+        "cold_issue_reserve": 0,
+        "R4_tripod_tune": 2048,
+        "preflight_heldout": 453
+      },
+      "bulk_key_decimal": "96727552529741124",
+      "prep_key_decimal": "10340572510626563035",
+      "unused_after_assignment": 77
+    }
+  },
+  "public_design_sha256": "9cf6faa1d9dded928446cd67973465dbb02a98ec5a100054d2e9cd1e5267316e",
+  "rosters_sha256": "e9de57912ae2c0eef769c84812d7ce8a08b14525c5dc7a11eb7c0f914ec0535e",
+  "metadata_receipt_pins": {
+    "results/l20-propensity/archive-provenance.json": "631c54cd567a580b6d3d8da132267d37ecd86fbaefad8a58437b736e062b952a",
+    "results/l20-first-pass/fits/beta-00_b1_learned_11.json": "a61f44ecef0d8f537039e502d7d008e958f7504b97932db1d7354beb9b91b2ad",
+    "results/l20-autoresearch/fifteen/topology-parents.npz": "26acfe621426686cd9a4beec83ae17008d21e3076ccd60ad1c26073ee847c98b",
+    "/home/fritz/rsmi-work/l20-autoresearch-1795520725/tranche2/b00.json": "8ef1ae22c84bde95eb9436e447db17321a103b93b8e8d83d03702316af3fde7e",
+    "results/l20-first-pass/fits/beta-07_b1_learned_11.json": "eb247b3e4d489e6a7f54a5b985e954be2075c1c02e8858b9e51ac6139ab6328f",
+    "results/l20-autoresearch/fifteen/04-10-parents.npz": "3a4b51428fcadf4bb134e64348d0ca490a11365e16d623ca164966a2a083bdc9",
+    "/home/fritz/rsmi-work/l20-autoresearch-1795520725/tranche2/b07.json": "9b4909a7179f7c8623e6ac666865eea6614571f834d989dbbc1330fd72812362",
+    "results/l20-first-pass/fits/beta-08_b1_learned_11.json": "df1b1550f47bdeaf5843a4c144a499c3173b251081f091c543bf86e8183061e4",
+    "/home/fritz/rsmi-work/l20-autoresearch-1795520725/tranche2/b08.json": "6ba8bae5bfc47a93ba844ba61bd8ce71fdbbe611af6d9a31a78a0783eccd37eb",
+    "results/l20-first-pass/fits/beta-09_b1_learned_11.json": "3a3745ec292754b00d1b1fbd2aadd6a2b007e51acb5d7e2f7d8be183fc2e5724",
+    "/home/fritz/rsmi-work/l20-autoresearch-1795520725/tranche2/b09.json": "ab8b58ef9a8db30d87c330639c4432861372c21e99986859f988d33c5d709c3c",
+    "results/l20-operators/acquisition/forks-08.json": "694c99f99b9fe906a07a2c3d59c23c85f7a97fecd001e7a8209a09c816663f0b",
+    "results/l20-propensity/cold-provenance.json": "05d360ee11bacad1976df261ed937d786665949a889eff2e7af91050ee7018f1",
+    "results/l20-autoresearch/fifteen/14-15-lineage.json": "9f8072a74192a4a0070d74b1fc4304347c934f1c56c9724e065496b51a42cf67",
+    "results/l20-autoresearch/boundary/design.json": "4016fe2e52c4c9ce3e02c2e1737ac7f56a40943e8d20e6b61b8304d3d3071063",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/deep-gate.json": "563aca5fecb0382e5efa43f32391e0bfc9dbda1aaf63f6b3a88219e7f7fe8056",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/cold-b128.json": "06492dfce4d6c088f308ee4c40383ec433d11492d509b2846815be7fd7faaa36",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/cold-b256.json": "a4d95601a8e566862bd2ac1991d2c098dd3c9e8b62892f1054c1313c4afe6a14",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/cold-b32.json": "727e26ec3e5e1be5781847ba615fe01162a264837f90c3590f99603030fbe9e8",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/cold-b64.json": "ea144ab804576a76b25ea8c3a6420086e26308088c2863177a6722b61640ad47",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/hot-gate.json": "f4aa3c108532f082ea9f45c6b6b8beed8dc7793a4e629207750a49fcc8810593",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/pair-a.json": "abd23f3421bfcdc9ceb684d49e6c1ebc2c9520a7e462ed9cc2a2d12e9ee1b014",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/pair-b.json": "0a890fae0c80623fb0c8408679aee7fefe55f4c858e31671ab995946663385ee",
+    "/home/fritz/rsmi-work/l20-preflight-f898730/measurements-4Gz4AOIG/positive-control.json": "6f7924fe77cef57125330bbff7996dfad429e17ecafd6aaabf6d966e5607ad55",
+    "results/l20-operators/static/design.json": "4fb85c0c5a3c4bf66b32ce3e6f292c59f1c89e1d8ed3cf9aaff4f2774a4a7d6a",
+    "results/l20-operators/affine/design.json": "d5933019b4c2ca2828fdf0310a9aa91c67a2978e85c91aa129f72ce14f1c0c26"
+  },
+  "prior_trials": {
+    "cycle-boundary": {
+      "lineage_sha256": "c17cf30ab80758cdda52de018fe3e5cc5fe2e666441b1f8ce759038ca80c8e13",
+      "roster_sha256": "b3979cf3c9c24e7117a89adcde148a9e57723dd42bc9f0d700a120e8eaddd12d",
+      "distinct": 6912
+    },
+    "spatial-cycle": {
+      "lineage_sha256": "3c402d7e88ecd89e1d9581d2ca86e094c4a8130167fd5e871144319cf24220c7",
+      "roster_sha256": "95b2a844ed9da5787264ce7cb092b67f6d4cc1f626e492c32bf325c352f9b1cd",
+      "distinct": 6016
+    }
+  },
+  "study_forbidden_distinct": {
+    "cycle-boundary": 6912,
+    "spatial-cycle": 6016,
+    "native_validation": 8192,
+    "native_TEST": 16384,
+    "preparation": 160,
+    "selected_04": 1536,
+    "tranche2_dev": 1024,
+    "tranche2_audit": 1024,
+    "physical_parent_ancestry": 160,
+    "previous_fork_roster": 832,
+    "cold_issue_reserve": 1024,
+    "R4_tripod_tune": 2048,
+    "preflight_heldout": 886
+  },
+  "source_manifest_sha256": "d4c591bab7a75e785fb749fa42cc78353dfc6d093c6742ae8d621ca2113040ff",
+  "source_pins": {
+    "0": {
+      "npz_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "sidecar_sha256": "335c5cb074e2bb432744a96ed7591d4fd2373573de2573fc628934ce33df1074",
+      "beta": "0",
+      "study": "l20-b305-production-v1",
+      "study_index": 0,
+      "prep_seed_uint64": "10340572510626563035",
+      "bulk_seed_uint64": "10799778892298965288",
+      "physical_diagnostic_seed_uint64": "1118991801652603242"
+    },
+    "7": {
+      "npz_sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+      "sidecar_sha256": "8ccb1a104fb78542a91c173fa47b45f9854f055a0d77f6468fa82492b5d3b7d5",
+      "beta": "2.372222222222",
+      "study": "l20-b305-production-v1",
+      "study_index": 7,
+      "prep_seed_uint64": "10340572510626563035",
+      "bulk_seed_uint64": "7566195285069843884",
+      "physical_diagnostic_seed_uint64": "1118991801652603242"
+    },
+    "8": {
+      "npz_sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "sidecar_sha256": "8d7293a4c00393dd04b831c0cb93f0e49e650dd404f97c5d3fa416e4faaf044f",
+      "beta": "2.711111111111",
+      "study": "l20-b2711-double-v1",
+      "study_index": 0,
+      "prep_seed_uint64": "16754966904117998283",
+      "bulk_seed_uint64": "2151160838659534542",
+      "physical_diagnostic_seed_uint64": "5974691468339701209"
+    },
+    "9": {
+      "npz_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "sidecar_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+      "beta": "3.05",
+      "study": "l20-b305-production-v1",
+      "study_index": 9,
+      "prep_seed_uint64": "10340572510626563035",
+      "bulk_seed_uint64": "96727552529741124",
+      "physical_diagnostic_seed_uint64": "1118991801652603242"
+    }
+  },
+  "history": "All roles contributed to original first-pass 2^3 visible-to-shell RSMI fits at their beta; the parent folds are exactly the same. Historical beta9 operator/AFFINE training used 3^3 V, K4, six 5x5 shell face patches including distant R4; shared direction/scale, NOT the present 386-site species shell, hidden outcome, forecast or role. Prior R4 vacancy tripod used beta9 TRAIN, native val at 9/8/0; cycle rosters at all temperature/roles barred. Held-out from this HERO experiment by exact lineage, not pristine replication. No independent beta3.05 exam is claimed.",
+  "archive_scope": "Only bulk namespace eligible. Monolithic compressed file hashes include all stored bytes but no denied physical arrays were decoded. Native metadata members were read at indices 0,7,8,9 only. Complete original archival fork lineages excluded without loading snapshots. Prior #04, tranche2, other study rosters and first-pass partition receipts read for identity only.",
+  "no_exam_open": true,
+  "incremental_fee_usd": 0
+}

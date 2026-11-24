@@ -1,0 +1,13 @@
+{
+  "stage": "discovery",
+  "role": "tune",
+  "lineage_sha256": "4b395b42d5bca1d7338a896786e6ea8a1b71d45f09ffb29768938c62c0f29589",
+  "prerequisites": {
+    "design.json": "dfeedc4298555c4fc64b71e3145f0cf4ea1866b82e298eaedc89b5181ea66ea8",
+    "bank-design.json": "9cf6faa1d9dded928446cd67973465dbb02a98ec5a100054d2e9cd1e5267316e",
+    "train-design.json": "f48539032b8df2c6c93a679d898a61da90fbc1028b7e86c084daa89d1f8aae44",
+    "train-control-receipt.json": "fade8c4e1d4ccf9268736765741fcb3f8ee515ed4c220b5f4ca4534386ef2adb",
+    "forecast-control.json": "b6e449e9843f4859cef20b6472dc5a33e22acca8ad4711e8e6b4430668c12154"
+  },
+  "decision": "Prepare authorized discovery bank only. Encoder training only reads V/E from fit/tune under its own release. Rule discovery cohort stays withheld from learner. No assessment or temperature role authorized."
+}

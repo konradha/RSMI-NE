@@ -1,0 +1,18 @@
+{
+  "scope": "Canonical uniform-composition ensemble, no draws, no physical archive rows. Not an empirical leakage control.",
+  "volume": 8000,
+  "composition_vac_A_B": [
+    2000,
+    2400,
+    3600
+  ],
+  "center_sites": 27,
+  "shell_sites": 386,
+  "central_inventory_cells": 406,
+  "shell_inventory_cells": 75078,
+  "unconditional_ordered_V_E_MI_nat": 0.00017170283491731107,
+  "normalized_MSE_gain_for_optimal_linear_forecast_of_a_single_species_count": 0.00017167870641429008,
+  "maximum_unrenormalized_log_mass_error": 1.0912160064435739e-11,
+  "proof": "Given the three center counts C, the law of the shell sequence is independent of the ordered central configuration. Among shell assignments with given count vector D the likelihood ratio is constant. Thus I(V;E)=I(C;D), computed by summing P(C) KL[Hypergeom(N-C,386)||Hypergeom(N,386)]. R4 and sparse R5 have the same finite-inventory law. Squared linear count correlation is n*m/((N-n)*(N-m)); this is a benchmark for that count, not a universal forecast skill bound.",
+  "conditional": "For any S(V), the chain rule gives I(V;E|S)=I(V;E)-I(S;E) <= I(V;E). For the exact radius-3 interior inventory I, the uniform conditional ensemble factorizes between interior and exterior at beta zero. For every central rule f(V), E and f are conditionally independent given I; the true conditional covariance with m1(E,I)-m0(E,I) is zero. Finite fitted forecast errors need not coincide even then. The planned empirical hot control remains a separate gate."
+}
