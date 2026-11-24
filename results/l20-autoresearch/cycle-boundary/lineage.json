@@ -1,0 +1,100 @@
+{
+  "scope": "Metadata and public receipts only; no patch, outcome or shell extracted.",
+  "cohorts": {
+    "pilot": {
+      "index": 9,
+      "beta": 3.05,
+      "n": 256,
+      "train_position_inclusive": [
+        5120,
+        5375
+      ],
+      "bulk_seed": "96727552529741124",
+      "parent_sha256": "f21994dc9272aeea0b229a6c45fc603e6de53a8c622eaec1ea796d062a698831",
+      "key_sha256": "ad5153b4b8eb7386c836c0cae46ba16bbd789d1a0819e67e1b3bbb531fc35075"
+    },
+    "fit": {
+      "index": 9,
+      "beta": 3.05,
+      "n": 3072,
+      "train_position_inclusive": [
+        5376,
+        8454
+      ],
+      "bulk_seed": "96727552529741124",
+      "parent_sha256": "ebe2c6cfa7c640611f84e28636a5c026b9b75153eb997b62378134789f541ec7",
+      "key_sha256": "aeb0a7e133e3371f9c1acd05ef82ab63a9d6e9ecddb83e5063472d9f4cf9577d"
+    },
+    "dev": {
+      "index": 9,
+      "beta": 3.05,
+      "n": 512,
+      "train_position_inclusive": [
+        8455,
+        8971
+      ],
+      "bulk_seed": "96727552529741124",
+      "parent_sha256": "5f0338acdd0897bab17fc9e6439d32ba47427455ee3cce0c2ac401f2a698c243",
+      "key_sha256": "8dd29b014f18ee0c7761fa13f3efc640849b0145ede5829dce1c1d3cbe5527da"
+    },
+    "cold": {
+      "index": 9,
+      "beta": 3.05,
+      "n": 1024,
+      "train_position_inclusive": [
+        8972,
+        9997
+      ],
+      "bulk_seed": "96727552529741124",
+      "parent_sha256": "80544d98e0fdaa7e47aadd609efc999f2ba6fb9029727f1d27148edccfc3bc18",
+      "key_sha256": "5e9f9920121772311e31129d6e171ee574cdb1fbdd2108aadc9b1dbd5a502795"
+    },
+    "hot": {
+      "index": 0,
+      "beta": 0.0,
+      "n": 1024,
+      "train_position_inclusive": [
+        5120,
+        6147
+      ],
+      "bulk_seed": "10799778892298965288",
+      "parent_sha256": "5e28852d11c4f40cd48e0a685872dbf984a723e76da18b0650a63a8f1a12f25a",
+      "key_sha256": "664b8f6ffb0834f7efec413ae897aa5aba1b270b58d091e71b6a6e066394d298"
+    },
+    "transfer": {
+      "index": 8,
+      "beta": 2.711111111111,
+      "n": 1024,
+      "train_position_inclusive": [
+        5120,
+        6146
+      ],
+      "bulk_seed": "2151160838659534542",
+      "parent_sha256": "d015bdc83b2e987c63af28a029bb7121380ce80b81e6c62546e20605aa577aec",
+      "key_sha256": "2bc5cf29200cd30801c03f31d6be127aeed8e134056f78a66d8c1753248e520e"
+    }
+  },
+  "parents": 6912,
+  "distinct_lineages": 6912,
+  "prior_exact_endpoint_lineages": 1536,
+  "previous_outcome_overlap": 0,
+  "excluded_spent_or_native_validation_count": 28672,
+  "spent_overlap": 0,
+  "index6_access": false,
+  "test_species_access": false,
+  "original_release_sha256": {
+    "0": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+    "7": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+    "8": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+    "9": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca"
+  },
+  "private_roster_sha256": "b3979cf3c9c24e7117a89adcde148a9e57723dd42bc9f0d700a120e8eaddd12d",
+  "exact_endpoint_provenance": [
+    "fifteen_topology.py: occupancy H1 mod 2 for open complex; marginal development only at indices 0,8,9",
+    "fifteen_secondary.py: marginal pair maxent test at index 7",
+    "boundary/design.json: same numerical R, different central target and conditioning; previously negative tripod transfer not reopened",
+    "tranche2/LEDGER.md: temperatures/parent folds previously used for other outcomes, no prior held-out cycle-shell contrast located in project code/designs"
+  ],
+  "incremental_exposure": "Subject of #04 selected with historical prevalence information. No new measured parent previously supplied a #04 outcome. Many source configurations and the radius-four feature family have contributed to historical studies of other observables. Not an independent replication of selection.",
+  "fee_usd": 0
+}
