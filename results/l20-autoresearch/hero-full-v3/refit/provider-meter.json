@@ -1,0 +1,23 @@
+{
+  "scope": "Modal App.sandboxes.stats; terminated, attributed gross, not an invoice or a credit. Never add App and Sandbox lines.",
+  "sandbox_id": "sb-4rrSkPSHu6DDIIrKTY8Igf",
+  "app_id": "ap-4dUWVTMiybzg2OW7b84Yto",
+  "interval_hour_utc": [
+    "2026-11-24T15:00:00+00:00",
+    "2026-11-24T16:00:00+00:00"
+  ],
+  "tags": {
+    "study": "hero-full-v3",
+    "cell": "refit-1"
+  },
+  "reported_usd": {
+    "H100": "0.24776119",
+    "CPU": "0.00593372",
+    "Memory": "0.00602154"
+  },
+  "total_metered_usd": "0.25971645",
+  "h100_usd": "0.24776119",
+  "h100_equivalent_device_s": 225.80766683544303,
+  "whole_create_to_terminate_s": 233.07163902372122,
+  "missing_egress_note": "No additionally metered network SKU unless present in reported_usd; exclusive gross cap still reserved."
+}
