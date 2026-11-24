@@ -1,0 +1,63 @@
+{
+  "schema": "hero-rule-1",
+  "source": {
+    "ladder": 4096,
+    "release_sha256": "9bf6282ae4a660c830e30d254c9457ae888fd96116931c59b2390babb04649cc",
+    "implementation_sha256": "29e1facb26a2b68be07df334f58f1abcc5902487f8791d488c2ff50a092affcd",
+    "checkpoints": [
+      {
+        "seed": 6101,
+        "sha256": "276fec54966b400149e6d12e523338842ec6c94817bf858a096969b3bf8836fe",
+        "file": "affine-uniform-p4096-s6101-u32768.npz"
+      },
+      {
+        "seed": 6102,
+        "sha256": "83b8d8cf3d9666447518e28a16c9438e782b262095497c6d31be545bfb55ef11",
+        "file": "affine-uniform-p4096-s6102-u32768.npz"
+      },
+      {
+        "seed": 6103,
+        "sha256": "ebadcb2c03524adadc6b70e0671ca7d9eb77b872a14838acf010bc4265393aab",
+        "file": "affine-uniform-p4096-s6103-u32768.npz"
+      },
+      {
+        "seed": 6104,
+        "sha256": "0ec77fab435bdf081d5aede10827335d1ef10fa4b36e0f6fd973aa6c531584a5",
+        "file": "affine-uniform-p4096-s6104-u32768.npz"
+      },
+      {
+        "seed": 6105,
+        "sha256": "35760556ef073ef8331d32b145bf65abc36554040aaf630d1cf1ebd00a99dce7",
+        "file": "affine-uniform-p4096-s6105-u32768.npz"
+      }
+    ],
+    "parent_order_sha256": [
+      "7cc03ab7f693421d7b57453c40d220d73eb987acc089dc86d9534386d937b95d",
+      "db6123ba522818d62b4ce64293882e149b46106ac38db3c714c56f1ac958c4c1"
+    ]
+  },
+  "feature": "site:1,1,0:A",
+  "symbolic_passed": false,
+  "rediscovery": true,
+  "residual_fraction": 0.0,
+  "status": "unstable_teacher_explanatory_only",
+  "formula": "1[V(1,1,0)=A]",
+  "symmetry": "fixed offset; permuted by proper rotations",
+  "fit_mean": 0.3001594543457031,
+  "fit_sd": 0.4583271280565802,
+  "sign": 1,
+  "units": "signed FIT population SD of microscopic feature; positive points toward reference sector 1 vs 2",
+  "domain": "periodic L20 center extraction, 27 open-cube sites in lexicographic (z,y,x) order, 0 vacant/1 A/2 B",
+  "teacher": "mean of per-seed D-standardized aligned natural log-odds; continuous; not a two-bit symbol",
+  "teacher_fit_affine": {
+    "intercept": -0.27072099669019234,
+    "slope": 0.9121836112641873
+  },
+  "conventional_model": {
+    "name": "exact_dictionary_identity"
+  },
+  "conventional_feature_order": [],
+  "fit_variance": 1.0000000000000004,
+  "fit_residual_variance": 0.0,
+  "fit_within_s_variance": 0.9702020068304258
+}

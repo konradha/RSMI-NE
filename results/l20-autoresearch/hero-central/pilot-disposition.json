@@ -1,0 +1,130 @@
+{
+  "stage": "closed at pilot symbolic-rule reproducibility gate",
+  "beta": "2.711111111111",
+  "scope": "single-temperature pilot, not an all-archive null; experiments controlled separately from v2",
+  "hard_gate": {
+    "FIT_r2": 0.3400135727376099,
+    "RULE_r2": 0.3394193661364384,
+    "required_rule_r2": 0.5,
+    "five_seed_alignment_passed": false,
+    "seed_pairs": [
+      {
+        "seeds": [
+          6101,
+          6102
+        ],
+        "pearson": 0.5050256346156415,
+        "kappa": 0.2725849256186407
+      },
+      {
+        "seeds": [
+          6101,
+          6103
+        ],
+        "pearson": 0.6987459409566901,
+        "kappa": 0.29050712834659115
+      },
+      {
+        "seeds": [
+          6101,
+          6104
+        ],
+        "pearson": 0.6295323510790356,
+        "kappa": 0.35045768413603445
+      },
+      {
+        "seeds": [
+          6101,
+          6105
+        ],
+        "pearson": 0.403268386198241,
+        "kappa": 0.08794982246628934
+      },
+      {
+        "seeds": [
+          6102,
+          6103
+        ],
+        "pearson": 0.24765262838451688,
+        "kappa": 0.2089292040531737
+      },
+      {
+        "seeds": [
+          6102,
+          6104
+        ],
+        "pearson": 0.006481250900077477,
+        "kappa": 0.1408764596820413
+      },
+      {
+        "seeds": [
+          6102,
+          6105
+        ],
+        "pearson": -0.2323178286421097,
+        "kappa": -0.044851717590735404
+      },
+      {
+        "seeds": [
+          6103,
+          6104
+        ],
+        "pearson": 0.5679242915684948,
+        "kappa": 0.15637844683361235
+      },
+      {
+        "seeds": [
+          6103,
+          6105
+        ],
+        "pearson": 0.5126877139076458,
+        "kappa": 0.04111431908526146
+      },
+      {
+        "seeds": [
+          6104,
+          6105
+        ],
+        "pearson": 0.5781134973118706,
+        "kappa": 0.09579460062990236
+      }
+    ],
+    "ordinary_feat": "1[V(1,1,0)=A]",
+    "conventional_residual_fraction": 0.0
+  },
+  "nominee": "affine, same-beta unconstrained negatives, four deployable categories",
+  "fit_n": 4096,
+  "D_n": 1024,
+  "RULE_n": 512,
+  "seeds": [
+    6101,
+    6102,
+    6103,
+    6104,
+    6105
+  ],
+  "updates_per_finalist_seed": 32768,
+  "fit_hard_nats": [
+    0.005289545811278472,
+    0.0047965985416423985,
+    0.005846233794311213,
+    0.0055038942816787745,
+    0.005764014559440346
+  ],
+  "held_development_hard_nats": [
+    -0.0005256316261145694,
+    -0.0002299412959648682,
+    -0.0014462121642051433,
+    -0.001522221874945764,
+    -0.0013950621595526591
+  ],
+  "held_hard_entropy_bits": [
+    1.9057782850484448,
+    1.9118343487722136,
+    1.8960910890526204,
+    1.9276455382818136,
+    1.9367292641380307
+  ],
+  "assessment": "No forecasts, no evaluation cores read, no measured unseen-temperature gain; not evidence of zero physical signal or an upper limit from unopened tests. No new physical simulations or new paid use.",
+  "cavity": "Conditional design and variance grid only: pinned-cavity.md, cavity-power-sensitivity.csv. Not recommended based on this pilot."
+}
