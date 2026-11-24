@@ -1,0 +1,19 @@
+{
+  "decision": "NOT ADMITTED: the single symbolic teacher/rule gate failed before fitting physical forecasts. No alternate seed, rule, radius or temperature was substituted.",
+  "rule_sha256": "1ea2035c4931b0058e3e82adf344cc4bbd04688eadceaeac07a55f4d5a923464",
+  "rule_status": "unstable_teacher_explanatory_only",
+  "symbolic_passed": false,
+  "explanatory_feature_only": "site:1,1,0:A (z,y,x laboratory-frame site indicator; conventional, not an invariant scalar or a stable nominated carrier)",
+  "residual_variance_fraction": 0.0,
+  "forecast_design_sha256": "3b10d61ac4b4915eba6b1bf15e5eb363df48c2d3e535cf236516945d0f2569ad",
+  "calibration_control_sha256": "b6e449e9843f4859cef20b6472dc5a33e22acca8ad4711e8e6b4430668c12154",
+  "calibration_control": "Passed the downstream sufficient-statistic planted-signal and shuffled-null controls; cannot admit an unstable physical target.",
+  "native_forecast_bank_access": false,
+  "physical_forecast_fit": false,
+  "issued_boundaries": 0,
+  "scored_interiors": 0,
+  "cold_gain": null,
+  "transfer_gain": null,
+  "empirical_beta_zero_control": null,
+  "interpretation": "These are unmeasured quantities, not zero effects or a powered negative for the glass. No paired-boundary cavity verification is indicated."
+}
