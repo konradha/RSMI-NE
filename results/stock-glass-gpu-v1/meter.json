@@ -1,0 +1,16 @@
+{
+  "sandbox": "sb-850F7YjeHi5HBUpSpKK33J",
+  "app": "ap-MGp1neME250VtbVK8PoC5O",
+  "tag": {
+    "study": "stock-glass-gpu-v1"
+  },
+  "gross_usd": "0.46928229",
+  "resources_usd": {
+    "Memory": "0.01088033",
+    "CPU": "0.01072166",
+    "H100": "0.44768030"
+  },
+  "h100_equivalent_s": 408.0124253164557,
+  "provider_terminal_code": 137,
+  "scope": "Provider-tagged gross resources, not a net invoice. Prior verified V3 consumption is separate."
+}
