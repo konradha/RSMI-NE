@@ -155,41 +155,47 @@ def plot(out,ph,df,st,traces,weights):
     fig,ax=plt.subplots(figsize=(13,5),layout='constrained');mat=pk.pivot(index='level',columns='index',values='pairs').to_numpy();ax.imshow(np.log10(1+mat),cmap='Blues',aspect='auto')
     for r in pk.itertuples():ax.text(r.index,r.level,f'{r.reverse_or_tie_jA:,} / {r.pairs:,}' if r.pairs else 'no pairs',ha='center',va='center',color='white' if r.pairs>1000 else '#222',fontsize=8)
     ax.set_xticks(range(10),[f'{b:.2f}' for b in beta]);ax.set_yticks(range(7));ax.set_xlabel('β');ax.set_ylabel('|d|');ax.set_title('Reverse assignments / eligible TEST pairs · tie row: j=A / all ties');save(fig,'rare-support')
-    ff=st[st.depth==st.planned];valid=df[df.checkpoint_valid].merge(ff[['index','seed','planned']],on=['index','seed']);final=valid[valid.depth==valid.planned]
+    ff=st[st.depth==st.planned];available=df.merge(ff[['index','seed','planned']],on=['index','seed']);final=available[available.depth==available.planned]
     with PdfPages(out/'assignment-calibration.pdf') as pdf:
         for b,bt in enumerate(beta):
-            fg,(ap,ar)=plt.subplots(1,2,figsize=(11,4.4),layout='constrained');fg.suptitle(f'β={bt:.3f} · final two-site calibration on independent parents')
+            fg,(ap,ar)=plt.subplots(1,2,figsize=(11,4.4),layout='constrained');fg.suptitle(f'β={bt:.3f} · final frozen predictions (sign rule independent of contrastive reduction)')
             phys_rows=ph[(ph.side=='test')&(ph.kind=='d')&(ph['index']==b)&(ph.pairs>0)]
             xx=np.arange(-6,7);ap.plot(xx,expit(-4*bt*xx),'k:',label='Hamiltonian')
             ap.errorbar(phys_rows.level,phys_rows.empirical,yerr=np.maximum(0,np.array([phys_rows.empirical-phys_rows.lo95,phys_rows.hi95-phys_rows.empirical])),color='black',fmt='.',capsize=2,label='Observed TEST')
             for j,s in enumerate(SEEDS):
-                g=final[(final['index']==b)&(final.seed==s)&(final.kind=='d')&(final.n>0)];band(ap,g.level.to_numpy()+.04*(j-1),g,'pred_iA',colors[j],f'stock {s}')
+                g=final[(final['index']==b)&(final.seed==s)&(final.kind=='d')&(final.n>0)];flag='*' if len(g) and not g.checkpoint_valid.all() else '';band(ap,g.level.to_numpy()+.04*(j-1),g,'pred_iA',colors[j],f'stock {s}{flag}')
                 g=final[(final['index']==b)&(final.seed==s)&(final.kind=='k')&(final.level>0)&(final.n>0)];band(ar,g.level.to_numpy()+.04*(j-1),g,'sign_balacc',colors[j],f'seed {s}')
-            ap.set(xlabel='Signed d = mᵢ − mⱼ',ylabel='P(i=A)',ylim=(-.05,1.05),xticks=np.arange(-6,7,2));ar.set(xlabel='|d| (ties have no lower site)',ylabel='Lower-site balanced accuracy',ylim=(-.05,1.05),xticks=np.arange(1,7));ar.axhline(.5,color='#777',ls=':');ap.legend(fontsize=8);ar.legend(fontsize=8);pdf.savefig(fg)
+            ap.set(xlabel='Signed d = mᵢ − mⱼ',ylabel='P(i=A)',ylim=(-.05,1.05),xticks=np.arange(-6,7,2));ar.set(xlabel='|d| (ties have no lower site)',ylabel='Lower-site balanced accuracy',ylim=(-.05,1.05),xticks=np.arange(1,7));ar.axhline(.5,color='#777',ls=':');ap.legend(fontsize=8);ar.legend(fontsize=8);fg.supxlabel('* Invalid contrastive reduction: classifier diagnostic only; excluded from joint gate.',fontsize=9);pdf.savefig(fg)
             if b==9:fg.savefig(out/'cold-assignment.png',dpi=150)
             plt.close(fg)
     fig,ax=plt.subplots(3,1,figsize=(10,8),sharex=True,layout='constrained')
     for j,s in enumerate(SEEDS):
         g=final[(final.seed==s)&(final.kind=='non-tie')];x=g.beta.to_numpy()+.018*(j-1)
-        for a,key in zip(ax,('sign_balacc','brier_skill_over_occ','oracle_minus_stock')):band(a,x,g,key,colors[j],f'{s}')
+        for a,key in zip(ax,('sign_balacc','brier_skill_over_occ','oracle_minus_stock')):
+            y=g.copy()
+            if key=='oracle_minus_stock':y.loc[~y.checkpoint_valid,[key,key+'_lo',key+'_hi']]=np.nan
+            band(a,x,y,key,colors[j],f'{s}')
+            if key!='oracle_minus_stock':
+                bad=~g.checkpoint_valid;a.plot(x[bad],g.loc[bad,key],'x',c='black',ms=5)
     for a,thr in zip(ax,(.5,0,0)):a.axhline(thr,c='#555',ls=':',lw=1)
-    ax[0].legend(ncol=3);ax[0].set_ylabel('Lower-site balanced\naccuracy');ax[1].set_ylabel('Brier improvement\nover occupancy-only');ax[2].set_ylabel('Exact − learned\npaired InfoNCE (nats)');ax[2].set_xlabel('β');fig.suptitle('Frozen final · non-tie TEST pairs · pointwise clustered 95% intervals');save(fig,'operator-recovery')
-    fig,ax=plt.subplots(figsize=(11,4.6),layout='constrained');data=np.array([[int((ff[(ff.seed==s)&(ff['index']==b)].status=='complete').all()) for b in range(10)] for s in SEEDS]);ax.imshow(data,cmap=matplotlib.colors.ListedColormap(['#b74542','#24876c']),vmin=0,vmax=1,aspect='auto')
+    ax[0].legend(ncol=3);ax[0].set_ylabel('Lower-site balanced\naccuracy');ax[1].set_ylabel('Brier improvement\nover occupancy-only');ax[2].set_ylabel('Exact − learned\npaired InfoNCE (nats)');ax[2].set_xlabel('β');fig.suptitle('Frozen non-tie TEST · 95% intervals · × invalid InfoNCE, classifier diagnostic only');save(fig,'operator-recovery')
+    fig,ax=plt.subplots(figsize=(11,4.6),layout='constrained');data=np.array([[{'complete':2,'invalid frozen score':1}.get(ff[(ff.seed==s)&(ff['index']==b)].status.iloc[0],0) for b in range(10)] for s in SEEDS]);ax.imshow(data,cmap=matplotlib.colors.ListedColormap(['#b74542','#b47513','#24876c']),vmin=0,vmax=2,aspect='auto')
     for r in ff.itertuples():ax.text(r.index,SEEDS.index(r.seed),f'{r.steps:,.0f}' if np.isfinite(r.steps) else 'unrun',ha='center',va='center',color='white',fontsize=9)
-    ax.set_xticks(range(10),[f'{b:.2f}' for b in beta]);ax.set_yticks(range(3),SEEDS);ax.set_xlabel('β');ax.set_ylabel('Optimizer seed');ax.set_title('Final availability · actual Adam steps · green valid; red failed, invalid or absent');save(fig,'fit-status')
+    ax.set_xticks(range(10),[f'{b:.2f}' for b in beta]);ax.set_yticks(range(3),SEEDS);ax.set_xlabel('β');ax.set_ylabel('Optimizer seed');ax.set_title('Actual Adam steps · green valid, amber invalid frozen critic, red no finite final');save(fig,'fit-status')
     with PdfPages(out/'learning.pdf') as pdf, PdfPages(out/'signed-d-atlas.pdf') as atlas:
         for b,bt in enumerate(beta):
             fig,axs=plt.subplots(4,3,figsize=(12,9),sharex='col',layout='constrained');fig.suptitle(f'β={bt:.3f} · stock TRAIN vs frozen held-parent calibration')
             for j,s in enumerate(SEEDS):
-                axs[0,j].set_title(f'seed {s}');g=valid[(valid['index']==b)&(valid.seed==s)&(valid.kind=='non-tie')];x=g.depth.to_numpy()
+                axs[0,j].set_title(f'seed {s}');g=available[(available['index']==b)&(available.seed==s)&(available.kind=='non-tie')];x=g.depth.to_numpy()
                 if (b,s) in traces:
                     y,B=traces[b,s];xx=1+B*np.arange(len(y));axs[0,j].plot(xx,y,c='#9abccb',lw=.8);axs[0,j].plot(xx,pd.Series(y).ewm(span=20).mean(),c=colors[0],lw=1.4)
-                band(axs[1,j],x,g,'true64',colors[0],'true');band(axs[1,j],x,g,'shuffle64',colors[1],'shuffled');axs[1,j].plot(x,g.oracle_true,c='black',ls=':',label='exact true')
+                good=g.copy();good.loc[~good.checkpoint_valid,['true64','true64_lo','true64_hi','shuffle64','shuffle64_lo','shuffle64_hi']]=np.nan
+                band(axs[1,j],x,good,'true64',colors[0],'true');band(axs[1,j],x,good,'shuffle64',colors[1],'shuffled');axs[1,j].plot(x,g.oracle_true,c='black',ls=':',label='exact true')
                 band(axs[2,j],x,g,'sign_balacc',colors[2],'sign rule');axs[2,j].axhline(.5,c='#555',ls=':');axs[3,j].plot(x,g.entropy_bits,'.-',c=colors[0]);axs[3,j].set_xlabel('Actual optimizer updates')
                 f,aa=plt.subplots(1,3,figsize=(12,6),layout='constrained');f.suptitle(f'β={bt:.3f} · seed {s} · signed d=mᵢ−mⱼ; grey = no eligible score')
                 dep=st[(st['index']==b)&(st.seed==s)].depth.tolist()
                 for a,key,title in zip(aa,('pred_iA','assignment_acc','sign_accuracy'),('Predicted P(i=A)','Assignment accuracy','Lower-site rule accuracy')):
-                    rows=valid[(valid['index']==b)&(valid.seed==s)&(valid.kind=='d')];imdata=rows.pivot(index='level',columns='depth',values=key).reindex(index=range(-6,7),columns=dep);cm=plt.get_cmap('viridis').copy();cm.set_bad('#ddd');im=a.imshow(imdata,vmin=0,vmax=1,cmap=cm,aspect='auto',origin='lower');a.set_title(title);a.set_xticks(range(5),dep,rotation=55,fontsize=8);a.set_yticks(range(13),range(-6,7));a.set_ylabel('signed d');a.set_xlabel('Optimizer updates')
+                    rows=available[(available['index']==b)&(available.seed==s)&(available.kind=='d')];imdata=rows.pivot(index='level',columns='depth',values=key).reindex(index=range(-6,7),columns=dep);cm=plt.get_cmap('viridis').copy();cm.set_bad('#ddd');im=a.imshow(imdata,vmin=0,vmax=1,cmap=cm,aspect='auto',origin='lower');a.set_title(title);a.set_xticks(range(5),dep,rotation=55,fontsize=8);a.set_yticks(range(13),range(-6,7));a.set_ylabel('signed d');a.set_xlabel('Optimizer updates')
                 f.colorbar(im,ax=aa,shrink=.6);atlas.savefig(f);plt.close(f)
             for a,l in zip(axs[:,0],('TRAIN InfoNCE\nraw & EMA20','TEST InfoNCE\n(nats)','Balanced sign\naccuracy','Code entropy\n(bits)')):a.set_ylabel(l)
             axs[1,0].legend(fontsize=8);pdf.savefig(fig)

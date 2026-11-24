@@ -1,0 +1,21 @@
+{
+  "prior_usd": "4.85172072",
+  "study": {
+    "sandbox": "sb-EhastVIeMrkK39uYhg3Zqt",
+    "app": "ap-spcwCBCXYc5rE4epK014th",
+    "gross_usd": "0.81901625",
+    "resources_usd": {
+      "Memory": "0.04744886",
+      "H100": "0.68905520",
+      "CPU": "0.08251218"
+    },
+    "h100_equivalent_s": 627.9996759493671,
+    "provider_terminal": {
+      "sandbox": "sb-EhastVIeMrkK39uYhg3Zqt",
+      "utc": "2026-11-24T17:24:13.195016+00:00",
+      "code": 137
+    }
+  },
+  "cumulative_usd": "5.67073697",
+  "remaining_usd": "19.32926303"
+}
