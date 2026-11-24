@@ -1,0 +1,192 @@
+{
+  "status": "Analytic beta-zero reference only; no hot assessment, fitted model or new physical input.",
+  "volume": 8000,
+  "frozen_eligible_strata": 22,
+  "eligibility_i2_sha256": "455275cf3159068e08b96b034ab737fdfdd2f036fb62ff43b463dcfa03934f75",
+  "probability_all_cycles": 0.10390140129988838,
+  "probability_eligible": 0.25655573701096307,
+  "probability_cycle_given_eligible": 0.2956518697077487,
+  "proof": "At beta=0 every species assignment with totals (2000 vacant,2400 A,3600 B) is equiprobable. Given any central word and species assignment in a single declared stratum s, inventory fixes n and n_A. For a specified 386-bit shell vacancy mask with k ones the probability is (2000-12+n)_k (6000-n)_(386-k)/(7988)_386 (falling factorials); it is the same for all central words in that stratum. Hence E and V, and therefore any deterministic frozen f(E) and cycle Y(V), are independent conditional on s. Mixing strata can reintroduce a tiny composition correlation. This is not a check of native archive sampling, neural training, calibration or software leakage.",
+  "conditional_mutual_information_nat": 0,
+  "optimum_incremental_bernoulli_log_score_nat": 0,
+  "covariance_cycle_with_shell_vacancy_fraction_unconditional": 4.895585283409831e-07,
+  "covariance_cycle_with_shell_vacancy_fraction_mixed_eligible_strata": 8.919231217131948e-07,
+  "rows": [
+    {
+      "stratum": 6864,
+      "n_occupied": 8,
+      "eligible_mass": 0.015604199796507314,
+      "cycle_probability": 0.27972027972027974,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 6925,
+      "n_occupied": 8,
+      "eligible_mass": 0.003636836861492182,
+      "cycle_probability": 0.2,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 6928,
+      "n_occupied": 8,
+      "eligible_mass": 0.01300169177983455,
+      "cycle_probability": 0.27972027972027974,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 6989,
+      "n_occupied": 8,
+      "eligible_mass": 0.0019380286060906905,
+      "cycle_probability": 0.2,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 6992,
+      "n_occupied": 8,
+      "eligible_mass": 0.006928452266774219,
+      "cycle_probability": 0.27972027972027974,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 7053,
+      "n_occupied": 8,
+      "eligible_mass": 0.0006450220277358537,
+      "cycle_probability": 0.2,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 7056,
+      "n_occupied": 8,
+      "eligible_mass": 0.0023059537491556775,
+      "cycle_probability": 0.27972027972027974,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 7117,
+      "n_occupied": 8,
+      "eligible_mass": 0.00012258823755802279,
+      "cycle_probability": 0.2,
+      "shell_expected_vacancies": 96.45167751627442,
+      "shell_variance_vacancies": 68.86328161411515
+    },
+    {
+      "stratum": 7572,
+      "n_occupied": 9,
+      "eligible_mass": 0.008503894947339474,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 7636,
+      "n_occupied": 9,
+      "eligible_mass": 0.022711766188329974,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 7700,
+      "n_occupied": 9,
+      "eligible_mass": 0.035358904399676025,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 7764,
+      "n_occupied": 9,
+      "eligible_mass": 0.03536382218888322,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 7828,
+      "n_occupied": 9,
+      "eligible_mass": 0.02356276917813242,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 7892,
+      "n_occupied": 9,
+      "eligible_mass": 0.010459240511838967,
+      "cycle_probability": 0.3,
+      "shell_expected_vacancies": 96.5,
+      "shell_variance_vacancies": 68.88628396143733
+    },
+    {
+      "stratum": 8408,
+      "n_occupied": 10,
+      "eligible_mass": 0.001698698178781192,
+      "cycle_probability": 0.6666666666666666,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8472,
+      "n_occupied": 10,
+      "eligible_mass": 0.005105316310977827,
+      "cycle_probability": 0.6666666666666666,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8473,
+      "n_occupied": 10,
+      "eligible_mass": 0.007657974466466742,
+      "cycle_probability": 0.1111111111111111,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8536,
+      "n_occupied": 10,
+      "eligible_mass": 0.009086222108711257,
+      "cycle_probability": 0.6666666666666666,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8537,
+      "n_occupied": 10,
+      "eligible_mass": 0.013629333163066887,
+      "cycle_probability": 0.1111111111111111,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8600,
+      "n_occupied": 10,
+      "eligible_mass": 0.01060501674750043,
+      "cycle_probability": 0.6666666666666666,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8601,
+      "n_occupied": 10,
+      "eligible_mass": 0.015907525121250647,
+      "cycle_probability": 0.1111111111111111,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    },
+    {
+      "stratum": 8665,
+      "n_occupied": 10,
+      "eligible_mass": 0.012722480174859488,
+      "cycle_probability": 0.1111111111111111,
+      "shell_expected_vacancies": 96.5483224837256,
+      "shell_variance_vacancies": 68.90927479319139
+    }
+  ]
+}

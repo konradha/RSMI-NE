@@ -1,0 +1,176 @@
+{
+  "status": "frozen, fit/development only",
+  "files": {
+    "space-random-s260511.npz": {
+      "checkpoint_sha256": "3faf7948782efb1d6b10b13867fdfa52dca07b3a278183bead5467661d84e12b",
+      "hard_dev_map": "space-random-s260511-dev-hard.npz",
+      "hard_dev_map_sha256": "48d71a1c605ffbbe71f83a8dbf6104f9d34a17cfac3216ad4ae6b9c513e3e6ce",
+      "status": "frozen random"
+    },
+    "space-random-s260512.npz": {
+      "checkpoint_sha256": "6c708618949d100f551cba304b00ec1dd9dc449b128bd6a336d61bcafbd0471c",
+      "hard_dev_map": "space-random-s260512-dev-hard.npz",
+      "hard_dev_map_sha256": "accaee0ee1c3873f43f3c90b88e8b93ba860fc22080eb42bb74dc75b1627bf19",
+      "status": "frozen random"
+    },
+    "space-k4-n512-s260511-u256.npz": {
+      "checkpoint_sha256": "82e741f9cf30df2928cd54e522d09ab43c49053cb0c9e9d20b78b28e3c87c6c4",
+      "hard_dev_map": "space-k4-n512-s260511-u256-dev-hard.npz",
+      "hard_dev_map_sha256": "8b2d2cd16379672cadc694d077ba2231d5a4e683762427896d99f9fe725d3ee8",
+      "status": "frozen learned"
+    },
+    "space-k4-n512-s260511-u512.npz": {
+      "checkpoint_sha256": "f0063403ffe4ec3e6d234be3fa592701aca6cf84d67d592133bade379f9f77b7",
+      "hard_dev_map": "space-k4-n512-s260511-u512-dev-hard.npz",
+      "hard_dev_map_sha256": "6b0ce0fdb64131d4b044805926547932729acd06509d209c992ea063ccc3f9d6",
+      "status": "frozen learned"
+    },
+    "space-k4-n512-s260511-u1024.npz": {
+      "checkpoint_sha256": "f077ae3aea0e6539464ef34b40e0d24d2088828f4fefd3792ca9b76bcaf34d9d",
+      "hard_dev_map": "space-k4-n512-s260511-u1024-dev-hard.npz",
+      "hard_dev_map_sha256": "e9e3aa4b8bfaa8bb0ac988607dc44562fec6662bbc47c9b8279d51481e280731",
+      "status": "frozen learned"
+    },
+    "space-k4-n512-s260512-u256.npz": {
+      "checkpoint_sha256": "4571509cfc484351d8c23c1d62cce55e7a60ab4db7aed5209c8bda39f4fba6ef",
+      "hard_dev_map": "space-k4-n512-s260512-u256-dev-hard.npz",
+      "hard_dev_map_sha256": "98add2f3db7b36f86c459b9bc94fa51ef90f4ab7d344120f8ea35249bbcf3782",
+      "status": "frozen learned"
+    },
+    "space-k4-n512-s260512-u512.npz": {
+      "checkpoint_sha256": "48ae297871cc44f1b13525e22ff324ba87d86239546d6bda8c64b55da804d4da",
+      "hard_dev_map": "space-k4-n512-s260512-u512-dev-hard.npz",
+      "hard_dev_map_sha256": "5ed1ccde378b9da00cba7812073ab28a49344f6adb9b9154cf258844e80af616",
+      "status": "frozen learned"
+    },
+    "space-k4-n512-s260512-u1024.npz": {
+      "checkpoint_sha256": "f6c56875ec8cb4d64e4dc4acf2f11edba9a8fc14a27589a75554b4b254dae293",
+      "hard_dev_map": "space-k4-n512-s260512-u1024-dev-hard.npz",
+      "hard_dev_map_sha256": "93b02909220f9e7f85fcaa0c4aaf71b4fbb407294425b5d39e8ac388eaa7baaa",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260511-u256.npz": {
+      "checkpoint_sha256": "63c0fa55f840f6fcfc44b75e6d61b4cff5c52d3a7d70e516f8c562a6b3cd7183",
+      "hard_dev_map": "space-k4-n2048-s260511-u256-dev-hard.npz",
+      "hard_dev_map_sha256": "f427300e9b1bcdda89fb55da95d6c5f1c09017fbb9f49a31f771d88450ace423",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260511-u512.npz": {
+      "checkpoint_sha256": "261c496c7338be0a9486fcb28f9f8b8e9dfa4e0df68b66637cec4f9dabf601b0",
+      "hard_dev_map": "space-k4-n2048-s260511-u512-dev-hard.npz",
+      "hard_dev_map_sha256": "1bb4507f7b5ab8733c951ad90dfc8fb5f4d5ec7cf305800ca158c265a5c5887f",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260511-u1024.npz": {
+      "checkpoint_sha256": "c25296abbe62fe3120374060f1fce66c742b7b175dc4c0877f600b8e7fa635c9",
+      "hard_dev_map": "space-k4-n2048-s260511-u1024-dev-hard.npz",
+      "hard_dev_map_sha256": "dc6765c71378644279f99a263e89dae1274f6187b50a0964ceab88aaa25f70c4",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260512-u256.npz": {
+      "checkpoint_sha256": "b29dab0d5431bddfe23373f3e88c7d247007b7e04721343a60923793c04c47ac",
+      "hard_dev_map": "space-k4-n2048-s260512-u256-dev-hard.npz",
+      "hard_dev_map_sha256": "b63842dcd1c3d840a3bb8f1c422913bdfa870cab79581348322ba34014744840",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260512-u512.npz": {
+      "checkpoint_sha256": "456630525e2f850e9a0657413593d6d1294f2e9fb93759f86866ad22ded960f5",
+      "hard_dev_map": "space-k4-n2048-s260512-u512-dev-hard.npz",
+      "hard_dev_map_sha256": "74279da25d1d730f82e9f5850f80dd69ccda6c12f17b81dd244fa0510d4522fe",
+      "status": "frozen learned"
+    },
+    "space-k4-n2048-s260512-u1024.npz": {
+      "checkpoint_sha256": "eeebde15b04dcc944d9a348e9185b24cfad23093812c8c2704899aa13fc9db54",
+      "hard_dev_map": "space-k4-n2048-s260512-u1024-dev-hard.npz",
+      "hard_dev_map_sha256": "dff99baaf86d4bd8df064fc4a1319301706f955db228543bb651572f85c15070",
+      "status": "frozen learned"
+    }
+  },
+  "input_sha256": {
+    "eligible.npy": "41ea1d6b7abc37b3a8a1116ccdeea97ed3b0f5c73cd0e8cc3046f124f9ae11b9",
+    "unlabeled-fit.npz": "488dd5b077db43d6d322eb3ad1ebd6970f267e476673d4a2e7f7cfde51ac6a3b",
+    "unlabeled-dev.npz": "d8e24f2f43aef4312485f354b4ff7f95003d39d85edbb645c5291c0340d1b6fb"
+  },
+  "protocol_sha256": "638b314b378f15b1b8e7c1a161249e7673402cf4153e2952ca8095ef39ecefc9",
+  "dev_report_sha256": "1ff480f19b2eeac5ad893abd99495e7b97a0618a1da1136ce377bda610a50027",
+  "control_report_sha256": "dc14f47e12d8987556ac29a61e724e0220b7c1cc2dcad57958d63cfdbdc40ce3",
+  "primary": [
+    "space-k4-n2048-s260511-u1024.npz",
+    "space-k4-n2048-s260512-u1024.npz"
+  ],
+  "dev_support": {
+    "groups": 16,
+    "parents_per_group": 32,
+    "opportunities": 65536,
+    "eligible": 31459,
+    "eligible_and_supported": 31379
+  },
+  "dev_primary": {
+    "hard_native": {
+      "estimate": -0.003631937119055766,
+      "se": 0.00035695113953093346,
+      "ci95": [
+        -0.0043927604631958566,
+        -0.0028711137749156757
+      ],
+      "mde80": 0.0010613762036251367
+    },
+    "hard_broken": {
+      "estimate": -0.003537045045035164,
+      "se": 0.0003145967875261913,
+      "ci95": [
+        -0.004207592224842287,
+        -0.0028664978652280407
+      ],
+      "mde80": 0.0009354376749041764
+    },
+    "hard_difference": {
+      "estimate": -9.489207402060205e-05,
+      "se": 0.000343927285234309,
+      "ci95": [
+        -0.0008279557298387216,
+        0.0006381715817975176
+      ],
+      "mde80": 0.0010226504299854077
+    },
+    "soft_native": {
+      "estimate": -0.0013220268183611384,
+      "se": 0.0002055757492909011,
+      "ci95": [
+        -0.001760201155765247,
+        -0.0008838524809570299
+      ],
+      "mde80": 0.0006112691183070472
+    },
+    "soft_broken": {
+      "estimate": -0.0011956052778480644,
+      "se": 0.0001930317740543727,
+      "ci95": [
+        -0.001607042764934767,
+        -0.0007841677907613618
+      ],
+      "mde80": 0.0005739702408404844
+    },
+    "soft_difference": {
+      "estimate": -0.00012642154051307396,
+      "se": 0.00020675854771293146,
+      "ci95": [
+        -0.0005671169530763073,
+        0.0003142738720501594
+      ],
+      "mde80": 0.0006147861097375217
+    }
+  },
+  "update_512_to_1024": {
+    "estimate": -0.0004288187390524097,
+    "se": 0.0003332405792607245,
+    "ci95": [
+      -0.0011391042202796066,
+      0.00028146674217478714
+    ],
+    "mde80": 0.000990874048964727
+  },
+  "extra_doubling_triggered": false,
+  "interval": "Whole disjoint parent groups; conditioned on fitted models, not an across-fit uncertainty.",
+  "caveat": "Hard native minus broken tests conditional word retrieval with these scores, not a physical endpoint, nor all possible encoders. Compare native to uniform as well as to broken."
+}

@@ -1,0 +1,5 @@
+{
+  "number":3,"stage":"bank-extraction","roles":["calibration"],
+  "decision":"Freeze the primary spatial encoders before compiling the separate 384 FIT-only calibration parents. The registered final update doubling failed its development trigger; no K=8, objective change, paid ladder, cold/hot assessment or transfer. The bounded physical K4 probe can distinguish whether this frozen representation predicts the named cycle beyond ordinary shell packing on development parents; its signal is not a discovery exam.",
+  "lineage_sha256":"3c402d7e88ecd89e1d9581d2ca86e094c4a8130167fd5e871144319cf24220c7","control_passed":true,"control_file":"space-control.json","control_sha256":"dc14f47e12d8987556ac29a61e724e0220b7c1cc2dcad57958d63cfdbdc40ce3","hard_code_manifest":"space-freeze.json","hard_code_manifest_sha256":"d90e422f1672a8360b9e79d151ccda8530b4a6e411c0db687ca20e91a941b6b9"
+}
