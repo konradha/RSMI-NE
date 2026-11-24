@@ -1,0 +1,13 @@
+{
+  "source": "Authenticated Modal App.sandboxes.stats, group_by_tags cell, shared workspace main, 2026-11-24 15:00..16:00 UTC, study=hero-full-v3, cell=pilot-1. Observed after terminal. This is attributed provider gross resource usage, not net invoice. Rounded cents not used for reservations. No credit assumptions.",
+  "sandbox_id": "sb-uaKPGRK5Hm0KjM0YpSaPBS",
+  "cpu_usd": "0.00013139",
+  "memory_usd": "0.00008889",
+  "h100_usd": "0.01097193",
+  "total_metered_usd": "0.01119220",
+  "effective_GPU_seconds_from_reported_H100_cost_and_rate": 9.999733670886076,
+  "direct_GPU_seconds_RPC": "timed out; computed meter-equivalent seconds from provider cost. Not wall time.",
+  "whole_create_to_terminate_s": 19.936506207101047,
+  "source_returned_noncompute_skus": false,
+  "budget_charge_carry_usd": 1.05
+}
