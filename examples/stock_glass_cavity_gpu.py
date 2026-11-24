@@ -11,6 +11,13 @@ STUDY='stock-glass-cavity-03'; SEEDS=(6101,6102,6103); EARLY=(850,1700,3400,6800
 ROOT=Path(__file__).resolve().parents[1]; DESIGN=ROOT/'results/experiment-03-cavity/design.json'
 
 
+def encode_states(states,coords):
+    import numpy as np
+    raw=np.stack([states==1,states==2],axis=-1).astype('f')
+    cube=np.zeros((len(states),3,3,3,2),'f');cube[:,coords[:,0],coords[:,1],coords[:,2],:]=raw
+    return raw,cube[...,None]
+
+
 def fit(a):
     from contextlib import redirect_stderr
     from unittest.mock import patch
@@ -26,7 +33,7 @@ def fit(a):
     meta=json.loads(Path('prepared.json').read_bytes());cov=meta['coverage'][b];name=f'b{b:02}-pairs.npz';assert stock.sha(Path(name))==meta['inputs'][name]
     with np.load(name) as z:pairs=z['pairs'];X=z['states'];assert len(pairs)==cov['train']['selected_parents'] and pairs.shape[1:]==(16,2)
     with np.load('state-geometry.npz') as z:coords=z['star']+1;assert np.array_equal(X,z['states'])
-    raw=np.stack([X==1,X==2],axis=-1).astype('f');visible=np.zeros((210,3,3,3,2,1),'f');visible[:,coords[:,0],coords[:,1],coords[:,2],:,0]=raw
+    raw,visible=encode_states(X,coords)
     pairs=pairs.reshape(-1,2);v=visible[pairs[:,0]];e=raw[pairs[:,1]].reshape(len(pairs),14);n=len(e);B=math.ceil(n/500);epochs=math.ceil(10000/B);final=B*epochs
     cg=dict(ll=(3,3,3),visible_dim=2,nonlinearCG=None,init_temperature=.75,min_temperature=.1,relaxation_rate=.0001,Nq=None,conv_activation=None,hidden_dim=2,h_embed=True,use_probs=False,use_logits=True)
     critic=dict(layers=3,embed_dim=8,hidden_dim=32,activation='relu',use_dropout=True,dropout_rate=.2);opt=dict(batch_size=500,iterations=epochs,shuffle=100000,learning_rate=.009);adam=tf.keras.optimizers.Adam(.009)
@@ -82,7 +89,8 @@ def launch(a):
                 for line in pr.stdout:
                     line=line.rstrip();tail=(tail+[line])[-16:]
                     if any(x in line for x in ('FIRST_CUDA_STEP','CAVITY_RESULT','Traceback','Error')):print(line,flush=True)
-                if pr.wait():raise RuntimeError(str(tail))
+                rc=pr.wait()
+                if rc:raise RuntimeError(f'exec exit {rc}: {tail}')
             run('set -o pipefail; mkdir wheels; cat wheels-* | tar -xf - -C wheels; rm wheels-*; tar -xf fork.tar; /opt/conda/bin/python -m venv env; env/bin/pip install --no-index --find-links=wheels --disable-pip-version-check -q '+' '.join(repr(x) for x in stock.REQUIREMENTS),1200)
             env='export PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 TF_USE_LEGACY_KERAS=1 TF_NUM_INTRAOP_THREADS=1 TF_NUM_INTEROP_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TF_CPP_MIN_LOG_LEVEL=2 WANDB_MODE=disabled; export LD_LIBRARY_PATH="$(find "$PWD/env" -path "*/nvidia/*/lib" -type d | paste -sd: -):${LD_LIBRARY_PATH:-}"; '
             slots=queue.Queue()

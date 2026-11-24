@@ -1,0 +1,92 @@
+PROVIDER_ID sb-OTABmGqOuJ1xBdTv3QvDjO ap-dYpAB0QstuN1e0eptNz5LY max_usd 3.927916666666666666666666666
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b00-s6101 []
+FIT_ERROR b03-s6101 []
+FIT_ERROR b07-s6101 []
+FIT_ERROR b01-s6101 []
+FIT_ERROR b02-s6101 []
+FIT_ERROR b04-s6101 []
+FIT_ERROR b05-s6101 []
+FIT_ERROR b06-s6101 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b08-s6101 []
+FIT_ERROR b09-s6101 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b00-s6102 []
+FIT_ERROR b05-s6102 []
+FIT_ERROR b01-s6102 []
+FIT_ERROR b02-s6102 []
+FIT_ERROR b03-s6102 []
+FIT_ERROR b04-s6102 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b06-s6102 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b07-s6102 []
+FIT_ERROR b08-s6102 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b09-s6102 []
+FIT_ERROR b01-s6103 []
+FIT_ERROR b03-s6103 []
+FIT_ERROR b00-s6103 []
+FIT_ERROR b02-s6103 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b04-s6103 []
+FIT_ERROR b05-s6103 []
+FIT_ERROR b06-s6103 []
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+  File "/tmp/stock-glass/stock_glass_cavity_gpu.py", line 29, in fit
+ValueError: shape mismatch: value array of shape (210,7,2) could not be broadcast to indexing result of shape (7,210,2)
+FIT_ERROR b07-s6103 []
+FIT_ERROR b08-s6103 []
+FIT_ERROR b09-s6103 []
+TERMINATED sb-OTABmGqOuJ1xBdTv3QvDjO 137

@@ -1,0 +1,11 @@
+{
+  "prior": "5.67073697",
+  "cap": "3.927916666666666666666666666",
+  "life": 2100,
+  "cpu": 10,
+  "gib": 34,
+  "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+  "benchmark": "7715eea033df425d853ab7c87b68fddba8a327fb60705faa45fa97567408d087",
+  "launcher": "b205984d225722e4eec7262238725ad738f1d2db516af32ce8199ac7f90c29e3",
+  "image": "im-1aUX0dAUmmZQ583Ohg7Icu"
+}
