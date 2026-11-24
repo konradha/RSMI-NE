@@ -1,0 +1,42 @@
+{
+  "stage": "one-final-all-ten",
+  "max_test_passes": 1,
+  "pins": {
+    "examples/glass_autoresearch/full_hero_forecast.py": "a2e286c765725465f0769d48bbe020eea18497f23132a515b3c2ea5582405edf",
+    "examples/glass_autoresearch/full_hero_rule.py": "bd13a40f2660e474c282ef8d4770b305258aea0f22f6fbb420d648603ef58cde",
+    "examples/glass_autoresearch/full_hero_stream.py": "373cd1229fd3be436a20b7ced0dd393d1a035a828f2479fa9eaf68c005dd74d3",
+    "examples/glass_autoresearch/full_hero_train.py": "27119a110e0e574e2d11386ed0c018034843ae0fbe7e059789c76b6e34aa7414",
+    "examples/glass_autoresearch/full_hero_transport.py": "02da971de5eb07cf991047481036a1eb0844bf1cdb7d57ab607a274a4ada5bea",
+    "examples/glass_autoresearch/full_hero_v3_exam.py": "1b8512c1e4ed07b28b8837177e01dc84a3dea097482bf0e078938e9c02b8a3f5",
+    "examples/glass_autoresearch/full_hero_v3_physics.py": "85d71e484afd537c3900a23054537eed6f6319523a47f5abf3ce6e4202ad681e",
+    "examples/glass_autoresearch/full_hero_v3_score.py": "d6486a5ba90daa10159129d2a573b54652158dcd47399b34fe29c5846f7b4077",
+    "examples/glass_autoresearch/full_hero_v3_selection.py": "eee78c39df1e8bd374f062e83429044bc7056eb2d7613e98bd46c7a8a394887d",
+    "examples/glass_autoresearch/full_hero_v3_stream.py": "6aaa9308dabca4cc1e9dabcca1f965ba6e05b9aed676487fe6497cf4f01d0c79",
+    "examples/glass_autoresearch/full_hero_v3_sweep.py": "0996b62c8d0a3f6390ca9a646c6ba85d9c2ac08f5c4e871896a90cc3abe5c25e",
+    "examples/glass_autoresearch/full_hero_v3_transport.py": "38d56a71e59694c92b5a6d2c8e4be52ef947d50bef5ebcc72b1a146a293646fd",
+    "examples/glass_autoresearch/hero_bank.py": "d2aa3ab2e35cbee3eb4038d70b3bebf56031abe05b8ed2d1e13100fd05a85cf0",
+    "examples/glass_autoresearch/hero_forecast.py": "9462717da9f53739ef25883a995aaff344e6614c68cba246eaa33b0df20de89e",
+    "examples/glass_autoresearch/hero_rule.py": "29e1facb26a2b68be07df334f58f1abcc5902487f8791d488c2ff50a092affcd",
+    "examples/glass_autoresearch/hero_train.py": "fe262fca23ab5a1f0b62e344066b05da16519a7b62427dbf5183453eab273333",
+    "results/l20-autoresearch/hero-full-v3/design.json": "a4736d10f80fd860318d3b9a933aa01faac079cec30d8ca7f7cb700eefef775f",
+    "results/l20-autoresearch/hero-full-v3/split.json": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+    "results/l20-autoresearch/hero-full-v3/training-release-1.json": "0e9c63cd55c1913683ebbeb33053a1dbf63220f60b6ace02c11b74153c607c6a",
+    "results/l20-autoresearch/hero-full-v3/stream-summary.json": "03bcc3ebb8109a4825116b79a6228818b197def94ec27244c19c349c5d9a88c2",
+    "results/l20-autoresearch/hero-full-v3/nomination.json": "11d9411956ff50a92eb756089c5e77ecceddb92c2a8ca75f58184f30ad783e2d",
+    "results/l20-autoresearch/hero-full-v3/refit-release.json": "46fddca5e71296508827e0fc71d7cac7852f8c604131a05a48ea1886450e8488",
+    "results/l20-autoresearch/hero-full-v3/refit.json": "0e6d5b50ecb2d9df8ec6cc03c8f09d073c18d2ac7f1a6a4747254ece683ba7ef",
+    "results/l20-autoresearch/hero-full-v3/physical-rule.json": "0f85869f8a2ecefadb1276ad22f973d88c3f4031ca5c0d6365ebbdbe31f829bc",
+    "results/l20-autoresearch/hero-full-v3/physical-development.json": "4bbadd13afd260111a3a0ac2e79878145a83c6a904c7951965ea7e23884d50fb",
+    "results/l20-autoresearch/hero-full-v3/test-freeze.json": "7fd72f00155252871f2a9c478681042bbf3b1c45e18b5e8bf49a31218d7365e6",
+    "results/l20-autoresearch/hero-full-v3/assessment-design.json": "39c79e42bdab2a3193428ebcf9c9b225ff8f423447264b3ef4f96f4c6683215f",
+    "results/l20-autoresearch/hero-full-v3/retrieval-assessment-design.json": "1371674b9d2bae38383c681934cf16b29550622b8b98cdab43c997d284bcfcfc",
+    "results/l20-autoresearch/hero-full-v3/retrieval-assessment-control.json": "26a40a05e472e86fafa65ac21b5e8d13ff1a36996ab6d818a11d474ff8678234"
+  },
+  "primary_seed": 6101,
+  "independent_v3_test_parents": 81920,
+  "allowed": {
+    "retrieval": true,
+    "same_f_physical": false
+  },
+  "scope": "One all-ten, fixed seen-temperatures assessment only; not a virgin archive. Never use for tuning or the post-run diagnostic."
+}
