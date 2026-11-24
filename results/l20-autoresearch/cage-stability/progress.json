@@ -1,0 +1,108 @@
+{
+  "completed": 8,
+  "reason": "in progress",
+  "source": "bba82ea08f61c53757f3207305c47a08532950297c374e81d03d0992e0af69dd",
+  "methods": {
+    "pairs": {
+      "training_only": {
+        "mean": 0.0013621368848804934,
+        "sd": 0.000759314013803768,
+        "percentiles": null
+      },
+      "joint": {
+        "mean": 0.0017267384426890944,
+        "sd": 0.001397900812990247,
+        "percentiles": null
+      },
+      "log_loss": {
+        "mean": 0.6107696626010334,
+        "sd": 0.00029471946531130986,
+        "percentiles": null
+      }
+    },
+    "coordination": {
+      "training_only": {
+        "mean": -0.0003146113255022715,
+        "sd": 0.0006063914546454495,
+        "percentiles": null
+      },
+      "joint": {
+        "mean": 4.6781936461748395e-05,
+        "sd": 0.001309798532857342,
+        "percentiles": null
+      },
+      "log_loss": {
+        "mean": 0.6106374016504412,
+        "sd": 0.0002957695696285037,
+        "percentiles": null
+      }
+    },
+    "full_class": {
+      "training_only": {
+        "mean": -0.0003549033622559893,
+        "sd": 0.0006731840972523546,
+        "percentiles": null
+      },
+      "joint": {
+        "mean": 9.109424329657603e-06,
+        "sd": 0.0014145947206340135,
+        "percentiles": null
+      },
+      "log_loss": {
+        "mean": 0.6107063377896258,
+        "sd": 0.0002916677656994073,
+        "percentiles": null
+      }
+    },
+    "full_threshold": {
+      "training_only": {
+        "mean": -0.00036355921266234363,
+        "sd": 0.0007351147263554557,
+        "percentiles": null
+      },
+      "joint": {
+        "mean": 3.3127496451212587e-06,
+        "sd": 0.0012327329044655203,
+        "percentiles": null
+      },
+      "log_loss": {
+        "mean": 0.6106503796241542,
+        "sd": 0.00029485893853094426,
+        "percentiles": null
+      }
+    },
+    "full_blend": {
+      "training_only": {
+        "mean": -0.0003592312874591665,
+        "sd": 0.0006859331216442344,
+        "percentiles": null
+      },
+      "joint": {
+        "mean": 6.211086987389241e-06,
+        "sd": 0.0013171266220815068,
+        "percentiles": null
+      },
+      "log_loss": {
+        "mean": 0.6106286315190559,
+        "sd": 0.0002928151670975987,
+        "percentiles": null
+      }
+    }
+  },
+  "best_full_counts": {
+    "full_class": 0,
+    "full_threshold": 2,
+    "full_blend": 6
+  },
+  "simplest_counts": {
+    "marginal": 0,
+    "composition": 0,
+    "additive": 0,
+    "pairs": 0,
+    "species_nonlinear": 0,
+    "coordination": 8,
+    "full": 0
+  },
+  "units": "signed residual outer-A probability; joint resamples fitting and validation parents; training_only fixes all validation outcomes and strata. Percentiles describe the bootstrap distribution conditional on the selected motif and are not new test intervals.",
+  "elapsed_fit_seconds": 776.2704236507416
+}
