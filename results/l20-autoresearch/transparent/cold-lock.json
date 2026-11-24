@@ -1,0 +1,39 @@
+{
+  "selected_depth": null,
+  "reason": "no depth meets all three fixed cold criteria",
+  "code_sha256": "f6646a943075b330b3c89f221fe3525816e3acca7b04ee7c506f1e9b2942d960",
+  "artifacts": {
+    "design.json": "f66ecd1079063342579b340414f018d1911f9147d845b611b2b64a85b4d96f7d",
+    "rules.json": "8b803c9bd313ef8856cf7b8f7c42ecaade52a906154a54638b5bde3ba886192d",
+    "cold.json": "08aba40a9522bffcf97d4ef1689afb91b9eb8bc86e5766b32843157179534e09",
+    "packets-09.npz": "53f40d418becfc898716fa513adb8d2b5aebb87769af4ba838f50b3667368667",
+    "cold.png": "751efc88be3e27e104e2209c4f26e6f0bf283289290629360769aef0aed2cfa0"
+  },
+  "prediction": "Public git freeze of code, design, calibrated readable rules, cold results, packet evidence and lock before archive access. Never train or select at warm. Designated beta=2.711111111111 validation: predeclare positive teacher-minus-exact-corners, at least 0.005 extra nats/origin from the selected hard tree versus exact corners, and at least half the hard teacher-minus-exact-corners gain. Assess paired linear contrasts, not ratios. Support if all respective lower 95% bounds clear 0, 0.005, 0. If reference calibration fails or teacher-minus-corners is not demonstrably positive, call unresolved. Otherwise an upper bound below a predicted margin excludes it; else unresolved. No switching comparator or selecting another tree. Beta=0 validation is specificity only.",
+  "primary_comparator": "exact_corners",
+  "source_pins": {
+    "9": [
+      3.05,
+      "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab"
+    ],
+    "8": [
+      2.711111111111,
+      "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "8d7293a4c00393dd04b831c0cb93f0e49e650dd404f97c5d3fa416e4faaf044f"
+    ],
+    "0": [
+      0.0,
+      "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "335c5cb074e2bb432744a96ed7591d4fd2373573de2573fc628934ce33df1074"
+    ]
+  },
+  "reference_pins": {
+    "pair_code": "8e6b6d362e34b7c4c229914405c28ede57acc4bceffd3bebb25aba09abd0c497",
+    "static_code": "533d5b61ae851ef8ac6e7999b6e16587622d54acdc2ed2831f4a778d8826e899",
+    "row_reader": "6f8febee9f164c65538defeb74fcdc7b2ce514fa04e768216dd57118b8f1a015",
+    "teacher_metadata": "e432e81a11aca039eb6f40e27f8a9dc1ca193f5e94da4c6029a7a49db51840f0",
+    "teacher_weights": "91b093a4c6ed4417980f97a528e139ff510f6cd10611e9aabe8fd6045b4afbe7"
+  },
+  "interpretation": "Scores are for a specific label-oriented frozen critic. Teacher-derived relabeling is fair across controls but is not independent critic optimization or an MI difference or a unique thermodynamic mechanism. A failed prediction neither erases the earlier signal nor proves absence of other transparent rules. A successful one is a transferable local surrogate, not a rescue of the barrier model."
+}

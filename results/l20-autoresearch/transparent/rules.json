@@ -1,0 +1,1497 @@
+{
+  "train": {
+    "index": 9,
+    "beta": 3.05,
+    "fold": "training",
+    "parents": 10240,
+    "endpoint_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+    "ids_sha256": "512706592feac32d3872a26d24ba56dc1fcfe86b310f557b929cf23049cd3a6c",
+    "lineage_sha256": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+    "structure": {
+      "parents": 7680,
+      "ids_sha256": "7a25db1d451ae046b51ebb0a85be9d1f94331165c429ab890c6829e51c3eb60a",
+      "lineage_sha256": "af353a2bbd7c9d8a217d8b61fa58a51c520231322a6b052538dea338f18656f7"
+    },
+    "calibration": {
+      "parents": 2560,
+      "ids_sha256": "fc19cc1682edccb06574d64dd2063351d0ee253c6fc8bab64d28c7c47e15586f",
+      "lineage_sha256": "5bc8aacfcaad35b0f0b08011d3f92873813eae33254bcaf2987f4da87d577b90"
+    },
+    "repeats": 32,
+    "origins_sha256": "f01d26a30accdbdba0b84e0c42bf247d3641100832480d3e5f929a744d4982c5"
+  },
+  "fixed_frame": "Coordinates z,y,x about center, species vacancy=0, A=1, B=2.",
+  "features": [
+    "A(c-)",
+    "A(c+)",
+    "B(c-)",
+    "B(c+)",
+    "k-",
+    "k+",
+    "k- minus k+",
+    "diagonal vacancy moment",
+    "center occupied coordination"
+  ],
+  "tripod_sites": {
+    "c-": [
+      1,
+      3,
+      9
+    ],
+    "c+": [
+      25,
+      23,
+      17
+    ]
+  },
+  "tree_reader": "Start at root. At test feature <= le follow yes, else no. At depth d or earlier terminal node emit hard_label (or sample posterior). Root depth zero. Equal scores choose lowest label.",
+  "tree": {
+    "calibration_records": 81920,
+    "posterior": [
+      0.2585707129089295,
+      0.1629356654668131,
+      0.32644049911558426,
+      0.2520531225086732
+    ],
+    "hard_label": 2,
+    "structure_records": 245760,
+    "feature": "A(c-)",
+    "le": 0,
+    "yes": {
+      "calibration_records": 57437,
+      "posterior": [
+        0.2919909667241021,
+        0.0020933030186622726,
+        0.40763781516645303,
+        0.29827791509078266
+      ],
+      "hard_label": 2,
+      "structure_records": 172329,
+      "feature": "A(c+)",
+      "le": 0,
+      "yes": {
+        "calibration_records": 40156,
+        "posterior": [
+          0.17733303451912816,
+          0.0021865710968144696,
+          0.4914757836628336,
+          0.32900461072122367
+        ],
+        "hard_label": 2,
+        "structure_records": 120635,
+        "feature": "k+",
+        "le": 0,
+        "yes": {
+          "calibration_records": 22464,
+          "posterior": [
+            0.22232902523799566,
+            0.0014924460855089275,
+            0.4480042048880645,
+            0.32817432378843087
+          ],
+          "hard_label": 2,
+          "structure_records": 67332,
+          "feature": "B(c+)",
+          "le": 0,
+          "yes": {
+            "calibration_records": 9603,
+            "posterior": [
+              0.19111662766052528,
+              0.0024537713651920476,
+              0.4668280019725323,
+              0.33960159900175035
+            ],
+            "hard_label": 2,
+            "structure_records": 28588,
+            "feature": "k-",
+            "le": 0,
+            "yes": {
+              "calibration_records": 5319,
+              "posterior": [
+                0.19544202996581164,
+                0.00442835155574496,
+                0.45850045109952403,
+                0.34162916737891946
+              ],
+              "hard_label": 2,
+              "structure_records": 16225
+            },
+            "no": {
+              "calibration_records": 4284,
+              "posterior": [
+                0.18577418740813392,
+                0.00011787571968051695,
+                0.47706534266113054,
+                0.33704259421105504
+              ],
+              "hard_label": 2,
+              "structure_records": 12363
+            }
+          },
+          "no": {
+            "calibration_records": 12861,
+            "posterior": [
+              0.24564010513235385,
+              0.0008132488373143082,
+              0.43391739936788337,
+              0.3196292466624485
+            ],
+            "hard_label": 2,
+            "structure_records": 38744,
+            "feature": "B(c-)",
+            "le": 0,
+            "yes": {
+              "calibration_records": 4585,
+              "posterior": [
+                0.2800367660095869,
+                0.0012720995918959269,
+                0.4007880842674305,
+                0.3179030501310868
+              ],
+              "hard_label": 2,
+              "structure_records": 14120
+            },
+            "no": {
+              "calibration_records": 8276,
+              "posterior": [
+                0.22658130304801805,
+                0.0006191953329726185,
+                0.4522305587743874,
+                0.3205689428446219
+              ],
+              "hard_label": 2,
+              "structure_records": 24624
+            }
+          }
+        },
+        "no": {
+          "calibration_records": 17692,
+          "posterior": [
+            0.1202100214322565,
+            0.003095909819646885,
+            0.5466441761793155,
+            0.33004989256878114
+          ],
+          "hard_label": 2,
+          "structure_records": 53303,
+          "feature": "center occupied coordination",
+          "le": 5,
+          "yes": {
+            "calibration_records": 15351,
+            "posterior": [
+              0.1250919095997279,
+              0.0027439138221387084,
+              0.5376122836984655,
+              0.33455189287966797
+            ],
+            "hard_label": 2,
+            "structure_records": 46338,
+            "feature": "k-",
+            "le": 0,
+            "yes": {
+              "calibration_records": 8749,
+              "posterior": [
+                0.12589062614037605,
+                0.004811536709222969,
+                0.5406446751358053,
+                0.32865316201459566
+              ],
+              "hard_label": 2,
+              "structure_records": 26612
+            },
+            "no": {
+              "calibration_records": 6602,
+              "posterior": [
+                0.12407135353273596,
+                7.897504071552802e-05,
+                0.5335069411733969,
+                0.34234273025315165
+              ],
+              "hard_label": 2,
+              "structure_records": 19726
+            }
+          },
+          "no": {
+            "calibration_records": 2341,
+            "posterior": [
+              0.0883312126067967,
+              0.005613196516234069,
+              0.605574332776042,
+              0.3004812581009272
+            ],
+            "hard_label": 2,
+            "structure_records": 6965,
+            "feature": "B(c-)",
+            "le": 0,
+            "yes": {
+              "calibration_records": 997,
+              "posterior": [
+                0.11765675417666684,
+                0.011483654195113047,
+                0.5649410161489153,
+                0.3059185754793048
+              ],
+              "hard_label": 2,
+              "structure_records": 2927
+            },
+            "no": {
+              "calibration_records": 1344,
+              "posterior": [
+                0.06680604287907457,
+                0.001619278526462469,
+                0.6352040019030462,
+                0.29637067669141676
+              ],
+              "hard_label": 2,
+              "structure_records": 4038
+            }
+          }
+        }
+      },
+      "no": {
+        "calibration_records": 17281,
+        "posterior": [
+          0.5584001121012869,
+          0.0019052774392794474,
+          0.2128174474925548,
+          0.22687716296687874
+        ],
+        "hard_label": 0,
+        "structure_records": 51694,
+        "feature": "k+",
+        "le": 1,
+        "yes": {
+          "calibration_records": 9341,
+          "posterior": [
+            0.6729726909011163,
+            0.0007199759868029021,
+            0.13509871280637734,
+            0.19120862030570343
+          ],
+          "hard_label": 0,
+          "structure_records": 27578,
+          "feature": "k+",
+          "le": 0,
+          "yes": {
+            "calibration_records": 1122,
+            "posterior": [
+              0.7986121345426839,
+              0.00047184355866124167,
+              0.06025639468646437,
+              0.14065962721219055
+            ],
+            "hard_label": 0,
+            "structure_records": 3496,
+            "feature": "center occupied coordination",
+            "le": 3,
+            "yes": {
+              "calibration_records": 496,
+              "posterior": [
+                0.7959495144175119,
+                0.001032653883094191,
+                0.060838268322482666,
+                0.14217956337691112
+              ],
+              "hard_label": 0,
+              "structure_records": 1482
+            },
+            "no": {
+              "calibration_records": 626,
+              "posterior": [
+                0.7989764029395792,
+                0.0008218002008826883,
+                0.060399251597117114,
+                0.13980254526242117
+              ],
+              "hard_label": 0,
+              "structure_records": 2014
+            }
+          },
+          "no": {
+            "calibration_records": 8219,
+            "posterior": [
+              0.6556919853865895,
+              0.0008145460995942442,
+              0.14535933415915314,
+              0.19813413435466323
+            ],
+            "hard_label": 0,
+            "structure_records": 24082,
+            "feature": "B(c-)",
+            "le": 0,
+            "yes": {
+              "calibration_records": 2986,
+              "posterior": [
+                0.6801499783099596,
+                0.0014213912956894787,
+                0.1305257361491902,
+                0.1879028942451606
+              ],
+              "hard_label": 0,
+              "structure_records": 8512
+            },
+            "no": {
+              "calibration_records": 5233,
+              "posterior": [
+                0.6415770156013356,
+                0.0005633746500943871,
+                0.15386593820603955,
+                0.20399367154253048
+              ],
+              "hard_label": 0,
+              "structure_records": 15570
+            }
+          }
+        },
+        "no": {
+          "calibration_records": 7940,
+          "posterior": [
+            0.42353881721951797,
+            0.003362147360660694,
+            0.30425543581765874,
+            0.26884359960216264
+          ],
+          "hard_label": 0,
+          "structure_records": 24116,
+          "feature": "k+",
+          "le": 2,
+          "yes": {
+            "calibration_records": 7194,
+            "posterior": [
+              0.44195550289684477,
+              0.0028251124523908694,
+              0.29225272877245656,
+              0.2629666558783079
+            ],
+            "hard_label": 0,
+            "structure_records": 21691,
+            "feature": "diagonal vacancy moment",
+            "le": 3,
+            "yes": {
+              "calibration_records": 6359,
+              "posterior": [
+                0.4333899510866636,
+                0.0029740792794790676,
+                0.3035745808066033,
+                0.26006138882725394
+              ],
+              "hard_label": 0,
+              "structure_records": 19035
+            },
+            "no": {
+              "calibration_records": 835,
+              "posterior": [
+                0.5065929748905939,
+                0.002283621159663492,
+                0.20610839633905986,
+                0.28501500761068294
+              ],
+              "hard_label": 0,
+              "structure_records": 2656
+            }
+          },
+          "no": {
+            "calibration_records": 746,
+            "posterior": [
+              0.24590038437395204,
+              0.009188054987917818,
+              0.4195802607182477,
+              0.32533129991988247
+            ],
+            "hard_label": 2,
+            "structure_records": 2425,
+            "feature": "diagonal vacancy moment",
+            "le": 3,
+            "yes": {
+              "calibration_records": 448,
+              "posterior": [
+                0.2330292009110702,
+                0.006958060461678157,
+                0.4472974789711631,
+                0.3127152596560886
+              ],
+              "hard_label": 2,
+              "structure_records": 1437
+            },
+            "no": {
+              "calibration_records": 298,
+              "posterior": [
+                0.26523449033911495,
+                0.01413845974402452,
+                0.3768738982674202,
+                0.34375315164944037
+              ],
+              "hard_label": 2,
+              "structure_records": 988
+            }
+          }
+        }
+      }
+    },
+    "no": {
+      "calibration_records": 24483,
+      "posterior": [
+        0.1801699328266147,
+        0.540260500481246,
+        0.1359546703369805,
+        0.14361489635515887
+      ],
+      "hard_label": 1,
+      "structure_records": 73431,
+      "feature": "k-",
+      "le": 1,
+      "yes": {
+        "calibration_records": 13297,
+        "posterior": [
+          0.034830515678369534,
+          0.8918392300929951,
+          0.028514971154613395,
+          0.04481528307402196
+        ],
+        "hard_label": 1,
+        "structure_records": 39658,
+        "feature": "A(c+)",
+        "le": 0,
+        "yes": {
+          "calibration_records": 9284,
+          "posterior": [
+            0.010749782505795544,
+            0.897255901997593,
+            0.03821050824342159,
+            0.053783807253189854
+          ],
+          "hard_label": 1,
+          "structure_records": 27680,
+          "feature": "k-",
+          "le": 0,
+          "yes": {
+            "calibration_records": 1232,
+            "posterior": [
+              0.0004133646166621502,
+              0.9941640436601372,
+              0.000667132267950151,
+              0.004755459455250452
+            ],
+            "hard_label": 1,
+            "structure_records": 3543,
+            "feature": "diagonal vacancy moment",
+            "le": 3,
+            "yes": {
+              "calibration_records": 1069,
+              "posterior": [
+                0.00047532750995817936,
+                0.9935298121652558,
+                0.0007672085488047967,
+                0.005227651775981183
+              ],
+              "hard_label": 1,
+              "structure_records": 2999
+            },
+            "no": {
+              "calibration_records": 163,
+              "posterior": [
+                0.0030364616593689907,
+                0.9892606124098203,
+                0.003039762805336662,
+                0.004663163125474008
+              ],
+              "hard_label": 1,
+              "structure_records": 544
+            }
+          },
+          "no": {
+            "calibration_records": 8052,
+            "posterior": [
+              0.012392896500106327,
+              0.882247315131989,
+              0.04401533875462659,
+              0.061344449613278146
+            ],
+            "hard_label": 1,
+            "structure_records": 24137,
+            "feature": "k+",
+            "le": 0,
+            "yes": {
+              "calibration_records": 4478,
+              "posterior": [
+                0.01822054242234903,
+                0.8752545134694468,
+                0.044237460704638264,
+                0.06228748340356597
+              ],
+              "hard_label": 1,
+              "structure_records": 13315
+            },
+            "no": {
+              "calibration_records": 3574,
+              "posterior": [
+                0.005224932427218303,
+                0.8906542661437129,
+                0.043852269119961707,
+                0.06026853230910694
+              ],
+              "hard_label": 1,
+              "structure_records": 10822
+            }
+          }
+        },
+        "no": {
+          "calibration_records": 4013,
+          "posterior": [
+            0.09063226591726505,
+            0.8789916849457268,
+            0.006201200955614136,
+            0.024174848181394044
+          ],
+          "hard_label": 1,
+          "structure_records": 11978,
+          "feature": "k- minus k+",
+          "le": -1,
+          "yes": {
+            "calibration_records": 2100,
+            "posterior": [
+              0.02950881958689582,
+              0.9400046883045051,
+              0.007738104821846481,
+              0.02274838728675257
+            ],
+            "hard_label": 1,
+            "structure_records": 6328,
+            "feature": "k-",
+            "le": 0,
+            "yes": {
+              "calibration_records": 490,
+              "posterior": [
+                0.0015260291612468546,
+                0.9961562431715096,
+                0.0010288528898867325,
+                0.0012888747773567406
+              ],
+              "hard_label": 1,
+              "structure_records": 1472
+            },
+            "no": {
+              "calibration_records": 1610,
+              "posterior": [
+                0.03832303500268087,
+                0.9220105354687884,
+                0.010086414834799646,
+                0.029580014693731012
+              ],
+              "hard_label": 1,
+              "structure_records": 4856
+            }
+          },
+          "no": {
+            "calibration_records": 1913,
+            "posterior": [
+              0.15789086625909357,
+              0.8113638434678972,
+              0.004768838381863944,
+              0.025976451891145273
+            ],
+            "hard_label": 1,
+            "structure_records": 5650,
+            "feature": "k- minus k+",
+            "le": 0,
+            "yes": {
+              "calibration_records": 1666,
+              "posterior": [
+                0.1292276839184535,
+                0.8386117461370453,
+                0.0053455327867253715,
+                0.02681503715777596
+              ],
+              "hard_label": 1,
+              "structure_records": 4920
+            },
+            "no": {
+              "calibration_records": 247,
+              "posterior": [
+                0.35063948638627973,
+                0.624326777849124,
+                0.0028754088875965157,
+                0.022158326876999566
+              ],
+              "hard_label": 1,
+              "structure_records": 730
+            }
+          }
+        }
+      },
+      "no": {
+        "calibration_records": 11186,
+        "posterior": [
+          0.3529450998617291,
+          0.1222924949299751,
+          0.26368694152804467,
+          0.2610754636802511
+        ],
+        "hard_label": 0,
+        "structure_records": 33773,
+        "feature": "A(c+)",
+        "le": 0,
+        "yes": {
+          "calibration_records": 7924,
+          "posterior": [
+            0.2394489890822629,
+            0.1309418036673821,
+            0.33262310714492155,
+            0.2969861001054334
+          ],
+          "hard_label": 2,
+          "structure_records": 23916,
+          "feature": "k- minus k+",
+          "le": 1,
+          "yes": {
+            "calibration_records": 3007,
+            "posterior": [
+              0.14924763400646643,
+              0.17671642868217627,
+              0.3766143496630063,
+              0.2974215876483511
+            ],
+            "hard_label": 2,
+            "structure_records": 9106,
+            "feature": "center occupied coordination",
+            "le": 4,
+            "yes": {
+              "calibration_records": 530,
+              "posterior": [
+                0.15662587939092606,
+                0.32409005765097715,
+                0.23401453543288753,
+                0.2852695275252093
+              ],
+              "hard_label": 1,
+              "structure_records": 1558
+            },
+            "no": {
+              "calibration_records": 2477,
+              "posterior": [
+                0.1477455275875291,
+                0.14514877903765566,
+                0.4071144999135497,
+                0.2999911934612655
+              ],
+              "hard_label": 2,
+              "structure_records": 7548
+            }
+          },
+          "no": {
+            "calibration_records": 4917,
+            "posterior": [
+              0.2946303225738072,
+              0.10298942914474542,
+              0.30567964405258424,
+              0.2967006042288631
+            ],
+            "hard_label": 2,
+            "structure_records": 14810,
+            "feature": "k-",
+            "le": 2,
+            "yes": {
+              "calibration_records": 4177,
+              "posterior": [
+                0.29818407729649093,
+                0.1207752401652102,
+                0.2924917012346548,
+                0.28854898130364415
+              ],
+              "hard_label": 0,
+              "structure_records": 12478
+            },
+            "no": {
+              "calibration_records": 740,
+              "posterior": [
+                0.2744950104023217,
+                0.00321465406009347,
+                0.3798050534164956,
+                0.3424852821210891
+              ],
+              "hard_label": 2,
+              "structure_records": 2332
+            }
+          }
+        },
+        "no": {
+          "calibration_records": 3262,
+          "posterior": [
+            0.6284856279984709,
+            0.10136755435321419,
+            0.09628025569396892,
+            0.17386656195434624
+          ],
+          "hard_label": 0,
+          "structure_records": 9857,
+          "feature": "k+",
+          "le": 1,
+          "yes": {
+            "calibration_records": 1858,
+            "posterior": [
+              0.7460077339499355,
+              0.05881488986659084,
+              0.05135527828996566,
+              0.14382209789350806
+            ],
+            "hard_label": 0,
+            "structure_records": 5482,
+            "feature": "center occupied coordination",
+            "le": 3,
+            "yes": {
+              "calibration_records": 296,
+              "posterior": [
+                0.6438306851288036,
+                0.15490330500089516,
+                0.042268051152560465,
+                0.1589979587177408
+              ],
+              "hard_label": 0,
+              "structure_records": 777
+            },
+            "no": {
+              "calibration_records": 1562,
+              "posterior": [
+                0.7648419699351,
+                0.04075096564040426,
+                0.053340753437259004,
+                0.1410663109872367
+              ],
+              "hard_label": 0,
+              "structure_records": 4705
+            }
+          },
+          "no": {
+            "calibration_records": 1404,
+            "posterior": [
+              0.4724770303272609,
+              0.15787197884568416,
+              0.1559302538874668,
+              0.21372073693958818
+            ],
+            "hard_label": 0,
+            "structure_records": 4375,
+            "feature": "k-",
+            "le": 2,
+            "yes": {
+              "calibration_records": 1281,
+              "posterior": [
+                0.46930011630299834,
+                0.17296900064305892,
+                0.14688215565636142,
+                0.2108487273975814
+              ],
+              "hard_label": 0,
+              "structure_records": 3938
+            },
+            "no": {
+              "calibration_records": 123,
+              "posterior": [
+                0.5015252433870557,
+                0.0043901954558986335,
+                0.25030505006933296,
+                0.24377951108771276
+              ],
+              "hard_label": 0,
+              "structure_records": 437
+            }
+          }
+        }
+      }
+    }
+  },
+  "lookup_index": {
+    "area": "number of internal vacancy/particle bonds, 0..54",
+    "corner_A_bits": "2*A(c-)+A(c+)",
+    "exact_corners": "3*species(c-)+species(c+)"
+  },
+  "lookups": {
+    "area": [
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 1,
+        "posterior": [
+          0.18156484759267066,
+          0.1668102517794953,
+          0.46114251472970214,
+          0.1904823858981319
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 1,
+        "posterior": [
+          0.49999835355470434,
+          0.16666679086571778,
+          0.16666705371997403,
+          0.16666780185960384
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 1,
+        "posterior": [
+          0.41806665357570005,
+          0.16673050381182217,
+          0.17915340105756095,
+          0.23604944155491683
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 27,
+        "posterior": [
+          0.25718767793984104,
+          0.017428693116856984,
+          0.538281323882322,
+          0.18710230506097994
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 16,
+        "posterior": [
+          0.2756558867147364,
+          0.028014332371950945,
+          0.3678131129045934,
+          0.3285166680087192
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 57,
+        "posterior": [
+          0.21783088405598564,
+          0.16307610316099,
+          0.30253188343177356,
+          0.3165611293512509
+        ],
+        "hard_label": 3
+      },
+      {
+        "calibration_records": 261,
+        "posterior": [
+          0.29190606014888065,
+          0.10244312380437469,
+          0.3725243847957413,
+          0.23312643125100319
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 355,
+        "posterior": [
+          0.27116434101234527,
+          0.13040926624185226,
+          0.28740703571958687,
+          0.3110193570262157
+        ],
+        "hard_label": 3
+      },
+      {
+        "calibration_records": 558,
+        "posterior": [
+          0.25291679332495176,
+          0.16873782778470772,
+          0.3252667608181596,
+          0.25307861807218096
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 1199,
+        "posterior": [
+          0.2490992660219122,
+          0.1236842629973951,
+          0.3745282569532204,
+          0.25268821402747227
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 1703,
+        "posterior": [
+          0.2423986990187605,
+          0.16322428117293009,
+          0.3375598556032066,
+          0.25681716420510287
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 2459,
+        "posterior": [
+          0.24568738330163825,
+          0.16176473155312254,
+          0.3417146004155591,
+          0.25083328472968003
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 3180,
+        "posterior": [
+          0.24890919944360715,
+          0.15749270128537,
+          0.3403135178823189,
+          0.25328458138870397
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 4242,
+        "posterior": [
+          0.24486635567787932,
+          0.17851883066955873,
+          0.33055485201192014,
+          0.24605996164064184
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 5340,
+        "posterior": [
+          0.2511535361340077,
+          0.15671578603020128,
+          0.3307400522532112,
+          0.26139062558257986
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6002,
+        "posterior": [
+          0.2516636837060671,
+          0.16410114540074675,
+          0.3293080295299718,
+          0.2549271413632144
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6727,
+        "posterior": [
+          0.24955377362071574,
+          0.17885181186563878,
+          0.3234244942672262,
+          0.2481699202464192
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 7387,
+        "posterior": [
+          0.2681393449391217,
+          0.15769965630417532,
+          0.32566577749900993,
+          0.24849522125769302
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 7745,
+        "posterior": [
+          0.26309638980613603,
+          0.164851253606212,
+          0.3187106461115772,
+          0.2533417104760748
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 7486,
+        "posterior": [
+          0.2586685411632469,
+          0.16801806045899734,
+          0.3267668785178066,
+          0.24654651985994927
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6702,
+        "posterior": [
+          0.2608396947887441,
+          0.16483545266726365,
+          0.32344283034045374,
+          0.25088202220353856
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 5794,
+        "posterior": [
+          0.259316860878046,
+          0.17371737377221855,
+          0.3159561198003631,
+          0.2510096455493723
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 4971,
+        "posterior": [
+          0.2718021104329598,
+          0.16154081368192297,
+          0.31525760661178925,
+          0.25139946927332796
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 3615,
+        "posterior": [
+          0.2645888583898957,
+          0.15438997888214256,
+          0.32672961565837133,
+          0.2542915470695905
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 2532,
+        "posterior": [
+          0.2715255279961365,
+          0.14766997215373137,
+          0.32658075279850274,
+          0.2542237470516294
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 1734,
+        "posterior": [
+          0.2746082794004885,
+          0.15553705698024647,
+          0.3251188119520389,
+          0.24473585166722608
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 959,
+        "posterior": [
+          0.26069517438463347,
+          0.13671145623251088,
+          0.32594399396474777,
+          0.2766493754181078
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 482,
+        "posterior": [
+          0.2691242789093214,
+          0.12546156383219614,
+          0.33681641454579064,
+          0.26859774271269177
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 238,
+        "posterior": [
+          0.2828433439289976,
+          0.15953832507099192,
+          0.2783652848930953,
+          0.2792530461069152
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 96,
+        "posterior": [
+          0.2985960247172447,
+          0.16309538940156865,
+          0.3585279165576488,
+          0.17978066932353787
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 42,
+        "posterior": [
+          0.24242383914741536,
+          0.17016646251495865,
+          0.40777539974469107,
+          0.17963429859293492
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6,
+        "posterior": [
+          0.43678064653829457,
+          0.18730536805654463,
+          0.06304863508517512,
+          0.3128653503199856
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 1,
+        "posterior": [
+          0.2860971043889771,
+          0.16722752830648188,
+          0.1667550126791483,
+          0.3799203546253927
+        ],
+        "hard_label": 3
+      },
+      {
+        "calibration_records": 1,
+        "posterior": [
+          0.21356402595242877,
+          0.16953707409031135,
+          0.34619892630018606,
+          0.2706999736570739
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 0,
+        "posterior": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "hard_label": 0
+      }
+    ],
+    "corner_A_bits": [
+      {
+        "calibration_records": 40156,
+        "posterior": [
+          0.17733303451912844,
+          0.002186571096814472,
+          0.4914757836628334,
+          0.3290046107212236
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 17281,
+        "posterior": [
+          0.5584001121012867,
+          0.0019052774392794498,
+          0.21281744749255513,
+          0.2268771629668788
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 17208,
+        "posterior": [
+          0.11604852805431916,
+          0.54440807912942,
+          0.1737764977791435,
+          0.16576689503711717
+        ],
+        "hard_label": 1
+      },
+      {
+        "calibration_records": 7275,
+        "posterior": [
+          0.33183532189704923,
+          0.5303717620538662,
+          0.04653793821930811,
+          0.09125497782977643
+        ],
+        "hard_label": 1
+      }
+    ],
+    "exact_corners": [
+      {
+        "calibration_records": 5177,
+        "posterior": [
+          0.1940882712869055,
+          0.006023583584007695,
+          0.4579178248477118,
+          0.34197032028137486
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6227,
+        "posterior": [
+          0.5883619746139183,
+          0.002772878825759584,
+          0.19587965782727226,
+          0.21298548873304998
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 9175,
+        "posterior": [
+          0.21084202590612713,
+          0.0022860016765018244,
+          0.47583417069533174,
+          0.3110378017220394
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 6020,
+        "posterior": [
+          0.099282844325804,
+          0.5692859855529414,
+          0.1618753184771659,
+          0.16955585164408873
+        ],
+        "hard_label": 1
+      },
+      {
+        "calibration_records": 7275,
+        "posterior": [
+          0.33183532189704923,
+          0.5303717620538662,
+          0.04653793821930811,
+          0.09125497782977643
+        ],
+        "hard_label": 1
+      },
+      {
+        "calibration_records": 11188,
+        "posterior": [
+          0.1250950741094586,
+          0.5309671882768102,
+          0.18019484887484968,
+          0.16374288873888151
+        ],
+        "hard_label": 1
+      },
+      {
+        "calibration_records": 9306,
+        "posterior": [
+          0.15247576566526713,
+          0.0022168445900884017,
+          0.49861433446585557,
+          0.34669305527878885
+        ],
+        "hard_label": 2
+      },
+      {
+        "calibration_records": 11054,
+        "posterior": [
+          0.5414636756129199,
+          0.0014613465789987598,
+          0.222367000398675,
+          0.2347079774094064
+        ],
+        "hard_label": 0
+      },
+      {
+        "calibration_records": 16498,
+        "posterior": [
+          0.1674857663437236,
+          0.0009999488420908865,
+          0.5065936785313044,
+          0.32492060628288116
+        ],
+        "hard_label": 2
+      }
+    ]
+  }
+}
