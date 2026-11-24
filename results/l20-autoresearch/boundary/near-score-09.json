@@ -1,0 +1,2161 @@
+{
+  "schema": "l20.near-cage-score.v1",
+  "index": 9,
+  "beta": 3.05,
+  "endpoint_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+  "native_validation_parents": 1024,
+  "split": "native_validation_first_1024",
+  "origins_per_parent": 8000,
+  "lineage_sha256": "811b389498388fdf7e938e9b9c6a8415977e50e4219a868453fb90092ac54470",
+  "parent_table_sha256": "820b2ad76211ff370796636d93991586a3bc0c3da228fe74ccfde73507927041",
+  "near_run_sha256": "4ca594d484f2f50f67fd5b6c6476038cebd9c6aae98bb794e24ac3a88528cceb",
+  "near_design_sha256": "19be077ebf35224d60d8f2121ff7f39ae7317df4b97f01727c3848f660c7da5c",
+  "frozen_cold_prevalence": 0.38358730359457494,
+  "signature": [
+    3,
+    3,
+    5
+  ],
+  "scores": {
+    "all": {
+      "matches": 12727,
+      "tripod": 4906,
+      "T": 7821,
+      "contributing_parents": 1024,
+      "actual_tripod_prevalence": {
+        "estimate": 0.38547968885047534,
+        "se": 0.004297626781070954,
+        "lo": 0.37704651761936886,
+        "hi": 0.39391286008158183
+      },
+      "models": {
+        "exact": {
+          "log_score": {
+            "estimate": -0.001986221270036127,
+            "se": 0.0005516691224604808,
+            "lo": -0.0030687536558437565,
+            "hi": -0.0009036888842284976
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.0018868772734991395,
+            "se": 0.00027899821583868083,
+            "lo": -0.0024343514603466275,
+            "hi": -0.0013394030866516514
+          },
+          "accuracy": {
+            "estimate": 0.9992142688771902,
+            "se": 0.00024745393065489545,
+            "lo": 0.9987286935875409,
+            "hi": 0.9996998441668395
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.9988935733881981,
+            "se": 0.00019896212711799192,
+            "lo": 0.9985031528673,
+            "hi": 0.9992839939090962
+          },
+          "forecast": {
+            "estimate": 0.3858486975678194,
+            "se": 0.004293090020176369,
+            "lo": 0.37742442875737614,
+            "hi": 0.3942729663782627
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.00036900871734409275,
+            "se": 0.0002164784802695885,
+            "lo": -0.0007938013261402011,
+            "hi": 5.578389145201562e-05
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": -9.934399653698775e-05,
+            "se": 0.00047826042092420835,
+            "lo": -0.0010378275429630112,
+            "hi": 0.0008391395498890356
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.00032069548899211494,
+            "se": 0.0002163685624467882,
+            "lo": -0.00010388142964096945,
+            "hi": 0.0007452724076251994
+          },
+          "rounded_endpoints_repaired_for_logs": 3,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 7803,
+              "parents": 1023,
+              "mean_forecast": 5.056436459736239e-05,
+              "mean_oracle": 5.056436459736239e-05,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -5.056436459736239e-05,
+                "se": 3.816903508394122e-06,
+                "lo": -5.805421946346538e-05,
+                "hi": -4.30745097312594e-05
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 22,
+              "parents": 22,
+              "mean_forecast": 0.49974449909395846,
+              "mean_oracle": 0.49974449909395846,
+              "observed": {
+                "estimate": 0.3181818181818182,
+                "se": 0.09935112513017001,
+                "lo": 0.12322653404310926,
+                "hi": 0.5131371023205271
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.18156268091214023,
+                "se": 0.09936065942951253,
+                "lo": -0.3765366740693424,
+                "hi": 0.013411312245061924
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 4,
+              "parents": 4,
+              "mean_forecast": 0.500280357407197,
+              "mean_oracle": 0.500280357407197,
+              "observed": {
+                "estimate": 0.5,
+                "se": 0.25012215979228897,
+                "lo": 0.009188882684475264,
+                "hi": 0.9908111173155247
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.0002803574071969517,
+                "se": 0.2499819125919833,
+                "lo": -0.49081626965836606,
+                "hi": 0.49025555484397215
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 1,
+              "parents": 1,
+              "mean_forecast": 0.6666644284089042,
+              "mean_oracle": 0.6666644284089042,
+              "observed": {
+                "estimate": 1.0,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.33333557159109584,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 4897,
+              "parents": 1010,
+              "mean_forecast": 0.9999264152278089,
+              "mean_oracle": 0.9999264152278089,
+              "observed": {
+                "estimate": 0.999795793342863,
+                "se": 0.00020426061242081363,
+                "lo": 0.9993949756804492,
+                "hi": 1.0001966110052767
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.00013062188494593926,
+                "se": 0.0002039504339836797,
+                "lo": -0.0005308308886729333,
+                "hi": 0.0002695871187810549
+              }
+            }
+          ]
+        },
+        "feasible": {
+          "log_score": {
+            "estimate": -0.5428413977336598,
+            "se": 0.0030943525115146794,
+            "lo": -0.5489134011691245,
+            "hi": -0.5367693942981951
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.5431354624754563,
+            "se": 0.0030927527959332987,
+            "lo": -0.5492043268120401,
+            "hi": -0.5370665981388725
+          },
+          "accuracy": {
+            "estimate": 0.6651999685707551,
+            "se": 0.00439971074872316,
+            "lo": 0.6565664794379281,
+            "hi": 0.6738334577035822
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.6649110456891626,
+            "se": 0.004394056262041969,
+            "lo": 0.6562886522742366,
+            "hi": 0.6735334391040886
+          },
+          "forecast": {
+            "estimate": 0.4248439450686642,
+            "se": 0.0020414258748920515,
+            "lo": 0.4208380844307877,
+            "hi": 0.4288498057065407
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.03936425621818879,
+            "se": 0.0038295540330045724,
+            "lo": -0.04687893502681586,
+            "hi": -0.031849577409561715
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": 0.00029406474179663624,
+            "se": 0.0001302781669566063,
+            "lo": 3.842176822368179e-05,
+            "hi": 0.0005497077153695907
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.00028892288159241484,
+            "se": 0.0002165615799137631,
+            "lo": -0.00013603279244045512,
+            "hi": 0.0007138785556252848
+          },
+          "rounded_endpoints_repaired_for_logs": 0,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 1445,
+              "parents": 775,
+              "mean_forecast": 0.0,
+              "mean_oracle": 0.0,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 5129,
+              "parents": 1015,
+              "mean_forecast": 0.3333333333333333,
+              "mean_oracle": 0.2993800108135773,
+              "observed": {
+                "estimate": 0.29849873269643207,
+                "se": 0.00648416318492812,
+                "lo": 0.2857749525232014,
+                "hi": 0.31122251286966274
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.034834600636901254,
+                "se": 0.00648416318492812,
+                "lo": -0.04755838081013193,
+                "hi": -0.022110820463670577
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 210,
+              "parents": 193,
+              "mean_forecast": 0.4404232804232804,
+              "mean_oracle": 0.38412701079521167,
+              "observed": {
+                "estimate": 0.38571428571428573,
+                "se": 0.033793504958518246,
+                "lo": 0.31940177689670673,
+                "hi": 0.45202679453186473
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.054708994708994686,
+                "se": 0.03380209034496601,
+                "lo": -0.12103835050693923,
+                "hi": 0.011620361088949864
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 3481,
+              "parents": 985,
+              "mean_forecast": 0.5,
+              "mean_oracle": 0.4413947285330668,
+              "observed": {
+                "estimate": 0.44096523987359953,
+                "se": 0.008655919423339244,
+                "lo": 0.4239798536643555,
+                "hi": 0.4579506260828436
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.05903476012640046,
+                "se": 0.008655919423339244,
+                "lo": -0.07602014633564452,
+                "hi": -0.04204937391715639
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 1793,
+              "parents": 833,
+              "mean_forecast": 0.6666666666666666,
+              "mean_oracle": 0.6073700926894592,
+              "observed": {
+                "estimate": 0.6079196876742889,
+                "se": 0.011142401176212171,
+                "lo": 0.586055114077867,
+                "hi": 0.6297842612707109
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.05874697899237772,
+                "se": 0.011142401176212171,
+                "lo": -0.08061155258879966,
+                "hi": -0.036882405395955775
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 669,
+              "parents": 497,
+              "mean_forecast": 1.0,
+              "mean_oracle": 1.0,
+              "observed": {
+                "estimate": 1.0,
+                "se": 0.0,
+                "lo": 1.0,
+                "hi": 1.0
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              }
+            }
+          ]
+        },
+        "linear": {
+          "log_score": {
+            "estimate": -0.027784988355986383,
+            "se": 0.0030974039424617773,
+            "lo": -0.033862979570517884,
+            "hi": -0.02170699714145488
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.02427259556208164,
+            "se": 0.0024287952806379214,
+            "lo": -0.02903858561434458,
+            "hi": -0.019506605509818697
+          },
+          "accuracy": {
+            "estimate": 0.9951284670385794,
+            "se": 0.0006068082531723728,
+            "lo": 0.993937735929496,
+            "hi": 0.9963191981476628
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.9956866598660469,
+            "se": 0.0005334292897259062,
+            "lo": 0.9946399192417191,
+            "hi": 0.9967334004903746
+          },
+          "forecast": {
+            "estimate": 0.3954217842721154,
+            "se": 0.004297648724925153,
+            "lo": 0.38698856998089937,
+            "hi": 0.4038549985633314
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.009942095421639988,
+            "se": 0.0007167515060400606,
+            "lo": -0.011348566594802921,
+            "hi": -0.008535624248477055
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": -0.003512392793904748,
+            "se": 0.001456205995275389,
+            "lo": -0.006369884877677781,
+            "hi": -0.0006549007101317146
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": -0.0005581928274675333,
+            "se": 0.00021565224794991124,
+            "lo": -0.0009813641324642511,
+            "hi": -0.00013502152247081545
+          },
+          "rounded_endpoints_repaired_for_logs": 40,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 7598,
+              "parents": 1022,
+              "mean_forecast": 0.0002783515830993281,
+              "mean_oracle": 1.5070465999940502e-05,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.0002783515830993281,
+                "se": 8.943291492476714e-06,
+                "lo": -0.0002959008753873289,
+                "hi": -0.00026080229081132725
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 12,
+              "parents": 12,
+              "mean_forecast": 0.3333333333333333,
+              "mean_oracle": 0.0007478389267636952,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.3333333333333333,
+                "se": 1.4635620830524297e-17,
+                "lo": -0.33333333333333337,
+                "hi": -0.33333333333333326
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 157,
+              "parents": 148,
+              "mean_forecast": 0.4997637712991939,
+              "mean_oracle": 0.017023232149303322,
+              "observed": {
+                "estimate": 0.025477707006369428,
+                "se": 0.012600514911287828,
+                "lo": 0.0007518977957983522,
+                "hi": 0.050203516216940504
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.4742860642928245,
+                "se": 0.012601221405272103,
+                "lo": -0.4990132598463813,
+                "hi": -0.4495588687392677
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 21,
+              "parents": 21,
+              "mean_forecast": 0.5003467207814775,
+              "mean_oracle": 0.0499899003521567,
+              "observed": {
+                "estimate": 0.047619047619047616,
+                "se": 0.046494139807112284,
+                "lo": -0.043615734322318425,
+                "hi": 0.13885382956041364
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.45272767316242984,
+                "se": 0.046456479809825445,
+                "lo": -0.543888555432684,
+                "hi": -0.3615667908921757
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 4,
+              "parents": 4,
+              "mean_forecast": 0.6661689017664683,
+              "mean_oracle": 0.12626147842987012,
+              "observed": {
+                "estimate": 0.25,
+                "se": 0.21661214442955293,
+                "lo": -0.1750548960550688,
+                "hi": 0.6750548960550689
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.4161689017664683,
+                "se": 0.21646876184599267,
+                "lo": -0.840942440239709,
+                "hi": 0.008604636706772306
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 4935,
+              "parents": 1010,
+              "mean_forecast": 0.9999560819180089,
+              "mean_oracle": 0.9941935994345074,
+              "observed": {
+                "estimate": 0.9929078014184397,
+                "se": 0.0012057648376402265,
+                "lo": 0.990541746416862,
+                "hi": 0.9952738564200174
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.007048280499569053,
+                "se": 0.0012022171522910292,
+                "lo": -0.009407373929203029,
+                "hi": -0.004689187069935078
+              }
+            }
+          ]
+        },
+        "cold_prevalence": {
+          "log_score": {
+            "estimate": -0.6666906589651305,
+            "se": 0.002038576927745737,
+            "lo": -0.6706909291549906,
+            "hi": -0.6626903887752703
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.6668656980496381,
+            "se": 0.0020364249176812207,
+            "lo": -0.6708617453810953,
+            "hi": -0.6628696507181809
+          },
+          "accuracy": {
+            "estimate": 0.6145203111495247,
+            "se": 0.004297626781070954,
+            "lo": 0.6060871399184181,
+            "hi": 0.6229534823806312
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.6141513024321805,
+            "se": 0.004293090020176369,
+            "lo": 0.6057270336217372,
+            "hi": 0.6225755712426239
+          },
+          "forecast": {
+            "estimate": 0.3835873035945748,
+            "se": 1.4754600652308987e-18,
+            "lo": 0.3835873035945748,
+            "hi": 0.3835873035945748
+          },
+          "observed_minus_forecast": {
+            "estimate": 0.0018923852559005092,
+            "se": 0.004297626781070954,
+            "lo": -0.006540785975206001,
+            "hi": 0.01032555648700702
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": 0.00017503908450771386,
+            "se": 0.00010268644945503409,
+            "lo": -2.6461058590535584e-05,
+            "hi": 0.0003765392276059633
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.0003690087173440991,
+            "se": 0.00021647848026958857,
+            "lo": -5.578389145200938e-05,
+            "hi": 0.0007938013261402075
+          },
+          "rounded_endpoints_repaired_for_logs": 0,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 12727,
+              "parents": 1024,
+              "mean_forecast": 0.3835873035945748,
+              "mean_oracle": 0.3858486975678194,
+              "observed": {
+                "estimate": 0.38547968885047534,
+                "se": 0.004297626781070954,
+                "lo": 0.37704651761936886,
+                "hi": 0.39391286008158183
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.0018923852559005092,
+                "se": 0.004297626781070954,
+                "lo": -0.006540785975206001,
+                "hi": 0.01032555648700702
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            }
+          ]
+        }
+      },
+      "paired_log_score_gains": {
+        "exact_minus_feasible": {
+          "estimate": 0.5408551764636236,
+          "se": 0.0031349002088122756,
+          "lo": 0.5347036068648421,
+          "hi": 0.5470067460624051
+        },
+        "exact_minus_linear": {
+          "estimate": 0.02579876708595026,
+          "se": 0.0028621000016547816,
+          "lo": 0.02018250941071066,
+          "hi": 0.03141502476118986
+        },
+        "exact_minus_cold_prevalence": {
+          "estimate": 0.6647044376950945,
+          "se": 0.0021299114420773174,
+          "lo": 0.6605249431011839,
+          "hi": 0.668883932289005
+        },
+        "feasible_minus_linear": {
+          "estimate": -0.5150564093776734,
+          "se": 0.004519325978657379,
+          "lo": -0.5239246177560911,
+          "hi": -0.5061882009992557
+        },
+        "feasible_minus_cold_prevalence": {
+          "estimate": 0.12384926123147076,
+          "se": 0.003154908242055098,
+          "lo": 0.1176584301567794,
+          "hi": 0.13004009230616212
+        },
+        "linear_minus_cold_prevalence": {
+          "estimate": 0.6389056706091442,
+          "se": 0.0038401912823987417,
+          "lo": 0.6313701184789983,
+          "hi": 0.6464412227392901
+        }
+      }
+    },
+    "ambivalent": {
+      "matches": 10613,
+      "tripod": 4237,
+      "T": 6376,
+      "contributing_parents": 1024,
+      "actual_tripod_prevalence": {
+        "estimate": 0.3992273626684255,
+        "se": 0.00467504671789936,
+        "lo": 0.3900535857227124,
+        "hi": 0.4084011396141386
+      },
+      "models": {
+        "exact": {
+          "log_score": {
+            "estimate": -0.0023818560354046726,
+            "se": 0.0006614318385281994,
+            "lo": -0.0036797742205254124,
+            "hi": -0.001083937850283933
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.0022627237406787474,
+            "se": 0.0003343207852552715,
+            "lo": -0.002918756609934349,
+            "hi": -0.001606690871423146
+          },
+          "accuracy": {
+            "estimate": 0.9990577593517385,
+            "se": 0.00029669578270333306,
+            "lo": 0.9984755574839297,
+            "hi": 0.9996399612195472
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.9986731846331477,
+            "se": 0.0002384641187620643,
+            "lo": 0.998205249922099,
+            "hi": 0.9991411193441964
+          },
+          "forecast": {
+            "estimate": 0.39966987411152716,
+            "se": 0.0046687083408294815,
+            "lo": 0.3905085348719902,
+            "hi": 0.4088312133510641
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.0004425114431016965,
+            "se": 0.00025959937230886045,
+            "lo": -0.0009519195582528305,
+            "hi": 6.689667204943752e-05
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": -0.0001191322947259251,
+            "se": 0.0005735255061758536,
+            "lo": -0.0012445531479957231,
+            "hi": 0.0010062885585438728
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.00038457471859065583,
+            "se": 0.00025945511439481026,
+            "lo": -0.00012455032133021723,
+            "hi": 0.000893699758511529
+          },
+          "rounded_endpoints_repaired_for_logs": 3,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 6358,
+              "parents": 1022,
+              "mean_forecast": 6.205626564221748e-05,
+              "mean_oracle": 6.205626564221748e-05,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -6.205626564221748e-05,
+                "se": 4.670138660801237e-06,
+                "lo": -7.12204115780665e-05,
+                "hi": -5.289211970636846e-05
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 22,
+              "parents": 22,
+              "mean_forecast": 0.49974449909395846,
+              "mean_oracle": 0.49974449909395846,
+              "observed": {
+                "estimate": 0.3181818181818182,
+                "se": 0.09935112513017001,
+                "lo": 0.12322653404310926,
+                "hi": 0.5131371023205271
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.18156268091214023,
+                "se": 0.09936065942951253,
+                "lo": -0.3765366740693424,
+                "hi": 0.013411312245061924
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 4,
+              "parents": 4,
+              "mean_forecast": 0.500280357407197,
+              "mean_oracle": 0.500280357407197,
+              "observed": {
+                "estimate": 0.5,
+                "se": 0.25012215979228897,
+                "lo": 0.009188882684475264,
+                "hi": 0.9908111173155247
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.0002803574071969517,
+                "se": 0.2499819125919833,
+                "lo": -0.49081626965836606,
+                "hi": 0.49025555484397215
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 1,
+              "parents": 1,
+              "mean_forecast": 0.6666644284089042,
+              "mean_oracle": 0.6666644284089042,
+              "observed": {
+                "estimate": 1.0,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.33333557159109584,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 4228,
+              "parents": 1005,
+              "mean_forecast": 0.9999147718473462,
+              "mean_oracle": 0.9999147718473462,
+              "observed": {
+                "estimate": 0.999763481551561,
+                "se": 0.00023655468799005722,
+                "lo": 0.999299293689058,
+                "hi": 1.0002276694140642
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.00015129029578530965,
+                "se": 0.00023620485265674868,
+                "lo": -0.0006147916814445494,
+                "hi": 0.0003122110898739301
+              }
+            }
+          ]
+        },
+        "feasible": {
+          "log_score": {
+            "estimate": -0.6509697982621585,
+            "se": 0.0026003398656949507,
+            "lo": -0.6560724077868072,
+            "hi": -0.6458671887375098
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.6513224376637268,
+            "se": 0.002595336633073668,
+            "lo": -0.656415229416951,
+            "hi": -0.6462296459105026
+          },
+          "accuracy": {
+            "estimate": 0.5985112597757467,
+            "se": 0.005013936698378436,
+            "lo": 0.588672483894697,
+            "hi": 0.6083500356567965
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.5981647864398354,
+            "se": 0.005006508867932422,
+            "lo": 0.588340586083655,
+            "hi": 0.6079889867960158
+          },
+          "forecast": {
+            "estimate": 0.4464325722122764,
+            "se": 0.001267097892555732,
+            "lo": 0.44394616423902894,
+            "hi": 0.44891898018552384
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.047205209543850817,
+            "se": 0.0045983881976729025,
+            "lo": -0.05622856057770007,
+            "hi": -0.03818185851000156
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": 0.00035263940156843396,
+            "se": 0.00015621442891753908,
+            "lo": 4.610207412213672e-05,
+            "hi": 0.0006591767290147312
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.00034647333591129333,
+            "se": 0.0002596974207535238,
+            "lo": -0.00016312717829283237,
+            "hi": 0.000856073850115419
+          },
+          "rounded_endpoints_repaired_for_logs": 0,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 5129,
+              "parents": 1015,
+              "mean_forecast": 0.3333333333333333,
+              "mean_oracle": 0.2993800108135773,
+              "observed": {
+                "estimate": 0.29849873269643207,
+                "se": 0.00648416318492812,
+                "lo": 0.2857749525232014,
+                "hi": 0.31122251286966274
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.034834600636901254,
+                "se": 0.00648416318492812,
+                "lo": -0.04755838081013193,
+                "hi": -0.022110820463670577
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 210,
+              "parents": 193,
+              "mean_forecast": 0.4404232804232804,
+              "mean_oracle": 0.38412701079521167,
+              "observed": {
+                "estimate": 0.38571428571428573,
+                "se": 0.033793504958518246,
+                "lo": 0.31940177689670673,
+                "hi": 0.45202679453186473
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.054708994708994686,
+                "se": 0.03380209034496601,
+                "lo": -0.12103835050693923,
+                "hi": 0.011620361088949864
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 3481,
+              "parents": 985,
+              "mean_forecast": 0.5,
+              "mean_oracle": 0.4413947285330668,
+              "observed": {
+                "estimate": 0.44096523987359953,
+                "se": 0.008655919423339244,
+                "lo": 0.4239798536643555,
+                "hi": 0.4579506260828436
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.05903476012640046,
+                "se": 0.008655919423339244,
+                "lo": -0.07602014633564452,
+                "hi": -0.04204937391715639
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 1793,
+              "parents": 833,
+              "mean_forecast": 0.6666666666666666,
+              "mean_oracle": 0.6073700926894592,
+              "observed": {
+                "estimate": 0.6079196876742889,
+                "se": 0.011142401176212171,
+                "lo": 0.586055114077867,
+                "hi": 0.6297842612707109
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.05874697899237772,
+                "se": 0.011142401176212171,
+                "lo": -0.08061155258879966,
+                "hi": -0.036882405395955775
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            }
+          ]
+        },
+        "linear": {
+          "log_score": {
+            "estimate": -0.03331947110210484,
+            "se": 0.003715080205295613,
+            "lo": -0.04060951956479264,
+            "hi": -0.02602942263941704
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.0291074459359854,
+            "se": 0.002914890524215069,
+            "lo": -0.03482729369449872,
+            "hi": -0.02338759817747208
+          },
+          "accuracy": {
+            "estimate": 0.9941581079807783,
+            "se": 0.0007272011315998216,
+            "lo": 0.9927311316576487,
+            "hi": 0.9955850843039079
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.9948274870550436,
+            "se": 0.0006394688745406255,
+            "lo": 0.9935726664783205,
+            "hi": 0.9960823076317668
+          },
+          "forecast": {
+            "estimate": 0.4111498208264593,
+            "se": 0.004661861865962038,
+            "lo": 0.4020019163261,
+            "hi": 0.4202977253268186
+          },
+          "observed_minus_forecast": {
+            "estimate": -0.011922458158033748,
+            "se": 0.0008590932517705291,
+            "lo": -0.013608244491919066,
+            "hi": -0.01023667182414843
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": -0.00421202516611945,
+            "se": 0.001745900464689508,
+            "lo": -0.007637980541315154,
+            "hi": -0.0007860697909237461
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": -0.0006693790742654578,
+            "se": 0.00025852267162958784,
+            "lo": -0.0011766743951569908,
+            "hi": -0.0001620837533739248
+          },
+          "rounded_endpoints_repaired_for_logs": 40,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 6153,
+              "parents": 1021,
+              "mean_forecast": 0.0003437210025010068,
+              "mean_oracle": 1.860968644036209e-05,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.0003437210025010068,
+                "se": 1.0892697990661888e-05,
+                "lo": -0.0003650955871272433,
+                "hi": -0.00032234641787477026
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 12,
+              "parents": 12,
+              "mean_forecast": 0.3333333333333333,
+              "mean_oracle": 0.0007478389267636952,
+              "observed": {
+                "estimate": 0.0,
+                "se": 0.0,
+                "lo": 0.0,
+                "hi": 0.0
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.3333333333333333,
+                "se": 1.4635620830524297e-17,
+                "lo": -0.33333333333333337,
+                "hi": -0.33333333333333326
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 157,
+              "parents": 148,
+              "mean_forecast": 0.4997637712991939,
+              "mean_oracle": 0.017023232149303322,
+              "observed": {
+                "estimate": 0.025477707006369428,
+                "se": 0.012600514911287828,
+                "lo": 0.0007518977957983522,
+                "hi": 0.050203516216940504
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.4742860642928245,
+                "se": 0.012601221405272103,
+                "lo": -0.4990132598463813,
+                "hi": -0.4495588687392677
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 21,
+              "parents": 21,
+              "mean_forecast": 0.5003467207814775,
+              "mean_oracle": 0.0499899003521567,
+              "observed": {
+                "estimate": 0.047619047619047616,
+                "se": 0.046494139807112284,
+                "lo": -0.043615734322318425,
+                "hi": 0.13885382956041364
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.45272767316242984,
+                "se": 0.046456479809825445,
+                "lo": -0.543888555432684,
+                "hi": -0.3615667908921757
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 4,
+              "parents": 4,
+              "mean_forecast": 0.6661689017664683,
+              "mean_oracle": 0.12626147842987012,
+              "observed": {
+                "estimate": 0.25,
+                "se": 0.21661214442955293,
+                "lo": -0.1750548960550688,
+                "hi": 0.6750548960550689
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.4161689017664683,
+                "se": 0.21646876184599267,
+                "lo": -0.840942440239709,
+                "hi": 0.008604636706772306
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 4266,
+              "parents": 1005,
+              "mean_forecast": 0.999949194623857,
+              "mean_oracle": 0.9932830316946305,
+              "observed": {
+                "estimate": 0.9917955930614158,
+                "se": 0.0013962173941774172,
+                "lo": 0.9890558157469201,
+                "hi": 0.9945353703759116
+              },
+              "observed_minus_forecast": {
+                "estimate": -0.008153601562440996,
+                "se": 0.0013921041861778372,
+                "lo": -0.010885307588028529,
+                "hi": -0.005421895536853464
+              }
+            }
+          ]
+        },
+        "cold_prevalence": {
+          "log_score": {
+            "estimate": -0.6732118605685101,
+            "se": 0.002217605869644203,
+            "lo": -0.6775634366765583,
+            "hi": -0.668860284460462
+          },
+          "oracle_expected_log_score": {
+            "estimate": -0.6734217656310306,
+            "se": 0.0022145992639261555,
+            "lo": -0.6777674419199143,
+            "hi": -0.6690760893421469
+          },
+          "accuracy": {
+            "estimate": 0.6007726373315745,
+            "se": 0.00467504671789936,
+            "lo": 0.5915988603858614,
+            "hi": 0.6099464142772876
+          },
+          "oracle_expected_accuracy": {
+            "estimate": 0.6003301258884728,
+            "se": 0.0046687083408294815,
+            "lo": 0.5911687866489358,
+            "hi": 0.6094914651280098
+          },
+          "forecast": {
+            "estimate": 0.3835873035945749,
+            "se": 1.4235798383418755e-18,
+            "lo": 0.3835873035945749,
+            "hi": 0.3835873035945749
+          },
+          "observed_minus_forecast": {
+            "estimate": 0.015640059073850635,
+            "se": 0.00467504671789936,
+            "lo": 0.006466282128137563,
+            "hi": 0.024813836019563707
+          },
+          "observed_minus_oracle_expected_log_score": {
+            "estimate": 0.0002099050625204724,
+            "se": 0.00012314082115670366,
+            "lo": -3.1732400026883255e-05,
+            "hi": 0.00045154252506782806
+          },
+          "observed_minus_oracle_expected_accuracy": {
+            "estimate": 0.00044251144310170494,
+            "se": 0.0002595993723088605,
+            "lo": -6.689667204942917e-05,
+            "hi": 0.000951919558252839
+          },
+          "rounded_endpoints_repaired_for_logs": 0,
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 10613,
+              "parents": 1024,
+              "mean_forecast": 0.3835873035945749,
+              "mean_oracle": 0.39966987411152716,
+              "observed": {
+                "estimate": 0.3992273626684255,
+                "se": 0.00467504671789936,
+                "lo": 0.3900535857227124,
+                "hi": 0.4084011396141386
+              },
+              "observed_minus_forecast": {
+                "estimate": 0.015640059073850635,
+                "se": 0.00467504671789936,
+                "lo": 0.006466282128137563,
+                "hi": 0.024813836019563707
+              }
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "parents": 0,
+              "mean_forecast": null,
+              "mean_oracle": null,
+              "observed": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              },
+              "observed_minus_forecast": {
+                "estimate": null,
+                "se": null,
+                "lo": null,
+                "hi": null
+              }
+            }
+          ]
+        }
+      },
+      "paired_log_score_gains": {
+        "exact_minus_feasible": {
+          "estimate": 0.6485879422267538,
+          "se": 0.0026824119144841794,
+          "lo": 0.643324283900991,
+          "hi": 0.6538516005525166
+        },
+        "exact_minus_linear": {
+          "estimate": 0.030937615066700175,
+          "se": 0.003433220095266002,
+          "lo": 0.024200656644675675,
+          "hi": 0.037674573488724675
+        },
+        "exact_minus_cold_prevalence": {
+          "estimate": 0.6708300045331055,
+          "se": 0.0023382512357068316,
+          "lo": 0.6662416877581555,
+          "hi": 0.6754183213080555
+        },
+        "feasible_minus_linear": {
+          "estimate": -0.6176503271600536,
+          "se": 0.0047565941104259,
+          "lo": -0.6269841233814413,
+          "hi": -0.608316530938666
+        },
+        "feasible_minus_cold_prevalence": {
+          "estimate": 0.02224206230635174,
+          "se": 0.00279747656135921,
+          "lo": 0.016752614278696273,
+          "hi": 0.027731510334007205
+        },
+        "linear_minus_cold_prevalence": {
+          "estimate": 0.6398923894664053,
+          "se": 0.004517764819186247,
+          "lo": 0.6310272445287678,
+          "hi": 0.6487575344040427
+        }
+      }
+    },
+    "geometrically_forced": {
+      "fraction": {
+        "estimate": 0.16610355936198634,
+        "se": 0.003353764909999773,
+        "lo": 0.15952251470741619,
+        "hi": 0.1726846040165565
+      },
+      "tripod": 669,
+      "T": 1445
+    }
+  },
+  "assessment": "descriptive only"
+}

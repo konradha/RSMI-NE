@@ -51,5 +51,39 @@ def figure(o):
     fig.savefig(dest,dpi=165);plt.close(fig)
 
 
+def examples(o,bank):
+    """Show the most separated preassigned pair using only its issued shell bits."""
+    import hashlib
+    import matplotlib;matplotlib.use('Agg');import matplotlib.pyplot as plt
+    from matplotlib.colors import ListedColormap
+    from itertools import product
+    seal=json.loads((o/'pairing-lock.json').read_bytes());receipt=json.loads((o/'issue-09.json').read_bytes());out=o/'issued-shells.png'
+    if out.exists() or digest(bank/'bank.npz')!=receipt['bank_sha256'] or digest(o/'prospective-pairs.csv')!=seal['pair_table_sha256'] or digest(o/'issue-09.csv')!=seal['issue_sha256']:raise ValueError('mismatched issue receipts or existing figure')
+    with (o/'prospective-pairs.csv').open() as f:
+        pair=max(csv.DictReader(f),key=lambda r:float(r['high_p_tripod'])-float(r['low_p_tripod']))
+    with (o/'issue-09.csv').open() as f:
+        rows={int(r['parent']):r for r in csv.DictReader(f)}
+    xyz=np.array([x for x in product(range(-4,5),repeat=3) if max(map(abs,x))==4]);fig,axes=plt.subplots(2,6,figsize=(10,4.1),layout='constrained');cmap=ListedColormap(('#dae4e5','#9a3d17'))
+    with np.load(bank/'bank.npz',allow_pickle=False) as z:
+        if 'y' in z:raise ValueError('only a center-blind issue bank is allowed')
+        ids,packed=z['parent'],z['x']
+        for a,side in zip(axes,('low','high')):
+            parent=int(pair[side+'_residual_parent']);r=rows[parent];bits=packed[np.flatnonzero(ids==parent).item()]
+            if hashlib.sha256(bits.tobytes()).hexdigest()!=r['packed_shell_sha256']:raise ValueError('shell identity mismatch')
+            vol=np.full((9,9,9),-1,dtype=int);vol[tuple((xyz+4).T)]=np.unpackbits(bits,bitorder='little',count=386)
+            for ax,(j,sign) in zip(a,product(range(3),(-1,1))):
+                im=vol.take(0 if sign==-1 else 8,axis=j)
+                if im.min()<0:raise ValueError('face is not all exterior')
+                ax.imshow(im,cmap=cmap,interpolation='nearest',vmin=0,vmax=1);ax.set(xticks=[],yticks=[])
+                if side=='low':ax.set_title('zyx'[j]+('−' if sign==-1 else '+'))
+            a[0].set_ylabel(f"Row {parent}\n{100*float(r['p_tripod']):.2f}% tripod",rotation=0,ha='right',va='center',labelpad=10)
+    fig.suptitle('Two frozen boundaries: the most separated of 512 prespecified pairs',fontsize=13)
+    fig.supxlabel('Copper: vacancy. Six faces shown separately; shared edges appear twice. No interior was inspected.',fontsize=9)
+    fig.savefig(out,dpi=170);plt.close(fig)
+
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['seal','plot']);p.add_argument('--out',type=Path,required=True);p.add_argument('--train',type=Path);a=p.parse_args();seal(a) if a.mode=='seal' else figure(a.out)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['seal','plot','examples']);p.add_argument('--out',type=Path,required=True);p.add_argument('--train',type=Path);p.add_argument('--bank',type=Path);a=p.parse_args()
+    if a.mode=='seal':seal(a)
+    elif a.mode=='examples':examples(a.out,a.bank)
+    else:figure(a.out)

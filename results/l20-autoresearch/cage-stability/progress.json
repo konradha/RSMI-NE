@@ -1,90 +1,90 @@
 {
-  "completed": 27,
+  "completed": 32,
   "reason": "in progress",
   "source": "bba82ea08f61c53757f3207305c47a08532950297c374e81d03d0992e0af69dd",
   "methods": {
     "pairs": {
       "training_only": {
-        "mean": 0.0012980301305119122,
-        "sd": 0.0007101167064253191,
+        "mean": 0.0013278266337612508,
+        "sd": 0.0007600181721792171,
         "percentiles": null
       },
       "joint": {
-        "mean": 0.0015737426025289147,
-        "sd": 0.0011957281972131185,
+        "mean": 0.001448989143600607,
+        "sd": 0.00123311953003427,
         "percentiles": null
       },
       "log_loss": {
-        "mean": 0.6107765298693595,
-        "sd": 0.0004006679291963207,
+        "mean": 0.6107689820214343,
+        "sd": 0.00037939986169683025,
         "percentiles": null
       }
     },
     "coordination": {
       "training_only": {
-        "mean": -0.00035675285698413627,
-        "sd": 0.0007127738912681429,
+        "mean": -0.00032691838997345516,
+        "sd": 0.0008025501322791048,
         "percentiles": null
       },
       "joint": {
-        "mean": -8.196091492085203e-05,
-        "sd": 0.0011681279950686565,
+        "mean": -0.000206828655233318,
+        "sd": 0.0012427653066248044,
         "percentiles": null
       },
       "log_loss": {
-        "mean": 0.6106449894021182,
-        "sd": 0.00040714848078846554,
+        "mean": 0.6106385158523658,
+        "sd": 0.0003839113829250784,
         "percentiles": null
       }
     },
     "full_class": {
       "training_only": {
-        "mean": -0.0002829272342265514,
-        "sd": 0.0007033270083696153,
+        "mean": -0.00022049884828575367,
+        "sd": 0.0007811557942101202,
         "percentiles": null
       },
       "joint": {
-        "mean": -1.7487375574138616e-05,
-        "sd": 0.0012500582801018342,
+        "mean": -0.0001122118832382064,
+        "sd": 0.0012718745963534207,
         "percentiles": null
       },
       "log_loss": {
-        "mean": 0.6107160170149996,
-        "sd": 0.00039551431511269806,
+        "mean": 0.6107094166943713,
+        "sd": 0.00037154693514553723,
         "percentiles": null
       }
     },
     "full_threshold": {
       "training_only": {
-        "mean": -0.0004067986717084223,
-        "sd": 0.0007283427910613336,
+        "mean": -0.0003664966387320254,
+        "sd": 0.0008009822877020367,
         "percentiles": null
       },
       "joint": {
-        "mean": -0.00013431186719764355,
-        "sd": 0.0011833994692025404,
+        "mean": -0.00024814770382245105,
+        "sd": 0.0012361292277138598,
         "percentiles": null
       },
       "log_loss": {
-        "mean": 0.6106571225821638,
-        "sd": 0.00040395848307964323,
+        "mean": 0.6106522528510443,
+        "sd": 0.0003790591549916262,
         "percentiles": null
       }
     },
     "full_blend": {
       "training_only": {
-        "mean": -0.00034486295296748675,
-        "sd": 0.0007046405115938479,
+        "mean": -0.0002934977435088894,
+        "sd": 0.0007780498035572988,
         "percentiles": null
       },
       "joint": {
-        "mean": -7.589962138589102e-05,
-        "sd": 0.001210408596951391,
+        "mean": -0.00018017979353032872,
+        "sd": 0.0012460338693906926,
         "percentiles": null
       },
       "log_loss": {
-        "mean": 0.6106372968918483,
-        "sd": 0.0003991899480391991,
+        "mean": 0.6106316500896485,
+        "sd": 0.0003747362941206984,
         "percentiles": null
       }
     }
@@ -92,17 +92,17 @@
   "best_full_counts": {
     "full_class": 0,
     "full_threshold": 6,
-    "full_blend": 21
+    "full_blend": 26
   },
   "simplest_counts": {
     "marginal": 0,
     "composition": 0,
-    "additive": 1,
+    "additive": 2,
     "pairs": 0,
     "species_nonlinear": 0,
-    "coordination": 26,
+    "coordination": 30,
     "full": 0
   },
   "units": "signed residual outer-A probability; joint resamples fitting and validation parents; training_only fixes all validation outcomes and strata. Percentiles describe the bootstrap distribution conditional on the selected motif and are not new test intervals.",
-  "elapsed_fit_seconds": 2636.4872732162476
+  "elapsed_fit_seconds": 3120.920255422592
 }

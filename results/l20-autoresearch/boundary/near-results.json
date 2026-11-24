@@ -1,0 +1,25 @@
+{
+  "schema": "l20.near-cage-results.v1",
+  "near_design_sha256": "19be077ebf35224d60d8f2121ff7f39ae7317df4b97f01727c3848f660c7da5c",
+  "near_run_sha256": "4ca594d484f2f50f67fd5b6c6476038cebd9c6aae98bb794e24ac3a88528cceb",
+  "primary_index": 7,
+  "cold_prevalence": 0.38358730359457494,
+  "margin_nat_per_matched_center": 0.01,
+  "primary_exact_minus_cold_prevalence": {
+    "estimate": 0.655510993258748,
+    "se": 0.0015601058593810897,
+    "lo": 0.6524514329020348,
+    "hi": 0.6585705536154611
+  },
+  "assessment": "pass",
+  "interpretation": "Positive control: given the actual nearby colored exterior of a matched vacant center, is its single archived arrangement more predictable than from cold training prevalence alone? This is a different question from prediction by the distant R=4 shell. Its result cannot rescue that experiment or demonstrate independent-cavity recurrence, formation dynamics, equilibration, or point-to-set order.",
+  "artifacts_sha256": {
+    "near-parents-07.npz": "c38b88e84c934bbc407a886b2699df1f3c9fbf407c5dc0317c77748c1eb82d71",
+    "near-score-07.json": "4c45164a8e75e0a83a76a46f775730329e2db666fb748eb5290b0f7add344e68",
+    "near-parents-09.npz": "820b2ad76211ff370796636d93991586a3bc0c3da228fe74ccfde73507927041",
+    "near-score-09.json": "c217c8b982f7fb2560bf868b03d16c26fee805c76346929639a9b63cec5de566",
+    "near-parents-00.npz": "9885844077db12d408cc0353b89d22d8230a5693cfc9d8b36a2660eff75c3e77",
+    "near-score-00.json": "375780be7530d57d4528c569ad6cd935259190ac451148fe698f4da27a57d034",
+    "near-cage.png": "3f8038f4b4cf6329bc6632c83a15a481533cccfe8461ca13a77ced258cab6ce4"
+  }
+}
