@@ -1,0 +1,223 @@
+{
+  "source": "synthetic-fixture",
+  "training": false,
+  "native_species_access": false,
+  "fixture": "1632 synthetic fixed-composition or poison rows; 1408 fit, 176 dev, 8 simulated assessment, 40 forbidden",
+  "poison_rows_never_returned": 40,
+  "geometry": {
+    "shells": {
+      "4": {
+        "sites": 386,
+        "offsets_i1_sha256": "8b13d2f380fba24066dd4fbadb31ac703b6e90e1a93f18eca124c33b0c361246",
+        "min_toroidal_L1": 3
+      },
+      "5": {
+        "sites": 386,
+        "offsets_i1_sha256": "d71ed120091169b0de0ac7402aef9d801260d36df55451245d1ac2ee479108ce",
+        "min_toroidal_L1": 4
+      }
+    },
+    "center_i1_sha256": "7839f74f2df80ea3ef11d3004fb5b1b11a852f93a83e9623280dc9b5aa84a593",
+    "interior_i1_sha256": "3d10c4c9383209f3a30e346c1d33769ffa7969d90f88fe821da20c4741b758ee",
+    "center_sites": 27,
+    "interior_sites": 343,
+    "internal_NN_edges": 54,
+    "energy_term_L1_diameter": 2,
+    "proper_group_size": 24,
+    "improper_group_size": 24,
+    "other_core_shell_intersections": 0,
+    "species": "C order z,y,x; uint8 per site; 0=vacancy,1=A,2=B; no bit or base-3 packing, no rotation applied"
+  },
+  "stage_disjointness": true,
+  "fit_dev": {
+    "source": "synthetic-fixture",
+    "index": 0,
+    "stage": "fit-dev",
+    "roles": {
+      "fit": {
+        "parents": 1408,
+        "opportunities": 90112,
+        "files": {
+          "E.npy": {
+            "sha256": "b7faa9c9b8c681e56074c89b938e1506ef6ca055d85c3c31dea39bd88442cb5d",
+            "bytes": 34783360
+          },
+          "I.npy": {
+            "sha256": "fa50c0ecfadffd268af49923a2a8a9efbea2d7f0667c868091f0e0ee132f1534",
+            "bytes": 360576
+          },
+          "V.npy": {
+            "sha256": "221bf09f14f67f08e3ddb207d25eb128e7e7a68e26ec678b6e67529fcc274130",
+            "bytes": 2433152
+          },
+          "anchor.npy": {
+            "sha256": "671c9f1d220c8ef99141793cbce1f5f1abc7905a36a05122fd643f048c30ea82",
+            "bytes": 270464
+          },
+          "parent.npy": {
+            "sha256": "2569b113100d9533097ddba1e023250980200ac01c37fb72fcbd63094b7a4254",
+            "bytes": 5760
+          }
+        }
+      },
+      "dev": {
+        "parents": 176,
+        "opportunities": 11264,
+        "files": {
+          "E.npy": {
+            "sha256": "58303deb10014f9619ecf1f0f6d5058fe86579abf7ae6e5b067415e95c2f1964",
+            "bytes": 4348032
+          },
+          "I.npy": {
+            "sha256": "7df8fbda5d68857732b54b37942d3138d011cecc3ea3c0991b9cac27ad1d2505",
+            "bytes": 45184
+          },
+          "V.npy": {
+            "sha256": "1a9cc988d55d3cd86d55574c3c659dab54e11af7a4ba92248a2dcbe05d40bb37",
+            "bytes": 304256
+          },
+          "anchor.npy": {
+            "sha256": "3fe04e5b10047de7e15ab3d9bc932e467bdefdc72f1dd9004a4b51e2564e0a34",
+            "bytes": 33920
+          },
+          "parent.npy": {
+            "sha256": "9125cffa143a59d1b7784acd0473f3b17fd58f015b154d57fe3c8e97b1165367",
+            "bytes": 832
+          }
+        }
+      }
+    },
+    "parents": 1584,
+    "opportunities": 101376,
+    "seconds_project_and_fsync": 0.6190771418623626,
+    "seconds_through_output_hashes": 0.6509469859302044,
+    "parents_per_second": 2558.647207090979,
+    "native_or_fixture_selected_bytes_returned": 12672000,
+    "species_member_compressed_bytes": 3629807,
+    "species_member_uncompressed_bytes": 13056128,
+    "source_archive_bytes": 3629927,
+    "output_bytes": 42585536,
+    "logical_selected_input_MB_per_second": 20.469177656727833,
+    "output_MB_per_second_including_fsync": 68.78873910913659,
+    "proc_io_delta_bytes_through_hashes": {
+      "read_bytes": 0,
+      "write_bytes": 42618880
+    },
+    "process_peak_RSS_KiB": 2486036,
+    "positive_only_seeks": true,
+    "species_member_open_count": 1,
+    "incremental_fee_usd": 0,
+    "batch_gather": {
+      "stage": "CPU fit mmap sampling + indexed gather; no training, no device transfer",
+      "batches": 256,
+      "groups": 8,
+      "distinct_parents_per_group": 8,
+      "seconds": 0.04321517003700137,
+      "batches_per_second": 5923.845718547667,
+      "opportunities_per_second": 379126.1259870507,
+      "bytes_copied": 6832128,
+      "payload_MB_per_second": 158.09559453660015,
+      "roster_sanity_checksum": 215605,
+      "peak_RSS_before_KiB": 2486036,
+      "process_peak_RSS_KiB": 2486036
+    }
+  },
+  "separate_synthetic_eval_controls": {
+    "blind": {
+      "source": "synthetic-fixture",
+      "index": 0,
+      "stage": "blind",
+      "roles": {
+        "blind": {
+          "parents": 8,
+          "opportunities": 64,
+          "files": {
+            "E.npy": {
+              "sha256": "0008b06736da21c4523ff0f0630035d31b21a3fd6ab2719a741ff50e96f4d681",
+              "bytes": 24832
+            },
+            "I.npy": {
+              "sha256": "5f1055a002590503ed709ad28fbb33fd506d4b8dbb323989ba51ea9b3d4fff70",
+              "bytes": 384
+            },
+            "anchor.npy": {
+              "sha256": "0dae4909b20fb47fb385776a661477c743cc06d9534b6a20e0fb671c56392d08",
+              "bytes": 320
+            },
+            "parent.npy": {
+              "sha256": "679a2127a057d8ed6f763af6ae430c6d41a9650fd5da2e808a478a301d83eeaa",
+              "bytes": 160
+            }
+          }
+        }
+      },
+      "parents": 8,
+      "opportunities": 64,
+      "seconds_project_and_fsync": 0.06590879335999489,
+      "seconds_through_output_hashes": 0.06626716302707791,
+      "parents_per_second": 121.37985831881144,
+      "native_or_fixture_selected_bytes_returned": 64000,
+      "species_member_compressed_bytes": 3629807,
+      "species_member_uncompressed_bytes": 13056128,
+      "source_archive_bytes": 3629927,
+      "output_bytes": 25696,
+      "logical_selected_input_MB_per_second": 0.9710388665504915,
+      "output_MB_per_second_including_fsync": 0.38987210492002233,
+      "proc_io_delta_bytes_through_hashes": {
+        "read_bytes": 0,
+        "write_bytes": 40960
+      },
+      "process_peak_RSS_KiB": 2486036,
+      "positive_only_seeks": true,
+      "species_member_open_count": 1,
+      "incremental_fee_usd": 0
+    },
+    "hidden": {
+      "source": "synthetic-fixture",
+      "index": 0,
+      "stage": "hidden",
+      "roles": {
+        "hidden": {
+          "parents": 8,
+          "opportunities": 64,
+          "files": {
+            "V.npy": {
+              "sha256": "df02d508966f5c7b6a48f935f09e5216792879fda1a3c6a955b54c9570dfc8c3",
+              "bytes": 1856
+            },
+            "anchor.npy": {
+              "sha256": "0dae4909b20fb47fb385776a661477c743cc06d9534b6a20e0fb671c56392d08",
+              "bytes": 320
+            },
+            "parent.npy": {
+              "sha256": "679a2127a057d8ed6f763af6ae430c6d41a9650fd5da2e808a478a301d83eeaa",
+              "bytes": 160
+            }
+          }
+        }
+      },
+      "parents": 8,
+      "opportunities": 64,
+      "seconds_project_and_fsync": 0.05282384995371103,
+      "seconds_through_output_hashes": 0.053151590283960104,
+      "parents_per_second": 151.44674246595645,
+      "native_or_fixture_selected_bytes_returned": 1728,
+      "species_member_compressed_bytes": 3629807,
+      "species_member_uncompressed_bytes": 13056128,
+      "source_archive_bytes": 3629927,
+      "output_bytes": 2336,
+      "logical_selected_input_MB_per_second": 0.03271249637264659,
+      "output_MB_per_second_including_fsync": 0.04422244880005928,
+      "proc_io_delta_bytes_through_hashes": {
+        "read_bytes": 0,
+        "write_bytes": 12288
+      },
+      "process_peak_RSS_KiB": 2486036,
+      "positive_only_seeks": true,
+      "species_member_open_count": 1,
+      "incremental_fee_usd": 0
+    }
+  },
+  "process_peak_RSS_KiB": 2486036,
+  "incremental_fee_usd": 0
+}
