@@ -1,0 +1,58 @@
+{
+  "results": {
+    "fit": {
+      "variance_mean": 3390.045700378417,
+      "reference_variance_signed": 279.03716743400616,
+      "relative_variance_signed": 2.4280126714948496e-05,
+      "ci95_relative_variance": [
+        2.1224338629315644e-05,
+        2.7335914800581347e-05
+      ],
+      "threshold_percent_rms": 1.0,
+      "threshold_contrast_lower": -905.2150722503584,
+      "gate": false,
+      "blocks": 32,
+      "bath_parents_each": 1536,
+      "reference_parents": 1024,
+      "relative_rms_estimate": 0.004927486855887948,
+      "parents_total": 4096,
+      "fit_train_positions": [
+        0,
+        4096
+      ]
+    },
+    "hot": {
+      "variance_mean": 1708.8494703776037,
+      "reference_variance_signed": 4.352937529805692,
+      "relative_variance_signed": 1.4906470269099504e-06,
+      "ci95_relative_variance": [
+        -4.0796249982290675e-06,
+        7.060919052048968e-06
+      ],
+      "threshold_percent_rms": 1.0,
+      "threshold_contrast_lower": -303.94794694199976,
+      "gate": false,
+      "blocks": 8,
+      "bath_parents_each": 96,
+      "reference_parents": 64,
+      "relative_rms_estimate": 0.0012209205653563014,
+      "parents_total": 256,
+      "fit_train_positions": [
+        0,
+        256
+      ]
+    }
+  },
+  "numerical_control": {
+    "exhaustive_parents": 60,
+    "maximum_absolute_error": 1.3322676295501878e-15,
+    "tiny_null_variance": 1.488888888888889
+  },
+  "hot_exact_variance": 1708.4135516939616,
+  "hot_exact_reference_variation": 0,
+  "units": "Extensive number of matching species including vacancies; variance in match-count squared",
+  "map_sha256": "ce6de1b599bd8a7a19d3af88a54658a327264ebb5b3382fb1424f97c8c162363",
+  "design_sha256": "b18f20d5c06013585298603086cbacb560b609e07a74e93369e73651be80b061",
+  "elapsed_seconds": 1.7209692136384547,
+  "audit_predictor_sha256": null
+}

@@ -1,0 +1,926 @@
+{
+  "stage": "fit",
+  "parents": 4096,
+  "evidence_sha256": "c4de99e7d1d287c9acaa922043eacdcb02e262676662ac3f45cc9066c5555e61",
+  "lineage": {
+    "bank": {
+      "index": 9,
+      "beta": 3.05,
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": "native TRAIN order only",
+      "fit_stop": 4096,
+      "dev_stop": 4608,
+      "audit_stop": 5120,
+      "rows": 5120,
+      "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416"
+    },
+    "interval": [
+      0,
+      4096
+    ],
+    "parent_row_sha256": "6b39eb0ae948a5097885e27f0f64eb0c8822e6f67afbb0ee342d43a131b32dc5",
+    "prior_scope": "fixed historical LUT as supplied observable; independent fit/development/audit within reused TRAIN only",
+    "codec_sha256": "1ad644f41c5afcfedeae7b685b6a1687d416fe23eda3291be1286fbf68ac1001",
+    "design_sha256": "f688be8f4bc827fceee71e468fd14e606c52d034674942b9a12be77d6aa3a13f",
+    "audit_release": null,
+    "duplicate_parent_or_chain_keys": 0,
+    "prior_fold_overlaps": 0,
+    "physical_states_generated": 0,
+    "physical_attempts_executed": 0
+  },
+  "timing_controls": {
+    "analytic_seconds": 27.759262551087886,
+    "seconds_per_parent": 0.006777163708761691,
+    "owner_crosscheck_parents": 17,
+    "max_absolute_hot_density_drift_error": 1.3855583347321954e-13,
+    "max_local_detailed_balance_error": 2.220446049250313e-16,
+    "beta_zero_crossing_count": 0,
+    "far_shared_Hamiltonian_owners": 0,
+    "near_shared_Hamiltonian_owners": 4
+  },
+  "uncertainty": "Independent whole-parent paired delta-method t intervals, condition on fit coefficients/weights for separate evaluation; fit-only inference descriptive.",
+  "item": 19,
+  "edges_per_parent": 24000,
+  "exhaustive_attempts": 98304000,
+  "fit_model_sha256": "c3cdf71fb045f0100ad717791fec5f9117f4a0f829bece63f7d127b5e0ef2dee",
+  "field_order": [
+    "A_density",
+    "B_density",
+    "owner_energy",
+    "period_two_vacancy",
+    "label_0",
+    "label_1",
+    "label_2"
+  ],
+  "scores_by_n_fit": {
+    "256": {
+      "conventional": {
+        "field_mean": 0.021327518225918444,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.8964002017225859,
+          "parent_SE": 0.019472386955777264,
+          "parent95": [
+            0.8582237407848147,
+            0.9345766626603572
+          ],
+          "two_primary97_5": [
+            0.8527386838087211,
+            0.9400617196364508
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.5089735311398675e-09,
+          "parent_SE": 1.8031752276440566e-11,
+          "parent95": [
+            1.4736214971039548e-09,
+            1.5443255651757802e-09
+          ],
+          "two_primary97_5": [
+            1.4685422436544573e-09,
+            1.5494048186252777e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.6833703609616747e-09,
+          "parent_SE": 4.134402948673642e-11,
+          "parent95": [
+            1.6023135942542851e-09,
+            1.7644271276690643e-09
+          ],
+          "two_primary97_5": [
+            1.590667648748423e-09,
+            1.7760730731749265e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.3466962887693398e-05,
+          "parent_SE": 3.3075223589389137e-07,
+          "parent95": [
+            1.281850875403428e-05,
+            1.4115417021352515e-05
+          ],
+          "two_primary97_5": [
+            1.2725341189987383e-05,
+            1.4208584585399413e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9983776485042218,
+        "corr_with_A_B_waves": [
+          -0.9543779124945991,
+          0.9867284590155161
+        ]
+      },
+      "augmented": {
+        "field_mean": 0.02133932213327909,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.8965301635387861,
+          "parent_SE": 0.01947512922918742,
+          "parent95": [
+            0.8583483262548093,
+            0.934712000822763
+          ],
+          "two_primary97_5": [
+            0.8528624968245767,
+            0.9401978302529955
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.5101773887032695e-09,
+          "parent_SE": 1.803485107390576e-11,
+          "parent95": [
+            1.4748192793402459e-09,
+            1.545535498066293e-09
+          ],
+          "two_primary97_5": [
+            1.4697391530095402e-09,
+            1.5506156243969988e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.6844691345824813e-09,
+          "parent_SE": 4.1363693557642504e-11,
+          "parent95": [
+            1.6033738156094383e-09,
+            1.7655644535555242e-09
+          ],
+          "two_primary97_5": [
+            1.5917223310523264e-09,
+            1.7772159381126362e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.347575307665985e-05,
+          "parent_SE": 3.3090954846114003e-07,
+          "parent95": [
+            1.2826990524875506e-05,
+            1.4124515628444194e-05
+          ],
+          "two_primary97_5": [
+            1.2733778648418612e-05,
+            1.4217727504901088e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9983779517346708,
+        "corr_with_A_B_waves": [
+          -0.9543701194702511,
+          0.9867243883769132
+        ]
+      },
+      "relative_improvement": {
+        "estimate": -0.0006527224467578474,
+        "parent_SE": 0.00017942827378219568,
+        "parent95": [
+          -0.0010044993758387172,
+          -0.0003009455176769775
+        ],
+        "two_primary97_5": [
+          -0.0010550414232545055,
+          -0.00025040347026118937
+        ]
+      },
+      "absolute_improvement_per_attempt": {
+        "estimate": -1.0987736208065564e-12,
+        "parent_SE": 3.0249679278705316e-13,
+        "parent95": [
+          -1.691831730213619e-12,
+          -5.057155113994938e-13
+        ],
+        "two_primary97_5": [
+          -1.7770401921906086e-12,
+          -4.2050704942250425e-13
+        ]
+      },
+      "absolute_improvement_times_N_per_sweep": {
+        "estimate": -8.790188966452451e-09,
+        "parent_SE": 2.419974342296425e-09,
+        "parent95": [
+          -1.3534653841708952e-08,
+          -4.04572409119595e-09
+        ],
+        "two_primary97_5": [
+          -1.4216321537524868e-08,
+          -3.3640563953800343e-09
+        ]
+      },
+      "materiality": "resolved below practical floor"
+    },
+    "1024": {
+      "conventional": {
+        "field_mean": 0.022162635586238683,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.9627263251428753,
+          "parent_SE": 0.02091092746983539,
+          "parent95": [
+            0.921729543005291,
+            1.0037231072804595
+          ],
+          "two_primary97_5": [
+            0.9158392723951448,
+            1.0096133778906058
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.6192033667599814e-09,
+          "parent_SE": 1.929387764715369e-11,
+          "parent95": [
+            1.5813768810801574e-09,
+            1.6570298524398054e-09
+          ],
+          "two_primary97_5": [
+            1.5759421072938333e-09,
+            1.6624646262261295e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.6818937266721988e-09,
+          "parent_SE": 4.128209254051721e-11,
+          "parent95": [
+            1.600958390039782e-09,
+            1.7628290633046154e-09
+          ],
+          "two_primary97_5": [
+            1.5893298911715463e-09,
+            1.7744575621728512e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.345514981337759e-05,
+          "parent_SE": 3.3025674032413767e-07,
+          "parent95": [
+            1.2807667120318258e-05,
+            1.4102632506436924e-05
+          ],
+          "two_primary97_5": [
+            1.271463912937237e-05,
+            1.4195660497382811e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9985164953480105,
+        "corr_with_A_B_waves": [
+          -0.9543036778075299,
+          0.9867222662780796
+        ]
+      },
+      "augmented": {
+        "field_mean": 0.022164279673768633,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.9627134097909686,
+          "parent_SE": 0.020910835578493114,
+          "parent95": [
+            0.9217168078103547,
+            1.0037100117715825
+          ],
+          "two_primary97_5": [
+            0.9158265630845158,
+            1.0096002564974214
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.6192077282211318e-09,
+          "parent_SE": 1.929093234866994e-11,
+          "parent95": [
+            1.581387016926994e-09,
+            1.6570284395152696e-09
+          ],
+          "two_primary97_5": [
+            1.575953072783694e-09,
+            1.6624623836585697e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.681920820623768e-09,
+          "parent_SE": 4.128132587397023e-11,
+          "parent95": [
+            1.6009869870744376e-09,
+            1.7628546541730985e-09
+          ],
+          "two_primary97_5": [
+            1.5893587041637883e-09,
+            1.7744829370837478e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.3455366564990144e-05,
+          "parent_SE": 3.302506069917619e-07,
+          "parent95": [
+            1.28078958965955e-05,
+            1.4102837233384788e-05
+          ],
+          "two_primary97_5": [
+            1.2714869633310307e-05,
+            1.4195863496669982e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9985158776559904,
+        "corr_with_A_B_waves": [
+          -0.9543081051344641,
+          0.9867244754198369
+        ]
+      },
+      "relative_improvement": {
+        "estimate": -1.6109193547553247e-05,
+        "parent_SE": 5.803477486463384e-05,
+        "parent95": [
+          -0.00012988889198327613,
+          9.767050488816965e-05
+        ],
+        "two_primary97_5": [
+          -0.00014623635094915496,
+          0.00011401796385404847
+        ]
+      },
+      "absolute_improvement_per_attempt": {
+        "estimate": -2.7093951569287534e-14,
+        "parent_SE": 9.760004853812284e-14,
+        "parent95": [
+          -2.184430886320526e-13,
+          1.6425518549347753e-13
+        ],
+        "two_primary97_5": [
+          -2.459354463135682e-13,
+          1.9174754317499314e-13
+        ]
+      },
+      "absolute_improvement_times_N_per_sweep": {
+        "estimate": -2.1675161255430027e-10,
+        "parent_SE": 7.808003883049828e-10,
+        "parent95": [
+          -1.7475447090564208e-09,
+          1.3140414839478203e-09
+        ],
+        "two_primary97_5": [
+          -1.9674835705085456e-09,
+          1.533980345399945e-09
+        ]
+      },
+      "materiality": "resolved below practical floor"
+    },
+    "4096": {
+      "conventional": {
+        "field_mean": 0.022675348516595032,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.9999999999999964,
+          "parent_SE": 0.021712543531387223,
+          "parent95": [
+            0.9574316147338165,
+            1.0425683852661762
+          ],
+          "two_primary97_5": [
+            0.9513155418231847,
+            1.0486844581768082
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.6803203558848778e-09,
+          "parent_SE": 2.0626719956121788e-11,
+          "parent95": [
+            1.6398807749301865e-09,
+            1.720759936839569e-09
+          ],
+          "two_primary97_5": [
+            1.6340705609874276e-09,
+            1.726570150782328e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.6803203558848838e-09,
+          "parent_SE": 4.153002934199922e-11,
+          "parent95": [
+            1.5988989283773059e-09,
+            1.7617417833924617e-09
+          ],
+          "two_primary97_5": [
+            1.5872005897156389e-09,
+            1.7734401220541287e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.344256284707907e-05,
+          "parent_SE": 3.322402347359938e-07,
+          "parent95": [
+            1.2791191427018446e-05,
+            1.4093934267139694e-05
+          ],
+          "two_primary97_5": [
+            1.2697604717725112e-05,
+            1.4187520976433028e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9987388368047042,
+        "corr_with_A_B_waves": [
+          -0.953079358158253,
+          0.986118931051079
+        ]
+      },
+      "augmented": {
+        "field_mean": 0.022676781774395555,
+        "df": 4095,
+        "variance": {
+          "estimate": 0.9999999999999973,
+          "parent_SE": 0.02171291302250349,
+          "parent95": [
+            0.9574308903304252,
+            1.0425691096695695
+          ],
+          "two_primary97_5": [
+            0.9513147133401121,
+            1.0486852866598826
+          ]
+        },
+        "dirichlet_per_attempt": {
+          "estimate": 1.680267735205058e-09,
+          "parent_SE": 2.0626690019861957e-11,
+          "parent95": [
+            1.6398282129417053e-09,
+            1.7207072574684108e-09
+          ],
+          "two_primary97_5": [
+            1.6340180074315071e-09,
+            1.726517462978609e-09
+          ]
+        },
+        "rayleigh_per_attempt": {
+          "estimate": 1.6802677352050626e-09,
+          "parent_SE": 4.152880878522457e-11,
+          "parent95": [
+            1.5988487006520893e-09,
+            1.7616867697580358e-09
+          ],
+          "two_primary97_5": [
+            1.587150705801557e-09,
+            1.7733847646085682e-09
+          ]
+        },
+        "rayleigh_times_N_per_sweep": {
+          "estimate": 1.3442141881640501e-05,
+          "parent_SE": 3.3223047028179655e-07,
+          "parent95": [
+            1.2790789605216714e-05,
+            1.4093494158064288e-05
+          ],
+          "two_primary97_5": [
+            1.2697205646412456e-05,
+            1.4187078116868546e-05
+          ]
+        },
+        "variance_projection_R2_on_A_B_waves": 0.9987388297592348,
+        "corr_with_A_B_waves": [
+          -0.953080962440263,
+          0.9861197949340683
+        ]
+      },
+      "relative_improvement": {
+        "estimate": 3.131586166704725e-05,
+        "parent_SE": 2.8613865337969563e-05,
+        "parent95": [
+          -2.4782864946925668e-05,
+          8.741458828102017e-05
+        ],
+        "two_primary97_5": [
+          -3.284292877173932e-05,
+          9.547465210583382e-05
+        ]
+      },
+      "absolute_improvement_per_attempt": {
+        "estimate": 5.262067982118082e-14,
+        "parent_SE": 4.809663633935596e-14,
+        "parent95": [
+          -4.1674866103292534e-14,
+          1.4691622574565418e-13
+        ],
+        "two_primary97_5": [
+          -5.522291192217208e-14,
+          1.6046427156453373e-13
+        ]
+      },
+      "absolute_improvement_times_N_per_sweep": {
+        "estimate": 4.2096543856944655e-10,
+        "parent_SE": 3.8477309071484764e-10,
+        "parent95": [
+          -3.333989288263402e-10,
+          1.1753298059652333e-09
+        ],
+        "two_primary97_5": [
+          -4.4178329537737644e-10,
+          1.2837141725162694e-09
+        ]
+      },
+      "materiality": "resolved below practical floor"
+    }
+  },
+  "single_field_scores": {
+    "A_density": {
+      "field_mean": -0.764868865288278,
+      "df": 4095,
+      "variance": {
+        "estimate": 1179.3025624232475,
+        "parent_SE": 26.00168205214158,
+        "parent95": [
+          1128.3251346721304,
+          1230.2799901743647
+        ],
+        "two_primary97_5": [
+          1121.0008806988417,
+          1237.6042441476534
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 6.922327417184821e-06,
+        "parent_SE": 5.3667857693340505e-08,
+        "parent95": [
+          6.817109249658841e-06,
+          7.0275455847108015e-06
+        ],
+        "two_primary97_5": [
+          6.8019918807455495e-06,
+          7.042662953624093e-06
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 5.869848534001932e-09,
+        "parent_SE": 1.3664729068628972e-10,
+        "parent95": [
+          5.6019455816322604e-09,
+          6.137751486371603e-09
+        ],
+        "two_primary97_5": [
+          5.563454246350904e-09,
+          6.1762428216529595e-09
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 4.695878827201546e-05,
+        "parent_SE": 1.093178325490318e-06,
+        "parent95": [
+          4.4815564653058086e-05,
+          4.910201189097283e-05
+        ],
+        "two_primary97_5": [
+          4.450763397080724e-05,
+          4.9409942573223676e-05
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 1.0000000000000042,
+      "corr_with_A_B_waves": [
+        1.0,
+        -0.9898596971083744
+      ]
+    },
+    "B_density": {
+      "field_mean": 1.074888111769696,
+      "df": 4095,
+      "variance": {
+        "estimate": 2148.549482020715,
+        "parent_SE": 47.035937679473584,
+        "parent95": [
+          2056.33348191914,
+          2240.76548212229
+        ],
+        "two_primary97_5": [
+          2043.0842177851732,
+          2254.014746256257
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 6.355643972381748e-06,
+        "parent_SE": 5.1269358343269944e-08,
+        "parent95": [
+          6.255128167075417e-06,
+          6.456159777688079e-06
+        ],
+        "two_primary97_5": [
+          6.240686416699398e-06,
+          6.470601528064098e-06
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 2.95810919206955e-09,
+        "parent_SE": 6.872178429802175e-11,
+        "parent95": [
+          2.8233771471597204e-09,
+          3.09284123697938e-09
+        ],
+        "two_primary97_5": [
+          2.8040193302043816e-09,
+          3.112199053934719e-09
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 2.3664873536556402e-05,
+        "parent_SE": 5.497742743841741e-07,
+        "parent95": [
+          2.2587017177277764e-05,
+          2.474272989583504e-05
+        ],
+        "two_primary97_5": [
+          2.2432154641635053e-05,
+          2.489759243147775e-05
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.9999999999999934,
+      "corr_with_A_B_waves": [
+        -0.9898596971083744,
+        1.0
+      ]
+    },
+    "owner_energy": {
+      "field_mean": 0.41329590726257454,
+      "df": 4095,
+      "variance": {
+        "estimate": 246.8149492826958,
+        "parent_SE": 5.468408084612964,
+        "parent95": [
+          236.09389756427353,
+          257.53600100111805
+        ],
+        "two_primary97_5": [
+          234.5535353076713,
+          259.0763632577203
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 1.6846799893190137e-05,
+        "parent_SE": 4.218941372710228e-07,
+        "parent95": [
+          1.6019658100662063e-05,
+          1.7673941685718212e-05
+        ],
+        "two_primary97_5": [
+          1.5900817334706308e-05,
+          1.7792782451673967e-05
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 6.825680511715773e-08,
+        "parent_SE": 2.323897527229806e-09,
+        "parent95": [
+          6.370070301354017e-08,
+          7.281290722077528e-08
+        ],
+        "two_primary97_5": [
+          6.304609860513318e-08,
+          7.346751162918227e-08
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 0.0005460544409372618,
+        "parent_SE": 1.8591180217838444e-05,
+        "parent95": [
+          0.0005096056241083213,
+          0.0005825032577662022
+        ],
+        "two_primary97_5": [
+          0.0005043687888410654,
+          0.0005877400930334581
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.07203628636661608,
+      "corr_with_A_B_waves": [
+        0.025339059750897442,
+        0.012872817624657048
+      ]
+    },
+    "period_two_vacancy": {
+      "field_mean": -0.7105060022380781,
+      "df": 4095,
+      "variance": {
+        "estimate": 3569.996284158394,
+        "parent_SE": 82.51421631708756,
+        "parent95": [
+          3408.223576827026,
+          3731.7689914897614
+        ],
+        "two_primary97_5": [
+          3384.98065448449,
+          3755.0119138322975
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 0.0003727969160808712,
+        "parent_SE": 8.570916163330876e-06,
+        "parent95": [
+          0.00035599326243258367,
+          0.00038960056972915874
+        ],
+        "two_primary97_5": [
+          0.00035357897374779334,
+          0.00039201485841394907
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 1.0442501515621492e-07,
+        "parent_SE": 3.407003399367735e-09,
+        "parent95": [
+          9.77454369162074e-08,
+          1.1110459339622245e-07
+        ],
+        "two_primary97_5": [
+          9.678573907301451e-08,
+          1.1206429123941533e-07
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 0.0008354001212497194,
+        "parent_SE": 2.725602719494188e-05,
+        "parent95": [
+          0.0007819634953296592,
+          0.0008888367471697796
+        ],
+        "two_primary97_5": [
+          0.0007742859125841161,
+          0.0008965143299153227
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.17447817613166153,
+      "corr_with_A_B_waves": [
+        0.01907865186107193,
+        -0.0781577593561432
+      ]
+    },
+    "label_0": {
+      "field_mean": -0.01569593082796293,
+      "df": 4095,
+      "variance": {
+        "estimate": 65.0238563882051,
+        "parent_SE": 1.3995004207839672,
+        "parent95": [
+          62.28007498802078,
+          67.76763778838942
+        ],
+        "two_primary97_5": [
+          61.8858583178457,
+          68.1618544585645
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 7.55663351139938e-05,
+        "parent_SE": 6.285763132760613e-07,
+        "parent95": [
+          7.433398393256495e-05,
+          7.679868629542264e-05
+        ],
+        "two_primary97_5": [
+          7.415692413501818e-05,
+          7.69757460929694e-05
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 1.1621324743160116e-06,
+        "parent_SE": 2.6898651472968103e-08,
+        "parent95": [
+          1.109396499031183e-06,
+          1.2148684496008403e-06
+        ],
+        "two_primary97_5": [
+          1.101819583255814e-06,
+          1.2224453653762091e-06
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 0.009297059794528093,
+        "parent_SE": 0.00021518921178374483,
+        "parent95": [
+          0.008875171992249464,
+          0.00971894759680672
+        ],
+        "two_primary97_5": [
+          0.008814556666046513,
+          0.009779562923009672
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.0026654031891324473,
+      "corr_with_A_B_waves": [
+        0.044806246570656356,
+        -0.047995112375825634
+      ]
+    },
+    "label_1": {
+      "field_mean": -0.10817221318346996,
+      "df": 4095,
+      "variance": {
+        "estimate": 65.62030194517173,
+        "parent_SE": 1.442025164044293,
+        "parent95": [
+          62.79314893761059,
+          68.44745495273288
+        ],
+        "two_primary97_5": [
+          62.38695373392515,
+          68.85365015641833
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 8.048031666370019e-05,
+        "parent_SE": 6.557503384461164e-07,
+        "parent95": [
+          7.919468962488504e-05,
+          8.176594370251533e-05
+        ],
+        "two_primary97_5": [
+          7.900997534323904e-05,
+          8.195065798416134e-05
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 1.2264545312660183e-06,
+        "parent_SE": 2.861669734025637e-08,
+        "parent95": [
+          1.1703502523884773e-06,
+          1.2825588101435593e-06
+        ],
+        "two_primary97_5": [
+          1.162289390834349e-06,
+          1.2906196716976876e-06
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 0.009811636250128146,
+        "parent_SE": 0.00022893357872205095,
+        "parent95": [
+          0.009362802019107818,
+          0.010260470481148474
+        ],
+        "two_primary97_5": [
+          0.009298315126674792,
+          0.0103249573735815
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.0005991164388808392,
+      "corr_with_A_B_waves": [
+        0.02445432378514753,
+        -0.02435549960046107
+      ]
+    },
+    "label_2": {
+      "field_mean": 0.015189174094440872,
+      "df": 4095,
+      "variance": {
+        "estimate": 62.75902107528879,
+        "parent_SE": 1.3330266857038748,
+        "parent95": [
+          60.14556432181759,
+          65.37247782876
+        ],
+        "two_primary97_5": [
+          59.770072229433424,
+          65.74796992114416
+        ]
+      },
+      "dirichlet_per_attempt": {
+        "estimate": 7.780140530649492e-05,
+        "parent_SE": 6.289586356931516e-07,
+        "parent95": [
+          7.656830456535082e-05,
+          7.903450604763902e-05
+        ],
+        "two_primary97_5": [
+          7.63911370737527e-05,
+          7.921167353923713e-05
+        ]
+      },
+      "rayleigh_per_attempt": {
+        "estimate": 1.2396848130113526e-06,
+        "parent_SE": 2.8055782894871462e-08,
+        "parent95": [
+          1.1846802312825124e-06,
+          1.2946893947401928e-06
+        ],
+        "two_primary97_5": [
+          1.1767773702703125e-06,
+          1.3025922557523927e-06
+        ]
+      },
+      "rayleigh_times_N_per_sweep": {
+        "estimate": 0.009917478504090822,
+        "parent_SE": 0.0002244462631589717,
+        "parent95": [
+          0.009477441850260102,
+          0.010357515157921542
+        ],
+        "two_primary97_5": [
+          0.009414218962162501,
+          0.010420738046019142
+        ]
+      },
+      "variance_projection_R2_on_A_B_waves": 0.0008024569214129825,
+      "corr_with_A_B_waves": [
+        0.010026280802144773,
+        -0.013688040770685833
+      ]
+    }
+  },
+  "primary_model": "4096",
+  "relative_improvement_floor": 0.05,
+  "prediction": "below floor",
+  "interpretation": "Ideal reversible random NN exchange: population D/Var upper-bounds the spectral gap per single attempt. Reported numbers are finite-parent estimators. Multiplication by N is just a unit conversion, not a finite-lag or sweep probability. Density k != 0 is not exactly conserved, but a large density-span R2 warns against a distinct glass-mode interpretation. Fluctions in invariant zero-wavevector inventories are exactly zero.",
+  "citations": [
+    "https://arxiv.org/abs/1211.7103",
+    "https://arxiv.org/abs/1407.8083",
+    "https://doi.org/10.1073/pnas.2427246122"
+  ]
+}

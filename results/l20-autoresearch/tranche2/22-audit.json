@@ -1,0 +1,155 @@
+{
+  "split": "audit",
+  "design_sha256": "55767b959a573e28878d48062d7ddb5a517d39c0142b4f9fb773e590225f840c",
+  "policy_lock_sha256": "75322b9365f800bd9169ce9f2309701735c9f8083de53ed6186bb6c8f440c507",
+  "parents": 512,
+  "direction_opportunities": 4096000,
+  "nonempty_visible_words": 5028,
+  "nonempty_face_words": 81,
+  "utility_order": [
+    "discrete-target task",
+    "affine-target task"
+  ],
+  "matched_direction": {
+    "achieved": [
+      {
+        "mean": 0.5787677173259546,
+        "sd": 0.006725144840870063,
+        "se": 0.0002972122200900592,
+        "level": 0.95,
+        "lo": 0.5781838090796786,
+        "hi": 0.5793516255722305
+      },
+      {
+        "mean": 0.533865256293514,
+        "sd": 0.0071272877118250776,
+        "se": 0.00031498459203119146,
+        "level": 0.95,
+        "lo": 0.5332464321392408,
+        "hi": 0.5344840804477872
+      }
+    ],
+    "target": [
+      {
+        "mean": 0.5572095425469346,
+        "sd": 0.005959438534642442,
+        "se": 0.0002633724624943808,
+        "level": 0.95,
+        "lo": 0.5566921164712305,
+        "hi": 0.5577269686226386
+      },
+      {
+        "mean": 0.5066538267268883,
+        "sd": 0.006346936956999686,
+        "se": 0.0002804976351286243,
+        "level": 0.95,
+        "lo": 0.5061027562420917,
+        "hi": 0.5072048972116849
+      }
+    ],
+    "paired_target_minus_achieved": [
+      {
+        "mean": -0.02155817477901996,
+        "sd": 0.006529052984034164,
+        "se": 0.00028854610248355125,
+        "level": 0.975,
+        "lo": -0.022206834254559858,
+        "hi": -0.02090951530348006
+      },
+      {
+        "mean": -0.027211429566625582,
+        "sd": 0.005854634576417749,
+        "se": 0.00025874073814713877,
+        "level": 0.975,
+        "lo": -0.02779308577359825,
+        "hi": -0.026629773359652914
+      }
+    ],
+    "mean_paired_deficit": {
+      "mean": -0.024384802172822767,
+      "sd": 0.004722644885562309,
+      "se": 0.0002087133889823172,
+      "level": 0.95,
+      "lo": -0.024794844091348373,
+      "hi": -0.02397476025429716
+    },
+    "joint_within_margin": true,
+    "material_miss": false
+  },
+  "equal_six_directions_with_unchanged_policy_constructive_only": {
+    "achieved": [
+      {
+        "mean": 0.5058751308551503,
+        "sd": 0.0022984087662706594,
+        "se": 0.00010157627653553685,
+        "level": 0.95,
+        "lo": 0.5056755723528884,
+        "hi": 0.5060746893574123
+      },
+      {
+        "mean": 0.5220176091826452,
+        "sd": 0.0024357505343571913,
+        "se": 0.00010764598250767041,
+        "level": 0.95,
+        "lo": 0.5218061260314959,
+        "hi": 0.5222290923337944
+      }
+    ],
+    "target": [
+      {
+        "mean": 0.525171156042469,
+        "sd": 0.00259914752498832,
+        "se": 0.00011486717751396704,
+        "level": 0.95,
+        "lo": 0.5249454860072446,
+        "hi": 0.5253968260776934
+      },
+      {
+        "mean": 0.528537005410445,
+        "sd": 0.002512839076865991,
+        "se": 0.00011105284695515538,
+        "level": 0.95,
+        "lo": 0.528318829074728,
+        "hi": 0.528755181746162
+      }
+    ],
+    "paired_target_minus_achieved": [
+      {
+        "mean": 0.01929602518731858,
+        "sd": 0.0024806368918063814,
+        "se": 0.00010962969799111326,
+        "level": 0.975,
+        "lo": 0.019049574648598976,
+        "hi": 0.01954247572603818
+      },
+      {
+        "mean": 0.00651939622779986,
+        "sd": 0.0023693601375976716,
+        "se": 0.0001047119137730253,
+        "level": 0.975,
+        "lo": 0.00628400100157371,
+        "hi": 0.00675479145402601
+      }
+    ],
+    "mean_paired_deficit": {
+      "mean": 0.012907710707559219,
+      "sd": 0.0018645865116202786,
+      "se": 8.240386040472927e-05,
+      "level": 0.95,
+      "lo": 0.012745818664221578,
+      "hi": 0.01306960275089686
+    },
+    "joint_within_margin": false,
+    "material_miss": true
+  },
+  "parent_values_file": "22-audit-parents.npz",
+  "parent_values_sha256": "318242e734e56e6a3550324ee4c3a3f22604697379ea6f185b3d9264bc72752f",
+  "evidence_axes": [
+    "parent",
+    "direction: -z,+z,-y,+y,-x,+x",
+    "utility: discrete,affine",
+    "deployment: compromise,matched target"
+  ],
+  "same_size_projected_simultaneous_halfwidth": null,
+  "inference": "Parent-clustered Student t. Separate paired deficit intervals simultaneously 95% within J=0 (Bonferroni). This evaluates only the frozen solution; no held-out upper bound. Historical #09 data reuse."
+}

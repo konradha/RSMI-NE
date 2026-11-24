@@ -1,0 +1,11 @@
+{
+  "stage": "Predictions after fit and development, before scoring or opening the separate 512 audit parents; publish this alongside fitted coefficients and matching masses before release.",
+  "design_sha256": "f688be8f4bc827fceee71e468fd14e606c52d034674942b9a12be77d6aa3a13f",
+  "19_fit_model_sha256": "c3cdf71fb045f0100ad717791fec5f9117f4a0f829bece63f7d127b5e0ef2dee",
+  "20_fit_barriers_sha256": "53c17d29b483b3e269e2d21b395715458da336ece18b0c268a9624765060f01a",
+  "19_development_receipt_sha256": "c46425e488c24ffdd280bb4fac9f7d7b80d6900e00de0446ebc5262ae97fa81f",
+  "20_development_receipt_sha256": "875b112140e27ad6c7af5289796407c37d02ae7d7ba3895c6dcb6011c53c083b",
+  "audit_population": "b09 native TRAIN bank rows [4608,5120), not previously scored in this experiment. All rows once, no tuning under the audit. Same historical code, frozen models, physical proposal law, threshold, weights, estimands and CIs as the design. No native TEST/VALIDATION, no physical steps.",
+  "19": "Unchanged predata prediction: primary augmented-versus-conventional 1-Raug/Rconv lies below 0.05; development 0.000164 (95% 0.000004 to 0.000323), conventional quotient 1.53e-9 per attempt, augmented field ~99.88% density-span variance. Forecast audit upper endpoint below 0.05.",
+  "20": "Record the failed predata prediction O>=0.001; do NOT replace or rescue it. Calibration was O=9.98e-6 (95% 5.51e-6 to 1.44e-5), so predict the independent audit will also place its upper endpoint BELOW 0.001. Positive but rare flux: raw hypothetical openings were much more numerous than closings, while accepted-weighted fluxes were approximately balanced. Predict no material net-creation signal; theory is balance in the stationary reversible population, not per configuration."
+}

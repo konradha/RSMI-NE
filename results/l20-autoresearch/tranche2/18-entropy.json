@@ -1,0 +1,216 @@
+{
+  "units": "nats/site",
+  "per_beta_parents": 256,
+  "index6": "excluded, monotone bracket from 5 to 7",
+  "energy_sampling": "actual parent energies; exact hypergeometric mean at beta zero",
+  "simultaneous_approximate_confidence": 0.95,
+  "student_bonferroni_critical": 3.0207538397108067,
+  "assumptions": "Independent representative canonical parents and parent-mean t approximation. Deterministic left/right bounds for the population monotone curve; no trapezoid precision assumption.",
+  "beta_zero": {
+    "mask": 0.5617631953856044,
+    "labels": 0.5041893525430705,
+    "total": 1.0659525479286749,
+    "energy": 1.6307084381421646
+  },
+  "tiny_exact_max_abs_error": 1.4876988529977098e-14,
+  "grid": [
+    {
+      "index": 0,
+      "beta": 0.0,
+      "energy_per_site": 1.6307084381421646,
+      "energy_simultaneous_halfwidth": 0.0,
+      "label_entropy": 0.5041893525430705,
+      "label_loss": [
+        0.0,
+        0.0
+      ],
+      "mask_loss": [
+        0.0,
+        0.0
+      ],
+      "total_entropy": [
+        1.0659525479286749,
+        1.0659525479286749
+      ],
+      "integral_left_upper": 0.0,
+      "integral_right_lower": 0.0,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 1,
+      "beta": 0.338888888889,
+      "energy_per_site": 0.7435537109375,
+      "energy_simultaneous_halfwidth": 0.002318526000390435,
+      "label_entropy": 0.41063983852285457,
+      "label_loss": [
+        0.09328134884653083,
+        0.09381767919390105
+      ],
+      "mask_loss": [
+        0.0,
+        0.20815125362861442
+      ],
+      "total_entropy": [
+        0.7645199454535296,
+        1.0659525479286749
+      ],
+      "integral_left_upper": 0.5526289707039147,
+      "integral_right_lower": 0.2511963682287695,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 2,
+      "beta": 0.677777777778,
+      "energy_per_site": 0.4675185546875,
+      "energy_simultaneous_halfwidth": 0.0015264742152499167,
+      "label_entropy": 0.286987073217955,
+      "label_loss": [
+        0.21679053338542925,
+        0.21761402526480172
+      ],
+      "mask_loss": [
+        0.0,
+        0.27276717418289137
+      ],
+      "total_entropy": [
+        0.5763948403603543,
+        0.9747449386851147
+      ],
+      "integral_left_upper": 0.8053967843329493,
+      "integral_right_lower": 0.40911590661108377,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 3,
+      "beta": 1.016666666667,
+      "energy_per_site": 0.3350029296875,
+      "energy_simultaneous_halfwidth": 0.0011056377926194553,
+      "label_entropy": 0.19657107432290014,
+      "label_loss": [
+        0.30718289346304317,
+        0.30805366297729764
+      ],
+      "mask_loss": [
+        0.0,
+        0.31770579279376143
+      ],
+      "total_entropy": [
+        0.44106386167187034,
+        0.8853929360025224
+      ],
+      "integral_left_upper": 0.964350933016711,
+      "integral_right_lower": 0.5222699888643859,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 4,
+      "beta": 1.355555555556,
+      "energy_per_site": 0.2553369140625,
+      "energy_simultaneous_halfwidth": 0.0009946122615371096,
+      "label_entropy": 0.13742876838699852,
+      "label_loss": [
+        0.36622935484058905,
+        0.36729181347155493
+      ],
+      "mask_loss": [
+        0.0,
+        0.36724991693633724
+      ],
+      "total_entropy": [
+        0.3324732761517486,
+        0.8049604035821875
+      ],
+      "integral_left_upper": 1.0782543919961223,
+      "integral_right_lower": 0.608463768919185,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 5,
+      "beta": 1.694444444444,
+      "energy_per_site": 0.19921875,
+      "energy_simultaneous_halfwidth": 0.0007613065248657332,
+      "label_entropy": 0.09880592082613002,
+      "label_loss": [
+        0.4048902066183703,
+        0.4058766568155107
+      ],
+      "mask_loss": [
+        0.0,
+        0.4239569789656696
+      ],
+      "total_entropy": [
+        0.23710536234463503,
+        0.7290888522768044
+      ],
+      "integral_left_upper": 1.1651222981390403,
+      "integral_right_lower": 0.6757187914300263,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 7,
+      "beta": 2.372222222222,
+      "energy_per_site": 0.1192998046875,
+      "energy_simultaneous_halfwidth": 0.0006426177890524464,
+      "label_entropy": 0.05240258832607748,
+      "label_loss": [
+        0.45135039350635375,
+        0.4522231349276323
+      ],
+      "mask_loss": [
+        0.01938878096979546,
+        0.5617631953856044
+      ],
+      "total_entropy": [
+        0.04676942706513865,
+        0.5943406320312471
+      ],
+      "integral_left_upper": 1.3006643364503827,
+      "integral_right_lower": 0.756141995883445,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 8,
+      "beta": 2.711111111111,
+      "energy_per_site": 0.09019726562500001,
+      "energy_simultaneous_halfwidth": 0.0005503430454825561,
+      "label_entropy": 0.03774622083678838,
+      "label_loss": [
+        0.4660418696859173,
+        0.466844393726647
+      ],
+      "mask_loss": [
+        0.07365109796879066,
+        0.5617631953856044
+      ],
+      "total_entropy": [
+        0.0,
+        0.5254570562332372
+      ],
+      "integral_left_upper": 1.3413114907341166,
+      "integral_right_lower": 0.7865223418687358,
+      "ranking": "unresolved"
+    },
+    {
+      "index": 9,
+      "beta": 3.05,
+      "energy_per_site": 0.0678603515625,
+      "energy_simultaneous_halfwidth": 0.0004895030295209648,
+      "label_entropy": 0.02711292393772107,
+      "label_loss": [
+        0.47675522524553504,
+        0.4773976319651639
+      ],
+      "mask_loss": [
+        0.12348888540075836,
+        0.5617631953856044
+      ],
+      "total_entropy": [
+        0.0,
+        0.46506603056275264
+      ],
+      "integral_left_upper": 1.3720648470057901,
+      "integral_right_lower": 0.8093535738715862,
+      "ranking": "unresolved"
+    }
+  ]
+}
