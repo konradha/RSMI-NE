@@ -1,0 +1,276 @@
+{
+  "stage": "audit",
+  "parents": 512,
+  "evidence_sha256": "aecb179d11747b27b9902e101613f62cc54057d93270db742b0ef9e6441b5bb7",
+  "lineage": {
+    "bank": {
+      "index": 9,
+      "beta": 3.05,
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": "native TRAIN order only",
+      "fit_stop": 4096,
+      "dev_stop": 4608,
+      "audit_stop": 5120,
+      "rows": 5120,
+      "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416"
+    },
+    "interval": [
+      4608,
+      5120
+    ],
+    "parent_row_sha256": "b3c1bc1cff2a2a0cbe088715b2b58b0e1aa63e7200031277e8ee201e8554016e",
+    "prior_scope": "fixed historical LUT as supplied observable; independent fit/development/audit within reused TRAIN only",
+    "codec_sha256": "1ad644f41c5afcfedeae7b685b6a1687d416fe23eda3291be1286fbf68ac1001",
+    "design_sha256": "f688be8f4bc827fceee71e468fd14e606c52d034674942b9a12be77d6aa3a13f",
+    "audit_release": "2501a64c9fa3ab224ef979d23bb13cce7c589de8",
+    "duplicate_parent_or_chain_keys": 0,
+    "prior_fold_overlaps": 0,
+    "physical_states_generated": 0,
+    "physical_attempts_executed": 0
+  },
+  "timing_controls": {
+    "analytic_seconds": 3.5794339841231704,
+    "seconds_per_parent": 0.006991082000240567,
+    "owner_crosscheck_parents": 3,
+    "max_absolute_hot_density_drift_error": 8.526512829121202e-14,
+    "max_local_detailed_balance_error": 2.220446049250313e-16,
+    "beta_zero_crossing_count": 0,
+    "far_shared_Hamiltonian_owners": 0,
+    "near_shared_Hamiltonian_owners": 4
+  },
+  "uncertainty": "Independent whole-parent paired delta-method t intervals, condition on fit coefficients/weights for separate evaluation; fit-only inference descriptive.",
+  "item": 20,
+  "fit_barriers_sha256": "53c17d29b483b3e269e2d21b395715458da336ece18b0c268a9624765060f01a",
+  "anchor_opportunities": 4096000,
+  "totals": {
+    "eligible": 1981808,
+    "accepted_e": 2480.80209757703,
+    "open_count": 677335,
+    "close_count": 1136,
+    "open_flux": 21.674761324080677,
+    "close_flux": 25.165036278991643,
+    "open_magnitude_flux": 21.674745932235382,
+    "close_magnitude_flux": 25.165036165096865,
+    "far_eligible": 1875368,
+    "far_crossings": 0,
+    "changed_acceptance_count": 1853315,
+    "far_changed_acceptance_count": 0
+  },
+  "eligible_fraction": {
+    "estimate": 0.48383984375,
+    "parent_SE": 0.000316530422319814,
+    "parent95": [
+      0.483217982630919,
+      0.484461704869081
+    ],
+    "two_primary97_5": [
+      0.4831282747633903,
+      0.4845514127366097
+    ]
+  },
+  "opening_flux_per_eligible": {
+    "estimate": 1.0936862362085871e-05,
+    "parent_SE": 2.2672323459846157e-06,
+    "parent95": [
+      6.482618648139932e-06,
+      1.539110607603181e-05
+    ],
+    "two_primary97_5": [
+      5.840062468358986e-06,
+      1.6033662255812757e-05
+    ]
+  },
+  "closing_flux_per_eligible": {
+    "estimate": 1.2698019323260197e-05,
+    "parent_SE": 2.56453591389633e-06,
+    "parent95": [
+      7.659687899534626e-06,
+      1.7736350746985768e-05
+    ],
+    "two_primary97_5": [
+      6.932872933850715e-06,
+      1.8463165712669677e-05
+    ]
+  },
+  "signed_open_minus_close_per_eligible": {
+    "estimate": -1.7611569611743255e-06,
+    "parent_SE": 3.349726079467119e-06,
+    "parent95": [
+      -8.342086506984728e-06,
+      4.819772584636077e-06
+    ],
+    "two_primary97_5": [
+      -9.291432169217796e-06,
+      5.769118246869145e-06
+    ]
+  },
+  "acceptance_e_per_eligible": {
+    "estimate": 0.0012517873061250282,
+    "parent_SE": 2.5886599590427597e-05,
+    "parent95": [
+      0.001200930046742103,
+      0.0013026445655079533
+    ],
+    "two_primary97_5": [
+      0.0011935935271437464,
+      0.00130998108510631
+    ]
+  },
+  "opening_flux_per_named_x_edge_attempt": {
+    "estimate": 5.291689776386884e-06,
+    "parent_SE": 1.097158320932433e-06,
+    "parent95": [
+      3.136193643459918e-06,
+      7.4471859093138495e-06
+    ],
+    "two_primary97_5": [
+      2.8252480711802237e-06,
+      7.758131481593544e-06
+    ]
+  },
+  "opening_flux_per_any_native_attempt_counting_named_x_geometry_only": {
+    "estimate": 1.7638965921289613e-06,
+    "parent_SE": 3.657194403108111e-07,
+    "parent95": [
+      1.0453978811533058e-06,
+      2.4823953031046168e-06
+    ],
+    "two_primary97_5": [
+      9.417493570600742e-07,
+      2.5860438271978484e-06
+    ]
+  },
+  "increase_on_openings_per_eligible": {
+    "estimate": 1.0936854595518527e-05,
+    "parent_SE": 2.267232410470887e-06,
+    "parent95": [
+      6.482610754881749e-06,
+      1.5391098436155307e-05
+    ],
+    "two_primary97_5": [
+      5.8400545568247535e-06,
+      1.60336546342123e-05
+    ]
+  },
+  "decrease_on_closings_per_eligible": {
+    "estimate": 1.2698019265790058e-05,
+    "parent_SE": 2.5645359132521866e-06,
+    "parent95": [
+      7.659687843329983e-06,
+      1.7736350688250135e-05
+    ],
+    "two_primary97_5": [
+      6.932872877828629e-06,
+      1.8463165653751488e-05
+    ]
+  },
+  "acceptance_increase_given_weighted_opening": {
+    "estimate": 0.9999992898724436,
+    "parent_SE": 4.2934579828063617e-07,
+    "parent95": [
+      0.999998446372294,
+      1.0000001333725932
+    ],
+    "two_primary97_5": [
+      0.9999983246914277,
+      1.0000002550534595
+    ]
+  },
+  "acceptance_decrease_given_weighted_closing": {
+    "estimate": 0.9999999954740865,
+    "parent_SE": 1.6485423567423987e-09,
+    "parent95": [
+      0.9999999922353318,
+      0.9999999987128412
+    ],
+    "two_primary97_5": [
+      0.9999999917681185,
+      0.9999999991800544
+    ]
+  },
+  "barrier_matched_label_result": {
+    "standardized_per_initially_closed_eligible_by_label": [
+      {
+        "estimate": 4.28591194252327e-06,
+        "parent_SE": 2.739240977964314e-06,
+        "parent95": [
+          -1.0956480588985976e-06,
+          9.667471943945137e-06
+        ],
+        "two_primary97_5": [
+          -1.8719761760487544e-06,
+          1.0443800061095294e-05
+        ]
+      },
+      {
+        "estimate": 1.2135530372683131e-05,
+        "parent_SE": 5.066773021269882e-06,
+        "parent95": [
+          2.18126083345727e-06,
+          2.2089799911908993e-05
+        ],
+        "two_primary97_5": [
+          7.45287003015797e-07,
+          2.3525773742350467e-05
+        ]
+      },
+      {
+        "estimate": 8.89113637930476e-06,
+        "parent_SE": 4.225264433974844e-06,
+        "parent95": [
+          5.901091034176569e-07,
+          1.7192163655191863e-05
+        ],
+        "two_primary97_5": [
+          -6.073728300363727e-07,
+          1.8389645588645893e-05
+        ]
+      },
+      {
+        "estimate": 1.6789790669947166e-05,
+        "parent_SE": 4.929569920486626e-06,
+        "parent95": [
+          7.105072705477224e-06,
+          2.6474508634417107e-05
+        ],
+        "two_primary97_5": [
+          5.707983597393178e-06,
+          2.7871597742501154e-05
+        ]
+      }
+    ],
+    "label_3_minus_0": {
+      "estimate": 1.2503878727423896e-05,
+      "parent_SE": 5.62895411528125e-06,
+      "parent95": [
+        1.4451385288347543e-06,
+        2.3562618926013036e-05
+      ],
+      "two_primary97_5": [
+        -1.501630108963194e-07,
+        2.5157920465744112e-05
+      ]
+    },
+    "fitted_target_mass_supported": 0.9999999999999999,
+    "supported_strata": 107,
+    "fit_selected_strata": 107,
+    "split_fraction_closed_eligible_retained": 0.9998403479202791,
+    "sparse_total_closed_eligible": 1979304,
+    "arm_closed_eligible": [
+      416782,
+      476952,
+      454513,
+      630741
+    ],
+    "estimand": "Conditional mean a_e*Iopen, initially closed only, common exact positive f barrier and clipped e barrier mass fixed on fit; not an independent causal effect."
+  },
+  "practical_floor": 0.001,
+  "prediction": "above floor",
+  "materiality": "resolved below practical floor",
+  "far_control": "Same parallel orientation and all anchor translations; distance 5 vs 1. No shared owner terms: exact zero mixed barrier and zero opening or closing. Explicit 12-owner scalar substitution verified periodically.",
+  "reverse_balance": "The paired e reverse has dE = -dE_e and reversed gate crossing. exp(-beta*dE_e)*a(-dE_e)=a(dE_e). The parent-estimated difference O-C above is a stationarity diagnostic, not signed creation. Raw counts are unweighted and need not balance.",
+  "citations": [
+    "https://doi.org/10.1103/PhysRevLett.132.067101",
+    "https://doi.org/10.1073/pnas.2416800122"
+  ]
+}

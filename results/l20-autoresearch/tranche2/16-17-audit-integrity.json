@@ -1,0 +1,12 @@
+{
+  "development_parents": 128,
+  "audit_parents": 512,
+  "overlap_native_rows": 0,
+  "overlap_chain_seed_id": 0,
+  "stable_KL_mean": 3.27566784397227e-09,
+  "stable_KL_max_abs_difference": 1.1954651567569484e-16,
+  "exactly_zero_stable_KL": 0,
+  "original_points_and_intervals": "16-17-audit-b09.json",
+  "plot": "16-17-opportunities.png",
+  "audit_release": "a0690ddaf11b0a76d889eb13772e672632cda832"
+}

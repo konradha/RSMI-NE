@@ -2,6 +2,8 @@
 
 **One primary, named before scoring: #01.** The vacancy can choose between placements with exactly the same three-shell pair energy but very different neighbor degrees. A parameter-free model of that degree change predicted the occupied end on **98.65%** of eligible edges at β=2.3722 (predicted 98.62%; ties worth one half). This measures placement, not species assignment on a known mask. No RSMI encoder, new lattice configuration, trajectory or paid job was needed for that prediction. [Family registration](design.json) · [public primary lock](https://github.com/konradha/RSMI-NE/commit/c821ff5a4be1ed23551b333dc2b759853deacd25) · [figure](pair-tie.png).
 
+Continuation: [ten additional archive evaluations, #16–25](../tranche2/LEDGER.md), including the all-range pair obstruction and the separate question of its practical predictive value.
+
 Unless specified, development uses the same first 256 native **training** parents per β; the three cohorts are β=3.05, 2.7111, and 0. Patches, edges, origins, directions, FFT stars and children do not inflate the independent sample count. Parent-level 95% intervals are pointwise unless labeled family-adjusted. Secondary rows do not constitute fifteen confirmatory discoveries. β7 refers to index 7, β=2.3722, not inverse temperature 7. No index 6, native test outcome or reserved cold validation interior was opened. Previously used validation data are not an independent experimental replication. Links in the first column give numerical receipts; links in the last give method precedents, not claims that these specific tests are new to the field.
 
 | # / question | Support, scale and result | Decision and distinction | Literature |
