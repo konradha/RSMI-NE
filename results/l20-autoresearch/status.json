@@ -1,0 +1,97 @@
+{
+  "as_of_utc": "2026-11-24T11:59:46+00:00",
+  "deadline_utc": "2026-11-24T21:45:25+00:00",
+  "discovery_cutoff_utc": "2026-11-24T21:00:25+00:00",
+  "lanes": {
+    "information": {
+      "active": null,
+      "closure": null,
+      "completed_discoveries": 7,
+      "confirmation": {
+        "elapsed_seconds": 77.156,
+        "estimate": 0.04217130668471085,
+        "metric": "conditional_InfoNCE_nats_per_uniform_positive",
+        "round": 6,
+        "search_exhausted": true,
+        "sha256": "902afeb739981879515ed2c6391e60a1d93f7ba4dfb2b33c32d31598a54f322b",
+        "status": "ok"
+      },
+      "failure": null,
+      "freeze": {
+        "epoch": 1795521507.9721506,
+        "last_discovery": 6,
+        "prefix_sha256": "9a448fab0054e545740d4c9181f242f69f56d1cec6554d797965668385b61389",
+        "reason": "search budget exhausted"
+      },
+      "last_discovery": {
+        "elapsed_seconds": 44.59,
+        "estimate": 0.042087905877159146,
+        "metric": "conditional_InfoNCE_nats_per_uniform_positive",
+        "round": 6,
+        "search_exhausted": true,
+        "sha256": "d412786f344e56ef21bbcbd470dac4d8613f283f8e398f94c09615bb18cc9788",
+        "status": "ok"
+      },
+      "state": "confirmed"
+    },
+    "learn": {
+      "active": null,
+      "closure": null,
+      "completed_discoveries": 16,
+      "confirmation": {
+        "elapsed_seconds": 8.589,
+        "estimate": 0.003105140536302904,
+        "metric": "Frozen nonlinear raw b=2 InfoNCE (nats), index 9; joint decision requires all 16 adjusted contrasts",
+        "round": 15,
+        "search_exhausted": false,
+        "sha256": "b26def50cfb9f520dc3ce05296581cc3dbdb48ef1d721413e69dec2db3082f92",
+        "status": "inconclusive"
+      },
+      "failure": null,
+      "freeze": {
+        "epoch": 1795521503.6456056,
+        "last_discovery": 15,
+        "prefix_sha256": "289898c802a5ed07816d15112451b30911a601c33cff0ae805850fed05925918",
+        "reason": "search budget exhausted"
+      },
+      "last_discovery": {
+        "elapsed_seconds": 10.741,
+        "estimate": 0.002849555475539624,
+        "metric": "Raw exact expected hard-state InfoNCE lower bound, nats/anchor, 64 distinct same-temperature parents per contrastive batch.",
+        "round": 15,
+        "search_exhausted": true,
+        "sha256": "b0c9bd00a994e6ca568ef3c37968cb7b32b4c955a8f4bca956cd2f7a2e0e2f6d",
+        "status": "ok"
+      },
+      "state": "confirmed"
+    },
+    "rg": {
+      "active": {
+        "id": "00027-discover-0026",
+        "mode": "discover",
+        "round": 26,
+        "start_epoch": 1795521584.7558239,
+        "stop_epoch": 1795528784.7500548
+      },
+      "closure": null,
+      "completed_discoveries": 26,
+      "confirmation": null,
+      "failure": null,
+      "freeze": null,
+      "last_discovery": {
+        "elapsed_seconds": 4.61,
+        "estimate": 0.004283981905487559,
+        "metric": "cold paired validation InfoNCE gain over frozen best analytic code (nats)",
+        "round": 25,
+        "search_exhausted": false,
+        "sha256": "761ecf679b418783155cb01a121517c883f513e005db27a0e6e6e7290078b4b2",
+        "status": "inconclusive"
+      },
+      "state": "discover"
+    }
+  },
+  "min_discoveries": 2,
+  "phase": "discovery",
+  "release_manifest_sha256": "2a1093760b045cfbb5934720353ab017114d227206db2531ffbedc6d64d2dead",
+  "start_utc": "2026-11-24T11:45:25+00:00"
+}

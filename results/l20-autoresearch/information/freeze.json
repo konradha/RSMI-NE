@@ -1,0 +1,16 @@
+{
+  "through_round": 6,
+  "selection": "Maximum lower endpoint of the grouped validation interval for the nonlinear raw conditional bound, earliest round on ties; never differences of MI lower bounds.",
+  "validation_lower_endpoint": 0.041354350791959704,
+  "selected_round": 6,
+  "model_sha256": "c57ff34f9563329d53e33763b5a87efc7888c2543a5e1708090330275deea1c2",
+  "hypotheses": "The frozen nonlinear four-state operator retains shell information beyond all eight ordered ternary corners at beta=3.05 in a uniform cubic frame.",
+  "gate": "Only the beta-9 test estimate is primary. Require its lower endpoint >0, no positive beta-0 bound, nonpositive averaged permutation null, positive archived-shell planted signal and fair-bit calibration agreement. beta-8 transfer, affine scores and fixed axes are secondary. Nonpositive bounds do not imply absence.",
+  "indices": [
+    9,
+    8,
+    0
+  ],
+  "panels": 128,
+  "interval": "Two-sided Bonferroni 98.333333% Student intervals over means of disjoint, equal-sized parent blocks; approximate iid-block inference, not independent sites, panels, seeds or exact finite-sample coverage."
+}

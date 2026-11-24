@@ -1,0 +1,1068 @@
+{
+  "mode": "confirm",
+  "round": 15,
+  "design_id": "f10ce1bc32707adf6816de3160b52c3f813e9082fecd5a76c051d82786c72d05",
+  "status": "inconclusive",
+  "hypothesis": "A nonlinear categorical code of a 3^3 block retains shell information across two empty layers beyond a matched affine encoder and fixed codes.",
+  "metric": "Frozen nonlinear raw b=2 InfoNCE (nats), index 9; joint decision requires all 16 adjusted contrasts",
+  "estimate": 0.003105140536302904,
+  "selection_basis": "Release index 9 train and validation only. Four independent-seed brackets of four stages; fresh training and screening anchors at each stage. In each cardinality keep ceil(half) nonlinear architectures by fresh-anchor raw validation bound; tie by model name. Halve fixed codes within (cardinality, critic); keep each affine comparator and calibration. No early epoch selection. End-of-stage checkpoints compete on a common four-anchor validation bank across all rounds. Final selection maximizes its raw bound, not a gain over controls. Disjoint test parents are not independent replications of model seeds.",
+  "data": [
+    {
+      "index": 9,
+      "beta": 3.05,
+      "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+        "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+        "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+      ]
+    },
+    {
+      "index": 8,
+      "beta": 2.711111111111,
+      "sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "39f999280ec938169232129b343f21984c9fe98b562c4cba8eee919f59087a7e",
+        "ecfa5c615338bc2c2ef1195e7ca993595deda2e73dc7b41b2ca413698fff5383",
+        "2d47d1563052a2df224af072919cae77bc27331964fd00eca809026253fc9cdd"
+      ]
+    },
+    {
+      "index": 7,
+      "beta": 2.372222222222,
+      "sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "538eedc5f25ab4954a8dc120804a813bffa62c795c95bb7dbabaab365a44c31a",
+        "65357446075472f527535848b403830253cdd0387d8246fea1fb8818654d5b08",
+        "73b41e01e96825407ca23b3229bc119f8b9c9fb36425d6034e187d81246375ea"
+      ]
+    }
+  ],
+  "params": {
+    "batch": 64,
+    "hidden": 12,
+    "buffer": 2,
+    "width": 3,
+    "per_contrast_one_sided_alpha": 0.0010416666666666667
+  },
+  "counts": {
+    "parents_per_temperature": 4096,
+    "batches_per_temperature": 64,
+    "anchors_per_parent": 24,
+    "confirmatory_contrasts": 16
+  },
+  "provenance": {
+    "freeze_sha256": "091cc6e6caa1cf0af9a104e36ab81dd9ee2312800be04c6a728f6760d3c845a2",
+    "source_path": "/home/fritz/datasets/lattice-glass/l20-16384-v1",
+    "anchor_stream": "25,release_index,anchor"
+  },
+  "freeze": {
+    "round": 15,
+    "design_id": "f10ce1bc32707adf6816de3160b52c3f813e9082fecd5a76c051d82786c72d05",
+    "selected": {
+      "champion": {
+        "name": "oriented-4-faces-physical",
+        "spec": [
+          "oriented",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 15,
+        "raw": 0.002849555475539624,
+        "sha256": "dc7cc3f9be9346fa32a685f5d68d6a2d97984a8267a3de5da87e60e1dae32d1c",
+        "steps": 5024
+      },
+      "affine-4": {
+        "name": "affine-4-faces-physical",
+        "spec": [
+          "affine",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 11,
+        "raw": 0.0020839131927718095,
+        "sha256": "8bd87d2a596c34edd73b757ecba55388558bbeae0218be75d48f5769faa26340",
+        "steps": 4128
+      },
+      "fixed-4": {
+        "name": "bits-A-4-faces-physical",
+        "spec": [
+          "bits-A",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 11,
+        "raw": 0.0022844582836040184,
+        "sha256": "1095829e039ea83502acbe2469dd211182a8d4ac0bfd94d1636aecd24babc236",
+        "steps": 4128
+      },
+      "affine-4-faces": {
+        "name": "affine-4-faces-physical",
+        "spec": [
+          "affine",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 11,
+        "raw": 0.0020839131927718095,
+        "sha256": "8bd87d2a596c34edd73b757ecba55388558bbeae0218be75d48f5769faa26340",
+        "steps": 4128
+      },
+      "fixed-4-faces": {
+        "name": "bits-A-4-faces-physical",
+        "spec": [
+          "bits-A",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 11,
+        "raw": 0.0022844582836040184,
+        "sha256": "1095829e039ea83502acbe2469dd211182a8d4ac0bfd94d1636aecd24babc236",
+        "steps": 4128
+      },
+      "near": {
+        "name": "oriented-4-flat-near",
+        "spec": [
+          "oriented",
+          4,
+          "flat",
+          "near"
+        ],
+        "round": 15,
+        "raw": 0.16206049904739683,
+        "sha256": "709a12924dba3342a06b47c672e0f56c3e7c690bc13a18de377013f8e75f0237",
+        "steps": 5024
+      },
+      "planted": {
+        "name": "oriented-2-flat-planted",
+        "spec": [
+          "oriented",
+          2,
+          "flat",
+          "planted"
+        ],
+        "round": 14,
+        "raw": 0.0013960092747816307,
+        "sha256": "e68606ffc7a3f597c10ca01229ca6c8efa50eb086aca9c96ec472a1fa1fad883",
+        "steps": 2784
+      },
+      "nonlinear-2": {
+        "name": "equivariant-2-faces-physical",
+        "spec": [
+          "equivariant",
+          2,
+          "faces",
+          "physical"
+        ],
+        "round": 10,
+        "raw": 0.0012430684222909628,
+        "sha256": "37b17816fd06fbe733c3469a347d04bc7b2140eac0dd5f5585fffc6560943c9b",
+        "steps": 2208
+      },
+      "nonlinear-4": {
+        "name": "oriented-4-faces-physical",
+        "spec": [
+          "oriented",
+          4,
+          "faces",
+          "physical"
+        ],
+        "round": 15,
+        "raw": 0.002849555475539624,
+        "sha256": "dc7cc3f9be9346fa32a685f5d68d6a2d97984a8267a3de5da87e60e1dae32d1c",
+        "steps": 5024
+      }
+    },
+    "indices": [
+      9,
+      8,
+      7
+    ],
+    "gates": "Family alpha=.05/3 allocated to this lane. One-sided Bonferroni lower bounds for 16 endpoints: raw, raw-minus-shuffled, raw-minus-affine, raw-minus-fixed at each of 9,8,7; b1 and plant raw and raw-minus-shuffled at index 9. All 16 lower bounds must exceed zero for a positive primary claim. Also report unadjusted two-sided 95% intervals, without clipping negative bounds. Only a variational-bound comparison, not proof of MI differences, order or scale invariance."
+  },
+  "primary": {
+    "9": {
+      "raw": {
+        "mean": 0.003105140536302904,
+        "se": 0.0002605084187998738,
+        "ci95": [
+          0.0025845560013471438,
+          0.0036257250712586645
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0022686347580025135
+      },
+      "excess": {
+        "mean": 0.008855774259263472,
+        "se": 0.00026148374954808627,
+        "ci95": [
+          0.008333240681331192,
+          0.009378307837195753
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.008016136644339941
+      },
+      "vs_affine": {
+        "mean": 0.0019509174298401656,
+        "se": 0.00024207170124077588,
+        "ci95": [
+          0.0014671757350537547,
+          0.0024346591246265765
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0011736128890357709
+      },
+      "vs_fixed": {
+        "mean": 0.0017816882037193856,
+        "se": 0.00031114780758343975,
+        "ci95": [
+          0.0011599089251089554,
+          0.0024034674823298157
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0007825767732784609
+      },
+      "near_raw": {
+        "mean": 0.1637457265525426,
+        "se": 0.0014097620265935815,
+        "ci95": [
+          0.16092854193949443,
+          0.16656291116559077
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.15921890900588997
+      },
+      "near_excess": {
+        "mean": 0.347459002148137,
+        "se": 0.0017544239219289019,
+        "ci95": [
+          0.34395306569617823,
+          0.3509649386000958
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.3418254577312505
+      },
+      "planted_raw": {
+        "mean": 0.00332406662553488,
+        "se": 0.00047605366395460635,
+        "ci95": [
+          0.0023727492884388452,
+          0.004275383962630915
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0017954341056583539
+      },
+      "planted_excess": {
+        "mean": 0.01998909977062737,
+        "se": 0.0004781826302791717,
+        "ci95": [
+          0.019033528033811295,
+          0.020944671507443446
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.01845363103163551
+      }
+    },
+    "8": {
+      "raw": {
+        "mean": 0.0022458217497005237,
+        "se": 0.00030470678892774834,
+        "ci95": [
+          0.0016369138198048941,
+          0.002854729679596153
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0012673927576562084
+      },
+      "excess": {
+        "mean": 0.008114686814599478,
+        "se": 0.00030703641886692206,
+        "ci95": [
+          0.007501123490747327,
+          0.008728250138451629
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.007128777262370589
+      },
+      "vs_affine": {
+        "mean": 0.001732529595200687,
+        "se": 0.00026684579135661184,
+        "ci95": [
+          0.0011992808317317387,
+          0.002265778358669635
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0008756741913973058
+      },
+      "vs_fixed": {
+        "mean": 0.0015471010059395962,
+        "se": 0.00033479196242257943,
+        "ci95": [
+          0.0008780726541204753,
+          0.002216129357758717
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0004720669921246441
+      }
+    },
+    "7": {
+      "raw": {
+        "mean": 0.001218371372844926,
+        "se": 0.0003079755379298256,
+        "ci95": [
+          0.0006029313692951212,
+          0.0018338113763947308
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.0002294462615556052
+      },
+      "excess": {
+        "mean": 0.007237252642341463,
+        "se": 0.00031280391276003824,
+        "ci95": [
+          0.006612163901613957,
+          0.007862341383068967
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.006232823373973918
+      },
+      "vs_affine": {
+        "mean": 0.0011063006247471528,
+        "se": 0.0002763645248947983,
+        "ci95": [
+          0.0005540301901353948,
+          0.0016585710593589108
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": 0.00021888008357325332
+      },
+      "vs_fixed": {
+        "mean": 0.0007210574683499313,
+        "se": 0.0003255881095280217,
+        "ci95": [
+          7.042154891740197e-05,
+          0.0013716933877824607
+        ],
+        "independent_parent_batches": 64,
+        "simultaneous_lower": -0.00032442250585128056
+      }
+    }
+  },
+  "scores": {
+    "9": {
+      "champion": {
+        "raw": 0.003105140536302904,
+        "shuffle": -0.005750633722960569,
+        "excess": 0.008855774259263472,
+        "mean_max_probability": 0.902387357387852,
+        "state_fractions": [
+          0.574530368700392,
+          0.17492056758473323,
+          0.08335328425686629,
+          0.1671957792286144
+        ],
+        "raw_interval": {
+          "mean": 0.003105140536302904,
+          "se": 0.0002605084187998738,
+          "ci95": [
+            0.0025845560013471438,
+            0.0036257250712586645
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00575063372296057,
+          "se": 2.1934757332689383e-05,
+          "ci95": [
+            -0.0057944668378288365,
+            -0.005706800608092303
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4": {
+        "raw": 0.0011542231064627386,
+        "shuffle": -0.004203991257760463,
+        "excess": 0.005358214364223202,
+        "mean_max_probability": 0.8475502231070396,
+        "state_fractions": [
+          0.4836329597349297,
+          0.20519028521934612,
+          0.1927001852606972,
+          0.11847657000030744
+        ],
+        "raw_interval": {
+          "mean": 0.0011542231064627388,
+          "se": 0.0002205182672565169,
+          "ci95": [
+            0.0007135525126376171,
+            0.0015948937002878605
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.004203991257760462,
+          "se": 1.4438406556486976e-05,
+          "ci95": [
+            -0.0042328441109516874,
+            -0.004175138404569237
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4": {
+        "raw": 0.0013234523325835188,
+        "shuffle": -0.005525521478309238,
+        "excess": 0.006848973810892757,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4900309244791667,
+          0.20997111002604169,
+          0.21022542317708337,
+          0.08977254231770833
+        ],
+        "raw_interval": {
+          "mean": 0.001323452332583519,
+          "se": 0.0003541512499141153,
+          "ci95": [
+            0.0006157375316957473,
+            0.002031167133471291
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005525521478309236,
+          "se": 2.1592224756923253e-05,
+          "ci95": [
+            -0.005568670096444216,
+            -0.005482372860174257
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4-faces": {
+        "raw": 0.0011542231064627386,
+        "shuffle": -0.004203991257760463,
+        "excess": 0.005358214364223202,
+        "mean_max_probability": 0.8475502231070396,
+        "state_fractions": [
+          0.4836329597349297,
+          0.20519028521934612,
+          0.1927001852606972,
+          0.11847657000030744
+        ],
+        "raw_interval": {
+          "mean": 0.0011542231064627388,
+          "se": 0.0002205182672565169,
+          "ci95": [
+            0.0007135525126376171,
+            0.0015948937002878605
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.004203991257760462,
+          "se": 1.4438406556486976e-05,
+          "ci95": [
+            -0.0042328441109516874,
+            -0.004175138404569237
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4-faces": {
+        "raw": 0.0013234523325835188,
+        "shuffle": -0.005525521478309238,
+        "excess": 0.006848973810892757,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4900309244791667,
+          0.20997111002604169,
+          0.21022542317708337,
+          0.08977254231770833
+        ],
+        "raw_interval": {
+          "mean": 0.001323452332583519,
+          "se": 0.0003541512499141153,
+          "ci95": [
+            0.0006157375316957473,
+            0.002031167133471291
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005525521478309236,
+          "se": 2.1592224756923253e-05,
+          "ci95": [
+            -0.005568670096444216,
+            -0.005482372860174257
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "near": {
+        "raw": 0.16374572655254258,
+        "shuffle": -0.18371327559559442,
+        "excess": 0.34745900214813696,
+        "mean_max_probability": 0.9786908579320275,
+        "state_fractions": [
+          0.5762952692757313,
+          0.1358770145437729,
+          0.1456065286920625,
+          0.14222118758128266
+        ],
+        "raw_interval": {
+          "mean": 0.1637457265525426,
+          "se": 0.0014097620265935815,
+          "ci95": [
+            0.16092854193949443,
+            0.16656291116559077
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.18371327559559442,
+          "se": 0.0008086804348025129,
+          "ci95": [
+            -0.18532929449440358,
+            -0.18209725669678525
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "planted": {
+        "raw": 0.0033240666255348805,
+        "shuffle": -0.01666503314509249,
+        "excess": 0.01998909977062737,
+        "mean_max_probability": 0.9985728942768524,
+        "state_fractions": [
+          0.7002560039944558,
+          0.2997439950001186
+        ],
+        "raw_interval": {
+          "mean": 0.00332406662553488,
+          "se": 0.00047605366395460635,
+          "ci95": [
+            0.0023727492884388452,
+            0.004275383962630915
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.01666503314509249,
+          "se": 6.599688790933645e-05,
+          "ci95": [
+            -0.016796917401881915,
+            -0.016533148888303064
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-2": {
+        "raw": 0.0010988859460232603,
+        "shuffle": -0.0029143316910247917,
+        "excess": 0.004013217637048052,
+        "mean_max_probability": 0.8431423654013392,
+        "state_fractions": [
+          0.5002469031071002,
+          0.4997530969325636
+        ],
+        "raw_interval": {
+          "mean": 0.0010988859460232606,
+          "se": 0.00018294561307046804,
+          "ci95": [
+            0.0007332983103482319,
+            0.0014644735816982894
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.0029143316910247917,
+          "se": 1.3701777683151442e-05,
+          "ci95": [
+            -0.002941712508873639,
+            -0.0028869508731759444
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-4": {
+        "raw": 0.003105140536302904,
+        "shuffle": -0.005750633722960569,
+        "excess": 0.008855774259263472,
+        "mean_max_probability": 0.902387357387852,
+        "state_fractions": [
+          0.574530368700392,
+          0.17492056758473323,
+          0.08335328425686629,
+          0.1671957792286144
+        ],
+        "raw_interval": {
+          "mean": 0.003105140536302904,
+          "se": 0.0002605084187998738,
+          "ci95": [
+            0.0025845560013471438,
+            0.0036257250712586645
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00575063372296057,
+          "se": 2.1934757332689383e-05,
+          "ci95": [
+            -0.0057944668378288365,
+            -0.005706800608092303
+          ],
+          "independent_parent_batches": 64
+        }
+      }
+    },
+    "8": {
+      "champion": {
+        "raw": 0.002245821749700523,
+        "shuffle": -0.0058688650648989526,
+        "excess": 0.008114686814599476,
+        "mean_max_probability": 0.9021390463937373,
+        "state_fractions": [
+          0.5720967402129732,
+          0.17627015970926374,
+          0.0843557242048318,
+          0.16727737566215173
+        ],
+        "raw_interval": {
+          "mean": 0.0022458217497005237,
+          "se": 0.00030470678892774834,
+          "ci95": [
+            0.0016369138198048941,
+            0.002854729679596153
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005868865064898953,
+          "se": 2.4002300458360494e-05,
+          "ci95": [
+            -0.0059168298350186594,
+            -0.005820900294779247
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4": {
+        "raw": 0.0005132921544998367,
+        "shuffle": -0.004246700675454533,
+        "excess": 0.00475999282995437,
+        "mean_max_probability": 0.8478634155195931,
+        "state_fractions": [
+          0.48378113640240994,
+          0.20631365333868787,
+          0.19193725587195246,
+          0.11796795411690202
+        ],
+        "raw_interval": {
+          "mean": 0.0005132921544998368,
+          "se": 0.00019293501068136753,
+          "ci95": [
+            0.00012774230058358783,
+            0.0008988420084160857
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.004246700675454533,
+          "se": 1.4120726911010015e-05,
+          "ci95": [
+            -0.004274918696530668,
+            -0.004218482654378399
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4": {
+        "raw": 0.0006987207437609275,
+        "shuffle": -0.00556603555446771,
+        "excess": 0.006264756298228638,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4908447265625001,
+          0.21063232421874994,
+          0.20851643880208331,
+          0.09000651041666666
+        ],
+        "raw_interval": {
+          "mean": 0.0006987207437609275,
+          "se": 0.0003178218753793598,
+          "ci95": [
+            6.360440489037837e-05,
+            0.0013338370826314768
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00556603555446771,
+          "se": 1.9257405595642537e-05,
+          "ci95": [
+            -0.005604518408813248,
+            -0.005527552700122172
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4-faces": {
+        "raw": 0.0005132921544998367,
+        "shuffle": -0.004246700675454533,
+        "excess": 0.00475999282995437,
+        "mean_max_probability": 0.8478634155195931,
+        "state_fractions": [
+          0.48378113640240994,
+          0.20631365333868787,
+          0.19193725587195246,
+          0.11796795411690202
+        ],
+        "raw_interval": {
+          "mean": 0.0005132921544998368,
+          "se": 0.00019293501068136753,
+          "ci95": [
+            0.00012774230058358783,
+            0.0008988420084160857
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.004246700675454533,
+          "se": 1.4120726911010015e-05,
+          "ci95": [
+            -0.004274918696530668,
+            -0.004218482654378399
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4-faces": {
+        "raw": 0.0006987207437609275,
+        "shuffle": -0.00556603555446771,
+        "excess": 0.006264756298228638,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4908447265625001,
+          0.21063232421874994,
+          0.20851643880208331,
+          0.09000651041666666
+        ],
+        "raw_interval": {
+          "mean": 0.0006987207437609275,
+          "se": 0.0003178218753793598,
+          "ci95": [
+            6.360440489037837e-05,
+            0.0013338370826314768
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00556603555446771,
+          "se": 1.9257405595642537e-05,
+          "ci95": [
+            -0.005604518408813248,
+            -0.005527552700122172
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-2": {
+        "raw": 0.0004700803946311495,
+        "shuffle": -0.0029785258703253076,
+        "excess": 0.003448606264956457,
+        "mean_max_probability": 0.8440991780662442,
+        "state_fractions": [
+          0.5005946474479817,
+          0.49940535249970197
+        ],
+        "raw_interval": {
+          "mean": 0.0004700803946311495,
+          "se": 0.0001782422125683255,
+          "ci95": [
+            0.00011389175486726464,
+            0.0008262690343950343
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.0029785258703253076,
+          "se": 1.332734217439489e-05,
+          "ci95": [
+            -0.0030051584385164475,
+            -0.0029518933021341676
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-4": {
+        "raw": 0.002245821749700523,
+        "shuffle": -0.0058688650648989526,
+        "excess": 0.008114686814599476,
+        "mean_max_probability": 0.9021390463937373,
+        "state_fractions": [
+          0.5720967402129732,
+          0.17627015970926374,
+          0.0843557242048318,
+          0.16727737566215173
+        ],
+        "raw_interval": {
+          "mean": 0.0022458217497005237,
+          "se": 0.00030470678892774834,
+          "ci95": [
+            0.0016369138198048941,
+            0.002854729679596153
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005868865064898953,
+          "se": 2.4002300458360494e-05,
+          "ci95": [
+            -0.0059168298350186594,
+            -0.005820900294779247
+          ],
+          "independent_parent_batches": 64
+        }
+      }
+    },
+    "7": {
+      "champion": {
+        "raw": 0.0012183713728449264,
+        "shuffle": -0.006018881269496536,
+        "excess": 0.007237252642341463,
+        "mean_max_probability": 0.9029768540607017,
+        "state_fractions": [
+          0.5650399705397522,
+          0.17757472633277566,
+          0.0860134610661062,
+          0.1713718423049013
+        ],
+        "raw_interval": {
+          "mean": 0.001218371372844926,
+          "se": 0.0003079755379298256,
+          "ci95": [
+            0.0006029313692951212,
+            0.0018338113763947308
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.006018881269496536,
+          "se": 1.8107801055023256e-05,
+          "ci95": [
+            -0.006055066822480689,
+            -0.005982695716512384
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4": {
+        "raw": 0.00011207074809777321,
+        "shuffle": -0.004284423732294109,
+        "excess": 0.0043964944803918824,
+        "mean_max_probability": 0.8482892627728991,
+        "state_fractions": [
+          0.48121769269339004,
+          0.20605464868603435,
+          0.19503426943554972,
+          0.11769338914722242
+        ],
+        "raw_interval": {
+          "mean": 0.00011207074809777318,
+          "se": 0.00021043980476186997,
+          "ci95": [
+            -0.00030845964551802084,
+            0.0005326011417135673
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00428442373229411,
+          "se": 1.6232118014293934e-05,
+          "ci95": [
+            -0.004316861031813055,
+            -0.004251986432775165
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4": {
+        "raw": 0.0004973139044949947,
+        "shuffle": -0.0056264665973471415,
+        "excess": 0.006123780501842136,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4884440104166665,
+          0.20959472656250003,
+          0.21143595377604166,
+          0.0905253092447917
+        ],
+        "raw_interval": {
+          "mean": 0.0004973139044949947,
+          "se": 0.0002991569356243755,
+          "ci95": [
+            -0.00010050352853946225,
+            0.0010951313375294517
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005626466597347143,
+          "se": 2.4147788783809876e-05,
+          "ci95": [
+            -0.005674722102686058,
+            -0.005578211092008229
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "affine-4-faces": {
+        "raw": 0.00011207074809777321,
+        "shuffle": -0.004284423732294109,
+        "excess": 0.0043964944803918824,
+        "mean_max_probability": 0.8482892627728991,
+        "state_fractions": [
+          0.48121769269339004,
+          0.20605464868603435,
+          0.19503426943554972,
+          0.11769338914722242
+        ],
+        "raw_interval": {
+          "mean": 0.00011207074809777318,
+          "se": 0.00021043980476186997,
+          "ci95": [
+            -0.00030845964551802084,
+            0.0005326011417135673
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.00428442373229411,
+          "se": 1.6232118014293934e-05,
+          "ci95": [
+            -0.004316861031813055,
+            -0.004251986432775165
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "fixed-4-faces": {
+        "raw": 0.0004973139044949947,
+        "shuffle": -0.0056264665973471415,
+        "excess": 0.006123780501842136,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4884440104166665,
+          0.20959472656250003,
+          0.21143595377604166,
+          0.0905253092447917
+        ],
+        "raw_interval": {
+          "mean": 0.0004973139044949947,
+          "se": 0.0002991569356243755,
+          "ci95": [
+            -0.00010050352853946225,
+            0.0010951313375294517
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.005626466597347143,
+          "se": 2.4147788783809876e-05,
+          "ci95": [
+            -0.005674722102686058,
+            -0.005578211092008229
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-2": {
+        "raw": -0.00026084204398104006,
+        "shuffle": -0.0030419277689897623,
+        "excess": 0.0027810857250087223,
+        "mean_max_probability": 0.8459696825496696,
+        "state_fractions": [
+          0.5002557578638253,
+          0.4997442418967179
+        ],
+        "raw_interval": {
+          "mean": -0.00026084204398104006,
+          "se": 0.00018183620638962438,
+          "ci95": [
+            -0.0006242127073075955,
+            0.00010252861934551536
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.0030419277689897623,
+          "se": 1.4085904578541985e-05,
+          "ci95": [
+            -0.0030700762031871413,
+            -0.0030137793347923833
+          ],
+          "independent_parent_batches": 64
+        }
+      },
+      "nonlinear-4": {
+        "raw": 0.0012183713728449264,
+        "shuffle": -0.006018881269496536,
+        "excess": 0.007237252642341463,
+        "mean_max_probability": 0.9029768540607017,
+        "state_fractions": [
+          0.5650399705397522,
+          0.17757472633277566,
+          0.0860134610661062,
+          0.1713718423049013
+        ],
+        "raw_interval": {
+          "mean": 0.001218371372844926,
+          "se": 0.0003079755379298256,
+          "ci95": [
+            0.0006029313692951212,
+            0.0018338113763947308
+          ],
+          "independent_parent_batches": 64
+        },
+        "shuffled_interval": {
+          "mean": -0.006018881269496536,
+          "se": 1.8107801055023256e-05,
+          "ci95": [
+            -0.006055066822480689,
+            -0.005982695716512384
+          ],
+          "independent_parent_batches": 64
+        }
+      }
+    }
+  },
+  "gate": "Family alpha=.05/3 allocated to this lane. One-sided Bonferroni lower bounds for 16 endpoints: raw, raw-minus-shuffled, raw-minus-affine, raw-minus-fixed at each of 9,8,7; b1 and plant raw and raw-minus-shuffled at index 9. All 16 lower bounds must exceed zero for a positive primary claim. Also report unadjusted two-sided 95% intervals, without clipping negative bounds. Only a variational-bound comparison, not proof of MI differences, order or scale invariance.",
+  "passed": false,
+  "interpretation": "Conditional on selected fits. A failed gate is not evidence of zero physical MI and a passing gate is not a phase identification."
+}

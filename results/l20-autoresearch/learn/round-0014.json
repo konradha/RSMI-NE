@@ -1,0 +1,988 @@
+{
+  "mode": "discover",
+  "round": 14,
+  "status": "ok",
+  "hypothesis": "A nonlinear categorical code of a 3^3 block retains shell information across two empty layers beyond a matched affine encoder and fixed codes.",
+  "metric": "Raw exact expected hard-state InfoNCE lower bound, nats/anchor, 64 distinct same-temperature parents per contrastive batch.",
+  "estimate": 0.001689011822956158,
+  "selection_basis": "Release index 9 train and validation only. Four independent-seed brackets of four stages; fresh training and screening anchors at each stage. In each cardinality keep ceil(half) nonlinear architectures by fresh-anchor raw validation bound; tie by model name. Halve fixed codes within (cardinality, critic); keep each affine comparator and calibration. No early epoch selection. End-of-stage checkpoints compete on a common four-anchor validation bank across all rounds. Final selection maximizes its raw bound, not a gain over controls. Disjoint test parents are not independent replications of model seeds.",
+  "design_id": "f10ce1bc32707adf6816de3160b52c3f813e9082fecd5a76c051d82786c72d05",
+  "data": {
+    "index": 9,
+    "beta": 3.05,
+    "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": [
+      10240,
+      2048,
+      4096
+    ],
+    "patch_seed": 769315,
+    "group_lineage_sha256": [
+      "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+    ]
+  },
+  "params": {
+    "bracket": 3,
+    "stage": 2,
+    "batch": 64,
+    "hidden": 12,
+    "root_seed": 181124,
+    "split_seed": 769315,
+    "optimizer": "Adam 0.0015 / sqrt(1+step/1200), beta=(.9,.999); persisted across bracket stages"
+  },
+  "counts": {
+    "parents_per_epoch": 8192,
+    "training_epochs_this_stage": 11,
+    "validation_parents": 2048,
+    "fresh_screen_anchors": 2,
+    "common_validation_anchors": 4,
+    "train_pairs_per_active_arm": 90112,
+    "active_arms": 14
+  },
+  "provenance": {
+    "source_path": "/home/fritz/datasets/lattice-glass/l20-16384-v1",
+    "checkpoint_dir": "round-0014",
+    "draw_streams": "21,round,epoch: rows/centres; 22,round,epoch: plant; 23,round: fresh validation; 24: common validation"
+  },
+  "arms": {
+    "affine-2-faces-physical": {
+      "spec": [
+        "affine",
+        2,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 652,
+      "screen": {
+        "raw": -0.00036804638163151016,
+        "shuffle": -0.0017528087626956913,
+        "excess": 0.0013847623810641812,
+        "mean_max_probability": 0.8764705438225064,
+        "state_fractions": [
+          0.20196556733133697,
+          0.7980344320076256
+        ]
+      },
+      "common": {
+        "raw": 8.268989163863248e-06,
+        "shuffle": -0.0017078133682717532,
+        "excess": 0.0017160823574356165,
+        "mean_max_probability": 0.8812014960421948,
+        "state_fractions": [
+          0.1967918072774929,
+          0.8032081929035684
+        ]
+      },
+      "sha256": "94193801f119d4e947356ac9a3eb1eff7addee81ab40fcdedd744ea9ba60a2a8",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "affine",
+          "faces"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "affine-2-flat-physical": {
+      "spec": [
+        "affine",
+        2,
+        "flat",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 4348,
+      "screen": {
+        "raw": -0.0002807654142686128,
+        "shuffle": -0.0005391516641395023,
+        "excess": 0.0002583862498708895,
+        "mean_max_probability": 0.9771934875025181,
+        "state_fractions": [
+          0.023464621373631478,
+          0.9765353789298388
+        ]
+      },
+      "common": {
+        "raw": -0.00021319885826617121,
+        "shuffle": -0.0005605951331198686,
+        "excess": 0.00034739627485369745,
+        "mean_max_probability": 0.9756086968045565,
+        "state_fractions": [
+          0.024871823485513977,
+          0.9751281761455175
+        ]
+      },
+      "sha256": "a378d9f9ed2bd3d5502920404097d76fbde4385323df0f76979a100a5760471a",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "affine",
+          "flat"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "affine-4-faces-physical": {
+      "spec": [
+        "affine",
+        4,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 1148,
+      "screen": {
+        "raw": 0.0015121829491718851,
+        "shuffle": -0.004207919180102591,
+        "excess": 0.005720102129274476,
+        "mean_max_probability": 0.7917551816281048,
+        "state_fractions": [
+          0.46898415403453697,
+          0.19264920992425427,
+          0.16205754429712016,
+          0.1763090935641647
+        ]
+      },
+      "common": {
+        "raw": 0.0002469821107929838,
+        "shuffle": -0.004110779239790554,
+        "excess": 0.004357761350583538,
+        "mean_max_probability": 0.7916993120124971,
+        "state_fractions": [
+          0.4709136450402476,
+          0.1996510187432176,
+          0.15645715342328437,
+          0.1729781830562197
+        ]
+      },
+      "sha256": "97744e330fcbf17c8d80b8e33b483835512c18ac557fc89bc505c1919f216147",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "affine",
+          "faces"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "affine-4-flat-physical": {
+      "spec": [
+        "affine",
+        4,
+        "flat",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 5084,
+      "screen": {
+        "raw": -0.002659147237773885,
+        "shuffle": -0.010026742838827967,
+        "excess": 0.007367595601054083,
+        "mean_max_probability": 0.7987625061286963,
+        "state_fractions": [
+          0.564251783185644,
+          0.11384783108368435,
+          0.06376605600415597,
+          0.2581343288426614
+        ]
+      },
+      "common": {
+        "raw": -0.007196748501910211,
+        "shuffle": -0.009709315877403252,
+        "excess": 0.0025125673754930414,
+        "mean_max_probability": 0.7975898063486966,
+        "state_fractions": [
+          0.5676740040340826,
+          0.11786842776746953,
+          0.06197459648626635,
+          0.252482971700242
+        ]
+      },
+      "sha256": "a060122dbeef3ce2f36f3bb09c39a0fbd570fc843affd813220589556f1dddd6",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "affine",
+          "flat"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "bits-A-2-faces-physical": {
+      "spec": [
+        "bits-A",
+        2,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 542,
+      "screen": {
+        "raw": 0.00047562003395009654,
+        "shuffle": -0.002993032209100501,
+        "excess": 0.0034686522430505975,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.697265625,
+          0.302734375
+        ]
+      },
+      "common": {
+        "raw": 0.0007982162563989962,
+        "shuffle": -0.002857616322023254,
+        "excess": 0.00365583257842225,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.6983642578125,
+          0.3016357421875
+        ]
+      },
+      "sha256": "d8728cc7c83837a661fc1f981f5c15cd81701ff9da4f926c9788db4e0234517e",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "fixed",
+          "faces"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "bits-A-4-faces-physical": {
+      "spec": [
+        "bits-A",
+        4,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 928,
+      "screen": {
+        "raw": 0.0023896616289464222,
+        "shuffle": -0.006402242309155022,
+        "excess": 0.008791903938101444,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.494384765625,
+          0.206298828125,
+          0.202880859375,
+          0.096435546875
+        ]
+      },
+      "common": {
+        "raw": 0.001824113795130336,
+        "shuffle": -0.0063311936108348295,
+        "excess": 0.008155307405965165,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4915771484375,
+          0.21484375,
+          0.206787109375,
+          0.0867919921875
+        ]
+      },
+      "sha256": "2b1b3a0e106ef9631299467529615176d138b3f371689621cd67d037f56cc3bb",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "fixed",
+          "faces"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "bits-A-4-flat-physical": {
+      "spec": [
+        "bits-A",
+        4,
+        "flat",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 4864,
+      "screen": {
+        "raw": -0.0031379425324436546,
+        "shuffle": -0.01727221144782387,
+        "excess": 0.014134268915380216,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.494384765625,
+          0.206298828125,
+          0.202880859375,
+          0.096435546875
+        ]
+      },
+      "common": {
+        "raw": -0.008707075667076802,
+        "shuffle": -0.01702836273156633,
+        "excess": 0.008321287064489528,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.4915771484375,
+          0.21484375,
+          0.206787109375,
+          0.0867919921875
+        ]
+      },
+      "sha256": "9149a6b670fccf7ebdd8dd3b7ca8bd2c05827aef71fde12e68be056b66dafb2b",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "fixed",
+          "flat"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "bits-vacancy-2-flat-physical": {
+      "spec": [
+        "bits-vacancy",
+        2,
+        "flat",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 4238,
+      "screen": {
+        "raw": -0.004282234655333578,
+        "shuffle": -0.0076096453674560525,
+        "excess": 0.003327410712122474,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.748779296875,
+          0.251220703125
+        ]
+      },
+      "common": {
+        "raw": -0.005687440053629284,
+        "shuffle": -0.007121002342860402,
+        "excess": 0.0014335622892311176,
+        "mean_max_probability": 1.0,
+        "state_fractions": [
+          0.7550048828125,
+          0.2449951171875
+        ]
+      },
+      "sha256": "1071d62c733427be6306d1c6759e7c07437e40292fd0200aaba55b3f19c4559e",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "fixed",
+          "flat"
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "invariant-2-faces-physical": {
+      "spec": [
+        "invariant",
+        2,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 748,
+      "screen": {
+        "raw": -0.0003611396158671377,
+        "shuffle": -0.0018179138005231749,
+        "excess": 0.001456774184656037,
+        "mean_max_probability": 0.8255192502547288,
+        "state_fractions": [
+          0.3256008642775612,
+          0.6743991354031778
+        ]
+      },
+      "common": {
+        "raw": -0.0003648408937055123,
+        "shuffle": -0.0018430257909896562,
+        "excess": 0.001478184897284144,
+        "mean_max_probability": 0.8270763058972079,
+        "state_fractions": [
+          0.32806974494322816,
+          0.6719302548102064
+        ]
+      },
+      "sha256": "2ecfb7d0f926550d09f51dd2655f345635cc6455fc2e5358ad320196116c39d4",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "nonlinear",
+          ""
+        ],
+        "rank": 1,
+        "candidates": 2,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "invariant-4-faces-physical": {
+      "spec": [
+        "invariant",
+        4,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 1184,
+      "screen": {
+        "raw": -0.00014155828801456984,
+        "shuffle": -0.003034929855473116,
+        "excess": 0.002893371567458546,
+        "mean_max_probability": 0.6956096512876684,
+        "state_fractions": [
+          0.33370919819632405,
+          0.49851714088752175,
+          0.07190193126530176,
+          0.0958717297629903
+        ]
+      },
+      "common": {
+        "raw": -0.0007698505577153868,
+        "shuffle": -0.003061185127380066,
+        "excess": 0.002291334569664679,
+        "mean_max_probability": 0.6964961206977023,
+        "state_fractions": [
+          0.32343072205365786,
+          0.5077851224053909,
+          0.07237479557472071,
+          0.09640936016888446
+        ]
+      },
+      "sha256": "398003fcdc6e56331daf9507dc8aef73c7645424a1cf234cd47f2807a7ea4615",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "nonlinear",
+          ""
+        ],
+        "rank": 2,
+        "candidates": 2,
+        "keep": 1,
+        "kept": false
+      }
+    },
+    "oriented-2-faces-physical": {
+      "spec": [
+        "oriented",
+        2,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 1084,
+      "screen": {
+        "raw": -0.0014229751822639664,
+        "shuffle": -0.0025899427357230676,
+        "excess": 0.0011669675534591011,
+        "mean_max_probability": 0.8993002578208689,
+        "state_fractions": [
+          0.3333309796228618,
+          0.6666690209831541
+        ]
+      },
+      "common": {
+        "raw": -0.0005830615761581333,
+        "shuffle": -0.002556209135142696,
+        "excess": 0.0019731475589845624,
+        "mean_max_probability": 0.899529743794119,
+        "state_fractions": [
+          0.3249879938435518,
+          0.6750120054233776
+        ]
+      },
+      "sha256": "4d9a1450925d0c7a2d5560e095aeeb70b0f4df4d06fedb82ea5f8b076c0fd961",
+      "pruning": {
+        "stratum": [
+          "physical",
+          2,
+          "nonlinear",
+          ""
+        ],
+        "rank": 2,
+        "candidates": 2,
+        "keep": 1,
+        "kept": false
+      }
+    },
+    "oriented-2-flat-planted": {
+      "spec": [
+        "oriented",
+        2,
+        "flat",
+        "planted"
+      ],
+      "steps": 2784,
+      "parameters": 4780,
+      "screen": {
+        "raw": 0.004398927638027877,
+        "shuffle": -0.016501501521132153,
+        "excess": 0.02090042915916003,
+        "mean_max_probability": 0.9985938828613143,
+        "state_fractions": [
+          0.6972805515801408,
+          0.30271944697805697
+        ]
+      },
+      "common": {
+        "raw": 0.0013960092747816307,
+        "shuffle": -0.016554494570257042,
+        "excess": 0.017950503845038674,
+        "mean_max_probability": 0.9985904090644908,
+        "state_fractions": [
+          0.6984167224418463,
+          0.3015832770958202
+        ]
+      },
+      "sha256": "e68606ffc7a3f597c10ca01229ca6c8efa50eb086aca9c96ec472a1fa1fad883",
+      "pruning": {
+        "stratum": [
+          "planted",
+          2,
+          "nonlinear",
+          ""
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "oriented-4-faces-physical": {
+      "spec": [
+        "oriented",
+        4,
+        "faces",
+        "physical"
+      ],
+      "steps": 2784,
+      "parameters": 1856,
+      "screen": {
+        "raw": 0.0020478366504587562,
+        "shuffle": -0.004575147344918006,
+        "excess": 0.006622983995376763,
+        "mean_max_probability": 0.8992269539667177,
+        "state_fractions": [
+          0.5589428549957576,
+          0.2006287400831847,
+          0.03048468796359776,
+          0.20994371618998864
+        ]
+      },
+      "common": {
+        "raw": 0.0011299865268431138,
+        "shuffle": -0.004492357878633469,
+        "excess": 0.0056223444054765825,
+        "mean_max_probability": 0.9003155561222229,
+        "state_fractions": [
+          0.5594112206283527,
+          0.20694208349396148,
+          0.02964766655263756,
+          0.20399902873860784
+        ]
+      },
+      "sha256": "6019d8e99edcb0e1134bbe5a811ad468e39610d846d8724e906843f92a9c85db",
+      "pruning": {
+        "stratum": [
+          "physical",
+          4,
+          "nonlinear",
+          ""
+        ],
+        "rank": 1,
+        "candidates": 2,
+        "keep": 1,
+        "kept": true
+      }
+    },
+    "oriented-4-flat-near": {
+      "spec": [
+        "oriented",
+        4,
+        "flat",
+        "near"
+      ],
+      "steps": 2784,
+      "parameters": 5792,
+      "screen": {
+        "raw": 0.12452752840127387,
+        "shuffle": -0.14110396612390425,
+        "excess": 0.2656314945251781,
+        "mean_max_probability": 0.9334785908649792,
+        "state_fractions": [
+          0.6002440008890395,
+          0.14782105048634606,
+          0.11682717821026527,
+          0.13510776981256398
+        ]
+      },
+      "common": {
+        "raw": 0.12599867765682932,
+        "shuffle": -0.14017367235439937,
+        "excess": 0.2661723500112287,
+        "mean_max_probability": 0.9370227759827685,
+        "state_fractions": [
+          0.6057837547614113,
+          0.1518399136584505,
+          0.11506227904989012,
+          0.1273140523251752
+        ]
+      },
+      "sha256": "cd260f2b6e68aaa6625989824f659f4241acda5b1030369e4e4881cacd6883f7",
+      "pruning": {
+        "stratum": [
+          "near",
+          4,
+          "nonlinear",
+          ""
+        ],
+        "rank": 1,
+        "candidates": 1,
+        "keep": 1,
+        "kept": true
+      }
+    }
+  },
+  "active": [
+    "affine-2-faces-physical",
+    "affine-2-flat-physical",
+    "affine-4-faces-physical",
+    "affine-4-flat-physical",
+    "bits-A-2-faces-physical",
+    "bits-A-4-faces-physical",
+    "bits-A-4-flat-physical",
+    "bits-vacancy-2-flat-physical",
+    "invariant-2-faces-physical",
+    "invariant-4-faces-physical",
+    "oriented-2-faces-physical",
+    "oriented-2-flat-planted",
+    "oriented-4-faces-physical",
+    "oriented-4-flat-near"
+  ],
+  "advance": [
+    "affine-2-faces-physical",
+    "affine-2-flat-physical",
+    "affine-4-faces-physical",
+    "affine-4-flat-physical",
+    "bits-A-2-faces-physical",
+    "bits-A-4-faces-physical",
+    "bits-A-4-flat-physical",
+    "bits-vacancy-2-flat-physical",
+    "invariant-2-faces-physical",
+    "oriented-2-flat-planted",
+    "oriented-4-faces-physical",
+    "oriented-4-flat-near"
+  ],
+  "advancement_reason": "Within each reported stratum: top ceil(half) on fresh validation raw, name-order tie break",
+  "leaders": {
+    "affine-2-faces": {
+      "name": "affine-2-faces-physical",
+      "spec": [
+        "affine",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0010460330104377494,
+      "sha256": "43927e7df224328bf8d34c3e86d0a4c87007ef19cbeacd0291c60b98dcfb3d26",
+      "steps": 4128
+    },
+    "affine-2": {
+      "name": "affine-2-faces-physical",
+      "spec": [
+        "affine",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0010460330104377494,
+      "sha256": "43927e7df224328bf8d34c3e86d0a4c87007ef19cbeacd0291c60b98dcfb3d26",
+      "steps": 4128
+    },
+    "affine-2-flat": {
+      "name": "affine-2-flat-physical",
+      "spec": [
+        "affine",
+        2,
+        "flat",
+        "physical"
+      ],
+      "round": 14,
+      "raw": -0.00021319885826617121,
+      "sha256": "a378d9f9ed2bd3d5502920404097d76fbde4385323df0f76979a100a5760471a",
+      "steps": 2784
+    },
+    "affine-4-faces": {
+      "name": "affine-4-faces-physical",
+      "spec": [
+        "affine",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0020839131927718095,
+      "sha256": "8bd87d2a596c34edd73b757ecba55388558bbeae0218be75d48f5769faa26340",
+      "steps": 4128
+    },
+    "affine-4": {
+      "name": "affine-4-faces-physical",
+      "spec": [
+        "affine",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0020839131927718095,
+      "sha256": "8bd87d2a596c34edd73b757ecba55388558bbeae0218be75d48f5769faa26340",
+      "steps": 4128
+    },
+    "affine-4-flat": {
+      "name": "affine-4-flat-physical",
+      "spec": [
+        "affine",
+        4,
+        "flat",
+        "physical"
+      ],
+      "round": 11,
+      "raw": -0.0035269183882218834,
+      "sha256": "685da4fcf2b4887add2c74717d14e010bae75460aaadfe3871b07a01c60e53f4",
+      "steps": 4128
+    },
+    "fixed-2-faces": {
+      "name": "bits-A-2-faces-physical",
+      "spec": [
+        "bits-A",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 14,
+      "raw": 0.0007982162563989962,
+      "sha256": "d8728cc7c83837a661fc1f981f5c15cd81701ff9da4f926c9788db4e0234517e",
+      "steps": 2784
+    },
+    "fixed-2": {
+      "name": "bits-A-2-faces-physical",
+      "spec": [
+        "bits-A",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 14,
+      "raw": 0.0007982162563989962,
+      "sha256": "d8728cc7c83837a661fc1f981f5c15cd81701ff9da4f926c9788db4e0234517e",
+      "steps": 2784
+    },
+    "fixed-2-flat": {
+      "name": "bits-vacancy-2-flat-physical",
+      "spec": [
+        "bits-vacancy",
+        2,
+        "flat",
+        "physical"
+      ],
+      "round": 10,
+      "raw": -0.0045433513305877,
+      "sha256": "5d4b7e2d4e94902b15848fb83e574cccb0bb9e4fb8d9d6e653278d97f86a2853",
+      "steps": 2208
+    },
+    "fixed-4-faces": {
+      "name": "bits-A-4-faces-physical",
+      "spec": [
+        "bits-A",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0022844582836040184,
+      "sha256": "1095829e039ea83502acbe2469dd211182a8d4ac0bfd94d1636aecd24babc236",
+      "steps": 4128
+    },
+    "fixed-4": {
+      "name": "bits-A-4-faces-physical",
+      "spec": [
+        "bits-A",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.0022844582836040184,
+      "sha256": "1095829e039ea83502acbe2469dd211182a8d4ac0bfd94d1636aecd24babc236",
+      "steps": 4128
+    },
+    "fixed-4-flat": {
+      "name": "bits-A-4-flat-physical",
+      "spec": [
+        "bits-A",
+        4,
+        "flat",
+        "physical"
+      ],
+      "round": 11,
+      "raw": -0.00477170922435072,
+      "sha256": "902347ad70ce6c4212318b1d53fcc762d7c3105fb183332dd681f789553c2b58",
+      "steps": 4128
+    },
+    "nonlinear-2-faces": {
+      "name": "equivariant-2-faces-physical",
+      "spec": [
+        "equivariant",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 10,
+      "raw": 0.0012430684222909628,
+      "sha256": "37b17816fd06fbe733c3469a347d04bc7b2140eac0dd5f5585fffc6560943c9b",
+      "steps": 2208
+    },
+    "nonlinear-2": {
+      "name": "equivariant-2-faces-physical",
+      "spec": [
+        "equivariant",
+        2,
+        "faces",
+        "physical"
+      ],
+      "round": 10,
+      "raw": 0.0012430684222909628,
+      "sha256": "37b17816fd06fbe733c3469a347d04bc7b2140eac0dd5f5585fffc6560943c9b",
+      "steps": 2208
+    },
+    "champion": {
+      "name": "oriented-4-faces-physical",
+      "spec": [
+        "oriented",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.001689011822956158,
+      "sha256": "7c48e3dffad38a8518593bf8fdd1beb0c272f979c9d3c36c796cc620b5cef72f",
+      "steps": 4128
+    },
+    "nonlinear-2-flat": {
+      "name": "invariant-2-flat-physical",
+      "spec": [
+        "invariant",
+        2,
+        "flat",
+        "physical"
+      ],
+      "round": 8,
+      "raw": -0.0018217586673904098,
+      "sha256": "48ca214b62a69e7633b1e966e2e790e6da240e89043f7ba2c98fbd3f643f7601",
+      "steps": 384
+    },
+    "nonlinear-4-faces": {
+      "name": "oriented-4-faces-physical",
+      "spec": [
+        "oriented",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.001689011822956158,
+      "sha256": "7c48e3dffad38a8518593bf8fdd1beb0c272f979c9d3c36c796cc620b5cef72f",
+      "steps": 4128
+    },
+    "nonlinear-4": {
+      "name": "oriented-4-faces-physical",
+      "spec": [
+        "oriented",
+        4,
+        "faces",
+        "physical"
+      ],
+      "round": 11,
+      "raw": 0.001689011822956158,
+      "sha256": "7c48e3dffad38a8518593bf8fdd1beb0c272f979c9d3c36c796cc620b5cef72f",
+      "steps": 4128
+    },
+    "nonlinear-4-flat": {
+      "name": "oriented-4-flat-physical",
+      "spec": [
+        "oriented",
+        4,
+        "flat",
+        "physical"
+      ],
+      "round": 13,
+      "raw": -4.0694200367052174e-05,
+      "sha256": "0b10af7caff1373fed4ff7ddd5c59d96d78085ff462ac1d998c5d450f6209cce",
+      "steps": 1376
+    },
+    "planted": {
+      "name": "oriented-2-flat-planted",
+      "spec": [
+        "oriented",
+        2,
+        "flat",
+        "planted"
+      ],
+      "round": 14,
+      "raw": 0.0013960092747816307,
+      "sha256": "e68606ffc7a3f597c10ca01229ca6c8efa50eb086aca9c96ec472a1fa1fad883",
+      "steps": 2784
+    },
+    "near": {
+      "name": "oriented-4-flat-near",
+      "spec": [
+        "oriented",
+        4,
+        "flat",
+        "near"
+      ],
+      "round": 11,
+      "raw": 0.15348720105687683,
+      "sha256": "f6d4717343c50a88accc9d53028752e58a7f76d4328bb595782e0f0071563db4",
+      "steps": 4128
+    }
+  },
+  "search_exhausted": false
+}

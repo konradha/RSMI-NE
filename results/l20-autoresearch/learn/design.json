@@ -1,0 +1,102 @@
+{
+  "hypothesis": "A nonlinear categorical code of a 3^3 block retains shell information across two empty layers beyond a matched affine encoder and fixed codes.",
+  "primary_metric": "Raw exact expected hard-state InfoNCE lower bound, nats/anchor, 64 distinct same-temperature parents per contrastive batch.",
+  "geometry": "Canonical z,y,x; w=3. Six 5x5 faces centered at signed axis distance 4 (b=2); b=1 calibration uses distance 3. 150 distinct sites for both, no overlap with visible sites.",
+  "models": "2 and 4 hard output states sampled from a categorical posterior; sum the hard-state log density ratios exactly (never feed the soft vector to a critic). Invariant mean over eight corners; equivariant tied scalar score for two parity tetrahedra or four unoriented body diagonals; oriented untied corner readout. All local models compose a shared nonlinear map over 2x2x2 corner cells. Affine comparator uses 54 independent site/species coefficients per logit.",
+  "critics": "Flat MLP+linear skip vs a shared nonlinear face-quadrant MLP pooled over the three incident quadrants of each corner with oriented readout. Same 150 raw targets, 12 hidden channels per local unit, not identical parameter counts.",
+  "baselines": "Best validation affine and best validation deterministic code of the champion cardinality, allowing either critic for each. Also report the exactly critic-matched fits. Fixed codes: occupancy of species A or vacancy at a corner (or two body-diagonal corners); block composition. Raw and analytic average of all off-diagonal parent shuffles use the same scores and same negatives.",
+  "discovery": "Release index 9 train and validation only. Four independent-seed brackets of four stages; fresh training and screening anchors at each stage. In each cardinality keep ceil(half) nonlinear architectures by fresh-anchor raw validation bound; tie by model name. Halve fixed codes within (cardinality, critic); keep each affine comparator and calibration. No early epoch selection. End-of-stage checkpoints compete on a common four-anchor validation bank across all rounds. Final selection maximizes its raw bound, not a gain over controls. Disjoint test parents are not independent replications of model seeds.",
+  "control": "Fixed b=1 oriented four-state local / flat model; weak planted b=2 oriented two-state local / flat model. Start with uniformly permuted complete shells inside each same-fold parent batch; within a random 20% subset rank-match corner A to first-shell-site A. No configuration or species value generated or edited; both marginals preserved exactly. Synthetic pairs are a pipeline diagnostic, not physical MI.",
+  "confirmation": "Freeze one common-validation winner and cardinality-matched baselines before scoring. Test indices 9,8,7 (8 and 7 absent entirely from this search); historical public results mean none is a new physical release. Average 24 fresh anchors inside each of 64 disjoint batches of 64 test parents. Paired t intervals conditional on fits; no site- or seed-level pseudoreplication.",
+  "gate": "Family alpha=.05/3 allocated to this lane. One-sided Bonferroni lower bounds for 16 endpoints: raw, raw-minus-shuffled, raw-minus-affine, raw-minus-fixed at each of 9,8,7; b1 and plant raw and raw-minus-shuffled at index 9. All 16 lower bounds must exceed zero for a positive primary claim. Also report unadjusted two-sided 95% intervals, without clipping negative bounds. Only a variational-bound comparison, not proof of MI differences, order or scale invariance.",
+  "references": [
+    "https://arxiv.org/abs/2101.11633",
+    "https://arxiv.org/abs/2103.16887",
+    "https://arxiv.org/abs/2301.11934"
+  ],
+  "code_sha256": "ba0ca414227be5c66883b9ebf27c3bdea8356460a5fa78d1df9c8db5f6eef191",
+  "split_seed": 769315,
+  "root_seed": 181124,
+  "stage_budgets": [
+    {
+      "round": 0,
+      "parents": 4096,
+      "epochs": 2
+    },
+    {
+      "round": 1,
+      "parents": 6144,
+      "epochs": 3
+    },
+    {
+      "round": 2,
+      "parents": 8192,
+      "epochs": 5
+    },
+    {
+      "round": 3,
+      "parents": 10240,
+      "epochs": 8
+    },
+    {
+      "round": 4,
+      "parents": 4096,
+      "epochs": 4
+    },
+    {
+      "round": 5,
+      "parents": 6144,
+      "epochs": 5
+    },
+    {
+      "round": 6,
+      "parents": 8192,
+      "epochs": 7
+    },
+    {
+      "round": 7,
+      "parents": 10240,
+      "epochs": 10
+    },
+    {
+      "round": 8,
+      "parents": 4096,
+      "epochs": 6
+    },
+    {
+      "round": 9,
+      "parents": 6144,
+      "epochs": 7
+    },
+    {
+      "round": 10,
+      "parents": 8192,
+      "epochs": 9
+    },
+    {
+      "round": 11,
+      "parents": 10240,
+      "epochs": 12
+    },
+    {
+      "round": 12,
+      "parents": 4096,
+      "epochs": 8
+    },
+    {
+      "round": 13,
+      "parents": 6144,
+      "epochs": 9
+    },
+    {
+      "round": 14,
+      "parents": 8192,
+      "epochs": 11
+    },
+    {
+      "round": 15,
+      "parents": 10240,
+      "epochs": 14
+    }
+  ]
+}

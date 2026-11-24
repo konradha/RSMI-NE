@@ -1,0 +1,354 @@
+{
+  "mode": "discover",
+  "round": 6,
+  "status": "ok",
+  "hypothesis": "The frozen nonlinear four-state operator retains shell information beyond all eight ordered ternary corners at beta=3.05 in a uniform cubic frame.",
+  "metric": "conditional_InfoNCE_nats_per_uniform_positive",
+  "estimate": 0.042087905877159146,
+  "interval": {
+    "mean": 0.042087905877159146,
+    "lo": 0.041354350791959704,
+    "hi": 0.04282146096235859
+  },
+  "selection_basis": "Maximum lower endpoint of the grouped validation interval for the nonlinear raw conditional bound, earliest round on ties; never differences of MI lower bounds.",
+  "selection_value": 0.041354350791959704,
+  "selected_round": 6,
+  "search_exhausted": true,
+  "gate": {
+    "within_stratum_permutation_nonpositive": true,
+    "outside_parent_null_not_significantly_positive": true,
+    "archive_shell_plant_detected": true,
+    "fair_bit_MC_consistent_with_exact_finite_K": true,
+    "finite_K_expectation_below_known_MI": true,
+    "positive_validation_lower_endpoint": true
+  },
+  "gate_rule": "Only the beta-9 test estimate is primary. Require its lower endpoint >0, no positive beta-0 bound, nonpositive averaged permutation null, positive archived-shell planted signal and fair-bit calibration agreement. beta-8 transfer, affine scores and fixed axes are secondary. Nonpositive bounds do not imply absence.",
+  "counts": {
+    "parents": 2048,
+    "independent_blocks": 4,
+    "parents_per_block": 512,
+    "panels": 128,
+    "positives": 262144,
+    "positives_with_contrast": 231544,
+    "k_histogram": [
+      0,
+      30600,
+      39732,
+      39345,
+      34564,
+      29755,
+      24132,
+      18508,
+      14032,
+      9423,
+      6740,
+      4576,
+      3684,
+      2093,
+      1540,
+      1110,
+      2310
+    ],
+    "ordered_strata_observed": 6551,
+    "strata_with_any_donor": 6182,
+    "uncovered_physical_mass": 0.116729736328125,
+    "mean_negatives": 3.77166748046875,
+    "expected_unique_positions_per_parent": 126.98931322848875
+  },
+  "data": {
+    "9": {
+      "index": 9,
+      "beta": 3.05,
+      "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+        "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+        "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+      ]
+    }
+  },
+  "params": {
+    "train_panels": 192,
+    "validation_panels": 128,
+    "max_K": 16,
+    "hidden": 32,
+    "parent_block": 512,
+    "train_parents": 10240,
+    "critic_gradient_training_parents_each": 5120,
+    "nuisance": "opposite train half only, 8 pseudoexamples per ordered stratum",
+    "train_anchor_seed": 430161,
+    "bridge": "average of two critic score arrays; disjoint gradient halves, cross-fitted priors, same frozen encoder (not independent replication)",
+    "shell": "six 5x5 faces, radius 3, w=3, buffer=1; 150 shell labels",
+    "corner_indices": [
+      0,
+      2,
+      6,
+      8,
+      18,
+      20,
+      24,
+      26
+    ]
+  },
+  "provenance": {
+    "nonlinear": "w3-b1-learned-s11",
+    "static_archive_sha256": "5e6c4724dd6a340cda51a47bcf7c55a20856922d26d034972f42a3b41498e922",
+    "affine": "seed-29.npz",
+    "affine_sha256": "dba735d9787ed04532497e7c29c23e6d4084e8e8b58e332d4a39d23a9f36512b",
+    "fixed": "bits-body-1: two opposite A-species indicators. H is a function of C; its true conditional MI and its optimal zero-critic bound are exactly zero."
+  },
+  "critic_sha256": "c57ff34f9563329d53e33763b5a87efc7888c2543a5e1708090330275deea1c2",
+  "analysis_sha256": "66189859f09b691f8474b5b8e5fa23ac2de131880e8845a11ef6a915939b9af8",
+  "results": [
+    {
+      "beta": 3.05,
+      "index": 9,
+      "frame": "uniform cubic",
+      "scores": {
+        "nonlinear": {
+          "mean": 0.042087905877159146,
+          "lo": 0.041354350791959704,
+          "hi": 0.04282146096235859
+        },
+        "affine": {
+          "mean": 0.031491621170013834,
+          "lo": 0.028833925514484122,
+          "hi": 0.03414931682554354
+        },
+        "permuted": {
+          "mean": -0.04381932088485914,
+          "lo": -0.044990482418396,
+          "hi": -0.04264815935132228
+        },
+        "outside_null_times_coverage": {
+          "mean": -0.00037970465373456905,
+          "lo": -0.000691693169100253,
+          "hi": -6.771613836888514e-05
+        },
+        "outside_coverage": {
+          "mean": 0.00612640380859375,
+          "lo": 0.003236479693769943,
+          "hi": 0.009016327923417557
+        },
+        "plant_shell": {
+          "mean": 0.10693675995405529,
+          "lo": 0.10628987251868173,
+          "hi": 0.10758364738942884
+        },
+        "plant_fair": {
+          "mean": 0.12771190540669264,
+          "lo": 0.12622966828091794,
+          "hi": 0.12919414253246733
+        },
+        "fair_expected": {
+          "mean": 0.12773453494475986,
+          "lo": 0.12750376713326222,
+          "hi": 0.1279653027562575
+        },
+        "coverage": {
+          "mean": 0.883270263671875,
+          "lo": 0.8809432658119836,
+          "hi": 0.8855972615317664
+        },
+        "mean_k": {
+          "mean": 4.77166748046875,
+          "lo": 4.743229503664216,
+          "hi": 4.800105457273284
+        },
+        "critic_fold_0": {
+          "mean": 0.041100087378625576,
+          "lo": 0.04040208732758472,
+          "hi": 0.04179808742966643
+        },
+        "critic_fold_1": {
+          "mean": 0.041265846362901495,
+          "lo": 0.04046417181496188,
+          "hi": 0.04206752091084111
+        },
+        "nonlinear_minus_affine_score": {
+          "mean": 0.01059628470714532,
+          "lo": 0.008435992501708742,
+          "hi": 0.0127565769125819
+        },
+        "fair_mc_minus_exact": {
+          "mean": -2.2629538067225896e-05,
+          "lo": -0.003380094586170297,
+          "hi": 0.003334835510035845
+        },
+        "fixed_corner_code": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        },
+        "zero_critic": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        }
+      },
+      "counts": {
+        "parents": 2048,
+        "independent_blocks": 4,
+        "parents_per_block": 512,
+        "panels": 128,
+        "positives": 262144,
+        "positives_with_contrast": 231544,
+        "k_histogram": [
+          0,
+          30600,
+          39732,
+          39345,
+          34564,
+          29755,
+          24132,
+          18508,
+          14032,
+          9423,
+          6740,
+          4576,
+          3684,
+          2093,
+          1540,
+          1110,
+          2310
+        ],
+        "ordered_strata_observed": 6551,
+        "strata_with_any_donor": 6182,
+        "uncovered_physical_mass": 0.116729736328125,
+        "mean_negatives": 3.77166748046875,
+        "expected_unique_positions_per_parent": 126.98931322848875
+      },
+      "fair_BSC_true_MI": 0.19274475702175736
+    },
+    {
+      "beta": 3.05,
+      "index": 9,
+      "frame": "fixed laboratory",
+      "scores": {
+        "nonlinear": {
+          "mean": 0.004250082644533551,
+          "lo": 0.0033603148948636273,
+          "hi": 0.005139850394203475
+        },
+        "affine": {
+          "mean": 0.0034940991193620364,
+          "lo": 0.003003942205502731,
+          "hi": 0.003984256033221342
+        },
+        "permuted": {
+          "mean": -0.0046800098137632805,
+          "lo": -0.005002200470935639,
+          "hi": -0.004357819156590922
+        },
+        "outside_null_times_coverage": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        },
+        "outside_coverage": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        },
+        "plant_shell": {
+          "mean": 0.01080668796653689,
+          "lo": 0.010074702666691809,
+          "hi": 0.01153867326638197
+        },
+        "plant_fair": {
+          "mean": 0.012729148238452767,
+          "lo": 0.012095189785859276,
+          "hi": 0.013363106691046258
+        },
+        "fair_expected": {
+          "mean": 0.012865826162042703,
+          "lo": 0.012336251532300868,
+          "hi": 0.013395400791784537
+        },
+        "coverage": {
+          "mean": 0.12830734252929688,
+          "lo": 0.12304364649590147,
+          "hi": 0.13357103856269228
+        },
+        "mean_k": {
+          "mean": 1.1444091796875,
+          "lo": 1.1382871102867964,
+          "hi": 1.1505312490882036
+        },
+        "critic_fold_0": {
+          "mean": 0.004181101317769543,
+          "lo": 0.0033444056960791092,
+          "hi": 0.0050177969394599765
+        },
+        "critic_fold_1": {
+          "mean": 0.0041466821605089625,
+          "lo": 0.003198488449183184,
+          "hi": 0.005094875871834741
+        },
+        "nonlinear_minus_affine_score": {
+          "mean": 0.0007559835251715157,
+          "lo": -0.0001912166136098795,
+          "hi": 0.001703183663952911
+        },
+        "fair_mc_minus_exact": {
+          "mean": -0.0001366779235899341,
+          "lo": -0.0014228203097111673,
+          "hi": 0.001149464462531299
+        },
+        "fixed_corner_code": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        },
+        "zero_critic": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0
+        }
+      },
+      "counts": {
+        "parents": 2048,
+        "independent_blocks": 4,
+        "parents_per_block": 512,
+        "panels": 128,
+        "positives": 262144,
+        "positives_with_contrast": 33635,
+        "k_histogram": [
+          0,
+          228509,
+          29898,
+          3303,
+          384,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ordered_strata_observed": 6555,
+        "strata_with_any_donor": 3616,
+        "uncovered_physical_mass": 0.8716926574707031,
+        "mean_negatives": 0.1444091796875,
+        "expected_unique_positions_per_parent": 126.98931322848875
+      },
+      "fair_BSC_true_MI": 0.19274475702175736
+    }
+  ],
+  "interval_method": "Two-sided Bonferroni 98.333333% Student intervals over means of disjoint, equal-sized parent blocks; approximate iid-block inference, not independent sites, panels, seeds or exact finite-sample coverage.",
+  "interpretation": "Raw expected log K + f(H,Epos,C) - log sum_j exp f(H,Ej,C) is a lower bound on I(H;E|C). K depends on C and candidate availability, independent of values given C. Every physical case contributes once, including K=1 at zero. Exact expectation over the frozen stochastic encoder. Paired nonlinear minus affine is a critic-score contrast, not a difference or ordering of true informations.",
+  "matching": "Case uniform over parent and anchor; one anchor per parent per panel. Within its orbit uniformly align each independent donor to EXACT ordered C, then select up to K-1 distinct donors in a shuffled cyclic order. For fixed laboratory axes no alignment; do not equate these estimands without isotropy. Shared target orientation per orbit only couples cases within the parent block.",
+  "calibration": "Physical plant: archived shell face-center species A sent through BSC(0.2), oracle critic. Fair calibration independently tags the existing shells with fair bits, same BSC, exact finite-K binomial expectation at actual group sizes. Outside null substitutes H from a disjoint matched parent outside the entire group where available, zero elsewhere; averaged permutation randomizes positive index within the group. Neither null is subtracted."
+}
