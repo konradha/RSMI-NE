@@ -1,0 +1,2091 @@
+{
+  "design": "614ea1f2f6a8bc76ba15746913b80143e5c0f93a84b883435e19d54badc7f1e3",
+  "parents": 163840,
+  "source_matched": 163822,
+  "source_manifest": "105dd7a653d32dc036284b3fd459998066e097ccb8170d5c2260acd666680051",
+  "target_banks": {
+    "b00-214-train.npz": "86f5038bef11f0aaebe9813eea33dba17cf6b69646c933a3e4c68ba79dca2710",
+    "b00-232-train.npz": "4517f7fd9446ff191b2c8de65823fded2cdf7ed808f43d96737ce36a83e9dadb",
+    "b00-133-train.npz": "5bdd03ef328eabba809cb7ac2b4abb84ffb904e5f5e51dc27cfd439311ba7582",
+    "b00-124-train.npz": "afd974b8a63c64e3e3f5d44bd4b350f1d90a0ff5b06b7572ccf177cb600053f4",
+    "b00-313-train.npz": "9d1dbdb1be98874e45880b87b6d0080a8eeff3bb77df2ddbea2813d8870ac5d8",
+    "b00-322-train.npz": "6ebb7d534df0456b9113d53263f4cce58159cb55025ef735c06e86283304832e",
+    "b00-214-test.npz": "447cf7c038c724f6ec9858ce77dc81650a48d5a576f48e907483c236d6fe4de9",
+    "b00-232-test.npz": "e34068d63dbe62e460daa07957e708da1cb88c808ee394c13801af2206cbd27e",
+    "b00-133-test.npz": "2a1e2851100caa804ae0f2b35257a090dc03e78e118bd5d72b10939cdf9c60e4",
+    "b00-124-test.npz": "ec2f72d5147fa985deda2597ed50323bfb8c13a67ab8a9f2dc5441d05576919d",
+    "b00-313-test.npz": "019c08cd98ee35ecb63846d2986847d195f2b8f63e94e28c74fbaa30c2a07e9e",
+    "b00-322-test.npz": "2dabd22ce159651489793dc735df499f2e247add89ffda434096cb52c862d97b",
+    "b01-214-train.npz": "9abd9a3e3884f8798dbbb367631f2022cd35772fd2c7a072a2c05bea1ca503c1",
+    "b01-232-train.npz": "4fe003c9f6ea41aa9dfd5b66b4d0aa7d3a345396b2d7e8afc4a4d77e0a53fa88",
+    "b01-133-train.npz": "4a2dbc2363021a6992bf3fcf3e83a89c089e4badd9b5eb0cdda4c61827f6f707",
+    "b01-124-train.npz": "51236003602b58a691e8f0abb9597ffa5cc08c462f4f081b992f6f3739f54aa0",
+    "b01-313-train.npz": "1797104a5f77e8020cabc4e16d053c863bc46544be37bc5a44a611b36ddf9663",
+    "b01-322-train.npz": "9db2ce423275bc65b8d357a7412829f9d4064be360184a78dd7258d7e44c5af5",
+    "b01-214-test.npz": "7be23494c4e9dd5097eb78b4142c4b291adc75d05371f657090ac9c8564f3f6c",
+    "b01-232-test.npz": "a007f2baa831fdf4884ab4a2f79e61cae0349d05df90ea71656f86109b923315",
+    "b01-133-test.npz": "58ee2849748fb76a24ea5e1f14f5c953b256baae986f0b708c26095e2721827b",
+    "b01-124-test.npz": "68fa5c670c4521a91fc67cd8a4479102d73b9a22a97fc7c61d82da35bb080874",
+    "b01-313-test.npz": "cf0e4c8f1286e26b1234858088b6988c0dc5d724a79fd326632c723fbc71ef52",
+    "b01-322-test.npz": "200325abd6a1ce3090c041090169e6d641d941464de04e2b81da95c2359bb241",
+    "b02-214-train.npz": "435065e77531d004018c56f6a73d1eb9583d0795f7832cfc72545be09cd51574",
+    "b02-232-train.npz": "7a0154ca97e134f6b7707f381c30aef06a11bb200a595dcf6e9526a25b70ba5d",
+    "b02-133-train.npz": "6081c748739014c26acbc1e85009cdb4c76b41de2cab6eaec354c51d034dbed1",
+    "b02-124-train.npz": "4b26e31024bf7bc6d172ab0e39f2f445be48acaefb3ceae37bdc5c6d9d4fdd47",
+    "b02-313-train.npz": "5335024669df0f94de22b577201aea5db7e13b408217a1577b40aded4833763f",
+    "b02-322-train.npz": "6f2efe19d411ba07982de2342788833d6682ca95c68a64081e69d31466b8b22c",
+    "b02-214-test.npz": "1eca571b8da80833c22910da783fda3d75950053a95de124165a462bba418785",
+    "b02-232-test.npz": "b5425cf4299911e7b51164d6bdd504fd50aad3cd6f8eb3d1e966df43d2ce2520",
+    "b02-133-test.npz": "b0216a2c5973727bcb4515d10caa03fab7eaab7719cfbc6bb10104849bde64cc",
+    "b02-124-test.npz": "57fb70e473087937e3ab33d66ca9a67a9b9a399bf50323b2a143a67741caa3d2",
+    "b02-313-test.npz": "7c5f409915b4f3bff4e559f73884430ad23fb6c5b0d314fccd307a298ec5842c",
+    "b02-322-test.npz": "b410fcd78188ff054b02939858f85b9f46bedfc9d6483c8b8c8c6b771310fbf9",
+    "b03-214-train.npz": "f25ad0aeb190f2c600da9adf16a1c878f6e8a824270351f92b9ecc2bd985540f",
+    "b03-232-train.npz": "50a1fc03b4610ab300320caaa5ad84f571f56e6ed973322334b68efdde96f0bf",
+    "b03-133-train.npz": "dd4808ea163c7477b7f380147dc23923086019df0c11ba4d734d3f92b405df73",
+    "b03-124-train.npz": "c19a7b0142522f470e30064ec662b211679da47cd696ad042e556a75c8bbb1a1",
+    "b03-313-train.npz": "7452eea8ecfc3fbc5fbe071653fc6feb1f6e055f534803a89e97bc97a9b03108",
+    "b03-322-train.npz": "97596deb5441a344518c6ee2196d819226a5af1b9dd70acc929a9ca002d5b75f",
+    "b03-214-test.npz": "55c1d5f8fc8b9102c4ed393c5a255016cc916e240176e9630abde3380dea468c",
+    "b03-232-test.npz": "12541c3261669e4ca6453ab406b33c7decff642e15880e86739ec437152ee8ac",
+    "b03-133-test.npz": "59a9edb4f33f8e1b6c701b755bc58ea88e24f52b6aa855f2a559796ad56c64be",
+    "b03-124-test.npz": "9faf34e82cd68f0a24953dcaf39be948534221963e8d8f76438fde9bee092010",
+    "b03-313-test.npz": "bc9ef6ff70bcb8ff20ec4dc4c140aa00f9ba328324a8d47c9610a472fbb26b5e",
+    "b03-322-test.npz": "8c28121ca5164226e0b0ba342da596b6b4a81b1bd05c232818cfa00b2098b553",
+    "b04-214-train.npz": "9e30228dbbcc89e276d5cb6f19241fde41973c0fc6626298c044dc8d1ea81d92",
+    "b04-232-train.npz": "77019d9c33e8667c7c09689050be10daeb0dbc42c4d2f5c8b03689c6eae7a359",
+    "b04-133-train.npz": "9d409fb22067c74ebda93c9503134275b7855fe8ac00e69ce8c5ded32a322318",
+    "b04-124-train.npz": "8ea39e3863972d92363eee18dfcd2666efdebe0cc245df7b5e8ea45df5f45fd9",
+    "b04-313-train.npz": "61437d1bc18974ec0397937524da250392fd42b77381c751b52e803b64a58133",
+    "b04-322-train.npz": "34f5e1441cc238619379cf7c671d4f812450d0c055210c7c49d3c6584e3475c8",
+    "b04-214-test.npz": "c30ce09e66574391a2becdb4ca247f0d7acea8db0e18c4c57ce080d5003c2384",
+    "b04-232-test.npz": "a3cccee380872d948a2e4814da22694f9369f696149490777ca219d1395d23a8",
+    "b04-133-test.npz": "e719979fe7b579443285291943906ee19de8f73a3bbb615b1c10a4daca618e86",
+    "b04-124-test.npz": "a6df00db2dd1b6a7f2068df5469bf860458c895b2658d48ccc30ceef0541028b",
+    "b04-313-test.npz": "85f4ab069512d65687ecfc35792157f0518b9efd89a3cb43966e275fce353a9c",
+    "b04-322-test.npz": "e39541765aa832e4fb0fcb4fdbcbebd5558e10a42757f956a837fc1a0a6300fc",
+    "b05-214-train.npz": "54e33498b74d595f9e2b179ce40b62e120b8c09e4bb9f24b22d00bd3380cb4ec",
+    "b05-232-train.npz": "7f80b42bf8f82eb4a6177c0550c60c333db3763c5d49283e2ada8925711a33e4",
+    "b05-133-train.npz": "a383783d48143b2391c4fe3f84a2e1b382682a05f2c6dfdad092800aa595e5dd",
+    "b05-124-train.npz": "83add80eb1ab02841659adf59505c2ee10b3e710b64300a4aefa3b415f402ded",
+    "b05-313-train.npz": "539555a04e4c73de9136b88915f897d15a8d57bc27c9a6fbabb31e12f544e892",
+    "b05-322-train.npz": "422e0c13784dc9d91d87bb2c7cd396fabc9cbbd7a015d45af0333289f0babe4c",
+    "b05-214-test.npz": "c19087d334818483bc73bb21c06f44f5a74d26fd023c5c6f95f65a3c04def43f",
+    "b05-232-test.npz": "818271a62801eb0daa105bffeda2d611e943549cbed78bec66b7d4779c77cb98",
+    "b05-133-test.npz": "9bac5e3f213fe72d66ed89371357e792ed8f3b0aaa6543a5397acd47a9658ade",
+    "b05-124-test.npz": "01524108a30a74baa0b5b3031e519a90f05fd99384ce9debed00e9950e3a9eac",
+    "b05-313-test.npz": "06f64e326abe5506552972ff629511edc5c7c51af02b2c38c181a0f9e16ba9ce",
+    "b05-322-test.npz": "34f996c31498a40163c30cb496bbef475f4c214daaf203adea0a113a741ec95c",
+    "b06-214-train.npz": "fc23fb08fa942925fae5a7e7dcb4abe35d86aa3ff2b4794659d943242daa0f2c",
+    "b06-232-train.npz": "bfca3250e8aaaa4e84c4be90377a7e67ce2c0aebfbf3039fbf7426b0fe8a30d3",
+    "b06-133-train.npz": "d6086aba948387fe845cfcfa1cdab3a1d52c93ce3754543df5857ddb28957861",
+    "b06-124-train.npz": "9d04a918ae0f945f70e9fe32c1cc228b6198fb321bc06b51a66708cebe9aabaf",
+    "b06-313-train.npz": "2e780ecb745bfbfec41aec19c6ab826dd3982df70a50264b58fd42452e4b652b",
+    "b06-322-train.npz": "08644e194b85b00bf635885152d63c2258f5b2a0fa4332bc02900aee7c750d02",
+    "b06-214-test.npz": "b9fabdb27df56e6c419de14620bb56fe44a53912a49be9158f90f1026640e45e",
+    "b06-232-test.npz": "c840dd3a28c4d01f2667c9a80b529c3b419f9a22df4b97bf27df99e7bb8d2f4b",
+    "b06-133-test.npz": "00d1036d046ad7796d6c192209a4f2a398168135400da8c0d7ebebe23a54a065",
+    "b06-124-test.npz": "41af02e66d920b71c44e2b3e1376518c12fb5cea21be32c39c45dbe9b68bb282",
+    "b06-313-test.npz": "5b9cb094dec5c1d1cab1a15730a7da831fbb02e48c917fb292faf9f564206536",
+    "b06-322-test.npz": "9b94bed174b269ca2a9cbabc49d76e30b2fee32b6e70109429caa348443264c8",
+    "b07-214-train.npz": "2cf7a4acb1071f11f66959e7a06e17b601be8c951a3ac7b637cb2f9fd167fb2e",
+    "b07-232-train.npz": "55741fb5e14f56b4e23bd9cfbf0c17000f1f66610f1ecf0e1f0fab3af9dac90f",
+    "b07-133-train.npz": "653b9c57e3fc261ae54e72bd3a885ddbb5188381a4e0ce570c8bc9b3d2cce959",
+    "b07-124-train.npz": "3467e434d29070de833b74c64aac93f3eb82c343aaa9fd309e72b6ce7f31513d",
+    "b07-313-train.npz": "49bedd70280eddb7953a3ddea6066f945d34ef88d471c73c7c4777af14bdbe68",
+    "b07-322-train.npz": "436152cff4872ef9986c9ec30ca5f85ee62d0be9422bc4a8185b4d5e6d01256a",
+    "b07-214-test.npz": "34d1cd4ced4baa05e121467721be326331760e63f0b42617229d814dccde7b28",
+    "b07-232-test.npz": "de2c51baf680d68fbe9537f4c43fc7039000dc7928d5270733ffde817e2f9724",
+    "b07-133-test.npz": "ba3d4ac32c9df19827cd3aac34cd312806e6a50c037ff95839a164071cae0d1e",
+    "b07-124-test.npz": "50bcca6e8eab456521144e441c8e7d3ea2fea1e9074385afa9ef417e4c243b98",
+    "b07-313-test.npz": "d58e610d3411ac91b5312d68cf81480a2bc499908d2fcea5d6b3c9327b36513f",
+    "b07-322-test.npz": "506bec85e990fa55e681d4c36c485c51d6554cc0c52c23802531b2693413d97f",
+    "b08-214-train.npz": "6cdaef362a7f81fe3c4fdb55c9cb05d03c9eb261b997d5396a617423d0077df3",
+    "b08-232-train.npz": "4b2cc9460c1ebd16501e492e973023314b802ca6b7fb554e52f38917afc4315d",
+    "b08-133-train.npz": "6860740845296fa0542d70ac9eb6940c5e6c19de9a06b884d870a00d2242a1ca",
+    "b08-124-train.npz": "ea06d22490f025f8c1b257c7c764fc9b69a24a69213a61417a0c6c6f5f4dfe71",
+    "b08-313-train.npz": "a7f6440480e41d391d8abb6f14a97b05146a53dbd91ce637a1d36fc75fbc7c97",
+    "b08-322-train.npz": "c578fba5a9dc6c1ec1e937d8be21a4f462912e3df54a4381b55b7bc421978f56",
+    "b08-214-test.npz": "5b3e9192a0ab3d3d5b4d14d03bb6c626b617eefa1b6d8e275e343de9d5b32b7f",
+    "b08-232-test.npz": "86121efa12294c4dae61df3525ea21926ea12287497e8934601427ba344af34b",
+    "b08-133-test.npz": "de521511fcfa2415d15339ddc4f9199e990fbd67989002cc39ab74016e69e9e1",
+    "b08-124-test.npz": "fc25b4eec9d004833f65296766726c2403e4dc49cc6b320b72674580bbd2bd31",
+    "b08-313-test.npz": "dbcd79259b393f3cb966ea3953cd59658f89e4dcb9ad915b176855a45b353222",
+    "b08-322-test.npz": "8ce29afe6d087d4814d2f0e6d9f091ce4cceaa468a1bd0ee85400dd13487440e",
+    "b09-214-train.npz": "e3ec73cf1044d8d9295392e78b475998aed8e198fedef0d697e4b02d9493150d",
+    "b09-232-train.npz": "a3cfa699b8e17c4cd54e1280f898ad6fee3590fa73d2cc56eef9d8c22efb011e",
+    "b09-133-train.npz": "b7f1d1bc29252fe5ea57a27cf9291010bfa1d7699b98c9f656c361babab2cf09",
+    "b09-124-train.npz": "a039e7f35c4a3466a4c62b8bcd02caecdea459da87d4e2894ae61f1ccd78d676",
+    "b09-313-train.npz": "11a3d3a75181df9e28153060e49d66c9ded84481de504dca82f31eecc6d77d0d",
+    "b09-322-train.npz": "ab17d53f6c8b56678dda25e4313c5d264c345184eafa5d61e7b1edd3b020dca8",
+    "b09-214-test.npz": "65b4f7849c02fdeab4daf5a8aaada49616d43d796c26a49e757c10b01450b583",
+    "b09-232-test.npz": "78e755246214430aa1c9b44868348603e6f76ec2ffb9fd68dfb29087a0417e97",
+    "b09-133-test.npz": "1e480efc89dc1223b255f1733905c605b586a71dad1a7ff756d6d60e9275bd54",
+    "b09-124-test.npz": "9d39b685b2a6580faa4ae301c10f425d9548b68ef6f5d358ccfc9dbcd73ec195",
+    "b09-313-test.npz": "4357ee04cd049786345f2665324df23fe3616d9fb5b9d97a7af55b8db1453e53",
+    "b09-322-test.npz": "41436fbaa87831d16c7b756f86606ec929a49de2b385aea04a1af22ec84b718f"
+  },
+  "full_energy_audits": [
+    {
+      "index": 0,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        15,
+        3
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        15,
+        8
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 10,
+      "periodic": true,
+      "anchor": [
+        1,
+        19,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        1,
+        11
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        8,
+        15,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 4,
+      "periodic": true,
+      "anchor": [
+        14,
+        6,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        6,
+        14
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        19,
+        7,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        0,
+        1,
+        16
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        19,
+        12,
+        9
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        7,
+        19,
+        15
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        9,
+        19,
+        14
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        19,
+        19,
+        3
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 0,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        19,
+        19,
+        11
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        14,
+        19,
+        9
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        0,
+        3,
+        2
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        4,
+        3
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 7,
+      "periodic": true,
+      "anchor": [
+        16,
+        12,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 9,
+      "periodic": true,
+      "anchor": [
+        10,
+        15,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        17,
+        7,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        0,
+        5,
+        1
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        7,
+        19,
+        12
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        7,
+        19,
+        9
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        18,
+        9,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        10,
+        15,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        12,
+        6,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        15,
+        19,
+        3
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 1,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 9,
+      "periodic": true,
+      "anchor": [
+        18,
+        2,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        14,
+        19,
+        12
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        0,
+        14,
+        14
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        11,
+        7
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        5,
+        15,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        0,
+        3,
+        11
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        14,
+        19,
+        18
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        0,
+        2,
+        18
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        0,
+        2
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        11,
+        0,
+        11
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        9,
+        5
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 7,
+      "periodic": true,
+      "anchor": [
+        19,
+        7,
+        7
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        7,
+        6,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        0,
+        17,
+        15
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 2,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 4,
+      "periodic": true,
+      "anchor": [
+        12,
+        18,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        5,
+        19,
+        5
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        8,
+        19,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        19,
+        8,
+        5
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        0,
+        8,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        18,
+        19,
+        7
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        7,
+        19,
+        4
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        0,
+        11,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        0,
+        11,
+        15
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        1,
+        0,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        0,
+        5,
+        3
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        16,
+        18,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        0,
+        8,
+        15
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 9,
+      "periodic": true,
+      "anchor": [
+        15,
+        19,
+        4
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 3,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        1,
+        3,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        16,
+        19,
+        3
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        19,
+        12,
+        2
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        4,
+        19,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        12,
+        14,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        1,
+        0,
+        3
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        13,
+        19,
+        3
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        10,
+        0,
+        13
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        15,
+        5,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        15,
+        14,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        19,
+        14,
+        13
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        4,
+        17,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        8,
+        15,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        0,
+        15,
+        2
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 4,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        19,
+        5,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        10,
+        15,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        16,
+        19,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        7,
+        12,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        6,
+        13
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        19,
+        14,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        3,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        6,
+        2
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        16,
+        11,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        5,
+        4,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        19,
+        11,
+        5
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 4,
+      "periodic": true,
+      "anchor": [
+        12,
+        0,
+        17
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        19,
+        15,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        1,
+        19,
+        10
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 5,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        8,
+        14,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        2,
+        12,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        6,
+        3,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        5,
+        18,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        1,
+        4,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        12,
+        1,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        13,
+        6,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 4,
+      "periodic": true,
+      "anchor": [
+        19,
+        11,
+        9
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        5,
+        14,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        7,
+        3,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        9,
+        6,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        1,
+        18,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 10,
+      "periodic": true,
+      "anchor": [
+        12,
+        0,
+        3
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        16,
+        9,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 6,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        4,
+        9,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        2,
+        0,
+        2
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 11,
+      "periodic": true,
+      "anchor": [
+        12,
+        14,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        19,
+        4,
+        3
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        3,
+        3,
+        19
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        19,
+        10,
+        6
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        13,
+        0,
+        16
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        14,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        19,
+        2,
+        9
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        8,
+        16,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        8,
+        4,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 9,
+      "periodic": true,
+      "anchor": [
+        19,
+        8,
+        9
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        1,
+        13
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        16,
+        10
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 7,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        19,
+        13,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        3,
+        0,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        12,
+        13,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        6,
+        19,
+        13
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        3,
+        19,
+        7
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        1,
+        19,
+        3
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        0,
+        13,
+        13
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        9,
+        0,
+        5
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        2,
+        0,
+        11
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        4,
+        19,
+        5
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        13,
+        19,
+        2
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        19,
+        3,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        16,
+        4,
+        19
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        2,
+        16
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 8,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        10,
+        19,
+        10
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "223",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        11,
+        17,
+        0
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "214",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        12,
+        19,
+        0
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "232",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        1,
+        19,
+        11
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "133",
+      "side": "train",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        19,
+        0,
+        3
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "124",
+      "side": "train",
+      "roster_row": 3,
+      "periodic": true,
+      "anchor": [
+        19,
+        8,
+        16
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "313",
+      "side": "train",
+      "roster_row": 2,
+      "periodic": true,
+      "anchor": [
+        1,
+        2,
+        0
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "322",
+      "side": "train",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        9,
+        0,
+        1
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "223",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        9,
+        8
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "214",
+      "side": "test",
+      "roster_row": 1,
+      "periodic": true,
+      "anchor": [
+        19,
+        12,
+        11
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "232",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        11,
+        19,
+        4
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "133",
+      "side": "test",
+      "roster_row": 7,
+      "periodic": true,
+      "anchor": [
+        0,
+        0,
+        10
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "124",
+      "side": "test",
+      "roster_row": 5,
+      "periodic": true,
+      "anchor": [
+        1,
+        19,
+        8
+      ],
+      "integer_checks": 105,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "313",
+      "side": "test",
+      "roster_row": 6,
+      "periodic": true,
+      "anchor": [
+        0,
+        8,
+        1
+      ],
+      "integer_checks": 140,
+      "max_error": 0
+    },
+    {
+      "index": 9,
+      "sector": "322",
+      "side": "test",
+      "roster_row": 0,
+      "periodic": true,
+      "anchor": [
+        4,
+        18,
+        19
+      ],
+      "integer_checks": 210,
+      "max_error": 0
+    }
+  ],
+  "transferred": "1e62446f3ebcae888c73f064362aa066a1d24f3e8b59e7cd97531acb76f1ab08"
+}

@@ -1,0 +1,33 @@
+{
+  "experiment": 5,
+  "preregistration": "4d03969912a00182b340513cda5766f9c35e1ca3",
+  "source": "030b46644405cd94b394a843d96767d7c2c38ddf",
+  "sectors": [
+    "223",
+    "214",
+    "232",
+    "133",
+    "124",
+    "313",
+    "322"
+  ],
+  "target_passes": 6,
+  "target_above_packing_all_seeds": 0,
+  "target_above_random_margin_all_seeds": 0,
+  "cold_target_cells": 18,
+  "cold_target_positive_paired_null_lower95": 14,
+  "cold_target_practical_null_lower95": 1,
+  "cold_target_worst_T_lower95": 0.9542748997658,
+  "cold_target_worst_fraction_lower95": 0.9483470416004,
+  "source_replay_cases": 30,
+  "source_labels_compared": 6300,
+  "source_labels_differ": 0,
+  "periodic_integer_differences": 22400,
+  "null_assignments_per_cell": 64,
+  "null_rows": 13440,
+  "archive_sha256": "5d54caef400d8fa99b7decb4765babd432f07dd345c856f4a9a229066c8d866f",
+  "modal_jobs": 0,
+  "charge_usd": "0.00",
+  "remaining_usd": "17.99322425",
+  "started_06": false
+}
