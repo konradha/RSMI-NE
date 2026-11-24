@@ -1,0 +1,13 @@
+{
+  "design": "f52f1281b66586c89521e2eb00f531f428f7b38c984ed04b5954a9fce9120943",
+  "bank_manifest": "105dd7a653d32dc036284b3fd459998066e097ccb8170d5c2260acd666680051",
+  "parents_scanned": 163840,
+  "eligible": 163822,
+  "integer_checks": 34402620,
+  "total_mismatches": 0,
+  "max_full_probability_error": 0.0,
+  "endpoint_rows": 130,
+  "undefined_equalities": 4,
+  "max_finite_03_error": 5.0182080713057076e-14,
+  "null_rows": 85
+}

@@ -1,0 +1,51 @@
+{
+  "reference_commit": "030b46644405cd94b394a843d96767d7c2c38ddf",
+  "preregistration": "8145a10356ff551d417b99f1eeee306898e477a5",
+  "primary_beta": 3.05,
+  "parents": 8187,
+  "signed_change": "full minus fields-only T",
+  "margin": 0.01,
+  "results": [
+    {
+      "observable": "vacancy",
+      "change": 0.9986747185744,
+      "lower95": 0.9979657013926,
+      "upper95": 0.9993837357562,
+      "classification": "material_increase"
+    },
+    {
+      "observable": "linear",
+      "change": 0.1535401341456,
+      "lower95": 0.1460930266349,
+      "upper95": 0.1609872416564,
+      "classification": "material_increase"
+    },
+    {
+      "observable": "hard_6101",
+      "change": 0.1440182093574,
+      "lower95": 0.1362995113286,
+      "upper95": 0.1517369073863,
+      "classification": "material_increase"
+    },
+    {
+      "observable": "hard_6102",
+      "change": 0.1843139329215,
+      "lower95": 0.1758059992572,
+      "upper95": 0.1928218665859,
+      "classification": "material_increase"
+    },
+    {
+      "observable": "hard_6103",
+      "change": 0.1725624159508,
+      "lower95": 0.163433049326,
+      "upper95": 0.1816917825757,
+      "classification": "material_increase"
+    }
+  ],
+  "all_three_codes_material_increase": true,
+  "modal_jobs": 0,
+  "charge_usd": "0.00",
+  "remaining_usd": "17.99322425",
+  "retrained": false,
+  "started_05": false
+}

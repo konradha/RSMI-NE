@@ -1,0 +1,16 @@
+{
+  "audit": "3da32fb6c9141bef3ae38a10659db72cf93e05255fc82414366b8e8de1b0c2db",
+  "test_parents": 81913,
+  "laws": 8,
+  "observables": [
+    "vacancy",
+    "linear",
+    "hard_6101",
+    "hard_6102",
+    "hard_6103"
+  ],
+  "memory_rows": 400,
+  "distortion_rows": 320,
+  "projection_parent_comparisons": 1965912,
+  "max_projection_excess_bits": 0.0
+}
