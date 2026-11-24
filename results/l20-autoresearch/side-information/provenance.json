@@ -1,0 +1,15 @@
+{
+  "sources": {
+    "0": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+    "6": "0f01043d3dc27a1bf0402e6e69d2f53b950f381aecef0cdb2949d01f6b0bc214",
+    "8": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+    "9": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca"
+  },
+  "critic_sha256": "c57ff34f9563329d53e33763b5a87efc7888c2543a5e1708090330275deea1c2",
+  "seed": 792241,
+  "fold": "historical validation only; frozen retrospective analysis, not another test",
+  "panels": 768,
+  "unit": "bits, not nats",
+  "channel": "pi_l(h|v) = (1-l)*q0(h|c) + l*pi(h|v), q0 = arithmetic mean of the original two frozen cold training priors. Decoder is degraded by the same mixture. Distribution over uniform independent cubic frames. Neither label nor new glass configuration sampled.",
+  "bounds": "H_emp(H|C) is concave in the joint measure, hence downward biased in expectation for each independent parent block; cross entropy against the fixed q0 is an upper bound on H(H|C). Subtract E H(pi_l|V) for the residual input-rate brackets. For relevance use H_emp(H|C) + E_pi_l log2 r_l(h|E,C): Barber\u2013Agakov conditional lower bound in expectation. The corner-only decoder null is at most zero even on the empirical distribution (Gibbs inequality). Do not interpret differences of achieved bounds as differences of true MI. Pointwise t intervals over disjoint parent blocks conditional on frozen weights."
+}
