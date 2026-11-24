@@ -1,0 +1,14 @@
+{
+  "scope": "Administrative archive metadata only, no physical arrays, jobs or simulations. No native NPZ required, including index 6. Row identities reconstructed from release layout and verified by all 30 prior public native fold hashes before use. No scoring or physical reads authorized by this design.",
+  "rows": 163840,
+  "lineage": ["chain_seed:uint64", "chain_id:uint64"],
+  "native_folds": "l20_pairs.partition(index); historical hashes mandatory",
+  "permanent_holds": "index 6 all; non-bulk/preparation; all native val/TEST; physical fork/development reserves; prior preflight heldout, old internal supervised selection/tuning/validation/audit; complete #04, 6912 cycle-boundary, 6016 spatial-cycle and HERO v1 non-FIT rosters, imposed by exact parent across all temperatures. List overlapping flags even for already blocked rows.",
+  "ranking": "For each permitted beta generate PCG64([26112501,index]) permutation of eligible bulk native TRAIN in original native TRAIN order. Among those not HERO v1 FIT, first floor(n/8) eval, next floor(n/8) dev, remaining fit. Assign HERO v1 FIT to fit only. Preserve overall permutation order within each role. No balancing shortcuts in roster construction.",
+  "anchor_seed": 26112502,
+  "development_release": "separate future numbered stage release only",
+  "identity_output": "CSV decimal integer identity fields, all rows including all 10 temperatures, raw and net lineage coverage. Duplicated held identities stay held across beta. No independent replication claim; historically generic training use is not a v2 exclusion.",
+  "synthetic": false,
+  "physical_feature_access": false,
+  "incremental_usd": 0
+}
