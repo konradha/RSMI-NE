@@ -1,0 +1,248 @@
+{
+  "feature_version": 1,
+  "full_member": "full_blend",
+  "simplest": "coordination",
+  "fit_parents": 7680,
+  "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "sklearn_version": "1.9.1",
+  "model_sha256": "939e6c88748c002b2c9586966f69eed4275e8579cc68b86ee699ef4cb9edbd84",
+  "feature_code_sha256": "d056a368b124ac57609a2b6c9dd85b6f1e2957e865520219a219a2df4fc332b5",
+  "validation_csv_sha256": "4043f66a1ff070f931eaef81f3c60cf0c064f2164e66d90dc918b3d2a1a36f48",
+  "banks": {
+    "train": {
+      "meta_sha256": "c1a0441093e9104289fa1695d07761c6bd6f1777fb62f14e48b36e1095b4d4c7",
+      "index": 9,
+      "beta": 3.05,
+      "fold": "train",
+      "parents": 10240,
+      "reps": 64,
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "lineage_sha256": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "sha256": {
+        "bonds.npy": "871ac96f89cba75c27228a77ee977f5ba425eaf2cc79a974df7f360f41401e24",
+        "m.npy": "0e8249b12d8290556140c6df59ce38e781f72ced9083c7b1283819b29ccd0e2d",
+        "origins.npy": "9b5f05b755c7a1658095aa8c6c861fa09ab8d311a6a3c7bdd690fac89c6e2a69",
+        "parent_id.npy": "dd387cf416c8ba1b457d5ce28fc993d15c5f240cee6323a103cde15a4bd347e0",
+        "parent_keys.npy": "c5e2095f6dddd62d8eb3c4a667f08405ce009b10989034314f579dace9c1ca92",
+        "v.npy": "25fe7121bc65db5047b88d2e612478f296cd58c6373abfb589e3bb41335b3f6d",
+        "y.npy": "4401751ac7745906dc788a453910d817c2cf4c994b142069a54d754ada3a18c2"
+      }
+    },
+    "validation": {
+      "meta_sha256": "ffeea173454b63736fa15130d44299fd51f6e24d07c2f8cea875f244988985c5",
+      "index": 9,
+      "beta": 3.05,
+      "fold": "validation",
+      "parents": 2048,
+      "reps": 192,
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "lineage_sha256": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "sha256": {
+        "bonds.npy": "ad18063f24537988f759dd93145e5f68bd548e9ca04f2242918a1e7f028e0f85",
+        "m.npy": "8f5c714a68be92c07bf4dd54114be7ee467c0a782fe30f4ada047a9565b07480",
+        "origins.npy": "95b041ef568484faba9a48390db1d7dbe01142299a2ffa5e5f1017209d865ed3",
+        "parent_id.npy": "2eaad3481c98e1b48530a444e966b8df85135948b815a4a70ee4647ab470e497",
+        "parent_keys.npy": "e1ea858eeae25944fda7551be2d3784e804fd97727c1b058d8b9518cb597998c",
+        "v.npy": "b0967f7815cd38b1e0d65bf5c0fdc59b20eebababd972a76408f2e82b64d4f14",
+        "y.npy": "73aa6891b2b08d91b613f82bb17c8d2c1abb4930f9cfe4597ebab3bf441249ba"
+      }
+    }
+  },
+  "reserved_calibration": {
+    "first_training_row": 7680,
+    "parents": 2560,
+    "fit_row_id_sha256": "7a25db1d451ae046b51ebb0a85be9d1f94331165c429ab890c6829e51c3eb60a",
+    "calibration_row_id_sha256": "fc19cc1682edccb06574d64dd2063351d0ee253c6fc8bab64d28c7c47e15586f"
+  },
+  "unit": "nats per outward pixel; average of three marginal Bernoulli losses, mean over origins within parent",
+  "selection": {
+    "tolerance_nats": 0.0001,
+    "simplicity_order": [
+      "marginal",
+      "composition",
+      "additive",
+      "pairs",
+      "species_nonlinear",
+      "coordination",
+      "full"
+    ],
+    "minimum_validation": "full",
+    "rule": "first within fixed absolute tolerance of minimum mean parent loss; full is independently the minimum among FULL readouts, never replaced by a simpler model"
+  },
+  "physical_scope": "Fixed conventional readouts only; a residual cannot rule out all physical observables/readouts.",
+  "fit_description": {
+    "composition": "nonlinear count table shrunk by 32 anchor equivalents toward marginal",
+    "additive": "binomial ridge logit; both species at all 27 sites plus composition offset",
+    "pairs": "additive plus internal separation-averaged AA/AB/BB and target-corner-rooted two-point profiles",
+    "species_nonlinear": "HGB on species/pair features, residual around binomial pairs",
+    "coordination": "HGB adds per-site coordination, deviations, exterior occupancy and pooled thresholds",
+    "full_class": "adds oriented internal costs, recoverable moment contrasts, class-specific summaries",
+    "full_threshold": "separate fit adds threshold-encoded internal edges and cumulative threshold counts",
+    "full_blend": "fixed equal probability average of class and threshold full readouts"
+  },
+  "hgb": {
+    "species_nonlinear": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.075,
+      "loss": "squared_error",
+      "max_bins": 63,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 128,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 318749,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "coordination": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.075,
+      "loss": "squared_error",
+      "max_bins": 63,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 128,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 318749,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "full_class": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.075,
+      "loss": "squared_error",
+      "max_bins": 63,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 100,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 128,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 318749,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "full_threshold": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.075,
+      "loss": "squared_error",
+      "max_bins": 63,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 128,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 318749,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "ridge": {
+    "additive": {
+      "iterations": 56,
+      "status": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "gradient_max": 2.253828229512911e-06,
+      "objective": 0.6105890648505317
+    },
+    "pairs": {
+      "iterations": 220,
+      "status": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "gradient_max": 5.6722379396473925e-06,
+      "objective": 0.6105388054143996
+    }
+  },
+  "validation": {
+    "marginal": {
+      "loss": 0.6109832243063098,
+      "mean_minus_full": 0.0004992833772216095,
+      "se_paired_minus_full": 3.084394876786186e-05
+    },
+    "composition": {
+      "loss": 0.6109938815960702,
+      "mean_minus_full": 0.0005099406669818595,
+      "se_paired_minus_full": 2.9980434510439538e-05
+    },
+    "additive": {
+      "loss": 0.61079737891487,
+      "mean_minus_full": 0.00031343798578163174,
+      "se_paired_minus_full": 1.9168718638729342e-05
+    },
+    "pairs": {
+      "loss": 0.6107718124106409,
+      "mean_minus_full": 0.0002878714815527303,
+      "se_paired_minus_full": 1.650839874211967e-05
+    },
+    "species_nonlinear": {
+      "loss": 0.6108157123018575,
+      "mean_minus_full": 0.00033177137276923537,
+      "se_paired_minus_full": 1.8386110925939796e-05
+    },
+    "coordination": {
+      "loss": 0.6105269604959841,
+      "mean_minus_full": 4.301956689582644e-05,
+      "se_paired_minus_full": 9.847537426119646e-06
+    },
+    "full_class": {
+      "loss": 0.6105041401457221,
+      "mean_minus_full": 2.0199216633743646e-05,
+      "se_paired_minus_full": 6.6645005572351445e-06
+    },
+    "full_threshold": {
+      "loss": 0.6105170278980794,
+      "mean_minus_full": 3.3086968991194346e-05,
+      "se_paired_minus_full": 6.6617209801706276e-06
+    },
+    "full_blend": {
+      "loss": 0.6104839409290883,
+      "mean_minus_full": 0.0,
+      "se_paired_minus_full": 0.0
+    },
+    "full": {
+      "loss": 0.6104839409290883,
+      "mean_minus_full": 0.0,
+      "se_paired_minus_full": 0.0
+    },
+    "selected": {
+      "loss": 0.6105269604959841,
+      "mean_minus_full": 4.301956689582644e-05,
+      "se_paired_minus_full": 9.847537426119646e-06
+    }
+  }
+}

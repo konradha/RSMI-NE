@@ -1,0 +1,928 @@
+{
+  "name": "inward vacancy count near (-1, -1, -1)",
+  "formula": "Number of vacancy sites among (0, -1, -1), (-1, 0, -1), (-1, -1, 0).",
+  "levels": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "expression": {
+    "op": "count",
+    "sites": [
+      9,
+      3,
+      1
+    ],
+    "species": [
+      0
+    ]
+  },
+  "length": 3,
+  "species_key": [
+    "vacancy",
+    "A",
+    "B"
+  ],
+  "coordinate_convention": "centered (z,y,x), flat index x+3*y+9*z using 0..2",
+  "coefficients": "All nonzero terms have unit coefficients except the second term of a difference (-1).",
+  "source": "archived cold beta index 9; fitting uses visible species, conventional coordination control, four teacher probabilities only",
+  "selection_procedure": "For each fixed field use multiplicative cell calibration (sum teacher+1)/(sum prediction+1), then row normalize, on top of additive log-posterior projection calibrated within 9 exact corner pairs. Equal calibration passes for the no-field comparison. Require training overlap: min(low,high) counts >=32 in contributing corner strata, total >=128 for at least one level pair. Maximize smaller of train and selection-validation mean paired soft log gain. Within one paired selection-validation SE of best, prefer fewer referenced sites, then fewer levels, then gain, then dictionary order. Separate validation-audit parents never select the field.",
+  "selection": {
+    "candidates": 149,
+    "supported": 143,
+    "one_se_eligible": 1,
+    "best_name": "inward vacancy count near (-1, -1, -1)",
+    "best_merit": 0.0027099602926428925,
+    "selected_merit": 0.0027099602926428925,
+    "positive_nominal_audit_lower_bound_by_seed": {
+      "11": true,
+      "29": true,
+      "47": true
+    },
+    "conclusion": "Conditional fidelity improvement across all three aligned teachers."
+  },
+  "teacher_contrast": {
+    "low": 1,
+    "high": 2,
+    "class_index": 1,
+    "opposite_stratum_weights": [
+      0.018214042870996868,
+      0.021301735573118125,
+      0.033440715185428765,
+      0.22238075598310128,
+      0.26832829864788044,
+      0.4192016586594732,
+      0.004324999163982121,
+      0.005060694898061553,
+      0.007747099017957664
+    ],
+    "stratum": "3*species(corner 0)+species(corner 26); vacancy=0,A=1,B=2"
+  },
+  "aligned_audit_contrast": {
+    "11": {
+      "teacher_probability": {
+        "mean": -0.6824779573400193,
+        "se": 0.002130431195067236,
+        "lo95": -0.6866536024823511,
+        "hi95": -0.6783023121976874
+      },
+      "teacher_minus_calibrated_additive_probability": {
+        "mean": -0.0634946341120571,
+        "se": 0.0006488606419220527,
+        "lo95": -0.06476640097022432,
+        "hi95": -0.06222286725388987
+      }
+    },
+    "29": {
+      "teacher_probability": {
+        "mean": -0.516503231582607,
+        "se": 0.002662096894796074,
+        "lo95": -0.5217209414964074,
+        "hi95": -0.5112855216688067
+      },
+      "teacher_minus_calibrated_additive_probability": {
+        "mean": -0.03523024717735775,
+        "se": 0.0004888048867440417,
+        "lo95": -0.03618830475537607,
+        "hi95": -0.034272189599339434
+      }
+    },
+    "47": {
+      "teacher_probability": {
+        "mean": -0.6753900011800313,
+        "se": 0.0021322851061576446,
+        "lo95": -0.6795692799881003,
+        "hi95": -0.6712107223719623
+      },
+      "teacher_minus_calibrated_additive_probability": {
+        "mean": -0.08574259813188764,
+        "se": 0.0008041892769705199,
+        "lo95": -0.08731880911474986,
+        "hi95": -0.08416638714902543
+      }
+    }
+  },
+  "matched_observations": [
+    {
+      "parent_id": 11325,
+      "off_support_hamming": 2,
+      "additive_corner_L1": 1.9133288860321045,
+      "changed_coordinates": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1
+        ]
+      ],
+      "low": {
+        "anchor_row": 51,
+        "v": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "value": 1.0,
+        "posterior": [
+          0.0012082618195563555,
+          0.9986806511878967,
+          0.0001086769625544548,
+          2.4180737909773597e-06
+        ],
+        "additive_corner_posterior": [
+          0.008176399394869804,
+          0.9899817705154419,
+          0.0018165124347433448,
+          2.5372673917445354e-05
+        ]
+      },
+      "high": {
+        "anchor_row": 17,
+        "v": [
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          0,
+          2,
+          2
+        ],
+        "value": 2.0,
+        "posterior": [
+          0.00025530834682285786,
+          0.004756283015012741,
+          0.9946264624595642,
+          0.00036198485759086907
+        ],
+        "additive_corner_posterior": [
+          0.002440453739836812,
+          0.03905326873064041,
+          0.9572111368179321,
+          0.001295214518904686
+        ]
+      }
+    },
+    {
+      "parent_id": 6538,
+      "off_support_hamming": 3,
+      "additive_corner_L1": 0.0021518145222216845,
+      "changed_coordinates": [
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ],
+      "low": {
+        "anchor_row": 53,
+        "v": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          0,
+          2,
+          1,
+          2,
+          2,
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2
+        ],
+        "value": 1.0,
+        "posterior": [
+          4.840538167627528e-06,
+          0.004680333659052849,
+          0.9953148365020752,
+          2.4762583095139235e-09
+        ],
+        "additive_corner_posterior": [
+          2.7598483143265184e-07,
+          0.0011307517997920513,
+          0.998869001865387,
+          1.0100558410497396e-11
+        ]
+      },
+      "high": {
+        "anchor_row": 11,
+        "v": [
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0,
+          2,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2
+        ],
+        "value": 2.0,
+        "posterior": [
+          2.392748399415723e-07,
+          3.550445399014279e-05,
+          0.9999638795852661,
+          4.1269319694947626e-07
+        ],
+        "additive_corner_posterior": [
+          4.0309942050953396e-08,
+          5.505802619154565e-05,
+          0.9999448657035828,
+          2.1169880071170155e-08
+        ]
+      }
+    },
+    {
+      "parent_id": 16236,
+      "off_support_hamming": 3,
+      "additive_corner_L1": 1.5348789691925049,
+      "changed_coordinates": [
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ],
+      "low": {
+        "anchor_row": 41,
+        "v": [
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "value": 1.0,
+        "posterior": [
+          0.050455242395401,
+          1.6035717465001653e-07,
+          0.4423638880252838,
+          0.5071806907653809
+        ],
+        "additive_corner_posterior": [
+          0.05819948390126228,
+          1.7869368207357184e-07,
+          0.4166260063648224,
+          0.5251743793487549
+        ]
+      },
+      "high": {
+        "anchor_row": 128,
+        "v": [
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "value": 2.0,
+        "posterior": [
+          0.8715411424636841,
+          2.9481485697147036e-08,
+          0.12827163934707642,
+          0.00018722463573794812
+        ],
+        "additive_corner_posterior": [
+          0.8256388902664185,
+          6.678964048489888e-09,
+          0.174173504114151,
+          0.00018754068878479302
+        ]
+      }
+    }
+  ],
+  "alignments": {
+    "11": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "29": [
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        3,
+        1,
+        2,
+        0
+      ]
+    ],
+    "47": [
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "counts": {
+    "train_parents": 10240,
+    "selection_parents": 1024,
+    "audit_parents": 1024
+  },
+  "bank_provenance": {
+    "train": {
+      "version": 1,
+      "index": 9,
+      "fold": "train",
+      "beta": 3.05,
+      "source": "beta-09.npz",
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+      "parents": 10240,
+      "reps": 64,
+      "split_sizes": [
+        10240,
+        2048,
+        4096
+      ],
+      "partition_seed": 769315,
+      "origin_seed": [
+        318749,
+        9,
+        0
+      ],
+      "fit_parents": 7680,
+      "parent_key_columns": [
+        "chain_seed",
+        "chain_id"
+      ],
+      "parent_order": "l20_pairs.partition order (not sorted)",
+      "lineage_sha256": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "sha256": {
+        "bonds.npy": "871ac96f89cba75c27228a77ee977f5ba425eaf2cc79a974df7f360f41401e24",
+        "m.npy": "0e8249b12d8290556140c6df59ce38e781f72ced9083c7b1283819b29ccd0e2d",
+        "origins.npy": "9b5f05b755c7a1658095aa8c6c861fa09ab8d311a6a3c7bdd690fac89c6e2a69",
+        "parent_id.npy": "dd387cf416c8ba1b457d5ce28fc993d15c5f240cee6323a103cde15a4bd347e0",
+        "parent_keys.npy": "c5e2095f6dddd62d8eb3c4a667f08405ce009b10989034314f579dace9c1ca92",
+        "v.npy": "25fe7121bc65db5047b88d2e612478f296cd58c6373abfb589e3bb41335b3f6d",
+        "y.npy": "4401751ac7745906dc788a453910d817c2cf4c994b142069a54d754ada3a18c2"
+      },
+      "lock_sha256": null,
+      "center_axes": "periodic z,y,x; flattened x fastest",
+      "visible": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "target": [
+        [
+          -4,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -4,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          -4
+        ]
+      ],
+      "target_semantics": "count species A=1 at three outward sites; divide by three for Bernoulli score",
+      "bonds": "positive z,y,x inside visible, ordered site then axis; equal labels=32767; units H",
+      "halo_l1": 2,
+      "target_l1": 3,
+      "conditional_energy_checks": 552960
+    },
+    "validation": {
+      "version": 1,
+      "index": 9,
+      "fold": "validation",
+      "beta": 3.05,
+      "source": "beta-09.npz",
+      "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+      "parents": 2048,
+      "reps": 192,
+      "split_sizes": [
+        10240,
+        2048,
+        4096
+      ],
+      "partition_seed": 769315,
+      "origin_seed": [
+        318749,
+        9,
+        1
+      ],
+      "fit_parents": null,
+      "parent_key_columns": [
+        "chain_seed",
+        "chain_id"
+      ],
+      "parent_order": "l20_pairs.partition order (not sorted)",
+      "lineage_sha256": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "sha256": {
+        "bonds.npy": "ad18063f24537988f759dd93145e5f68bd548e9ca04f2242918a1e7f028e0f85",
+        "m.npy": "8f5c714a68be92c07bf4dd54114be7ee467c0a782fe30f4ada047a9565b07480",
+        "origins.npy": "95b041ef568484faba9a48390db1d7dbe01142299a2ffa5e5f1017209d865ed3",
+        "parent_id.npy": "2eaad3481c98e1b48530a444e966b8df85135948b815a4a70ee4647ab470e497",
+        "parent_keys.npy": "e1ea858eeae25944fda7551be2d3784e804fd97727c1b058d8b9518cb597998c",
+        "v.npy": "b0967f7815cd38b1e0d65bf5c0fdc59b20eebababd972a76408f2e82b64d4f14",
+        "y.npy": "73aa6891b2b08d91b613f82bb17c8d2c1abb4930f9cfe4597ebab3bf441249ba"
+      },
+      "lock_sha256": null,
+      "center_axes": "periodic z,y,x; flattened x fastest",
+      "visible": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "target": [
+        [
+          -4,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -4,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          -4
+        ]
+      ],
+      "target_semantics": "count species A=1 at three outward sites; divide by three for Bernoulli score",
+      "bonds": "positive z,y,x inside visible, ordered site then axis; equal labels=32767; units H",
+      "halo_l1": 2,
+      "target_l1": 3,
+      "conditional_energy_checks": 110592
+    }
+  },
+  "teacher_receipt_sha256": "5e6c4724dd6a340cda51a47bcf7c55a20856922d26d034972f42a3b41498e922",
+  "uncertainty": "Normal 95% intervals over independent whole parents, paired for gains, conditional on trained fits. Selection-split intervals are descriptive. Audit intervals apply to the frozen field. Standardized probability contrasts use parent-cluster ratio influence functions and fixed train overlap weights.",
+  "limits": "An oriented teacher-fidelity measurement, not evidence of an irreducible many-body field, cooling, or dynamics. Matching conditions on corner species, not all local features."
+}
