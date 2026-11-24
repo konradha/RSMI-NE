@@ -1,0 +1,21 @@
+{
+  "number": 1,
+  "training_bank_roles": [
+    "fit",
+    "tune"
+  ],
+  "sha256": {
+    "fit": "4c8377a51e9c576b30e382e55127b8e2c6ee214ef68a31fa0ed6d35df257e3e2",
+    "tune": "953d921af8779dfeeac40753d1d335faba94907301130b4c5096cb54988cfc22"
+  },
+  "lineage_sha256": "4b395b42d5bca1d7338a896786e6ea8a1b71d45f09ffb29768938c62c0f29589",
+  "control_sha256": "fade8c4e1d4ccf9268736765741fcb3f8ee515ed4c220b5f4ca4534386ef2adb",
+  "roles_not_accessible": [
+    "rule",
+    "hot",
+    "cold",
+    "transfer",
+    "issue"
+  ],
+  "scope": "Four specified arms/three seeds across all three nested sizes. Two finalists with five starts per objective under registered stopping rule, same-effort frozen critics of registered ordinary/random codes at final depth under winner objective. No new objectives or winner based on K/radius diagnostics, use no cycle/motif labels. No reserved or assessment rows."
+}

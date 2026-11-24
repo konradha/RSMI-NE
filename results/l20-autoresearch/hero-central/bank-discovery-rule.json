@@ -1,0 +1,27 @@
+{
+  "stage": "discovery",
+  "role": "rule",
+  "utc": "2026-11-24T14:42:16.184430+00:00",
+  "release_commit": "df4efe9c04e518cdc2d68e07719e61138db692d5",
+  "release_sha256": "55739912d026cab0285f1ea84b060bc3ee4bb0e3832e4f37cf85ffc8147f840b",
+  "lineage_sha256": "4b395b42d5bca1d7338a896786e6ea8a1b71d45f09ffb29768938c62c0f29589",
+  "source_sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+  "roster_sha256": "ac9e150158ef8a91da51ba62570dc25675bc4a51b0ed070bf84c4c24e0a63a65",
+  "bank_sha256": "fd8e25e527dba014f7ecd0ea6aa3b95bfa29042e9511898b31a38f4ede806887",
+  "bank_bytes": 26383784,
+  "prediction_sha256": null,
+  "parents": 512,
+  "opportunities": 32768,
+  "keys": [
+    "parent",
+    "anchor",
+    "V",
+    "E",
+    "E5",
+    "I"
+  ],
+  "elapsed_seconds": 1.6318259802646935,
+  "process_peak_RSS_KiB": 2486036,
+  "native_scientific_access": "only released parent and role; blind is two sparse shells plus aggregate stocks, not any microscopic interior labels",
+  "fee_usd": 0
+}
