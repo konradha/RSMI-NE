@@ -1,0 +1,33 @@
+{
+  "scope": "Single TRAIN-only diagnostic after V3 completed. Independent of V3 final TEST outcomes. No physical simulation. No network/GPU participant.",
+  "runtime": "local CPU, Torch Adam foreach=False,fused=False, one thread for both schedules; same math and paired implementation. No Modal dispatch. Do not reuse CUDA Adam weights as CPU treatment: hardware, Torch version and fused backend differ; archived 16384 affine/uniform weights are a separately labeled portability cross-check. Identical init and positive-draw hashes must match archived baseline.",
+  "budget": {
+    "v3_actual_gross_usd": 1.59130531,
+    "outstanding_v3_paid_jobs": 0,
+    "previous_ceiling_still_held_usd": 11.47,
+    "conservative_available_usd": 13.53,
+    "additional_modal_exposure_usd": 0,
+    "worst_updates": 491520,
+    "basis": "30 trajectories (3 seeds x 2 schedules x [real joint, plant joint, off joint, plant critic, off critic]) x 16384. Full-shaped CPU measured 2048 affine/uniform steps in 1.595 seconds, about 383 optimizer seconds before evaluation, controls and IO; hard stop original discovery cutoff."
+  },
+  "fixed": {
+    "arm": "affine/uniform, R4, K=4, existing exact categorical loss and batch size",
+    "paired_seeds": [
+      6101,
+      6102,
+      6103
+    ],
+    "updates_each": 16384,
+    "schedules": [
+      "existing shared Adam 0.0008/sqrt(1+t/1024), exact V3 step indexing",
+      "same Adam with constant 0.005 for both networks from update 1"
+    ],
+    "pairing": "Identical init, optimizer settings except LR, parents, groups, anchors and evaluation draws. Verify fingerprints. Reuse baseline checkpoints/results only for identical streams, initialization, schedule and depth (or verified optimizer-state continuation); never initialize the constant arm from a decayed-schedule checkpoint. No best-seed or best-depth selection; no Gumbel annealing."
+  },
+  "blocks": "16 whole-parent blocks per beta/fold, donor and recipient in same block; fit/dev completely disjoint on both sides. No patch-level precision.",
+  "target": "ON minus OFF +0.005 nats uniform 8-way retrieval for known center and shell A indicators; within .00025 nats on independent-of-optimization fixed FIT group bank. Lower95 above .0025 nats in FIT. Positive target and precision checked before training.",
+  "construction": "Permute whole real shells among distinct parents within same beta, packing stratum and parent uncertainty block. ON differs from OFF only by disjoint, probabilistically enabled pair swaps increasing binary concordance and preserving legality and both empirical margins on eligible slots exactly. Unpairable strata in a block excluded; for rectangular sampler only, route their slots to prespecified legal slots of same recipient parent. Show coverage, alias and marginal shift. All fixed mappings, no new samples or MCMC.",
+  "oracle": "Fit per-beta 2x2 likelihood-ratio tables for the fixed central and shell indicators, evaluate exact candidate softmax with those logits. Oracle refers to the known binary feature/decoder, not full-array Bayes optimality. Fixed categorical feature + learned critic vs joint estimated from same folds/groups. Hard-code decoder H->binary learned on FIT only via balanced accuracy; held seed recovery distinct from critic gain.",
+  "metrics": "Uniform gain primary; uniform and matched scores plus equal-law mean; hard and expected scores, H(argmax) bits, seed-specific paired differences with stratified delete-parent-block intervals; parent uncertainty not seed spread. 8192 evaluation groups/law/beta, common across comparisons, ten equally weighted temperatures.",
+  "recovery": "Reliable if all three paired ON-minus-OFF hard and expected scores >0, pooled paired mean whole-parent lower95 for each >.00125 nats, and >=2/3 starts each attain both hard gain >=.0025 and FIT-decoded central feature balanced accuracy >.55 with held-parent lower95 >.50. Declare sensitivity to the schedule only if difference ON-minus-OFF between schedules also has positive paired lower95. Do not claim a physical null if neither works, precision fails, or results are mixed. Examine physical hard and expected point vs guessing and paired between-schedule differences with parent uncertainty; real improvement exploratory only."
+}
