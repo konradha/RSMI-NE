@@ -1,0 +1,29 @@
+{
+  "full": {
+    "exact_all": false,
+    "approximate": "ruled_out"
+  },
+  "identity": {
+    "exact_all": false,
+    "approximate": "ruled_out"
+  },
+  "proper": {
+    "exact_all": false,
+    "approximate": "ruled_out"
+  },
+  "cold_beta": 3.05,
+  "dominant_label_irreps": [
+    "T1u",
+    "T1u",
+    "T1u"
+  ],
+  "excess_over_null_mean": [
+    0.20898101868559218,
+    0.16860291886681716,
+    0.2720336535273562
+  ],
+  "shared_character": true,
+  "verdict": "common symmetry character, distinct partitions",
+  "spend_usd": 0,
+  "started_07": false
+}

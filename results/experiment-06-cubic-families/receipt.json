@@ -1,0 +1,36 @@
+{
+  "design": "36afd06103316251799a1f3dec32ff6b53f345c26559af02c2d8828ded52899d",
+  "source_commit": "030b46644405cd94b394a843d96767d7c2c38ddf",
+  "parent_manifest": "105dd7a653d32dc036284b3fd459998066e097ccb8170d5c2260acd666680051",
+  "pairs": 90,
+  "null_rows": 5760,
+  "test_parent_counts": [
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8190,
+    8187
+  ],
+  "irrep_ranks": {
+    "A1g": 11,
+    "A1u": 1,
+    "A2g": 6,
+    "A2u": 3,
+    "Eg": 34,
+    "Eu": 8,
+    "T1g": 21,
+    "T1u": 48,
+    "T2g": 36,
+    "T2u": 42
+  },
+  "max_direct_vs_gram_parent_CI_error": 1.8041124150158794e-16,
+  "spend_usd": 0,
+  "simulation": false,
+  "retrained": false,
+  "started_07": false
+}

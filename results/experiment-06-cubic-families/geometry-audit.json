@@ -1,0 +1,73 @@
+{
+  "proper": 24,
+  "full": 48,
+  "group_products": 2304,
+  "inverses": 48,
+  "permuted_states": 210,
+  "classes": [
+    1,
+    8,
+    3,
+    6,
+    6
+  ],
+  "character_ranks": {
+    "A1g": 11,
+    "A1u": 1,
+    "A2g": 6,
+    "A2u": 3,
+    "Eg": 34,
+    "Eu": 8,
+    "T1g": 21,
+    "T1u": 48,
+    "T2g": 36,
+    "T2u": 42
+  },
+  "fixture": [
+    {
+      "planted": 9,
+      "space": "identity",
+      "chosen": 0,
+      "exact": 0,
+      "held_disagree": 0.7642518618821937
+    },
+    {
+      "planted": 9,
+      "space": "proper",
+      "chosen": 9,
+      "exact": 1,
+      "held_disagree": 0.0
+    },
+    {
+      "planted": 9,
+      "space": "full",
+      "chosen": 9,
+      "exact": 1,
+      "held_disagree": 0.0
+    },
+    {
+      "planted": 35,
+      "space": "identity",
+      "chosen": 0,
+      "exact": 0,
+      "held_disagree": 0.7386594448205824
+    },
+    {
+      "planted": 35,
+      "space": "proper",
+      "chosen": 15,
+      "exact": 0,
+      "held_disagree": 0.644865718799368
+    },
+    {
+      "planted": 35,
+      "space": "full",
+      "chosen": 35,
+      "exact": 1,
+      "held_disagree": 0.0
+    }
+  ],
+  "arm_vector": "T1u, three dimensions",
+  "center_vacancy": "A1g",
+  "projector_sum_error_limit": 1e-14
+}
