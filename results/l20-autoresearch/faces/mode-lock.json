@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "train_meta": {
+    "index": 9,
+    "beta": 3.05,
+    "buffer": 1,
+    "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "train_parents": 10240,
+    "validation_parents": 2048,
+    "anchors_per_parent": 8000,
+    "train_sha256": "238702bff9141ea7c45843477e3031ec3588adcb273c3b2517ea62124d9ef989",
+    "validation_sha256": "cd354bbd8524b35e1ed450a5a63bbca214516e545b2099c8e952dd65380e7317",
+    "lineage_sha256": {
+      "0": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "1": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f"
+    },
+    "implementation_sha256": "4b3b07b4066c023cc515fc845b1e572d3ace609175cd6f5fb45900d5a3035122",
+    "groups": 32,
+    "axis_order": "-z,+z,-y,+y,-x,+x",
+    "face_normals": [
+      -2,
+      3
+    ],
+    "transfer_lock_sha256": null,
+    "geometry": "2x2x2 visible V digits z-major, x fastest, species 0/1/2; one unobserved layer, four registered face pixels as little-endian ternary word. All 8000 periodic anchors and six directions, whole parents kept together."
+  },
+  "code": "ae5d9688cbe0794f65646042845040fd66543d6f88955eaba4d0fc2130e59498",
+  "weights": "1eb5137004121d1c8eb41baed61d8636754e751a20610a0a1718812bfd50117b",
+  "winning_sector": "A1g",
+  "sectors": {
+    "A1g": {
+      "amplitude": 0.15342438344223935,
+      "multiplet": 1,
+      "dimension": 21,
+      "linear_fraction": 0.7574564507944368,
+      "pair_fraction": 0.9911449672711171,
+      "center": 2.4147266058319977e-15,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "A2g": {
+      "amplitude": 0.0014945243757315757,
+      "multiplet": 1,
+      "dimension": 6,
+      "linear_fraction": 2.7424584171386436e-28,
+      "pair_fraction": 2.9081047014222095e-28,
+      "center": 1.5655995135503084e-14,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "Eg": {
+      "amplitude": 0.026967245101089547,
+      "multiplet": 2,
+      "dimension": 54,
+      "linear_fraction": 1.0757915410476865e-30,
+      "pair_fraction": 0.7897596102835652,
+      "center": 6.96491475604688e-16,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "T1g": {
+      "amplitude": 0.021582449181248523,
+      "multiplet": 3,
+      "dimension": 63,
+      "linear_fraction": 5.8066658016749526e-30,
+      "pair_fraction": 0.23024728914360973,
+      "center": 2.5604518505417673e-15,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "T2g": {
+      "amplitude": 0.13450104673993427,
+      "multiplet": 3,
+      "dimension": 99,
+      "linear_fraction": 0.907397110904542,
+      "pair_fraction": 0.9913402881645208,
+      "center": 9.13331910101789e-16,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "A1u": {
+      "amplitude": 0.0016580248608599995,
+      "multiplet": 1,
+      "dimension": 3,
+      "linear_fraction": 5.3035848131593945e-28,
+      "pair_fraction": 5.481692449867519e-28,
+      "center": 2.2011163773679666e-14,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "A2u": {
+      "amplitude": 0.12219575481090897,
+      "multiplet": 1,
+      "dimension": 15,
+      "linear_fraction": 0.9922386523223399,
+      "pair_fraction": 0.9930200773783852,
+      "center": 4.1959272405792217e-16,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "Eu": {
+      "amplitude": 0.019280349817894064,
+      "multiplet": 2,
+      "dimension": 36,
+      "linear_fraction": 5.2966591395602405e-30,
+      "pair_fraction": 0.7173860956442569,
+      "center": 2.916937524855001e-15,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "T1u": {
+      "amplitude": 0.1496987415428487,
+      "multiplet": 3,
+      "dimension": 117,
+      "linear_fraction": 0.8357315741129007,
+      "pair_fraction": 0.9917253023911411,
+      "center": 6.331740687315346e-16,
+      "strongest_amplitude_is_not_MI": true
+    },
+    "T2u": {
+      "amplitude": 0.027675295981373332,
+      "multiplet": 3,
+      "dimension": 72,
+      "linear_fraction": 1.8134350488982736e-30,
+      "pair_fraction": 0.6656646982900533,
+      "center": 3.7470027081099033e-16,
+      "strongest_amplitude_is_not_MI": true
+    }
+  },
+  "calibration": "Average the cold joint physical (tile, registered face) channel over all 48 cube operations, rotate both variables together. Decompose the normalized centered probability matrix by exact O_h projectors. Freeze the leading maximal-correlation singular subspace of each represented sector. Project source singular functions by weighted least squares onto all additive species indicators, then onto all species pair indicators. Operator on unseen tiles set to zero at fit; report support at transfer. No rotations or outcomes appended as independent parents.",
+  "prediction": "At beta index 4, the fixed strongest cold sector retains positive cross-correlation, and at least half its oriented tile-face covariance is reproduced by its fixed cold one-site species projection. Test the paired linear contrast Cov(linear,exterior)-0.5*Cov(full,exterior) without ratios. Both 95% lower endpoints must be positive; opposite outcomes reported. This is a separate interpretable-operator diagnostic, not evidence for a thermodynamic transition or for defeating a full conventional model.",
+  "thermal": "Only archived native validation packets. Score cold and beta8 descriptively and beta4 as predeclared warm primary; beta0 finite-composition control. Never optimize fields at transfer. The largest singular value/correlation does not equal mutual information. Uncertainty conditional on the cold trained fields. When training support falls below 0.95 at transfer report the numerical effect but do not promote the mechanism."
+}

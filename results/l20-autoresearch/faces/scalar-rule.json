@@ -1,0 +1,33 @@
+{
+  "lock_sha256": "dd6f4dae2fa4fe240d58fc6900a7b2013807665497e224b84587a7d6dad5f719",
+  "observable": "Scalar cage-composition score: invariant under all rotations and inversion of a 2x2x2 cube.",
+  "coordinates": "Start with constant, nA, nB, then count unordered AA, AB, BB vertex pairs separated by Hamming distance 1 (edge), 2 (face diagonal), 3 (body diagonal). Each pair counted once; vacancy is the reference. Dot with the coefficients. Species labels 1=A, 2=B. Score sign follows the stored singular vector; simultaneous sign reversal of source and target changes no prediction.",
+  "coefficients": {
+    "1": 2.0692281101186043,
+    "nA": -0.029494825039866446,
+    "nB": 1.185187245702047,
+    "AA1": -0.9520437270265018,
+    "AB1": -1.002249080779021,
+    "BB1": -0.9559461227802595,
+    "AA2": 0.038124059131825,
+    "AB2": -0.036602473618217765,
+    "BB2": -0.12517179861621486,
+    "AA3": 0.1411857670058016,
+    "AB3": 0.1391316603841088,
+    "BB3": 0.1405633707067993
+  },
+  "composition_only_coefficients": {
+    "1": 8.840610731399368,
+    "nA": -1.9576641413955378,
+    "nB": -1.150615775569465
+  },
+  "train_explained_variance_composition_then_distances_123": [
+    0.7574564507945528,
+    0.988081614772401,
+    0.9902175525977561,
+    0.9911449672710908
+  ],
+  "support": 6015,
+  "max_abs_difference_from_full_quadratic_on_supported_tiles": 3.19211324040225e-12,
+  "derivation": "A cubic-invariant degree-two function is constant on the group orbits of single species sites and colored unordered vertex pairs. The cube group is transitive within each vertex pair Hamming distance. Cold-distribution weighted projection commutes with the group action. Labels on unsupported patterns are extrapolations; this is the score of the pair projection, not a proof an arbitrary tile, finite-state code, or full glass has only pair correlations."
+}

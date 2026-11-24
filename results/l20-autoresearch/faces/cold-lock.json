@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "decoders.npz": "38a2d48633bb649aa5f3de5471c7087051ec81ea006df120aceebf420de8bf11",
+    "beta-09.json": "d43a3374d63934e5fe81cb4d1e7c358c515c64552a94e89c59b43471f53ff49b",
+    "packets-09.npz": "53715d608cec7d6209448db785155cfe4d9ce302d1e595f296a733a24da0c309",
+    "physical-09.png": "e1dc7205ed103ac4d5900d7c5d368ad4fb2e517b6f22d475bf81b91ab41a6d98"
+  },
+  "script_sha256": "660b68a699cbef2e670dbe4dd12e008130ea79057e41cd7fe05861215af582bb",
+  "design_sha256": "3d744f51b9fe8b967ad55fa232aa270437f6e761770ccc0093310663443aba23",
+  "base_sha256": "0f805c88b6b2bac9323000c659c8e6de55bc2cff225063e677fa629e0591741c",
+  "optimized_sha256": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "bank_meta_sha256": "019924e3b35776713221a0e286d700aacaa5da6a505b17d9261b09a3fa349570",
+  "cold_bank": {
+    "index": 9,
+    "beta": 3.05,
+    "buffer": 1,
+    "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "train_parents": 10240,
+    "validation_parents": 2048,
+    "anchors_per_parent": 8000,
+    "train_sha256": "238702bff9141ea7c45843477e3031ec3588adcb273c3b2517ea62124d9ef989",
+    "validation_sha256": "cd354bbd8524b35e1ed450a5a63bbca214516e545b2099c8e952dd65380e7317",
+    "lineage_sha256": {
+      "0": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "1": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f"
+    },
+    "implementation_sha256": "4b3b07b4066c023cc515fc845b1e572d3ace609175cd6f5fb45900d5a3035122",
+    "groups": 32,
+    "axis_order": "-z,+z,-y,+y,-x,+x",
+    "face_normals": [
+      -2,
+      3
+    ],
+    "transfer_lock_sha256": null,
+    "geometry": "2x2x2 visible V digits z-major, x fastest, species 0/1/2; one unobserved layer, four registered face pixels as little-endian ternary word. All 8000 periodic anchors and six directions, whole parents kept together."
+  },
+  "optimization_report_sha256": "b10abbd0df89b517378fc678052c506941fdc35ed254e7a628bd74295a15d625",
+  "optimizer_sha256": "1d46426a792b4f44c91bcfa836dba267a14cf97d3d6e1caa1eb32efd30014103",
+  "strongest_ordinary": "affine",
+  "prediction": "At index 4 (beta=1.355555555556), with maps and decoders unchanged, the expected physical-face log score of discrete exceeds the cold-selected strongest ordinary comparator by at least 0.001 nat per physical face. This is the only promoted transfer target; always score and publish it, even after a cold null. Support if the two-sided 95% lower limit of the paired packet difference is >=0.001; excluded if the upper limit is <0.001; otherwise unresolved. No switching comparator, fitting a warm marginal, rescoring to choose a different temperature, relabeling the candidate as original RSMI, or fallback prediction. Separate measured contrast vs original rsmi is descriptive."
+}
