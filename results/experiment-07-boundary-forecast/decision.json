@@ -1,0 +1,38 @@
+{
+  "primary_beta": 3.05,
+  "margin_bits": 0.01,
+  "seeds": [
+    6101,
+    6102,
+    6103
+  ],
+  "directional_label_gain": [
+    1.255185938952,
+    1.225590476759,
+    1.267115570714
+  ],
+  "directional_gain_lower95": [
+    1.231269189987,
+    1.202366443442,
+    1.245325593947
+  ],
+  "cold_all_clear_margin": true,
+  "cold_all_beat_matched_rotations": true,
+  "strength_mse_reduction_vs_mean": [
+    4.190367692803e-05,
+    5.192780714322e-05,
+    9.411229957573e-05
+  ],
+  "strength_lower95": [
+    -1.250460133477e-05,
+    -1.144412694706e-05,
+    2.575364351517e-05
+  ],
+  "ambiguous_events": [
+    321,
+    347,
+    374
+  ],
+  "modal_usd": 0,
+  "started_08": false
+}

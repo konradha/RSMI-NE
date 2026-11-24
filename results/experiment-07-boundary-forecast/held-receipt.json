@@ -1,0 +1,21 @@
+{
+  "files": {
+    "held-b00.npz": "e739da8fc778a37404fc97a68edd0191653823efdabf4d3fa203a0f23e0e7253",
+    "held-b01.npz": "66aabbf254c00f924f3e835bc7dd4c61b1cc5a1fe19d9c05b5536524543fbc89",
+    "held-b02.npz": "1153f5f467bd78629c3f77baa9fe0e8057c5da2ce058a4851c9fef41ba1268cc",
+    "held-b03.npz": "44801fe4698fc0e4cb1ccf6f451b7759a6fe9450c84ee197996ce4b23fd6efdc",
+    "held-b04.npz": "705ef3aa7c90066b9fbbaf30347854b3c1d74eb1ce7e132d1422dedbccd5c2a0",
+    "held-b05.npz": "91aa07aab9d26ab603aa2a39d9e635dbbf771c1a10cc26e09d509c4d1796bf38",
+    "held-b06.npz": "202ff15db0848f92bbc8bdef5266df954e89a5780cfa2ef418cb7a6484d9bd2b",
+    "held-b07.npz": "773d29bb7d27d24e616d92e544d65285325a5406a0090819a3e422a3206a41b8",
+    "held-b08.npz": "0f114b072875bf4ad2e339c0d8dcd47166b8ba92e59d6171fe934302562b0b27",
+    "held-b09.npz": "7258357d621c919d5af0e8f82163fe9963b85ea8bd1eadf23a677ff9937029ac"
+  },
+  "fit_lock": "20b7ebb44ce9728356534dc0a54fd88289e52c6c2fbcac82b9fcfaefcd8ee821",
+  "design": "06f1425081e2984f344faabd972409a2bffba2078921f9d42b7768b777ee1da0",
+  "entropy_identity_max_error": 1.733162224848428e-14,
+  "new_trajectories": 0,
+  "new_rsmi_fits": 0,
+  "modal_usd": 0,
+  "started_08": false
+}
