@@ -1,0 +1,284 @@
+{
+  "provenance": {
+    "design_sha256": "3bf75fe85d5fc6bb1e850eaa1370144748888e59fe90582e1d9dde46cf727e87",
+    "script_sha256": "55a16e89e9d2519afb47c1f9e19af8353335fdb06a59464feb7aa1dd901798e5",
+    "prior_sha256": "0e8959a0049584e517294ca8817e8b447c1b13722ab552ea9d60a3df4deca459",
+    "source_loader_sha256": "6ebaa2a42c7b017187870c64256c2e1f33f9eb2e490f85bfa05ba5cb911cce4c",
+    "sectors_sha256": "b4859fd24fa883a42722eb2e7fb9ccc17e557d0628e8a64e721f9e10963f7508",
+    "split_code_sha256": "8e6b6d362e34b7c4c229914405c28ede57acc4bceffd3bebb25aba09abd0c497",
+    "field_utilities_sha256": "533d5b61ae851ef8ac6e7999b6e16587622d54acdc2ed2831f4a778d8826e899",
+    "fit_member_sha256": "91b093a4c6ed4417980f97a528e139ff510f6cd10611e9aabe8fd6045b4afbe7",
+    "models": {
+      "static_archive_sha256": "5e6c4724dd6a340cda51a47bcf7c55a20856922d26d034972f42a3b41498e922",
+      "nonlinear": "w3-b1-learned-s11",
+      "affine_sha256": "dba735d9787ed04532497e7c29c23e6d4084e8e8b58e332d4a39d23a9f36512b",
+      "affine_seed": 29,
+      "train_source": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "template_sha256": "e1e61b064f7318cee8f079a301230df8ee50eb8d49a07baf1d59455b7e4a7246",
+      "template_training_parents": 2048,
+      "template_anchors_per_parent": 24
+    }
+  },
+  "sources": {
+    "9": {
+      "index": 9,
+      "beta": 3.05,
+      "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "selected_folds": [
+        1
+      ],
+      "lineage_sha256": {
+        "1": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f"
+      }
+    },
+    "7": {
+      "index": 7,
+      "beta": 2.372222222222,
+      "sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+      "selected_folds": [
+        1
+      ],
+      "lineage_sha256": {
+        "1": "65357446075472f527535848b403830253cdd0387d8246fea1fb8818654d5b08"
+      }
+    },
+    "0": {
+      "index": 0,
+      "beta": 0.0,
+      "sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "selected_folds": [
+        1
+      ],
+      "lineage_sha256": {
+        "1": "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e"
+      }
+    }
+  },
+  "parents_per_index": 2048,
+  "independent_packets": 256,
+  "interval_order": [
+    "estimate",
+    "lo",
+    "hi"
+  ],
+  "equivalence_margin": 0.001,
+  "results": {
+    "9": {
+      "contact_trace": [
+        0.26239474726575807,
+        0.26233568102300253,
+        0.2624538135085136
+      ],
+      "r6_trace_pointwise": [
+        -9.715063630375335e-06,
+        -5.2119719428610686e-05,
+        3.268959216786002e-05
+      ],
+      "r6_pointwise_halfwidth": 4.240465579823535e-05,
+      "meets_previous_precision_halfwidth_0_0005": true,
+      "r6_trace_simultaneous": [
+        -9.715063630375335e-06,
+        -8.59317838045104e-05,
+        6.650165654375973e-05
+      ],
+      "r6_pointwise_equivalence": "within_margin",
+      "r6_simultaneous_equivalence": "within_margin",
+      "r6_pointwise_resolves_sign": false,
+      "simultaneous_trace_gaps_within_margin": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "r6_sparse_original": [
+        -0.00023310829235398422,
+        -0.0016908465714672938,
+        0.0012246299867593254
+      ],
+      "r6_dense_at_original_6look_coverage": [
+        -9.715063630375336e-06,
+        -6.697059414493608e-05,
+        4.75404668841854e-05
+      ],
+      "interval_overlap_matched_coverage": "dense_inside_sparse",
+      "interval_overlap_pointwise_vs_sparse": "dense_inside_sparse",
+      "width_improvement_matched_coverage": 25.460217834198392,
+      "r6_mismatched_trace_pointwise": [
+        -6.165804927614743e-06,
+        -5.324978166765218e-05,
+        4.09181718124227e-05
+      ],
+      "mismatch_zero_inside_r6_pointwise": true,
+      "A_r6_pointwise": [
+        -2.1586100260414696e-05,
+        -0.00011163336218488421,
+        6.846116166405482e-05
+      ],
+      "residual_k0_trace": [
+        0.30181590128419467,
+        0.28858048645646694,
+        0.3150513161119224
+      ],
+      "A_B_count_per_parent": [
+        2400,
+        3600
+      ],
+      "A_contact_max_error": 5.551115123125783e-17,
+      "direct_checks_max_error": {
+        "identity_field": 2.384185791015625e-07,
+        "same_roll": 2.7755575615628914e-17,
+        "mismatch_roll": 1.3877787807814457e-17
+      }
+    },
+    "7": {
+      "contact_trace": [
+        0.26342594247818163,
+        0.26335833498353317,
+        0.2634935499728301
+      ],
+      "r6_trace_pointwise": [
+        2.2438292800783955e-05,
+        -1.99871469159551e-05,
+        6.4863732517523e-05
+      ],
+      "r6_pointwise_halfwidth": 4.2425439716739055e-05,
+      "meets_previous_precision_halfwidth_0_0005": true,
+      "r6_trace_simultaneous": [
+        2.2438292800783955e-05,
+        -5.381578369828523e-05,
+        9.869236929985315e-05
+      ],
+      "r6_pointwise_equivalence": "within_margin",
+      "r6_simultaneous_equivalence": "within_margin",
+      "r6_pointwise_resolves_sign": false,
+      "simultaneous_trace_gaps_within_margin": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "r6_sparse_original": [
+        -0.0008320139267231657,
+        -0.0022545602242016096,
+        0.0005905323707552781
+      ],
+      "r6_dense_at_original_6look_coverage": [
+        2.243829280078394e-05,
+        -3.4845300535127433e-05,
+        7.97218861366953e-05
+      ],
+      "interval_overlap_matched_coverage": "dense_inside_sparse",
+      "interval_overlap_pointwise_vs_sparse": "dense_inside_sparse",
+      "width_improvement_matched_coverage": 24.8333984416205,
+      "r6_mismatched_trace_pointwise": [
+        9.85137128074102e-08,
+        -4.377975388793056e-05,
+        4.397678131354538e-05
+      ],
+      "mismatch_zero_inside_r6_pointwise": true,
+      "A_r6_pointwise": [
+        -4.2439778645831316e-05,
+        -0.0001236864853537512,
+        3.8806928062088544e-05
+      ],
+      "residual_k0_trace": [
+        0.29716634861046565,
+        0.28405893958110456,
+        0.31027375763982673
+      ],
+      "A_B_count_per_parent": [
+        2400,
+        3600
+      ],
+      "A_contact_max_error": 5.551115123125783e-17,
+      "direct_checks_max_error": {
+        "identity_field": 2.384185791015625e-07,
+        "same_roll": 2.7755575615628914e-17,
+        "mismatch_roll": 1.3877787807814457e-17
+      }
+    },
+    "0": {
+      "contact_trace": [
+        0.2936364999900414,
+        0.2935317298949073,
+        0.2937412700851755
+      ],
+      "r6_trace_pointwise": [
+        -2.783554779862705e-05,
+        -7.732301737898667e-05,
+        2.1651921781732575e-05
+      ],
+      "r6_pointwise_halfwidth": 4.948746958035962e-05,
+      "meets_previous_precision_halfwidth_0_0005": true,
+      "r6_trace_simultaneous": [
+        -2.783554779862705e-05,
+        -0.00011678268226137751,
+        6.111158666412341e-05
+      ],
+      "r6_pointwise_equivalence": "within_margin",
+      "r6_simultaneous_equivalence": "within_margin",
+      "r6_pointwise_resolves_sign": false,
+      "simultaneous_trace_gaps_within_margin": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "r6_sparse_original": [
+        0.0007655198065612894,
+        -0.0008219201720903139,
+        0.002352959785212893
+      ],
+      "r6_dense_at_original_6look_coverage": [
+        -2.783554779862705e-05,
+        -9.465442113480892e-05,
+        3.8983325537554815e-05
+      ],
+      "interval_overlap_matched_coverage": "dense_inside_sparse",
+      "interval_overlap_pointwise_vs_sparse": "dense_inside_sparse",
+      "width_improvement_matched_coverage": 23.757359251851046,
+      "r6_mismatched_trace_pointwise": [
+        7.942164481580092e-06,
+        -4.3025134115690154e-05,
+        5.890946307885033e-05
+      ],
+      "mismatch_zero_inside_r6_pointwise": true,
+      "A_r6_pointwise": [
+        -3.814697265624989e-05,
+        -9.461588012005798e-05,
+        1.8321934807558194e-05
+      ],
+      "residual_k0_trace": [
+        0.2985467885489296,
+        0.2851459204832784,
+        0.31194765661458074
+      ],
+      "A_B_count_per_parent": [
+        2400,
+        3600
+      ],
+      "A_contact_max_error": 5.551115123125783e-17,
+      "direct_checks_max_error": {
+        "identity_field": 2.384185791015625e-07,
+        "same_roll": 1.3877787807814457e-17,
+        "mismatch_roll": 1.3877787807814457e-17
+      }
+    }
+  },
+  "outputs_sha256": {
+    "parent-moments.npz": "16a39679af883b160e70b1236866b7fdef94e243e4942e4097084266df169ab8",
+    "range.png": "6de4c17df4b76372f7c9e3afe35ec48288c99c6baa77bee1c497cc18bc12e582",
+    "covariance.csv": "5059e9a5d5bc661c6c9ae271a992080f9daec1012b196125db5120a54e6786da",
+    "zero-mode.csv": "d70af82783c6e3a4d1e8be81a5e1d88da6485fa3acf314733b5f57a2e616e05c"
+  },
+  "interpretation": "Same validation parents, improved spatial sampling of a fixed lab-frame field. Interval overlap is descriptive, not a paired significance test or an independent replication. Bounds are signed covariances at measured axial separations in one finite box, not a correlation length or evidence of thermodynamic order."
+}

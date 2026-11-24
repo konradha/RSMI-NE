@@ -1,0 +1,230 @@
+{
+  "scope": "Descriptive on earlier validation cohorts; per-temperature trained competitors. Not a rescue/replication of the frozen mechanism test.",
+  "geometry": "All 8000 center sites, eight octants and three registered outer targets per L20 parent. Counts are trials and number of outer A sites. Conditioning stratum: central species and total coordination. Six cells = 3*parallel_vacancy_bit + transverse_vacancy_count.",
+  "model": "All models have arbitrary inner-tripod distribution. Species/coordination-specific logistic conditional: intercept only, common slope on tripod count, distinct parallel/transverse slopes, or six unrestricted logits. Equivalently the registered pair model allows any many-body relation within the tripod and no outer couplings beyond individual vacancies in each stratum.",
+  "statistics": "32 delete-group train jackknife variance plus separate variance of paired validation parent means; Welch t intervals, family=15 contrasts. No sites, rotations or targets treated as independent parents. Finite projection only.",
+  "temperatures": [
+    {
+      "source": {
+        "index": 9,
+        "beta": 3.05,
+        "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+        "selected_folds": [
+          0,
+          1
+        ],
+        "lineage_sha256": {
+          "0": "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+          "1": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f"
+        }
+      },
+      "counts_sha256": "167a3b230b812cbcba7592723177b37d0bbfbac9f5ec08506997700abbd1aa28",
+      "loss_nats": {
+        "coordination": 0.6108234272783301,
+        "isotropic": 0.6107414800029197,
+        "registered_pairs": 0.6107241105637736,
+        "unrestricted": 0.6107232725081541
+      },
+      "contrasts": {
+        "isotropic_over_coordination": {
+          "nats": 8.194727540816092e-05,
+          "se": 9.220315946911998e-07,
+          "lo95": 8.013905765350152e-05,
+          "hi95": 8.375549316282033e-05,
+          "lo_family": 7.923774755872009e-05,
+          "hi_family": 8.465680325760176e-05,
+          "train_se": 7.156302694629266e-09,
+          "validation_se": 9.220038226279432e-07
+        },
+        "registered_pairs_over_isotropic": {
+          "nats": 1.7369439145177785e-05,
+          "se": 6.520116255392198e-07,
+          "lo95": 1.609076578679052e-05,
+          "hi95": 1.864811250356505e-05,
+          "lo_family": 1.545341108026922e-05,
+          "hi_family": 1.928546721008635e-05,
+          "train_se": 2.428760494040429e-08,
+          "validation_se": 6.515591086651729e-07
+        },
+        "registered_pairs_over_coordination": {
+          "nats": 9.931671455333871e-05,
+          "se": 6.037614870014279e-07,
+          "lo95": 9.813266613232564e-05,
+          "hi95": 0.00010050076297435178,
+          "lo_family": 9.754247811401626e-05,
+          "hi_family": 0.00010109095099266116,
+          "train_se": 2.6108589110344395e-08,
+          "validation_se": 6.031967131548733e-07
+        },
+        "unrestricted_over_registered_pairs": {
+          "nats": 8.380556219479327e-07,
+          "se": 5.619598642095654e-08,
+          "lo95": 7.278487946545547e-07,
+          "hi95": 9.482624492413107e-07,
+          "lo_family": 6.729166079721939e-07,
+          "hi_family": 1.0031946359236715e-06,
+          "train_se": 3.5260314385168464e-09,
+          "validation_se": 5.608525645942009e-08
+        },
+        "unrestricted_over_coordination": {
+          "nats": 0.00010015477017528664,
+          "se": 6.054911144116932e-07,
+          "lo95": 9.89673298586276e-05,
+          "hi95": 0.00010134221049194568,
+          "lo_family": 9.837545131579565e-05,
+          "hi_family": 0.00010193408903477763,
+          "train_se": 2.68069775247613e-08,
+          "validation_se": 6.048974091426587e-07
+        }
+      }
+    },
+    {
+      "source": {
+        "index": 7,
+        "beta": 2.372222222222,
+        "sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+        "selected_folds": [
+          0,
+          1
+        ],
+        "lineage_sha256": {
+          "0": "538eedc5f25ab4954a8dc120804a813bffa62c795c95bb7dbabaab365a44c31a",
+          "1": "65357446075472f527535848b403830253cdd0387d8246fea1fb8818654d5b08"
+        }
+      },
+      "counts_sha256": "1948f62e6f3fe3ddbad063467d67059f1edf637649932ad359a1c3de8b1ce550",
+      "loss_nats": {
+        "coordination": 0.6108369020373949,
+        "isotropic": 0.6107870762659635,
+        "registered_pairs": 0.6107780880242295,
+        "unrestricted": 0.610777681437647
+      },
+      "contrasts": {
+        "isotropic_over_coordination": {
+          "nats": 4.982577143056594e-05,
+          "se": 7.37782098343374e-07,
+          "lo95": 4.8378889645882634e-05,
+          "hi95": 5.127265321524925e-05,
+          "lo_family": 4.7657688207594714e-05,
+          "hi_family": 5.199385465353717e-05,
+          "train_se": 4.7351271026484e-09,
+          "validation_se": 7.377669030305397e-07
+        },
+        "registered_pairs_over_isotropic": {
+          "nats": 8.988241734344865e-06,
+          "se": 4.571157528827835e-07,
+          "lo95": 8.091782382885393e-06,
+          "hi95": 9.884701085804337e-06,
+          "lo_family": 7.644941821988125e-06,
+          "hi_family": 1.0331541646701605e-05,
+          "train_se": 1.514195375847851e-08,
+          "validation_se": 4.568648955325525e-07
+        },
+        "registered_pairs_over_coordination": {
+          "nats": 5.881401316491081e-05,
+          "se": 4.952592821211137e-07,
+          "lo95": 5.784274989084647e-05,
+          "hi95": 5.978527643897515e-05,
+          "lo_family": 5.735862351478104e-05,
+          "hi_family": 6.0269402815040575e-05,
+          "train_se": 1.7483238991318496e-08,
+          "validation_se": 4.949505964048263e-07
+        },
+        "unrestricted_over_registered_pairs": {
+          "nats": 4.0658658292632485e-07,
+          "se": 3.733115266932483e-08,
+          "lo95": 3.3337606295496527e-07,
+          "hi95": 4.797971028976844e-07,
+          "lo_family": 2.9688482577039206e-07,
+          "hi_family": 5.162883400822576e-07,
+          "train_se": 3.2163184374621454e-09,
+          "validation_se": 3.719234135315064e-08
+        },
+        "unrestricted_over_coordination": {
+          "nats": 5.922059974783713e-05,
+          "se": 4.963866503004022e-07,
+          "lo95": 5.824712561364156e-05,
+          "hi95": 6.019407388203271e-05,
+          "lo_family": 5.776189730050326e-05,
+          "hi_family": 6.0679302195171006e-05,
+          "train_se": 1.7820959400664598e-08,
+          "validation_se": 4.960666487504414e-07
+        }
+      }
+    },
+    {
+      "source": {
+        "index": 0,
+        "beta": 0.0,
+        "sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+        "selected_folds": [
+          0,
+          1
+        ],
+        "lineage_sha256": {
+          "0": "19b3228717d0bcde6ebaacf77584d9c32244f9d315c3ef621378929bf3620a2e",
+          "1": "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e"
+        }
+      },
+      "counts_sha256": "9e8454cd37c515dc375e9a22cce8683ff9f133ff20fba398383ad1ee9b0a3efe",
+      "loss_nats": {
+        "coordination": 0.6108642883169939,
+        "isotropic": 0.6108642947144524,
+        "registered_pairs": 0.6108643399400052,
+        "unrestricted": 0.610864344252734
+      },
+      "contrasts": {
+        "isotropic_over_coordination": {
+          "nats": -6.397457397221227e-09,
+          "se": 8.794102840813056e-09,
+          "lo95": -2.399549984954038e-08,
+          "hi95": 1.1200585055097927e-08,
+          "lo_family": -3.3305624905791484e-08,
+          "hi_family": 2.0510710111349033e-08,
+          "train_se": 7.488622584049609e-09,
+          "validation_se": 4.610507192105703e-09
+        },
+        "registered_pairs_over_isotropic": {
+          "nats": -4.5225552981677675e-08,
+          "se": 2.916371731059405e-08,
+          "lo95": -1.0359861252767735e-07,
+          "hi95": 1.314750656432201e-08,
+          "lo_family": -1.3450067228815828e-07,
+          "hi_family": 4.4049566324802924e-08,
+          "train_se": 2.4900537608728986e-08,
+          "validation_se": 1.518175332985345e-08
+        },
+        "registered_pairs_over_coordination": {
+          "nats": -5.16230103788989e-08,
+          "se": 3.5523569242856336e-08,
+          "lo95": -1.228125436799372e-07,
+          "hi95": 1.9566522922139404e-08,
+          "lo_family": -1.606345935448708e-07,
+          "hi_family": 5.738857278707299e-08,
+          "train_se": 3.076067580287495e-08,
+          "validation_se": 1.7768083630556013e-08
+        },
+        "unrestricted_over_registered_pairs": {
+          "nats": -4.3127291555144186e-09,
+          "se": 5.267155577491053e-09,
+          "lo95": -1.471974993571214e-08,
+          "hi95": 6.094291624683303e-09,
+          "lo_family": -2.002320073438797e-08,
+          "hi_family": 1.1397742423359132e-08,
+          "train_se": 3.5273337901626003e-09,
+          "validation_se": 3.911629354920051e-09
+        },
+        "unrestricted_over_coordination": {
+          "nats": -5.593573953441332e-08,
+          "se": 3.672701440153962e-08,
+          "lo95": -1.295475573441767e-07,
+          "hi95": 1.7676078275350053e-08,
+          "lo_family": -1.6867299913058258e-07,
+          "hi_family": 5.680152006175593e-08,
+          "train_se": 3.185382103075873e-08,
+          "validation_se": 1.8281347668902635e-08
+        }
+      }
+    }
+  ]
+}

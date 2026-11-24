@@ -1,0 +1,241 @@
+{
+  "design_sha256": "82b18e0360522306ac2450a2751cd8a40bf1ab6dc31c323aae57ab15d54ef079",
+  "code_sha256": "6f8febee9f164c65538defeb74fcdc7b2ce514fa04e768216dd57118b8f1a015",
+  "sources": {
+    "0": {
+      "beta": 0.0,
+      "endpoint_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "receipt_sha256": "335c5cb074e2bb432744a96ed7591d4fd2373573de2573fc628934ce33df1074",
+      "parents": 2048,
+      "fold": "native validation",
+      "partition_seed": 769315,
+      "validation_row_sha256": "8a8a5e2d4a629d74a89cc0ef48483804b80b2fe059dbdfbc4a2c776ad23733c7",
+      "validation_lineage_sha256": "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e",
+      "sites": 16384000,
+      "occupied_masks": 64,
+      "octant_site_checks": 131072000,
+      "max_abs_twice_tripod_residual": 0,
+      "max_abs_single_axis_sum_rule_residual": 0,
+      "max_abs_Walsh_degree_2_or_3_coefficient": 0,
+      "max_abs_cubic_octant_probability_residual": 0
+    },
+    "7": {
+      "beta": 2.372222222222,
+      "endpoint_sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+      "receipt_sha256": "8ccb1a104fb78542a91c173fa47b45f9854f055a0d77f6468fa82492b5d3b7d5",
+      "parents": 2048,
+      "fold": "native validation",
+      "partition_seed": 769315,
+      "validation_row_sha256": "0fa8b59e9796393dc2d98d56b2f18ef80011926d50ea1e0091b88ea0397a8c7a",
+      "validation_lineage_sha256": "65357446075472f527535848b403830253cdd0387d8246fea1fb8818654d5b08",
+      "sites": 16384000,
+      "occupied_masks": 64,
+      "octant_site_checks": 131072000,
+      "max_abs_twice_tripod_residual": 0,
+      "max_abs_single_axis_sum_rule_residual": 0,
+      "max_abs_Walsh_degree_2_or_3_coefficient": 0,
+      "max_abs_cubic_octant_probability_residual": 0
+    },
+    "9": {
+      "beta": 3.05,
+      "endpoint_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "receipt_sha256": "43bdec318f99638fdb6954e26c845d0023d4a796de02819ef6e432daa74418ab",
+      "parents": 2048,
+      "fold": "native validation",
+      "partition_seed": 769315,
+      "validation_row_sha256": "a86e0dc3f8b53efab21361b1aa551a999dc0bd45d74e6aed9b0f12989711a0bc",
+      "validation_lineage_sha256": "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "sites": 16384000,
+      "occupied_masks": 64,
+      "octant_site_checks": 131072000,
+      "max_abs_twice_tripod_residual": 0,
+      "max_abs_single_axis_sum_rule_residual": 0,
+      "max_abs_Walsh_degree_2_or_3_coefficient": 0,
+      "max_abs_cubic_octant_probability_residual": 0
+    }
+  },
+  "provenance": "Release/receipt authenticated; only native validation rows selected. Direct checks at every site/frame; Walsh and conditional octant-law checks exhaust the entire 64-mask support.",
+  "uncertainty": "A uniform site in a uniform validation parent is the sampling unit for the estimand; equal parent volumes. A stratum estimate is a ratio of pooled response sums to pooled site counts, not an equal weighting of possibly empty parent strata. Delete one whole parent at a time in numerator and denominator and use the paired difference of observed minus each parent-matched conditional null. Pointwise two-sided t intervals with jackknife SE; no intervals for fewer than eight supporting parents. Sites, signed frames, axes, and neighbor pairs are never treated as replicates. Temperature panels show separate beta cohorts, not one-to-one paired temperatures. The administrative validation split was previously used, intervals are descriptive and not multiplicity-adjusted.",
+  "pooled": {
+    "0": {
+      "opp_double_axes": {
+        "observed": 0.1873675537109375,
+        "perm": 0.18742690429687506,
+        "obs_minus_perm": -5.9350585937497204e-05,
+        "obs_minus_perm_lo95": -0.00021288199803416898,
+        "obs_minus_perm_hi95": 9.418082615917457e-05
+      },
+      "single_axes_q": {
+        "observed": 1.125264892578125,
+        "perm": 1.1251461914062502,
+        "obs_minus_perm": 0.0001187011718749706,
+        "obs_minus_perm_lo95": -0.00018836165231837277,
+        "obs_minus_perm_hi95": 0.000425763996068314
+      },
+      "opposite_cov_at_k": {
+        "observed": -0.03127384440104162,
+        "perm": -0.03125406087239583,
+        "obs_minus_perm": -1.978352864582465e-05,
+        "obs_minus_perm_lo95": -7.096066601138174e-05,
+        "obs_minus_perm_hi95": 3.1393608719732446e-05
+      },
+      "perpendicular_cov_at_k": {
+        "observed": -0.03124911499023448,
+        "perm": -0.03125406087239582,
+        "obs_minus_perm": 4.945882161461444e-06,
+        "obs_minus_perm_lo95": -7.848402179927834e-06,
+        "obs_minus_perm_hi95": 1.774016650285072e-05
+      },
+      "P_T0": {
+        "observed": 0.4218380889892578,
+        "perm": 0.42182296142578063,
+        "obs_minus_perm": 1.5127563476559143e-05,
+        "obs_minus_perm_lo95": -1.5820180081564052e-05,
+        "obs_minus_perm_hi95": 4.607530703468234e-05
+      },
+      "P_T1": {
+        "observed": 0.4219274749755859,
+        "perm": 0.42195802001953137,
+        "obs_minus_perm": -3.054504394530729e-05,
+        "obs_minus_perm_lo95": -8.882328306876596e-05,
+        "obs_minus_perm_hi95": 2.7733195178151378e-05
+      },
+      "P_T2": {
+        "observed": 0.1406307830810547,
+        "perm": 0.14061507568359405,
+        "obs_minus_perm": 1.570739746093341e-05,
+        "obs_minus_perm_lo95": -1.7748956810827817e-05,
+        "obs_minus_perm_hi95": 4.916375173269464e-05
+      },
+      "P_T3": {
+        "observed": 0.015603652954101562,
+        "perm": 0.015603942871093734,
+        "obs_minus_perm": -2.8991699218814993e-07,
+        "obs_minus_perm_lo95": -1.4387942620441185e-05,
+        "obs_minus_perm_hi95": 1.3808108636064883e-05
+      }
+    },
+    "7": {
+      "opp_double_axes": {
+        "observed": 0.17873541259765624,
+        "perm": 0.1739778930664066,
+        "obs_minus_perm": 0.004757519531250003,
+        "obs_minus_perm_lo95": 0.004604306665716191,
+        "obs_minus_perm_hi95": 0.004910732396783815
+      },
+      "single_axes_q": {
+        "observed": 1.1425291748046875,
+        "perm": 1.1520442138671882,
+        "obs_minus_perm": -0.009515039062500008,
+        "obs_minus_perm_lo95": -0.00982146479356763,
+        "obs_minus_perm_hi95": -0.009208613331432386
+      },
+      "opposite_cov_at_k": {
+        "observed": -0.030415388319227462,
+        "perm": -0.03200122816297744,
+        "obs_minus_perm": 0.0015858398437500094,
+        "obs_minus_perm_lo95": 0.001534768888572072,
+        "obs_minus_perm_hi95": 0.001636910798927947
+      },
+      "perpendicular_cov_at_k": {
+        "observed": -0.03239768812391496,
+        "perm": -0.03200122816297743,
+        "obs_minus_perm": -0.0003964599609374958,
+        "obs_minus_perm_lo95": -0.00040922769973198017,
+        "obs_minus_perm_hi95": -0.00038369222214301144
+      },
+      "P_T0": {
+        "observed": 0.4103879852294922,
+        "perm": 0.41124326782226567,
+        "obs_minus_perm": -0.0008552825927734376,
+        "obs_minus_perm_lo95": -0.0008809512245463517,
+        "obs_minus_perm_hi95": -0.0008296139610005235
+      },
+      "P_T1": {
+        "observed": 0.4416245574951172,
+        "perm": 0.44024808959960926,
+        "obs_minus_perm": 0.0013764678955078145,
+        "obs_minus_perm_lo95": 0.0013342451379129996,
+        "obs_minus_perm_hi95": 0.0014186906531026295
+      },
+      "P_T2": {
+        "observed": 0.13558692932128907,
+        "perm": 0.13577401733398456,
+        "obs_minus_perm": -0.00018708801269531566,
+        "obs_minus_perm_lo95": -0.00021096032667228696,
+        "obs_minus_perm_hi95": -0.00016321569871834436
+      },
+      "P_T3": {
+        "observed": 0.012400527954101563,
+        "perm": 0.012734625244140636,
+        "obs_minus_perm": -0.0003340972900390624,
+        "obs_minus_perm_lo95": -0.00035005308404401016,
+        "obs_minus_perm_hi95": -0.0003181414960341147
+      }
+    },
+    "9": {
+      "opp_double_axes": {
+        "observed": 0.17939337158203125,
+        "perm": 0.17869908447265623,
+        "obs_minus_perm": 0.0006942871093750024,
+        "obs_minus_perm_lo95": 0.0005382230719201657,
+        "obs_minus_perm_hi95": 0.000850351146829839
+      },
+      "single_axes_q": {
+        "observed": 1.1412132568359374,
+        "perm": 1.142601831054687,
+        "obs_minus_perm": -0.0013885742187500101,
+        "obs_minus_perm_lo95": -0.0017007022936596826,
+        "obs_minus_perm_hi95": -0.0010764461438403376
+      },
+      "opposite_cov_at_k": {
+        "observed": -0.03150751071506076,
+        "perm": -0.03173893975151905,
+        "obs_minus_perm": 0.00023142903645834425,
+        "obs_minus_perm_lo95": 0.00017940769064006524,
+        "obs_minus_perm_hi95": 0.00028345038227662326
+      },
+      "perpendicular_cov_at_k": {
+        "observed": -0.031796797010633655,
+        "perm": -0.03173893975151905,
+        "obs_minus_perm": -5.78572591145796e-05,
+        "obs_minus_perm_lo95": -7.086259556914931e-05,
+        "obs_minus_perm_hi95": -4.4851922660009885e-05
+      },
+      "P_T0": {
+        "observed": 0.41473907470703125,
+        "perm": 0.41498808593749903,
+        "obs_minus_perm": -0.0002490112304687506,
+        "obs_minus_perm_lo95": -0.00027277313620082484,
+        "obs_minus_perm_hi95": -0.00022524932473667628
+      },
+      "P_T1": {
+        "observed": 0.43430828857421877,
+        "perm": 0.4337348266601562,
+        "obs_minus_perm": 0.0005734619140625,
+        "obs_minus_perm_lo95": 0.0005377150458693677,
+        "obs_minus_perm_hi95": 0.0006092087822556323
+      },
+      "P_T2": {
+        "observed": 0.13716619873046876,
+        "perm": 0.13756608886718769,
+        "obs_minus_perm": -0.0003998901367187522,
+        "obs_minus_perm_lo95": -0.0004226612075849311,
+        "obs_minus_perm_hi95": -0.00037711906585257337
+      },
+      "P_T3": {
+        "observed": 0.01378643798828125,
+        "perm": 0.013710998535156232,
+        "obs_minus_perm": 7.543945312499992e-05,
+        "obs_minus_perm_lo95": 5.7789452418339586e-05,
+        "obs_minus_perm_hi95": 9.308945383166024e-05
+      }
+    }
+  },
+  "interpretation": "Conditioning on observed n and b exactly reproduces the octant-averaged count distribution on each shell. This is combinatorics, not independent predictive evidence, and does not establish a symmetry representation for the teacher, a new order, dynamics, or cross-site explanatory sufficiency.",
+  "files_sha256": {
+    "parent-masks.npz": "805a1f30895293338de457289b9edaefe9873db707bed4be5d00dc8a99bb6fe4",
+    "responses.csv": "03d350f82aedeaae07f7b6729ae0d816bf21b754383bc3ac082770fd7210751e",
+    "vacancy-dipole.png": "a9c48b596fe134db52730c089aa01e2ba62caa9041b87f4cb5c9a7b6cead4c36"
+  }
+}
