@@ -1,11 +1,8 @@
 """Matched soft-encoder objectives on archived native TRAIN words; never read beyond an authorized phase."""
-import argparse
-import csv
 import hashlib
 import itertools
 import json
 import os
-import time
 import zipfile
 from pathlib import Path
 
