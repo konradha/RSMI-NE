@@ -1,0 +1,61 @@
+{
+  "status": "stopped-before-physical-fit",
+  "trigger": "Prespecified single end-to-end planted sensitivity gate failed. No training or assessment on the archive was performed by this reference, and no paid expansion or rescue is warranted. This is not a measurement of the physical effect.",
+  "synthetic_only": true,
+  "control_sha256": "678a9d867bcae92fc1f4840310fd2712424b442654cb30e0a57b078eb8801d86",
+  "design_sha256": "f9fb6682bb7a3624b27095383b8b6e222650c7603de83941c048b6ffb87b046f",
+  "implementation_sha256": "76d1b0b3657a999815f5d7606a45e53c85a09adec5ca808686f015e8bda2c34b",
+  "material_margin_nats": 0.001,
+  "contrast": {
+    "raw512-packing": {
+      "point": 0.0033417265699732727,
+      "lo95": -0.0019442325165765048,
+      "hi95": 0.00862768565652305,
+      "projected_mde80_1024": 0.002644421297381913,
+      "minimum_point_for_projected_margin_plus_mde": 0.003644421297381913
+    },
+    "raw512-stratum": {
+      "point": -0.006638598331650504,
+      "lo95": -0.013431144742254111,
+      "hi95": 0.0001539480789531037,
+      "projected_mde80_1024": 0.0033981258835999698,
+      "minimum_point_for_projected_margin_plus_mde": 0.00439812588359997
+    },
+    "packing-stratum": {
+      "point": -0.009980324901623776,
+      "lo95": -0.016311589731143893,
+      "hi95": -0.003649060072103659,
+      "projected_mde80_1024": 0.003167359277742,
+      "minimum_point_for_projected_margin_plus_mde": 0.004167359277742
+    }
+  },
+  "update_doubling_512_minus_256": {
+    "estimate": -0.0016333370437013124,
+    "se": 0.00043142986072414527,
+    "lo": -0.0024870588799563824,
+    "hi": -0.0007796152074462423,
+    "mde80": 0.0012080036100276066,
+    "projected_mde80_1024": 0.00042709377217417516
+  },
+  "last_seed_incremental_gains": [
+    0.0048534913541177765,
+    0.001279052625415884
+  ],
+  "sensitivity": "The known synthetic conditional channel added .01107 nat over the true stratum+density law. This exact fitted procedure did not certify a .001-nat gain over either matched predictor. The 1024-parent MDE calculation only rescales observed synthetic cluster variability; physical precision remains unknown. The final conditional gain fell rather than rose on update doubling. Do not interpret either earlier checkpoint or seed as selected.",
+  "fit_parents_physical": 0,
+  "dev_parents_physical": 0,
+  "assessment_parents": 0,
+  "raw_paid_jobs": 0,
+  "raw_incremental_spend_usd": 0,
+  "control_seconds": 12.056946355383843,
+  "physical_projection_if_admitted": {
+    "0.35": {
+      "estimated_local_seconds": 160.7328353598714,
+      "threefold_planning_allowance": 482.19850607961416
+    },
+    "1.0": {
+      "estimated_local_seconds": 458.83867175877094,
+      "threefold_planning_allowance": 1376.5160152763128
+    }
+  }
+}
