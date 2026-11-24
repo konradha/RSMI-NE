@@ -1,0 +1,49 @@
+{
+  "prior_reconciled_usd": "3.26270440",
+  "interior": {
+    "sandbox": "sb-nDo85dhrlkIL67RixCzogs",
+    "app": "ap-A1M8t5xb2WDtwWpFdo039W",
+    "gross_usd": "0.28320299",
+    "resources_usd": {
+      "CPU": "0.03279460",
+      "H100": "0.22822176",
+      "Memory": "0.02218662"
+    },
+    "h100_equivalent_s": 207.99957873417722,
+    "provider_terminal": {
+      "sandbox": "sb-nDo85dhrlkIL67RixCzogs",
+      "utc": "2026-11-24T16:27:24.761990+00:00",
+      "code": 137
+    }
+  },
+  "experiment_01": {
+    "sandbox": "sb-UBas3Tyfs7COVoWMmnB9fD",
+    "app": "ap-NEgsHompu2lgNRiCbmL7ZC",
+    "gross_usd": "1.58901632",
+    "resources_usd": {
+      "CPU": "0.18163478",
+      "Memory": "0.14336219",
+      "H100": "1.26401935"
+    },
+    "h100_equivalent_s": 1152.017635443038,
+    "provider_terminal": {
+      "sandbox": "sb-UBas3Tyfs7COVoWMmnB9fD",
+      "utc": "2026-11-24T17:01:34.591575+00:00",
+      "code": 137
+    }
+  },
+  "cumulative_gross_usd": "4.85172072",
+  "original_cap_usd": 25,
+  "remaining_usd": "20.14827928",
+  "reservation": {
+    "prior_usd": "3.26270440",
+    "max_usd": "9.649066666666666666666666664",
+    "cpu": 12,
+    "gib": 56,
+    "seconds": 4800,
+    "source": "08622111e32a379d8d2bd4697a0598aa66a40650c76a363f3b284b01a53a8b94",
+    "design": "87c8c98530cea6631b89f754c9d067c8bd01ad4b4965ec0ae6707b790a8fae24",
+    "image": "im-1aUX0dAUmmZQ583Ohg7Icu",
+    "plans": 90
+  }
+}
