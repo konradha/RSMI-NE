@@ -1,0 +1,29 @@
+{
+  "schema": "hero-full-v3-main-sandbox-control-1",
+  "utc": "2026-11-24T15:17:03.612Z",
+  "synthetic_control": {
+    "source": "generated local transport control, no physical parents; no Modal call",
+    "missing_stdin_capability_exit": 41,
+    "first_armed_exec_exit": 0,
+    "replayed_capability_exit": 1,
+    "child_starts": 1,
+    "unreceipted_weights_exported": 0,
+    "receipted_checkpoint_pairs_exported_across_two_collections": 1,
+    "synthetic_delta_wire_bytes": 492,
+    "result_names_rejected": ["../test.npy", "raw/train.npy", "optimizer/model.npz", "learning/../../other.json"]
+  },
+  "packing_observation": {
+    "source": "already sealed archived physical TRAIN shards, local hash and ZIP_STORED packaging only; not optimizer/model timing",
+    "transport_receipt_sha256": "b5943fac475d8d11321bf45f12566674a74ebcf64b6478fe6666a3e8955f44b0",
+    "individual_shards": 320,
+    "compressed_shard_bytes": 432842329,
+    "wire_zip_bytes_before_separate_receipts_and_source": 432876271,
+    "wire_zip_sha256": "00960adcf8365bd6e8d6088b770e60e38bacaa3fa4087df67d3f042b2ac3994c",
+    "measured_local_validate_pack_and_hash_s": 1.165,
+    "test_fields_opened": 0,
+    "gpu_jobs_started_by_control": 0
+  },
+  "provider_observation": "2026-11-24 authenticated read-only check: prior pilot ID, terminal state, exact tags and existing App matched the registered allocation. An absent or partial hourly gross report never resets the pilot carry.",
+  "future_ticket_bound_usd_rounded_up": {"prior_unreconciled_pilot": 1.05, "main": 6.15, "conditional_refit": 4.27, "aggregate": 11.47},
+  "protocol": "One released scientific exec, in-memory capability, volatile exclusive claim. No Modal Snapshot, writable Volume, image build, ports or user network. Finite sleep-only sandbox boot. Accept only complete learning receipts plus their keyed weights and allowlisted stage JSON. Each immutable compressed fragment transferred once, no re-fetch, 64 MiB aggregate inclusive of status and 2 GiB input; charge 3 GiB conservative network allowance. Worker collects immutable deltas about every 15 seconds, client saves locally continuously; preserve available partials, never rerun unknown work. Training deadline uses earliest create-attempt clock (including queue/upload) and expires 75 seconds before object lifetime/discovery cutoff. Exec cap is remaining child time plus 45 seconds. Failed or uncertain provider action leaves the full reservation in place."
+}
