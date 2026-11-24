@@ -1,0 +1,57 @@
+{
+  "status": "terminated_incomplete",
+  "first_wave_seed": 6101,
+  "all_ten_adam_iteration_one": true,
+  "PIDs_in_beta_index_order": [
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+  ],
+  "GPU_UUID": "a66b109d-45d9-b39b-454a-0200c942b129",
+  "stock_nan_early_return_counts": [
+    6789,
+    6839
+  ],
+  "wave_exit_codes_at_first_failure": [
+    1,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "returned_complete_fit_outputs": 0,
+  "throughput_and_final_weight_gallery": "No verified full-window optimizer receipts or final kernels persisted by the immutable launcher. Do not infer throughput, scores or publish substitute finals.",
+  "waves_never_started": [
+    6102,
+    6103
+  ],
+  "provider": {
+    "sandbox": "sb-JGhrwsvapRA8uOGjmJ1xnR",
+    "app": "ap-AXDytjwpL6eVqVFKimUJqY",
+    "gross_usd": "0.47796996",
+    "resources_usd": {
+      "H100": "0.37086142",
+      "CPU": "0.07105517",
+      "Memory": "0.03605336"
+    },
+    "metered_h100_equivalent_seconds": 338.0002815189873,
+    "provider_terminal": {
+      "sandbox": "sb-JGhrwsvapRA8uOGjmJ1xnR",
+      "utc": "2026-11-24T16:12:44.272684+00:00",
+      "code": 137
+    },
+    "scope": "Authenticated tagged gross; not net invoice. Prior V3 and V1 together $2.06058760."
+  }
+}

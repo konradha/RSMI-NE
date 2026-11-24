@@ -1,0 +1,21 @@
+{
+  "eligible": {
+    "indices": [
+      0,
+      9
+    ],
+    "betas": [
+      "0",
+      "3.05"
+    ],
+    "seeds": [
+      6101
+    ],
+    "basis": "Only seed launched in immutable concurrent run. Paired endpoint replay authorized; never evaluate shorter or nonfinite runs. No new seed if one fails."
+  },
+  "fit": "Unmodified f898730 stock, same source, original TRAIN-only arrays, seed, batch 500 and retained 192, 589 epochs, Adam .009, 10013 measured steps. Stock constructor is temporarily wrapped only in its optimizer module to retain exactly its single returned original critic instance; restore binding in finally. Record actual steps and save partial training records on NaN. No fitting after TEST open.",
+  "assessment": "Only a finite final stock model with 10013 steps; fixed original 8192 TEST parents at each beta, order unchanged. training=False for encoder and critic, no tape, no optimizer; one relaxed draw per parent, reused. Once per batch, critic(E,H) returns rows H and columns E. Same TFP lower_bound_info_nce(logu=S,joint_sample_mask=eye(n)) as stock. Initial evaluation RNG seed 440311+beta index. For the null use exactly one uniformly drawn derangement via rejection of NumPy default_rng([771904,beta_index,batch_index]).permutation(n), using mask row i, column perm[i] on the identical S. No new weights, scores or shuffle replication. Retain only draws, weights, permutations/digests and per-batch summary; not dense matrices.",
+  "estimand": "For each endpoint separately: 16 disjoint 500-parent batches + 1 disjoint 192-parent batch. Parent-count-weighted real and shuffled nats and paired gain. w_j=n_j/8192, m=sum(w*d); use se=sqrt((17/16)*sum(w^2*(d-m)^2)), Student t16 pointwise 95% paired batch CI. Conditional on frozen model and evaluation randomization. All eligible prespecified seeds, no adjustment/selection using TEST. Report counts, per-batch gain and NaNs. Not exact MI or evidence of nonordinary order.",
+  "artifacts": "Separate held-out/shuffled figure, distinct TRAIN curves and filter stages from saved available endpoints, frozen critic tensors and encoder weights. Missing fits labeled rather than silently dropped.",
+  "budget": "One H100 maximum 1800s, 4 CPU, 16GiB and up to 8GiB network ($2.78 max). Prior tagged resources $2.53855756; retain $11.47 V3 ceiling plus $0.46928229 V1 plus $0.47796996 V2 for admission. No second attempt."
+}
