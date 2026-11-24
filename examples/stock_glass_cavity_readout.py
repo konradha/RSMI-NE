@@ -43,7 +43,11 @@ def readout(inputs,out,runs,reference=None):
             for dep in depths:
                 ck=recs.get(str(dep),{});valid=ck.get('map_valid',False);row=dict(index=b,beta=beta,seed=seed,depth=dep,final=dep==fin,steps=steps,train_parents=len(tr),test_parents=len(te),bank_pairs=16*len(tr),processed_pairs=pos,status=status,checkpoint='finite' if valid else 'invalid' if ck else 'unreached',critic_finite=ck.get('critic_weights_finite'),hard_codes=0,eligible_exteriors_splits='fixed')
                 if valid:
-                    z=vals[f'logits{dep}'].astype('d');assert z.shape==(210,2) and np.isfinite(z).all();w=vals[f'w{dep}'];flat=np.stack([X==1,X==2],axis=-1).reshape(210,14).astype('d');w0=w[coords[:,0],coords[:,1],coords[:,2]].reshape(14,2);np.testing.assert_allclose(z,flat@w0,rtol=2e-5,atol=3e-5)
+                    z=vals[f'logits{dep}'].astype('d');assert z.shape==(210,2) and np.isfinite(z).all();w=vals[f'w{dep}'];flat=np.stack([X==1,X==2],axis=-1).reshape(210,14).astype('d');w0=w[tuple(coords.T)].reshape(14,2);bits=w0.view(np.uint32);mask=np.uint32(0xffffe000)
+                    # The H100 contracts rounded TF32 operands. Replay the arithmetic for integrity only;
+                    # the signed partition and noisy channel always use the saved stock logits, never a reconstruction.
+                    ordinary=flat@w0;replays={'float32':ordinary,'tf32_rn':flat@((bits+4095+((bits>>13)&1))&mask).view('f4'),'tf32_rna':flat@((bits+4096)&mask).view('f4')}
+                    kind=min(replays,key=lambda k:np.max(abs(z-replays[k])));np.testing.assert_allclose(z,replays[kind],rtol=2e-5,atol=3e-5);row.update(contraction=kind,replay_max_error=float(np.max(abs(z-replays[kind]))),full_precision_sign_differences=int(np.sum((ordinary>=0)!=(z>=0))))
                     tau=ck['tau'];key=name+f'_d{dep}';banks[key+'_logits']=z;rel=relaxed(z,tau,256);diff=float(np.max(abs(rel-relaxed(z,tau,512))));max_quad=max(max_quad,diff);assert diff<1e-4;banks[key+'_relaxed_1st_2nd']=rel
                     for channel,q in distribution(z).items():
                         np.testing.assert_allclose(q.sum(1),1,rtol=0,atol=1e-14);y=tr@q;v=te@q;atr=contrast(y);pm=mv@q;count=int(np.count_nonzero(pm>1e-14));rs=dict(index=b,beta=beta,seed=seed,depth=dep,final=dep==fin,channel=channel,parents=len(te),output_support=count,entropy_nats=float(entropy(pm)),entropy_given_state_nats=mv@entropy(q),stock_tau=tau,fit=status,valid_contrast=atr is not None)

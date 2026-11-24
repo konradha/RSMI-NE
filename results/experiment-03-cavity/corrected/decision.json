@@ -1,0 +1,62 @@
+{
+  "beta": 3.05,
+  "fit_count": 30,
+  "completed": 30,
+  "finite_checkpoints": 150,
+  "updates": 307593,
+  "presentations": 153333648,
+  "recovery_all_three": true,
+  "increment_over_linear_all_three": false,
+  "oracle_increment_over_linear": false,
+  "test_parents": 8187,
+  "seeds": [
+    {
+      "seed": 6101,
+      "T": 0.9777921851209,
+      "T_lo": 0.9745753670112,
+      "T_hi": 0.9810090032307,
+      "fraction": 0.9792255986456,
+      "fraction_lo": 0.976006563717,
+      "fraction_hi": 0.9824446335741,
+      "minus_linear": -0.0206069491677,
+      "minus_linear_lo": -0.02378671957079,
+      "minus_linear_hi": -0.01742717876461,
+      "minus_simple": -0.02088253345348,
+      "minus_simple_lo": -0.02407435582091,
+      "minus_simple_hi": -0.01769071108605
+    },
+    {
+      "seed": 6102,
+      "T": 0.9757071007971,
+      "T_lo": 0.9725126870966,
+      "T_hi": 0.9789015144977,
+      "fraction": 0.9771374576517,
+      "fraction_lo": 0.9739328741845,
+      "fraction_hi": 0.9803420411188,
+      "minus_linear": -0.02269203349153,
+      "minus_linear_lo": -0.02590044164842,
+      "minus_linear_hi": -0.01948362533464,
+      "minus_simple": -0.0229676177773,
+      "minus_simple_lo": -0.02616515359679,
+      "minus_simple_hi": -0.01977008195782
+    },
+    {
+      "seed": 6103,
+      "T": 0.973127524021,
+      "T_lo": 0.9696885943307,
+      "T_hi": 0.9765664537113,
+      "fraction": 0.9745540992947,
+      "fraction_lo": 0.971116599211,
+      "fraction_hi": 0.9779915993783,
+      "minus_linear": -0.02527161026766,
+      "minus_linear_lo": -0.0286954269228,
+      "minus_linear_hi": -0.02184779361251,
+      "minus_simple": -0.02554719455343,
+      "minus_simple_lo": -0.02900629325807,
+      "minus_simple_hi": -0.02208809584879
+    }
+  ],
+  "corrective_charge_usd": "1.02825615",
+  "both_attempts_usd": "1.33603878",
+  "remaining_usd": "17.99322425"
+}

@@ -64,6 +64,18 @@ def learned(out,reference):
                 d=q[(q.seed==s)&(q.channel==ch)].sort_values('depth');a.plot(d.depth,d['T'],ls,marker='.' if ch=='hard' else None,color=c,lw=1);a.fill_between(d.depth.to_numpy(),d.T_lo.to_numpy(),d.T_hi.to_numpy(),color=c,alpha=.10);zero=d[~d.valid_contrast];a.scatter(zero.depth,[-.065-.027*k]*len(zero),s=17,marker='x',color=c)
         a.set(xscale='log',ylim=(-.16,1.07),title=f'β={betas[b]:.3f}',xticks=[850,3400,10000],xticklabels=['850','3.4k','10k']);a.minorticks_off();a.grid(alpha=.16)
     fig.supxlabel('Actual optimizer updates · solid hard / dotted independent noisy bits / dashed frozen physical mode');fig.supylabel('TEST memory T');fig.suptitle('Exact readout at every registered depth (× = undefined constant code)');axs[0,0].legend([Line2D([],[],color=c) for c in COLORS],list(map(str,SEEDS)),loc='upper left',fontsize=7,frameon=False);save(fig,out,'depth-and-noise')
+    # Show the actual category assignment, not an aligned or post-selected filter.
+    support=pd.read_csv(reference/'state-support.csv');mass=support[support['index']==9].sort_values('state').train_mass.to_numpy()
+    fig,axes=plt.subplots(1,3,figsize=(10,3.4),sharey=True,constrained_layout=True)
+    with np.load(out/'code-maps.npz') as maps:
+        for ax,seed in zip(axes,SEEDS):
+            d=final[(final['index']==9)&(final.seed==seed)&(final.channel=='hard')]
+            ax.set(xlabel='Frozen two-bit code',xticks=range(4),xticklabels=['00','01','10','11'],yticks=range(3),yticklabels=['vacancy','A','B'])
+            if d.empty:ax.set_title(f'Seed {seed} · not reached');continue
+            r=d.iloc[0];q=maps[f'b09-s{seed}_d{r.depth}_hard_Q'];cm=np.stack([np.average(q[X[:,0]==k],axis=0,weights=mass[X[:,0]==k]) for k in range(3)])
+            ax.imshow(cm,vmin=0,vmax=1,cmap='Blues',aspect='auto');ax.set_title(f'Seed {seed} · {int(r.output_support)} codes')
+            for (i,j),v in np.ndenumerate(cm):ax.text(j,i,f'{v:.0%}',ha='center',va='center',color='white' if v>.55 else '#1d2730')
+    axes[0].set_ylabel('Central species');fig.suptitle('β=3.05 · which code does each central species receive?');fig.text(.02,-.045,'All 210 states, weighted by the exact TRAIN marginal. Rows sum to 100% before rounding. Code labels are not matched across seeds.',fontsize=9);save(fig,out,'cold-code-species')
 
 
 def coverage(out,cv,betas):

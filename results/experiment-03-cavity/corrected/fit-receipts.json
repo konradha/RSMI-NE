@@ -1,0 +1,1867 @@
+{
+  "fits": [
+    {
+      "index": 0,
+      "beta": "0",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 47.424867792000015,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 9.995464533999979,
+          "map_valid": true,
+          "max_contraction_difference": 0.0009098052978515625
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 13.50276790899997,
+          "map_valid": true,
+          "max_contraction_difference": 0.0013804435729980469
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 20.27172391899998,
+          "map_valid": true,
+          "max_contraction_difference": 0.00551605224609375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 33.74081761900001,
+          "map_valid": true,
+          "max_contraction_difference": 0.008266448974609375
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 47.41481952799998,
+          "map_valid": true,
+          "max_contraction_difference": 0.00762939453125
+        }
+      }
+    },
+    {
+      "index": 0,
+      "beta": "0",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.42714533500003,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.154444341000044,
+          "map_valid": true,
+          "max_contraction_difference": 0.0005965232849121094
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.220560886000044,
+          "map_valid": true,
+          "max_contraction_difference": 0.0035161972045898438
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.420564806000016,
+          "map_valid": true,
+          "max_contraction_difference": 0.00496673583984375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.03943291700006,
+          "map_valid": true,
+          "max_contraction_difference": 0.0064640045166015625
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.41898352499999,
+          "map_valid": true,
+          "max_contraction_difference": 0.006103515625
+        }
+      }
+    },
+    {
+      "index": 0,
+      "beta": "0",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.50007643699996,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.807687859999987,
+          "map_valid": true,
+          "max_contraction_difference": 0.0017728805541992188
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 23.10260589699999,
+          "map_valid": true,
+          "max_contraction_difference": 0.003658294677734375
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.58988182299993,
+          "map_valid": true,
+          "max_contraction_difference": 0.0051670074462890625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.43460779599991,
+          "map_valid": true,
+          "max_contraction_difference": 0.0059261322021484375
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.48953260499991,
+          "map_valid": true,
+          "max_contraction_difference": 0.00580596923828125
+        }
+      }
+    },
+    {
+      "index": 1,
+      "beta": "0.338888888889",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 103.90567526399997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 12.480367677000004,
+          "map_valid": true,
+          "max_contraction_difference": 0.0021969079971313477
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 20.599704158999998,
+          "map_valid": true,
+          "max_contraction_difference": 0.0025131702423095703
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 37.13528005799998,
+          "map_valid": true,
+          "max_contraction_difference": 0.004463672637939453
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 69.99275819999997,
+          "map_valid": true,
+          "max_contraction_difference": 0.0029058456420898438
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 103.894469474,
+          "map_valid": true,
+          "max_contraction_difference": 0.0047893524169921875
+        }
+      }
+    },
+    {
+      "index": 1,
+      "beta": "0.338888888889",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.48195494499998,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.552475054000013,
+          "map_valid": true,
+          "max_contraction_difference": 0.002452373504638672
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.741207653999993,
+          "map_valid": true,
+          "max_contraction_difference": 0.004312753677368164
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.97177075900004,
+          "map_valid": true,
+          "max_contraction_difference": 0.0034661293029785156
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.58578513200007,
+          "map_valid": true,
+          "max_contraction_difference": 0.0046939849853515625
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.473584082,
+          "map_valid": true,
+          "max_contraction_difference": 0.006009101867675781
+        }
+      }
+    },
+    {
+      "index": 1,
+      "beta": "0.338888888889",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.57880306900006,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.920554032000041,
+          "map_valid": true,
+          "max_contraction_difference": 0.0020685195922851562
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 23.199623561000067,
+          "map_valid": true,
+          "max_contraction_difference": 0.0036058425903320312
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.71648525400008,
+          "map_valid": true,
+          "max_contraction_difference": 0.0025882720947265625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.55746936800006,
+          "map_valid": true,
+          "max_contraction_difference": 0.006829261779785156
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.56813728600002,
+          "map_valid": true,
+          "max_contraction_difference": 0.005964994430541992
+        }
+      }
+    },
+    {
+      "index": 2,
+      "beta": "0.677777777778",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.02747437400001,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 13.352999426999986,
+          "map_valid": true,
+          "max_contraction_difference": 0.0030732154846191406
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 21.458920937000016,
+          "map_valid": true,
+          "max_contraction_difference": 0.0031375885009765625
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 37.968291144000034,
+          "map_valid": true,
+          "max_contraction_difference": 0.003508329391479492
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 70.47828227400004,
+          "map_valid": true,
+          "max_contraction_difference": 0.005415916442871094
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.01725353800003,
+          "map_valid": true,
+          "max_contraction_difference": 0.007871627807617188
+        }
+      }
+    },
+    {
+      "index": 2,
+      "beta": "0.677777777778",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.32409969399998,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.46432684399997,
+          "map_valid": true,
+          "max_contraction_difference": 0.0023099184036254883
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.557187631999966,
+          "map_valid": true,
+          "max_contraction_difference": 0.004279136657714844
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.77096250799997,
+          "map_valid": true,
+          "max_contraction_difference": 0.00428009033203125
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.31876196799999,
+          "map_valid": true,
+          "max_contraction_difference": 0.009807109832763672
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.313658541,
+          "map_valid": true,
+          "max_contraction_difference": 0.005925178527832031
+        }
+      }
+    },
+    {
+      "index": 2,
+      "beta": "0.677777777778",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.30496924199997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.754348644999936,
+          "map_valid": true,
+          "max_contraction_difference": 0.0022385120391845703
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.995738612999958,
+          "map_valid": true,
+          "max_contraction_difference": 0.0021178722381591797
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.437949075999995,
+          "map_valid": true,
+          "max_contraction_difference": 0.005812644958496094
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.152726884,
+          "map_valid": true,
+          "max_contraction_difference": 0.006083488464355469
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.281500284,
+          "map_valid": true,
+          "max_contraction_difference": 0.010915756225585938
+        }
+      }
+    },
+    {
+      "index": 3,
+      "beta": "1.016666666667",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 103.91806717599997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 12.882469372000003,
+          "map_valid": true,
+          "max_contraction_difference": 0.0024967193603515625
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 21.005230318999963,
+          "map_valid": true,
+          "max_contraction_difference": 0.0056304931640625
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 37.55964481299998,
+          "map_valid": true,
+          "max_contraction_difference": 0.0081024169921875
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 70.31334425099999,
+          "map_valid": true,
+          "max_contraction_difference": 0.008380889892578125
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 103.90794142099998,
+          "map_valid": true,
+          "max_contraction_difference": 0.005833148956298828
+        }
+      }
+    },
+    {
+      "index": 3,
+      "beta": "1.016666666667",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.34585524700003,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.367397178000033,
+          "map_valid": true,
+          "max_contraction_difference": 0.002960205078125
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.446540210000023,
+          "map_valid": true,
+          "max_contraction_difference": 0.00592041015625
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.66012118000003,
+          "map_valid": true,
+          "max_contraction_difference": 0.0056514739990234375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.19616172200006,
+          "map_valid": true,
+          "max_contraction_difference": 0.007354736328125
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.33569007799997,
+          "map_valid": true,
+          "max_contraction_difference": 0.00616455078125
+        }
+      }
+    },
+    {
+      "index": 3,
+      "beta": "1.016666666667",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.63579389200004,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.685062487000096,
+          "map_valid": true,
+          "max_contraction_difference": 0.0031633377075195312
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.944289052000045,
+          "map_valid": true,
+          "max_contraction_difference": 0.003582000732421875
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.50465604500005,
+          "map_valid": true,
+          "max_contraction_difference": 0.006259918212890625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.3372574120001,
+          "map_valid": true,
+          "max_contraction_difference": 0.0060272216796875
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.62504029800004,
+          "map_valid": true,
+          "max_contraction_difference": 0.007293701171875
+        }
+      }
+    },
+    {
+      "index": 4,
+      "beta": "1.355555555556",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.56932500699997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.12016995099998,
+          "map_valid": true,
+          "max_contraction_difference": 0.002814769744873047
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.35754106500002,
+          "map_valid": true,
+          "max_contraction_difference": 0.003509521484375
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.88825833300001,
+          "map_valid": true,
+          "max_contraction_difference": 0.0065822601318359375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.52214837999998,
+          "map_valid": true,
+          "max_contraction_difference": 0.00720977783203125
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.558747085,
+          "map_valid": true,
+          "max_contraction_difference": 0.005150794982910156
+        }
+      }
+    },
+    {
+      "index": 4,
+      "beta": "1.355555555556",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.65744924,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.705140940000035,
+          "map_valid": true,
+          "max_contraction_difference": 0.003258228302001953
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.846864177000043,
+          "map_valid": true,
+          "max_contraction_difference": 0.004642963409423828
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.16050547400005,
+          "map_valid": true,
+          "max_contraction_difference": 0.007698535919189453
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.84463404400003,
+          "map_valid": true,
+          "max_contraction_difference": 0.0076045989990234375
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.64727696099999,
+          "map_valid": true,
+          "max_contraction_difference": 0.008584976196289062
+        }
+      }
+    },
+    {
+      "index": 4,
+      "beta": "1.355555555556",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.48427050700002,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.698873914000046,
+          "map_valid": true,
+          "max_contraction_difference": 0.004111289978027344
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.95902313199997,
+          "map_valid": true,
+          "max_contraction_difference": 0.005019664764404297
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.460049785000024,
+          "map_valid": true,
+          "max_contraction_difference": 0.0049152374267578125
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.28579580400003,
+          "map_valid": true,
+          "max_contraction_difference": 0.00550079345703125
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.47453990700001,
+          "map_valid": true,
+          "max_contraction_difference": 0.00956106185913086
+        }
+      }
+    },
+    {
+      "index": 5,
+      "beta": "1.694444444444",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.82070898800004,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.072373702999982,
+          "map_valid": true,
+          "max_contraction_difference": 0.0025453567504882812
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.251654336,
+          "map_valid": true,
+          "max_contraction_difference": 0.0047168731689453125
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.83753953299998,
+          "map_valid": true,
+          "max_contraction_difference": 0.007061004638671875
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.67060077000002,
+          "map_valid": true,
+          "max_contraction_difference": 0.00620269775390625
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.81035278900004,
+          "map_valid": true,
+          "max_contraction_difference": 0.005946159362792969
+        }
+      }
+    },
+    {
+      "index": 5,
+      "beta": "1.694444444444",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 103.75887379199997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 13.749077621000026,
+          "map_valid": true,
+          "max_contraction_difference": 0.0037174224853515625
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 21.818052307000016,
+          "map_valid": true,
+          "max_contraction_difference": 0.004524946212768555
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 37.999283907999995,
+          "map_valid": true,
+          "max_contraction_difference": 0.0069103240966796875
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 70.45793648700004,
+          "map_valid": true,
+          "max_contraction_difference": 0.0077555179595947266
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 103.752107663,
+          "map_valid": true,
+          "max_contraction_difference": 0.009738922119140625
+        }
+      }
+    },
+    {
+      "index": 5,
+      "beta": "1.694444444444",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 76.57234115299991,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 11.631754913000009,
+          "map_valid": true,
+          "max_contraction_difference": 0.0039424896240234375
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 17.74042258599991,
+          "map_valid": true,
+          "max_contraction_difference": 0.005162239074707031
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 29.54271117399992,
+          "map_valid": true,
+          "max_contraction_difference": 0.005162239074707031
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 53.68221601699997,
+          "map_valid": true,
+          "max_contraction_difference": 0.008223533630371094
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 76.56494711699997,
+          "map_valid": true,
+          "max_contraction_difference": 0.009256839752197266
+        }
+      }
+    },
+    {
+      "index": 6,
+      "beta": "2.033333333333",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.686516998,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.106351388999997,
+          "map_valid": true,
+          "max_contraction_difference": 0.0026559829711914062
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.380659629000036,
+          "map_valid": true,
+          "max_contraction_difference": 0.004332542419433594
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.885362138000005,
+          "map_valid": true,
+          "max_contraction_difference": 0.004969120025634766
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.42344734300002,
+          "map_valid": true,
+          "max_contraction_difference": 0.0061283111572265625
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.67806005700004,
+          "map_valid": true,
+          "max_contraction_difference": 0.009150028228759766
+        }
+      }
+    },
+    {
+      "index": 6,
+      "beta": "2.033333333333",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 105.03376762200003,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.809246690000009,
+          "map_valid": true,
+          "max_contraction_difference": 0.002651214599609375
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.996055351999985,
+          "map_valid": true,
+          "max_contraction_difference": 0.0046825408935546875
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.32998517699997,
+          "map_valid": true,
+          "max_contraction_difference": 0.004878997802734375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.141983364,
+          "map_valid": true,
+          "max_contraction_difference": 0.005695343017578125
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 105.02381774599996,
+          "map_valid": true,
+          "max_contraction_difference": 0.00604248046875
+        }
+      }
+    },
+    {
+      "index": 6,
+      "beta": "2.033333333333",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 76.20918048499993,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 11.66383938599995,
+          "map_valid": true,
+          "max_contraction_difference": 0.003911018371582031
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 17.72243584599994,
+          "map_valid": true,
+          "max_contraction_difference": 0.00433349609375
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 29.483721310999954,
+          "map_valid": true,
+          "max_contraction_difference": 0.006384372711181641
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 53.525888487999964,
+          "map_valid": true,
+          "max_contraction_difference": 0.006214618682861328
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 76.1998538009999,
+          "map_valid": true,
+          "max_contraction_difference": 0.0063571929931640625
+        }
+      }
+    },
+    {
+      "index": 7,
+      "beta": "2.372222222222",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.57206638299999,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.039514752000002,
+          "map_valid": true,
+          "max_contraction_difference": 0.005276679992675781
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.310240615999987,
+          "map_valid": true,
+          "max_contraction_difference": 0.0030417442321777344
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.79136626000002,
+          "map_valid": true,
+          "max_contraction_difference": 0.007049560546875
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.47183374600002,
+          "map_valid": true,
+          "max_contraction_difference": 0.00711822509765625
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.56126301800003,
+          "map_valid": true,
+          "max_contraction_difference": 0.0046405792236328125
+        }
+      }
+    },
+    {
+      "index": 7,
+      "beta": "2.372222222222",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 104.908053139,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.263992928999983,
+          "map_valid": true,
+          "max_contraction_difference": 0.0016956329345703125
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.41822218499999,
+          "map_valid": true,
+          "max_contraction_difference": 0.00511932373046875
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.906866139000044,
+          "map_valid": true,
+          "max_contraction_difference": 0.005620002746582031
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.65788456400003,
+          "map_valid": true,
+          "max_contraction_difference": 0.008144378662109375
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.89854451300005,
+          "map_valid": true,
+          "max_contraction_difference": 0.006203651428222656
+        }
+      }
+    },
+    {
+      "index": 7,
+      "beta": "2.372222222222",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 72,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5111808,
+      "bank_positives": 131072,
+      "train_parents": 8192,
+      "seconds": 76.610851755,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 11.773224681999977,
+          "map_valid": true,
+          "max_contraction_difference": 0.00290679931640625
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 17.83576059899997,
+          "map_valid": true,
+          "max_contraction_difference": 0.0032758712768554688
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 29.697439823999957,
+          "map_valid": true,
+          "max_contraction_difference": 0.00595855712890625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 53.92119578400002,
+          "map_valid": true,
+          "max_contraction_difference": 0.007396697998046875
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 76.60390763500004,
+          "map_valid": true,
+          "max_contraction_difference": 0.005619049072265625
+        }
+      }
+    },
+    {
+      "index": 8,
+      "beta": "2.711111111111",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 8,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5109312,
+      "bank_positives": 131008,
+      "train_parents": 8188,
+      "seconds": 104.47259841599998,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 13.905416599000034,
+          "map_valid": true,
+          "max_contraction_difference": 0.002774953842163086
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.15658851300003,
+          "map_valid": true,
+          "max_contraction_difference": 0.0033969879150390625
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.73913689800003,
+          "map_valid": true,
+          "max_contraction_difference": 0.005645751953125
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 71.33372359399999,
+          "map_valid": true,
+          "max_contraction_difference": 0.008852005004882812
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 104.463200471,
+          "map_valid": true,
+          "max_contraction_difference": 0.009937286376953125
+        }
+      }
+    },
+    {
+      "index": 8,
+      "beta": "2.711111111111",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 8,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5109312,
+      "bank_positives": 131008,
+      "train_parents": 8188,
+      "seconds": 103.8793866210001,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 13.118961751000029,
+          "map_valid": true,
+          "max_contraction_difference": 0.003841400146484375
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 21.187989454000103,
+          "map_valid": true,
+          "max_contraction_difference": 0.005560159683227539
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 37.7039957290001,
+          "map_valid": true,
+          "max_contraction_difference": 0.005482196807861328
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 70.37941685400006,
+          "map_valid": true,
+          "max_contraction_difference": 0.0056819915771484375
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 103.87043451200009,
+          "map_valid": true,
+          "max_contraction_difference": 0.0038967132568359375
+        }
+      }
+    },
+    {
+      "index": 8,
+      "beta": "2.711111111111",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 263,
+      "last_batch": 8,
+      "final": 10257,
+      "steps": 10257,
+      "positives": 5109312,
+      "bank_positives": 131008,
+      "train_parents": 8188,
+      "seconds": 76.959483471,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 11.772244082999919,
+          "map_valid": true,
+          "max_contraction_difference": 0.004352569580078125
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 17.927482414999986,
+          "map_valid": true,
+          "max_contraction_difference": 0.004960536956787109
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 29.810830704999944,
+          "map_valid": true,
+          "max_contraction_difference": 0.00582122802734375
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 54.06297417899998,
+          "map_valid": true,
+          "max_contraction_difference": 0.009879589080810547
+        },
+        "10257": {
+          "global_step": 10256,
+          "tau": 0.2689359486103058,
+          "critic_weights_finite": true,
+          "seconds": 76.95358247599995,
+          "map_valid": true,
+          "max_contraction_difference": 0.007308483123779297
+        }
+      }
+    },
+    {
+      "index": 9,
+      "beta": "3.05",
+      "seed": 6101,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 262,
+      "last_batch": 460,
+      "final": 10218,
+      "steps": 10218,
+      "positives": 5107440,
+      "bank_positives": 130960,
+      "train_parents": 8185,
+      "seconds": 103.93853555099997,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.053913713000043,
+          "map_valid": true,
+          "max_contraction_difference": 0.00370025634765625
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.059013066000034,
+          "map_valid": true,
+          "max_contraction_difference": 0.0027616024017333984
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 38.27133556700005,
+          "map_valid": true,
+          "max_contraction_difference": 0.0056858062744140625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 70.82042256800003,
+          "map_valid": true,
+          "max_contraction_difference": 0.007982730865478516
+        },
+        "10218": {
+          "global_step": 10217,
+          "tau": 0.2699868381023407,
+          "critic_weights_finite": true,
+          "seconds": 103.92862441500006,
+          "map_valid": true,
+          "max_contraction_difference": 0.004435539245605469
+        }
+      }
+    },
+    {
+      "index": 9,
+      "beta": "3.05",
+      "seed": 6102,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 262,
+      "last_batch": 460,
+      "final": 10218,
+      "steps": 10218,
+      "positives": 5107440,
+      "bank_positives": 130960,
+      "train_parents": 8185,
+      "seconds": 105.081812743,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 14.676824865999947,
+          "map_valid": true,
+          "max_contraction_difference": 0.004006862640380859
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 22.811310007999964,
+          "map_valid": true,
+          "max_contraction_difference": 0.002989053726196289
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 39.30092196299995,
+          "map_valid": true,
+          "max_contraction_difference": 0.0056858062744140625
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 72.01791607999996,
+          "map_valid": true,
+          "max_contraction_difference": 0.007380485534667969
+        },
+        "10218": {
+          "global_step": 10217,
+          "tau": 0.2699868381023407,
+          "critic_weights_finite": true,
+          "seconds": 105.07161692600005,
+          "map_valid": true,
+          "max_contraction_difference": 0.0049152374267578125
+        }
+      }
+    },
+    {
+      "index": 9,
+      "beta": "3.05",
+      "seed": 6103,
+      "base": "f898730809c1244b6ef749fdaeea2e8796949ab2",
+      "design": "bf4647472c40319f3f20140bb4de38629395bb47ee28e2f012e4a294cdd34be1",
+      "uuid": "d56545d0-eb3b-0d7f-4cdf-a9ca0d97593e",
+      "device": "NVIDIA H100 80GB HBM3",
+      "epochs": 39,
+      "batches": 262,
+      "last_batch": 460,
+      "final": 10218,
+      "steps": 10218,
+      "positives": 5107440,
+      "bank_positives": 130960,
+      "train_parents": 8185,
+      "seconds": 76.498675262,
+      "fit_status": "complete",
+      "trace_above_ceiling": 0,
+      "checkpoints": {
+        "850": {
+          "global_step": 849,
+          "tau": 0.6889531016349792,
+          "critic_weights_finite": true,
+          "seconds": 11.617250688000013,
+          "map_valid": true,
+          "max_contraction_difference": 0.002732992172241211
+        },
+        "1700": {
+          "global_step": 1699,
+          "tau": 0.6328119039535522,
+          "critic_weights_finite": true,
+          "seconds": 17.65847458899998,
+          "map_valid": true,
+          "max_contraction_difference": 0.004840850830078125
+        },
+        "3400": {
+          "global_step": 3399,
+          "tau": 0.5338811278343201,
+          "critic_weights_finite": true,
+          "seconds": 29.57633715399993,
+          "map_valid": true,
+          "max_contraction_difference": 0.0064411163330078125
+        },
+        "6800": {
+          "global_step": 6799,
+          "tau": 0.3800007402896881,
+          "critic_weights_finite": true,
+          "seconds": 53.81539763599994,
+          "map_valid": true,
+          "max_contraction_difference": 0.007117271423339844
+        },
+        "10218": {
+          "global_step": 10217,
+          "tau": 0.2699868381023407,
+          "critic_weights_finite": true,
+          "seconds": 76.49074913799996,
+          "map_valid": true,
+          "max_contraction_difference": 0.0076618194580078125
+        }
+      }
+    }
+  ],
+  "max_quadrature_difference": 1.2946298335370088e-05,
+  "models": 30,
+  "checkpoints_finite": 150
+}

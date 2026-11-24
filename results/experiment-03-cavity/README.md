@@ -1,6 +1,6 @@
 # 03 · What does a seven-site glass cavity remember?
 
-**At β=3.05, asking just “is the center vacant?” recovers the held-out memory of the leading 210-state mode to within one part in a thousand.** The strong result is for an inventory-matched cavity in direct contact with its frozen exterior. It does not establish a bulk order parameter or long-range memory. The stock-learning comparison is **not measured** in the original dispatch: all workers failed while constructing their inputs, before the first optimizer update.
+**At β=3.05, asking “is the center vacant?” gives held-out memory 0.998675; the best unrestricted TRAIN mode gives 0.998536.** The [completed stock RSMI comparison and plots](corrected/) show 0.973128–0.977792 across all three final hard codes. The learned operators recover strong memory, but the one-site indicator does better. This is an inventory-matched cavity touching its frozen exterior, not evidence for a bulk order parameter or long-range memory.
 
 | Frozen observable, β=3.05 | TEST memory T | Pointwise 95% parent interval |
 |---|---:|---:|
@@ -27,11 +27,13 @@ At β=3.05 the TRAIN leading eigenvalue is 0.999447, the first gap is only 0.000
 - For a scalar `f`, `T = Var_B(E[f | B]) / Var(f)` equals the normalized covariance of two independently redrawn interiors given the same exterior. The exact enumeration supplies the expectations without Monte Carlo error on these boundaries. TRAIN fixed the eigenvectors and competitors; TEST evaluated those fixed functions with paired parent-level uncertainty. A test fraction may exceed 1 because the reference was not maximized on TEST. Intervals do not include retraining uncertainty; [alternating TRAIN halves](train-halves.csv) show sensitivity to estimation. The restricted mass/ESS sensitivity at β=2.711 is unestimable: zero states pass both cutoffs, which were not relaxed.
 - As in [Gökmen et al.](https://doi.org/10.1103/PhysRevLett.127.240603), a learned coarse variable needs a physical interpretation; its training bound is not the observable above. Unlike [variable-size pinned cavities](https://doi.org/10.1038/nphys1050), a single touching shell here cannot identify a length scale.
 
-## Stock training: original dispatch failed before fitting
+## Stock training: dispatch history
 
 ![All 150 original checkpoints are unreached](coverage.png)
 
-30 scheduled fits (ten β × seeds 6101–6103), 0 optimizer updates, 0 trained encoders, 0/150 checkpoints. `sb-OTABmGqOuJ1xBdTv3QvDjO`, one NVIDIA H100 80GB. A NumPy indexing mistake in the launcher tried to assign `(210,7,2)` into `(7,210,2)`. It did not reach `train_RSMI_optimiser`. This is neither numerical divergence of the critic nor a collapsed operator. **The fraction of memory captured by stock RSMI is unknown.** No replacement estimator, smaller fit or paid retry. The input packing fix was checked locally on all 210 states, both species, all seven locations and all 20 off-star sites. The stock library was not changed. Device resource charge **$0.30778263**, 236.0 H100-equivalent seconds including setup; cumulative $5.97851960, $19.02148040 remaining. 04 not started.
+**Original attempt:** 30 scheduled cells, 0 optimizer updates, 0/150 checkpoints. In `sb-OTABmGqOuJ1xBdTv3QvDjO`, launcher indexing tried to assign `(210,7,2)` into `(7,210,2)` before the stock trainer. Its charge was $0.30778263; the [original ledger](billing.json), raw failures and coverage are preserved here. The packing fix was checked on all 210 states, both species, all seven locations and all 20 off-star sites.
+
+**Authorized correction:** the unmodified stock trainer completed **30/30 fits and 150/150 checkpoints** on a separate, bounded H100 after the first actual fit passed the CUDA gate. [Final readout and plots](corrected/), [trained weights](corrected/stock-checkpoints.zip), [both charges and remaining budget](corrected/billing.json). Experiment 03 total: $1.33603878.
 
 ## Reuse without a simulator
 

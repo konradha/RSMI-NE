@@ -1,0 +1,21 @@
+{
+  "sandbox": "sb-M2Bar8OLx4Hf58xtVxkItc",
+  "app": "ap-7Y0Gb2bj4nhMgoaNH0dYzY",
+  "gross_usd": "1.02825615",
+  "resources_usd": {
+    "H100": "0.86509303",
+    "Memory": "0.05957096",
+    "CPU": "0.10359215"
+  },
+  "h100_equivalent_s": 788.43921721519,
+  "provider_terminal": {
+    "sandbox": "sb-M2Bar8OLx4Hf58xtVxkItc",
+    "utc": "2026-11-24T18:03:24.822807+00:00",
+    "code": 137
+  },
+  "original_attempt_gross_usd": "0.30778263",
+  "experiment_03_total_usd": "1.33603878",
+  "prior_to_corrective_usd": "5.97851960",
+  "cumulative_usd": "7.00677575",
+  "remaining_usd": "17.99322425"
+}
