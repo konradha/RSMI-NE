@@ -1,0 +1,8 @@
+{
+  "role": "calibration",
+  "parents": 384,
+  "anchors": 49152,
+  "bank_sha256": "8c26193e41299584831bacb00d68b28e06ca5222b2744ce7fe2ed99d8e2c4841",
+  "release_sha256": "90e0a32c35d8ca5b4e85258af7c1767cc108dd5a177387e40c860d4244169e31",
+  "raw_supervised_arm": "not admitted"
+}

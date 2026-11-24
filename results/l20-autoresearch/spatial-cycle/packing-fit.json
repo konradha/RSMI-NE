@@ -1,0 +1,116 @@
+{
+  "stage": "packing-only-fit",
+  "release_sha256": "8f51b6b50ed68bd2c69234319121da16e10b357bc0f0a69465ef239518cf915c",
+  "raw_physical_fit": false,
+  "role": "encoder-fit only",
+  "outputs": "OOF row-major eligible native-parent/anchor-ordinal and full-prefix frozen packing; no raw prediction.",
+  "scope": "Bounded descriptive label-free diagnostic only; no raw claim, no assessment or calibration bank access.",
+  "implementation_sha256": "9e1fb28be60723f881903ad081b304f3030a5ae5af885be798664b1dbf5d2b1f",
+  "reused_cycle_models_sha256": "1f0d7b89ae72a43d1754393435d3a6efd5cd5d6ecd905169de90d3a33464b97e",
+  "reused_spatial_raw_sha256": "76d1b0b3657a999815f5d7606a45e53c85a09adec5ca808686f015e8bda2c34b",
+  "native_threads": 1,
+  "paid_calls": 0,
+  "inputs": {
+    "control_sha256": "dc14f47e12d8987556ac29a61e724e0220b7c1cc2dcad57958d63cfdbdc40ce3",
+    "fit_sha256": "0d993daae8b102cc0105884179f58b5cc79724043fce0e4157207b573ba8bf89",
+    "rosters_sha256": "95b2a844ed9da5787264ce7cb092b67f6d4cc1f626e492c32bf325c352f9b1cd",
+    "eligible_sha256": "41ea1d6b7abc37b3a8a1116ccdeea97ed3b0f5c73cd0e8cc3046f124f9ae11b9",
+    "lineage_sha256": "3c402d7e88ecd89e1d9581d2ca86e094c4a8130167fd5e871144319cf24220c7"
+  },
+  "support": {
+    "512": {
+      "parents": 512,
+      "total_anchors": 65536,
+      "eligible": 31395,
+      "eligible_positives": 15467,
+      "eligible_fraction": 0.4790496826171875,
+      "retained_positive_fraction": 0.9339975845410629,
+      "class_parents": [
+        512,
+        512
+      ],
+      "passed": true
+    },
+    "2048": {
+      "parents": 2048,
+      "total_anchors": 262144,
+      "eligible": 125822,
+      "eligible_positives": 62234,
+      "eligible_fraction": 0.47997283935546875,
+      "retained_positive_fraction": 0.9347813025714973,
+      "class_parents": [
+        2048,
+        2048
+      ],
+      "passed": true
+    }
+  },
+  "fits": {
+    "512": {
+      "model": "packing-model-512.joblib",
+      "oof": "packing-oof-512.npz",
+      "model_sha256": "30a31c233afcc118c75433fe298b794132b92b3bdd07d254c941d4cf8605db36",
+      "oof_sha256": "8d4d4214f49754b24d0e1b18c804105782fda36798b6aa0e7d17e4e8f3ed153f",
+      "eligible_rows": 31395,
+      "eligible_parents": 512,
+      "two_folds_then_all": [
+        {
+          "train_rows": 15634,
+          "held_rows": 15761,
+          "seconds": 9.650561721995473,
+          "logistic_iterations": 60,
+          "tree_iterations": 150
+        },
+        {
+          "train_rows": 15761,
+          "held_rows": 15634,
+          "seconds": 9.423156351782382,
+          "logistic_iterations": 70,
+          "tree_iterations": 150
+        },
+        {
+          "train_rows": 31395,
+          "held_rows": 0,
+          "seconds": 18.702604805119336,
+          "logistic_iterations": 48,
+          "tree_iterations": 150
+        }
+      ]
+    },
+    "2048": {
+      "model": "packing-model-2048.joblib",
+      "oof": "packing-oof-2048.npz",
+      "model_sha256": "77f9fce4fe893f57ca013f78bae502e7486b499ff37ee18c738ac352c485ea09",
+      "oof_sha256": "214ae3d0792b395f7cce6682b8409ec3f8df7359a3bd817f9e5df80bfdb7b998",
+      "eligible_rows": 125822,
+      "eligible_parents": 2048,
+      "two_folds_then_all": [
+        {
+          "train_rows": 62964,
+          "held_rows": 62858,
+          "seconds": 41.9241988947615,
+          "logistic_iterations": 47,
+          "tree_iterations": 150
+        },
+        {
+          "train_rows": 62858,
+          "held_rows": 62964,
+          "seconds": 41.51492766896263,
+          "logistic_iterations": 58,
+          "tree_iterations": 150
+        },
+        {
+          "train_rows": 125822,
+          "held_rows": 0,
+          "seconds": 90.21873081475496,
+          "logistic_iterations": 48,
+          "tree_iterations": 150
+        }
+      ]
+    }
+  },
+  "support_passed": true,
+  "features_seconds": 5.879158802796155,
+  "total_seconds": 217.56061779195443,
+  "max_rss_kib_linux": 2486036
+}
