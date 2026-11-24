@@ -1,0 +1,33 @@
+{
+  "stage": "packing-only-fit",
+  "authority": "Separate bounded local K4 development diagnostic; no resumption of the stopped raw pipeline, new raw scores, or paid work.",
+  "status": "CLI available; not released. Physical FIT only, never development or the dedicated probe-calibration parents.",
+  "receipt": "packing-fit.json",
+  "source_sha256": "9e1fb28be60723f881903ad081b304f3030a5ae5af885be798664b1dbf5d2b1f",
+  "release": "packing-release.json stage=packing-only-fit plus checksummed lineage, spatial control with explicit true gate, fit bank, eligibility, and roster. Require separate parent release digest; fail closed.",
+  "model_interface": "packing-model-{512,2048}.joblib: spatial_raw.load(exact_file), spatial_raw.packing_offsets(model,shell,stratum); packing-oof-{512,2048}.npz: parent,anchor ordinal,stratum,stratum_oof,packing_oof in bank eligible row-major order. No raw predict interface for these artifacts.",
+  "measured_synthetic_single_thread_baseline_seconds": 11.03989891614765,
+  "basis_fit_rows": 8192,
+  "two_prefix_fit_only_timing_by_eligible_fraction": {
+    "0.35": {
+      "baseline_2fold_and_full_for_both_fit_sizes_seconds": 154.5585848260671,
+      "geometry_seconds_estimated_from_raw_control_including_unneeded_motifs": 4.536333267390728,
+      "total_fit_planning_seconds": 159.0949180934578,
+      "threefold_allowance_seconds": 477.2847542803734
+    },
+    "1.0": {
+      "baseline_2fold_and_full_for_both_fit_sizes_seconds": 441.59595664590597,
+      "geometry_seconds_estimated_from_raw_control_including_unneeded_motifs": 12.960952192544937,
+      "total_fit_planning_seconds": 454.5569088384509,
+      "threefold_allowance_seconds": 1363.6707265153527
+    }
+  },
+  "timing_caveat": "Linear-row planning extrapolation from the actual single control. Iterations, cache and tree costs can differ. Threefold allowance is not a guaranteed worst case. No inference, label-free or decoding time included.",
+  "synthetic_paired_decomposition": {
+    "gain_packing_minus_stratum": -0.009980324901623776,
+    "gain_raw_minus_packing": 0.0033417265699732727,
+    "gain_raw_minus_stratum": -0.006638598331650504,
+    "recovered_fraction_of_packing_deficit": 0.3348314411517386,
+    "note": "The packing baseline scored 0.009980 nat worse than stratum; the fitted residual recovered a point-estimate 0.003342 nat (33.48%) of that deficit, leaving raw 0.006639 nat worse than stratum. These are linear differences on the identical held rows, not a causal attribution. The interval for raw minus packing straddles zero. Since the raw fit used packing as its offset, these facts do not isolate optimization, finite-sample calibration variance, or representational limits. No evidence here says physical packing or raw will lose. No plant rescore."
+  }
+}

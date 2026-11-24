@@ -1,0 +1,5 @@
+{
+  "number":2,"stage":"packing-only-fit","role":"fit","control_file":"space-control.json","control_pass_field":"pass","control_passed":true,
+  "control_sha256":"dc14f47e12d8987556ac29a61e724e0220b7c1cc2dcad57958d63cfdbdc40ce3","fit_sha256":"0d993daae8b102cc0105884179f58b5cc79724043fce0e4157207b573ba8bf89","rosters_sha256":"95b2a844ed9da5787264ce7cb092b67f6d4cc1f626e492c32bf325c352f9b1cd","eligible_sha256":"41ea1d6b7abc37b3a8a1116ccdeea97ed3b0f5c73cd0e8cc3046f124f9ae11b9","lineage_sha256":"3c402d7e88ecd89e1d9581d2ca86e094c4a8130167fd5e871144319cf24220c7",
+  "decision":"Frozen conventional baseline for the development diagnostic only. Do not fit the failed raw reference, read probe calibration or dev, or open any other role. No paid worker. Separate word learner may read only its fit/dev unlabeled bank copies at public bank digests."
+}

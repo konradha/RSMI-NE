@@ -1,0 +1,9 @@
+{
+  "role": "fit",
+  "parents": 2048,
+  "anchors": 262144,
+  "bank_sha256": "0d993daae8b102cc0105884179f58b5cc79724043fce0e4157207b573ba8bf89",
+  "release_sha256": "b5db7987efa16838ef106090546929dd7e11b3ea3052d859eb931bf37e7cc349",
+  "raw_supervised_arm": "not admitted",
+  "unlabeled_bank_sha256": "488dd5b077db43d6d322eb3ad1ebd6970f267e476673d4a2e7f7cfde51ac6a3b"
+}

@@ -1,0 +1,9 @@
+{
+  "role": "dev",
+  "parents": 512,
+  "anchors": 65536,
+  "bank_sha256": "1770a155d56a6b958966b2f36b6ef0972a412dd6a6cacd62528acbfa269a0997",
+  "release_sha256": "b5db7987efa16838ef106090546929dd7e11b3ea3052d859eb931bf37e7cc349",
+  "raw_supervised_arm": "not admitted",
+  "unlabeled_bank_sha256": "d8e24f2f43aef4312485f354b4ff7f95003d39d85edbb645c5291c0340d1b6fb"
+}
