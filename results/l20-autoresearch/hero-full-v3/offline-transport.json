@@ -1,0 +1,2527 @@
+{
+  "schema": "hero-full-v3-offline-transport-1",
+  "source": "archived-physical",
+  "stage": "offline TRAIN shipment preparation only",
+  "input_manifest": {
+    "schema": "hero-full-v3-offline-training-input-1",
+    "encoding": "E2-le2bit-v1",
+    "train_only": true,
+    "beta_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+    "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+    "stream_receipts": {
+      "0": "17894969fa98403831b0e0b6ddbe90b65cade689c012416a65ac45cc0d761343",
+      "1": "1a349f830f80ea594fb2c183525ee01a6d2d8023c852381d93820288ba6770dc",
+      "2": "678840e06edbfe73d7a2e950a596aa3cc131f18326b14a1d0dc8a3a802111eed",
+      "3": "84f47f8fb68560184139e4477f61818ee5d67bc7a0825a2cc0058fe40b1e5510",
+      "4": "ce0423661db0c7664d4fd7b98f67866746dcb191e74e89841f41fc7157433f6d",
+      "5": "f09eaf4947819b25914b22c4ffb5b6760c893698ca39a045514f793498d9a7a3",
+      "6": "7d046c7f2d2a4f45feaa269b6e045603bfa9465d2968806a0903f76b3923a447",
+      "7": "8679d1de2c5d49a16da9d16830f0788e680cf0bfd804c0af6179b99511a467ad",
+      "8": "99a8e08294e23ee3ad68163caf8ab9cadf04a8dd4807dad613dcbcd2ccf73be8",
+      "9": "cf7a4dcf3cf4917c099c367f7eff144abbce5a5c8b4fc899ad59b99da1cb1bf5"
+    },
+    "files": {
+      "b00/train/V.npy": "73c1f085678973f0ee0cc5fd1653b4e2bfc6e2a9f53f429e8c7f04ab466b76a2",
+      "b00/train/E2.npy": "f721ee574d1078fe0079aeb3d45efedde0a77ca4bf4977edb0b77ead25927d64",
+      "b00/train/parent.npy": "ddbb7a8430826162fb240dc6bf68e344a7b590aee88162ad70e3978af5b77c09",
+      "b01/train/V.npy": "0b2d425994b4c18732883d45d7227652f54f9cdabf113fa06a1df1cb33873063",
+      "b01/train/E2.npy": "5ab85c36183fad87b8d08c38927209dba6ec836968aa89c3cbe37f77779f0a0f",
+      "b01/train/parent.npy": "4a8d17ddb85d2d270fa21571789f7687c6dda08de4d4dc1e6760f92fd420fa2b",
+      "b02/train/V.npy": "b00d22546b18c4fa3bbeae7f6794cf2f03e41a239a57d8ee004ab2976dbe4e4c",
+      "b02/train/E2.npy": "fc7233cf7ef864841794f7fea88be3e936539cb92164220d69b4a6ab3c9d6f25",
+      "b02/train/parent.npy": "cf86c84e2156d9f4c047bdb1a7d0f528e2df477a627dd0fd6c9dd26ffe08d085",
+      "b03/train/V.npy": "047c78fa2fddac0bc348d9ccf18c5b9f30c86f3b5564dd2ae6e22df0b755ede9",
+      "b03/train/E2.npy": "57197553ccb36e2f22541a09575185fdc594ddd11f79b280a16835ddec15e91b",
+      "b03/train/parent.npy": "5e7cc36dbdc6a74d6403a4dd7b01245b5e853ef230c9d7ae71f2c0273e5df694",
+      "b04/train/V.npy": "72e8588cde7b410f218493e50994bcfaa3f6699fbc39321a9b3ea8a924e87e02",
+      "b04/train/E2.npy": "fdc1dcfb0ac9993dea591c1bf9da38fead05874626fdd5a9028e896026c8646c",
+      "b04/train/parent.npy": "a2ec1620d65c10de16167169ea25bd3af8b6a60309ade34aa149852b22f87ae9",
+      "b05/train/V.npy": "294bc42e0a73b5ecc68aa9623de03b613cd0be38690a58f6acaf7120e43f6986",
+      "b05/train/E2.npy": "69ac74a77068851fa914742e654edb4e49e47452c9dd2928893b2c492728b6a7",
+      "b05/train/parent.npy": "4ef50854252ef87524e7f73597de5a21879f970bd6d905c80c7dd03f48eb3d25",
+      "b06/train/V.npy": "99de1f48c194ee4501bddf76d5aa9e52130be7eef41386d74a5fd76b1050607b",
+      "b06/train/E2.npy": "fe80971c4dd62fea52e872fee37cfa7a79560c30f1a6b0cfa5b31ef14c7c79b0",
+      "b06/train/parent.npy": "ab0b7fe143eb4aa686cbac34ca8ea0636d31646fb66b61426e0ee28a3762056d",
+      "b07/train/V.npy": "36fe1a8a3651ceecb5e1f30f089dea528e23ce487e13ee3555c1ae6c7ea6a076",
+      "b07/train/E2.npy": "7fd7e47844979d56b21b18c60dfcbebd0117139003f4d73ecd739f5a5f2196b0",
+      "b07/train/parent.npy": "dd58c7ffd00b4ece18ad41314a16717f7f71e5288e398b44323de7e22f6c86d9",
+      "b08/train/V.npy": "54e6ef6e1db939e2885b126cf7e5f66c972de5749819c7a60c0bde5cb2dfa44e",
+      "b08/train/E2.npy": "0c3f4f05a7d574a28d648be3c09cc30cf9b1b767b8ca48f4873f6815222d9c06",
+      "b08/train/parent.npy": "340ee6e16eec23a6abe13a129cba41d5a4595747067650b0c8174e95253d63ea",
+      "b09/train/V.npy": "f914656f6aa8a0cb54b285d90f59591631e01585d346bda4eb155da8bac4bab7",
+      "b09/train/E2.npy": "782ac3b84c7083ddaad43878b008b4ec5d5672917f1d8eba1ee9b81886337f89",
+      "b09/train/parent.npy": "cca52815700f3870a337e3fe116445b63b61e9b6bc1e20e0bf4a10679d538483"
+    }
+  },
+  "input_manifest_sha256": "0c5cc6f84560821a468dc4f92c2b3047fc2dfa55f77ff498243b177b0bf64428",
+  "headers_hex": {
+    "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028383139322c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+    "E2": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028383139322c2036342c203937292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+    "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028383139322c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+  },
+  "per_beta": {
+    "0": {
+      "parents": 8192,
+      "source_native_row_sha256": "2370ba9226f43beb68f9745ccf7173e1e81f678a3b00439ae42e367c9f4cb5b5",
+      "shards": [
+        {
+          "name": "b00-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1371220,
+          "sha256": "097bd63850c678baedf191b5a9e60884ab0ab887b2afcf3a5c540df47db7e467"
+        },
+        {
+          "name": "b00-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1372099,
+          "sha256": "0724f336682c3c1aec765946b92814dce8734d0aa5a226f3d71bfa22306180a9"
+        },
+        {
+          "name": "b00-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1369972,
+          "sha256": "f8f7f8c3356dbd632918864c94a53f0120f709df71f20b28b3ac485d3fc3fafa"
+        },
+        {
+          "name": "b00-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1369853,
+          "sha256": "15b1b82e8b629e810905ed6fa889cbce18ea1960fadec05a093726638be84759"
+        },
+        {
+          "name": "b00-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1370401,
+          "sha256": "e30b6fb3f742df514f96cff7d65ef8ea785b0170b16b3276cd4a41a7476cd492"
+        },
+        {
+          "name": "b00-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1370541,
+          "sha256": "8313fb532cb09236b7b7ebe39cd02b5e734b811c6ed1de3cf5fafccb04675c36"
+        },
+        {
+          "name": "b00-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1370940,
+          "sha256": "981fecb250e2c6bdff0b5969751e07266e90e37158b585088cd661a4fe7eafb0"
+        },
+        {
+          "name": "b00-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1372121,
+          "sha256": "ffa615087fc710d97f00922429631fce28c85fa7cd5eb641ba64c56a8475c63f"
+        },
+        {
+          "name": "b00-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1371188,
+          "sha256": "51880ddb0849c7433828f0d6878e7c7bdfcc89c0c85c6d931a0c60894065972d"
+        },
+        {
+          "name": "b00-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1371970,
+          "sha256": "8b57f00e7f773a520b673068f44c10a7be3d4979cbdf54df82464b46083a8139"
+        },
+        {
+          "name": "b00-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1371917,
+          "sha256": "6baab49ab8e1711c8a1e38c1b975a66c0a9b963cc99967ec06674011858787e7"
+        },
+        {
+          "name": "b00-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1370727,
+          "sha256": "0caa3cba8c9d06bd49211865efb23107d325bca847f79b1b56012080be9d5aa8"
+        },
+        {
+          "name": "b00-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1371566,
+          "sha256": "70d98cece76a1bb5e1ecdd8de7eab7dbaf13724942ec746a1b64a89ee25d2554"
+        },
+        {
+          "name": "b00-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1371203,
+          "sha256": "0f7948c48e2cb6c78460bbb91b5dc871346c249b503bcc38749204f2b22379cf"
+        },
+        {
+          "name": "b00-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1370628,
+          "sha256": "6c7176b3eae57f94990ea48ef51bcc117a7e6c9261390bcbae832d2920f55c45"
+        },
+        {
+          "name": "b00-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1370500,
+          "sha256": "e12df42fd2f7b261c6470ded36991f937db404dab64bd5d8e00c5d833d72049f"
+        },
+        {
+          "name": "b00-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1371836,
+          "sha256": "14d27c70ac76332169b9d1137577b4b5f0ae204a6c53e6fc4338b745fe496beb"
+        },
+        {
+          "name": "b00-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1371491,
+          "sha256": "0028397be1434b0e8651355aebeae5c4740323c4e0c9123d32e6874bc11dd955"
+        },
+        {
+          "name": "b00-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1371271,
+          "sha256": "5cb7273d3317934973377468dd4936d8357ec7a8aacc621600c45acbb30ac2ba"
+        },
+        {
+          "name": "b00-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1372084,
+          "sha256": "2fd0735d297466ca668db928762cb6ff7f342acb5a6fdb663c675ee9a593b7c4"
+        },
+        {
+          "name": "b00-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1372305,
+          "sha256": "e7663b0f7493195f1f0162152e5cc90eb2496f04bf76d3ac540f8a2714edfb88"
+        },
+        {
+          "name": "b00-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1371692,
+          "sha256": "4a4e9a0cb67cc010c01e476c35a874d190afff6dc0e2af0a44d087ccfe76eb70"
+        },
+        {
+          "name": "b00-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1371414,
+          "sha256": "f477413a0216dc7ec312388382be33bfc46b1d9535f0447096eb98d9301879d8"
+        },
+        {
+          "name": "b00-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1370350,
+          "sha256": "f810f567bbdb6aa0584895a412945ddb791c64ca39921c2625933f201c19ef72"
+        },
+        {
+          "name": "b00-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1371992,
+          "sha256": "904e6cf0ff4a62fd5dac7e025bf751f5c871bdba4a63d9d396281410c4c3b52d"
+        },
+        {
+          "name": "b00-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1370533,
+          "sha256": "cc09d1742f8ac8ef94e7d9588fe921b3fc2bd76d03a616a3c2dd1205875ca6ae"
+        },
+        {
+          "name": "b00-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1371911,
+          "sha256": "ee18dafc0487039873d388dba2ec65ddc86865b4b14f2fb92256cfd28eef6be3"
+        },
+        {
+          "name": "b00-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1371598,
+          "sha256": "7e0332d0d50dd4f753bbbf2f251b77a344432903b35bc9ed6116d60539129153"
+        },
+        {
+          "name": "b00-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1372160,
+          "sha256": "d36935f25db56bc3d4b0618da2740a28c3913e865ee10d23f31489f6e8124233"
+        },
+        {
+          "name": "b00-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1370207,
+          "sha256": "1bddcdd5875d13edc3f7b6de9c825d973be98099ea99791be469e7280295c754"
+        },
+        {
+          "name": "b00-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1370484,
+          "sha256": "e6f44799325e8c3a192bc399a1549e7a461b59f336d07a73efa80dbdf8c7fc8e"
+        },
+        {
+          "name": "b00-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1372068,
+          "sha256": "d4640e33e191f8a199719375548f6f2208cd646cc28b51aec786e1ce00699b1c"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.026288887951523066,
+        "batches_per_second": 9737.95470055889,
+        "bytes_copied": 6832128,
+        "MB_per_second": 259.88653504851567,
+        "no_device_transfer": true
+      }
+    },
+    "1": {
+      "parents": 8192,
+      "source_native_row_sha256": "eed99f864cbcc3e8ef16bd639fa042a9a8bc46350bec2194b8f3ff4e245f08b8",
+      "shards": [
+        {
+          "name": "b01-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1367590,
+          "sha256": "1c0782eae178e096b7f71fdabc16fb828584a4681c6fbe0d1b62e66370d02757"
+        },
+        {
+          "name": "b01-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1367916,
+          "sha256": "913d6729460a1aa2db5ff6392ddcefa5e1b601e1fdc88670903977ba86a1c8d4"
+        },
+        {
+          "name": "b01-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1367625,
+          "sha256": "0b2fd85aa1e86e00b1d8d534c6827ece0f6d1bc6f7a6243d5739130217430058"
+        },
+        {
+          "name": "b01-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1368626,
+          "sha256": "8679000a5fa00d3fbbe60c879a0a1a8d37f1391314788575d61d79afa382ef43"
+        },
+        {
+          "name": "b01-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1366878,
+          "sha256": "bdf47f5cda97b90e002ed318f0c34d56730a674b1370d2a8c1854b2bc51c1c48"
+        },
+        {
+          "name": "b01-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1367154,
+          "sha256": "bbb016707501ad4aabf8a570db4fe57a2ee2d4ecc108e77bf3430f83dac99753"
+        },
+        {
+          "name": "b01-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1368967,
+          "sha256": "96ea6b12e9909df8e44ee0be1cab1200a8f938018faafcc192959dfdf59676c1"
+        },
+        {
+          "name": "b01-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1368401,
+          "sha256": "8ffabc04376ab4abcf5a202691abb0e25549a53808df2a8974315a1e9568398b"
+        },
+        {
+          "name": "b01-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1367697,
+          "sha256": "3dbd7ee06316f7138e726a1e06cd96cdb63c1bfd7385fc5f1f458d877e8eb157"
+        },
+        {
+          "name": "b01-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1368342,
+          "sha256": "378ea9fee3bc23ed0f167dce32f2d8e6a0d23cda2256f32cb83a9d496cc98064"
+        },
+        {
+          "name": "b01-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1367487,
+          "sha256": "f8fbb76bc671d4828e2a11077e7e071520be6dc4e3b246eac507ec7f62f3c4f3"
+        },
+        {
+          "name": "b01-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1367517,
+          "sha256": "e1206beb1c2ca759a9c37c585d1f362c6e96206cd76da773abf4a88e4de649a8"
+        },
+        {
+          "name": "b01-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1367470,
+          "sha256": "c9a71cdf02d50a92c9bef581c822444fe9d57eb396ae9e02a9d3a8bd18434c73"
+        },
+        {
+          "name": "b01-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1368732,
+          "sha256": "dfb787a7c977c3e88935f7450ff6fa0704262000e8bf6e6718751ed62c61375c"
+        },
+        {
+          "name": "b01-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1368691,
+          "sha256": "06cc4f1bfa1513008e5d937e678d9d53f00b19b20f46919595880c649d6c8e1f"
+        },
+        {
+          "name": "b01-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1369284,
+          "sha256": "96e24fc3ffd0153f79276e701c44009b044cc0b2bca63eeb725a033bc0f9b948"
+        },
+        {
+          "name": "b01-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1368203,
+          "sha256": "7b212a2e6ab248a23e76ca4e1299f07e8c2cb7fbf417e9e5d538fefce6902523"
+        },
+        {
+          "name": "b01-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1366628,
+          "sha256": "9f9d88c9658e67523baa711195f62b8369a39f8e9b5747b4f2898d4f18c6ffae"
+        },
+        {
+          "name": "b01-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1366985,
+          "sha256": "3ea6594bf861a685e037c294712c8c9d416a51039fada110a890a40a53aa9651"
+        },
+        {
+          "name": "b01-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1367779,
+          "sha256": "346d652a8753884f05c04bc549cec5c1408939fbb717cfebe2467b504b7d0de1"
+        },
+        {
+          "name": "b01-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1367559,
+          "sha256": "1aa8112238dc6c438c1b042ec9e3b92e093132a6e15ff62bafe01fe4b0cf459e"
+        },
+        {
+          "name": "b01-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1367081,
+          "sha256": "09ecbeab3cef24313c1b5a8c0a8fe926a4137ab659f3a1b2feb24bd6e2e6a6dd"
+        },
+        {
+          "name": "b01-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1367657,
+          "sha256": "4f0124d9efeab26d8a4ea089d7c39fe22d03a0cb76255ef9f7c96bde657e9a83"
+        },
+        {
+          "name": "b01-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1367476,
+          "sha256": "696160befd44031c2004c342a46ee943f6e7eafeb551b6c9508f485be1e0fe79"
+        },
+        {
+          "name": "b01-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1367104,
+          "sha256": "57733d75de283189b7bd065d36ff5ebde3e07926a0027da9e208cd71f4481fc5"
+        },
+        {
+          "name": "b01-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1368985,
+          "sha256": "11dec32bfe1a25d4cc736f131700ef248f17d2e3b01e7f181efeaa46b2fd3a04"
+        },
+        {
+          "name": "b01-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1367020,
+          "sha256": "ba6eb419e8d242cb2d712cdefe63a395a39f0bf5195fdf356352c44201e2d229"
+        },
+        {
+          "name": "b01-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1367555,
+          "sha256": "7b1806473c9ab3b8d00b7e1ffc621b62aad4e806e1cac831507075847d7a65c2"
+        },
+        {
+          "name": "b01-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1367704,
+          "sha256": "f72d75d86a3c87e58452c683c33017c1474e2bcd629e5158f42e3264f9eb5efb"
+        },
+        {
+          "name": "b01-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1367514,
+          "sha256": "28180fe763b2b8f8ae421a3e35eea6aed5cdad04c6d4d0fe891ca7c7da673379"
+        },
+        {
+          "name": "b01-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1367415,
+          "sha256": "605233cf3b04f4cd731809114e101591186e2ab5509589f10950246e1b23a71b"
+        },
+        {
+          "name": "b01-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1367298,
+          "sha256": "10c2a43ede4f4a9ae9913a5a16ed68f2da03902d84cb2f4a047e672e9ccd51ed"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.022187179885804653,
+        "batches_per_second": 11538.194638417686,
+        "bytes_copied": 6832128,
+        "MB_per_second": 307.9313385100912,
+        "no_device_transfer": true
+      }
+    },
+    "2": {
+      "parents": 8192,
+      "source_native_row_sha256": "5a7941ab86679ac818130ee7eef739c5146d806c3de3dbd151cc500ad9c654d5",
+      "shards": [
+        {
+          "name": "b02-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1362767,
+          "sha256": "1997ae67ea5ae4109914da4ab10693a634e9f59a096f8f5285672cff9e33aeca"
+        },
+        {
+          "name": "b02-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1362691,
+          "sha256": "47228e49c309206d160c43f9d406f5f31a25f260896a7b90161e5fe7bafc8a23"
+        },
+        {
+          "name": "b02-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1362542,
+          "sha256": "963acdad17ef30d5dc65d4401f3ab6e9a4715c60cef0e2a38cfc8ab52c57a822"
+        },
+        {
+          "name": "b02-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1362176,
+          "sha256": "d257ccaa4cdd23fe4a44ca5d80fe883c463ac634b26149cd720564a7818686a0"
+        },
+        {
+          "name": "b02-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1362816,
+          "sha256": "abce33479ae1333d09ff1246ed29a366d94cc07d2b261cbbf8ccb927e8b645c5"
+        },
+        {
+          "name": "b02-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1361724,
+          "sha256": "0ce4d3ad118970ab0625409c95563d11d870c2659ff49940a2412c434a2b68f9"
+        },
+        {
+          "name": "b02-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1361300,
+          "sha256": "f58f1950695397ebcd4189a8914fa2fefedd555fe2c65dc962d789872caa5832"
+        },
+        {
+          "name": "b02-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1362083,
+          "sha256": "82d3bc284273a6905743d18e4a813459034bf7aae861a7ba06866ade843982f8"
+        },
+        {
+          "name": "b02-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1361973,
+          "sha256": "e8eaf2dfe475cd472e895aaf1fb9a00cc8afdf3e0345f47effebf7de1f0aeee2"
+        },
+        {
+          "name": "b02-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1359671,
+          "sha256": "193d52cf6b40420ba4bff714bdff5f8dd931cb5ab30cb9f2f9c1c77b5177320c"
+        },
+        {
+          "name": "b02-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1362362,
+          "sha256": "f57e3046db7964c17092f6900275a850956dda9749cb5e496e51705c7d2a0ad8"
+        },
+        {
+          "name": "b02-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1362045,
+          "sha256": "8c03857065361440909693c9e3fb27a192eafe7b362a9875ad11a8db720d870a"
+        },
+        {
+          "name": "b02-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1362694,
+          "sha256": "2b8e999f8621bd28466dd8d4764c3357d1e6ec7f85fcda65290e740164653771"
+        },
+        {
+          "name": "b02-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1362285,
+          "sha256": "0aa4fca3d977698453dcfcb4b8139b8983404e7a1ccfe8144bfe8851b802cb2f"
+        },
+        {
+          "name": "b02-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1360983,
+          "sha256": "cbce6630a9c0e1cc4f6dfeebe1ffca3938a90422a6b9a7932560ec2aed2cfed3"
+        },
+        {
+          "name": "b02-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1361807,
+          "sha256": "a653c760e6e003764b8adb8994428f8d6b2d9f2e625198e0eec8e9437fbb83a4"
+        },
+        {
+          "name": "b02-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1361060,
+          "sha256": "2096d2095d1a6f1f5d63b179c4b0af369192941a85bcdc0e41c752d46c4ee8aa"
+        },
+        {
+          "name": "b02-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1362910,
+          "sha256": "1a6e1b6f209b6ee6af80b05a5e5b11dc4a47909cabc41c79fb2d8202c0c29917"
+        },
+        {
+          "name": "b02-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1361830,
+          "sha256": "573087bb894c64a257c4f2bfd36dcde0b56e839735b1d8e6b9fde6c7232f10bf"
+        },
+        {
+          "name": "b02-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1361946,
+          "sha256": "5f4ad3bb5ed7c10bde6cacc85d38bfa84472bf5f9fa7817a40d6111d88e67768"
+        },
+        {
+          "name": "b02-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1360823,
+          "sha256": "c4445853be3b73f8c911ba46db43391fd59b160dbc636efb7627ce5335131d1d"
+        },
+        {
+          "name": "b02-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1363099,
+          "sha256": "7f5bd98c688b15b293acf9b08de32a3faf8f34bd62499d563d56a6bbe45dc8c4"
+        },
+        {
+          "name": "b02-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1361416,
+          "sha256": "80b3e53d897cfeb56bdf55f8253c27a0488aa84c83285a9233d204f737544905"
+        },
+        {
+          "name": "b02-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1361906,
+          "sha256": "b79468872e8192b789ae3bf8055d5fdf6d3c674f086c6abdd9c8c5d3f03f2e21"
+        },
+        {
+          "name": "b02-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1362841,
+          "sha256": "dd1a4428ac9b02da9796f4b956a8e3d9f8bb86dc9499aca8225ffef58e1d3c93"
+        },
+        {
+          "name": "b02-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1363200,
+          "sha256": "65211e07096c5bcaa5dbeacfc03fabf9a407d7f563a38d34ad185e42669a516a"
+        },
+        {
+          "name": "b02-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1362545,
+          "sha256": "da8f2aff7cefffc2357acb40834d7aa302a4b41fd7e633ea540ca234afd44dcf"
+        },
+        {
+          "name": "b02-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1361936,
+          "sha256": "002f4c96bc445e4727c7e4e0fa503f00b35921f96e94b26a8a1acb6b21bcd0ca"
+        },
+        {
+          "name": "b02-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1361658,
+          "sha256": "2ff3296b89bde44ab8d25aa02ccda6bb46f71acc65024269874c47af49d8516c"
+        },
+        {
+          "name": "b02-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1361993,
+          "sha256": "56a358f22b8e46f3beb901fac7ef0979f46bf1cac2882121dbbfa8d0bda62e0e"
+        },
+        {
+          "name": "b02-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1361246,
+          "sha256": "e30ce0f892f1f5e5b5f53d74bafc45925da9de147ccb200a43bfd956841d55da"
+        },
+        {
+          "name": "b02-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1360948,
+          "sha256": "ef777c418e9a9bc5a12a12cd8cd7ff1f0f2e8d822049148800f8272b2e961bef"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.02381258923560381,
+        "batches_per_second": 10750.61588083152,
+        "bytes_copied": 6832128,
+        "MB_per_second": 286.9124366276316,
+        "no_device_transfer": true
+      }
+    },
+    "3": {
+      "parents": 8192,
+      "source_native_row_sha256": "adb770986aa784fd23f4ee2bd708806f21b22b6a1e4b6f103c592131c32b0f16",
+      "shards": [
+        {
+          "name": "b03-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1357549,
+          "sha256": "043e0b7ae2b2f0790e997a0d1c2285558fab23f6e2ffa6e18cb3a5b6003aec12"
+        },
+        {
+          "name": "b03-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1356346,
+          "sha256": "1dbccaf6d743939eb64f49cb3cca85b04eab43cfc6e448c3fb6465e2ebd35214"
+        },
+        {
+          "name": "b03-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1357477,
+          "sha256": "3896fbb9660e10800ca14cc347edb89427930bc22fcd127713fcfcceab106f38"
+        },
+        {
+          "name": "b03-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1357187,
+          "sha256": "0d4efb9372fc06ad97b916728bb40a2498606b4f5b5a1ff7d304b6fb7e82ac16"
+        },
+        {
+          "name": "b03-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1356986,
+          "sha256": "789dfffd627d11c94861b7f87bbc0d45ac0acf8ee24b093ec876bd7d7ecd6fe9"
+        },
+        {
+          "name": "b03-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1356697,
+          "sha256": "7dcc1717f711f5e4eb726abc4f960ee74505adbc7520aa6d1d9b9089d4de065b"
+        },
+        {
+          "name": "b03-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1357860,
+          "sha256": "adaf20ddcf2e317fe6ad777fc1f67dd8d2f58212f3cff0f9b62bd4fbd5233d1f"
+        },
+        {
+          "name": "b03-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1356825,
+          "sha256": "39a677bc038cbb62dcdd904a330b9778142718c1fda51e9c508a4b7751f094df"
+        },
+        {
+          "name": "b03-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1355834,
+          "sha256": "2587610518b8773bccbe13e6dec69a0988dfe7a1e468fbd8c96b532673a5b861"
+        },
+        {
+          "name": "b03-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1357655,
+          "sha256": "bec5eebfce2a4ed8a9ba520ac30ee3a92d54a7bc91427b226fb4da8845abdebd"
+        },
+        {
+          "name": "b03-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1356932,
+          "sha256": "30025e52e2585d4aa8b91a4c499e827184bd8afa3409a7e955ce890b6dd70c03"
+        },
+        {
+          "name": "b03-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1357329,
+          "sha256": "462649f38b9a9cf13abe6f088f82edc6da5eeaad4510bbc2e4e9469f7a24078c"
+        },
+        {
+          "name": "b03-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1358112,
+          "sha256": "bf538c7c42650f29611a85a04a659144672e09783c9e7aefc6a28bb7638acce8"
+        },
+        {
+          "name": "b03-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1356371,
+          "sha256": "421f57c942c052a86b06698b44ae4d65a0b6bc0188dddf7beb1dd20d94817742"
+        },
+        {
+          "name": "b03-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1355873,
+          "sha256": "3f39e50e4c9432769a7b8ec0c90d56b11c18f43eac8904cdb7fb9b9cd5c98469"
+        },
+        {
+          "name": "b03-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1357424,
+          "sha256": "c12398100c712d0f3519f41580c3ffcdde4da355b255596125a94c4376583d4a"
+        },
+        {
+          "name": "b03-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1357539,
+          "sha256": "ce6ee490543ec025f03c508c38ce0bbf7c152c742ffe05c3510f1a11cca8318f"
+        },
+        {
+          "name": "b03-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1357487,
+          "sha256": "891ae9ad773dfffa9915d7618699b057f0d827983c762159ce4d2253d6fa8101"
+        },
+        {
+          "name": "b03-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1356546,
+          "sha256": "817056e1fa08c681dbda9ec4b90a70c10b0d1417387add42f6c716b9b77f094b"
+        },
+        {
+          "name": "b03-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1357510,
+          "sha256": "2de6bff3b8875b767239b1a5c06e95d36082a77270cb38e8d610f39a3b16b239"
+        },
+        {
+          "name": "b03-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1356959,
+          "sha256": "777e3d844bc930dc990798352b5ffea709f8432bde5655bd497647f5b4ad7054"
+        },
+        {
+          "name": "b03-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1357279,
+          "sha256": "5b12513e14becebfc37f183c20faa250d4cfb79236887e63ec10d432409397c0"
+        },
+        {
+          "name": "b03-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1355468,
+          "sha256": "2d5db269cd3a97d5f33119a66ce597818242d260ad5eb940d6cf82c71a006d99"
+        },
+        {
+          "name": "b03-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1357361,
+          "sha256": "37e83e256ca442b256c7eb9d7b77a7e61cf4a52e77989c116a35354f9d5aef04"
+        },
+        {
+          "name": "b03-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1356573,
+          "sha256": "04f553d6ad6a250d2686596718db35345c04588f2837dd0a03c17f550ab6ad22"
+        },
+        {
+          "name": "b03-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1357663,
+          "sha256": "3553657a3464dfbab1d41fdff6cbecfd77c4e255de279c2f6ff57b7e3642f730"
+        },
+        {
+          "name": "b03-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1357235,
+          "sha256": "e355c26a967b1622a9177e9ff3d9c8ef475d36e1add3cfeec19a618087a01050"
+        },
+        {
+          "name": "b03-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1356678,
+          "sha256": "2eec23f9c9419029df58d2f371e54858901789c2fad73714aefe2b9f0463b141"
+        },
+        {
+          "name": "b03-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1356868,
+          "sha256": "229f78b33d5b7cc456db7afddb34829377a9ee110c157e3021abf4d7c3dabc12"
+        },
+        {
+          "name": "b03-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1356692,
+          "sha256": "9661f37698e6788f8a5657f8b6e8ee911d297216d81411a11435fe7d2189848b"
+        },
+        {
+          "name": "b03-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1358676,
+          "sha256": "5caac94181874ea667fa2bc954d0dbc41d16ce05718237207a38289ad5922551"
+        },
+        {
+          "name": "b03-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1357176,
+          "sha256": "76413ae3457c749f2731b69a71be2b93a02145f9ac5bfb2ea72cd0bab35ebeef"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.021671153139322996,
+        "batches_per_second": 11812.938534197327,
+        "bytes_copied": 6832128,
+        "MB_per_second": 315.2637036006583,
+        "no_device_transfer": true
+      }
+    },
+    "4": {
+      "parents": 8192,
+      "source_native_row_sha256": "45aa84f7a2edcebee7548c61cf5944fc1434b15ac742ec22e4621125e76834e2",
+      "shards": [
+        {
+          "name": "b04-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1351602,
+          "sha256": "80367517889152232a31d3d911431ec3ec2f14abde23843b2f80fcfa6c4d8341"
+        },
+        {
+          "name": "b04-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1354186,
+          "sha256": "9e72835aca1beca999933fbf07a251caca57bc4c63bbf2dfa9b1f22d86b90d34"
+        },
+        {
+          "name": "b04-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1353621,
+          "sha256": "65f782c5220844d3cc219c2b01d98d9b46b835bf91dcdce5928f7d263d55ceef"
+        },
+        {
+          "name": "b04-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1352229,
+          "sha256": "9c40b03956262424b0e035a0f8ca61caed60acf11cb73c522bfd401c8659891d"
+        },
+        {
+          "name": "b04-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1354521,
+          "sha256": "53174ca5d2183fbb39014b3dd289b98b90ec44684470119756baa41002caa7d2"
+        },
+        {
+          "name": "b04-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1354267,
+          "sha256": "ffee9c3f556a6b4f254e6ac3709f2052a703a1ff8646c4684684b11c2895291b"
+        },
+        {
+          "name": "b04-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1352358,
+          "sha256": "cd0bff5382dc2889c377079b709320b4af85a8f0d6185c2eae97c71f496c2045"
+        },
+        {
+          "name": "b04-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1352018,
+          "sha256": "69e3f3040972ed8851c5e7792abe1ceb0fcde5ffba8b0e23114e2774fd990881"
+        },
+        {
+          "name": "b04-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1353849,
+          "sha256": "2d6b021cc56d7b78e145bfc64cf3efe1c2438cfb5f71551ef5def79b2c13969e"
+        },
+        {
+          "name": "b04-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1352304,
+          "sha256": "c1342a6102541363f4e6600bb628e750c84be523b37efd4bf22a7c7b6f220ab2"
+        },
+        {
+          "name": "b04-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1353204,
+          "sha256": "5c30d6924f5174eaf79652f8ed8b308d490607b6372c5f9d871a16033a6c7f83"
+        },
+        {
+          "name": "b04-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1351934,
+          "sha256": "5015e360f8e5a1fb658db7ebb7ccbe302715ac93209a13846ff9bbb7d3fff83e"
+        },
+        {
+          "name": "b04-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1353535,
+          "sha256": "b53711c755d4f250a7192e30b17eac0cccf9efca1ebca1dbe37e455cf74554d4"
+        },
+        {
+          "name": "b04-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1352542,
+          "sha256": "ee68c90697fa0b80c3e2ef4cb436d372d5bd5e1579ee7a93c081e0ddc9e074a9"
+        },
+        {
+          "name": "b04-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1353928,
+          "sha256": "18608f065b215bd6f9d22b80cae88944f85b5f67d550398b3aadacf7d8f851cc"
+        },
+        {
+          "name": "b04-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1353545,
+          "sha256": "a1848a5c74ad31902745ea418e43d6f2e4333fbce4cca011b30361f27a9a58fb"
+        },
+        {
+          "name": "b04-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1353277,
+          "sha256": "cb39be2e08e7fba8d1ca6b56b9fea43a1d940d352cc835a76f89cc4ec29a7803"
+        },
+        {
+          "name": "b04-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1353126,
+          "sha256": "6da24ff6e8ea4dfee55ed318a309919691b15097497df510b7cee52d09eb0172"
+        },
+        {
+          "name": "b04-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1353341,
+          "sha256": "e56234df93760066e53547faa1453e3c1d5e412ad549a1c195ab6e0b016a292a"
+        },
+        {
+          "name": "b04-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1352713,
+          "sha256": "a88e2b0152d143fff9a08e49fb7e02a7c048b7c6d82c7bafed55ff866da9038e"
+        },
+        {
+          "name": "b04-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1353124,
+          "sha256": "fbd6d905aa7a3ccb86a850321750fccb097a14dcfb3925f847761798b6c79b7b"
+        },
+        {
+          "name": "b04-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1353099,
+          "sha256": "315878d9cc1eaf7b900cc768f373eeab3c2553ee488794f2f1c8c8a226a83305"
+        },
+        {
+          "name": "b04-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1352011,
+          "sha256": "71bf163894720be1a624089032d914a929e4b8de2a234407a2edc2a90ae23e11"
+        },
+        {
+          "name": "b04-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1353127,
+          "sha256": "914d0c48225b022444f77353396467d22f3459541eab0a4ff1391da51e5c38ba"
+        },
+        {
+          "name": "b04-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1352780,
+          "sha256": "76168912203b38ed5a07b172998d8d078bf4dc1ba77a332b63c7b5b9280ca02b"
+        },
+        {
+          "name": "b04-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1353934,
+          "sha256": "78b1adfdfac41183bd02843554505f188f3a3de7a5cbd383df1c25ee48ab95cb"
+        },
+        {
+          "name": "b04-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1352130,
+          "sha256": "8014a2a6ff169fded0107fefbe2be90e151630f4efcb1e08b6efbe601814b8f0"
+        },
+        {
+          "name": "b04-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1353304,
+          "sha256": "095ea4ec9b54c6f678121e1702bd7889dadc6d0ccbf8601ad5aef175acc2c74b"
+        },
+        {
+          "name": "b04-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1353357,
+          "sha256": "a00d5008aaed83f807690f0f07381b15d5069429c5dc4790d745255faf973ee9"
+        },
+        {
+          "name": "b04-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1353132,
+          "sha256": "9079695fa8e6b865b4ca1a2ebf97debcddd12afedeb7523655663269f3e3ba16"
+        },
+        {
+          "name": "b04-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1353176,
+          "sha256": "37d677bf1f36667ff34552a34957266d8babb69b77cf541d48feba83c3040b36"
+        },
+        {
+          "name": "b04-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1353090,
+          "sha256": "199a30996ce4c2f369898968c56cf1c0769cb4a9d8f154f32fe12587ca18d83a"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.02211174089461565,
+        "batches_per_second": 11577.559687411933,
+        "bytes_copied": 6832128,
+        "MB_per_second": 308.98191293764967,
+        "no_device_transfer": true
+      }
+    },
+    "5": {
+      "parents": 8192,
+      "source_native_row_sha256": "0d45c00f742188d4ef6565c895ab17404fc7ec42242ef7af5cbf2bd7101da305",
+      "shards": [
+        {
+          "name": "b05-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1349661,
+          "sha256": "d690f14b133b25afc1bca481f37acea2d88740f1c5ff86506117ba6d69bc91db"
+        },
+        {
+          "name": "b05-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1348807,
+          "sha256": "82e0750fd44bd20a9260cb94e4e861c46518e37352fb96c57495382e2f5d4e39"
+        },
+        {
+          "name": "b05-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1349698,
+          "sha256": "4a0005803311423cb558cec04d72816a20eb60adc8883ff330c120ffcab16086"
+        },
+        {
+          "name": "b05-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1349716,
+          "sha256": "9a07d8555a65bbdae6ee750d0578e4e397b1c602de1068a0faece57938f082c4"
+        },
+        {
+          "name": "b05-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1350354,
+          "sha256": "a8acd5b94fe4426baa64db48a7d77a3afd490ac944188d9f5bc7c6966bd25270"
+        },
+        {
+          "name": "b05-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1349659,
+          "sha256": "224a54fe02d7ee5beeac79ffb5cbe31d9b38d99f4d0240713d48ab45b41db6ba"
+        },
+        {
+          "name": "b05-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1350061,
+          "sha256": "3f360e0cedf3f8ca1244edd5be54fcf7982cb6ece5306a8a78e12dfaf8525cbe"
+        },
+        {
+          "name": "b05-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1349484,
+          "sha256": "fe5835a5e4e2cf4ef20f909c90c197ae3bd099297fefbc9b73d6805e6ecaaba0"
+        },
+        {
+          "name": "b05-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1349057,
+          "sha256": "495772a00d0d5d584fb39d6be0c5d982b8b3491962572deeffc6164970d2919d"
+        },
+        {
+          "name": "b05-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1349087,
+          "sha256": "39a6600c97ab5ed9b54dd0fe48bb4045bdfd6928f563918bb6b00af779ce23e0"
+        },
+        {
+          "name": "b05-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1348254,
+          "sha256": "3227412a4d64dc943567c7d497e6b2a91c08514776666a4ae358d7a1af802a6b"
+        },
+        {
+          "name": "b05-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1350129,
+          "sha256": "f2c2cdb9bdab015b69e5c17a8875fa14f921dcb3b642bee04db25fc81be0f563"
+        },
+        {
+          "name": "b05-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1347639,
+          "sha256": "af5e2681e869bfdefada64db6863111c396fb9f2bf8fa8f8246abb4dcb55a8f9"
+        },
+        {
+          "name": "b05-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1348667,
+          "sha256": "b83a03468128aca9570d0afb2e1f1c2ec13fa572c43acd14248499be81b4f659"
+        },
+        {
+          "name": "b05-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1349132,
+          "sha256": "bbda3b4e593d257817faa4790b8c8979493705d759672f235a537d77ef387c54"
+        },
+        {
+          "name": "b05-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1348250,
+          "sha256": "3c8e4af9242d19f0d3f3d06a10aa6d71bb277ee257c91f5b6ecda0bf6f7eb789"
+        },
+        {
+          "name": "b05-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1349889,
+          "sha256": "4e28e766d45c851fb03181d56ea10018762383663b3318d9660826ff6866e86d"
+        },
+        {
+          "name": "b05-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1349006,
+          "sha256": "9cf6af1d892d46bc6e5c454a7b5ff046c1115252d9eb157050f84017e6e717c5"
+        },
+        {
+          "name": "b05-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1349945,
+          "sha256": "f6d55258de9b326db9223abf735e16f041c3b1c80c96c6bd2c462e8a6e43ee80"
+        },
+        {
+          "name": "b05-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1348460,
+          "sha256": "7c4ce586db1cc15f2be3c27651c12be1d340a9804a4990ff0218b60369e17f28"
+        },
+        {
+          "name": "b05-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1348862,
+          "sha256": "329c167cfb0712922928f30d43bc5c28deab1d85318352037e74e041be103fb5"
+        },
+        {
+          "name": "b05-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1347515,
+          "sha256": "87f4eeaefa86c0b1bb8a33f37564cb92e9f89265c19235e412d8f552f6a79ae4"
+        },
+        {
+          "name": "b05-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1348942,
+          "sha256": "3f80829cad5d866fc3a1bdced05f3ca2d9294e6de48e027851acd8f6d01c876c"
+        },
+        {
+          "name": "b05-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1349042,
+          "sha256": "3f71a325c05e8661b3cda099007f7c578122fc13ee4166f4f628f73e0b471859"
+        },
+        {
+          "name": "b05-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1349342,
+          "sha256": "be68354de35293074d46e06ec74f492b3653260908bd44f22638775a756d6742"
+        },
+        {
+          "name": "b05-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1349264,
+          "sha256": "c882c8a4b1a33e1604d1ea4dd285ef395c20d4b0e30c4388bd0f124a87a5038a"
+        },
+        {
+          "name": "b05-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1349063,
+          "sha256": "ecf06d9a6981ec33f7721d15273146ddc071a81a41e96ec8d4ea34c0dad82121"
+        },
+        {
+          "name": "b05-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1349261,
+          "sha256": "5a2995d960b678b9a3c680115dea093e2ac5197fe5e7dcf176295d027d4670dc"
+        },
+        {
+          "name": "b05-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1349798,
+          "sha256": "d56647d4492ed939456748983527d183129132ba5c1d0e77a33dc1d497e0b8f3"
+        },
+        {
+          "name": "b05-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1349463,
+          "sha256": "c3a0264525f54f3511f7c8f4778c887084d4e29f908c122ef2271e781219027b"
+        },
+        {
+          "name": "b05-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1348261,
+          "sha256": "cc908ea5fa9b4f0a4b1830bffb5e6bfaefad5238800cd9e2071dd03f1e3629bd"
+        },
+        {
+          "name": "b05-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1349992,
+          "sha256": "2ab13ea4f5d01a5be39cc2f440b78eadaeeedafd9c9956c6b2549db66afcc389"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.022247960790991783,
+        "batches_per_second": 11506.672562262633,
+        "bytes_copied": 6832128,
+        "MB_per_second": 307.09007734166516,
+        "no_device_transfer": true
+      }
+    },
+    "6": {
+      "parents": 8192,
+      "source_native_row_sha256": "8cfb9ef97b41b9078b32b2cfd2baf50ef99ca4ee35cc1bce9d96fe0d54955f78",
+      "shards": [
+        {
+          "name": "b06-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1346263,
+          "sha256": "cd9e138b218cfe5730a186da826a6180d5fef883bddefb4529f97bde12dfefdb"
+        },
+        {
+          "name": "b06-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1346216,
+          "sha256": "5a16a19076a544530e385fd57bf4cbced072f82b1ff11119a3a154bc8f30a89c"
+        },
+        {
+          "name": "b06-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1346856,
+          "sha256": "7de72e797f7e27fd2b54c8d0b4f68a3d73620c74ac63d8f12a0925b7914ebd28"
+        },
+        {
+          "name": "b06-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1345413,
+          "sha256": "10b1f03b2370ef7ae84584f118ec281fd06914817133d004e8954fcde28440d7"
+        },
+        {
+          "name": "b06-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1346129,
+          "sha256": "65f833c121258fd91d1489aeb134f20c6dfdcc42d6f5c804fb7fcce980b9ec31"
+        },
+        {
+          "name": "b06-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1346242,
+          "sha256": "6b6d4309fa5b639a816cdd96f591edd0e00d503ea443e65ddafb684483099f69"
+        },
+        {
+          "name": "b06-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1343818,
+          "sha256": "65bddc4f3d35066204dfa5b627a75bb7c6a48a3250c46c20332be9b8cf90900c"
+        },
+        {
+          "name": "b06-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1345787,
+          "sha256": "3d17b76d463d92190b120f0f8432028eca94b9ac0e3cf61acc1a3133d216ae80"
+        },
+        {
+          "name": "b06-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1345881,
+          "sha256": "6a9d6548ce798339ad662fcd6d3861ef1d87788b1ffd19837150dea3eb0f600b"
+        },
+        {
+          "name": "b06-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1346845,
+          "sha256": "c9ae0711111cedb03bc1e43c5b86d6d7bc1ccba926765a96cdb69ea2a6626e5a"
+        },
+        {
+          "name": "b06-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1346370,
+          "sha256": "3c4ed5f32bf242ada991d3800311226b51926cfeb9f1a02723e7216c96f49aac"
+        },
+        {
+          "name": "b06-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1345577,
+          "sha256": "7350b5b298cbab97b97db49be0a9b429977eb722f618d87d9c7f161914eb36c2"
+        },
+        {
+          "name": "b06-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1345330,
+          "sha256": "24ec28919bdee13cf5af2eb29b1c248e161482addf2d103f1389bc5f3e9e3a25"
+        },
+        {
+          "name": "b06-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1345853,
+          "sha256": "e01411d709c37d5c7708f139eea581ca8a0d13f5bca81d3e5044849dbdf06cae"
+        },
+        {
+          "name": "b06-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1346757,
+          "sha256": "2a153fec324a16dfcd02224323341631b3f51105e711dbcf934e8017b8fc88f0"
+        },
+        {
+          "name": "b06-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1345965,
+          "sha256": "507e7ba3450b63cd60f99c9662d99a4102e04f806fffcab12838dde9eeddb9ba"
+        },
+        {
+          "name": "b06-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1346340,
+          "sha256": "24881231ff473afd071dd02b9eb6d5bb4ba8176d2917c139a806db5cc2b50626"
+        },
+        {
+          "name": "b06-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1346220,
+          "sha256": "d928eb78198ac8e53d0c5a9f50d3964c442bd605b6a1c6795084e2980bdd2134"
+        },
+        {
+          "name": "b06-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1344867,
+          "sha256": "e71461169e8db8b7a40c0381e7cdfb4a055a6c944e6fd016234f3fc5109c586e"
+        },
+        {
+          "name": "b06-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1346634,
+          "sha256": "e8419c524d0931bec59c4c4bda1ab04cf4e950b273b76857c549ee32a51f843c"
+        },
+        {
+          "name": "b06-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1344942,
+          "sha256": "7e6fe1ae66555b3ca73e9e911e34340d9744475e8025cd3462beeeb410309370"
+        },
+        {
+          "name": "b06-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1346986,
+          "sha256": "0f3f22662b2c543ab742d285d4140a1ae1e781f060f64f75cf5ed5bdfe836998"
+        },
+        {
+          "name": "b06-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1345513,
+          "sha256": "dd2a8ac5e269a04cd28c76eb864d2ab22c2658d5eefa57e99752d1e8b64dbad2"
+        },
+        {
+          "name": "b06-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1345697,
+          "sha256": "915475ca2ad79bc12730427492bb5b7ae6bc02942a5c6b61e6368d42052be630"
+        },
+        {
+          "name": "b06-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1345598,
+          "sha256": "2034952b68055cf45d9d67e594062b3ae5cdf2edac6a425f8fc1fbcace1a423e"
+        },
+        {
+          "name": "b06-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1345444,
+          "sha256": "84882eaa016ed9653afedbb28e5b8a4fd10124ffe8d831bcae64524aaf5643f7"
+        },
+        {
+          "name": "b06-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1345426,
+          "sha256": "a8bb81cdb4ef84a5df1e503bfd437681b0bd67b45f0d220716b7e8cbfac840ac"
+        },
+        {
+          "name": "b06-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1346007,
+          "sha256": "e927dbc543c3ddecb95e8beb45720f5c1cce20a791fe33ebcd182a284ecfa6ca"
+        },
+        {
+          "name": "b06-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1346524,
+          "sha256": "4117e074396cc00237132134bd8b236ed52cfb6bea6a71048110dacf6fae8987"
+        },
+        {
+          "name": "b06-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1346572,
+          "sha256": "1fd1c31b46a72c1696170c20d899d0cc2769968c24190305cbed3f433319037f"
+        },
+        {
+          "name": "b06-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1345350,
+          "sha256": "5cfb46db566a38a97f377d4fc4046cbb284dba31c8c0d4c40caca8f3808a506b"
+        },
+        {
+          "name": "b06-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1345749,
+          "sha256": "07ec0194b520b867482aaf31d4f7fd8dab28078668079c9b851b3b916c582ef7"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.025119348894804716,
+        "batches_per_second": 10191.34696014939,
+        "bytes_copied": 6832128,
+        "MB_per_second": 271.9866676724669,
+        "no_device_transfer": true
+      }
+    },
+    "7": {
+      "parents": 8192,
+      "source_native_row_sha256": "621a0c9950300d092e9c47322d3ce2fcb662a3f9ab3537e02ec01c1fb2ed75c4",
+      "shards": [
+        {
+          "name": "b07-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1342275,
+          "sha256": "85be68fff86b8d78e9cc63ab37ddee0d93d4275566ae62141ed1bca041f2e49f"
+        },
+        {
+          "name": "b07-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1343321,
+          "sha256": "b0c3d8922bca3a6a74e9303fdaa8bdcd66b47ddfcd8a43620c482f55ac3eea6a"
+        },
+        {
+          "name": "b07-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1343068,
+          "sha256": "fb64ab2c273825b78cde2f0ee19c5ce3a61c31637a7ea5ea454ee3636ea4c2d5"
+        },
+        {
+          "name": "b07-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1342807,
+          "sha256": "ccf04ecd00c733f6a8e56b2b8c68cd1168c6b8500a73ee7705faede5d0325baf"
+        },
+        {
+          "name": "b07-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1343490,
+          "sha256": "803fdf5ee95231ced24dde8da7b47efa7b67ec8ddc648773ab253d9e461c96d1"
+        },
+        {
+          "name": "b07-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1342886,
+          "sha256": "e0f3eace5c32d5b6978c3e3e5d22cc38df0f21001380fefed8337db4d5f3f302"
+        },
+        {
+          "name": "b07-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1342721,
+          "sha256": "b52a55ebd1733cb968606f8bb32fc502ceef5f853889aa8dc0894173cce7cd63"
+        },
+        {
+          "name": "b07-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1342708,
+          "sha256": "ed0920f5a975df91eaf6a0f5f0dfd4bde46593256dc3b13ba97b5920298e30fc"
+        },
+        {
+          "name": "b07-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1343168,
+          "sha256": "c3851b4be2ff2b8812243341c6527523023639b6d81593d64f7ada3ace03b5d1"
+        },
+        {
+          "name": "b07-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1342374,
+          "sha256": "b0773b88938c83ce74fd5595302a90ba925751181644239fb3fd33e72ebd59a8"
+        },
+        {
+          "name": "b07-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1343454,
+          "sha256": "a77066aae7b528d814924e8dcc6d8bfbadf4b9de5cb530fb634c2eda1318ce58"
+        },
+        {
+          "name": "b07-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1342769,
+          "sha256": "f7e3f3673d25af3fc7f1fff46b2e8c821305c8e90f19fcf3d82ad26cf23f7016"
+        },
+        {
+          "name": "b07-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1343154,
+          "sha256": "4d9f7c13fa86a48ba4d917c3dd309b3d039e8e7bd912636541417d25ed1cd9f0"
+        },
+        {
+          "name": "b07-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1342028,
+          "sha256": "e9ed61f1c8b873abe79aeec2c16e292b2518cb6810f7ca9d33879c80f80faa64"
+        },
+        {
+          "name": "b07-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1342778,
+          "sha256": "c3a4c246fd4c56d0c6d0755959cab80612efce9cdaeccda096b953275ca5ea3f"
+        },
+        {
+          "name": "b07-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1343090,
+          "sha256": "d4a70602a42c36ed736becfc9136cf86987052d0001e18a6a0dfe7bd05a98e6b"
+        },
+        {
+          "name": "b07-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1341586,
+          "sha256": "45dda165756fbca4a9c5b0c0e2de861279700d931330c3b09dc848fb6b31d029"
+        },
+        {
+          "name": "b07-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1341598,
+          "sha256": "db007a5729c699bcd99f30c5bd2302e0e487a008844a3de937c2d557c94f0e63"
+        },
+        {
+          "name": "b07-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1342933,
+          "sha256": "2157ba6398ddf25a851cbc5dfb54b5af0da64b233f2e757d5f35f83c09ab6f25"
+        },
+        {
+          "name": "b07-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1342523,
+          "sha256": "949e02c3b1ced8e19a3f5bdf9fb976eb037b7ab680ac50967bc0f508626db792"
+        },
+        {
+          "name": "b07-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1342676,
+          "sha256": "b5f851109b8a4e3d527e75178469a710029bec2af7d0fc7a9d659dd966ed38e4"
+        },
+        {
+          "name": "b07-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1341621,
+          "sha256": "0983c0a0f778a4b3f1e50533418e56e2b61409f9d6a30110dc9abf2035bd5dca"
+        },
+        {
+          "name": "b07-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1343288,
+          "sha256": "45ded32dfdaf442c7dedcc170069aeb7d5ccfb3500e7c01ccf919a81cbafe557"
+        },
+        {
+          "name": "b07-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1343040,
+          "sha256": "0c904db689c51a6194eed1ae222324563326f5b1d1100d64716772acadb20f7c"
+        },
+        {
+          "name": "b07-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1343251,
+          "sha256": "52e321ddb2839d25dee2e825bc5dcea70f412baf37391c78c299692babab31fa"
+        },
+        {
+          "name": "b07-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1342149,
+          "sha256": "5685885ac9cc95669fa4f524ef3a15d227ca56d79a16d23195cbd7b53cb43504"
+        },
+        {
+          "name": "b07-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1342056,
+          "sha256": "9778b5a6cbf908e780a3d63bbcebe6425b7aa221519983634f53640366a457d7"
+        },
+        {
+          "name": "b07-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1342710,
+          "sha256": "1465708fe63d5038828fb6a76ac9b537aa9384feb696d37c9e9d85bf12483065"
+        },
+        {
+          "name": "b07-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1342420,
+          "sha256": "2c40f90f94db3044cab890668e20d892f405829172acccd447325ee074b846f2"
+        },
+        {
+          "name": "b07-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1343057,
+          "sha256": "f08049967228a29e8fd4e1ac9cb954016a29675c43c4a8a597ae935bdf1a762e"
+        },
+        {
+          "name": "b07-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1342765,
+          "sha256": "6688bf5b4216cd3a777b452a937db68379a3639e3f8516f739d48251f2e4134b"
+        },
+        {
+          "name": "b07-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1342767,
+          "sha256": "2514483fcbb94403b04db67e73c712c46d6e15872707bdf8f9ee3097c9a66a85"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.02493496797978878,
+        "batches_per_second": 10266.706586810244,
+        "bytes_copied": 6832128,
+        "MB_per_second": 273.9978653887918,
+        "no_device_transfer": true
+      }
+    },
+    "8": {
+      "parents": 8192,
+      "source_native_row_sha256": "892855106f22a3d87437b08634381baba074cdb2009446b75eaddc8c967ac1e1",
+      "shards": [
+        {
+          "name": "b08-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1339549,
+          "sha256": "b75bc585e727c7aac65fe130b172274606889c0efa291d65415c2db72e792c52"
+        },
+        {
+          "name": "b08-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1339778,
+          "sha256": "547ba3ad0cf34d39026e9cb06df2912569c102d0275e42627e219125f63084c4"
+        },
+        {
+          "name": "b08-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1340398,
+          "sha256": "29577ad08d42b45215fea921f57becaa7f63f62f59d250b1815dbdb00fff5ecd"
+        },
+        {
+          "name": "b08-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1340907,
+          "sha256": "ad6eec044812f60d5887202ea2b38f91d4bad3ea09454951c7def434e6fc0f95"
+        },
+        {
+          "name": "b08-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1341124,
+          "sha256": "739753842dd0102d35b562c7c17fe8c747ade006fa0aac8f8d60ca30b0c9c734"
+        },
+        {
+          "name": "b08-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1340098,
+          "sha256": "ec660fc5db3c2ab64de972127cf7ade2b6946abaf1445d1bfbe31f576be2820d"
+        },
+        {
+          "name": "b08-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1339157,
+          "sha256": "989f13c072164ddb8844f5343bf2ed0aa3667b9219776043429d89ed61786ee0"
+        },
+        {
+          "name": "b08-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1338737,
+          "sha256": "9a37bec196f2131c17c57fabbad94320c68e35cd90d83b4a242e26d798a66c77"
+        },
+        {
+          "name": "b08-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1340671,
+          "sha256": "10cd122c6bce77e0dc5fa59f61213466bba7550800c0a25c64e694251ac30308"
+        },
+        {
+          "name": "b08-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1340565,
+          "sha256": "859514cc231bd1b518f3ef488dc1700a016b0c755c22f55dcac7090b0d9fb9c5"
+        },
+        {
+          "name": "b08-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1339791,
+          "sha256": "b2742967c9679e6a22b5d7f5405ed784e095ef652679310e9ebfb8d7e981eb5a"
+        },
+        {
+          "name": "b08-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1339834,
+          "sha256": "a6dc9f89a4a46099f63a8238c8c7cf15d7b57c6000ab69d5c3e8d7d389a9134a"
+        },
+        {
+          "name": "b08-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1340693,
+          "sha256": "3d77c60455554ac643eb62a5ea5021d81e02410dedba232d5014dce72c407d0c"
+        },
+        {
+          "name": "b08-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1339332,
+          "sha256": "796e0e09f2380c0c7bc19b5302dd341886aee676ee44c0cf8a71066356cd3a61"
+        },
+        {
+          "name": "b08-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1340975,
+          "sha256": "824c91c1bbd6ad7bdcdba3e740abdcf7b30268ba3deecf4e5adf987c5a434d37"
+        },
+        {
+          "name": "b08-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1341047,
+          "sha256": "a2fdf58dd72d4f81218387f9af58aad367587fe80f056399290f6a80707d1f22"
+        },
+        {
+          "name": "b08-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1341522,
+          "sha256": "1f53c8f0c6418d7905ac0e0a81e03d56dddc6c69a860c3598730f4f13e25a7a6"
+        },
+        {
+          "name": "b08-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1339831,
+          "sha256": "64da3085689910178132151f21261452a7fc39ded04f298befb47c8c9216d9fe"
+        },
+        {
+          "name": "b08-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1339209,
+          "sha256": "2c39998f601d9a488697d2afb5de3998cfeec3d9d7dfc53b66ec9ac870debdec"
+        },
+        {
+          "name": "b08-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1340466,
+          "sha256": "388c1b5278ec8de1105f37219d6465463cdf8986171750f49cf2dea0731cacca"
+        },
+        {
+          "name": "b08-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1339687,
+          "sha256": "61f0b2983bc3cf467b04777e82417b73b69f56aab4e583593a576493f3ac0733"
+        },
+        {
+          "name": "b08-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1339821,
+          "sha256": "939eff7d363612d903d9496aebb029d15f797d23c3770bf29b46219dea1c3ae7"
+        },
+        {
+          "name": "b08-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1340365,
+          "sha256": "da9f22d2f70f5b7ffe53de10f99837aa2789eb78167a7b5f9d7239407419d867"
+        },
+        {
+          "name": "b08-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1340050,
+          "sha256": "f35ec90d4958fb6e8d2adf275bb5cedc20f01d858ca9c721366640f991e46474"
+        },
+        {
+          "name": "b08-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1339097,
+          "sha256": "309f9f7dd633ccd44a9d2f0683f14dd6eb51e67bba9b7d9a7ede21da85d37ac0"
+        },
+        {
+          "name": "b08-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1339904,
+          "sha256": "bdebd484f3b6cbd4adb74e44c35b9f6ac160bda1c80c6b853f1a5f4ec064e82b"
+        },
+        {
+          "name": "b08-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1340028,
+          "sha256": "1bfaf4690fdd205fd77af575b96257564efd9a5decca490797322bb8e48b98b5"
+        },
+        {
+          "name": "b08-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1340473,
+          "sha256": "821a798c09bd5290590d5063ead9684827d7a37fb57722c75a9b53b26c033dc3"
+        },
+        {
+          "name": "b08-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1339924,
+          "sha256": "51f4d3d91d63c878c2459e5bba5b09f587d1ae922635f32caf69b638dda0e92c"
+        },
+        {
+          "name": "b08-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1339180,
+          "sha256": "47f304455abe689a2a9d3ac62a77a7ebd9bd9935e775ebd0bcaeba956529027a"
+        },
+        {
+          "name": "b08-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1338283,
+          "sha256": "034bfa89ef401c5495f46c2761c10c64b6abae732a33012b2d02598699198d59"
+        },
+        {
+          "name": "b08-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1339866,
+          "sha256": "6743e61da49d8383eaaccead3b281e5e6b864b72d4852382e61c0c1589f267c8"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.021950851660221815,
+        "batches_per_second": 11662.417657530337,
+        "bytes_copied": 6832128,
+        "MB_per_second": 311.24660244416964,
+        "no_device_transfer": true
+      }
+    },
+    "9": {
+      "parents": 8192,
+      "source_native_row_sha256": "1a6259ecd0bef6198952cde4bb3f8da83a83b2647437d0a7472b86601256feb5",
+      "shards": [
+        {
+          "name": "b09-train-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1338048,
+          "sha256": "a6edf43d02028b594764438dc5d003cd9cdd0b96c1901b589c9c55e9a0535c21"
+        },
+        {
+          "name": "b09-train-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1337728,
+          "sha256": "8ca2c003a421196babe75dd568f335db4a7cc64a515f69c045d5def59039fb46"
+        },
+        {
+          "name": "b09-train-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1337480,
+          "sha256": "61b6139b1efc5441ce2880fdc5d15643d22fbc79349063ddffdc8912adcd5c0f"
+        },
+        {
+          "name": "b09-train-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1338277,
+          "sha256": "aa2976eea05e5b14a62c8b9305543ca139749798e6caf39d07e7aa57f1ccafdb"
+        },
+        {
+          "name": "b09-train-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1337301,
+          "sha256": "f6c5b4b425ab80ad540145d0eaf85d31426f272deb1b67c78aa92632170aa4db"
+        },
+        {
+          "name": "b09-train-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1336194,
+          "sha256": "72b0e59d0fdd19cfef1e5a64d476465d7edbc9baac3f88724194055bbe32a2f3"
+        },
+        {
+          "name": "b09-train-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1338042,
+          "sha256": "1540bf6f0e1bd5fbc01e39c6aa9df4f7820978ab48d44bc6638a61cf9ea5b605"
+        },
+        {
+          "name": "b09-train-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1337813,
+          "sha256": "d09bca2939e9b0815b633d1db3f1adc2e94608f3ea5677b4da6f2a460642038e"
+        },
+        {
+          "name": "b09-train-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1337998,
+          "sha256": "79389678b0b7c53a9a71c0fd485ba0a479fa11aea3958f32ef3357888dd2052c"
+        },
+        {
+          "name": "b09-train-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1337545,
+          "sha256": "90b55f7fb5e93dfb3b70f25c5393b479fb79d6b19c0b13702942ec7a3710c856"
+        },
+        {
+          "name": "b09-train-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1336742,
+          "sha256": "26eb51781c9d3fae6ac91b3ef2de5744a532eabda133e5ad34e4f9ef3209f522"
+        },
+        {
+          "name": "b09-train-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1337513,
+          "sha256": "cec727d8287f19d6dda825a4b4a26399e61cc457c0de19efcca91c15c42a8fdd"
+        },
+        {
+          "name": "b09-train-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1337794,
+          "sha256": "44e4fd814bf4e755b3d329372e75c1a66a3daa7408ff52ef612bb1b739c0e7fe"
+        },
+        {
+          "name": "b09-train-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1336572,
+          "sha256": "41c4d734d00ceb52f2a82b992cf2f77764e1e6e73ef974e5ba130e82ac473d68"
+        },
+        {
+          "name": "b09-train-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1337816,
+          "sha256": "59e5c838cc314c7087258319d356f8c6e3f57fcc5e867c502f006bc2b93ade1c"
+        },
+        {
+          "name": "b09-train-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1337343,
+          "sha256": "0cc9d66644b34c953f1fccc74e63d5750f6028842e3688b9e2c8119547fe86a4"
+        },
+        {
+          "name": "b09-train-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1337022,
+          "sha256": "41a5073f79755e7e1bbdbd0d152540b141b5504a688fa0020811d06fc5f05234"
+        },
+        {
+          "name": "b09-train-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1338158,
+          "sha256": "01b22220a11ad718e67c94073d1c4391767caddfd1635311de79922f1e29d9a6"
+        },
+        {
+          "name": "b09-train-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1337477,
+          "sha256": "5baeedbefe036d667ddded1062e0a6692886acac13ae77c36f10e9906d13cd43"
+        },
+        {
+          "name": "b09-train-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1337040,
+          "sha256": "0996fa1daef7f60348d272ae4595a2cc62816d80a17676e4152db18ee7fc7162"
+        },
+        {
+          "name": "b09-train-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1337652,
+          "sha256": "f6f8ae52b04dad31a9af4587fa05873541824f1f452859a0572b4598e758ccd5"
+        },
+        {
+          "name": "b09-train-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1337073,
+          "sha256": "94ff8ee3be907e4d52488f00594bd8980edbc75506f7efd54d362782661ab6b0"
+        },
+        {
+          "name": "b09-train-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1337734,
+          "sha256": "935862166b7612eb37a3fb19f9a211839580b86820da0189f3f088da2c7c4d5b"
+        },
+        {
+          "name": "b09-train-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1336891,
+          "sha256": "4efacbeac9ec80a85b060349db3c96ae15e7288b704791367b20946224a4e62b"
+        },
+        {
+          "name": "b09-train-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1336320,
+          "sha256": "d34b7b697d4c002a88c3729d77d04a900e657865817100c82c50358eb08e736b"
+        },
+        {
+          "name": "b09-train-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1336376,
+          "sha256": "c15146b42f08233a08b278afef29bf2d0a68ad4800a288bd4a16352abdec1b33"
+        },
+        {
+          "name": "b09-train-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1336947,
+          "sha256": "1614daa8dd79f9c00a5abd07e561fe31136d820ce562fd0c061c8aec923020da"
+        },
+        {
+          "name": "b09-train-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1336918,
+          "sha256": "4590cc1d90bdbdc4eefa4e44317e1ad63d0be7a50b436929b4693926adceee7d"
+        },
+        {
+          "name": "b09-train-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1336973,
+          "sha256": "fb8149eef75ff43304443f0132e84255fd9eca217aaa7aee38721c6f72ecc5a5"
+        },
+        {
+          "name": "b09-train-029.z",
+          "start": 7424,
+          "parents": 256,
+          "bytes": 1338353,
+          "sha256": "8bfcd3f5b3bafc2c2b97cbdd0785e7ab368a79e2125c052059f71cb471d243f3"
+        },
+        {
+          "name": "b09-train-030.z",
+          "start": 7680,
+          "parents": 256,
+          "bytes": 1336891,
+          "sha256": "7092e23daffd37f5179e36b84e04b4e5f3294b3b27dba787c0d3c0bcb0bd78af"
+        },
+        {
+          "name": "b09-train-031.z",
+          "start": 7936,
+          "parents": 256,
+          "bytes": 1338085,
+          "sha256": "596c33efb78fb7d84b913fb058897b45f2f69e96464bb1f4640f22eb23810264"
+        }
+      ],
+      "screen_fit_cpu_staging": {
+        "source": "archived TRAIN folds 2..7",
+        "batches": 256,
+        "shape": [
+          8,
+          8
+        ],
+        "seconds": 0.02235930087044835,
+        "batches_per_second": 11449.37408746746,
+        "bytes_copied": 6832128,
+        "MB_per_second": 305.56089564633163,
+        "no_device_transfer": true
+      }
+    }
+  },
+  "stored_bytes": 432842329,
+  "restored_npy_bytes": 650448640,
+  "source_payload_bytes": 2165637120,
+  "shards": 320,
+  "largest_shard_bytes": 1372305,
+  "max_shard_bytes": 8388608,
+  "max_stored_bytes": 2147483648,
+  "max_restored_bytes": 2147483648,
+  "test_species_rows_returned": 0,
+  "incremental_fee_usd": 0,
+  "release_sha256": "817ac3c8de6a2d3adedfb1d9d5a87383881d700a0bc861ad96f83da226a76a16",
+  "source_summary_sha256": "03bcc3ebb8109a4825116b79a6228818b197def94ec27244c19c349c5d9a88c2",
+  "source_receipts_commit": "8aa465556541d1a31ae6f561517a771db90bd790",
+  "encode_all_read_hash_round_trip_fsync_seconds": 24.600960473995656,
+  "source_MB_per_second": 88.03059223192436,
+  "screening": "Filter TRAIN ranks modulo 8 before E2 expansion; candidate fit 2..7, selection 0; rule diagnosis 1 only per separate authorization; final refit all TRAIN.",
+  "current_egress_authorized_bytes": 0,
+  "future_main_aggregate_result_cap": 67108864,
+  "pilot_result_cap": 131072,
+  "cold_only": "Never a launch/spending approval. No stdout, volume, snapshot, additional data or labels; allowlisted regular outputs with size/SHA only under separate future Main release.",
+  "complete_beta_disk_restore_check": 6
+}

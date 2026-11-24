@@ -1,0 +1,90 @@
+{
+  "schema": "hero-full-v3-h100-pre-main-allocation-1",
+  "scope": "Before any paid main training. Real fit-only H100 pilot; workload projections are not measurements. One active GPU at a time. Base price, CPU and RAM upper limits pinned; no requirement to spend an arbitrary minimum.",
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "pilot": {
+    "sandbox_id": "sb-uaKPGRK5Hm0KjM0YpSaPBS",
+    "device": {
+      "name": "NVIDIA H100 80GB HBM3",
+      "capability": [
+        9,
+        0
+      ],
+      "total_memory_bytes": 85031190528,
+      "visible_device_count": 1
+    },
+    "updates": 256,
+    "groups": 2048,
+    "distinct_optimization_parents": 560,
+    "hold_fit_timing": 80,
+    "packet_parents": 640,
+    "optimizer_wall_sec": 0.37806201099999903,
+    "cuda_compute_ms": 302.3939208984375,
+    "cuda_event_with_upload_ms": 377.921142578125,
+    "validated_groups_per_optimizer_wall_sec": 5417.1007411797455,
+    "local_sample_encode_transfer_s": 0.07393132499999666,
+    "validation_s": 0.01823903500000057,
+    "one_time_fit_validation_groups": 640,
+    "whole_sandbox_s": 19.936506207101047,
+    "all_in_groups_per_second_for_short_pilot": 102.72612356073387,
+    "cap_usd": 1.05,
+    "observed_weight_devices": 1
+  },
+  "tariff": {
+    "gpu_per_hour": 3.95,
+    "sandbox_cpu_core_hour": 0.1419,
+    "sandbox_memory_gib_hour": 0.024,
+    "network_per_GiB": 0.04,
+    "main_capped_cpu": 2,
+    "main_capped_ram_GiB": 12,
+    "all_in_compute_per_hour": 4.521800000000001,
+    "normal_aggregate_limit": 15,
+    "absolute_incremental_limit": 25
+  },
+  "work": {
+    "temperature_count": 10,
+    "parents_permanent_train_per_beta": 8192,
+    "inner_training_per_beta": 6144,
+    "inner_selection_per_beta": 1024,
+    "inner_rule_per_beta": 1024,
+    "nested_inner_eligible_per_beta": [
+      384,
+      1536,
+      6144
+    ],
+    "exam_open": false,
+    "selection": "Fold0 only, paired seeds 6101..6103; at most two full-data finalists x five previously fixed seeds, update doublings up to 65536 with measured stopping. Nominal 8.533 pooled parent-positive slots per eligible full discovery parent per 8192 steps; actual independent coverage separately recorded. Final refit all 8192/beta.",
+    "full_primary_priority": true,
+    "training_updates_full_eligible_4arms_3seeds": 98304,
+    "all_36_screening_cells_steps": 294912,
+    "finalist_additional_at_cap": 606208,
+    "ordinary_frozen_screen_steps": 294912,
+    "main_max_updates": 1196032,
+    "all_train_refit_max_updates": 720896,
+    "expanded_secondary_controls_all_five_at_all_depths_scheduled": false,
+    "control_basis": "All six predeclared controls, paired across three starts x both laws to 8192, followed by all six refit at final nominee depth with fixed primary seed; no token comparison of 8192-step control versus a deeper learned representation. Expanded 5-seed fixed-control grid not scheduled before primary and physical refit. No new learned arms."
+  },
+  "projection": {
+    "observed_single_pilot_updates_s": 677.1375926474682,
+    "main_optimizer_s_at_pilot_rate": 1766.3057153919954,
+    "refit_optimizer_s_at_pilot_rate": 1064.6226229759973,
+    "main_and_refit_hours_if_nonoptimizer_overhead_and_model_cost_double": 1.5727379657599958,
+    "full_archive_compressed_bytes": 432842329,
+    "planned_main_lifetime_s": 4800,
+    "planned_refit_lifetime_s": 3300,
+    "main_affordable_updates_assuming_2x_pilot_cost_and_900s_overhead": 1320418,
+    "refit_affordable_updates_assuming_2x_pilot_cost_and_900s_overhead": 812565,
+    "note": "Affine/uniform pilot did not time stratum bucketing on the full archive, nonlinear arms, controls, validation over all large banks, bulk upload or selector. Account for all of them in hard quota; retain completed checkpoints on timeout, disclose missing cells and reason. Input shipping independent of TEST; terminal object required before any next job."
+  },
+  "cap": {
+    "pilot_carry_usd": 1.05,
+    "each_main_egress_allowance_GiB": 3,
+    "main": 6.149066666666668,
+    "refit": 4.264983333333334,
+    "both_plus_unreconciled_pilot": 11.464050000000004
+  },
+  "clock": {
+    "discovery_end": "2026-11-24T21:00:25Z",
+    "hard_stop": "2026-11-24T21:45:25Z"
+  }
+}

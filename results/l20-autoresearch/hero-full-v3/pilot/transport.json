@@ -1,0 +1,35 @@
+{
+  "source": "archived-physical-train-only",
+  "started_utc": "2026-11-24T15:09:57.593+00:00",
+  "finished_fetch_utc": "2026-11-24T15:10:16.474+00:00",
+  "sandbox_id": "sb-uaKPGRK5Hm0KjM0YpSaPBS",
+  "app_id": "ap-4dUWVTMiybzg2OW7b84Yto",
+  "requested_gpu": "H100!",
+  "result_bytes": {
+    "model.npz": 52066,
+    "summary.json": 7462
+  },
+  "device": {
+    "name": "NVIDIA H100 80GB HBM3",
+    "capability": [
+      9,
+      0
+    ],
+    "total_memory_bytes": 85031190528,
+    "visible_device_count": 1
+  },
+  "payload_bytes": {
+    "packet.npz": 16921294,
+    "packet.json": 1741,
+    "full_hero_v3_pilot.py": 4535,
+    "full_hero_train.py": 22325,
+    "hero_train.py": 15000
+  },
+  "timing": {
+    "create_to_scheduled_handle_s": 4.226280254777521,
+    "payload_upload_s": 6.092341662850231,
+    "arm_through_task_exit_s": 7.233466356992722,
+    "result_transfer_s": 1.3237970070913434
+  },
+  "elapsed_to_fetch_s": 18.88085413677618
+}

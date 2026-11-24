@@ -1,0 +1,257 @@
+{
+ "schema": "hero-full-v3-h100-pilot-1",
+ "source": "archived-physical-train-only",
+ "device": {
+  "torch_version": "2.5.1+cu124",
+  "numpy_version": "1.26.4",
+  "cuda_build": "12.4",
+  "cuda_is_available": true,
+  "effective_device": "cuda",
+  "gpu": {
+   "name": "NVIDIA H100 80GB HBM3",
+   "capability": [
+    9,
+    0
+   ],
+   "total_memory_bytes": 85031190528,
+   "visible_device_count": 1
+  },
+  "cpu_threads": 1,
+  "cuda_event_train_ms": null,
+  "peak_allocated_bytes": 80414720,
+  "peak_reserved_bytes": 90177536
+ },
+ "arch": "affine",
+ "law": "uniform",
+ "seed": 6101,
+ "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+ "release_sha256": "817ac3c8de6a2d3adedfb1d9d5a87383881d700a0bc861ad96f83da226a76a16",
+ "packet_sha256": "5f5211843bb0b154db7a565a1a0bef2308e10e84afc661010e311e7f3844d82b",
+ "packet_bytes": 16921294,
+ "model_sha256": "74d626c0cb3b2e20621ed558db80d0a3f0ee04bd339faaf040fcfe20fd729ef1",
+ "beta_indices": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "train_folds": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "n_distinct_packet_parents": 640,
+ "n_training_parents": 560,
+ "n_reserved_validation_parents": 80,
+ "held_fit_validation": {
+  "0": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.020914560309910346
+  },
+  "1": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.019930368415379096
+  },
+  "2": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.018538480750584174
+  },
+  "3": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.019511705390476752
+  },
+  "4": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.020396715156101752
+  },
+  "5": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.015309816352390815
+  },
+  "6": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.015172964087986518
+  },
+  "7": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.01567841147568183
+  },
+  "8": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.013396745673679877
+  },
+  "9": {
+   "n_distinct_fit_validation_parents": 8,
+   "groups": 64,
+   "expected_nats": -0.013606554023289252
+  }
+ },
+ "held_fit_validation_wall_sec": 0.01823903500000057,
+ "validation": "Last eight TRAIN packet parents each beta unused by this pilot optimizer. No fold0/1/TEST.",
+ "synthetic_oracle_check": {
+  "affine": {
+   "loss_error": 0.0,
+   "gradient_max_error": 1.862645149230957e-08,
+   "adam_update_error_vs_analytic_same_grad": 7.450580596923828e-09,
+   "raw_update_error_vs_numpy_grad": 0.0005828806897625327,
+   "active_update_error_vs_numpy_grad": 7.450580596923828e-09
+  },
+  "tanh": {
+   "loss_error": 0.0,
+   "gradient_max_error": 1.5832483768463135e-08,
+   "adam_update_error_vs_analytic_same_grad": 1.4901161193847656e-08,
+   "raw_update_error_vs_numpy_grad": 0.0003389716730453074,
+   "active_update_error_vs_numpy_grad": 1.4901161193847656e-08
+  }
+ },
+ "synthetic_oracle_sec": 2.2642792059999994,
+ "actual_numeric_oracle_updates": 2,
+ "actual_training_updates": 256,
+ "host_packet_decode_support_sec": 0.05354399100000151,
+ "no_dev_or_eval": true,
+ "runner_wall_before_final_json_sec": 2.804203416,
+ "start_step": 0,
+ "optimizer_steps": 256,
+ "total_optimizer_steps": 256,
+ "last_minibatch_loss": 2.087364673614502,
+ "train_wall_sec": 0.37806201099999903,
+ "groups_per_wall_second": 5417.1007411797455,
+ "host_sampling_encoding_transfer_submit_sec": 0.07393132499999666,
+ "cuda_forward_backward_adam_ms": 302.3939208984375,
+ "train_cpu_sec": 0.34999999999999964,
+ "cuda_event_train_ms": 377.921142578125,
+ "gradient_rms_norm_encoder_critic": [
+  0.05048918351531029,
+  0.43557387590408325
+ ],
+ "beta_positive_exposures": {
+  "0": {
+   "n_positive_slots": 1632,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "308e1d0a379644e67db3cee3ce0dd78711cd0d834657d4cc6d1c0405de7e447a",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "1": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "32b787e379ca599d1b5ef6a429c015a745fe7028a0e196de13a13b460bcdbee8",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "2": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "39bee4e49bb7c46156ea8528615d36475399159fdc83b878ecaeac1fcb764487",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "3": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "a2f688a650234dd1d307925aada83bea1318d99590946560498b7d8a7ffbb89c",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "4": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "633a6a880cedd8a7894c3db57dee6cde4d38e5b96a8040e7f28627d70d206d37",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "5": {
+   "n_positive_slots": 1632,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "a62fe0c5c2ca9f83efc7d68bc5c32fbe71ec82563c0897dfd2fafe9b52351d45",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "6": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "a736cf79ae72debcf3f4ea488617cff5e7faa028e45b151bbc72aff1fb34b0ff",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "7": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "f0b45b04efc67caf7f0194912c73417ead0483d6c96e04314da8c92195ffde4a",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "8": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "3466f45b125f7233453ebb368a073855b661cbd044da3a5a562395854b7f2ed5",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  },
+  "9": {
+   "n_positive_slots": 1640,
+   "distinct_positive_parents": 56,
+   "min_exposure": 29,
+   "median_exposure": 29.0,
+   "max_exposure": 30,
+   "within_beta_ordered_draws_sha256": "7157db6a5218c814a10c802bc3c1ac16e5202360ca296e46619f0f4422335ff6",
+   "full_roster_exposed": true,
+   "completed_coverage_sweeps": 29,
+   "matched_groups_by_s": {}
+  }
+ }
+}
