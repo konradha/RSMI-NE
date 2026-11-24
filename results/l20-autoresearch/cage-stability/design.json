@@ -1,0 +1,11 @@
+{
+  "lock": "69afc40fdc24f1359686192cc25644387d7181c9e64fd37f617df795db5cd34e",
+  "implementation": "2b0773e5d52bb17d3978754de9b9cbfee766567fecdbd4140d769275dd99bfc7",
+  "baseline": "d056a368b124ac57609a2b6c9dd85b6f1e2957e865520219a219a2df4fc332b5",
+  "seed": 191803,
+  "max_reps": 1024,
+  "end_epoch": 1795556725,
+  "original_contrast": -0.000479803274277595,
+  "fit_parents": 7680,
+  "validation_parents": 2048
+}

@@ -1,0 +1,30 @@
+{
+  "study": "One secondary arrangement-specific prediction; not a rescue of the original failed transfer. Validation aggregates known; cell chosen on cold train only.",
+  "code": {
+    "tripod_cell.py": "c0124a8fb42535dd68cc721e82dbc1cdaea000f3dca2e35c1e89f0a51d29d326",
+    "tripod_channel.py": "3f7f9eeade757fb4abc6d5b6c771ba4a4a7c70fc91e77cf5194ace402fc3dc59"
+  },
+  "source_digest": "09485b609a99791830dbb907e3ce50d78ab903a3ab4aef65340c6c9f60d75906",
+  "parent_digests": {
+    "9": "167a3b230b812cbcba7592723177b37d0bbfbac9f5ec08506997700abbd1aa28",
+    "7": "1948f62e6f3fe3ddbad063467d67059f1edf637649932ad359a1c3de8b1ce550",
+    "0": "9e8454cd37c515dc375e9a22cce8683ff9f133ff20fba398383ad1ee9b0a3efe"
+  },
+  "index": 9,
+  "stratum": 10,
+  "cell": 3,
+  "species": "A",
+  "occupied_neighbors": 3,
+  "parallel_vacant": true,
+  "transverse_vacancies": 0,
+  "train_cell_fraction": 0.03861669260660807,
+  "support_parents": 10240,
+  "selection": "largest cold-training frequency-weighted Bernoulli KL(unrestricted || registered pairs), among cells seen in at least 512 distinct training parents. No ranking on validation. Ties in species/coordination/cell index order.",
+  "training_pair_A": 0.288738211860215,
+  "training_unrestricted_A": 0.29008964522556047,
+  "sign": 1,
+  "threshold": 0.0006757166826727445,
+  "primary_temperature_index": 7,
+  "prediction": "At beta=2.3722, in this exact cell, observed outer A minus its temperature-specific registered-pair forecast retains the cold sign and at least half its cold training magnitude. Freeze the rule and model family, not a temperature-independent coupling constant.",
+  "estimate": "Binomial observed A rate in selected cell minus its pair-logit forecast at each temperature. Fixed cold-selected cell and margin. Cold validation and beta=0 descriptive. Validation parents and 32 deleted training-parent groups for joint uncertainty; 95% primary interval. No use of index 6, test folds or dynamics."
+}

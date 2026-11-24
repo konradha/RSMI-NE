@@ -21,6 +21,17 @@ In a separate validation analysis we fitted each temperature separately and dist
 
 **How far does the unexplained part reach?** For the frozen four-label posterior minus its best fitted linear combination of individual site-species indicators, the connected axial trace at six lattice spacings is **−0.0000097 [−0.0000859, +0.0000665]** at β=3.05 (simultaneous interval). We averaged all 8,000 translations rather than counting them as independent replicates; uncertainty comes from 2,048 validation parents. This bounds the spatial self-correlation of this residual, not all static glass correlations. [Range and uncertainty](dense-range/range.png).
 
+To reproduce the **locked transfer result** without retraining or overwriting published evidence, run from the repository root with the archived release at `$data`:
+
+```sh
+work=$(mktemp -d)
+lock=results/l20-autoresearch/mechanism/prediction.json
+python examples/glass_autoresearch/cage_baseline.py bank --data "$data" --index 6 --fold test --reps 256 --lock "$lock" --out "$work/bank"
+python examples/glass_autoresearch/mechanism_test.py score --bank "$work/bank" --lock "$lock" --out "$work"
+```
+
+The ongoing [cold parent refits](cage-stability/) answer a different question: how variable is the conventional enrichment estimate when 7,680 fitting parents are resampled? They never read the transfer configuration archive. Each replicate also resamples 2,048 validation parents as a unit to separate fitting variability from combined variability; the motif, signs, support and hyperparameters are fixed. The 2.5% and 97.5% resampling quantiles are withheld until 40 completed fits.
+
 | Lane | Primary question |
 | --- | --- |
 | `rg` | Does a learned coarse variable retain a separated signal across scales, beyond scale-matched composition and energy controls? |
