@@ -50,8 +50,8 @@ def barrier(seed, label, index, timeout=300):
 
 class Progress:
     """Observe stock tqdm after apply_gradients; never change an optimizer or a training batch."""
-    def __init__(self, adam, seed, index, uid):
-        self.adam,self.seed,self.index,self.uid=adam,seed,index,uid
+    def __init__(self, adam, seed, index, uid, synchronize=True):
+        self.adam,self.seed,self.index,self.uid,self.synchronize=adam,seed,index,uid,synchronize
         self.original=sys.stderr; self.samples=[]; self.next=0.
 
     def write(self,text):
@@ -65,7 +65,7 @@ class Progress:
             if len(self.samples)==1:
                 if step!=1: raise RuntimeError(f'first observed Adam iteration was {step}')
                 print('FIRST_CUDA_STEP',self.seed,self.index,os.getpid(),self.uid,step,text.strip(),flush=True)
-                barrier(self.seed,'step1',self.index)
+                if self.synchronize: barrier(self.seed,'step1',self.index)
         return len(text)
 
     def flush(self): self.original.flush()
@@ -110,6 +110,37 @@ def prepare(a):
     write_json(a.out/'prepared.json',dict(base=BASE,split=SPLIT,inputs=manifest,betas=[split['per_beta'][str(i)]['beta'] for i in range(10)],train=81920,test=81920))
 
 
+def endpoint_test(index, tensor, encoder, critic, encode):
+    """Frozen stock H (rows) vs E (columns), one draw/parent and one score matrix/batch."""
+    import numpy as np
+    import tensorflow as tf
+    import tensorflow_probability as tfp
+    from scipy.stats import t
+    tf.keras.utils.set_random_seed(440311+index)
+    bounds=tfp.vi.mutual_information.lower_bound_info_nce
+    draws=[]; batches=[]
+    for j,start in enumerate(range(0,len(tensor['ids']),500)):
+        sel=slice(start,start+500); v=encode(tensor['V'][sel])[...,None]; n=len(v)
+        h=encoder(v,training=False); e=encode(tensor['E'][sel]).reshape(n,-1)
+        scores=critic(e,h,training=False)
+        if scores.shape!=(n,n) or not bool(tf.reduce_all(tf.math.is_finite(scores))):
+            raise ValueError('Unscorable frozen stock critic matrix')
+        draws.append(h.numpy()); rng=np.random.default_rng([771904,index,j]); ids=np.arange(n)
+        perm=rng.permutation(n)
+        while np.any(ids==perm): perm=rng.permutation(n)
+        true=float(bounds(logu=scores,joint_sample_mask=tf.eye(n,dtype=tf.bool)))
+        null=float(bounds(logu=scores,joint_sample_mask=tf.equal(ids[None,:],perm[:,None])))
+        batches.append(dict(n=n,paired=true,shuffled=null,difference=true-null,permutation_sha256=hashlib.sha256(perm.astype('<i4').tobytes()).hexdigest()))
+    n=np.array([r['n'] for r in batches]); assert n.tolist()==[500]*16+[192]
+    w=n/n.sum(); result={}
+    for key in ('paired','shuffled','difference'):
+        x=np.array([r[key] for r in batches]);mu=float(w@x);se=float(np.sqrt(len(w)/(len(w)-1)*np.sum((w*(x-mu))**2)))
+        half=t.ppf(.975,len(w)-1)*se
+        if not np.isfinite([mu,half]).all(): raise ValueError('Nonfinite held-out score')
+        result[key]=dict(mean_nats=mu,batch_se=se,ci95=[mu-half,mu+half])
+    return np.concatenate(draws),dict(batches=batches,summary=result,parents=int(n.sum()),independent_batches=len(n),df=len(n)-1)
+
+
 def worker(a):
     # Set per-process VRAM ceiling after physical discovery but before any TF logical device is initialized.
     cpus=sorted(os.sched_getaffinity(0))
@@ -138,13 +169,42 @@ def worker(a):
         return p
     with np.load(path('train'),allow_pickle=False) as d: v=encode(d['V'])[...,None];e=encode(d['E']).reshape(8192,-1)
     adam=tf.keras.optimizers.Adam(opt['learning_rate'])  # identical to the stock default; retain its actual iterations
-    progress=Progress(adam,a.seed,b,uid)
-    barrier(a.seed,'ready',b)
+    endpoint=a.endpoint
+    if endpoint and (a.seed!=6101 or b not in (0,9)): raise ValueError('Unregistered endpoint replay')
+    progress=Progress(adam,a.seed,b,uid,synchronize=not endpoint)
+    from rsmine.coarsegrainer import cg_optimisers
+    from contextlib import redirect_stderr, nullcontext
+    from unittest.mock import patch
+    captured=[]; original=cg_optimisers.SeparableCritic
+    def capture(*args,**kwargs):
+        if captured: raise RuntimeError('Stock trainer constructed multiple critics')
+        obj=original(*args,**kwargs); captured.append(obj); return obj
+    if not endpoint: barrier(a.seed,'ready',b)
     start=time.monotonic()
-    from contextlib import redirect_stderr
-    with redirect_stderr(progress):
+    with (patch.object(cg_optimisers,'SeparableCritic',capture) if endpoint else nullcontext()), redirect_stderr(progress):
         estimates,h,filters,encoder=train_RSMI_optimiser(cg,critic,opt,dict(N_samples=8192,dimension=3),V=v,E=e,use_GPU=True,optimizer=adam)
     end=time.monotonic(); steps=int(adam.iterations.numpy())
+    if endpoint:
+        if len(captured)!=1 or cg_optimisers.SeparableCritic is not original: raise RuntimeError('Stock critic capture failed')
+        stored={f'critic_{j:02}':v for j,v in enumerate(captured[0].get_weights())}
+        stored.update(estimates=estimates,coarse_vars=h,filters=filters,final_kernel=encoder.get_weights()[0])
+        complete=steps==EPOCHS*BATCHES and len(estimates)==EPOCHS and all(np.isfinite(x).all() for x in stored.values())
+        rec=dict(beta=beta,index=b,seed=a.seed,base=BASE,split=SPLIT,gpu_uuid=uid,actual_steps=steps,complete=bool(complete),
+                 train_wall_s=end-start,optimizer_samples=progress.samples,train_parents=8192,test_parents_scored=0,
+                 critic_class=type(captured[0]).__name__,critic_weight_names=[x.name for x in captured[0].weights],
+                 test_score=None,status='stock training incomplete or nonfinite; no TEST score')
+        if complete:
+            with np.load(path('test'),allow_pickle=False) as z:
+                test={k:z[k] for k in ('V','E','ids')}
+            try:
+                relaxed,score=endpoint_test(b,test,encoder,captured[0],encode)
+            except ValueError as exc: rec['status']='frozen evaluation failed: '+str(exc)
+            else:
+                stored.update(test_ids=test['ids'],test_relaxed=relaxed)
+                rec.update(status='complete',test_score=score,test_parents_scored=8192)
+        if steps!=int(adam.iterations.numpy()): raise RuntimeError('Optimizer changed during evaluation')
+        np.savez_compressed(f'{tag}-s{a.seed}.npz',receipt=json.dumps(rec),**stored)
+        print('ENDPOINT_RESULT',b,a.seed,steps,rec['status'],flush=True);return
     if steps!=EPOCHS*BATCHES or len(estimates)!=EPOCHS or not np.isfinite(estimates).all() or len(progress.samples)<2:
         raise RuntimeError(f'Incomplete stock training ({steps} optimizer steps)')
     ema=float(RSMI_estimate(estimates,ema_span=20))
@@ -190,14 +250,16 @@ def launch(a):
     from decimal import Decimal
     from modal.stream_type import StreamType
     from datetime import datetime, timezone
-    rates=modal.Workspace.from_context().billing.rates(); life=6000; cpu=16; gib=48
-    carry=Decimal('11.47')+Decimal('.46928229')  # conservative V3 ceiling plus terminal stock v1 gross
+    ep=a.endpoint_replay; rates=modal.Workspace.from_context().billing.rates()
+    life,cpu,gib=(1800,4,16) if ep else (6000,16,48)
+    carry=Decimal('11.47')+Decimal('.46928229')+(Decimal('.47796996') if ep else 0)
     cost=Decimal(life)/3600*(rates['gpu_hour_cost_h100']+cpu*rates['cpu_hour_cost_sandbox']+gib*rates['mem_gib_hour_cost_sandbox'])+8*rates['egress_gib_cost']
     if not (cost<=Decimal(str(a.budget))<=Decimal('25')-carry): raise ValueError('Original cumulative budget exceeded')
     meta=json.loads((a.inputs/'prepared.json').read_bytes()); assert meta['base']==BASE and meta['split']==SPLIT and len(meta['inputs'])==20
     for file,digest in meta['inputs'].items():
         if sha(a.inputs/file)!=digest: raise ValueError(file)
-    repo=Path(__file__).resolve().parents[1]; stage=STUDY; a.out.mkdir(parents=True,exist_ok=False)
+    repo=Path(__file__).resolve().parents[1]; stage='stock-glass-endpoint-critic' if ep else STUDY
+    a.out.mkdir(parents=True,exist_ok=False)
     app=modal.App.lookup(stage,create_if_missing=True)
     stamp=lambda:datetime.now(timezone.utc).isoformat(); sb=None
     with tempfile.TemporaryDirectory() as temp:
@@ -205,7 +267,7 @@ def launch(a):
         subprocess.run(['bash','-ec','set -o pipefail; tar -C "$1" -cf - . | split -b 384M - "$2/wheels-"','pack',str(a.wheels.resolve()),str(tmp)],check=True)
         parts=sorted(tmp.glob('wheels-*'))
         if not parts or not 0<sum(p.stat().st_size for p in parts)<7*1024**3: raise ValueError('Offline wheel payload outside bounds')
-        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=10,waves=SEEDS,epochs=EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,short='stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',no_test_estimator=True,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
+        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=2.53855756 if ep else 2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=2 if ep else 10,waves=[6101] if ep else SEEDS,epochs=EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,short='stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',readout_plan_sha256=sha(repo/'results/stock-glass-endpoint-critic/readout-plan.json') if ep else None,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
         try:
             sb=modal.Sandbox.create('/bin/sleep',str(life),name=stage,app=app,image=modal.Image.from_id(IMAGE),gpu='H100!',cpu=(cpu,cpu),memory=(gib*1024,gib*1024),block_network=True,timeout=life,tags={'study':stage})
             print('PROVIDER_ID',app.app_id,sb.object_id,stamp(),'max_usd',cost,flush=True); write_json(a.out/'provider.json',dict(app=app.app_id,sandbox=sb.object_id,utc=stamp(),image=IMAGE))
@@ -218,7 +280,18 @@ def launch(a):
                 if rc!=0: raise RuntimeError(f'Stock sandbox command failed: {rc}')
             run('set -o pipefail; mkdir wheels; cat wheels-* | tar -xf - -C wheels; rm wheels-*; tar -xf fork.tar; /opt/conda/bin/python -m venv env; env/bin/pip install --no-index --find-links=wheels --disable-pip-version-check -q '+ ' '.join(repr(x) for x in REQUIREMENTS)+'; echo OFFLINE_RUNTIME_READY',1200)
             env='export PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 TF_USE_LEGACY_KERAS=1 TF_NUM_INTRAOP_THREADS=1 TF_NUM_INTEROP_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TF_CPP_MIN_LOG_LEVEL=2 WANDB_MODE=disabled; export LD_LIBRARY_PATH="$(find "$PWD/env" -path "*/nvidia/*/lib" -type d | paste -sd: -):${LD_LIBRARY_PATH:-}"; '
-            for name in meta['inputs']: fs.copy_from_local(a.inputs/name,REMOTE+'/'+name)
+            for name in meta['inputs']:
+                if not ep or name.startswith(('b00-','b09-')): fs.copy_from_local(a.inputs/name,REMOTE+'/'+name)
+            if ep:
+                from concurrent.futures import ThreadPoolExecutor
+                def replay(b):
+                    run(env+f'env/bin/python -u stock_glass_modal.py worker --index {b} --seed 6101 --endpoint',1200)
+                    name=f'b{b:02}-s6101.npz'
+                    if not 0<fs.stat(REMOTE+'/'+name).size<8*1024**2: raise ValueError('Unexpected endpoint result size')
+                    with (a.out/name).open('xb') as f: f.write(fs.read_bytes(REMOTE+'/'+name))
+                    print('SAVED_ENDPOINT',b,sha(a.out/name),flush=True)
+                with ThreadPoolExecutor(max_workers=2) as pool: list(pool.map(replay,(0,9)))
+                return
             for seed in SEEDS:
                 run(env+f'env/bin/python -u stock_glass_modal.py wave --seed {seed}',life)
                 for name in [f'wave-{seed}.json',*[f'b{b:02}-s{seed}.npz' for b in range(10)]]:
@@ -234,6 +307,8 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__); sub=parser.add_subparsers(dest='cmd',required=True)
     p=sub.add_parser('prepare'); p.add_argument('--archive',type=Path,required=True); p.add_argument('--split',type=Path,required=True); p.add_argument('--rosters',type=Path,required=True); p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('launch'); p.add_argument('--inputs',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--wheels',type=Path,required=True);p.add_argument('--budget',type=float,required=True)
+    p.add_argument('--endpoint-replay',action='store_true')
     p=sub.add_parser('worker');p.add_argument('--index',type=int,required=True,choices=range(10));p.add_argument('--seed',type=int,required=True,choices=SEEDS)
+    p.add_argument('--endpoint',action='store_true')
     p=sub.add_parser('wave');p.add_argument('--seed',type=int,required=True,choices=SEEDS)
     a=parser.parse_args(); {'worker':worker,'prepare':prepare,'launch':launch,'wave':wave}[a.cmd](a)
