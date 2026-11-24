@@ -1,0 +1,11 @@
+{
+  "scope": "Authorized corrective dispatch for experiment 03 only. No scientific change to ../design.json. Preserve ../billing.json and all original failure artifacts.",
+  "original_attempt": "sb-OTABmGqOuJ1xBdTv3QvDjO",
+  "original_gross_usd": "0.30778263",
+  "prior_cumulative_usd": "5.97851960",
+  "available_usd_before": "19.02148040",
+  "corrective_sandbox": "sb-M2Bar8OLx4Hf58xtVxkItc",
+  "maximum_gross_usd": "3.92791667",
+  "gate": "Original first cell (beta index 0, seed 6101) runs alone on the actual bank. Adam iterations=1 and CUDA placement, bank checksum, full V/E shapes and device UUID saved. Retrieve its fit and verify step receipt before submitting other cells, in waves of at most 8. Exceptions prevent subsequent waves. This is not an extra fit or restart.",
+  "grid": "30 cells in original order: three seeds 6101/6102/6103 x all 10 separate beta. Unchanged 16 conditional replica pairs per eligible TRAIN parent; checkpoints 850, 1700, 3400, 6800 and final 10257 (b00-b08) or 10218 (b09). No TEST access during training. No retries or other experiment."
+}

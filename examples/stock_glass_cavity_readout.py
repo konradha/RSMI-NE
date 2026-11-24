@@ -28,8 +28,10 @@ def contrast(p):
     ev,v=solve(c,s,np.eye(4)[:,use]);return orient(v[:,:1],m)[:,0] if len(ev) else None
 
 
-def readout(inputs,out,runs):
-    meta=json.loads((inputs/'prepared.json').read_bytes());frozen=np.load(out/'frozen-modes.npz');model=[];coverage=[];lookup={};traces=[];banks={};coords=C+1;max_quad=0;all_receipts=[]
+def readout(inputs,out,runs,reference=None):
+    ref=reference or out
+    meta=json.loads((inputs/'prepared.json').read_bytes());receipt=json.loads((ref/'exact-receipt.json').read_bytes());assert receipt['inputs']==stock.sha(inputs/'prepared.json') and receipt['eigenbasis']==stock.sha(ref/'frozen-modes.npz')
+    frozen=np.load(ref/'frozen-modes.npz');model=[];coverage=[];traces=[];banks={};coords=C+1;max_quad=0;all_receipts=[]
     for b in range(10):
         tag=f'b{b:02}';beta=float(meta['coverage'][b]['beta']);tr,*_=loadside(inputs,b,'train',beta);te,*_=loadside(inputs,b,'test',beta);mt=tr.mean(0);mv=te.mean(0);test={k:evaluate(te,frozen[tag+'_'+k]) for k in ('oracle','best_simple','linear')};linear=frozen[tag+'_linear'];site=frozen[tag+'_best_simple'];B=(len(tr)*16+499)//500;fin=B*((10000+B-1)//B);depths=[850,1700,3400,6800,fin];assert len(set(depths))==5
         for seed in (6101,6102,6103):
@@ -66,4 +68,4 @@ def readout(inputs,out,runs):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for k in ('inputs','out','runs'):p.add_argument('--'+k,type=Path,required=True)
-    a=p.parse_args();readout(a.inputs,a.out,a.runs)
+    p.add_argument('--reference',type=Path);a=p.parse_args();readout(a.inputs,a.out,a.runs,a.reference)

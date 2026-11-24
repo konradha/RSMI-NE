@@ -41,8 +41,8 @@ def physical(out):
     fig.suptitle('β=3.05 · TRAIN-selected leading contrast (one arbitrary sign)',fontsize=13);fig.text(.03,-.015,'White = vacancy; teal = A; orange = B. Near-degeneracy: these are examples from a frozen mode, not a unique ordered motif.',fontsize=9);save(fig,out,'star-patterns')
 
 
-def learned(out):
-    df=pd.read_csv(out/'frozen-readout.csv');cv=pd.read_csv(out/'coverage.csv');base=pd.read_csv(out/'benchmark.csv');final=df[df.final];betas=base.drop_duplicates('index').beta.to_numpy();fig,axs=plt.subplots(2,2,figsize=(11,7.7),constrained_layout=True)
+def learned(out,reference):
+    df=pd.read_csv(out/'frozen-readout.csv');base=pd.read_csv(reference/'benchmark.csv');final=df[df.final];betas=base.drop_duplicates('index').beta.to_numpy();fig,axs=plt.subplots(2,2,figsize=(11,7.7),constrained_layout=True)
     for a,field,title in zip(axs.flat,['T','fraction','minus_linear','entropy_nats'],['A   Absolute memory','B   Fraction of frozen exact mode','C   Increment over linear site indicators','D   Code entropy (nats)']):
         if field in ['T','fraction']:
             for key,color,label in [('oracle','#23272c','210-state mode'),('best_simple','#a9680d','Best individual'),('linear','#5f873c','Best site-linear')]:band(a,base[base.observable==key],field,color,label,style='--')
@@ -74,7 +74,8 @@ def coverage(out,cv,betas):
     im=ax.imshow(grid,cmap=cmap,norm=BoundaryNorm(np.arange(-.5,4.5,1),4),aspect='auto');ax.set(yticks=range(10),yticklabels=[f'{v:.3f}' for v in betas],xticks=range(15),xticklabels=['850','1700','3400','6800','final']*3,ylabel='β',xlabel='Depth within seed · 6101 / 6102 / 6103',title='Coverage · 10 temperatures × 3 starts × 5 locked checkpoints');ax.axvline(4.5,color='white',lw=3);ax.axvline(9.5,color='white',lw=3);cb=fig.colorbar(im,ax=ax,ticks=range(4),shrink=.7);cb.ax.set_yticklabels(levels);save(fig,out,'coverage')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('out',type=Path);p.add_argument('--exact-only',action='store_true');a=p.parse_args();physical(a.out)
+    p=argparse.ArgumentParser();p.add_argument('out',type=Path);p.add_argument('--exact-only',action='store_true');p.add_argument('--reference',type=Path);a=p.parse_args()
+    if a.reference is None or a.exact_only:physical(a.reference or a.out)
     if not a.exact_only:
         cv=pd.read_csv(a.out/'coverage.csv');betas=cv.drop_duplicates('index').beta.to_numpy();coverage(a.out,cv,betas)
-        if cv.checkpoint.eq('finite').any():learned(a.out)
+        if cv.checkpoint.eq('finite').any():learned(a.out,a.reference or a.out)

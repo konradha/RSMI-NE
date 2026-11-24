@@ -48,7 +48,9 @@ def fit(a):
         ticks+=n
         if ticks==1 or ticks in (*EARLY,final):
             assert int(adam.iterations.numpy())==ticks
-            if ticks==1:print('FIRST_CUDA_STEP',stem,uid,ticks,flush=True)
+            if ticks==1:
+                step=dict(index=b,seed=s,iterations=ticks,bank=name,bank_sha=stock.sha(Path(name)),visible=list(v.shape),environment=list(e.shape),uuid=uid,device=device,placement=placement)
+                stock.write_json(Path(stem+'-step1.json'),step);print('FIRST_CUDA_STEP',stem,uid,ticks,flush=True)
             else:
                 stored[f'w{ticks}']=refs['cg']._Λ.get_weights()[0];cw=refs['critic'].get_weights()
                 for j,w in enumerate(cw):stored[f'c{ticks}_{j:02}']=w
@@ -71,7 +73,8 @@ def launch(a):
     from decimal import Decimal as D
     import queue,subprocess,tempfile,modal
     from modal.stream_type import StreamType
-    prior=D('5.67073697');r=modal.Workspace.from_context().billing.rates();life,cpu,gib=2100,10,34;cost=D(life)/3600*(r['gpu_hour_cost_h100']+cpu*r['cpu_hour_cost_sandbox']+gib*r['mem_gib_hour_cost_sandbox'])+8*r['egress_gib_cost'];assert cost<=D(str(a.budget))<=min(D('3.95'),25-prior)
+    study=STUDY+'-corrected';old=json.loads((DESIGN.parent/'billing.json').read_bytes());prior=D(old['cumulative_usd']);assert prior==D('5.97851960') and 25-prior==D('19.02148040')
+    r=modal.Workspace.from_context().billing.rates();life,cpu,gib=2100,10,34;cost=D(life)/3600*(r['gpu_hour_cost_h100']+cpu*r['cpu_hour_cost_sandbox']+gib*r['mem_gib_hour_cost_sandbox'])+8*r['egress_gib_cost'];assert cost<=D(str(a.budget))<=min(D('3.95'),25-prior)
     meta=json.loads((a.inputs/'prepared.json').read_bytes());bench=json.loads((DESIGN.parent/'exact-receipt.json').read_bytes());assert bench['unique']==meta['unique']==163840 and bench['design']==meta['design']==stock.sha(DESIGN) and bench['inputs']==stock.sha(a.inputs/'prepared.json') and len(bench['by_beta'])==10 and bench['by_beta'][0]['train_top']==0
     assert bench['eigenbasis']==stock.sha(DESIGN.parent/'frozen-modes.npz') and len(bench['energy_audits'])==20
     names=[f'b{b:02}-pairs.npz' for b in range(10)]+['state-geometry.npz'];assert all(stock.sha(a.inputs/n)==meta['inputs'][n] for n in names)
@@ -80,7 +83,7 @@ def launch(a):
     with tempfile.TemporaryDirectory() as temp:
         tmp=Path(temp);subprocess.run(['git','archive','--format=tar','-o',str(tmp/'fork.tar'),stock.BASE,'rsmine','examples/tutorial.ipynb'],cwd=ROOT,check=True)
         subprocess.run(['bash','-ec','set -o pipefail; tar -C "$1" -cf - . | split -b 384M - "$2/wheels-"','pack',str(a.wheels.resolve()),str(tmp)],check=True)
-        app=modal.App.lookup(STUDY,create_if_missing=True);sb=modal.Sandbox.create('/bin/sleep',str(life),name=STUDY,app=app,image=modal.Image.from_id(stock.IMAGE),gpu='H100!',cpu=(cpu,cpu),memory=(gib*1024,gib*1024),block_network=True,timeout=life,tags={'study':STUDY})
+        app=modal.App.lookup(study,create_if_missing=True);sb=modal.Sandbox.create('/bin/sleep',str(life),name=study,app=app,image=modal.Image.from_id(stock.IMAGE),gpu='H100!',cpu=(cpu,cpu),memory=(gib*1024,gib*1024),block_network=True,timeout=life,tags={'study':study})
         try:
             stock.write_json(a.out/'provider.json',dict(sandbox=sb.object_id,app=app.app_id,utc=stamp()));print('PROVIDER_ID',sb.object_id,app.app_id,'max_usd',cost,flush=True);fs=sb.filesystem;remote=stock.REMOTE;fs.make_directory(remote)
             for f in [*sorted(tmp.glob('wheels-*')),tmp/'fork.tar',Path(__file__),Path(stock.__file__),a.inputs/'prepared.json',*(a.inputs/n for n in names)]:fs.copy_from_local(f,remote+'/'+f.name)
@@ -101,10 +104,16 @@ def launch(a):
                     run(env+f'env/bin/python -u stock_glass_cavity_gpu.py fit --index {b} --seed {s} --slot {slot}',1100)
                     assert 0<fs.stat(remote+'/'+name).size<16*1024**2
                     with (a.out/name).open('xb') as f:f.write(fs.read_bytes(remote+'/'+name))
+                    step=json.loads(fs.read_bytes(remote+'/'+stem+'-step1.json'));assert (step['index'],step['seed'],step['iterations'])==(b,s,1) and step['bank_sha']==meta['inputs'][f'b{b:02}-pairs.npz'] and 'H100' in step['device'] and 'GPU:0' in step['placement'];stock.write_json(a.out/(stem+'-step1.json'),step)
                     print('SAVED',stem,stock.sha(a.out/name),flush=True)
-                except Exception as exc:stock.write_json(a.out/(stem+'-failed.json'),dict(error=str(exc)));print('FIT_ERROR',stem,exc,flush=True)
+                except Exception as exc:
+                    stock.write_json(a.out/(stem+'-failed.json'),dict(error=str(exc)));print('FIT_ERROR',stem,exc,flush=True);raise
                 finally:slots.put(slot)
-            with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(execute,[(b,s) for s in SEEDS for b in range(10)]))
+            cells=[(b,s) for s in SEEDS for b in range(10)]
+            execute(cells[0])  # This is the real first fit, not a restarted or extra pilot.
+            print('FANOUT_GATE_PASSED',cells[0],flush=True)
+            with ThreadPoolExecutor(max_workers=8) as pool:
+                for i in range(1,len(cells),8):list(pool.map(execute,cells[i:i+8]))
         finally:
             rc=sb.terminate(wait=True);stock.write_json(a.out/'terminated.json',dict(sandbox=sb.object_id,utc=stamp(),code=rc));print('TERMINATED',sb.object_id,rc,flush=True)
 
