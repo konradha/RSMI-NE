@@ -1,0 +1,64 @@
+{
+  "schema": "spatial-cycle/modal-spend-amendment/v1",
+  "registered_utc": "2026-11-24T14:23:14Z",
+  "scope": "Incremental Modal admission only for the independent archive-only spatial-cycle study. Prior campaign ledger and the labels-trained local cycle trial are unchanged. No spending on simulation, new physical configurations, changing target, or rescoring. Local CPU first.",
+  "decision": "BLOCK_PAID_LAUNCH",
+  "reason": "Read-only provider accounting works, but the existing admission path cannot enforce an all-in upper bound on a new paid GPU job. No pilot invocation, image build, or upload is authorized by this amendment, even if scientific gates pass. Full unspent allowance is not available-to-launch money.",
+  "bind": {
+    "hash": "SHA-256 of exact file bytes",
+    "spend-evidence.json": "dd53b3fdee71bdcb625196f3b6e3b875df774c845ec872cf04c7ebdcc1ca1775",
+    "supervisor_instruction_sha256": "1b88a2f5dcc7b64ab0eaced169c27fbb83580ff1c22b21970d8a7f78a5dc19ae",
+    "results/l20-autoresearch/protocol.json": "bc7edae613565c272759bbf61608572fdad4d3c2d306a74092c8871cc0ac316e",
+    "results/l20-autoresearch/cycle-boundary/design.json": "4062cc77636eeb19625293cb07a3c33d6076ea0649847f8938f314434d143a84",
+    "results/l20-autoresearch/cycle-boundary/model-design.json": "0073d9f941d14697bf0e689f2b761da1ab9a89c1ae3a120d1fc351ebc05c0d68",
+    "examples/glass_autoresearch/modal_learn.py": "fbfcf7124f2ef512314b29a8fa45836d5534ead2f57ae2de4c798cbedb6e6595",
+    "historical_ledger_bytes": "All three admission and available allocation/worker receipt hashes are in the bound evidence. No transfer or release of historic reservations."
+  },
+  "ledgers_usd": {
+    "prior_archive_campaign": {
+      "authorized_ceiling": 25, "recorded_committed_and_still_charged_to_old_ledger": 1.097052, "arithmetic_uncommitted": 23.902948,
+      "uncommitted_transferable_to_new_study": 0,
+      "reported_provider_gross_rows_to_14_utc": 0.01457995, "final_net_attributable_invoice": null,
+      "paid_jobs_running_at_observation": 0, "old_worker_receipts_count": 1,
+      "outstanding_exposure": "No active campaign compute seen. Three nominal reservations remain consumed under the old ledger. Finite residual lifetime storage and missing/delayed/invoice adjustments are NOT established; nominal headroom is not a cash balance. Gross report and receipt-derived estimates do not get added to the commitments or used to release them."
+    },
+    "incremental_spatial_cycle": {
+      "dedicated_authorized_ceiling": 25, "admitted_jobs": [], "active_or_uncertain_jobs": 0, "new_persistent_resources": 0,
+      "actual_attributable_new_spend": 0, "posted_commitments": 0, "reserved_worst_case_exposure": 0, "unspent_authorization": 25,
+      "available_to_admit_under_current_route": 0, "max_new_paid_launches": 0, "effective_incremental_exposure": 0,
+      "basis_for_actual_zero": "No invocation, image build, new cloud storage, or workload transfer for this study. Only read-only control-plane status, tariff, storage metadata, and billing queries; not inferred from absence of an invoice. Legacy storage is not charged to this study."
+    }
+  },
+  "one_hypothetical_pilot_not_admitted": {
+    "purpose": "One short archived fit-only timing pilot if lineage, scientific support/positive-control and material raw development gates justify it, and local precomputation is not cheaper/faster. No assessment arrays, no labels for the label-free encoder, no repeat/network sweep.",
+    "required_job_spec_not_implemented": {
+      "type": "Ephemeral Modal Function; untargeted base price, not a Sandbox. Existing immutable resolved image already built; no automatic image build, installation, schedule, web endpoint or auxiliary worker.",
+      "gpu": "exactly 1 L4", "cpu_request_and_limit_physical_cores": [2, 2], "memory_request_and_limit_MiB": [6144, 6144], "native_threads": 1,
+      "total_submitted_inputs": 1, "max_concurrent_inputs": 1, "max_containers": 1, "min_containers": 0, "buffer_containers": 0, "scaledown_window_s": 2,
+      "user_retries": 0, "client_resubmissions": 0, "automatic_scheduler_restarts_permitted": 0,
+      "queue_deadline_s": 155, "startup_timeout_s": 130, "execution_timeout_s_per_attempt": 90, "teardown_and_timeout_slop_s": 45,
+      "absolute_server_enforced_lifetime_required_s": 420,
+      "timing_requirement": "Single 420 s end-to-end exposure limit includes all attempts, timeouts, teardown, idle and any overlapping billing; target one attempt only. The local client's timeout is not such a guarantee. Start only with all 420 s available before the discovery cutoff, never after the stop time.",
+      "fit_only_input_cap_bytes": 67108864, "single_return_payload_cap_bytes": 1048576, "aggregate_metered_egress_cap_bytes_including_protocol_and_logs": 16777216,
+      "storage": "No new Volume, no persistent writes/snapshots/bucket mounts, no extra requested disk; input must be size-checked locally before upload. No billable retained input blobs/image layer, including post-stop. No arbitrary outbound network. No credits or free tier assumed."
+    },
+    "conditional_cost_envelope_usd": {
+      "one_90s_execution_only_not_a_job_total": 0.023565,
+      "formula": "(155 + 130 + 90 + 45)/3600 * (0.8 + 2*0.04730 + 6*0.008) + (16/1024)*0.04; price ALL queue, 2m10s startup, teardown incl. idle at full hard resource ceilings and all 16 MiB as chargeable egress. Input is ingress; request/protocol bytes count toward egress. No per-minute minimum; 420 s equals seven full minutes. Requires zero billable build/retention and enforceable end-to-end caps above.",
+      "420s_gpu_plus_cpu_plus_ram": 0.109970, "egress": 0.000625, "build_if_verified_absent": 0, "persistent_storage_if_verified_absent": 0,
+      "conditional_total": 0.110595, "rounded_up_reservation_if_all_constraints_were_verified": 0.12,
+      "extra_attempt_sensitivity_not_an_upper_bound": "Three serial 420 s full-resource windows plus the same whole-job 16 MiB would be $0.330535. One concurrent container does not imply one lifetime attempt. Neither one nor three windows is guaranteed on the existing route.",
+      "verified_all_in_maximum_new_job_on_existing_route": null, "amount_admitted": 0,
+      "interpretation": "The $0.12 is a conditional costing example, NOT an enforceable reservation, price quote, invoice, or authority to launch. Without verified bounds the conservative admission decision is no job; reserving even the entire $25 on paper would not enforce it."
+    }
+  },
+  "failed_controls_on_existing_route": [
+    "Old runner locks its old admissions, not this new allocation. The flock ends before submitting the call, so separate callers need not serialize their live jobs. It only supports the historical decoder/data and persistent history volume; do not reuse it for new science.",
+    "Base registry digest is pinned, but add_python + run_commands(pip install) can build before entry into the timed queue window. No authenticated proof that a new job will have zero build time/cost; the $0.20 old cushion is not a contractual ceiling.",
+    "Old worker has one requested input, retries=0 and max_containers=1, but timeout is per attempt. Modal may restart the same GPU input after preemption and replace crashing containers. Nonpreemptible is unavailable for GPU Functions. No documented numeric bound on total restarts or enforced global cost deadline across startup, queue, input, client loss/cancellation and release. Client queue timeout starts only after app.run setup; cancel request and 45 s teardown allowance are not a billing hard stop.",
+    "Old runner commits to a persistent writable Volume without aggregate byte limit or hard retention cutoff; local return filtering at 12 MiB per file does not bound total egress, Volume writes, network traffic or logs. Included allowances are shared and cannot be pledged to this job.",
+    "Provider hard resource tuples and per-second pricing are useful, but the old 90 s formula would reserve $0.3098384 (=420*0.00026152+0.20). Rounded historical rates, an arbitrary overhead allowance and a non-isolated workspace budget do not establish an all-in limit. No per-job isolation for credits, non-compute charges, or post-stop storage verified."
+  ],
+  "admission_policy": "No paid entry under this lock. A future separately authorized amendment would require verified absolute aggregate bounds and scientific gates, one controller with atomic job reservation held throughout any unresolved run, no other live/in-doubt input, and provider inventory/reconciliation before each admission. Deduct each settled item's attributable actual charge or, while unresolved, its full enforceable worst case (never both; never release on a worker estimate or grant credits in advance). Require ledger total plus candidate cap <= dedicated $25. Any unbounded component, disconnected/still-reserved job, unresolved accounting, or timing conflict => deny. No use of the old $23.902948, prior working code or a paid quote to bypass this decision.",
+  "discovery_cutoff_utc": "2026-11-24T21:00:25Z", "stop_utc": "2026-11-24T21:45:25Z"
+}

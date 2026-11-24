@@ -1,0 +1,83 @@
+{
+  "schema": "spatial-cycle/modal-read-only-evidence/v1",
+  "snapshot_utc": "2026-11-24T14:22:01Z",
+  "scope": "Accounting metadata only. No archived physical/model outputs inspected; no remote builds, paid invocations, downloads of Volume file contents, deployments, cancellations, deletions or budget changes.",
+  "provider_checks": {
+    "client": "modal 1.6.4 (existing archive-modal311 installation)",
+    "authenticated_environment": "main",
+    "inventory": "modal environment list --json; modal app list --json and modal container list --json for BOTH returned environments; modal app info -e main --json on the two local allocation IDs and the third archive app ID from the provider report.",
+    "observed_utc_interval": ["2026-11-24T14:20:19Z", "2026-11-24T14:20:41Z"],
+    "environment_count": 2,
+    "campaign_apps_live": 0,
+    "containers_all_visible_environments": 0,
+    "inventory_note": "One unrelated deployed app in main; no live containers. A recent-app listing alone did not return the stopped archive apps. Each of the three historical IDs was looked up directly and was stopped.",
+    "meter": "modal billing report --start 2026-11-24T00:00 --end 2026-11-24T14:00 --resolution h --show-resources --json (UTC, exclusive end); the 11:00-14:00 query returned the same seven archive rows. All seven are in the 12:00 UTC hour, environment main, description rsmi-archive-learning. Values below are reported gross, not estimated and not net invoices.",
+    "rates": "modal billing rates --json",
+    "summary": "modal billing summary --for 2026-11 --json: open-cycle workspace billed_cost was zero after adjustments at observation. No project-specific net invoice or final cycle invoice obtained. This is NOT evidence that the historical work was free or that future gross resource use is funded.",
+    "budget_inspection": "Read-only workspace billing API exposes report/rates/summary, not a job-specific spend ceiling. Workspace settings list and the documented settings interface do not establish a dedicated gross dollar ceiling for this experiment. Environment budgets cover compute only. No shared workspace budget was modified.",
+    "storage_inspection": "modal volume list -e main --json and modal volume ls -e main --json on the historical Volume root and its sole subdirectory; filename/type/byte-count metadata only."
+  },
+  "historical_accounting": {
+    "ledger": "~/.local/state/rsmi/archive-learning-1795520725/{cell}.json",
+    "receipts": "~/rsmi-work/l20-autoresearch-1795520725/modal/{cell}/",
+    "admission_hash_note": "For each row admission_sha256 is identical for the old global ledger record and the scratch admission.json. Application IDs below are SHA-256 of the provider ID UTF-8 bytes without newline; these are not access credentials.",
+    "old_policy": "One 120 s input per admission, L4/L40S, hard 2 physical cores and 6144 MiB, 155 s queue + 130 s startup + 45 s teardown. The legacy runner reserved 450 * historical per-second rate + 0.20. The amount in its ledger is not itself a contractual maximum bill.",
+    "cells": [
+      {
+        "cell": "gate-b2-v1", "gpu_requested": "L4", "requested_budget_usd": 0.45, "recorded_reservation_usd": 0.317684,
+        "admission_sha256": "6ec25873ba8bc71474dc23be50ac3eef33427d6467ae1251e2a5887678ccde4d",
+        "allocation_sha256": null, "worker_receipt_sha256": null,
+        "app_id_sha256": "6cc2a18798712f47a4686578988ac9cf499c2a4af2eb68b43ca00fe58f5d37ff",
+        "join_basis": "Inferred: no local allocation file; the remaining uniquely named/timed archive app was created 12:05:01Z just after this 12:05:00.747Z admission. The other two joins are exact allocation-ID joins.",
+        "state": "stopped", "created_utc": "2026-11-24T12:05:01Z", "stopped_utc": "2026-11-24T12:06:27Z",
+        "reported_gross_resource_usd": {"CPU": 0.00053769, "Memory": 0.00006500, "Network Egress": 0.00000159},
+        "reported_gross_sum_usd": 0.00060428, "attributed_net_invoice_usd": null
+      },
+      {
+        "cell": "gate-b2-py311", "gpu_requested": "L4", "requested_budget_usd": 0.45, "recorded_reservation_usd": 0.317684,
+        "admission_sha256": "49760a87b066268ef188ea36555fa7fdc5ad6eb5964430f6e6b22a6d311b7f5f",
+        "allocation_sha256": "65b2bd5bb4dea450ff403bfa41167a50ee49b366f0ceafd2335e0c47e46b9d7e", "worker_receipt_sha256": null,
+        "app_id_sha256": "4637d5cb60d0e4da9f537b18929a5d7c46be8d71f3f5a2067a22ccf0c460c4f5",
+        "state": "stopped", "created_utc": "2026-11-24T12:07:56Z", "stopped_utc": "2026-11-24T12:10:33Z",
+        "reported_gross_resource_usd": {}, "reported_gross_sum_usd": null,
+        "note": "No matching metering row in the observed interval and no worker receipt: do not impute zero charge.", "attributed_net_invoice_usd": null
+      },
+      {
+        "cell": "gate-b2-l40s", "gpu_requested": "L40S", "requested_budget_usd": 0.55, "recorded_reservation_usd": 0.461684,
+        "admission_sha256": "2a94e359aff81db9adc0a7805aae8be935e2f87c916098675e307e69d396fafb",
+        "allocation_sha256": "9c50c708d34a2b5faee7869957a7eb85168dbfdc10dca2d9e39dc81c0c919e48", "worker_receipt_sha256": "c3cabebf3a29795dc1aeb1bcf95d11fc5ae07b52091c0069e4c03af1e31cda22",
+        "app_id_sha256": "f13e75f5b62fc8fa6c242787e59bf4c1fb11919d09e67882fab3fee0694d9361",
+        "state": "stopped", "created_utc": "2026-11-24T12:10:57Z", "stopped_utc": "2026-11-24T12:11:28Z",
+        "completed_worker_seconds": 8.881771165, "worker_receipt_compute_estimate_usd_not_invoice": 0.0051649275678708,
+        "reported_gross_resource_usd": {"CPU": 0.00063067, "Memory": 0.00032000, "L40S": 0.01299997, "Network Egress": 0.00002503},
+        "reported_gross_sum_usd": 0.01397567, "attributed_net_invoice_usd": null
+      }
+    ],
+    "recorded_commitments_total_usd": 1.097052,
+    "sum_of_identified_provider_gross_rows_usd": 0.01457995,
+    "all_in_gross_final_usd": null,
+    "historical_shared_volume": {"name": "rsmi-archived-compression-20261124", "present": true, "created_utc": "2026-11-24T12:05:01Z", "logical_files": 6, "logical_file_bytes": 666845, "volume_specific_rows_returned": 0, "illustrative_list_usd_per_month_if_unchanged_before_allowance": 0.00005589431, "lifetime_maximum_usd": null, "note": "Logical bytes are not billed GiB-months. No retention deadline observed; snapshots daily, possible charges for up to four days after deletion. Kept intact; no new study data written to it."}
+  },
+  "tariff": {
+    "date_utc": "2026-11-24", "currency": "USD",
+    "authenticated_exact_rates": {"L4_per_hour": 0.8, "L40S_per_hour": 1.95, "physical_core_per_hour": 0.04730, "GiB_memory_per_hour": 0.008, "egress_per_GiB": 0.04, "volume_per_GiB_month": 0.09},
+    "public_display_per_second": {"L4": 0.000222, "L40S": 0.000542, "physical_core": 0.0000131, "GiB_memory": 0.00000222},
+    "costing_rule": "Use exact account hourly rates / 3600 rather than rounded public seconds; no credits, free storage/egress, discounts, or region premiums assumed. Require base-price untargeted GPU Function, not Sandbox, no region pinning, no optional disk reservation, snapshots, replication or ancillary services.",
+    "billing_floor": "Per second, no minimum usage-time increment. Billable application loading/idle time; cpu/memory metered at max(request, actual), minimum 0.125 physical cores/128 MiB. A 90 s Function timeout is not a 90 s invoice.",
+    "allowances_not_relied_on": "Pricing page: Volume 1 TiB/month free; network allowance 1/10/100 TiB for Starter/Team/Enterprise shared per billing cycle, not dedicated to this job."
+  },
+  "official_sources": {
+    "list_prices_and_floor": "https://modal.com/pricing",
+    "reports_and_invoices": "https://modal.com/docs/guide/billing",
+    "workspace_reporting": "https://modal.com/docs/sdk/py/latest/Workspace#billing",
+    "budget_scopes": "https://modal.com/docs/guide/budgets",
+    "cpu_memory_limits": "https://modal.com/docs/guide/resources",
+    "container_and_scaling_limits": "https://modal.com/docs/guide/scale#scaling-limits",
+    "per_attempt_timeouts": "https://modal.com/docs/guide/timeouts",
+    "crash_rescheduling": "https://modal.com/docs/guide/retries#container-crashes",
+    "gpu_preemption": "https://modal.com/docs/guide/preemption",
+    "separate_image_build": "https://modal.com/docs/guide/images",
+    "network_meter": "https://modal.com/docs/guide/network-egress-billing",
+    "volume_meter_and_retention": "https://modal.com/docs/guide/volumes#pricing"
+  }
+}
