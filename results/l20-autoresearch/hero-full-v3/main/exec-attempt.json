@@ -1,0 +1,11 @@
+{
+  "at_utc": "2026-11-24T15:18:36.772+00:00",
+  "sandbox_id": "sb-DOLeyCRBAwONrUtUXGAa6f",
+  "attempts_authorized": 1,
+  "input_bytes": 433115600,
+  "packed_sha256": "00960adcf8365bd6e8d6088b770e60e38bacaa3fa4087df67d3f042b2ac3994c",
+  "child_deadline_unix": 1795538215,
+  "sdk_exec_timeout_s": 4743,
+  "create_to_handle_s": 8.356916806194931,
+  "upload_s": 18.37229149695486
+}

@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-11-24T15:37:28.738+00:00",
+  "sandbox_id": "sb-DOLeyCRBAwONrUtUXGAa6f",
+  "release_sha256": "bb8d0e38bd971c55ed6ade81b26a0eed02d8baed71ff974791ea240cb6c72274",
+  "source": "archived-physical-train-only",
+  "input_bytes": 433115600,
+  "wire_result_bytes": 19464755,
+  "committed_curves": 314,
+  "device": {
+    "name": "NVIDIA H100 80GB HBM3",
+    "capability": [
+      9,
+      0
+    ],
+    "total_memory_bytes": 85031190528,
+    "visible_device_count": 1
+  },
+  "elapsed_wall_s": 1158.6958424090408
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "hero-full-v3-refit-release-1",
+  "nomination_sha256": "11d9411956ff50a92eb756089c5e77ecceddb92c2a8ca75f58184f30ad783e2d",
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+  "design_sha256": "a4736d10f80fd860318d3b9a933aa01faac079cec30d8ca7f7cb700eefef775f",
+  "seeds": [
+    6101,
+    6102,
+    6103,
+    6104,
+    6105
+  ],
+  "primary_seed": 6101,
+  "all_train": true,
+  "allows_test": false,
+  "depth": 16384,
+  "arch": "affine",
+  "law": "uniform",
+  "purpose": "Fresh frozen-choice all-81920-TRAIN refit; five learned seeds and six fixed critics paired to seed 6101. No model selection or TEST access."
+}

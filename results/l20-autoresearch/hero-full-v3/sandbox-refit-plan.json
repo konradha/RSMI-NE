@@ -1,0 +1,13 @@
+{
+  "stage": "refit",
+  "panel": "refit",
+  "max_depth": 16384,
+  "matched_controls": false,
+  "allocation_sha256": "7d3fc9b6db0e3b0904b5e1f3b0723e9eba4ac3a2980d0ffee0ef1c87be9205f9",
+  "time_limit_s": 3300,
+  "gross_cap_usd": "4.27",
+  "prior_carry_usd": "7.20",
+  "H100": 1,
+  "max_concurrent_sandboxes": 1,
+  "actual_data": "All 8192 TRAIN parents for each of ten beta; no TEST."
+}
