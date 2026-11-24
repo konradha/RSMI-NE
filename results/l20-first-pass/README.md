@@ -16,6 +16,8 @@
 
 **Takeaway.** Keep single-site species as the benchmark. Before calling a feature glass-specific, test whether it predicts **isoconfigurational mobility beyond species, coordination and local energy** on disjoint physical parent configurations. A result at a longer separation or in a replica-overlap field would be more informative than training this same one-copy linear filter on more seeds. This experiment does not rule out an operator in a larger block, a nonlinear encoding, or an overlap field.
 
+[Physical follow-up: site propensity on held-out local trajectories](../l20-propensity/README.md). At β=3.05 the minimum swap cost predicts short-time mobility far better than the frozen RSMI filters. The maps, matched random-filter control and independent-sibling measurements are available.
+
 ### Data and inference
 
 - [Audited L20 campaign](https://github.com/konradha/lattice-exploration/tree/2975fa6a6fbeb99e6b3f2156b489963f56bfebbe/results/l20-paper): all **163,840 independent endpoints** at ten β from 0 to 3.05; the released doubled-depth cohort at β=2.7111. Separately per β: **10,240 train / 2,048 validation / 4,096 test** parents. Every periodic anchor stays with its parent. Each training epoch samples new positions; validation has two fixed anchors, test four. No pooling temperatures or using physical descendants as independent examples.

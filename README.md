@@ -75,6 +75,8 @@ Jupyter notebooks demonstrating the basic usage in simple examples are provided 
 
 **[3D lattice-glass results: temperature, buffer and learned operators](results/l20-first-pass/README.md).** First held-out comparison on 163,840 L20 configurations, including single-site controls, filter maps and reproducible fit receipts.
 
+**[Does static structure predict physical mobility?](results/l20-propensity/README.md)** Local-trajectory tests against species, coordination, swap barriers and untrained filters, including replicated β=3.05 propensity maps.
+
 ## Citation
 
 If you use RSMI-NE in your work, please cite our publications [Phys. Rev. Lett. **127**, 240603 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.240603) and [Phys. Rev. E **104**, 064106 (2021)](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.104.064106):
