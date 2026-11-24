@@ -1,0 +1,13 @@
+{
+  "calibration_runtime": "1.8.0",
+  "fit_and_dev_runtime": "1.9.1",
+  "eligible_calibration_opportunities": 23545,
+  "parents": 384,
+  "diagnostic": "Compare the stratum and packing logits for all eligible calibration inputs at both fit sizes. No cycle outcomes, no probabilities rescored, no alternate fit. Earlier cross-version loading emitted a warning.",
+  "largest_abs_logit_discrepancy": {
+    "512": 0.0,
+    "2048": 0.0
+  },
+  "required_maximum": 1e-10,
+  "passed": true
+}
