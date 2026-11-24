@@ -1,0 +1,91 @@
+{
+  "question": 22,
+  "split": "fit",
+  "direction": "J=0, -z, normal -2, one unseen layer",
+  "utility_order": [
+    "discrete-target task",
+    "affine-target task"
+  ],
+  "parents": 4096,
+  "opportunities": 32768000,
+  "nonempty_visible_words": 5611,
+  "nonempty_face_words": 81,
+  "nonempty_joint_cells": 259594,
+  "design_sha256": "55767b959a573e28878d48062d7ddb5a517d39c0142b4f9fb773e590225f840c",
+  "witness_sha256": "ce6de1b599bd8a7a19d3af88a54658a327264ebb5b3382fb1424f97c8c162363",
+  "bank_receipt_sha256": "ab8b58ef9a8db30d87c330639c4432861372c21e99986859f988d33c5d709c3c",
+  "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416",
+  "script_sha256": "2d61cdbb2517ffc5c5c67a2577b0ac39433def9411e5e6f6d31247aa9fc3d8a9",
+  "policy_file": "22-policy.npz",
+  "policy_sha256": "98f5d883b6b5b55c0a15debb31c1ef952d3c8c56cbca765e9274c71c07ff3196",
+  "count_file": "22-fit-counts.npz",
+  "count_sha256": "d82e362c78d3508ebb0326575b251f2feeb31ce87f80cbd4fd747fee022bfc61",
+  "menu": [
+    1,
+    7,
+    8,
+    14
+  ],
+  "policies": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      3,
+      0,
+      2
+    ]
+  ],
+  "menu_count": 1820,
+  "maximizing_menus": 1,
+  "runner_up_strictly_smaller_by": 0.0022361788752056663,
+  "symbol_counts": [
+    7444181,
+    9851670,
+    7000388,
+    8471761
+  ],
+  "exact_support_numerator": "2628843940353654956867821",
+  "exact_support_denominator": "4722366482869645213696000",
+  "payoff_integer_scale": "72057594037927936",
+  "achievable_utilities": [
+    0.5791370962427214,
+    0.5342216190919609
+  ],
+  "matched_target_utilities": [
+    0.5571888733249435,
+    0.506428108805687
+  ],
+  "separate_deficits": [
+    -0.02194822291777791,
+    -0.02779351028627386
+  ],
+  "achieved_weighted_lower": 0.5566793576673411,
+  "exhaustive_weighted_upper": 0.5566793576673411,
+  "matched_target_average": 0.5318084910653152,
+  "target_average_minus_support": -0.024870866602025886,
+  "finite_table_exact_obstruction": false,
+  "finite_table_practical_obstruction": false,
+  "fitted_compromise_meets_both_within_margin": true,
+  "direct_utility_parity_error": 2.220446049250313e-16,
+  "controls": {
+    "toy_menus": 6,
+    "toy_encoders": 32,
+    "toy_count_scale": 8,
+    "toy_brute": 879,
+    "toy_menu_support": 879,
+    "toy_single_action_support": 879,
+    "unseen_label": 0,
+    "all_tied_first_menu": [
+      0,
+      1
+    ],
+    "direct_word_and_face_parity_sites": 8000,
+    "mismatches": 0
+  },
+  "scope": "Exact support only on this fit empirical table; does not exclude other population rules. Reused historical TRAIN witnesses."
+}

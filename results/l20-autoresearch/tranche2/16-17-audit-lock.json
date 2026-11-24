@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN before any audit scoring. Release by Main only after public push.",
+  "public_design_commit_prefix": "1036785",
+  "code_sha256": "6f16035d8bc47b6dded5dd6516b48795fdd69dd59441aaaacdc180a74ae2677d",
+  "design_sha256": "b58fb44393dfe421f691e7a235a060b742364a0f10e601c312ab8d009d72b6bd",
+  "frozen_input": "Single disjoint cold TRAIN audit, row positions 4608:5120. Same three stencils, 512 randomly selected translates per parent, canonical coefficient, near/far and parent intervals as design. No reused native validation, test, cold reserve or archive confirmation. No audit tuning/reruns.",
+  "prediction_16_primary": "KL and observed gain both below 0.001 nat/eligible on the cold audit, despite the nonzero alternating log odds. Predict both upper 95% parent bounds below the margin. Failure to reach a practical margin on this geometry is not a universal bound on other observables or stencils.",
+  "prediction_17_secondary": "Mean |L| for far count-conservation cross ratio above 0.01 nat/eligible, with lower 95% parent bound above threshold. Predict far semi-grand L identically zero, orientation reversal exact, susceptibility prediction MAE <0.002 nat/eligible, and much larger nearby |L| than far. No signed preference or size-scaling claim.",
+  "basis": "First 128 cold development parents: #16 4570 sampled eligible, mean KL 3.35e-9 and gain 1.32e-9 nat; #17 mean |L| .02168 (95% [.02088,.02247]), far susceptibility MAE .000217 nat. Hot/analytic controls at numerical zero. These are historical TRAIN with earlier aggregate exposure, not a pristine population. See 16-17-development-b09.json and b00 counterpart.",
+  "numerical_supplement": "Independent Decimal positive-convolution check on the first sampled eligible anchor of the first development parent (per stencil, no witness search), and stable generalized-KL cross-check; no effect on frozen endpoints or audit eligibility."
+}
