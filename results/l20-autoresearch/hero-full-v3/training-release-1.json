@@ -1,0 +1,42 @@
+{
+  "stage": "train-only",
+  "design_sha256": "a4736d10f80fd860318d3b9a933aa01faac079cec30d8ca7f7cb700eefef775f",
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+  "schema": "hero-full-v3-training-release-1",
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "candidate_folds": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "selection_fold": 0,
+  "rule_fold": 1,
+  "permanent_train": 81920,
+  "permanent_test": 81920,
+  "allows_test": false,
+  "primary_seed": 6101,
+  "seed_stability": [
+    6101,
+    6102,
+    6103,
+    6104,
+    6105
+  ],
+  "control_gate_sha256": "dc9ed901a39d1e1ad84e24fc999bf35e58f891ec99d8592cb4cb1523fdfe784c",
+  "scope": "H100 pilot+screening only with verified independent spending guard. Primary seed fixed before scores; five distinct predeclared winner starts all refit after algorithm/depth freeze. Final TEST needs a separate frozen gate."
+}

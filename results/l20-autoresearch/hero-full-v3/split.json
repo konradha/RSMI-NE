@@ -1,0 +1,132 @@
+{
+  "schema": "hero-full-v3-exact-half-split-1",
+  "seed": 26112503,
+  "design_sha256": "a4736d10f80fd860318d3b9a933aa01faac079cec30d8ca7f7cb700eefef775f",
+  "source_manifest_sha256": "d4c591bab7a75e785fb749fa42cc78353dfc6d093c6742ae8d621ca2113040ff",
+  "identity": [
+    "chain_seed",
+    "chain_id"
+  ],
+  "physical_member_reads": 0,
+  "global_unique_parents": 163840,
+  "cross_side_intersections": 0,
+  "train": 81920,
+  "test": 81920,
+  "per_beta": {
+    "0": {
+      "beta": "0",
+      "native_parents": 16384,
+      "native_identity_sha256": "23b789f44ecd766886a1447dbf1774ea36e2fe8247f80fe143c065e0eb29a304",
+      "train": 8192,
+      "train_identity_sha256": "421a9985985ea52fdec185961e772e584c56115a4178c49d3475c364d714e713",
+      "test": 8192,
+      "test_identity_sha256": "ca0717bb4931a66719adb9a99b70202b0104e9daba9a7f3b06452e7e9be7e009"
+    },
+    "1": {
+      "beta": "0.338888888889",
+      "native_parents": 16384,
+      "native_identity_sha256": "e4217d17db1af10b9b06b59cfa7a0b293e730179f832042c77cf37478217e638",
+      "train": 8192,
+      "train_identity_sha256": "214a8d0eb933f9147392430c86af15c8ce137426dea5cb47646a8320eb4a7397",
+      "test": 8192,
+      "test_identity_sha256": "ab58c170d9ba4f8aa9b56202506c021909b5811a0352c5a12f3aae27ab3f34ac"
+    },
+    "2": {
+      "beta": "0.677777777778",
+      "native_parents": 16384,
+      "native_identity_sha256": "6cca2b05409fb214ae0d970b38aa6ef6a051b117fcb91a1b26306fc8a541b841",
+      "train": 8192,
+      "train_identity_sha256": "fc3775ed744aeb8fdfc4a06b4da18c03e7f081299b5f55bde372e48cb80decc2",
+      "test": 8192,
+      "test_identity_sha256": "454c857b837e757af602806df2b5dea8a6c4520aa9dd141925bed150b2e6d0b8"
+    },
+    "3": {
+      "beta": "1.016666666667",
+      "native_parents": 16384,
+      "native_identity_sha256": "00c251d83b034ddc93e9bdcbd2770afea526c58818cab9965b5bb7565b44dcb7",
+      "train": 8192,
+      "train_identity_sha256": "b5abbc59841e6b54fb3e103fabd548c2e7a860a6b5a736f4206c872c274d6827",
+      "test": 8192,
+      "test_identity_sha256": "43e074532029ccb5c644b955fb6d5018b8d4aea33b4877bf7b3646fa5c506fa2"
+    },
+    "4": {
+      "beta": "1.355555555556",
+      "native_parents": 16384,
+      "native_identity_sha256": "1011000a95107c703f4e9c709d3a4e773bf6ba19a5f9e38558fe66eaa5eebf3a",
+      "train": 8192,
+      "train_identity_sha256": "8b11332d00b310b9727c24972779ed3e2368dea8034ada6a8a4da4a4fe772556",
+      "test": 8192,
+      "test_identity_sha256": "77ffb56b588dddb2cf83abe564e351b3cfec9481f9e73298f932b51012200004"
+    },
+    "5": {
+      "beta": "1.694444444444",
+      "native_parents": 16384,
+      "native_identity_sha256": "64ea5462a6b510f03b789bee20ecf0e47e775a134a83dc572bd48adb79e7e6a3",
+      "train": 8192,
+      "train_identity_sha256": "bda83d65ffb1bc00a2181f6b38eec4774d8f8a4761b49a749637fc6fc8d74938",
+      "test": 8192,
+      "test_identity_sha256": "5f69c6c5d4713b37905970c117423167438a06a0813003e52eb6433b1857da6f"
+    },
+    "6": {
+      "beta": "2.033333333333",
+      "native_parents": 16384,
+      "native_identity_sha256": "ed1a7c2c4327c9466c5497e267512e86e57ec712dab5d8a7d4a52dcb2537aed4",
+      "train": 8192,
+      "train_identity_sha256": "3b1a86e0738305013112a299551d06770509c840b47bb2d8d1b08f4bcfc2b640",
+      "test": 8192,
+      "test_identity_sha256": "f78193e7089b1cf7f498956ab311142600d65ead14c9f09913828c9e95dbd3e9"
+    },
+    "7": {
+      "beta": "2.372222222222",
+      "native_parents": 16384,
+      "native_identity_sha256": "165866cb8a5385f6d598528e308a72c193a80a608eaa8bebd917db62d44ecadb",
+      "train": 8192,
+      "train_identity_sha256": "a3527f6bd388ed70cfa32d52bb023ce874a17f335ed29d3e9532a4ae9cf67a54",
+      "test": 8192,
+      "test_identity_sha256": "cb1ca47a7b94024982948bdbb180f59fe7e5339ce8949e50eaa27c7735256c7d"
+    },
+    "8": {
+      "beta": "2.711111111111",
+      "native_parents": 16384,
+      "native_identity_sha256": "144de0cb1dd2c639abb8dbf77ae515a3b177392f95d23515ac3bb37e95221254",
+      "train": 8192,
+      "train_identity_sha256": "d934f0942ed56c170e0e95cce1230ab2240cf8fcdd8a9cbd6572ca4ad0620b43",
+      "test": 8192,
+      "test_identity_sha256": "bcc9c2d917798c6b6ea3a36c9a610b6aebdecca1c3a41522cc95ff548afef71c"
+    },
+    "9": {
+      "beta": "3.05",
+      "native_parents": 16384,
+      "native_identity_sha256": "d0f61ad6fbaff041f9b8704d448b053dbda085a79bb118f34c9c67ff669d4e0c",
+      "train": 8192,
+      "train_identity_sha256": "e6dfe107cf10ce75eea0887493cc78b5a5f19d2842ce91c0b15d79ad7acbc245",
+      "test": 8192,
+      "test_identity_sha256": "ea13720616522035a011b1d0e3b7c3480ef530bd61e1d295c4281bca58fd4d7b"
+    }
+  },
+  "rosters_sha256": "6fa06a3c3151c0622af86a134f5d3bc42decd7caf2093ba019010523d7480db9",
+  "rows_sha256": "2e6bd9556b57f3f7da43d9ec0128d8cf86b8ee07971617a2467960b537a81c02",
+  "ordered_native_int32le_roster_sha256": {
+    "b00_train": "2370ba9226f43beb68f9745ccf7173e1e81f678a3b00439ae42e367c9f4cb5b5",
+    "b00_test": "4531147c298786c9d0d143b0ef547f764f36be6fbd7680f3c317a93086d7be2a",
+    "b01_train": "eed99f864cbcc3e8ef16bd639fa042a9a8bc46350bec2194b8f3ff4e245f08b8",
+    "b01_test": "02a921ec5cd43f9d51ab584dac1367c0dc3d98e9a46c81a310368cd564d1c8d2",
+    "b02_train": "5a7941ab86679ac818130ee7eef739c5146d806c3de3dbd151cc500ad9c654d5",
+    "b02_test": "647705c961eb123e83f61555f5b07713a5689e78c772f10f5dfd18a750bc0c0d",
+    "b03_train": "adb770986aa784fd23f4ee2bd708806f21b22b6a1e4b6f103c592131c32b0f16",
+    "b03_test": "6dd6ca24aba7514461bc98f189352c03ae3ba6ed66ec7dab0cbe4e2f39e2f304",
+    "b04_train": "45aa84f7a2edcebee7548c61cf5944fc1434b15ac742ec22e4621125e76834e2",
+    "b04_test": "af886da78f16ea0afda720a65fdf3a433a6010cfc5e26e798ce7bf52a4bd9d29",
+    "b05_train": "0d45c00f742188d4ef6565c895ab17404fc7ec42242ef7af5cbf2bd7101da305",
+    "b05_test": "d4ff032c86ad7454614abbca545be00588b0e492ebe0f2b8fee574426991893c",
+    "b06_train": "8cfb9ef97b41b9078b32b2cfd2baf50ef99ca4ee35cc1bce9d96fe0d54955f78",
+    "b06_test": "082e60a9c415afe2d0608c852e21939e7ec81d13da99b781c30b75b43566f799",
+    "b07_train": "621a0c9950300d092e9c47322d3ce2fcb662a3f9ab3537e02ec01c1fb2ed75c4",
+    "b07_test": "58e6bb5c772fa99d85f7d47e6813b278fbc4e64f2c132cebfcffa61b2ea791c3",
+    "b08_train": "892855106f22a3d87437b08634381baba074cdb2009446b75eaddc8c967ac1e1",
+    "b08_test": "7929ef51da4565f4e947e21d31920ec1baacd5418c8c6770951a429cb6d0fb92",
+    "b09_train": "1a6259ecd0bef6198952cde4bb3f8da83a83b2647437d0a7472b86601256feb5",
+    "b09_test": "3847dd2f5fdbf75f110347029e1f7437bc6c457db160afdd0268d60f8a92d731"
+  },
+  "source": "Direct read of chain_seed and chain_id from all ten manifest-pinned native NPZs, with exact unsigned 64-bit serialization. No old roster/scores used; no TEST species read."
+}
