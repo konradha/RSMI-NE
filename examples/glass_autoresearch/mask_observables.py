@@ -53,7 +53,7 @@ def validation(data, index, pin):
             ids.shape == (SPLIT[1],) and np.unique(ids).size == SPLIT[1] and
             ids.min() >= 0 and ids.max() < sum(SPLIT), 'wrong validation rows')
     with ZipFile(path) as archive:
-        for key, expect in [('axes', 'chain,z,y,x'), ('beta', pin['beta'])]:
+        for key, expect in [('axes', 'chain,z,y,x'), ('beta', receipt['beta'])]:
             with archive.open(key + '.npy') as stream:
                 require(np.lib.format.read_array(stream, allow_pickle=False).item() == expect,
                         f'{path}: wrong {key}')
