@@ -1,0 +1,1088 @@
+{
+  "question": "Does a single frozen registered tile symbol close the one-local-attempt physical kernel?",
+  "item": 13,
+  "design": "13-design.json",
+  "contrast_to_history": "Per-destination exact instantaneous flux, not physical mobility prediction, mean acceptance, or face log score.",
+  "source": {
+    "index": 9,
+    "beta": 3.05,
+    "parents": 256,
+    "fold": "native train, first 256",
+    "native_file_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "bank_sha256": "c0b6c68821ee50701ef0a8a3947835768348b4bd5d4766ad399a0d3f89d2e3f4",
+    "scope": "secondary reused archive; no native test or index 6",
+    "published_primary_design": null
+  },
+  "parents": 256,
+  "tiles": 256000,
+  "edges_per_tile": {
+    "internal": 12,
+    "crossing": 24
+  },
+  "touching_edge_exposures": 9216000,
+  "unlike_edge_exposures": 6233084,
+  "finite_threshold_zero_among_unlike": 68912,
+  "physical_states_generated": 0,
+  "physical_transitions_executed": 0,
+  "source_kernel": [
+    "https://github.com/konradha/lattice-exploration/blob/2975fa6a6fbeb99e6b3f2156b489963f56bfebbe/native/common/proposal.hpp",
+    "https://github.com/konradha/lattice-exploration/blob/2975fa6a6fbeb99e6b3f2156b489963f56bfebbe/native/common/efma.hpp",
+    "https://github.com/konradha/lattice-exploration/blob/2975fa6a6fbeb99e6b3f2156b489963f56bfebbe/native/cpu/chain.hpp"
+  ],
+  "lut_sha256": {
+    "rsmi": "1ad644f41c5afcfedeae7b685b6a1687d416fe23eda3291be1286fbf68ac1001",
+    "affine": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1"
+  },
+  "exact_acceptance": "Numerator T(d)=2^64 if d<=0, else floor(2^64 exp(-3.05*d)); denominator per unordered edge 3*8000*2^64. Convert to double only after threshold construction; witness numerators summed as integers.",
+  "units": "Reported F is off-diagonal one-attempt probability times 8000 (instantaneous sweep-scaled flux, not finite-sweep probability). Variance units F^2; own-symbol entry set to zero for variance and MSE.",
+  "contrast": {
+    "rsmi": {
+      "native": {
+        "entropy_bits": 1.990661958656022,
+        "symbols": [
+          {
+            "source": 0,
+            "tiles": 57007,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0,
+              0.0018791586974467244,
+              0.001645602810165615,
+              0.0019622253944590294
+            ],
+            "full_one_attempt_probability": [
+              0.9999993141266372,
+              2.3489483718084056e-07,
+              2.0570035127070188e-07,
+              2.4527817430737865e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0,
+              0.0006632514443466153,
+              0.0005861640382094314,
+              0.0007020116415747527
+            ],
+            "trace": 0.0019514271241307993,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 55392,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  7.426515385762311e-06,
+                  7.687655659525234e-06,
+                  8.230524024642417e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1615,
+                "parents": 254,
+                "mean": [
+                  0.0,
+                  0.06607667512390092,
+                  0.05782355713734985,
+                  0.0689812246904942
+                ]
+              }
+            ]
+          },
+          {
+            "source": 1,
+            "tiles": 61093,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0019164813503599013,
+              0.0,
+              0.0016444880413578524,
+              0.002289375960491254
+            ],
+            "full_one_attempt_probability": [
+              2.395601687949877e-07,
+              0.999999268706831,
+              2.0556100516973155e-07,
+              2.861719950614067e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006657828837948844,
+              0.0,
+              0.0006231855256837716,
+              0.0008098570323877638
+            ],
+            "trace": 0.0020988254418664197,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 59349,
+                "parents": 256,
+                "mean": [
+                  6.24116363574417e-06,
+                  0.0,
+                  6.901127839276763e-06,
+                  7.908300909669016e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1744,
+                "parents": 252,
+                "mean": [
+                  0.06692269972299836,
+                  0.0,
+                  0.05737220921705483,
+                  0.0799286099791307
+                ]
+              }
+            ]
+          },
+          {
+            "source": 2,
+            "tiles": 61439,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0014615697197162716,
+              0.0014452399084138076,
+              0.0,
+              0.0022001678213622094
+            ],
+            "full_one_attempt_probability": [
+              1.8269621496453396e-07,
+              1.8065498855172596e-07,
+              0.9999993616278188,
+              2.7502097767027616e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0005550418361511782,
+              0.0005062195133674312,
+              0.0,
+              0.0007982924417762505
+            ],
+            "trace": 0.0018595537912948598,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 59759,
+                "parents": 256,
+                "mean": [
+                  7.0521767788507695e-06,
+                  6.8821885827221975e-06,
+                  0.0,
+                  7.767043962880703e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1680,
+                "parents": 255,
+                "mean": [
+                  0.05319997081995274,
+                  0.05260882263423985,
+                  0.0,
+                  0.08018569047410333
+                ]
+              }
+            ]
+          },
+          {
+            "source": 3,
+            "tiles": 76461,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0015807458265671864,
+              0.0018473948774673224,
+              0.0018737982359449403,
+              0.0
+            ],
+            "full_one_attempt_probability": [
+              1.975932283208983e-07,
+              2.309243596834153e-07,
+              2.3422477949311753e-07,
+              0.9999993372576325
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0005542027998619289,
+              0.0006682735489446243,
+              0.0006535069138654809,
+              0.0
+            ],
+            "trace": 0.0018759832626720342,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 74436,
+                "parents": 256,
+                "mean": [
+                  6.3465544582685875e-06,
+                  6.903487253800917e-06,
+                  7.2550551530384465e-06,
+                  0.0
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 2025,
+                "parents": 255,
+                "mean": [
+                  0.05945333062592284,
+                  0.06950113172780205,
+                  0.0704851603126976,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "trace_parent_interval": [
+          0.001942020431311703,
+          0.0018549244788754883,
+          0.0020291163837479176
+        ]
+      },
+      "common_entropy": {
+        "entropy_bits": 1.9946193926430116,
+        "symbols": [
+          {
+            "source": 0,
+            "tiles": 57007,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0,
+              0.00180121566041801,
+              0.0016596427337494514,
+              0.0020049568204285836
+            ],
+            "full_one_attempt_probability": [
+              0.9999993167730982,
+              2.2515195755225127e-07,
+              2.0745534171868143e-07,
+              2.5061960255357297e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0,
+              0.0006361376302181772,
+              0.0005924410642379169,
+              0.0007189971261498311
+            ],
+            "trace": 0.0019475758206059252,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 55392,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  7.203752150998765e-06,
+                  7.753550239714257e-06,
+                  8.408933186647197e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1615,
+                "parents": 254,
+                "mean": [
+                  0.0,
+                  0.0633532620821572,
+                  0.05833549824976871,
+                  0.07050595599018733
+                ]
+              }
+            ]
+          },
+          {
+            "source": 1,
+            "tiles": 61093,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0019638113016881994,
+              0.0,
+              0.0015622563495208382,
+              0.002330445373363949
+            ],
+            "full_one_attempt_probability": [
+              2.454764127110249e-07,
+              0.9999992679358719,
+              1.9528204369010478e-07,
+              2.9130567167049365e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006834874116419593,
+              0.0,
+              0.0005948480234375071,
+              0.0008239356434877433
+            ],
+            "trace": 0.0021022710785672098,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 59349,
+                "parents": 256,
+                "mean": [
+                  6.372252582056398e-06,
+                  0.0,
+                  6.724200931057428e-06,
+                  7.909316776626186e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1744,
+                "parents": 252,
+                "mean": [
+                  0.06819050756718723,
+                  0.0,
+                  0.0541911007484931,
+                  0.08090959196570766
+                ]
+              }
+            ]
+          },
+          {
+            "source": 2,
+            "tiles": 61439,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0014715330375075083,
+              0.0015871201319735645,
+              0.0,
+              0.002132146558381611
+            ],
+            "full_one_attempt_probability": [
+              1.8394162968843855e-07,
+              1.9839001649669556e-07,
+              0.999999351150034,
+              2.665183197977014e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0005709838339781905,
+              0.0005548475791209723,
+              0.0,
+              0.0007613702084574076
+            ],
+            "trace": 0.0018872016215565703,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 59759,
+                "parents": 256,
+                "mean": [
+                  6.933868248145923e-06,
+                  7.5420323171377184e-06,
+                  0.0,
+                  7.365985930462608e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1680,
+                "parents": 255,
+                "mean": [
+                  0.05257020625946391,
+                  0.05669731467327086,
+                  0.0,
+                  0.07626401172592885
+                ]
+              }
+            ]
+          },
+          {
+            "source": 3,
+            "tiles": 76461,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0014517995602640285,
+              0.0017408917408969246,
+              0.0020564698919663333,
+              0.0
+            ],
+            "full_one_attempt_probability": [
+              1.8147494503300357e-07,
+              2.1761146761211556e-07,
+              2.5705873649579165e-07,
+              0.9999993438548509
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0005116895147311932,
+              0.0006246861829794435,
+              0.000721225492869525,
+              0.0
+            ],
+            "trace": 0.0018576011905801616,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 74436,
+                "parents": 256,
+                "mean": [
+                  5.8882594411526164e-06,
+                  6.400293391526501e-06,
+                  7.252713171324766e-06,
+                  0.0
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 2025,
+                "parents": 255,
+                "mean": [
+                  0.05492286916633419,
+                  0.06588390858287833,
+                  0.07783832064791292,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "trace_parent_interval": [
+          0.00194396021286225,
+          0.0018542811843739527,
+          0.0020336392413505475
+        ]
+      },
+      "internal_prediction": {
+        "fit_native_train_parents": 128,
+        "other_native_train_parents": 128,
+        "model_order": [
+          "H",
+          "H+A/B counts",
+          "H+A/B counts+min touching barrier bin"
+        ],
+        "trace_MSE_interval": [
+          [
+            0.001870014065934234,
+            0.0018705647595763054,
+            0.0015603313607372657
+          ],
+          [
+            0.0017472533213561553,
+            0.0017479634140176003,
+            0.00146091240211658
+          ],
+          [
+            0.0019927748105123123,
+            0.0019931661051350103,
+            0.0016597503193579513
+          ]
+        ],
+        "barrier_beyond_composition_gain": [
+          0.0003102333988390394,
+          0.0002809097893940266,
+          0.00033955700828405225
+        ],
+        "all_beyond_H_gain": [
+          0.00030968270519696824,
+          0.0002801615916795745,
+          0.000339203818714362
+        ]
+      }
+    },
+    "affine": {
+      "native": {
+        "entropy_bits": 1.993805361873728,
+        "symbols": [
+          {
+            "source": 0,
+            "tiles": 63220,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0,
+              0.0022180061364239804,
+              0.001641835657157966,
+              0.0017691831448706822
+            ],
+            "full_one_attempt_probability": [
+              0.9999992963718827,
+              2.7725076705299753e-07,
+              2.0522945714474574e-07,
+              2.211478931088353e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0,
+              0.000766882455600321,
+              0.0006127118814434132,
+              0.0006333617418979018
+            ],
+            "trace": 0.002012956078941636,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 61478,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  8.26414356429107e-06,
+                  6.443583768382916e-06,
+                  7.293919451959831e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1742,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  0.08020337825871063,
+                  0.05935746934707732,
+                  0.06394910610714903
+                ]
+              }
+            ]
+          },
+          {
+            "source": 1,
+            "tiles": 73531,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0018032374279880854,
+              0.0,
+              0.001553529720372703,
+              0.0015715676361507214
+            ],
+            "full_one_attempt_probability": [
+              2.2540467849851068e-07,
+              0.9999993839581519,
+              1.9419121504658788e-07,
+              1.9644595451884016e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006527725908671082,
+              0.0,
+              0.0005644766264758519,
+              0.000555352930832669
+            ],
+            "trace": 0.0017726021481756292,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 71583,
+                "parents": 256,
+                "mean": [
+                  7.5810279183911714e-06,
+                  0.0,
+                  7.0981700380804554e-06,
+                  6.780413040265132e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1948,
+                "parents": 254,
+                "mean": [
+                  0.06778807936134333,
+                  0.0,
+                  0.05838012605897552,
+                  0.05907267841228565
+                ]
+              }
+            ]
+          },
+          {
+            "source": 2,
+            "tiles": 57048,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.001720935964025942,
+              0.0019143790521642752,
+              0.0,
+              0.0015414771863799467
+            ],
+            "full_one_attempt_probability": [
+              2.1511699550324275e-07,
+              2.392973815205344e-07,
+              0.9999993529009746,
+              1.9268464829749335e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006108080168870442,
+              0.0006665708755454006,
+              0.0,
+              0.000576189913962791
+            ],
+            "trace": 0.0018535688063952358,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 55477,
+                "parents": 256,
+                "mean": [
+                  8.325632933844014e-06,
+                  8.830903171941255e-06,
+                  0.0,
+                  4.3529048225100004e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1571,
+                "parents": 256,
+                "mean": [
+                  0.06219864655472992,
+                  0.0692053368253316,
+                  0.0,
+                  0.05582221796802441
+                ]
+              }
+            ]
+          },
+          {
+            "source": 3,
+            "tiles": 62201,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0017068602905256846,
+              0.0018899978246732388,
+              0.0016504828236166683,
+              0.0
+            ],
+            "full_one_attempt_probability": [
+              2.1335753631571058e-07,
+              2.3624972808415485e-07,
+              2.0631035295208354e-07,
+              0.9999993440823827
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006029047051439286,
+              0.0006558132069881216,
+              0.0005851726071502519,
+              0.0
+            ],
+            "trace": 0.0018438905192823022,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 60398,
+                "parents": 256,
+                "mean": [
+                  7.336214996868972e-06,
+                  8.391173861823189e-06,
+                  4.676812114420195e-06,
+                  0.0
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1803,
+                "parents": 256,
+                "mean": [
+                  0.05863856029817188,
+                  0.06492121163260893,
+                  0.05678270217065441,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "trace_parent_interval": [
+          0.001867322341114629,
+          0.0017850955933775014,
+          0.0019495490888517565
+        ]
+      },
+      "common_entropy": {
+        "entropy_bits": 1.99461939264292,
+        "symbols": [
+          {
+            "source": 0,
+            "tiles": 63220,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0,
+              0.0020581467705576787,
+              0.001755134630627768,
+              0.0017038909620181186
+            ],
+            "full_one_attempt_probability": [
+              0.9999993103534546,
+              2.5726834631970984e-07,
+              2.19391828828471e-07,
+              2.1298637025226483e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0,
+              0.0007193856264802606,
+              0.0006510820745548296,
+              0.0006110375041059943
+            ],
+            "trace": 0.0019815052051410844,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 61478,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  7.642689125148678e-06,
+                  6.617451710130682e-06,
+                  6.7492929149156945e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1742,
+                "parents": 256,
+                "mean": [
+                  0.0,
+                  0.07502329222176522,
+                  0.0639743769325155,
+                  0.06209498691678062
+                ]
+              }
+            ]
+          },
+          {
+            "source": 1,
+            "tiles": 73531,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0018445412150808087,
+              0.0,
+              0.0014571028945562139,
+              0.0016800181538643398
+            ],
+            "full_one_attempt_probability": [
+              2.305676518851011e-07,
+              0.9999993772922171,
+              1.8213786181952673e-07,
+              2.1000226923304248e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.000666807639404184,
+              0.0,
+              0.0005292616594683212,
+              0.0005941741639222681
+            ],
+            "trace": 0.001790243462794773,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 71583,
+                "parents": 256,
+                "mean": [
+                  7.628168812376102e-06,
+                  0.0,
+                  6.749735983339977e-06,
+                  7.0378468928982565e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1948,
+                "parents": 254,
+                "mean": [
+                  0.06911773805062063,
+                  0.0,
+                  0.054573331621839326,
+                  0.06294951249465931
+                ]
+              }
+            ]
+          },
+          {
+            "source": 2,
+            "tiles": 57048,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0016795512888942378,
+              0.0020263274355068433,
+              0.0,
+              0.001510479052315732
+            ],
+            "full_one_attempt_probability": [
+              2.0994391111177972e-07,
+              2.5329092943835543e-07,
+              0.9999993479552779,
+              1.888098815394665e-07
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0005917364921416294,
+              0.0007045778843623725,
+              0.0,
+              0.0005661296138017169
+            ],
+            "trace": 0.0018624439903057186,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 55477,
+                "parents": 256,
+                "mean": [
+                  8.170446988698472e-06,
+                  9.212119617752175e-06,
+                  0.0,
+                  4.39303287483568e-06
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1571,
+                "parents": 256,
+                "mean": [
+                  0.06057827162064846,
+                  0.07310857744622237,
+                  0.0,
+                  0.054584283077424536
+                ]
+              }
+            ]
+          },
+          {
+            "source": 3,
+            "tiles": 62201,
+            "parents": 256,
+            "offdiag_mean_flux": [
+              0.0017467216988139198,
+              0.0018785500706206496,
+              0.0017532113435966014,
+              0.0
+            ],
+            "full_one_attempt_probability": [
+              2.1834021235173997e-07,
+              2.348187588275812e-07,
+              2.1915141794957518e-07,
+              0.9999993276896109
+            ],
+            "within_symbol_variance_each_destination": [
+              0.0006179939667337908,
+              0.0006497107104167094,
+              0.0006173879104289155,
+              0.0
+            ],
+            "trace": 0.0018850925875794158,
+            "barrier_subgroups": [
+              {
+                "any_free": false,
+                "examples": 60398,
+                "parents": 256,
+                "mean": [
+                  7.4195816633896844e-06,
+                  8.32697655910817e-06,
+                  4.730128034057606e-06,
+                  0.0
+                ]
+              },
+              {
+                "any_free": true,
+                "examples": 1803,
+                "parents": 256,
+                "mean": [
+                  0.05866982479126485,
+                  0.06308637643925506,
+                  0.058976723870410766,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "trace_parent_interval": [
+          0.0018752235215312948,
+          0.0017916615790490608,
+          0.0019587854640135288
+        ]
+      },
+      "internal_prediction": {
+        "fit_native_train_parents": 128,
+        "other_native_train_parents": 128,
+        "model_order": [
+          "H",
+          "H+A/B counts",
+          "H+A/B counts+min touching barrier bin"
+        ],
+        "trace_MSE_interval": [
+          [
+            0.0017909481745784195,
+            0.0017890898353558182,
+            0.00143021921467612
+          ],
+          [
+            0.0016742524294647738,
+            0.0016726516168504171,
+            0.001340737907379343
+          ],
+          [
+            0.0019076439196920652,
+            0.0019055280538612192,
+            0.001519700521972897
+          ]
+        ],
+        "barrier_beyond_composition_gain": [
+          0.00035887062067969743,
+          0.0003247257759307684,
+          0.00039301546542862644
+        ],
+        "all_beyond_H_gain": [
+          0.00036072895990229843,
+          0.000326189956185529,
+          0.0003952679636190679
+        ]
+      }
+    }
+  },
+  "common_entropy_design": {
+    "rsmi_aligned_to_affine": [
+      3,
+      0,
+      2,
+      1
+    ],
+    "joint_counts": [
+      [
+        28385,
+        10293,
+        1822,
+        16507
+      ],
+      [
+        8641,
+        41713,
+        10739,
+        0
+      ],
+      [
+        339,
+        5199,
+        36166,
+        19735
+      ],
+      [
+        24836,
+        6015,
+        8321,
+        37289
+      ]
+    ],
+    "cell_weights": [
+      [
+        1.0,
+        0.9197512872826192,
+        0.5930296377607025,
+        1.252286908584237
+      ],
+      [
+        1.0955907881032287,
+        1.0,
+        0.7420616444734146,
+        0.0
+      ],
+      [
+        3.187315634218289,
+        1.5327947682246585,
+        1.0,
+        0.7108183430453509
+      ],
+      [
+        0.8323200193267837,
+        0.0,
+        1.6858550654969355,
+        1.0
+      ]
+    ],
+    "retained_tiles": 249985,
+    "effective_tiles": 238924.31577055022,
+    "same_weighted_population": true
+  },
+  "rsmi_minus_affine_matched_trace": {
+    "parent95": [
+      6.873669133095552e-05,
+      -2.594052799906153e-06,
+      0.0001400674354618172
+    ],
+    "parent_fifteen_bonferroni": [
+      6.873669133095552e-05,
+      -3.8590691373000606e-05,
+      0.00017606407403491164
+    ],
+    "MDE80_approx": 0.00013781188480599705
+  },
+  "witness_registration": "Translate each indicated even-grid anchor to the same origin. Periodic translation preserves canonical weight, physical kernel and tile registration, so the two observed environments certify different rates for one fixed tile. This is a coordinate argument; no translated box was created.",
+  "witnesses": {
+    "rsmi": {
+      "release_row": 307,
+      "ternary_word": 1909,
+      "source": 1,
+      "destination": 0,
+      "attempt_denominator": "442721857769029238784000",
+      "low": {
+        "anchor_zyx": [
+          6,
+          2,
+          4
+        ],
+        "dE_multiplicities": {
+          "8": 1,
+          "12": 2
+        },
+        "attempt_numerator": "466808475",
+        "per_attempt": 1.054405755686761e-15,
+        "flux": 8.435246045494088e-12
+      },
+      "high": {
+        "anchor_zyx": [
+          12,
+          8,
+          0
+        ],
+        "dE_multiplicities": {
+          "0": 1,
+          "12": 1,
+          "14": 1
+        },
+        "attempt_numerator": "18446744073709553969",
+        "per_attempt": 4.166666666666667e-05,
+        "flux": 0.33333333333333337
+      }
+    },
+    "affine": {
+      "release_row": 307,
+      "ternary_word": 1041,
+      "source": 1,
+      "destination": 0,
+      "attempt_denominator": "442721857769029238784000",
+      "low": {
+        "anchor_zyx": [
+          14,
+          4,
+          0
+        ],
+        "dE_multiplicities": {
+          "8": 4,
+          "10": 1
+        },
+        "attempt_numerator": "1868262095",
+        "per_attempt": 4.219945462856916e-15,
+        "flux": 3.375956370285533e-11
+      },
+      "high": {
+        "anchor_zyx": [
+          12,
+          18,
+          4
+        ],
+        "dE_multiplicities": {
+          "0": 1,
+          "4": 2,
+          "8": 2
+        },
+        "attempt_numerator": "18446929665697476258",
+        "per_attempt": 4.166708587340938e-05,
+        "flux": 0.3333366869872751
+      }
+    }
+  },
+  "parent_evidence_sha256": "cbc92668e45ae07df99242e7461c2800ea4f3df2258c08c01c93626f51fcd788",
+  "controls": {
+    "cached_CPU_vs_twelve_owner_energy": "agreed on all unlike edges in each whole box",
+    "beta_zero": "first parent, both LUTs: accepted off-diagonal counts match unlike destination counts",
+    "constant_code": "exactly zero off-diagonal flux",
+    "normalization": "all row means sum to 1; every tile escape <=36/(3*8000)"
+  },
+  "decision": "Exact one-tile strong lumpability refuted for both codes by equal-word integer witnesses.",
+  "interpretation": "Exploratory parent intervals conditional on these trained codes, common empirical weights/means; not whole-field closure or a proof of non-Markov equilibrium time series.",
+  "citations": [
+    "https://doi.org/10.1016/S0167-2789(02)00446-3",
+    "https://doi.org/10.1073/pnas.2427246122"
+  ]
+}

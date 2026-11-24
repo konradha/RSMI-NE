@@ -1,0 +1,566 @@
+{
+  "schema": "fifteen-siblings-lineage-v1",
+  "published_lock_commit": "811a60e2135d782b7cd7deb9d1cacc298dec3c7e",
+  "lock_sha256": "96a1e5289a04a5ee5354f22a2d094cd42d922c7c0c77fb48daa830e4345768f8",
+  "input_metadata_sha256": {
+    "results/l20-propensity/archive-provenance.json": "631c54cd567a580b6d3d8da132267d37ecd86fbaefad8a58437b736e062b952a",
+    "results/l20-propensity/cold-provenance.json": "05d360ee11bacad1976df261ed937d786665949a889eff2e7af91050ee7018f1",
+    "results/l20-operators/acquisition/archive.json": "272cb4c7704aac669b4f8a874de742be524ab269bd1e8e9864e9bcdfe6b1783a",
+    "results/l20-operators/acquisition/forks-08.json": "694c99f99b9fe906a07a2c3d59c23c85f7a97fecd001e7a8209a09c816663f0b"
+  },
+  "native_partition": "(preparation_seed,parent_id) exact join to native (chain_seed,chain_id), candidate age and probe checkpoint verified; only native TRAIN eligible. All original index7 TRAIN identity matches included.",
+  "original_archive": [
+    {
+      "cohort": "archive-00",
+      "index": 0,
+      "beta": 0.0,
+      "parents": 32,
+      "replicas": 48,
+      "available_required_lags": [
+        0,
+        16,
+        256
+      ],
+      "ordered_distinct_child_pairs_per_parent": 2256,
+      "native": {
+        "endpoint_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+        "beta": "0",
+        "candidate_age": 0,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 17,
+      "validation_excluded": 6,
+      "test_excluded": 9,
+      "support_14_same_clock": 0,
+      "support_15_exact_windows": 0,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-01",
+      "index": 1,
+      "beta": 0.338888888889,
+      "parents": 32,
+      "replicas": 32,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 992,
+      "native": {
+        "endpoint_sha256": "c8b0f8fc8d80002d4f7683e108cd6566bc977204fa579f1316151704943aa6b7",
+        "beta": "0.338888888889",
+        "candidate_age": 4096,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 21,
+      "validation_excluded": 2,
+      "test_excluded": 9,
+      "support_14_same_clock": 21,
+      "support_15_exact_windows": 21,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-02",
+      "index": 2,
+      "beta": 0.677777777778,
+      "parents": 32,
+      "replicas": 16,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 240,
+      "native": {
+        "endpoint_sha256": "624e41eb383fbb8d2e9ebb4bcf7bea608cb3cff174ac57f8c4e880e71e0382f9",
+        "beta": "0.677777777778",
+        "candidate_age": 4096,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 22,
+      "validation_excluded": 3,
+      "test_excluded": 7,
+      "support_14_same_clock": 22,
+      "support_15_exact_windows": 22,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-03",
+      "index": 3,
+      "beta": 1.016666666667,
+      "parents": 32,
+      "replicas": 8,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 56,
+      "native": {
+        "endpoint_sha256": "f6897b2fc41f94cdf712b30b982c9ea604fb33c6e0f418a62d6f11a82d4b8202",
+        "beta": "1.016666666667",
+        "candidate_age": 4096,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 19,
+      "validation_excluded": 1,
+      "test_excluded": 12,
+      "support_14_same_clock": 19,
+      "support_15_exact_windows": 19,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-04",
+      "index": 4,
+      "beta": 1.355555555556,
+      "parents": 32,
+      "replicas": 6,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 30,
+      "native": {
+        "endpoint_sha256": "5b39b282518db8906675494696f005ecff475490b163d10efee8eed61b0efa76",
+        "beta": "1.355555555556",
+        "candidate_age": 4864,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 18,
+      "validation_excluded": 3,
+      "test_excluded": 11,
+      "support_14_same_clock": 18,
+      "support_15_exact_windows": 18,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-05",
+      "index": 5,
+      "beta": 1.694444444444,
+      "parents": 32,
+      "replicas": 4,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 12,
+      "native": {
+        "endpoint_sha256": "b8905da4c3b8e788ff9ba4217dc98b2713d7a9b94c5bfce2c84b2962d707c2e3",
+        "beta": "1.694444444444",
+        "candidate_age": 16640,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 21,
+      "validation_excluded": 3,
+      "test_excluded": 8,
+      "support_14_same_clock": 21,
+      "support_15_exact_windows": 21,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-06",
+      "index": 6,
+      "beta": 2.033333333333,
+      "parents": 32,
+      "replicas": 2,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 2,
+      "eligible_train_parents": 0,
+      "reason": "global index embargo; no identity or frame access"
+    },
+    {
+      "cohort": "archive-07",
+      "index": 7,
+      "beta": 2.372222222222,
+      "parents": 32,
+      "replicas": 2,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 2,
+      "native": {
+        "endpoint_sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+        "beta": "2.372222222222",
+        "candidate_age": 378368,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 21,
+      "validation_excluded": 3,
+      "test_excluded": 8,
+      "support_14_same_clock": 21,
+      "support_15_exact_windows": 21,
+      "analysis": "locked secondary only"
+    },
+    {
+      "cohort": "archive-08",
+      "index": 8,
+      "beta": 2.711111111111,
+      "parents": 64,
+      "replicas": 1,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 0,
+      "native": {
+        "endpoint_sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+        "beta": "2.711111111111",
+        "candidate_age": 5518336,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 35,
+      "validation_excluded": 9,
+      "test_excluded": 20,
+      "support_14_same_clock": 0,
+      "support_15_exact_windows": 0,
+      "analysis": "inventory only; no label access"
+    },
+    {
+      "cohort": "archive-09",
+      "index": 9,
+      "beta": 3.05,
+      "parents": 32,
+      "replicas": 1,
+      "available_required_lags": [
+        0,
+        16,
+        256,
+        4096
+      ],
+      "ordered_distinct_child_pairs_per_parent": 0,
+      "native": {
+        "endpoint_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+        "beta": "3.05",
+        "candidate_age": 29758208,
+        "independent_endpoints": 16384
+      },
+      "eligible_train_parents": 23,
+      "validation_excluded": 3,
+      "test_excluded": 6,
+      "support_14_same_clock": 0,
+      "support_15_exact_windows": 0,
+      "analysis": "inventory only; no label access"
+    }
+  ],
+  "issued_forks": [
+    {
+      "cohort": "cold propensity forks",
+      "index": 9,
+      "parents": 64,
+      "replicas": 16,
+      "completed_sweeps": [
+        16,
+        256,
+        4096,
+        16384
+      ],
+      "all_native_TEST": true,
+      "eligible_for_fit_or_scoring": 0,
+      "raw_support_14_parents": 64,
+      "raw_support_15_parents": 64,
+      "raw_14_disjoint_sibling_pairs": 512,
+      "raw_15_disjoint_sibling_pairs": 512,
+      "release_row_sha256": "ea6e3e8c057d7cfe388565dd5abe9701a2406f52d0a6ef63ccc6d7bd18445f16"
+    },
+    {
+      "cohort": "cold directional",
+      "index": 9,
+      "parents": 512,
+      "replicas": 8,
+      "completed_sweeps": [
+        4096
+      ],
+      "all_native_TEST": true,
+      "eligible_for_fit_or_scoring": 0,
+      "raw_support_14_parents": 512,
+      "raw_support_15_parents": 0,
+      "raw_14_disjoint_sibling_pairs": 2048,
+      "raw_15_disjoint_sibling_pairs": 0,
+      "release_row_sha256": "a6ad3cef2a406cdda1650e007f58bf8e2f019331bf1ec3b55bf80a29b05d22ed"
+    },
+    {
+      "cohort": "secondary directional",
+      "index": 8,
+      "parents": 256,
+      "replicas": 8,
+      "completed_sweeps": [
+        116,
+        462,
+        4096
+      ],
+      "all_native_TEST": true,
+      "eligible_for_fit_or_scoring": 0,
+      "raw_support_14_parents": 256,
+      "raw_support_15_parents": 0,
+      "raw_14_disjoint_sibling_pairs": 1024,
+      "raw_15_disjoint_sibling_pairs": 0,
+      "release_row_sha256": "48ed8ee82491f86763febb4a2a15fcda4b6eed4e70351284dd57fc4b839e461d"
+    }
+  ],
+  "source_for_cold_directional": "examples/l20_operators_forks.py:29-40: replay the fixed without-replacement sample from production TEST excluding every old cold development parent. No test origin/trajectory arrays opened.",
+  "additional_physical_plan": {
+    "study": "l20-b305-production-v1",
+    "first_temperature_08_parents": 32,
+    "first_temperature_08_replicas": 1,
+    "older_age_same_parent_ids": "Older age origins are not extra independent parents; not included in this candidate-age lock."
+  },
+  "eligible_child_streams": [
+    {
+      "release_row": 0,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "7",
+      "packed_parent_sha256": "3d940026f70185325bbcd874e38293f3dbf40309411fc8a2f47e725d38909292",
+      "child_stream_ids": [
+        "9223372036854775835",
+        "9223372036854783426"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 1,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "17",
+      "packed_parent_sha256": "38b0300f2bb53b4324bc0fd931111534007f5240c42ddab6bdb9197e61f1bc91",
+      "child_stream_ids": [
+        "9223372036854776055",
+        "9223372036854783448"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 2,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "27",
+      "packed_parent_sha256": "34ee3ca7242c1d02b9c0de1fe68869ef269d6583cc164a0eace86df1bcda2009",
+      "child_stream_ids": [
+        "9223372036854776005",
+        "9223372036854783443"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 5,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "57",
+      "packed_parent_sha256": "b66d41c1d144965a66c74936b68fd48e44d5e92362649046a180473ce80172f3",
+      "child_stream_ids": [
+        "9223372036854775935",
+        "9223372036854783436"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 6,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "67",
+      "packed_parent_sha256": "21b08d145eee9d10d7d2005cdcb547fa6fc9833bd4cf4645633f8347dd6bbf1a",
+      "child_stream_ids": [
+        "9223372036854775925",
+        "9223372036854783435"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 7,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "77",
+      "packed_parent_sha256": "5d1721515b594be6933d922d64256da671b6222639699ff4a19df519de73b719",
+      "child_stream_ids": [
+        "9223372036854775965",
+        "9223372036854783439"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 9,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "97",
+      "packed_parent_sha256": "cf4d1948f4454ad397f40c69a073863e6d9c4cfba6a514806157cf4173c185b4",
+      "child_stream_ids": [
+        "9223372036854776115",
+        "9223372036854783454"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 10,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "107",
+      "packed_parent_sha256": "be0eaf9b055fee022e73df514a2678f75f87c4076071209ffc5a3d0a42c551d9",
+      "child_stream_ids": [
+        "9223372036854775845",
+        "9223372036854783427"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 12,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "127",
+      "packed_parent_sha256": "da935abf240060848631323f5e7d3fd0b4edee87b702f517201dc3b20c5b2b75",
+      "child_stream_ids": [
+        "9223372036854776045",
+        "9223372036854783447"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 13,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "137",
+      "packed_parent_sha256": "b804dc222cd7eae7cfe2cfc9665f6f06e10538c150fc8e866fe5ccb78c4aaae7",
+      "child_stream_ids": [
+        "9223372036854776085",
+        "9223372036854783451"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 14,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "147",
+      "packed_parent_sha256": "04f0b1d20573c9f89c537875dc7932997e87de67734d1fad4670158ac465c666",
+      "child_stream_ids": [
+        "9223372036854776125",
+        "9223372036854783455"
+      ],
+      "role": "fit"
+    },
+    {
+      "release_row": 16,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "167",
+      "packed_parent_sha256": "2d24fd346c4e87c218db07e3b8e8a7de56abc5977b2ac4ee0c63070c4c076490",
+      "child_stream_ids": [
+        "9223372036854775915",
+        "9223372036854783434"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 17,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "177",
+      "packed_parent_sha256": "8c929e1ca244c9e096df788336638edc69395b8d1375442c7903fa90a756fa02",
+      "child_stream_ids": [
+        "9223372036854775855",
+        "9223372036854783428"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 18,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "187",
+      "packed_parent_sha256": "cda7666226c800ce2084c28f061cc8269066b7e2b102c3055da28038af489db2",
+      "child_stream_ids": [
+        "9223372036854775895",
+        "9223372036854783432"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 20,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "207",
+      "packed_parent_sha256": "3cf29fbbc91d6166cfe8f303444c168cbb8a1d56228f1db853ab97d5e980c0f5",
+      "child_stream_ids": [
+        "9223372036854776095",
+        "9223372036854783452"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 23,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "237",
+      "packed_parent_sha256": "ee132cf7ba50def01d8f5e31ad3765c33e718d5887cda9b0ddcb9eae0e499b68",
+      "child_stream_ids": [
+        "9223372036854775975",
+        "9223372036854783440"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 26,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "267",
+      "packed_parent_sha256": "b61c798fed9a266922080488ebe274fffa9d4a892250323e7f33b363fdc09592",
+      "child_stream_ids": [
+        "9223372036854775885",
+        "9223372036854783431"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 27,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "277",
+      "packed_parent_sha256": "f9d0b1d37fed46105e9cb3799dfd579e9c6e56640527c5715eeb0beaa3c6e8a8",
+      "child_stream_ids": [
+        "9223372036854776035",
+        "9223372036854783446"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 28,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "287",
+      "packed_parent_sha256": "9b95df544c34b8c3e19ebf9d3b7839fc84ef886ba51614aab7f618ac19cabd6b",
+      "child_stream_ids": [
+        "9223372036854775905",
+        "9223372036854783433"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 29,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "297",
+      "packed_parent_sha256": "9a9e9906852492af37780245e3503dcd842c7135289740243d4fef481351ac84",
+      "child_stream_ids": [
+        "9223372036854775995",
+        "9223372036854783442"
+      ],
+      "role": "calibration"
+    },
+    {
+      "release_row": 30,
+      "prep_seed": "10340572510626563035",
+      "parent_id": "307",
+      "packed_parent_sha256": "2d6b18a356ddf6773194e9ef4bc6499f43c1cb8330292b71fac7e758584e06cf",
+      "child_stream_ids": [
+        "9223372036854776065",
+        "9223372036854783449"
+      ],
+      "role": "calibration"
+    }
+  ],
+  "frame_paths": {
+    "0": "l20-b305-production-v1/physical/batch-00000000/00000000000000000000-1aeec3f16f152d8e49ae745f8f7b6aaa76abb95414f9c5fb569210fb56d29b40.npz",
+    "16": "l20-b305-production-v1/physical/batch-00000000/00000000000000000016-60aed5894428afcbfbe02d79bd6b39593cf118f26d2d996b090fef41ca1bf33b.npz",
+    "256": "l20-b305-production-v1/physical/batch-00000000/00000000000000000256-78d723a00c9f01e47a8d1a7171e4a36333ca43b19cab4a3c910ed1042e9724d0.npz",
+    "4096": "l20-b305-production-v1/physical/batch-00000000/00000000000000004096-bfeb4afc639c0b522396a7a22b5a1f9e8551d2a7302444ac86bfef03b66501dd.npz"
+  },
+  "scope": "Named cold primary and warm secondary: zero eligible replicated parents or sibling pairs, no finite power for either requested estimand. No cold frames or values accessed. Dynamic 32/32 split of the old 64 cannot override the static embargo. Verification uses metadata only, before opening any pilot frame.",
+  "partial_alternative": "index7 at 4096 absolute sweeps, not matched t/tau; 21 TRAIN candidate parents with 2 true children, 11 fit/10 calibration. No controls at other beta or age authorized for scoring. Other temperature counts inventory only, not replications of the target beta."
+}

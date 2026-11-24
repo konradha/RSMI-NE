@@ -1,0 +1,52 @@
+{
+  "cohort": "beta0 first 256 native TRAIN, not an independent transfer",
+  "item": 1,
+  "contrast": "Empirical P(left occupied | eligible,+axis) minus 1/2, raw native orientation, not tautological folded-at-tie diagnostic. No fitted orientation or reweighted sample.",
+  "independent_parent_counts_verified": true,
+  "eligible": 38234,
+  "left_occupied": 19180,
+  "parents": 256,
+  "signed_residual": {
+    "mean": 0.0016477480776272428,
+    "se": 0.002414152758755486,
+    "ci95": [
+      -0.003106468467422172,
+      0.006401964622676658
+    ],
+    "parents": 256
+  },
+  "per_axis": [
+    {
+      "mean": 0.00011723329425556858,
+      "se": 0.004162703463946497,
+      "ci95": [
+        -0.008080422636444956,
+        0.008314889224956094
+      ],
+      "parents": 256
+    },
+    {
+      "mean": -0.00019770660340055358,
+      "se": 0.004531570729261589,
+      "ci95": [
+        -0.009121776738557708,
+        0.0087263635317566
+      ],
+      "parents": 256
+    },
+    {
+      "mean": 0.005002344849148038,
+      "se": 0.004458124589690039,
+      "ci95": [
+        -0.0037770870270361937,
+        0.013781776725332269
+      ],
+      "parents": 256
+    }
+  ],
+  "independent_full_shell_lookup": "All parent counts match symmetric-difference screen using an independent explicit full-shell census including every shared neighbor and removing the opposite endpoint from shell one.",
+  "decision": "Descriptive beta0 calibration only; no alteration of the public transfer gate.",
+  "bank_sha256": "b258296561e15eed8d6161593d365cf053505759bd76bb90187761f22f20ba5c",
+  "per_parent_sha256": "e27b29c9dde337271c0be63898c81c606cc480abbb41e506f5cc93a1378ac591",
+  "code_sha256": "a7407afea6caee2c90a81432e12ed771364adf021ae907b9c8ee45ae1dea75e6"
+}

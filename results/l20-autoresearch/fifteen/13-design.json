@@ -1,0 +1,12 @@
+{
+  "item": 13,
+  "status": "exploratory exact-kernel characterization; native TRAIN development only",
+  "population": "First 256 independent beta-09 native training parents; registered nonoverlapping 2x2x2 tiles, 1000 per box; fixed original RSMI LUT and frozen face-trained affine LUT, never retrained.",
+  "kernel": "Uniform directed nearest-neighbor attempt (same types consume attempt); divide each unordered bond by 3*8000. Finite CPU acceptance numerator floor(2^64 exp(-beta*dE)) uphill, 2^64 otherwise. Sum accepted mass by changed destination; diagonal is the complement. Report off-diagonal flux times 8000; not the probability after an entire sweep.",
+  "statistics": "Per code and source symbol: all four destination means and variances, trace excluding own destination. Contrast parent-paired averages conditional on a common empirical law: align label names for maximum agreement; symmetrize occupied transposed joint cells by equalizing their masses, drop one-sided pairs. Both maps then have identical marginal entropy on exactly the same weighted microscopic examples. Also report unweighted laws. Positive hidden variance is necessary to rule out exact strong one-tile lumpability; a directly checkable pair of equal full tile words with distinct finite numerator for the same destination certifies it without population testing.",
+  "baseline": "Fit first 128 TRAIN parents, predict last 128 TRAIN parents (development only): symbol cell means, then add tile A/B counts, then add minimum unlike touching-edge dE (free/2/4/6+/none bins). Nested empirical means with deterministic ancestor fallback; no model search. Loss is squared error summed over four off-diagonal fluxes with own entry zero. For each symbol also report subgroup rates at presence vs absence of a free unlike touching edge.",
+  "floors": {"witness_destination_flux_per_sweep": 0.001, "useful_trace_variance_or_MSE_gain_in_squared_flux": 0.001},
+  "controls": "Independent explicit twelve-owner energy sum vs CPU cached-potential expression; beta-zero counts exactly accepted unlike edges, constant LUT has no flux; each full transition row sums to one.",
+  "restriction": "No release validation/test, no transitions/simulation and no inference of equilibrium finite-lag Markovity or whole-field closure. No individual p-value promoted across fifteen items.",
+  "precedents": ["https://doi.org/10.1016/S0167-2789(02)00446-3", "https://doi.org/10.1073/pnas.2427246122"]
+}

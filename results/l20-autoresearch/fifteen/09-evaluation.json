@@ -1,0 +1,74 @@
+{
+  "lock_sha256": "9de6be228bdc4ceb63763e2a692fedac395eb71f568cb674fc56aaaa473ee046",
+  "bank_sha256_from_metadata": "cd354bbd8524b35e1ed450a5a63bbca214516e545b2099c8e952dd65380e7317",
+  "blocks_sha256": "4538b852cd1aae1c8da2e1730f3476db1e64d6c74d2ea2008fa91788a48fbf6d",
+  "parents": 1024,
+  "groups": 16,
+  "packet_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "parents_per_group": 64,
+  "opportunities_per_direction": 8192000,
+  "registered_directions": 6,
+  "results": {
+    "discrete": {
+      "candidate_fixed": 0.525297227069746,
+      "opponent_group_oracle": 0.4953959404759833,
+      "opponent_pooled_oracle": 0.4948038246556192,
+      "gain_over_frozen_opponent": 0.03075302796715307,
+      "conservative_gain": 0.029901286593762698,
+      "block_se": 3.6006699334938e-05,
+      "adjusted_lcb": 0.02977585088789446,
+      "MDE_80pct_normal_approx": 0.0001557397001692087,
+      "exceeds_floor": true
+    },
+    "affine": {
+      "candidate_fixed": 0.5285407472921402,
+      "opponent_group_oracle": 0.5037489433849525,
+      "opponent_pooled_oracle": 0.5030604866260363,
+      "gain_over_frozen_opponent": 0.02563897288057046,
+      "conservative_gain": 0.024791803907187715,
+      "block_se": 5.919635930086763e-05,
+      "adjusted_lcb": 0.024585582919124827,
+      "MDE_80pct_normal_approx": 0.00025604188717404265,
+      "exceeds_floor": true
+    }
+  },
+  "heldout_frozen_garbling_tv": [
+    [
+      0.022909502839819886,
+      0.027202382422936967,
+      0.031203748886307024,
+      0.03344308715899855,
+      0.03425500641649436,
+      0.036026700901721505
+    ],
+    [
+      0.033017368807108934,
+      0.016456541575300895,
+      0.026846638901899065,
+      0.026481779589210365,
+      0.029860567224567227,
+      0.023101298497116462
+    ]
+  ],
+  "alpha": 0.0016666666666666668,
+  "floor": 0.001,
+  "decision": "Opposite locked decisions both clear the practical floor against an upper bound on each opponent.",
+  "limitations": "Parent-group t inference, not an exact finite-sample guarantee. Prior-specific cold channel with direction supplied; not dominance for arbitrary priors, temperatures or observables. Bank contains per-group, not per-parent counts."
+}

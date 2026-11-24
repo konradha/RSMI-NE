@@ -1,0 +1,130 @@
+{
+  "item": 15,
+  "question": "Do early and late endpoint changes in the same child co-occur beyond sharing the origin?",
+  "contrast_to_history": "Paired, disjoint endpoint intervals and child identity vs ordered different sibling at the identical site; historical fit predicts single-interval propensity or static proximity, neither is this joint contrast.",
+  "primary_eligible_parents": 0,
+  "primary_eligible_disjoint_pairs": 0,
+  "primary_MDE": "Unbounded/unidentifiable at cold beta; 64x16 cold forks are all static TEST. Directional cold 512x8 has no 16/256 frames and is static TEST. Warm directional also lacks those exact two early frames and is TEST; original cold/warm are single child.",
+  "lineage_receipt": "14-15-lineage.json",
+  "published_lock_commit": "811a60e2135d782b7cd7deb9d1cacc298dec3c7e",
+  "immutable_lock_sha256": "96a1e5289a04a5ee5354f22a2d094cd42d922c7c0c77fb48daa830e4345768f8",
+  "population": "Secondary calibration only: beta=2.372222222222, candidate age 378368, same 10 locked calibration parents as #14, two independent physical siblings per parent. No historical test rows of native static split.",
+  "calibration_parents": 10,
+  "score_children": 20,
+  "disjoint_child_pairs": 10,
+  "ordered_child_comparisons_per_site": 2,
+  "total_eligible_sites": 60000,
+  "same_opportunities": 120000,
+  "ordered_sibling_opportunities": 120000,
+  "event_counts": {
+    "early": 1650,
+    "late": 10218,
+    "same_joint": 705,
+    "sibling_joint": 716
+  },
+  "definition": "E_a=1(s16_a != s0), L_a=1(s4096_a != s256_a) on the same initially occupied site. D=mean_sites[(E0-E1)(L0-L1)/2]. Each observed early and late marginal appears equally on both sides. Vacancy at the late interval start is allowed. Neither event requires the site to stay changed and returns are counted only by its endpoints.",
+  "same_joint_rate": {
+    "mean": 0.005875,
+    "parent95": [
+      0.005195742203817778,
+      0.006554257796182222
+    ],
+    "family15": [
+      0.004687666928888159,
+      0.007062333071111841
+    ],
+    "MDE80_family_approx": 0.0014400465585220315,
+    "n": 10
+  },
+  "sibling_joint_rate": {
+    "mean": 0.005966666666666667,
+    "parent95": [
+      0.005281649279490945,
+      0.006651684053842389
+    ],
+    "family15": [
+      0.004769265911531034,
+      0.0071640674218023
+    ],
+    "MDE80_family_approx": 0.0014522570612726822,
+    "n": 10
+  },
+  "signed_excess": {
+    "mean": -9.166666666666665e-05,
+    "parent95": [
+      -0.00052287249131857,
+      0.00033953915798523663
+    ],
+    "family15": [
+      -0.0008454083814366365,
+      0.0006620750481033032
+    ],
+    "MDE80_family_approx": 0.0009141690640795337,
+    "n": 10
+  },
+  "floor_positive_excess": 0.001,
+  "decision": "No cold or warm estimate. Secondary calibration excludes the prespecified +.001 excess threshold.",
+  "matching": "Same site in both terms gives exact initial species, barrier and free-edge proximity match without dropping any main-contrast site. All exact strata shown in 15-strata.csv. Moderator weights the two frozen symbol groups (code0 minus all others) to their shared pooled parent-specific distribution over those strata, excludes unmatched cells in the moderator only.",
+  "common_strata_coverage": {
+    "mean": 0.9961833333333333,
+    "parent95": [
+      0.9952320942622052,
+      0.9971345724044615
+    ],
+    "family15": [
+      0.9945205808201752,
+      0.9978460858464914
+    ],
+    "MDE80_family_approx": 0.0020166548818563376,
+    "n": 10
+  },
+  "common_strata_sites": 59771,
+  "matched_code0": {
+    "mean": -0.0007672098187642456,
+    "parent95": [
+      -0.0014207202725210833,
+      -0.00011369936500740785
+    ],
+    "family15": [
+      -0.0019095368975610596,
+      0.0003751172600325686
+    ],
+    "MDE80_family_approx": 0.0013854614333174981,
+    "n": 10
+  },
+  "matched_other": {
+    "mean": 9.783764117278436e-05,
+    "parent95": [
+      -0.00036852679204044526,
+      0.000564202074386014
+    ],
+    "family15": [
+      -0.000717360826708842,
+      0.0009130361090544108
+    ],
+    "MDE80_family_approx": 0.0009887063510208513,
+    "n": 10
+  },
+  "code_moderator": {
+    "mean": -0.0008650474599370298,
+    "parent95": [
+      -0.0015115175489868755,
+      -0.0002185773708871842
+    ],
+    "family15": [
+      -0.00199506808027833,
+      0.00026497316040427043
+    ],
+    "MDE80_family_approx": 0.0013705356525255407,
+    "n": 10
+  },
+  "controls": "Within every parent and site tabulated same-minus-cross equals the signed two-sibling product. Toy constant early (or late) events give zero; exchanging late child identities reverses the sign. Age/hot contrasts outside the published lock not analyzed; older origin from same prep stream not an independent parent. This is a signed association, not causal transmission or a lifetime.",
+  "parent_evidence": "15-parent-joints.csv",
+  "strata_evidence": "15-strata.csv",
+  "parent_evidence_sha256": "0d1a3b7775eeb34e39609e641dfff9c59930b5d6a14d7eaae2f93cbaa7e2c2f7",
+  "strata_evidence_sha256": "80436abb1cf2750e86e23a925b81fab52e80e82d0e910cc4828bfc154207ed1d",
+  "citations": [
+    "https://arxiv.org/abs/1211.0778",
+    "https://arxiv.org/abs/2609.34022"
+  ]
+}

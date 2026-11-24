@@ -1,0 +1,292 @@
+{
+  "item": 14,
+  "question": "At which wavelength is endpoint mobility predictable from the origin?",
+  "historical_difference": "Unlike the historical spatially averaged sitewise sibling-half covariance and Brier fit, two fixed nonzero axial wavevectors retain collective Fourier cross-power and the code ablation is scored at k.",
+  "primary": "Ineligible at beta=3.05. The 64x16 and directional 512x8 are native TEST; original 32x1 has no distinct siblings. Beta=2.7111 directional also TEST and original/doubled are single-child.",
+  "primary_eligible_parents": 0,
+  "primary_eligible_disjoint_pairs": 0,
+  "primary_MDE": "Unbounded/unidentifiable: zero eligible replicated parents.",
+  "lineage_receipt": "14-15-lineage.json",
+  "published_lock_commit": "811a60e2135d782b7cd7deb9d1cacc298dec3c7e",
+  "immutable_lock_sha256": "96a1e5289a04a5ee5354f22a2d094cd42d922c7c0c77fb48daa830e4345768f8",
+  "population": "Secondary calibration only; beta=2.372222222222, candidate age 378368, exact 4096 local sweeps; not matched fractional relaxation time.",
+  "normalized_lag_in_tau": 0.058457699219253555,
+  "parents_fit": 11,
+  "parents_score": 10,
+  "replicas": 2,
+  "disjoint_pairs_score": 10,
+  "forks_scored": 20,
+  "occupied_origin_sites_per_parent": 6000,
+  "eligible_child_site_trials": 120000,
+  "total_sites_per_fft": 8000,
+  "distinct_original_trials_changed": 10516,
+  "fit_occupied_change_mean": 0.0929469696969697,
+  "fit_unseen_score_sites_parent_fallback_by_model": {
+    "species": 0,
+    "species+exactBarrier": 1,
+    "species+exactBarrier+code": 9
+  },
+  "definition": "Y_child(k)=unitary FFT[1(initial occupied)*(1(final species != initial species) - fit occupied mean)]. Shared global centering fixed outside score parents. Low: +1 axial star (negative conjugates redundant); high: 10 axial Nyquist star,3 distinct modes each. Average modes before inference; cross=Re(Y0 conj(Y1)); self=(|Y0|\u00b2+|Y1|\u00b2)/2. Null/negative powers retained. Ratio=mean cross/mean auto, computed only if family-adjusted parent interval on mean auto excludes zero; ratio errors by delete-parent linearization.",
+  "star_order": [
+    "fundamental",
+    "Nyquist"
+  ],
+  "self_power": {
+    "mean": [
+      0.4610952918306074,
+      0.0723069443736704
+    ],
+    "parent95": [
+      [
+        0.3090665212581678,
+        0.04671199255032372
+      ],
+      [
+        0.613124062403047,
+        0.09790189619701709
+      ]
+    ],
+    "family15": [
+      [
+        0.19535113979336255,
+        0.027567328686990362
+      ],
+      [
+        0.7268394438678523,
+        0.11704656006035044
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.32230547678608634,
+      0.05426205263437253
+    ],
+    "n": 10
+  },
+  "structural_cross_power": {
+    "mean": [
+      0.2188186394926955,
+      -0.0010972222929962541
+    ],
+    "parent95": [
+      [
+        0.046305430942603115,
+        -0.030402654646973833
+      ],
+      [
+        0.39133184804278787,
+        0.028208210060981325
+      ]
+    ],
+    "family15": [
+      [
+        -0.08273202192980464,
+        -0.052322705743721526
+      ],
+      [
+        0.5203693009151956,
+        0.05012826115772902
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.36573308936377624,
+      0.062128380777575196
+    ],
+    "n": 10
+  },
+  "incoherent_power": {
+    "mean": [
+      0.2422766523379119,
+      0.07340416666666665
+    ],
+    "parent95": [
+      [
+        0.18117425057779857,
+        0.031127379589402877
+      ],
+      [
+        0.30337905409802524,
+        0.11568095374393042
+      ]
+    ],
+    "family15": [
+      [
+        0.13547051372322524,
+        -0.0004950623437618984
+      ],
+      [
+        0.34908279095259853,
+        0.1473033956770952
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.12953889357859794,
+      0.08962803530288851
+    ],
+    "n": 10
+  },
+  "structural_fraction": {
+    "resolved": [
+      true,
+      true
+    ],
+    "by_star": [
+      {
+        "mean": 0.47456272785600884,
+        "parent95": [
+          0.23040613678836616,
+          0.7187193189236515
+        ],
+        "family15": [
+          0.04778044175800261,
+          0.9013450139540151
+        ],
+        "MDE80_family_approx": 0.5176191729908516,
+        "n": 10
+      },
+      {
+        "mean": -0.015174507822180782,
+        "parent95": [
+          -0.4231841844118594,
+          0.39283516876749786
+        ],
+        "family15": [
+          -0.7283696821306588,
+          0.6980206664862972
+        ],
+        "MDE80_family_approx": 0.8649925461570024,
+        "n": 10
+      }
+    ],
+    "low_minus_high": {
+      "mean": 0.4897372356781896,
+      "parent95": [
+        -0.08906781279668141,
+        1.0685422841530605
+      ],
+      "family15": [
+        -0.5220058457311333,
+        1.5014803170875126
+      ],
+      "MDE80_family_approx": 1.2270837711339493,
+      "n": 10
+    }
+  },
+  "low_minus_high_fraction_useful_floor": 0.05,
+  "low_minus_high_structural_power": {
+    "mean": 0.21991586178569172,
+    "parent95": [
+      0.030952191592775208,
+      0.40887953197860827
+    ],
+    "family15": [
+      -0.11038997514360838,
+      0.5502216987149918
+    ],
+    "MDE80_family_approx": 0.40060855315380467,
+    "n": 10
+  },
+  "barrier_predictive_power": {
+    "mean": [
+      0.06509579516030826,
+      0.003983103555717934
+    ],
+    "parent95": [
+      [
+        0.02641307705923221,
+        -0.0038288527114214805
+      ],
+      [
+        0.10377851326138432,
+        0.011795059822857348
+      ]
+    ],
+    "family15": [
+      [
+        -0.0025210518454241437,
+        -0.009672086091256343
+      ],
+      [
+        0.13271264216604067,
+        0.017638293202692213
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.08200850308796274,
+      0.01656157765291347
+    ],
+    "n": 10
+  },
+  "barrier_code_predictive_power": {
+    "mean": [
+      0.06483077171745694,
+      0.003985644973551726
+    ],
+    "parent95": [
+      [
+        0.026115836208777617,
+        -0.0038334847846298098
+      ],
+      [
+        0.10354570722613626,
+        0.011804774731733261
+      ]
+    ],
+    "family15": [
+      [
+        -0.0028423908634927775,
+        -0.009682083834838887
+      ],
+      [
+        0.13250393429840665,
+        0.01765337378194234
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.08207680494213998,
+      0.01657678566546166
+    ],
+    "n": 10
+  },
+  "delta_predictive_power": {
+    "mean": [
+      -0.00026502344285132194,
+      2.5414178337926536e-06
+    ],
+    "parent95": [
+      [
+        -0.0019140732868782458,
+        -0.0006765129969919663
+      ],
+      [
+        0.001384026401175602,
+        0.0006815958326595516
+      ]
+    ],
+    "family15": [
+      [
+        -0.0031475393693961443,
+        -0.001184436145528365
+      ],
+      [
+        0.0026174924836935,
+        0.0011895189811959505
+      ]
+    ],
+    "MDE80_family_approx": [
+      0.003496034298125616,
+      0.0014396153840488238
+    ],
+    "n": 10
+  },
+  "fixed_forecast": "Training cell means for species x exact minimum unlike-neighbor swap cost, then split by historical stride-two tile code containing the site. Unseen cells fall back to parent class; no fit on evaluation parents. Predictive power averages 2 Re(F conj(Y))-|F|\u00b2; a poor forecast can have negative utility.",
+  "useful_gain": 0.01,
+  "decision": "No cold/warm estimate. Secondary excludes the prespecified +0.01 low-star incremental forecast threshold on this pilot.",
+  "checks": "Paired sibling identity self-cross = |Y0-Y1|\u00b2/2 verified in each parent/star; synthetically opposed and identical amplitudes retain negative and unit structural fractions respectively.",
+  "inference": "Intervals apply only to 10 independent native-training pilot parents and fixed forecasts (conditional on fit); axes, sites, children are not independent samples. A static conditional two-child decomposition at L20 is not a structural length measurement.",
+  "parent_evidence": "14-parent-power.npz",
+  "parent_evidence_sha256": "69717354ad9165a3b8bbeefae33b4f4ba4c429f96298f683e5a0a69384bb1734",
+  "citations": [
+    "https://arxiv.org/abs/0706.1044",
+    "https://arxiv.org/abs/2611.27231"
+  ]
+}

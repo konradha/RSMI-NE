@@ -1,0 +1,194 @@
+{
+  "results": {
+    "b09": {
+      "historical": {
+        "eligible_swaps": 4706,
+        "invisible_swaps": 0,
+        "witness_boxes": 0,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "se": 0.0,
+          "mde80_approx": 0.0
+        },
+        "largest_disjoint_family": 0,
+        "parents": 256
+      },
+      "optimized": {
+        "eligible_swaps": 4706,
+        "invisible_swaps": 2,
+        "witness_boxes": 2,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 0.0078125,
+          "lo": -0.0030451543647867785,
+          "hi": 0.01867015436478678,
+          "se": 0.005513429182282041,
+          "mde80_approx": 0.015437601710389715
+        },
+        "largest_disjoint_family": 1,
+        "parents": 256
+      },
+      "optimized_minus_historical_bits": {
+        "parents": 256,
+        "estimate": 0.0078125,
+        "lo": -0.0030451543647867785,
+        "hi": 0.01867015436478678,
+        "se": 0.005513429182282041,
+        "mde80_approx": 0.015437601710389715
+      }
+    },
+    "b00": {
+      "historical": {
+        "eligible_swaps": 480634,
+        "invisible_swaps": 2108,
+        "witness_boxes": 256,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 7.8515625,
+          "lo": 7.506316622228736,
+          "hi": 8.196808377771264,
+          "se": 0.17531306796245072,
+          "mde80_approx": 0.49087659029486197
+        },
+        "largest_disjoint_family": 16,
+        "parents": 256
+      },
+      "optimized": {
+        "eligible_swaps": 480634,
+        "invisible_swaps": 1731,
+        "witness_boxes": 256,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 6.54296875,
+          "lo": 6.21509495002522,
+          "hi": 6.87084254997478,
+          "se": 0.1664916671826803,
+          "mde80_approx": 0.4661766681115048
+        },
+        "largest_disjoint_family": 15,
+        "parents": 256
+      },
+      "optimized_minus_historical_bits": {
+        "parents": 256,
+        "estimate": -1.30859375,
+        "lo": -1.7721213989794093,
+        "hi": -0.8450661010205907,
+        "se": 0.23537559594510532,
+        "mde80_approx": 0.6590516686462948
+      }
+    },
+    "b08": {
+      "historical": {
+        "eligible_swaps": 9004,
+        "invisible_swaps": 5,
+        "witness_boxes": 5,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 0.01953125,
+          "lo": 0.0024654748508044985,
+          "hi": 0.0365970251491955,
+          "se": 0.008665862769678052,
+          "mde80_approx": 0.024264415755098544
+        },
+        "largest_disjoint_family": 1,
+        "parents": 256
+      },
+      "optimized": {
+        "eligible_swaps": 9004,
+        "invisible_swaps": 5,
+        "witness_boxes": 5,
+        "certified_bits_per_box": {
+          "parents": 256,
+          "estimate": 0.01953125,
+          "lo": 0.0024654748508044985,
+          "hi": 0.0365970251491955,
+          "se": 0.008665862769678052,
+          "mde80_approx": 0.024264415755098544
+        },
+        "largest_disjoint_family": 1,
+        "parents": 256
+      },
+      "optimized_minus_historical_bits": {
+        "parents": 256,
+        "estimate": 0.0,
+        "lo": -0.0243738502761856,
+        "hi": 0.0243738502761856,
+        "se": 0.012376844287208429,
+        "mde80_approx": 0.0346551640041836
+      }
+    }
+  },
+  "examples": {
+    "b09optimized": {
+      "parent": 14921,
+      "edge_start_and_positive_zyx_axis": [
+        [
+          3796,
+          2
+        ]
+      ]
+    },
+    "b00historical": {
+      "parent": 5003,
+      "edge_start_and_positive_zyx_axis": [
+        [
+          760,
+          0
+        ],
+        [
+          5393,
+          0
+        ],
+        [
+          1967,
+          2
+        ],
+        [
+          2187,
+          2
+        ]
+      ]
+    },
+    "b00optimized": {
+      "parent": 5003,
+      "edge_start_and_positive_zyx_axis": [
+        [
+          2387,
+          1
+        ],
+        [
+          3010,
+          1
+        ],
+        [
+          7226,
+          1
+        ]
+      ]
+    },
+    "b08historical": {
+      "parent": 11329,
+      "edge_start_and_positive_zyx_axis": [
+        [
+          6422,
+          0
+        ]
+      ]
+    },
+    "b08optimized": {
+      "parent": 15427,
+      "edge_start_and_positive_zyx_axis": [
+        [
+          6858,
+          2
+        ]
+      ]
+    }
+  },
+  "script": "c306021c9ba5fa6a6b392c44f9d9984a3d662bdc84b64935583c1c8440c653cf",
+  "parent_evidence": "ae383b3c6b1364b4327d5fa9c0c0b3b367ff73e146f863c248933c10c287f624",
+  "proof": "An eligible exchange preserves composition and occupied mask; equal degree makes its energy change zero. Erasability checks the actual two replaced digits at each of 12 affected dense tiles. Disjoint footprints and vertices imply all 2^m substitutions preserve every translated symbol and Gibbs weight. Hence P(X=x|C)<=2^-m(x) and H(X|C)>=E[m(X)] under the canonical ensemble. Greedy packing is a lower bound; absence would not prove injectivity."
+}

@@ -1,0 +1,62 @@
+{
+  "question": "How much train MI could ANY shared four-state face map still gain?",
+  "distinction": "Bounds finite optimum, neither another optimizer run nor a predictive transfer score.",
+  "precedents": [
+    "https://arxiv.org/abs/1107.5637",
+    "https://arxiv.org/abs/1901.01659"
+  ],
+  "scope": "Named cold finite smoothed channel; deterministic numerical bounds, not a population confidence interval. No validation required or used. A stochastic shared encoder cannot exceed the maximum over deterministic extremes by convexity of MI in the encoder.",
+  "parents": 10240,
+  "anchors_per_parent": 8000,
+  "directions": 6,
+  "observed_per_direction": 81920000,
+  "positive_tiles": 5733,
+  "smoothed_tiles": 6561,
+  "positive_face_words_per_direction": [
+    81,
+    81,
+    81,
+    81,
+    81,
+    81
+  ],
+  "real_nonzero_tile_word_cells": 1795991,
+  "total_cells": 3188646,
+  "table_sha256": "238702bff9141ea7c45843477e3031ec3588adcb273c3b2517ea62124d9ef989",
+  "maps_sha256": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "nodes_sha256": "83fa4f74e0cea857f36c77956bb1322ca64d639dcc9df11cc91cbc4ccb7258b9",
+  "smoothing": "Exactly face_optimizer.Channel(True): empirical directional word marginal with 0.5 added to every word; normalized pseudocount of one per tile/direction. Integer numerator=(2D+81)c_jvy+2c_jy+1.",
+  "bound": "Balanced recursive floor-midpoint splits of increasing little-endian ternary words [0,81). Chain rule on each known direction. Independently relax the shared four-state map at every node/direction. Sort exact binary posteriors, merge identical atoms, Monge interval DP. Full-tile branch MI upper-bounds unsolved nodes. Minimum with full-input bound. Marginal J is independent of tile by construction.",
+  "numerical": "Integer pooled masses and prefix differences; exact rational ordering checks. Each interval entropy uses frexp and degree-31 atanh polynomial with conservative 2e-13 absolute bit allowance; interval-aware monotone candidate brackets preserve ties/roundoff, including ambiguity in previous DP rows. Weighted allowances carried into both endpoints. Assumes round-to-nearest IEEE binary64, no fast-math.",
+  "controls": {
+    "brute_assignments": 16384,
+    "unrestricted_min_bits": 0.818915759801222,
+    "interval_dp_min_bits": 0.818915759801222,
+    "identical_posteriors_information_bits": -0.0,
+    "direct_optimizer_feasible_bits": 0.02597202621339889,
+    "direct_optimizer_full_tile_bits": 0.1364267779005779,
+    "raw_chain_rule_feasible_minus_direct_bits": -1.021405182655144e-14
+  },
+  "nodes": 480,
+  "nodes_solved": 480,
+  "full_tile_remainder_nodes": 0,
+  "weighted_full_tile_remainder_bits": 0.0,
+  "total_dp_candidates": 45079384,
+  "high_mass_first_upper_bits": {
+    "0": 0.13642678643541417,
+    "6": 0.13616538900377545,
+    "24": 0.13408202548626258,
+    "96": 0.12947012972186886,
+    "480": 0.12195193025782151
+  },
+  "feasible_map": "frozen discrete_lut",
+  "feasible_lower_bits": 0.025972026205096425,
+  "full_input_upper_bits": 0.13642678643541417,
+  "tree_upper_bits": 0.12195193025782151,
+  "upper_gap_bits": 0.09597990405272509,
+  "upper_gap_nats": 0.06652819988456046,
+  "useful_gain_bits": 0.0014426950408889636,
+  "useful_gain_nats": 0.001,
+  "decision": "Relaxation too wide to rule out a useful gain; upper gap is NOT an attainable improvement.",
+  "limitations": "Shared map constraint removed; especially loose across many low-level branches or different directions. No new physical states, no held-out physical optimality statement, no empirical sampling error needed for fixed-table arithmetic."
+}
