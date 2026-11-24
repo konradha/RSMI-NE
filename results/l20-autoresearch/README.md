@@ -2,6 +2,12 @@
 
 This experiment reuses the **frozen L20 endpoint archive**. It trains low-capacity discrete representations of local species blocks and asks what they predict about separated environments. No new physical configurations, dynamics or Monte Carlo runs are part of this campaign. The clock is **11:45:25–21:45:25 UTC on 24 November 2026**; it is a maximum elapsed-time allocation, not a claim about time actually spent training. See the [locked protocol](protocol.json) and the [previous short-range result](../l20-operators/README.md).
 
+### Can a distant boundary predict a microscopic feature?
+
+The [reverse shell-code experiment](spatial-cycle/LEDGER.md) tested a named central cycle at β=3.05. On 512 held-apart development parents the code gained **0.000011 nat per eligible anchor** over equally calibrated packing (95% interval −0.000017 to +0.000040), below the 0.001 target. That limits this predictor, not all information in the glass.
+
+The [forward HERO experiment](hero-central/design.json) asks the opposite question: can the remote shell teach a four-symbol code **of the central species block** that can be distilled and forecast better than ordinary packing? Its [lineage audit](hero-central/lineage.json), [powered numerical controls](hero-central/train-control-receipt.json) and [prospective pinned-cavity protocol](hero-central/pinned-cavity.md) are separate from the cycle study. No repeated interiors have been generated.
+
 ### Vacancy placement when all three pair shells tie
 
 At β=2.3722, 86,539 nearest-neighbor edges on 512 validation parents had one particle, one vacancy, and identical exterior occupation counts in all three shells of squared distance 1, 2 and 3. Every homogeneous cubic vacancy-pair model restricted to those shells predicts equal placement odds. Integrating out A/B at fixed composition predicted the occupied end on **98.65%** of these opportunities; its forecast was **98.62%**, without fitting. Filling the end that brings neighbors to degrees 3 and 5 explains why equal pair energies need not mean equal probabilities. This predesignated primary concerns **local placement**, not distant cavity selection. [Mechanism and calibration](fifteen/pair-tie.png) · [15-row ledger with citations, negative results and power limits](fifteen/LEDGER.md).

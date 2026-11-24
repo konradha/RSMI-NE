@@ -1,0 +1,289 @@
+{
+  "kind": "nonphysical finite words; no archive, E, dynamics, or cavity",
+  "passed": true,
+  "preregistration_commit": "ac5550ef2a47847f06fb9b0aa895e1c20f1ea0ef",
+  "implementation_sha256": "29e1facb26a2b68be07df334f58f1abcc5902487f8791d488c2ff50a092affcd",
+  "checks": {
+    "open_geometry": {
+      "passed": true,
+      "details": "54 occupied edges on all-A word, zero on all-vacant word; origin A/B energies 9/1"
+    },
+    "signed_open_line": {
+      "passed": true,
+      "details": "isolated A-vac-B in +x: +1, under proper 180 degree z rotation: -1"
+    },
+    "oriented_bond": {
+      "passed": true,
+      "details": "isolated A->B->B line"
+    },
+    "crystal_A": {
+      "passed": true,
+      "details": {
+        "rotations": 24,
+        "min_literal_agreement": 1.0
+      }
+    },
+    "crystal_B": {
+      "passed": true,
+      "details": {
+        "rotations": 24,
+        "min_literal_agreement": 1.0
+      }
+    },
+    "first_raw_argmax_ties": {
+      "passed": true,
+      "details": {
+        "tied": 310,
+        "disagree_non_tied": 0,
+        "disagree_tied": 310
+      }
+    },
+    "permutation_and_gauge": {
+      "passed": true,
+      "details": {
+        "reproducibility": [
+          {
+            "seeds": [
+              7,
+              13
+            ],
+            "pearson": 1.0,
+            "kappa": 1.0,
+            "hard_agreement": 1.0,
+            "pearson_lower": 1.0,
+            "kappa_lower": 1.0,
+            "parent_shift_pearson": -0.03867497197871891,
+            "parent_shift_kappa": -0.05863129973474784
+          },
+          {
+            "seeds": [
+              7,
+              19
+            ],
+            "pearson": 1.0,
+            "kappa": 1.0,
+            "hard_agreement": 1.0,
+            "pearson_lower": 1.0,
+            "kappa_lower": 1.0,
+            "parent_shift_pearson": -0.03867497197871891,
+            "parent_shift_kappa": -0.05863129973474784
+          },
+          {
+            "seeds": [
+              13,
+              19
+            ],
+            "pearson": 1.0,
+            "kappa": 1.0,
+            "hard_agreement": 1.0,
+            "pearson_lower": 1.0,
+            "kappa_lower": 1.0,
+            "parent_shift_pearson": -0.03867497197871891,
+            "parent_shift_kappa": -0.05863129973474784
+          }
+        ],
+        "alignment": [
+          {
+            "seed": 7,
+            "aligned_to_raw": [
+              1,
+              0,
+              2,
+              3
+            ],
+            "mean": 0.27760416666666665,
+            "sd": 4.878766545960427,
+            "fit_modal_count_tie": false
+          },
+          {
+            "seed": 13,
+            "aligned_to_raw": [
+              1,
+              2,
+              3,
+              0
+            ],
+            "mean": 0.27760416666666665,
+            "sd": 4.878766545960427,
+            "fit_modal_count_tie": null
+          },
+          {
+            "seed": 19,
+            "aligned_to_raw": [
+              3,
+              1,
+              0,
+              2
+            ],
+            "mean": 0.27760416666666665,
+            "sd": 4.878766545960427,
+            "fit_modal_count_tie": null
+          }
+        ]
+      }
+    },
+    "planted_count": {
+      "passed": true,
+      "details": {
+        "rule": "count:vac",
+        "fit_r2": 1.0,
+        "rule_r2": 1.0,
+        "teacher_sd": [
+          4.878766545960427,
+          4.878766545960427,
+          4.878766545960427
+        ]
+      }
+    },
+    "exact_conventional_residual": {
+      "passed": true,
+      "details": {
+        "fit_within_s_variance": 0.0643134604086016,
+        "fit_residual_variance": 0.0,
+        "projection": "exact_dictionary_identity",
+        "status": "conventional_rediscovery_no_exam"
+      }
+    },
+    "frozen_baseline_codes": {
+      "passed": true,
+      "details": {
+        "modes": {
+          "site": {
+            "mass": [
+              0.33541666666666664,
+              0.3265625,
+              0.3380208333333333,
+              0.0
+            ],
+            "agrees": true
+          },
+          "composition": {
+            "mass": [
+              0.2791666666666667,
+              0.30859375,
+              0.26197916666666665,
+              0.15026041666666667
+            ],
+            "agrees": true
+          },
+          "coordination": {
+            "mass": [
+              0.26640625,
+              0.27890625,
+              0.24036458333333333,
+              0.21432291666666667
+            ],
+            "agrees": true
+          },
+          "crystal": {
+            "mass": [
+              0.47213541666666664,
+              0.24713541666666666,
+              0.16197916666666667,
+              0.11875
+            ],
+            "agrees": true
+          },
+          "random_affine": {
+            "mass": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "agrees": true
+          },
+          "random_tanh": {
+            "mass": [
+              0.25,
+              0.25,
+              0.25,
+              0.25
+            ],
+            "agrees": true
+          }
+        },
+        "matched": {
+          "control": "random_affine",
+          "cuts": [
+            0.1025027614391251,
+            0.4396414710372395,
+            0.7694045835803391
+          ],
+          "seed": 71991,
+          "target_mass": [
+            0.4000000000000001,
+            0.30000000000000004,
+            0.20000000000000004,
+            0.10000000000000002
+          ],
+          "fit_mass": [
+            0.4002604166666667,
+            0.3,
+            0.2,
+            0.09973958333333334
+          ]
+        }
+      }
+    },
+    "nonconventional_projection": {
+      "passed": true,
+      "details": {
+        "model": "ols",
+        "fit_oof_mse": {
+          "intercept": 1.0004001582518989,
+          "stratum": 1.030389640333299,
+          "ols": 0.5950176953644933,
+          "ols_plus_stratum": 0.6117201035289259
+        },
+        "fit_within_s_variance": 0.9900197084244322,
+        "independent_word_residual_variance": 0.582809569983837
+      }
+    },
+    "unstable_null_rejected": {
+      "passed": true,
+      "details": [
+        {
+          "seeds": [
+            7,
+            13
+          ],
+          "pearson": 1.0,
+          "kappa": 1.0,
+          "hard_agreement": 1.0,
+          "pearson_lower": 1.0,
+          "kappa_lower": 1.0,
+          "parent_shift_pearson": -0.03867497197871891,
+          "parent_shift_kappa": -0.05863129973474784
+        },
+        {
+          "seeds": [
+            7,
+            19
+          ],
+          "pearson": -0.03867497197871891,
+          "kappa": -0.05863129973474784,
+          "hard_agreement": 0.3233506944444446,
+          "pearson_lower": -0.09239815341209515,
+          "kappa_lower": -0.08784929351060658,
+          "parent_shift_pearson": -0.02721524660209285,
+          "parent_shift_kappa": -0.06813793103448276
+        },
+        {
+          "seeds": [
+            13,
+            19
+          ],
+          "pearson": -0.03867497197871891,
+          "kappa": -0.05863129973474784,
+          "hard_agreement": 0.3233506944444446,
+          "pearson_lower": -0.09239815341209515,
+          "kappa_lower": -0.08784929351060658,
+          "parent_shift_pearson": -0.02721524660209285,
+          "parent_shift_kappa": -0.06813793103448276
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 0.1975469496101141
+}
