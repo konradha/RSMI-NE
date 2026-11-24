@@ -173,7 +173,7 @@ def worker(a):
     with np.load(path('train'),allow_pickle=False) as d: v=encode(d['V'])[...,None];e=encode(d['E']).reshape(8192,-1)
     adam=tf.keras.optimizers.Adam(opt['learning_rate'])  # identical to the stock default; retain its actual iterations
     endpoint=a.endpoint
-    if endpoint and (a.seed!=6101 or b not in (0,9)): raise ValueError('Unregistered endpoint replay')
+    if endpoint and a.seed!=6101: raise ValueError('Frozen-critic readout uses seed 6101')
     progress=Progress(adam,a.seed,b,uid,synchronize=not (endpoint or cross))
     from rsmine.coarsegrainer import cg_optimisers
     from contextlib import redirect_stderr, nullcontext
@@ -258,9 +258,12 @@ def launch(a):
     from decimal import Decimal
     from modal.stream_type import StreamType
     from datetime import datetime, timezone
-    ep,cross=a.endpoint_replay,a.short_cross; rates=modal.Workspace.from_context().billing.rates()
-    life,cpu,gib=(900,4,16) if cross else (1800,4,16) if ep else (6000,16,48)
-    carry=Decimal('11.47')+Decimal('.46928229')+(Decimal('.47796996') if ep or cross else 0)+(Decimal('.17780023') if cross else 0)
+    interior=a.interior_replay
+    ep,cross=a.endpoint_replay or interior,a.short_cross; rates=modal.Workspace.from_context().billing.rates()
+    life,cpu,gib=(2400,12,48) if interior else (900,4,16) if cross else (1800,4,16) if ep else (6000,16,48)
+    carry=Decimal('11.47')+Decimal('.46928229')+(Decimal('.47796996') if ep or cross else 0)+(Decimal('.17780023') if cross or interior else 0)
+    if interior:
+        carry+=Decimal('2.78')  # conservatively reserve the entire short cross as well
     cost=Decimal(life)/3600*(rates['gpu_hour_cost_h100']+cpu*rates['cpu_hour_cost_sandbox']+gib*rates['mem_gib_hour_cost_sandbox'])+8*rates['egress_gib_cost']
     if not (cost<=Decimal(str(a.budget))<=Decimal('25')-carry): raise ValueError('Original cumulative budget exceeded')
     meta=json.loads((a.inputs/'prepared.json').read_bytes()); assert meta['base']==BASE and meta['split']==SPLIT and len(meta['inputs'])==20
@@ -268,6 +271,7 @@ def launch(a):
         if cross and file not in ('b06-train.npz','b07-train.npz'): continue
         if sha(a.inputs/file)!=digest: raise ValueError(file)
     repo=Path(__file__).resolve().parents[1]; stage='stock-glass-short-cross' if cross else 'stock-glass-endpoint-critic' if ep else STUDY
+    if interior: stage='stock-glass-interior-critic'
     a.out.mkdir(parents=True,exist_ok=False)
     app=modal.App.lookup(stage,create_if_missing=True)
     stamp=lambda:datetime.now(timezone.utc).isoformat(); sb=None
@@ -276,7 +280,7 @@ def launch(a):
         subprocess.run(['bash','-ec','set -o pipefail; tar -C "$1" -cf - . | split -b 384M - "$2/wheels-"','pack',str(a.wheels.resolve()),str(tmp)],check=True)
         parts=sorted(tmp.glob('wheels-*'))
         if not parts or not 0<sum(p.stat().st_size for p in parts)<7*1024**3: raise ValueError('Offline wheel payload outside bounds')
-        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=2.71635779 if cross else 2.53855756 if ep else 2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=2 if ep or cross else 10,waves=[81798,81797] if cross else [6101] if ep else SEEDS,epochs=100 if cross else EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,train_only=cross,short='100 stock epochs' if cross else 'stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',readout_plan_sha256=sha(repo/'results/stock-glass-endpoint-critic/readout-plan.json') if ep else None,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
+        write_json(a.out/'launch.json',dict(utc=stamp(),total_max_usd=float(cost),prior_metered_usd=None if interior else 2.71635779 if cross else 2.53855756 if ep else 2.06058760,prior_carry_usd=float(carry),life_s=life,cpu=cpu,memory_gib=gib,one_h100=True,workers=8 if interior else 2 if ep or cross else 10,waves=[81798,81797] if cross else [6101] if ep else SEEDS,epochs=100 if cross else EPOCHS,per_worker_gpu_mib=GPU_MIB,inputs=meta,train_only=cross,short='100 stock epochs' if cross else 'stock snapshot 1701, EMA20 of first 100 logged estimates; same trajectory',readout_plan_sha256=sha(repo/'results/stock-glass-endpoint-critic/readout-plan.json') if ep else None,launcher_sha256=sha(Path(__file__)),wheel_sha256={p.name:sha(p) for p in sorted(a.wheels.glob('*.whl'))}))
         try:
             sb=modal.Sandbox.create('/bin/sleep',str(life),name=stage,app=app,image=modal.Image.from_id(IMAGE),gpu='H100!',cpu=(cpu,cpu),memory=(gib*1024,gib*1024),block_network=True,timeout=life,tags={'study':stage})
             print('PROVIDER_ID',app.app_id,sb.object_id,stamp(),'max_usd',cost,flush=True); write_json(a.out/'provider.json',dict(app=app.app_id,sandbox=sb.object_id,utc=stamp(),image=IMAGE))
@@ -291,7 +295,8 @@ def launch(a):
             env='export PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 TF_USE_LEGACY_KERAS=1 TF_NUM_INTRAOP_THREADS=1 TF_NUM_INTEROP_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TF_CPP_MIN_LOG_LEVEL=2 WANDB_MODE=disabled; export LD_LIBRARY_PATH="$(find "$PWD/env" -path "*/nvidia/*/lib" -type d | paste -sd: -):${LD_LIBRARY_PATH:-}"; '
             for name in meta['inputs']:
                 if cross and name not in ('b06-train.npz','b07-train.npz'): continue
-                if not ep or name.startswith(('b00-','b09-')): fs.copy_from_local(a.inputs/name,REMOTE+'/'+name)
+                if ep and name.startswith(('b00-','b09-'))==interior: continue
+                fs.copy_from_local(a.inputs/name,REMOTE+'/'+name)
             if ep or cross:
                 from concurrent.futures import ThreadPoolExecutor
                 def replay(pair):
@@ -301,8 +306,8 @@ def launch(a):
                     if not 0<fs.stat(REMOTE+'/'+name).size<8*1024**2: raise ValueError('Unexpected endpoint result size')
                     with (a.out/name).open('xb') as f: f.write(fs.read_bytes(REMOTE+'/'+name))
                     print('SAVED_ENDPOINT',b,sha(a.out/name),flush=True)
-                pairs=((6,81798),(7,81797)) if cross else ((0,6101),(9,6101))
-                with ThreadPoolExecutor(max_workers=2) as pool: list(pool.map(replay,pairs))
+                pairs=[(b,6101) for b in range(1,9)] if interior else ((6,81798),(7,81797)) if cross else ((0,6101),(9,6101))
+                with ThreadPoolExecutor(max_workers=len(pairs)) as pool: list(pool.map(replay,pairs))
                 return
             for seed in SEEDS:
                 run(env+f'env/bin/python -u stock_glass_modal.py wave --seed {seed}',life)
@@ -319,7 +324,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__); sub=parser.add_subparsers(dest='cmd',required=True)
     p=sub.add_parser('prepare'); p.add_argument('--archive',type=Path,required=True); p.add_argument('--split',type=Path,required=True); p.add_argument('--rosters',type=Path,required=True); p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('launch'); p.add_argument('--inputs',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--wheels',type=Path,required=True);p.add_argument('--budget',type=float,required=True)
-    g=p.add_mutually_exclusive_group();g.add_argument('--endpoint-replay',action='store_true');g.add_argument('--short-cross',action='store_true')
+    g=p.add_mutually_exclusive_group();g.add_argument('--endpoint-replay',action='store_true');g.add_argument('--interior-replay',action='store_true',help='Score the eight temperatures missing from the seed-6101 endpoint plot');g.add_argument('--short-cross',action='store_true')
     p=sub.add_parser('worker');p.add_argument('--index',type=int,required=True,choices=range(10));p.add_argument('--seed',type=int,required=True,choices=(*SEEDS,81797,81798))
     g=p.add_mutually_exclusive_group();g.add_argument('--endpoint',action='store_true');g.add_argument('--short-cross',action='store_true')
     p=sub.add_parser('wave');p.add_argument('--seed',type=int,required=True,choices=SEEDS)
