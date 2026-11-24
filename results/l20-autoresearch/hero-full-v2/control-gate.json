@@ -1,0 +1,175 @@
+{
+ "source": "nonphysical pseudo-parents only",
+ "physical_parents": 0,
+ "rows": {
+  "affine-uniform": {
+   "checks": {
+    "weak": true,
+    "strong": true,
+    "shuffled": true,
+    "strong_separates_null": true,
+    "weak_separates_null": true
+   },
+   "passed": true,
+   "scores": {
+    "weak": {
+     "mse_gain": {
+      "mean": 0.009604466066002527,
+      "lo": 0.008693490724409902,
+      "hi": 0.010515441407595152,
+      "se": 0.0004647875861242019,
+      "n": 131072
+     },
+     "common_expected_nats": 0.0038731612112505682
+    },
+    "strong": {
+     "mse_gain": {
+      "mean": 0.3611841405171693,
+      "lo": 0.35604474078753034,
+      "hi": 0.36632354024680824,
+      "se": 0.002622166688167588,
+      "n": 131072
+     },
+     "common_expected_nats": 0.1670646922679141
+    },
+    "shuffled": {
+     "mse_gain": {
+      "mean": -1.4706671112008544e-07,
+      "lo": -4.100623551323944e-07,
+      "hi": 1.1592893289222353e-07,
+      "se": 1.3418267757715414e-07,
+      "n": 131072
+     },
+     "common_expected_nats": -6.794822145215354e-06
+    }
+   }
+  },
+  "affine-matched": {
+   "checks": {
+    "weak": true,
+    "strong": true,
+    "shuffled": true,
+    "strong_separates_null": true,
+    "weak_separates_null": true
+   },
+   "passed": true,
+   "scores": {
+    "weak": {
+     "mse_gain": {
+      "mean": 0.00907869947036773,
+      "lo": 0.008303886234459379,
+      "hi": 0.009853512706276081,
+      "se": 0.00039531648901202217,
+      "n": 131072
+     },
+     "common_expected_nats": 0.0037420784892839513
+    },
+    "strong": {
+     "mse_gain": {
+      "mean": 0.36086681729874237,
+      "lo": 0.3558317777776435,
+      "hi": 0.3659018568198412,
+      "se": 0.0025689211970986803,
+      "n": 131072
+     },
+     "common_expected_nats": 0.16703485016698666
+    },
+    "shuffled": {
+     "mse_gain": {
+      "mean": 9.486743017678504e-07,
+      "lo": -8.085260828685757e-07,
+      "hi": 2.7058746864042766e-06,
+      "se": 8.96539003661541e-07,
+      "n": 131072
+     },
+     "common_expected_nats": -1.113525527128132e-06
+    }
+   }
+  },
+  "tanh-uniform": {
+   "checks": {
+    "weak": true,
+    "strong": true,
+    "shuffled": true,
+    "strong_separates_null": true,
+    "weak_separates_null": true
+   },
+   "passed": true,
+   "scores": {
+    "weak": {
+     "mse_gain": {
+      "mean": 0.009784688091214324,
+      "lo": 0.008779422677037844,
+      "hi": 0.010789953505390804,
+      "se": 0.0005128952057608748,
+      "n": 131072
+     },
+     "common_expected_nats": 0.004313276933231286
+    },
+    "strong": {
+     "mse_gain": {
+      "mean": 0.3612267004047015,
+      "lo": 0.3560003409176398,
+      "hi": 0.3664530598917632,
+      "se": 0.0026665343169025206,
+      "n": 131072
+     },
+     "common_expected_nats": 0.17052164153143715
+    },
+    "shuffled": {
+     "mse_gain": {
+      "mean": -4.0921990383636724e-11,
+      "lo": -1.146865748203835e-10,
+      "hi": 3.284259405311005e-11,
+      "se": 3.763533608041623e-11,
+      "n": 131072
+     },
+     "common_expected_nats": -5.202223009272005e-07
+    }
+   }
+  },
+  "tanh-matched": {
+   "checks": {
+    "weak": true,
+    "strong": true,
+    "shuffled": true,
+    "strong_separates_null": true,
+    "weak_separates_null": true
+   },
+   "passed": true,
+   "scores": {
+    "weak": {
+     "mse_gain": {
+      "mean": 0.009500064027115986,
+      "lo": 0.008624499948353462,
+      "hi": 0.010375628105878509,
+      "se": 0.00044672045014263086,
+      "n": 131072
+     },
+     "common_expected_nats": 0.004189558884352355
+    },
+    "strong": {
+     "mse_gain": {
+      "mean": 0.36118001217496076,
+      "lo": 0.3560430272031005,
+      "hi": 0.36631699714682103,
+      "se": 0.002620934657630869,
+      "n": 131072
+     },
+     "common_expected_nats": 0.17048649589853926
+    },
+    "shuffled": {
+     "mse_gain": {
+      "mean": -2.1009475996878044e-07,
+      "lo": -5.865751780402489e-07,
+      "hi": 1.6638565810268805e-07,
+      "se": 1.92083601771867e-07,
+      "n": 131072
+     },
+     "common_expected_nats": -5.768409060901286e-07
+    }
+   }
+  }
+ },
+ "passed": true
+}

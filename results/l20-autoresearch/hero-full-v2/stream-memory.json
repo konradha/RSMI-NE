@@ -1,0 +1,132 @@
+{
+  "stage": "fit-dev capacity measurement only",
+  "release_commit": "703000009b50c138e495073944c5856af5cc5308",
+  "summary_sha256": "9eb4e9104751699fb5c61f96111933aec3c06915155c6b98d5047c3415c15563",
+  "note": "Original ru_maxrss includes a pre-exec launcher high-water mark; upper bound only. Linux /proc/self/status VmHWM is the resident high-water mark for the current executable. The native projection was not rerun; exact original extraction-only peak unavailable.",
+  "launcher_ru_maxrss_KiB": 2486036,
+  "launcher_python_VmHWM_KiB": 34684,
+  "physical_fit_only": [
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 0,
+      "vmhwm_after_import_KiB": 34676,
+      "fit_gather_peak_VmHWM_KiB": 157360,
+      "gather_batches_per_second": 7813.777651248902,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 1,
+      "vmhwm_after_import_KiB": 34784,
+      "fit_gather_peak_VmHWM_KiB": 232240,
+      "gather_batches_per_second": 4925.01852932287,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 2,
+      "vmhwm_after_import_KiB": 34680,
+      "fit_gather_peak_VmHWM_KiB": 232236,
+      "gather_batches_per_second": 4227.336516942232,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 3,
+      "vmhwm_after_import_KiB": 34680,
+      "fit_gather_peak_VmHWM_KiB": 231724,
+      "gather_batches_per_second": 5443.372253087805,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 4,
+      "vmhwm_after_import_KiB": 34672,
+      "fit_gather_peak_VmHWM_KiB": 231468,
+      "gather_batches_per_second": 6310.086381764373,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 5,
+      "vmhwm_after_import_KiB": 34632,
+      "fit_gather_peak_VmHWM_KiB": 232112,
+      "gather_batches_per_second": 6594.35785017883,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 7,
+      "vmhwm_after_import_KiB": 34716,
+      "fit_gather_peak_VmHWM_KiB": 207920,
+      "gather_batches_per_second": 6353.834926606326,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 8,
+      "vmhwm_after_import_KiB": 34740,
+      "fit_gather_peak_VmHWM_KiB": 159912,
+      "gather_batches_per_second": 6699.46174050675,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    },
+    {
+      "source": "archived-physical, released FIT arrays only",
+      "index": 9,
+      "vmhwm_after_import_KiB": 34760,
+      "fit_gather_peak_VmHWM_KiB": 36524,
+      "gather_batches_per_second": 11948.568296022644,
+      "batch_shape": [
+        8,
+        8
+      ],
+      "batches": 256
+    }
+  ],
+  "synthetic_projection": {
+    "source": "entirely synthetic fixed-composition rows; native-sized compressed-member fixture",
+    "matched_fit_parents": 7668,
+    "matched_dev_parents": 1277,
+    "vmhwm_after_import_KiB": 34588,
+    "vmhwm_after_fixture_and_tables_KiB": 47444,
+    "projection_and_hash_peak_VmHWM_KiB": 48584,
+    "peak_after_gather_VmHWM_KiB": 245120,
+    "output_bytes": 240478660
+  },
+  "native_species_reads": 0,
+  "physical_eval_access": false,
+  "training": false,
+  "incremental_fee_usd": 0
+}
