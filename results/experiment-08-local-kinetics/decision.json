@@ -1,0 +1,48 @@
+{
+  "cold_margin": 0.05,
+  "lag": 100,
+  "unit": "attempted internal bond",
+  "criterion": "unresolved",
+  "by_seed": [
+    {
+      "index": 9,
+      "beta": 3.05,
+      "name": "6101",
+      "reference": "site_linear",
+      "metric": "C100",
+      "n": 8187,
+      "adequate": false,
+      "learned_minus_reference": -0.2790880030776345,
+      "learned_minus_reference_lo": -0.4628647819656194,
+      "learned_minus_reference_hi": -0.09531122418964957
+    },
+    {
+      "index": 9,
+      "beta": 3.05,
+      "name": "6102",
+      "reference": "site_linear",
+      "metric": "C100",
+      "n": 8187,
+      "adequate": false,
+      "learned_minus_reference": -0.3694657621560413,
+      "learned_minus_reference_lo": -0.5568824061807592,
+      "learned_minus_reference_hi": -0.18204911813132338
+    },
+    {
+      "index": 9,
+      "beta": 3.05,
+      "name": "6103",
+      "reference": "site_linear",
+      "metric": "C100",
+      "n": 8187,
+      "adequate": false,
+      "learned_minus_reference": -0.39918096150734833,
+      "learned_minus_reference_lo": -0.5844678512698268,
+      "learned_minus_reference_hi": -0.21389407174486985
+    }
+  ],
+  "test_parents": 81913,
+  "max_static_plateau_difference_vs_03": 4.951594689828198e-14,
+  "modal_usd": 0,
+  "sequence_finished": true
+}
