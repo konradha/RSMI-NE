@@ -1,0 +1,36 @@
+{
+  "flagship": {
+    "width": 3,
+    "buffer": 1,
+    "method": "learned",
+    "seed": 11,
+    "epoch": 33,
+    "validation": 0.1593405706158344
+  },
+  "fixed_by_geometry": {
+    "3-1": {
+      "method": "bits-body-1",
+      "seed": 11,
+      "epoch": 36,
+      "validation": 0.12483222116032228
+    },
+    "3-2": {
+      "method": "bits-edge-1",
+      "seed": 11,
+      "epoch": 33,
+      "validation": 0.0013550422843281716
+    },
+    "5-1": {
+      "method": "bits-face-1",
+      "seed": 11,
+      "epoch": 30,
+      "validation": 0.050533138103590926
+    },
+    "5-2": {
+      "method": "bits-near-2",
+      "seed": 11,
+      "epoch": 0,
+      "validation": 0.00012143104361159629
+    }
+  }
+}

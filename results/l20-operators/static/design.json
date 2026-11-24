@@ -1,0 +1,32 @@
+{
+  "source": {
+    "index": 9,
+    "beta": 3.05,
+    "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": [
+      10240,
+      2048,
+      4096
+    ],
+    "patch_seed": 769315,
+    "group_lineage_sha256": [
+      "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+      "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+      "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+    ]
+  },
+  "epochs": 36,
+  "train_parents_per_epoch": 10240,
+  "pairs_seen_per_fit": 368640,
+  "validation_anchors": 6,
+  "test_anchors": 16,
+  "batch": 128,
+  "optimizer": "Adam 0.002 epochs 1-24, then 0.00065; validation every 3 epochs incl 0",
+  "encoder": "separate species indicators + 24 tanh units + linear skip, categorical softmax; weak random-corner start",
+  "critic": "150 shell labels with 2 separate species indicators, 24 tanh units + linear skip to four scores",
+  "shell": "fixed centered 5x5 face patch on each of six faces at Chebyshev radius width//2+buffer+1",
+  "train": "same-beta in-batch negatives, exact expected hard-state InfoNCE; new periodic anchor and parent permutation per epoch",
+  "selection": "highest validation across 12 learned encoders; best deterministic control by validation within geometry (random separately)",
+  "inference": "no test in fitting; 16 anchors for each of 4096 test parents; paired t intervals on 32 disjoint batches of 128; all off-diagonal shuffle pairs",
+  "gate": "Assess raw lower bound vs zero, learned minus strongest fixed, then generalization at frozen beta=2.7111 and 0; pointwise intervals, no power-law inference"
+}

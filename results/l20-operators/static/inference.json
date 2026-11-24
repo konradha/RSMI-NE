@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "index": 9,
+      "beta": 3.05,
+      "sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "344cb2080d87b5bfaec3c01f93540cef02bde82cd3dcae83ba1c8862ac9d3214",
+        "10a8c4e9c376b88608e14c4aa3446032e2ba507d349a2c461fa1d79162141a2f",
+        "940d6c9bf640d9d281a31625db95b59c916e1bad1a5e897ac53ddab1f42f2e41"
+      ]
+    },
+    {
+      "index": 8,
+      "beta": 2.711111111111,
+      "sha256": "d6d8ad2476edae426a48ad94c1a324aa992d7b3a61d505795f324009f61ba87d",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "39f999280ec938169232129b343f21984c9fe98b562c4cba8eee919f59087a7e",
+        "ecfa5c615338bc2c2ef1195e7ca993595deda2e73dc7b41b2ca413698fff5383",
+        "2d47d1563052a2df224af072919cae77bc27331964fd00eca809026253fc9cdd"
+      ]
+    },
+    {
+      "index": 0,
+      "beta": 0.0,
+      "sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+      "split": [
+        10240,
+        2048,
+        4096
+      ],
+      "patch_seed": 769315,
+      "group_lineage_sha256": [
+        "19b3228717d0bcde6ebaacf77584d9c32244f9d315c3ef621378929bf3620a2e",
+        "1fbcc0dc3487f98514b5d3d83098f125562a95692b972249ccc934dda067872e",
+        "51f784fc4f1055d6060ba4360f91690548b5bcc8a4fab669f9f0034204b63d89"
+      ]
+    }
+  ],
+  "training_epochs": 36,
+  "validation_score": "raw InfoNCE",
+  "bounds": "raw/unclipped expected hard-H InfoNCE on same-beta disjoint parent batches, evaluated after freezing both networks; not unbiased true MI",
+  "shuffle": "exact average over the 127 mismatched positive labels, keeping same critic denominator (not a retrained null, not necessarily 0)",
+  "intervals": "two-sided 95% t intervals over 32 paired disjoint parent batches, with all patch repetitions kept together; conditional on the trained fit",
+  "spatial": "32 random origins per held-out parent, all +axis directions, r >= width apart, C(r) = E[<q(x),q(x+r)>] - |E q|^2; latter from distinct parents. Normalize by zero-lag posterior variance. Whole-parent jackknife. No shell input when evaluating q.",
+  "stability": "Choose one of 48 cube isometries and optimal four-label permutation by argmax agreement on 2 validation anchors per parent. Test with first 4 test anchors. ARI and chance-corrected agreement accompany accuracy; soft-posterior equivalence is not asserted.",
+  "controls": "site-zyx gives sorted nonnegative center offsets, one representative of every cubic site orbit. bits-geometry-s encodes the two indicators of species s at a corner and at a near neighbor or an edge-, face-, or body-separated corner. Each rule has <=4 states and its own trained critic; composition uses train medians of vacancy and A counts, parity train quartiles of signed occupancy, interfaces train quartiles of internal nearest neighbor occupied-vacant bonds. random has frozen random nonlinear softmax encoder, trained critic.",
+  "spatial_moments": "npz arrays indexed [method (flagship, fixed), test parent in partition order, state or distance]; distances [0,width,...,10]",
+  "gate_interpretation": "Positive raw lower bound is required for evidence by this critic. Paired-vs-shuffle alone is not positive MI evidence when raw is negative. Beating strongest deterministic rule is distinct from detecting static dependence. No test-based fit selection."
+}

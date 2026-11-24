@@ -1,0 +1,130 @@
+{
+  "criterion": "Pointwise lower 95% confidence limit > 0; superiority additionally requires positive paired contrast to the validation-selected fixed code. Conditional on trained models; not a multiple-testing guarantee.",
+  "learned_cold": [
+    {
+      "width": 3,
+      "buffer": 1,
+      "seed": 11,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 3,
+      "buffer": 1,
+      "seed": 29,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 3,
+      "buffer": 1,
+      "seed": 47,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 3,
+      "buffer": 2,
+      "seed": 11,
+      "strongest_fixed": "bits-edge-1",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    },
+    {
+      "width": 3,
+      "buffer": 2,
+      "seed": 29,
+      "strongest_fixed": "bits-edge-1",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    },
+    {
+      "width": 3,
+      "buffer": 2,
+      "seed": 47,
+      "strongest_fixed": "bits-edge-1",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    },
+    {
+      "width": 5,
+      "buffer": 1,
+      "seed": 11,
+      "strongest_fixed": "bits-face-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 5,
+      "buffer": 1,
+      "seed": 29,
+      "strongest_fixed": "bits-face-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 5,
+      "buffer": 1,
+      "seed": 47,
+      "strongest_fixed": "bits-face-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "width": 5,
+      "buffer": 2,
+      "seed": 11,
+      "strongest_fixed": "bits-near-2",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    },
+    {
+      "width": 5,
+      "buffer": 2,
+      "seed": 29,
+      "strongest_fixed": "bits-near-2",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    },
+    {
+      "width": 5,
+      "buffer": 2,
+      "seed": 47,
+      "strongest_fixed": "bits-near-2",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    }
+  ],
+  "frozen_flagship": [
+    {
+      "beta": 3.05,
+      "width": 3,
+      "buffer": 1,
+      "seed": 11,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "beta": 2.711111111111,
+      "width": 3,
+      "buffer": 1,
+      "seed": 11,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": true,
+      "positive_and_above_fixed": true
+    },
+    {
+      "beta": 0.0,
+      "width": 3,
+      "buffer": 1,
+      "seed": 11,
+      "strongest_fixed": "bits-body-1",
+      "positive_raw": false,
+      "positive_and_above_fixed": false
+    }
+  ]
+}
