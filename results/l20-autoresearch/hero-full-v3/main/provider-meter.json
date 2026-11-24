@@ -1,0 +1,12 @@
+{
+  "sandbox_id": "sb-DOLeyCRBAwONrUtUXGAa6f",
+  "source": "Modal App.sandboxes.stats; stage=main-1, study=hero-full-v3, queried after terminal, gross not invoice. 2026-11-24 15:00..16:00Z",
+  "reported_usd": {
+    "H100": "1.25961620",
+    "CPU": "0.03016701",
+    "Memory": "0.03061346"
+  },
+  "total_metered_usd": "1.32039666",
+  "h100_equivalent_device_s": 1148.0046379746836,
+  "whole_create_to_terminate_s": 1159.8810863071121
+}

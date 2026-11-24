@@ -69,20 +69,41 @@ def plot(rows,dest):
 
 
 def plot_held(report,dest):
-    fig,ax=plt.subplots(figsize=(9.5,4.6),layout='constrained'); axs=report['hard_retrieval']
-    for name,color in [('6101','#0072B2'),('site','#666666'),('coordination','#009E73'),('crystal','#D55E00'),('random_affine','#CC79A7')]:
-        vals=[]
-        for b in range(10):
-            score=axs[str(b)]['models'][name]
-            vals.append(1000*score['scores']['common']['hard_nats'])
-        ax.plot(BETA,vals,'.-',color=color,label='Frozen learned code' if name=='6101' else name.replace('_',' '))
-    ax.axhline(0,c='#666',lw=.8);ax.legend(frameon=False,ncols=2);ax.set(xlabel='Inverse temperature β',ylabel='Hard retrieval gain (millinats)',title='One held-out test: 8,192 parents per temperature');ax.spines[['top','right']].set_visible(False)
+    fig,(ax,compare)=plt.subplots(1,2,figsize=(12,4.5),layout='constrained')
+    panels=report['hard_retrieval']; macro=report['retrieval_summary']
+    for seed in range(6101,6106):
+        y=[panels[str(b)]['models'][str(seed)]['scores']['common']['hard_nats']*1000 for b in range(10)]
+        ax.plot(BETA,y,'.-',color='#0072B2',alpha=1 if seed==6101 else .25,lw=2 if seed==6101 else 1,
+                label='Primary seed 6101' if seed==6101 else 'Other independent starts' if seed==6102 else None)
+    ax.axhline(0,c='#555555',lw=.8);ax.legend(frameon=False);ax.set(xlabel='Inverse temperature β',ylabel='Retrieval gain over guessing (millinats)',title='Does the frozen four-state code predict the shell?')
+    contrasts=macro['paired_primary_minus_control']
+    for j,(k,r) in enumerate(contrasts.items()):
+        q=r['common']['hard'];mu=1000*q['mean_nats'];lo,hi=np.array(q['simultaneous_ci95'])*1000
+        compare.errorbar(mu,j,xerr=[[mu-lo],[hi-mu]],fmt='o',color='#D55E00',capsize=3)
+    compare.axvline(0,c='#555555',lw=.8);compare.set_yticks(range(len(contrasts)),[k.replace('_',' ') for k in contrasts]); compare.invert_yaxis()
+    compare.set(title='Does it beat the conventional and random codes?',xlabel='Learned minus control, equal-β gain (millinats)')
+    for a in (ax,compare):a.spines[['top','right']].set_visible(False)
+    fig.suptitle('One held-out test · 8,192 independent parents per β · simultaneous 95% parent intervals at right')
     fig.savefig(dest,dpi=160);plt.close(fig)
+
+
+def assessment_table(report,dest):
+    rows=[]
+    for b,rec in sorted(report['hard_retrieval'].items(),key=lambda kv:int(kv[0])):
+        for name,m in rec['models'].items():
+            for law in ('uniform','matched'):
+                c=rec['sampling'][law];q=m['scores'][law];r=m['all_parent_rates']
+                rows.append(dict(beta=BETA[int(b)],model=name,law=law,all_parents=rec['n_parents'],
+                                 eligible_parents=c['eligible_parents'],drawn_parents=c['unique_drawn_parents'],positive_draws=c['positive_slots'],
+                                 hard_nats=q['hard_nats'],expected_nats=q['expected_nats'],hard_rate_bits=r['hard_H_bits'],
+                                 stochastic_I_VH_bits=r['I_V_H_bits'],hard_frequencies=' '.join(f'{v:.9g}' for v in r['hard_frequency'])))
+    csvfile(dest,rows)
 
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--result',type=Path,required=True);ap.add_argument('--out',type=Path,default=PUB);ap.add_argument('--assessment',type=Path)
     a=ap.parse_args();rows,details=curves(a.result);a.out.mkdir(parents=True,exist_ok=True)
     csvfile(a.out/'learning.csv',rows);csvfile(a.out/'learning-by-beta.csv',details);plot(rows,a.out/'learning.png')
-    if a.assessment: plot_held(json.loads(a.assessment.read_text()),a.out/'held-temperature.png')
+    if a.assessment:
+        report=json.loads(a.assessment.read_text());plot_held(report,a.out/'held-temperature.png');assessment_table(report,a.out/'held-by-beta.csv')
     print(f'{len(rows)} actual CUDA checkpoint receipts; {len(details)} per-beta rows.')
