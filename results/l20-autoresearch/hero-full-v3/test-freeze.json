@@ -1,0 +1,14 @@
+{
+  "schema": "hero-full-v3-pretest-freeze-1",
+  "model_sha256": "b1b0cf0ef6a29faf1e60914c0e33929a16b77adf43d50d47c8c6b25a465fbf18",
+  "refit_sha256": "0e6d5b50ecb2d9df8ec6cc03c8f09d073c18d2ac7f1a6a4747254ece683ba7ef",
+  "split_sha256": "a0532740cc0d8ebf95b654e2834d5a52faeaac47262ea5291727258b4991db01",
+  "physical_development_sha256": "4bbadd13afd260111a3a0ac2e79878145a83c6a904c7951965ea7e23884d50fb",
+  "rule_sha256": "0f85869f8a2ecefadb1276ad22f973d88c3f4031ca5c0d6365ebbdbe31f829bc",
+  "rule_status": "unstable_teacher_descriptor_only",
+  "test_opened": false,
+  "physical_test_enabled": false,
+  "coefficients_sha256": null,
+  "retrieval_enabled": true,
+  "scope": "One all-ten TEST assay after this freeze; no new seed/radius/model on TEST."
+}
