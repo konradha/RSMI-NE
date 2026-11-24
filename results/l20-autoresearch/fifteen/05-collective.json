@@ -1,0 +1,100 @@
+{
+  "results": {
+    "b09": {
+      "independent_parents": 256,
+      "disjoint_parent_pairs": 128,
+      "self_removed_intensity_cov": {
+        "parents": 128,
+        "estimate": -7.043845512903107e-06,
+        "lo": -8.534503378311224e-05,
+        "hi": 7.125734275730603e-05,
+        "se": 3.9569645890910966e-05,
+        "mde80_approx": 0.0001107950084945507
+      },
+      "both_pair_contractions": {
+        "parents": 128,
+        "estimate": -3.226196791409471e-06,
+        "lo": -8.808316243567308e-06,
+        "hi": 2.355922660748366e-06,
+        "se": 2.820934074211101e-06,
+        "mde80_approx": 7.898615407791082e-06
+      },
+      "four_point_remainder": {
+        "parents": 128,
+        "estimate": -3.817648721493635e-06,
+        "lo": -8.265751674767989e-05,
+        "hi": 7.502221930469263e-05,
+        "se": 3.984186867147798e-05,
+        "mde80_approx": 0.00011155723228013832
+      },
+      "normalization": "1/27 per intensity; q=(pi,0,0); disjoint windows +5 x"
+    },
+    "b00": {
+      "independent_parents": 256,
+      "disjoint_parent_pairs": 128,
+      "self_removed_intensity_cov": {
+        "parents": 128,
+        "estimate": 5.780793868955654e-06,
+        "lo": -0.00013602946021758737,
+        "hi": 0.00014759104795549865,
+        "se": 7.16640661766247e-05,
+        "mde80_approx": 0.00020065938529454915
+      },
+      "both_pair_contractions": {
+        "parents": 128,
+        "estimate": 4.695604531035653e-06,
+        "lo": -9.535118651770071e-06,
+        "hi": 1.8926327713841376e-05,
+        "se": 7.191521476940876e-06,
+        "mde80_approx": 2.0136260135434452e-05
+      },
+      "four_point_remainder": {
+        "parents": 128,
+        "estimate": 1.0851893379200141e-06,
+        "lo": -0.0001404563825706645,
+        "hi": 0.00014262676124650455,
+        "se": 7.152828715623069e-05,
+        "mde80_approx": 0.0002002792040374459
+      },
+      "normalization": "1/27 per intensity; q=(pi,0,0); disjoint windows +5 x"
+    },
+    "b08": {
+      "independent_parents": 256,
+      "disjoint_parent_pairs": 128,
+      "self_removed_intensity_cov": {
+        "parents": 128,
+        "estimate": -1.63727086280437e-05,
+        "lo": -9.640492545215457e-05,
+        "hi": 6.365950819606719e-05,
+        "se": 4.044442427445956e-05,
+        "mde80_approx": 0.00011324438796848677
+      },
+      "both_pair_contractions": {
+        "parents": 128,
+        "estimate": -1.912465706447187e-06,
+        "lo": -9.324506280470988e-06,
+        "hi": 5.499574867576613e-06,
+        "se": 3.7456879943005093e-06,
+        "mde80_approx": 1.0487926384041426e-05
+      },
+      "four_point_remainder": {
+        "parents": 128,
+        "estimate": -1.4460242921596513e-05,
+        "lo": -9.586422655066588e-05,
+        "hi": 6.694374070747285e-05,
+        "se": 4.113764908900258e-05,
+        "mde80_approx": 0.00011518541744920722
+      },
+      "normalization": "1/27 per intensity; q=(pi,0,0); disjoint windows +5 x"
+    },
+    "cold_minus_beta0": {
+      "estimate": -4.902838059413649e-06,
+      "se": 8.187594495784152e-05,
+      "lo": -0.00016619844962636145,
+      "hi": 0.00015639277350753414,
+      "mde80_approx": 0.00022925264588195623
+    }
+  },
+  "parent_evidence_sha256": "1cf4172648ada7c7771144712322bd9e8d9e82d3ad1a5599f58a7065e55e08b6",
+  "scope": "Discovery / calibration only; uncertainty is across disjoint whole-parent groups."
+}

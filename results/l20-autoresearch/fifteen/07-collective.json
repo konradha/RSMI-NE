@@ -1,0 +1,189 @@
+{
+  "results": {
+    "b09": {
+      "independent_parents": 256,
+      "pairs": 128,
+      "K": {
+        "parents": 256,
+        "estimate": 0.038911458363252056,
+        "lo": 0.03818816695313641,
+        "hi": 0.0396347497733677,
+        "se": 0.00036728153557352765,
+        "mde80_approx": 0.0010283882996058773
+      },
+      "M": {
+        "parents": 256,
+        "estimate": 3925.19140625,
+        "lo": 3921.4070834404693,
+        "hi": 3928.9757290595307,
+        "se": 1.921648554305535,
+        "mde80_approx": 5.380615952055498
+      },
+      "beta_cov": {
+        "parents": 128,
+        "estimate": -0.08430390586167531,
+        "lo": -0.17714033940459503,
+        "hi": 0.008532527681244406,
+        "se": 0.04691505815201099,
+        "mde80_approx": 0.13136216282563076
+      },
+      "contact_cheb_0_or_1": {
+        "parents": 128,
+        "estimate": -0.05360753252474358,
+        "lo": -0.07085217895843325,
+        "hi": -0.03636288609105391,
+        "se": 0.008714612995913843,
+        "mde80_approx": 0.02440091638855876
+      },
+      "noncontact_cheb_ge2": {
+        "parents": 128,
+        "estimate": -0.030696373336845925,
+        "lo": -0.12424273236872822,
+        "hi": 0.06284998569503637,
+        "se": 0.047273820270795706,
+        "mde80_approx": 0.13236669675822796
+      },
+      "displacement_slope": [
+        0.0011851302603718766,
+        -0.05479266278511547,
+        -0.008749645439478697,
+        0.02564397648338042,
+        -0.009428095431834087,
+        -0.020713632852208206,
+        -0.02328452066893119,
+        -0.0013094189214413999,
+        0.08943038442434229,
+        -0.044277998469026386,
+        -0.03800742246164867
+      ],
+      "energy_linear_slope": 0.0011857434492213996,
+      "fixed_density": true,
+      "energy_residual_slope": -0.032570778195262114,
+      "energy_share_note": "Energy-linear projection over all development parents; not a state intervention. Registry depends on whole box."
+    },
+    "b00": {
+      "independent_parents": 256,
+      "pairs": 128,
+      "K": {
+        "parents": 256,
+        "estimate": 0.03744531251443549,
+        "lo": 0.03680529529901865,
+        "hi": 0.038085329729852326,
+        "se": 0.00032499557216393094,
+        "mde80_approx": 0.0009099876020590066
+      },
+      "M": {
+        "parents": 256,
+        "estimate": 3469.953125,
+        "lo": 3465.441977408246,
+        "hi": 3474.464272591754,
+        "se": 2.2907243076940302,
+        "mde80_approx": 6.414028061543284
+      },
+      "beta_cov": {
+        "parents": 128,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "se": 0.0,
+        "mde80_approx": 0.0
+      },
+      "contact_cheb_0_or_1": {
+        "parents": 128,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "se": 0.0,
+        "mde80_approx": 0.0
+      },
+      "noncontact_cheb_ge2": {
+        "parents": 128,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "se": 0.0,
+        "mde80_approx": 0.0
+      },
+      "displacement_slope": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "energy_linear_slope": 0.0,
+      "fixed_density": true,
+      "energy_residual_slope": 0.0,
+      "energy_share_note": "Energy-linear projection over all development parents; not a state intervention. Registry depends on whole box."
+    },
+    "b08": {
+      "independent_parents": 256,
+      "pairs": 128,
+      "K": {
+        "parents": 256,
+        "estimate": 0.03809635417543661,
+        "lo": 0.03734158379739191,
+        "hi": 0.03885112455348131,
+        "se": 0.00038326630121232825,
+        "mde80_approx": 0.001073145643394519
+      },
+      "M": {
+        "parents": 256,
+        "estimate": 3869.5703125,
+        "lo": 3865.707870539393,
+        "hi": 3873.432754460607,
+        "se": 1.961316828204313,
+        "mde80_approx": 5.491687118972076
+      },
+      "beta_cov": {
+        "parents": 128,
+        "estimate": -0.00028240692577907386,
+        "lo": -0.09550711630120354,
+        "hi": 0.09494230244964538,
+        "se": 0.04812197762628401,
+        "mde80_approx": 0.1347415373535952
+      },
+      "contact_cheb_0_or_1": {
+        "parents": 128,
+        "estimate": -0.0541936641929833,
+        "lo": -0.06810105803807681,
+        "hi": -0.040286270347889785,
+        "se": 0.0070281264163798,
+        "mde80_approx": 0.01967875396586344
+      },
+      "noncontact_cheb_ge2": {
+        "parents": 128,
+        "estimate": 0.05391125726727694,
+        "lo": -0.042365091240990096,
+        "hi": 0.15018760577554396,
+        "se": 0.04865342534771581,
+        "mde80_approx": 0.13622959097360426
+      },
+      "displacement_slope": [
+        0.0014347111380612011,
+        -0.055628375331044505,
+        -0.030219785452880267,
+        -0.006205377323645021,
+        0.015584688736894094,
+        0.03112610731415646,
+        0.038357598313380405,
+        0.021573486054155207,
+        0.02310252221406614,
+        -0.04232526797163355,
+        0.002917285382783484
+      ],
+      "energy_linear_slope": 0.021122270870433727,
+      "fixed_density": true,
+      "energy_residual_slope": -0.016466258485239967,
+      "energy_share_note": "Energy-linear projection over all development parents; not a state intervention. Registry depends on whole box."
+    }
+  },
+  "parent_evidence_sha256": "1cf4172648ada7c7771144712322bd9e8d9e82d3ad1a5599f58a7065e55e08b6",
+  "scope": "Discovery / calibration only; uncertainty is across disjoint whole-parent groups."
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "l20.fifteen.vacancy-three-shell-tie.primary-lock.v1",
+  "item": 1,
+  "index": 7,
+  "beta": 2.372222222222,
+  "n_native_validation": 512,
+  "roster": "Exactly the first 512 distinct parents of native VALIDATION index 7, native split order, including all zero-eligibility parents. Not test, not index 6, not the reserved cold parent set. Parent native identities/chain/seed retained. Neither outcomes nor scoring from this new contrast used to choose this roster; archive used in other historical questions, so not a previously untouched physical population.",
+  "source_release_sha256": "123d2ec8a0592bac467493229c4c6f2f201f7dc04904692af852db9816bcf7bc",
+  "source_receipt_sha256": "8ccb1a104fb78542a91c173fa47b45f9854f055a0d77f6468fa82492b5d3b7d5",
+  "development_design_sha256": "79f8ccd6e77aa58e3c973967f136a40261aaa6ebca4caf5e744a5658d007b2a3",
+  "family_design_sha256": "5092518994fe63f1aab15c2af272b1e5cedc664f61dedbafa15ccf33bcc015f7",
+  "code_sha256": "e37a59590d07ca78fcff68d01f12db4284fc7e9c0dc90e3464db9c1582f6ce39",
+  "canonical_log_partition_code_sha256": "675ac59c4e1eadbe35f0825e61b684bf52b7df1832053a1520d2ac20b952e939",
+  "cold_development_receipt_sha256": "2c3195c54dc004452c920f312d8aa65df9c78027f5eafe87fb8a1d575d6a803f",
+  "beta0_development_receipt_sha256": "18b00f1527416f885a0a447035ac39d6b3b9db643656cc119e08ede4d86efea4",
+  "prediction": "For these archived beta-7 states, the canonical vacancy-marginal placement odds beat the exact coin common to all homogeneous isotropic vacancy pair interactions at squared distances 1,2,3 by >=0.01 nat per eligible nearest-neighbor edge. Frozen known N_A=2400, no fitted parameters. Anecdotal cold: promoting exterior neighbor degrees [2,4,4,4,4] rather than [3,3,3,3,5] achieves all odd neighbor degrees instead of even; first end favored and realized on 2215/2215 such cold opportunities. Not a separate significance test.",
+  "one_primary_gate": "On ALL eligible edges pooled across these parents require whole-parent two-sided 95% gain lower bound >=0.01 nat per eligible edge, entire two-sided 95% favored-end calibration residual interval in [-0.03,0.03], and >=128 parents containing p_max>=0.55. Existing beta-zero training algebraic tie check passed on 38234 eligible edges. Direction-neutral support and scoring; ties credited half for favored-end calibration only. No subset score can rescue a failure; no retry or alternate cohort. 01 only is confirmatory in the fifteen-item family. No family discovery statements from the others.",
+  "measurement": "All 24000 nearest-neighbor undirected edges per parent (equivalent to uniform oriented inclusion with both signs), one vacancy plus one particle and equality of exterior occupied counts on each of three shells with BOTH candidate sites excluded. Ignore species. For every eligible edge compute both global candidate histograms using only the sums over sites with closed neighborhoods disjoint from candidates, explicit changing-exterior-neighbor increments and the supplied one-particle constraint. log score ln[2*P(realized end)] from exact fixed-composition species partition, no clipping. No rejection based on signed ordering, confidence, beta, actual placement or scores.",
+  "uncertainty": "Primary G=sum D_i/sum W_i; SE=sqrt(P/(P-1)*sum(D_i-G*W_i)^2)/sum W_i, P=512; paired t_(P-1,.975) CI. Same estimator for favored-end observed-minus-predicted, half at ties. Missing intervals are inconclusive. All directions/eligible edges included once; no within-parent independence assumption. All auxiliary bin and histogram descriptions are descriptive.",
+  "interpretation": "A pass isolates a local degree spectrum change invisible to the specified family of three-shell pair energies under canonical equilibrium placement; it does not test longer-range pair interactions, arbitrary anisotropy, full Gibbs equilibrium of any released bank, thermodynamic phases, species inference for a known mask, or cavity recurrence. Single issued transfer, no repeated analyses of #01 evaluation outcomes.",
+  "references": ["https://arxiv.org/abs/1703.01675", "https://arxiv.org/abs/cond-mat/0205110"]
+}

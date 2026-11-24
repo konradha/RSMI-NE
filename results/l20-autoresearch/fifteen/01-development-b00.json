@@ -1,0 +1,247 @@
+{
+  "item": 1,
+  "index": 0,
+  "beta": 0.0,
+  "cohort": "development-b00",
+  "parents": 256,
+  "edges_per_parent": 24000,
+  "opportunities": 6144000,
+  "eligible": 38234,
+  "eligible_parents": 256,
+  "unlike_and_cumulative_equal_shells": [
+    2304608,
+    668922,
+    146704,
+    38234
+  ],
+  "eligible_frequency": {
+    "mean": 0.006222981770833334,
+    "se": 3.157778432945601e-05,
+    "ci95": [
+      0.0061607953063808965,
+      0.006285168235285771
+    ],
+    "parents": 256
+  },
+  "informative_parents": 0,
+  "informative_count": 0,
+  "informative_fraction": {
+    "mean": 0.0,
+    "se": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "parents": 256
+  },
+  "changed_hist_fraction": {
+    "mean": 0.8723126013495841,
+    "se": 0.0017485920369570234,
+    "ci95": [
+      0.8688690805688493,
+      0.875756122130319
+    ],
+    "parents": 256
+  },
+  "gain_nat_per_eligible": {
+    "mean": 0.0,
+    "se": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "parents": 256
+  },
+  "expected_gain_under_forecast": {
+    "mean": 0.0,
+    "se": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "parents": 256
+  },
+  "favored_calibration_residual": {
+    "mean": 0.0,
+    "se": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "parents": 256
+  },
+  "favored_forecast": {
+    "mean": 0.5,
+    "se": 0.0,
+    "ci95": [
+      0.5,
+      0.5
+    ],
+    "parents": 256
+  },
+  "favored_observed": {
+    "mean": 0.5,
+    "se": 0.0,
+    "ci95": [
+      0.5,
+      0.5
+    ],
+    "parents": 256
+  },
+  "reliability": [
+    {
+      "pmax_range": [
+        0.5,
+        0.55
+      ],
+      "count": 38234,
+      "forecast": {
+        "mean": 0.5,
+        "se": 0.0,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "parents": 256
+      },
+      "observation": {
+        "mean": 0.5,
+        "se": 0.0,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "parents": 256
+      }
+    },
+    {
+      "pmax_range": [
+        0.55,
+        0.65
+      ],
+      "count": 0,
+      "forecast": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      },
+      "observation": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      }
+    },
+    {
+      "pmax_range": [
+        0.65,
+        0.75
+      ],
+      "count": 0,
+      "forecast": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      },
+      "observation": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      }
+    },
+    {
+      "pmax_range": [
+        0.75,
+        0.85
+      ],
+      "count": 0,
+      "forecast": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      },
+      "observation": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      }
+    },
+    {
+      "pmax_range": [
+        0.85,
+        0.95
+      ],
+      "count": 0,
+      "forecast": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      },
+      "observation": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      }
+    },
+    {
+      "pmax_range": [
+        0.95,
+        1.0
+      ],
+      "count": 0,
+      "forecast": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      },
+      "observation": {
+        "mean": null,
+        "se": null,
+        "ci95": null,
+        "parents": 0
+      }
+    }
+  ],
+  "modal_informative_unordered_pattern": null,
+  "gate_except_separate_beta0_check": false,
+  "beta_zero_all_weights_tie_assertion": true,
+  "whole_parent_approx_80pct_power_mde_at_5pct": 0.0,
+  "checks": {
+    "explicit_exterior_and_both_histograms": 3,
+    "canonical_projection": {
+      "small_histograms": 4,
+      "n_a": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "betas": [
+        0.0,
+        0.25,
+        3.05
+      ],
+      "L20_mixed_counts": [
+        1,
+        5999
+      ],
+      "L20_n_a": 2400
+    }
+  },
+  "method": "See 01-02-development-design.json. Positive-axis enumeration = both random signs by exact conjugacy of the two fillings. Unaffected degree sums exclude both end neighborhoods; local histogram terms read exterior bits only. Fixed global N_A=2400. Finite released parents need not be at equilibrium.",
+  "source_sha256": "b258296561e15eed8d6161593d365cf053505759bd76bb90187761f22f20ba5c",
+  "per_parent_sha256": "7a054fc403bd0645286483a7d9b792ea8d9a6d8764b5de899ca1a289a8523201",
+  "code_sha256": "e37a59590d07ca78fcff68d01f12db4284fc7e9c0dc90e3464db9c1582f6ce39"
+}

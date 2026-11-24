@@ -1,0 +1,110 @@
+{
+  "results": {
+    "b09": {
+      "winding": 0.0,
+      "winding_boxes": 0,
+      "parents": 256,
+      "exact95": [
+        0.0,
+        0.014306362729039375
+      ],
+      "first_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.7365966796875,
+        "lo": 0.7364480539666095,
+        "hi": 0.7367453054083904,
+        "se": 7.547094052400602e-05,
+        "mde80_approx": 0.00021131863346721683
+      },
+      "final_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "se": 0.0,
+        "mde80_approx": 0.0
+      },
+      "iterations": {
+        "parents": 256,
+        "estimate": 9.3515625,
+        "lo": 9.281613636905302,
+        "hi": 9.421511363094698,
+        "se": 0.035519467658181314,
+        "mde80_approx": 0.09945450944290768
+      },
+      "tree_final_volume_fraction": 2.8446730141699894e-67
+    },
+    "b00": {
+      "winding": 0.0,
+      "winding_boxes": 0,
+      "parents": 256,
+      "exact95": [
+        0.0,
+        0.014306362729039375
+      ],
+      "first_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.5292119140625,
+        "lo": 0.5287811120395358,
+        "hi": 0.5296427160854642,
+        "se": 0.00021875778740022952,
+        "mde80_approx": 0.0006125218047206426
+      },
+      "final_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.00062890625,
+        "lo": 0.0005243907100044724,
+        "hi": 0.0007334217899955276,
+        "se": 5.307214697146271e-05,
+        "mde80_approx": 0.0001486020115200956
+      },
+      "iterations": {
+        "parents": 256,
+        "estimate": 9.33984375,
+        "lo": 9.201226684014951,
+        "hi": 9.478460815985049,
+        "se": 0.0703886264092999,
+        "mde80_approx": 0.1970881539460397
+      },
+      "tree_final_volume_fraction": 4.900085868423108e-52
+    },
+    "b08": {
+      "winding": 0.0,
+      "winding_boxes": 0,
+      "parents": 256,
+      "exact95": [
+        0.0,
+        0.014306362729039375
+      ],
+      "first_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.7309511718749999,
+        "lo": 0.7307699875595509,
+        "hi": 0.7311323561904489,
+        "se": 9.200393184445528e-05,
+        "mde80_approx": 0.00025761100916447477
+      },
+      "final_occupied_volume_fraction": {
+        "parents": 256,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "se": 0.0,
+        "mde80_approx": 0.0
+      },
+      "iterations": {
+        "parents": 256,
+        "estimate": 8.58203125,
+        "lo": 8.517416479200673,
+        "hi": 8.646646020799327,
+        "se": 0.03281085867743688,
+        "mde80_approx": 0.09187040429682326
+      },
+      "tree_final_volume_fraction": 6.932433123325428e-77
+    },
+    "winding_margin": 0.05
+  },
+  "code": "7801c6de5426b7f17bdbc64c00ff31798d2e407519587f6d171b9a7bc4ce0cb3",
+  "parent_evidence": "26acfe621426686cd9a4beec83ae17008d21e3076ccd60ad1c26073ee847c98b",
+  "scope": "Native training parents only; calibration, not family-wide discovery."
+}

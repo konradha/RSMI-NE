@@ -1,0 +1,296 @@
+{
+  "item": 1,
+  "index": 9,
+  "beta": 3.05,
+  "cohort": "development-b09",
+  "parents": 256,
+  "edges_per_parent": 24000,
+  "opportunities": 6144000,
+  "eligible": 41649,
+  "eligible_parents": 256,
+  "unlike_and_cumulative_equal_shells": [
+    2680756,
+    637936,
+    137022,
+    41649
+  ],
+  "eligible_frequency": {
+    "mean": 0.00677880859375,
+    "se": 3.513160715460357e-05,
+    "ci95": [
+      0.006709623548444625,
+      0.006847993639055374
+    ],
+    "parents": 256
+  },
+  "informative_parents": 256,
+  "informative_count": 41558,
+  "informative_fraction": {
+    "mean": 0.9978150735912027,
+    "se": 0.00023296070601465466,
+    "ci95": [
+      0.9973563016104884,
+      0.998273845571917
+    ],
+    "parents": 256
+  },
+  "changed_hist_fraction": {
+    "mean": 0.9978150735912027,
+    "se": 0.00023296070601465466,
+    "ci95": [
+      0.9973563016104884,
+      0.998273845571917
+    ],
+    "parents": 256
+  },
+  "gain_nat_per_eligible": {
+    "mean": 0.6884849832143504,
+    "se": 0.0005453464361889474,
+    "ci95": [
+      0.6874110267133335,
+      0.6895589397153672
+    ],
+    "parents": 256
+  },
+  "expected_gain_under_forecast": {
+    "mean": 0.688426899856283,
+    "se": 0.00024825078947598517,
+    "ci95": [
+      0.6879380169525944,
+      0.6889157827599717
+    ],
+    "parents": 256
+  },
+  "favored_calibration_residual": {
+    "mean": 0.00014289783412636294,
+    "se": 0.00015453629437072675,
+    "ci95": [
+      -0.00016143212380334104,
+      0.0004472277920560669
+    ],
+    "parents": 256
+  },
+  "favored_forecast": {
+    "mean": 0.9978282419291334,
+    "se": 0.00015556137279208336,
+    "ci95": [
+      0.9975218932734337,
+      0.9981345905848332
+    ],
+    "parents": 256
+  },
+  "favored_observed": {
+    "mean": 0.9979711397632596,
+    "se": 0.00022108125253459066,
+    "ci95": [
+      0.9975357621158476,
+      0.9984065174106715
+    ],
+    "parents": 256
+  },
+  "reliability": [
+    {
+      "pmax_range": [
+        0.5,
+        0.55
+      ],
+      "count": 91,
+      "forecast": {
+        "mean": 0.5,
+        "se": 0.0,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "parents": 74
+      },
+      "observation": {
+        "mean": 0.5,
+        "se": 0.0,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "parents": 74
+      }
+    },
+    {
+      "pmax_range": [
+        0.55,
+        0.65
+      ],
+      "count": 52,
+      "forecast": {
+        "mean": 0.5637937875486598,
+        "se": 0.0017947059066814937,
+        "ci95": [
+          0.56025945423686,
+          0.5673281208604597
+        ],
+        "parents": 45
+      },
+      "observation": {
+        "mean": 0.6346153846153846,
+        "se": 0.06823297267641774,
+        "ci95": [
+          0.5002434703114373,
+          0.7689872989193318
+        ],
+        "parents": 45
+      }
+    },
+    {
+      "pmax_range": [
+        0.65,
+        0.75
+      ],
+      "count": 1,
+      "forecast": {
+        "mean": 0.7097717491942718,
+        "se": null,
+        "ci95": null,
+        "parents": 1
+      },
+      "observation": {
+        "mean": 1.0,
+        "se": null,
+        "ci95": null,
+        "parents": 1
+      }
+    },
+    {
+      "pmax_range": [
+        0.75,
+        0.85
+      ],
+      "count": 41,
+      "forecast": {
+        "mean": 0.8053922612128054,
+        "se": 0.0034718381607494716,
+        "ci95": [
+          0.7985551336260333,
+          0.8122293887995775
+        ],
+        "parents": 39
+      },
+      "observation": {
+        "mean": 0.8536585365853658,
+        "se": 0.05417822523072536,
+        "ci95": [
+          0.7469647849827912,
+          0.9603522881879405
+        ],
+        "parents": 39
+      }
+    },
+    {
+      "pmax_range": [
+        0.85,
+        0.95
+      ],
+      "count": 19,
+      "forecast": {
+        "mean": 0.9377224765824065,
+        "se": 0.004668353422120699,
+        "ci95": [
+          0.9285290388444294,
+          0.9469159143203836
+        ],
+        "parents": 19
+      },
+      "observation": {
+        "mean": 0.9473684210526315,
+        "se": 0.051328165615041985,
+        "ci95": [
+          0.8462873219759244,
+          1.0484495201293387
+        ],
+        "parents": 19
+      }
+    },
+    {
+      "pmax_range": [
+        0.95,
+        1.0
+      ],
+      "count": 41445,
+      "forecast": {
+        "mean": 0.9996907609998783,
+        "se": 1.0159205163381083e-05,
+        "ci95": [
+          0.9996707543697688,
+          0.9997107676299878
+        ],
+        "parents": 256
+      },
+      "observation": {
+        "mean": 0.9996863312824225,
+        "se": 9.142356082568935e-05,
+        "ci95": [
+          0.9995062898977551,
+          0.9998663726670898
+        ],
+        "parents": 256
+      }
+    }
+  ],
+  "modal_informative_unordered_pattern": {
+    "spectra_k0_to_6": [
+      [
+        0,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        1,
+        0
+      ]
+    ],
+    "edges": 2215,
+    "first_favored": 2215,
+    "first_occupied": 2215,
+    "interpretation": "Each occupied neighbor counted in that spectrum is promoted from k to k+1 by choosing that end. Other end stays unpromoted; occupied endpoint degree tied."
+  },
+  "gate_except_separate_beta0_check": true,
+  "beta_zero_all_weights_tie_assertion": false,
+  "whole_parent_approx_80pct_power_mde_at_5pct": 0.0015269700213290528,
+  "checks": {
+    "explicit_exterior_and_both_histograms": 3,
+    "canonical_projection": {
+      "small_histograms": 4,
+      "n_a": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "betas": [
+        0.0,
+        0.25,
+        3.05
+      ],
+      "L20_mixed_counts": [
+        1,
+        5999
+      ],
+      "L20_n_a": 2400
+    }
+  },
+  "method": "See 01-02-development-design.json. Positive-axis enumeration = both random signs by exact conjugacy of the two fillings. Unaffected degree sums exclude both end neighborhoods; local histogram terms read exterior bits only. Fixed global N_A=2400. Finite released parents need not be at equilibrium.",
+  "source_sha256": "c0b6c68821ee50701ef0a8a3947835768348b4bd5d4766ad399a0d3f89d2e3f4",
+  "per_parent_sha256": "3926a6b99273469818deb0bec4443b48bf55d73b0394c67c172bd7278287d168",
+  "code_sha256": "e37a59590d07ca78fcff68d01f12db4284fc7e9c0dc90e3464db9c1582f6ce39"
+}

@@ -1,0 +1,433 @@
+{
+  "results": {
+    "b09": {
+      "species": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.19190625000000008,
+          "lo": 0.08147968710653582,
+          "hi": 0.30233281289346436,
+          "se": 0.05414358169031719,
+          "mde80_approx": 0.1516020287328881
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.25279941772460923,
+          "lo": 0.24981220380075841,
+          "hi": 0.25578663164846005,
+          "se": 0.0014646698844417516,
+          "mde80_approx": 0.004101075676436905
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": -0.06089316772460917,
+          "lo": -0.1709857750150562,
+          "hi": 0.04919943956583787,
+          "se": 0.05397983890960285,
+          "mde80_approx": 0.15114354894688797
+        },
+        "dominant_squared_displacements": [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        "dominant_contributions": [
+          0.14150738818359368,
+          0.050736916015624973,
+          0.03660349975585936,
+          0.008933845214843745,
+          0.004884919189453122
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.1415073881835937,
+          "lo": 0.1407569843495304,
+          "hi": 0.142257792017657,
+          "se": 0.0003679327711171344,
+          "mde80_approx": 0.0010302117591279763
+        },
+        "species_channel_sums": [
+          [
+            0.09424604565429684,
+            0.03711384387207029
+          ],
+          [
+            0.0371138438720703,
+            0.08432568432617184
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      },
+      "coarse": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.18153214037500004,
+          "lo": 0.10155427423513654,
+          "hi": 0.26151000651486356,
+          "se": 0.03921418918868882,
+          "mde80_approx": 0.10979972972832869
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.20647175781249996,
+          "lo": 0.20199087219334605,
+          "hi": 0.21095264343165387,
+          "se": 0.00219703656628062,
+          "mde80_approx": 0.006151702385585735
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": -0.02493961743749994,
+          "lo": -0.103758865781185,
+          "hi": 0.053879630906185125,
+          "se": 0.03864610379644706,
+          "mde80_approx": 0.10820909063005177
+        },
+        "dominant_squared_displacements": [
+          0,
+          2,
+          1,
+          3,
+          36
+        ],
+        "dominant_contributions": [
+          0.18588988281249996,
+          0.009637093749999997,
+          0.009090890625,
+          0.0011819062499999994,
+          0.00044226562499999995
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.18588988281249996,
+          "lo": 0.18368089962585107,
+          "hi": 0.18809886599914885,
+          "se": 0.0010830932203717124,
+          "mde80_approx": 0.003032661017040795
+        },
+        "species_channel_sums": [
+          [
+            0.031383249999999994,
+            0.0044179453125,
+            0.003617984374999999,
+            0.004908929687499997
+          ],
+          [
+            0.0044179453125,
+            0.03411319531249999,
+            0.003997515624999999,
+            0.006222710937499999
+          ],
+          [
+            0.0036179843749999984,
+            0.003997515624999999,
+            0.03432543749999998,
+            0.007676476562499998
+          ],
+          [
+            0.004908929687499997,
+            0.006222710937499999,
+            0.007676476562499998,
+            0.044966749999999986
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      }
+    },
+    "b00": {
+      "species": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.19453906249999994,
+          "lo": 0.12063709250121624,
+          "hi": 0.26844103249878365,
+          "se": 0.03623509819430718,
+          "mde80_approx": 0.10145827494406011
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.14167637133789057,
+          "lo": 0.14081729198198734,
+          "hi": 0.1425354506937938,
+          "se": 0.00042121779457798424,
+          "mde80_approx": 0.0011794098248183557
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": 0.052862691162109385,
+          "lo": -0.021015570737694694,
+          "hi": 0.12674095306191346,
+          "se": 0.03622347380466586,
+          "mde80_approx": 0.1014257266530644
+        },
+        "dominant_squared_displacements": [
+          0,
+          98,
+          49,
+          74,
+          86
+        ],
+        "dominant_contributions": [
+          0.14193668554687497,
+          -0.0001304904785156249,
+          -0.00011590551757812497,
+          -8.277636718749996e-05,
+          -8.137158203124991e-05
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.14193668554687494,
+          "lo": 0.1412265491386514,
+          "hi": 0.14264682195509848,
+          "se": 0.00034818912789139853,
+          "mde80_approx": 0.0009749295580959159
+        },
+        "species_channel_sums": [
+          [
+            0.04386452001953123,
+            0.01822047058105468
+          ],
+          [
+            0.01822047058105468,
+            0.06137091015624998
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      },
+      "coarse": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.18306485365624997,
+          "lo": 0.09668315855751759,
+          "hi": 0.26944654875498236,
+          "se": 0.042354069913762595,
+          "mde80_approx": 0.11859139575853525
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.18759121874999996,
+          "lo": 0.18408618257012696,
+          "hi": 0.19109625492987295,
+          "se": 0.0017185648793176633,
+          "mde80_approx": 0.004811981662089457
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": -0.0045263650937499705,
+          "lo": -0.091540398412501,
+          "hi": 0.08248766822500106,
+          "se": 0.04266411357693919,
+          "mde80_approx": 0.11945951801542971
+        },
+        "dominant_squared_displacements": [
+          0,
+          17,
+          29,
+          13,
+          20
+        ],
+        "dominant_contributions": [
+          0.18690184375000002,
+          0.0006299062499999998,
+          0.000622140625,
+          0.0005615781249999997,
+          -0.0004997656249999998
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.18690184374999996,
+          "lo": 0.18489967423731601,
+          "hi": 0.1889040132626839,
+          "se": 0.0009816897830321066,
+          "mde80_approx": 0.002748731392489898
+        },
+        "species_channel_sums": [
+          [
+            0.03399263281250001,
+            0.003540468749999999,
+            0.004071710937499999,
+            0.0037882890624999985
+          ],
+          [
+            0.003540468749999999,
+            0.032849140624999995,
+            0.004156562499999999,
+            0.0036683906249999993
+          ],
+          [
+            0.004071710937499999,
+            0.004156562499999999,
+            0.037440640625,
+            0.004478781249999998
+          ],
+          [
+            0.0037882890624999985,
+            0.0036683906249999993,
+            0.004478781249999998,
+            0.03590039843749999
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      }
+    },
+    "b08": {
+      "species": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.30674609374999995,
+          "lo": 0.1488472598569296,
+          "hi": 0.4646449276430703,
+          "se": 0.07741985431479254,
+          "mde80_approx": 0.21677559208141908
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.2443135253906249,
+          "lo": 0.24054457024427825,
+          "hi": 0.24808248053697154,
+          "se": 0.0018479677851626717,
+          "mde80_approx": 0.005174309798455481
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": 0.06243256835937507,
+          "lo": -0.0950843943706792,
+          "hi": 0.21994953108942936,
+          "se": 0.07723261791108517,
+          "mde80_approx": 0.21625133015103845
+        },
+        "dominant_squared_displacements": [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        "dominant_contributions": [
+          0.14199210156249992,
+          0.0470210187988281,
+          0.03534021435546873,
+          0.007514409667968745,
+          0.0045596933593749995
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.14199210156249992,
+          "lo": 0.14088061209831554,
+          "hi": 0.1431035910266843,
+          "se": 0.0005449777573902529,
+          "mde80_approx": 0.0015259377206927082
+        },
+        "species_channel_sums": [
+          [
+            0.08932046142578119,
+            0.03565954528808591
+          ],
+          [
+            0.03565954528808592,
+            0.08367397338867184
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      },
+      "coarse": {
+        "independent_parents": 256,
+        "disjoint_measured_replica_pairs": 32,
+        "independent_groups": 32,
+        "observed_chi": {
+          "parents": 32,
+          "estimate": 0.22985089512500007,
+          "lo": 0.11594047103202611,
+          "hi": 0.34376131921797404,
+          "se": 0.05585176420103575,
+          "mde80_approx": 0.15638493976290008
+        },
+        "two_point_chi": {
+          "parents": 32,
+          "estimate": 0.20653596093749996,
+          "lo": 0.20251176579832358,
+          "hi": 0.21056015607667633,
+          "se": 0.001973115277218035,
+          "mde80_approx": 0.005524722776210498
+        },
+        "paired_discrepancy": {
+          "parents": 32,
+          "estimate": 0.023314934187500105,
+          "lo": -0.09153828585423883,
+          "hi": 0.13816815422923903,
+          "se": 0.05631402933119745,
+          "mde80_approx": 0.15767928212735285
+        },
+        "dominant_squared_displacements": [
+          0,
+          1,
+          2,
+          29,
+          3
+        ],
+        "dominant_contributions": [
+          0.18854235156249996,
+          0.010070218749999995,
+          0.008150781249999997,
+          -0.0007701249999999998,
+          0.0006618593749999997
+        ],
+        "r0_rhs": {
+          "parents": 32,
+          "estimate": 0.18854235156249996,
+          "lo": 0.18689897280380213,
+          "hi": 0.1901857303211978,
+          "se": 0.0008057700044103684,
+          "mde80_approx": 0.002256156012349031
+        },
+        "species_channel_sums": [
+          [
+            0.03228527343749999,
+            0.0040881796875,
+            0.0031853750000000003,
+            0.005297359374999998
+          ],
+          [
+            0.004088179687499999,
+            0.0336678515625,
+            0.004116421875,
+            0.005722734374999997
+          ],
+          [
+            0.0031853749999999994,
+            0.004116421874999999,
+            0.03502142187499999,
+            0.007348312499999997
+          ],
+          [
+            0.005297359374999998,
+            0.005722734374999997,
+            0.007348312499999998,
+            0.046044648437499995
+          ]
+        ],
+        "reference": "disjoint pairs of parent differences give independent connected correlations; two independent nuisance means per replica for coarse counts, not per-box fixed means"
+      }
+    },
+    "beta0_species_exact": 0.14182397799724966
+  },
+  "parent_evidence_sha256": "1cf4172648ada7c7771144712322bd9e8d9e82d3ad1a5599f58a7065e55e08b6",
+  "scope": "Discovery / calibration only; uncertainty is across disjoint whole-parent groups."
+}

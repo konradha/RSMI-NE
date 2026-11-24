@@ -1,0 +1,95 @@
+{
+  "results": {
+    "b09": {
+      "train_parents": 128,
+      "calibration_parents": 128,
+      "exact_pair_fitted_probability": 0.24494914519314323,
+      "gradient_max": 3.832269768189178e-08,
+      "separate_64parent_refits": [
+        0.24485007795650196,
+        0.24505229402124115
+      ],
+      "observed_calibration": {
+        "parents": 128,
+        "estimate": 0.2548271484375,
+        "lo": 0.2539788936545993,
+        "hi": 0.25567540322040067,
+        "se": 0.00042866707550875304,
+        "mde80_approx": 0.0012002678114245084
+      },
+      "paired_residual_conditional_on_fit": {
+        "parents": 128,
+        "estimate": 0.009878003244356769,
+        "lo": 0.009029748461456105,
+        "hi": 0.010726258027257433,
+        "se": 0.00042866707550875304,
+        "mde80_approx": 0.0012002678114245084
+      },
+      "canonical_beta0_reference": 0.10390140129988837,
+      "parents_with_hole": 128,
+      "catalogue_masks_with_hole": 142
+    },
+    "b00": {
+      "train_parents": 128,
+      "calibration_parents": 128,
+      "exact_pair_fitted_probability": 0.10414034607406765,
+      "gradient_max": 8.74352312774107e-09,
+      "separate_64parent_refits": [
+        0.10393002069896304,
+        0.10434921560948021
+      ],
+      "observed_calibration": {
+        "parents": 128,
+        "estimate": 0.1037685546875,
+        "lo": 0.10283145561541505,
+        "hi": 0.10470565375958495,
+        "se": 0.0004735646963509782,
+        "mde80_approx": 0.001325981149782739
+      },
+      "paired_residual_conditional_on_fit": {
+        "parents": 128,
+        "estimate": -0.0003717913865676493,
+        "lo": -0.0013088904586525904,
+        "hi": 0.0005653076855172916,
+        "se": 0.0004735646963509782,
+        "mde80_approx": 0.001325981149782739
+      },
+      "canonical_beta0_reference": 0.10390140129988837,
+      "parents_with_hole": 128,
+      "catalogue_masks_with_hole": 142
+    },
+    "b08": {
+      "train_parents": 128,
+      "calibration_parents": 128,
+      "exact_pair_fitted_probability": 0.237581871535837,
+      "gradient_max": 2.8685688713281365e-08,
+      "separate_64parent_refits": [
+        0.2376026971378739,
+        0.23756095381724113
+      ],
+      "observed_calibration": {
+        "parents": 128,
+        "estimate": 0.24835839843750002,
+        "lo": 0.2474469235587148,
+        "hi": 0.24926987331628522,
+        "se": 0.00046061546432130297,
+        "mde80_approx": 0.0012897233000996483
+      },
+      "paired_residual_conditional_on_fit": {
+        "parents": 128,
+        "estimate": 0.010776526901662989,
+        "lo": 0.009865052022877768,
+        "hi": 0.01168800178044821,
+        "se": 0.00046061546432130297,
+        "mde80_approx": 0.0012897233000996483
+      },
+      "canonical_beta0_reference": 0.10390140129988837,
+      "parents_with_hole": 128,
+      "catalogue_masks_with_hole": 142
+    },
+    "margin": 0.001
+  },
+  "code": "7801c6de5426b7f17bdbc64c00ff31798d2e407519587f6d171b9a7bc4ce0cb3",
+  "parent_evidence": "26acfe621426686cd9a4beec83ae17008d21e3076ccd60ad1c26073ee847c98b",
+  "scope": "Native training parents only; calibration, not family-wide discovery."
+}
