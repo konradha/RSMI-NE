@@ -1,0 +1,40 @@
+{
+  "lock_sha256": "5dc016d63b139b3c0d12f79ebfea6611193b2cfb4281f5706a45084eb8d4ac43",
+  "implementation_sha256": "0bfcd32886ef2297f47c5c3631835bb8383f1938507ba830e697d7287a5470fb",
+  "parent_evidence_sha256": "3a4b51428fcadf4bb134e64348d0ca490a11365e16d623ca164966a2a083bdc9",
+  "beta": 2.372222222222,
+  "topology": {
+    "predicted_hole_probability": 0.22854171836502338,
+    "observed_hole_probability": 0.24012744140625,
+    "gain": 0.011585723041226625,
+    "training_parents": 256,
+    "validation_parents": 512,
+    "train_se": 0.00026704862923033004,
+    "validation_se": 0.0002653070986631073,
+    "family15": [
+      0.010470306056701488,
+      0.012701140025751763
+    ],
+    "conditional95": [
+      0.011064496145986574,
+      0.012106949936466677
+    ],
+    "gradient_error": 1.512767744404897e-08,
+    "fisher_cond": 2765.52753908547,
+    "mde80_family_approx": 0.0014323747151823761,
+    "pass_margin": true
+  },
+  "aliasing": {
+    "historical_alias_fraction": 0.8875436262319935,
+    "composition_alias_fraction": 0.3907683502018416,
+    "difference": 0.49677527603015187,
+    "paired_se": 0.005667975229307587,
+    "family15": [
+      0.48006003507843975,
+      0.513490516981864
+    ],
+    "pass_margin": true,
+    "mde80_family_approx": 0.021487676094789132
+  },
+  "scope": "Prelocked 04/10 secondary contrasts, parent-based Bonferroni 15; beta7 validation, reused archive. Diagnostics at one L, not bulk phases."
+}
