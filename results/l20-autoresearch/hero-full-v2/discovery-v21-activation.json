@@ -1,0 +1,21 @@
+{
+  "stage": "v2.1-development-only",
+  "eligible_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+  ],
+  "panel_sha256": "a2502039ae288d76b5aa4e7d6d8302767f91cf12fe9847f3fe86cbbba82a6b47",
+  "design_sha256": "fe00df7b5317428cedcb93969bdd99863552936c518690e12db217cc71d572aa",
+  "v2_fit_count": 54681,
+  "v2_held_sealed_count": 8426,
+  "v2_9_temperature_macro_available": false,
+  "v21_exam_authorized": false,
+  "policy": "FIT coefficients/normalization; on eligible panel EVEN DEV chooses fixed ridge hyperparameter/grid and encoder; ODD DEV measures rule agreement and physical contextual same-f forecast. No exam use even on success. Index 9 stays in training: five even-dev parents is policy under these immutable folds, not evidence there are only five simulations. No change to any historical assignments. Separate paid release required.",
+  "pilot_code_revision": "84e962356c2e68c09186d3fa2351035d39425819"
+}

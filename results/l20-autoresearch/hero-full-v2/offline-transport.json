@@ -1,0 +1,2254 @@
+{
+  "schema": "hero-full-v2-offline-transport-1",
+  "source": "archived-physical",
+  "beta_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9
+  ],
+  "stage": "local offline packing only; no launch or upload",
+  "roles": {
+    "b00/fit": {
+      "parents": 4746,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "e25fce538f9edac02260e4bdf90dbb85a2fe96ae5232fbb9ff6f38e7e60aecfe",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343734362c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343734362c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343734362c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b00-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1336810,
+          "raw_bytes": 6767616,
+          "sha256": "05afe2547a85bbe7146ed6fe9f902c82a410b1c644512109b2f75ca2b33d2582"
+        },
+        {
+          "name": "b00-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1336831,
+          "raw_bytes": 6767616,
+          "sha256": "98c24069c89389c6a43ab7becef8ec162c27d50cac066a4d9c332ca53990883b"
+        },
+        {
+          "name": "b00-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1336971,
+          "raw_bytes": 6767616,
+          "sha256": "1b8dfd6eeddd81882bc8575720ee54378e2175b24855e29865bc3e357ed929eb"
+        },
+        {
+          "name": "b00-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1336761,
+          "raw_bytes": 6767616,
+          "sha256": "f5c269bf375fad455c3152cd6d5603a21338a843cfa9c006ca5ba52f2d0784b6"
+        },
+        {
+          "name": "b00-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1336816,
+          "raw_bytes": 6767616,
+          "sha256": "af564e274410faa87f4e0989c2cfc79558b7fea4e05336fc565d0abc0d982a5b"
+        },
+        {
+          "name": "b00-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1336603,
+          "raw_bytes": 6767616,
+          "sha256": "9289ba2c814b859b4ae5793cb54760b58296fc89c342966270eae4c603c95654"
+        },
+        {
+          "name": "b00-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1336966,
+          "raw_bytes": 6767616,
+          "sha256": "d5ab85f99322b0551990d2b9a3815b98be70bbb88da7f48e4a085ac5fd6f96d4"
+        },
+        {
+          "name": "b00-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1335843,
+          "raw_bytes": 6767616,
+          "sha256": "83a59f4a29da27bbadfd0c069bd58d7dd152dddf0c17f8ecb40b7932d30cf322"
+        },
+        {
+          "name": "b00-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1337357,
+          "raw_bytes": 6767616,
+          "sha256": "597c8e03b16937c4b81abb1628daf94827cd1454fc1ab974341c25d2ff5a0be3"
+        },
+        {
+          "name": "b00-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1335348,
+          "raw_bytes": 6767616,
+          "sha256": "b18a4d18319031ffb00baeb6b7d35a0fa58a922b0443d36ae9687f16f99c5e20"
+        },
+        {
+          "name": "b00-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1335600,
+          "raw_bytes": 6767616,
+          "sha256": "9436c86afe0037568c278fb15ba81ee8cab8a125799bfc344a11b5b0e6b5b1e9"
+        },
+        {
+          "name": "b00-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1335644,
+          "raw_bytes": 6767616,
+          "sha256": "052d8addb01a7755709291a8c98ed2f4a720bd5f31d7f1f7b84da3ecffd76da5"
+        },
+        {
+          "name": "b00-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1336256,
+          "raw_bytes": 6767616,
+          "sha256": "0b3c2866e2acfd023151b64872c9a0b61a3f652a20d6ad5875d7c3f96b80a57c"
+        },
+        {
+          "name": "b00-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1337078,
+          "raw_bytes": 6767616,
+          "sha256": "ebe021193c402ce728f8fd976b1a416d397c03c5ab8a1ea8ce2a4799c0f876b1"
+        },
+        {
+          "name": "b00-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1335434,
+          "raw_bytes": 6767616,
+          "sha256": "c2dc131cbb358ae8ac8c512bc5b9c6a835bef8963e31919d59e58f42deb47a7d"
+        },
+        {
+          "name": "b00-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1337353,
+          "raw_bytes": 6767616,
+          "sha256": "c67e04985e7e6bff43ffd76b7548766556267eec93cf570905388e49890006a3"
+        },
+        {
+          "name": "b00-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1336527,
+          "raw_bytes": 6767616,
+          "sha256": "892fe70712be66b631072fa94820ad96c2f4a95f93643ac62e2c6b2466dbee2c"
+        },
+        {
+          "name": "b00-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1336481,
+          "raw_bytes": 6767616,
+          "sha256": "a1fc30a2c8977bd676760d1eebf5ab1e50c326b0e1ddd46b30b923c70e2b9b8a"
+        },
+        {
+          "name": "b00-fit-018.z",
+          "start": 4608,
+          "parents": 138,
+          "bytes": 721184,
+          "raw_bytes": 3648168,
+          "sha256": "e8bd433efcae0b2dfffc5d008f223d4306a290681292f9607729891f0a9dc29f"
+        }
+      ]
+    },
+    "b00/dev_even": {
+      "parents": 396,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "5925a02e58f9baa09848e64e1bc097e97e4b2e4617d38e14e559f371b3ca32b2",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283339362c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283339362c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283339362c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b00-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1336245,
+          "raw_bytes": 6767616,
+          "sha256": "f972b0cafdd0dffc245e5361705447ddf2f03ec1c4a5d472ce7b8b7797f21672"
+        },
+        {
+          "name": "b00-dev_even-001.z",
+          "start": 256,
+          "parents": 140,
+          "bytes": 730239,
+          "raw_bytes": 3701040,
+          "sha256": "c9142fd5a7b8a0a60b97abd4e4e2d8da072fc2b01e90df2b6b1d6078057b91ea"
+        }
+      ]
+    },
+    "b01/fit": {
+      "parents": 7665,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "739f2392e96a47164b42ebb25e02dd619ca9824f92abc80f94ac68cad3702854",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b01-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1332830,
+          "raw_bytes": 6767616,
+          "sha256": "f14c93e0945a5dd8154e6aeab140dbe7ff325a17c1179d051b13c2336d957051"
+        },
+        {
+          "name": "b01-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1332870,
+          "raw_bytes": 6767616,
+          "sha256": "c8c76621e4add7a5552743ecb31033509ca77bf6ac1b6eee0159682cfb2344ac"
+        },
+        {
+          "name": "b01-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1332396,
+          "raw_bytes": 6767616,
+          "sha256": "cdba6b397709f382b31ae08dcd00590e53d7d4060859d3b2b521332496fae55d"
+        },
+        {
+          "name": "b01-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1332325,
+          "raw_bytes": 6767616,
+          "sha256": "47c6554bc348e9f9c51220ff556a457345e81d45a8feb5ea18c7c9818b99097d"
+        },
+        {
+          "name": "b01-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1331849,
+          "raw_bytes": 6767616,
+          "sha256": "827a7bc2d93f22335aebf228a3943bed535fc22a33e8c15fae86d17d7c3d05dc"
+        },
+        {
+          "name": "b01-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1332104,
+          "raw_bytes": 6767616,
+          "sha256": "432e304583e2364c28a697df72f8c5710ba9637baff69d73e0f44e8e86b37fcb"
+        },
+        {
+          "name": "b01-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1331631,
+          "raw_bytes": 6767616,
+          "sha256": "fa6d554d4a9aac35805bb3d76ed1b95359fa7d86926548244825b8fc8961440b"
+        },
+        {
+          "name": "b01-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1332746,
+          "raw_bytes": 6767616,
+          "sha256": "1c793a5150dc701f654c9f14182f5d371e94fa4db194b2d5c71e703cb3254b88"
+        },
+        {
+          "name": "b01-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1333658,
+          "raw_bytes": 6767616,
+          "sha256": "4ac0f375a5e9a0ffdeb8a861f2a37232bcef718d3436567ac45bc202d64121ff"
+        },
+        {
+          "name": "b01-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1332934,
+          "raw_bytes": 6767616,
+          "sha256": "0acf27d35b3116ee9b3fb9680a38325cc40ac7d44a73a4ba997280f5b26bbf3e"
+        },
+        {
+          "name": "b01-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1332057,
+          "raw_bytes": 6767616,
+          "sha256": "40dc5a69b8750de8f9974e234dcd6d6621eeb6b6819c08cb31397be6d142cf31"
+        },
+        {
+          "name": "b01-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1333588,
+          "raw_bytes": 6767616,
+          "sha256": "98c7f1f96fa2f805e2a182fe107d20aaa143429779af7830979202d0757f69b9"
+        },
+        {
+          "name": "b01-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1331557,
+          "raw_bytes": 6767616,
+          "sha256": "2f814a49793e5cfd572fd156e37e78d28c073d7b368260b46295750d93c0aee7"
+        },
+        {
+          "name": "b01-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1331507,
+          "raw_bytes": 6767616,
+          "sha256": "1b18a23f3c6ea0b2bea8caeda09c9e68253a89fe9435bc76fbca803787766ef2"
+        },
+        {
+          "name": "b01-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1332525,
+          "raw_bytes": 6767616,
+          "sha256": "1fd8e5aa1d58c73ed756d6bedfbb36d5df32f2c3497e19d7608464b6cf70b546"
+        },
+        {
+          "name": "b01-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1332396,
+          "raw_bytes": 6767616,
+          "sha256": "1c3afd20922c8144fe716d72433def18acf9894cd52603a094077eb60cf638e3"
+        },
+        {
+          "name": "b01-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1332374,
+          "raw_bytes": 6767616,
+          "sha256": "1a421db33a565296586060585398df79ce9b2d1f5fc368efe0c2cb0b586e9145"
+        },
+        {
+          "name": "b01-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1332743,
+          "raw_bytes": 6767616,
+          "sha256": "b4e2b78030cad58c7daf776978e23db3b1e463bff4278057ab78b4b2242290bf"
+        },
+        {
+          "name": "b01-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1333991,
+          "raw_bytes": 6767616,
+          "sha256": "6d5ba9e90408d6c71eb0e4312963b56ab93c983acd015ca04483623a35d2657d"
+        },
+        {
+          "name": "b01-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1333209,
+          "raw_bytes": 6767616,
+          "sha256": "f5d3a4bf6dd3837c51ce7cd152e4ee374c53728b09614cc9d151324c7f316d0e"
+        },
+        {
+          "name": "b01-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1332046,
+          "raw_bytes": 6767616,
+          "sha256": "e2c48f73b250ed75013e8a094ef2c092b5d022386b9429b1398d924790518f04"
+        },
+        {
+          "name": "b01-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1332604,
+          "raw_bytes": 6767616,
+          "sha256": "3465c9b4aa31e18c4f6cb7f7fea6af9211662571843e47daa55959fad3f4eb51"
+        },
+        {
+          "name": "b01-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1332269,
+          "raw_bytes": 6767616,
+          "sha256": "f7f0e097f7aae9cf18ef3e65d471dcfc54e26c75983c80db221f540164e92679"
+        },
+        {
+          "name": "b01-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1332953,
+          "raw_bytes": 6767616,
+          "sha256": "4e0e963f47ef9b585400c3750d52dd519af94a9e482dcded7c7e2a13ad92cc8a"
+        },
+        {
+          "name": "b01-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1332302,
+          "raw_bytes": 6767616,
+          "sha256": "f01247f7b6e8f52c0837a7c0c33441d3c04e686a214827322c3b8bf8c998d7e0"
+        },
+        {
+          "name": "b01-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1332977,
+          "raw_bytes": 6767616,
+          "sha256": "46796001acd99e2c769f9e67f457f07e4f3a2c786ddd0fe04d0ce998f9375629"
+        },
+        {
+          "name": "b01-fit-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1333748,
+          "raw_bytes": 6767616,
+          "sha256": "51d1b0ff38121b1181988e26b853e67272e9cf092d9e84e37aea2f9cf32c3f21"
+        },
+        {
+          "name": "b01-fit-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1332473,
+          "raw_bytes": 6767616,
+          "sha256": "eb2b160eb0631c35c061fb4a8bb7a1cd508cd7dc3bda34ad368aaa000df0dad9"
+        },
+        {
+          "name": "b01-fit-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1332197,
+          "raw_bytes": 6767616,
+          "sha256": "cdd0c83106f3a81fbe09e76425c240aa9e47a4ad7ce33bdd4a89117cc745e1eb"
+        },
+        {
+          "name": "b01-fit-029.z",
+          "start": 7424,
+          "parents": 241,
+          "bytes": 1254125,
+          "raw_bytes": 6371076,
+          "sha256": "ce8980e0c76c8601f244f444246318957367cb32b6c3ae6bbb9ea34e0b7d7f36"
+        }
+      ]
+    },
+    "b01/dev_even": {
+      "parents": 639,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "ec6b59e865c2b49c2acb4cdde667c7fc6b5a31539adbbc605950193173472959",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b01-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1332597,
+          "raw_bytes": 6767616,
+          "sha256": "dc9020b43c1f88c94531a75f119a6abb599943661677ed1329b8abb15c4805bc"
+        },
+        {
+          "name": "b01-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1332957,
+          "raw_bytes": 6767616,
+          "sha256": "389bf253cc06ac68b9d7031c9354e73365a069916efb9a8c66ef31f3507b355f"
+        },
+        {
+          "name": "b01-dev_even-002.z",
+          "start": 512,
+          "parents": 127,
+          "bytes": 660474,
+          "raw_bytes": 3357372,
+          "sha256": "72e464dcbdf0764a35dffa6693115516c9a2f8efed2afa3a73c230e17f0a06ff"
+        }
+      ]
+    },
+    "b02/fit": {
+      "parents": 7664,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "1bf207a6977534e12a272260eeb55c95c47da874e5476dbc3653c7adc61cf82d",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636342c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636342c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636342c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b02-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1326830,
+          "raw_bytes": 6767616,
+          "sha256": "399a12990e0f1c8c0c8afc6becd6b517003c2d15561dee9f1d795872f99271eb"
+        },
+        {
+          "name": "b02-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1326498,
+          "raw_bytes": 6767616,
+          "sha256": "445e4672b33155554dedca820b3e9613441bfdef55d7436dc196d149f5e94db4"
+        },
+        {
+          "name": "b02-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1325290,
+          "raw_bytes": 6767616,
+          "sha256": "9946bcf345b650505e72952055cd44270531984224475f202c713af1fbc19fe3"
+        },
+        {
+          "name": "b02-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1325934,
+          "raw_bytes": 6767616,
+          "sha256": "53b01fb2a73bd6576c9c638a3e6d14f9e792b990741dcd9196459d0e987bf8b1"
+        },
+        {
+          "name": "b02-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1326956,
+          "raw_bytes": 6767616,
+          "sha256": "8364d2437151546ae983d1f492eeb5a9f4a5227541a3ec730c0b95dc40db4744"
+        },
+        {
+          "name": "b02-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1326310,
+          "raw_bytes": 6767616,
+          "sha256": "455e61b6875fe9c150715c1c3107bf95d05b2a184d4ff2b222f68d279dce9ee2"
+        },
+        {
+          "name": "b02-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1327453,
+          "raw_bytes": 6767616,
+          "sha256": "002533c9c0852d3005e5c7a0fa7671253c1dfd0c7da734d006a96727e6ca9d84"
+        },
+        {
+          "name": "b02-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1326484,
+          "raw_bytes": 6767616,
+          "sha256": "5cf9a2b2ad5769c060ed9ed608744a12ec043a30d5022130903681693d323295"
+        },
+        {
+          "name": "b02-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1326960,
+          "raw_bytes": 6767616,
+          "sha256": "16c386c1e5562600bbaa68804b8b91688f7f62e74600fe5091588770299c26be"
+        },
+        {
+          "name": "b02-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1326065,
+          "raw_bytes": 6767616,
+          "sha256": "a2ff4975413dd3638e572c2241115d7d06affac11d491295a34a73feebcbed31"
+        },
+        {
+          "name": "b02-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1325816,
+          "raw_bytes": 6767616,
+          "sha256": "dc99754a709252b2add818135cc9226606ce7b1102b008d95b4e1d87c88e3048"
+        },
+        {
+          "name": "b02-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1326475,
+          "raw_bytes": 6767616,
+          "sha256": "9146c60813c5cdb72da693b121abb68bf1b6947978d4988b430920c6cb1e3263"
+        },
+        {
+          "name": "b02-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1326094,
+          "raw_bytes": 6767616,
+          "sha256": "68da10d572835c6873db9fd62b88c6a0d9e988dcdbc4629d76d830808cbd187d"
+        },
+        {
+          "name": "b02-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1325895,
+          "raw_bytes": 6767616,
+          "sha256": "0bf424d315dcdc4ca50f706411ffcf03f7d07cd94a6244b8bd71dde7480aadc3"
+        },
+        {
+          "name": "b02-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1326974,
+          "raw_bytes": 6767616,
+          "sha256": "5ff649bccbc30efb31cbef775710f9bec7872e9a6f8fcf307bfe99d6c5a7f22e"
+        },
+        {
+          "name": "b02-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1325185,
+          "raw_bytes": 6767616,
+          "sha256": "68eddd9533f71fd7f532ddd2a5adfa7fe4a498136de03a9a49bab9c788221e47"
+        },
+        {
+          "name": "b02-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1326190,
+          "raw_bytes": 6767616,
+          "sha256": "89e93abd0a1d577f5f1642da1181d17a9a254e0af8051dc985986329a3eff543"
+        },
+        {
+          "name": "b02-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1326378,
+          "raw_bytes": 6767616,
+          "sha256": "333af2b20fc58fcced52df7bf09ba3cb0ad4c79818d7d0f142240cfc176fb6b8"
+        },
+        {
+          "name": "b02-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1326035,
+          "raw_bytes": 6767616,
+          "sha256": "5346d6bf7127e0e90929f20e8f5e766a30963e4cf59ff5f9c933223eb2ef5017"
+        },
+        {
+          "name": "b02-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1324421,
+          "raw_bytes": 6767616,
+          "sha256": "8dde6781674f585467e0aab8fc46ec7d3bb0eb2faff35d339e624355342b066a"
+        },
+        {
+          "name": "b02-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1326844,
+          "raw_bytes": 6767616,
+          "sha256": "87b5de367f169e360f38cf48493246d88c3ea7b3f41c4a04ad4f0deb5ce227cd"
+        },
+        {
+          "name": "b02-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1325936,
+          "raw_bytes": 6767616,
+          "sha256": "e0e7e7bc6d5c3a10b8fb7221e814d7ebd234fd84cd4501edff241ab049cf9ce9"
+        },
+        {
+          "name": "b02-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1325691,
+          "raw_bytes": 6767616,
+          "sha256": "abea164b53feeefff55fb76faace035a200b88e37b101848274e19da9a427eb0"
+        },
+        {
+          "name": "b02-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1328302,
+          "raw_bytes": 6767616,
+          "sha256": "08d33205ed633946bec5a38f578067569506333ad226b7c6d8c3b7051ed70bf4"
+        },
+        {
+          "name": "b02-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1325545,
+          "raw_bytes": 6767616,
+          "sha256": "04be5307446fe0a29060d0d895bee3a1aa52b7f06f197db768beb926addc0ee4"
+        },
+        {
+          "name": "b02-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1327029,
+          "raw_bytes": 6767616,
+          "sha256": "37170c9c378505fac44dda30338c0948018d150ebf2b25fdcac424e1a30ec1e1"
+        },
+        {
+          "name": "b02-fit-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1325705,
+          "raw_bytes": 6767616,
+          "sha256": "8087e34ce4a85da267e50c9d31af0a01f777ea3b902d9ffcde50e2aa02537a61"
+        },
+        {
+          "name": "b02-fit-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1325571,
+          "raw_bytes": 6767616,
+          "sha256": "d46bcd1b12b68582b04f2c767fbc9380d81f20dd1108cb8fbd3d634dac4ae1b2"
+        },
+        {
+          "name": "b02-fit-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1325885,
+          "raw_bytes": 6767616,
+          "sha256": "2ca3202524be8bb4b82c9ccfd82781994ba863d4a1efc2b695aacb331edab6ba"
+        },
+        {
+          "name": "b02-fit-029.z",
+          "start": 7424,
+          "parents": 240,
+          "bytes": 1243095,
+          "raw_bytes": 6344640,
+          "sha256": "82b85be3318f8e0827a8f451af83314eb978f3776176046657b3abdcf9332e3c"
+        }
+      ]
+    },
+    "b02/dev_even": {
+      "parents": 639,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "1b6696c2105bf9edf156b66e4cc8ecac7c14a013ecadf5f09743b894de00099c",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b02-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1326082,
+          "raw_bytes": 6767616,
+          "sha256": "92117450f06e59edb72d17e1590330b34791f2470a373a023be5c81640bf4ccf"
+        },
+        {
+          "name": "b02-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1325642,
+          "raw_bytes": 6767616,
+          "sha256": "bd52e17ed143daa52b5df6f1fc72cf77f08befe2717ef2a697e682b776a7dc2e"
+        },
+        {
+          "name": "b02-dev_even-002.z",
+          "start": 512,
+          "parents": 127,
+          "bytes": 657193,
+          "raw_bytes": 3357372,
+          "sha256": "ab53e456b5c9e4970cb900f5b37fc20866feac68a82f5b20c4fa952b55f96d24"
+        }
+      ]
+    },
+    "b03/fit": {
+      "parents": 7667,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "379edb8aadafa71a85aceed7a7e3cf3d967c143bf95e016700b20375f6b19c84",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636372c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636372c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636372c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b03-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1321237,
+          "raw_bytes": 6767616,
+          "sha256": "47424b85e7efa8fb1c70bc279d2aafce06096bb0515f65eb1323eb7daa5e42b3"
+        },
+        {
+          "name": "b03-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1321359,
+          "raw_bytes": 6767616,
+          "sha256": "9876fbb2c545c5590165e0f8b88e63da16c8577ab960422f14e3c434fc9123b5"
+        },
+        {
+          "name": "b03-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1321043,
+          "raw_bytes": 6767616,
+          "sha256": "895de67aeddc9f6fbfc6c5d1e019764562aa83ea059290588794ad0c13806799"
+        },
+        {
+          "name": "b03-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1320419,
+          "raw_bytes": 6767616,
+          "sha256": "f5c3177c7088b2af0e04d2903175735385b85768f326570f45e85eabd42c36ac"
+        },
+        {
+          "name": "b03-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1320634,
+          "raw_bytes": 6767616,
+          "sha256": "859ddbca0414960a1ad44a247c067ff116276cc4515ce95dc7f329267799471d"
+        },
+        {
+          "name": "b03-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1320405,
+          "raw_bytes": 6767616,
+          "sha256": "c3d12c8ca4ed86b8042751c31a6dff0dc1ae7c783465365041146d28e4001b50"
+        },
+        {
+          "name": "b03-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1320509,
+          "raw_bytes": 6767616,
+          "sha256": "c7dc2ca13a9bd0175be589bfe1af8eae3a06362c6b47c7ef7017e31752b800db"
+        },
+        {
+          "name": "b03-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1321015,
+          "raw_bytes": 6767616,
+          "sha256": "24af0c7b64d2806daed0def262904b05ac8f2d01676942c2da8ddad4ae0d1aa0"
+        },
+        {
+          "name": "b03-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1321151,
+          "raw_bytes": 6767616,
+          "sha256": "ecc554ebf43e6182f5b668d3f87fb855fc9d53526dd506b3ed1f25d43abeccd9"
+        },
+        {
+          "name": "b03-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1321841,
+          "raw_bytes": 6767616,
+          "sha256": "56ce570f45645be4b74bbe3512571618686b547f797780e1c8dc156da6b73b3d"
+        },
+        {
+          "name": "b03-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1320927,
+          "raw_bytes": 6767616,
+          "sha256": "4ac4a85521aad7f08dbfe35e089eb3fe0e576e032f67bcadf23572f2a1801a2b"
+        },
+        {
+          "name": "b03-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1320556,
+          "raw_bytes": 6767616,
+          "sha256": "4ac6dd963afaf6bf2700f2cdd3babeb17a6e3cb85268845e50a0d39e92bc8601"
+        },
+        {
+          "name": "b03-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1322133,
+          "raw_bytes": 6767616,
+          "sha256": "0362977aafd78f2d3e509431912d3ec2c61e70800d81d22263a220ba0bb561e6"
+        },
+        {
+          "name": "b03-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1320638,
+          "raw_bytes": 6767616,
+          "sha256": "5f821238a4d56f32275d17611b816611f1c9c590081e5d697fd68a2398bd4d91"
+        },
+        {
+          "name": "b03-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1320879,
+          "raw_bytes": 6767616,
+          "sha256": "f322a1fe161b3f3dc4d879e8cfce4b58b1eb0b53a3a0b45c16dd35d60e9d826c"
+        },
+        {
+          "name": "b03-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1320734,
+          "raw_bytes": 6767616,
+          "sha256": "4318629afbd4f7dd2243978aafe3e02b6051900179758e895ef28c1c4ce9b8a0"
+        },
+        {
+          "name": "b03-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1322313,
+          "raw_bytes": 6767616,
+          "sha256": "0b2a73357c711d50efb5725a930d6ae4d03178d1616617c803ad20a97d096b18"
+        },
+        {
+          "name": "b03-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1320311,
+          "raw_bytes": 6767616,
+          "sha256": "d2dc9e5ab51e5b34655f34e52f9644ba6c3b53b378761f0e472a2a2da4075da0"
+        },
+        {
+          "name": "b03-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1320966,
+          "raw_bytes": 6767616,
+          "sha256": "7863d97a5872b99b9c773954324b523860d24c1a8b27682fc02ca887d0862957"
+        },
+        {
+          "name": "b03-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1319956,
+          "raw_bytes": 6767616,
+          "sha256": "c716250df755e87c59a121c2f2513f5e1576667fd4ff384eaa493323050d0b0d"
+        },
+        {
+          "name": "b03-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1321245,
+          "raw_bytes": 6767616,
+          "sha256": "cca5256d79da356b2e5bbe38257de7862d041a2273498b631d43a752734fd7ee"
+        },
+        {
+          "name": "b03-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1320414,
+          "raw_bytes": 6767616,
+          "sha256": "8c43cb04189b843a9aacfcfe4c20517f4fce49317abad50fb178614aad535e51"
+        },
+        {
+          "name": "b03-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1320897,
+          "raw_bytes": 6767616,
+          "sha256": "ae60631196ce62537cc4de55128ce79b5281380179b0bd3c65b802eb76e5fdd6"
+        },
+        {
+          "name": "b03-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1320471,
+          "raw_bytes": 6767616,
+          "sha256": "83d0cc782ebf9d766853904928f0db3974c9e5d26f8867d3773be52461cc5fe4"
+        },
+        {
+          "name": "b03-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1320985,
+          "raw_bytes": 6767616,
+          "sha256": "07e8ee1474c2a8b7e4584926db13025c1e8831d3445dd5d5dba365debba269a5"
+        },
+        {
+          "name": "b03-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1320232,
+          "raw_bytes": 6767616,
+          "sha256": "22ace2d6bb9c4aca83e336c0e427c700cea32eca694976da720fc68550ff06d3"
+        },
+        {
+          "name": "b03-fit-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1320737,
+          "raw_bytes": 6767616,
+          "sha256": "804041f77e43e271c427f39d428496465173b37b31faec4f3ccb210e194b66fc"
+        },
+        {
+          "name": "b03-fit-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1320384,
+          "raw_bytes": 6767616,
+          "sha256": "ffd2040cce6f9a3de8846b4e7c4cc0176264f267ab131dcceaa72285b10b6083"
+        },
+        {
+          "name": "b03-fit-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1321092,
+          "raw_bytes": 6767616,
+          "sha256": "a18bd086df331e262f1e07fb858cad609b6b8be318a60360340e1f20419654f5"
+        },
+        {
+          "name": "b03-fit-029.z",
+          "start": 7424,
+          "parents": 243,
+          "bytes": 1254121,
+          "raw_bytes": 6423948,
+          "sha256": "db2aeef0fca828049204182a35b141db4b4f94cfd59e92552ea6a05f30a666ac"
+        }
+      ]
+    },
+    "b03/dev_even": {
+      "parents": 639,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "090030ee9366c2e41ee1f98c94552a281ed8c936278896f18038befe691b8b65",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b03-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1321199,
+          "raw_bytes": 6767616,
+          "sha256": "69c745cfb3536b3f10a805e9b0b9a0b9a71818b8e5842bd933a0d518c92a5003"
+        },
+        {
+          "name": "b03-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1322707,
+          "raw_bytes": 6767616,
+          "sha256": "fbe30e300588f15e8b2cec74a61b1e3e6f503736f5007c00ac2fee7065699681"
+        },
+        {
+          "name": "b03-dev_even-002.z",
+          "start": 512,
+          "parents": 127,
+          "bytes": 655651,
+          "raw_bytes": 3357372,
+          "sha256": "b838f0bd65f57899f7382d2386ca1ae131480dda7cb6df04dbe2c7241deebbd4"
+        }
+      ]
+    },
+    "b04/fit": {
+      "parents": 7668,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "4873e1bc8d2e9dab4c2b1a2483b93c1738225aadd5cd0e0df115b466f8d1623b",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636382c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636382c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636382c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b04-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1316436,
+          "raw_bytes": 6767616,
+          "sha256": "0c9726c2fcb86ccc62f676050b4ca9a7c08dd8b25678f246ee6de00d571a5b6b"
+        },
+        {
+          "name": "b04-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1316233,
+          "raw_bytes": 6767616,
+          "sha256": "8231502ad5b0e14bb108d7afc05b5cb94c08385bac0752d6621048cf2b281319"
+        },
+        {
+          "name": "b04-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1315126,
+          "raw_bytes": 6767616,
+          "sha256": "4634120916dc45e85372325812d015809ad014ff95fa1bfec7f4c46c3aef015e"
+        },
+        {
+          "name": "b04-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1316179,
+          "raw_bytes": 6767616,
+          "sha256": "65f10933f115a07cae4e4100f9b42b037a1c3a9a32c3d25b5caf08c3bbdc2c84"
+        },
+        {
+          "name": "b04-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1316500,
+          "raw_bytes": 6767616,
+          "sha256": "c0d63d02194339606cdb5a470a51fd43868ff470fdcd7dd16633ea6f3845a50a"
+        },
+        {
+          "name": "b04-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1317741,
+          "raw_bytes": 6767616,
+          "sha256": "c30dbe16c9b4aa7b447ce8358a30607a13bdf940f6bb0fc74067abc37461dd92"
+        },
+        {
+          "name": "b04-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1315502,
+          "raw_bytes": 6767616,
+          "sha256": "0dd64d8f94b62f1d7033a41cdb4a4620f2cd4ca775346509b042e3962280f1f8"
+        },
+        {
+          "name": "b04-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1317944,
+          "raw_bytes": 6767616,
+          "sha256": "fa7da53ece26262a010c2020ac7faa9ed39470f21132fdeec3bced7a416ae111"
+        },
+        {
+          "name": "b04-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1316338,
+          "raw_bytes": 6767616,
+          "sha256": "7b503ac9388ee0cb82e1fb2eb3b6983eb11b3a78d1e44cd36d3a60319d2c1276"
+        },
+        {
+          "name": "b04-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1317280,
+          "raw_bytes": 6767616,
+          "sha256": "d3be792cb0ee612df687c0aa0d50e7b64d91a1deff1c7e2096b2b9ad3cc5f95c"
+        },
+        {
+          "name": "b04-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1316513,
+          "raw_bytes": 6767616,
+          "sha256": "06007bf792439eb70e2cf7d070ff46ba248fc7ea59f561413fea0ad364dd42c3"
+        },
+        {
+          "name": "b04-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1317746,
+          "raw_bytes": 6767616,
+          "sha256": "1e21f3cba4b78cf83135b4c902eceb10421cdbeb9aa54ee5b3fbe746b84f7134"
+        },
+        {
+          "name": "b04-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1315994,
+          "raw_bytes": 6767616,
+          "sha256": "8623f2c93c192bec424a7b50385eb61d3a09a744661e7e4f389548baca66ce61"
+        },
+        {
+          "name": "b04-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1316742,
+          "raw_bytes": 6767616,
+          "sha256": "073acc87af82acbd634265978fdc8aa4f9b513b3547a199a873825c1b45a00ce"
+        },
+        {
+          "name": "b04-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1316051,
+          "raw_bytes": 6767616,
+          "sha256": "8b3da7829b013b2295413b61a0f85296efab864904ac83d215157b6367cbb424"
+        },
+        {
+          "name": "b04-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1316029,
+          "raw_bytes": 6767616,
+          "sha256": "a3c0aaeb2491d66bcbfa586f0400ed1e18cf9d21731f3f404bbd5c306b340f1d"
+        },
+        {
+          "name": "b04-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1316927,
+          "raw_bytes": 6767616,
+          "sha256": "39945a5b1826e96d0ccad34aacb4dbc4542b7cb08c1722286eeb7c357e574b32"
+        },
+        {
+          "name": "b04-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1316356,
+          "raw_bytes": 6767616,
+          "sha256": "51770433d0f5b0e3d2909645901422f213a8e431e040ce02f2593ad0d06315e7"
+        },
+        {
+          "name": "b04-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1317364,
+          "raw_bytes": 6767616,
+          "sha256": "55a4c486fc72efd46fb9a6972c261206382ace3955837c8e15cdd06164cb9982"
+        },
+        {
+          "name": "b04-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1316125,
+          "raw_bytes": 6767616,
+          "sha256": "5116b69491f9607847fc2e929dec9ad1689da06b9a4d250e0c268ad6021ba3c4"
+        },
+        {
+          "name": "b04-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1316439,
+          "raw_bytes": 6767616,
+          "sha256": "98ffd0a0e6947400017e73bbb536a8b4b2bae27b936536da56eb9e6da757411b"
+        },
+        {
+          "name": "b04-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1316544,
+          "raw_bytes": 6767616,
+          "sha256": "096774a3d0997081d078ff9d5ae3d4ff70cb98135e9cdf2b98c48021b326f018"
+        },
+        {
+          "name": "b04-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1317274,
+          "raw_bytes": 6767616,
+          "sha256": "975303c4fc6cc37fa6023fbce01737946e2862e4ccbe516acbee9813c94c0dd3"
+        },
+        {
+          "name": "b04-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1317715,
+          "raw_bytes": 6767616,
+          "sha256": "e6a95611c000859188c696b39e394d95adc100cae9c90fb9df8318a35f951aba"
+        },
+        {
+          "name": "b04-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1316038,
+          "raw_bytes": 6767616,
+          "sha256": "dd5c70590fcddebf5caaf7a15d78dc819bf528dd063e8ce8097824d6c7bf92dc"
+        },
+        {
+          "name": "b04-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1316380,
+          "raw_bytes": 6767616,
+          "sha256": "f851f1587e2f864f4b9147a677d38baf229211c0674e0044257c62f724d5ac63"
+        },
+        {
+          "name": "b04-fit-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1316608,
+          "raw_bytes": 6767616,
+          "sha256": "7c44930af21ffbcbb2435b3655a5f27916b2bcb313a47cab225c5aee2cbc4579"
+        },
+        {
+          "name": "b04-fit-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1317503,
+          "raw_bytes": 6767616,
+          "sha256": "0605d4ef1d1f89e5165570cedb4514e314cd73874751c69d250dbee308d4e64b"
+        },
+        {
+          "name": "b04-fit-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1316611,
+          "raw_bytes": 6767616,
+          "sha256": "0dc74a932b09c34a263c7211318ac0fc52e2724055044c62705f2b53c42ceff8"
+        },
+        {
+          "name": "b04-fit-029.z",
+          "start": 7424,
+          "parents": 244,
+          "bytes": 1255260,
+          "raw_bytes": 6450384,
+          "sha256": "56e24b00112cf86d58a09be7d0335c98fb7ec91b440807b60be8fdd3dd50f951"
+        }
+      ]
+    },
+    "b04/dev_even": {
+      "parents": 639,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "c668fb38b6dc53be7a52b4eedaed51426cfcf875c80c134c2494ba91aa9a3090",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b04-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1316324,
+          "raw_bytes": 6767616,
+          "sha256": "f5e43f4091c046ccc0e17526d53e87cbf1a847d87efe63bdcd0098eb80b35a41"
+        },
+        {
+          "name": "b04-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1316820,
+          "raw_bytes": 6767616,
+          "sha256": "9cc3331cb36a64f4e2ca5c25aa10f9b41e56d5e0bbad86eef674204156aac187"
+        },
+        {
+          "name": "b04-dev_even-002.z",
+          "start": 512,
+          "parents": 127,
+          "bytes": 652811,
+          "raw_bytes": 3357372,
+          "sha256": "6746a29df7acc712221fdc4512c2a24bbea96ba588895e5203c50e3ca050d52b"
+        }
+      ]
+    },
+    "b05/fit": {
+      "parents": 7665,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "57adac4609d9a9ff6904cf9df113bc595ef82e08c514c360a20917ddcba50f9e",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028373636352c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b05-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1312610,
+          "raw_bytes": 6767616,
+          "sha256": "5f1bd353678d881346e53c7f89634a32d2c22b43428abfd887fa1d7d03003d25"
+        },
+        {
+          "name": "b05-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1313222,
+          "raw_bytes": 6767616,
+          "sha256": "a9ffcdf0ed442e2c48bbdf86a9cf52c81573b4d2b829c806b257c657738ac0f5"
+        },
+        {
+          "name": "b05-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1312956,
+          "raw_bytes": 6767616,
+          "sha256": "550970c3480968989d47af01a6c01431c2eedf6199bebd28d1185159a97381cb"
+        },
+        {
+          "name": "b05-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1314051,
+          "raw_bytes": 6767616,
+          "sha256": "a2a3b83cfdbb7079e9f353286374868ea0286fd4775600b99c68e92ff64534a7"
+        },
+        {
+          "name": "b05-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1312876,
+          "raw_bytes": 6767616,
+          "sha256": "bb5de67baacadfd84b7498a9626645a6011c687df9461d61ee67bd4a60251f9e"
+        },
+        {
+          "name": "b05-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1311718,
+          "raw_bytes": 6767616,
+          "sha256": "6b88e4f28b705fd3b234c6096baedce07c7688833086d6d13bd8abbe8ee61143"
+        },
+        {
+          "name": "b05-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1312384,
+          "raw_bytes": 6767616,
+          "sha256": "3e557ec2515db092115e6956b867b0c5e29cd0c5d07d8950c18441585c3a95c5"
+        },
+        {
+          "name": "b05-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1313918,
+          "raw_bytes": 6767616,
+          "sha256": "4119eea8afe9640c52b598e0f3421b7b314b571cd2eb5f7e0b55da23b9b8632e"
+        },
+        {
+          "name": "b05-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1312248,
+          "raw_bytes": 6767616,
+          "sha256": "1350c2d7244458b34daf5fa6bc0fdae9b13f6a733adf08265d1e6e560098641f"
+        },
+        {
+          "name": "b05-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1313885,
+          "raw_bytes": 6767616,
+          "sha256": "5f40a51baf616b2a87b297f2994a14a6bb0760605fe3d58b5a351c60fdf30301"
+        },
+        {
+          "name": "b05-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1312334,
+          "raw_bytes": 6767616,
+          "sha256": "e0683f85ce3806aecab74d6a24b5a9b60a14ab203667d263e1da8cba749c3add"
+        },
+        {
+          "name": "b05-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1312679,
+          "raw_bytes": 6767616,
+          "sha256": "deaba7162b27cc81928b6610bf8ffdd29a10338c1a073abf59bc681b457f4ce0"
+        },
+        {
+          "name": "b05-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1312330,
+          "raw_bytes": 6767616,
+          "sha256": "d9654f0b4a32ce5ee0b3f8c0c7f04cb34fea9906acb1d5297bb7371b4618bc75"
+        },
+        {
+          "name": "b05-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1311518,
+          "raw_bytes": 6767616,
+          "sha256": "d1e861bb258ec0c8e71c6a8d25a82b1bdd968eaaa5208251cbbd5d694dba5358"
+        },
+        {
+          "name": "b05-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1312615,
+          "raw_bytes": 6767616,
+          "sha256": "8be3dc68af505453d6aa044c7eb68382c039b3fe5ebd01f0cb1615cd7adb769a"
+        },
+        {
+          "name": "b05-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1312441,
+          "raw_bytes": 6767616,
+          "sha256": "2f5e12a8ef2cc70e69892315ee098ec18df2684215f355d8bd1e314700ccc503"
+        },
+        {
+          "name": "b05-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1311322,
+          "raw_bytes": 6767616,
+          "sha256": "445c53a630ec96e5fda63ae131be920ef962df3b7adbc828294d5856538660cc"
+        },
+        {
+          "name": "b05-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1313739,
+          "raw_bytes": 6767616,
+          "sha256": "b93ad66b9212f003e03f31eeb4c5ae39ccc8afeab5372621b9071bbfb063df32"
+        },
+        {
+          "name": "b05-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1313854,
+          "raw_bytes": 6767616,
+          "sha256": "f3f7260e3ce4e047903309a3f2bfcbec9b73f2175082a78e18a6aeced8c3555a"
+        },
+        {
+          "name": "b05-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1312573,
+          "raw_bytes": 6767616,
+          "sha256": "453375b4c717a669842254eb9f5ee7775d0a03369fdba246378aaed691a5a89f"
+        },
+        {
+          "name": "b05-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1312241,
+          "raw_bytes": 6767616,
+          "sha256": "dcdbf6c008772fb8afa0242190c4cca3753bed4380b9e915e4458f7ebef5b1f1"
+        },
+        {
+          "name": "b05-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1312172,
+          "raw_bytes": 6767616,
+          "sha256": "f29b1e1788d28ade434823b742b76dd951224ab1d6a3991f0a955ddd44304417"
+        },
+        {
+          "name": "b05-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1311761,
+          "raw_bytes": 6767616,
+          "sha256": "c38119b65484230d73e2ebd75e965c5651b225922b71d0a886ddfa6b85eab556"
+        },
+        {
+          "name": "b05-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1312765,
+          "raw_bytes": 6767616,
+          "sha256": "6b4bd13f487b41b7c518123181ae30a7092255ee8ebcce3457fce699a179049c"
+        },
+        {
+          "name": "b05-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1313271,
+          "raw_bytes": 6767616,
+          "sha256": "143245dfe90b0cb085140e8e7885ae111072885243cffa9aa715919161ffefd1"
+        },
+        {
+          "name": "b05-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1312252,
+          "raw_bytes": 6767616,
+          "sha256": "bac634a7016853d5959b840e9a638d3d480393c182639bf4009b4e65323020b3"
+        },
+        {
+          "name": "b05-fit-026.z",
+          "start": 6656,
+          "parents": 256,
+          "bytes": 1311564,
+          "raw_bytes": 6767616,
+          "sha256": "423e5e9af848c293f6e1140ad5547b0489324422a4fa6b92268ec2a9e9baf79e"
+        },
+        {
+          "name": "b05-fit-027.z",
+          "start": 6912,
+          "parents": 256,
+          "bytes": 1312862,
+          "raw_bytes": 6767616,
+          "sha256": "4f94597721d51f5ec83262bf2fd05c117ba720817b0fd41c7c78c98bcb707cf9"
+        },
+        {
+          "name": "b05-fit-028.z",
+          "start": 7168,
+          "parents": 256,
+          "bytes": 1311812,
+          "raw_bytes": 6767616,
+          "sha256": "6dec6070f44ea161f91740ac580573d7b5d2e0464514ea6692c6bae358af6dd1"
+        },
+        {
+          "name": "b05-fit-029.z",
+          "start": 7424,
+          "parents": 241,
+          "bytes": 1236535,
+          "raw_bytes": 6371076,
+          "sha256": "80290cf05a1a92ee6870232000e25401eb7a2ca91c5092e65d30e843a1ff2c1f"
+        }
+      ]
+    },
+    "b05/dev_even": {
+      "parents": 639,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "72ab130b70f754a61c01972bcf813de4b4db19aba0424b3e20e388ef01632468",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283633392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b05-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1313599,
+          "raw_bytes": 6767616,
+          "sha256": "e590fdb4a0d995d74c1d8ed5f59bda6e42d977a6f371c06a268100217eb8ca7e"
+        },
+        {
+          "name": "b05-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1312647,
+          "raw_bytes": 6767616,
+          "sha256": "4b6fd7ee6803b36bea31a78cb133460300ac2f4f66d01b88f6bd522be605fc62"
+        },
+        {
+          "name": "b05-dev_even-002.z",
+          "start": 512,
+          "parents": 127,
+          "bytes": 651819,
+          "raw_bytes": 3357372,
+          "sha256": "b60fcd1803a071b093fc2c3bc9adbaac82f9ebdb432b4edaeb50f9fbdb8d3e63"
+        }
+      ]
+    },
+    "b07/fit": {
+      "parents": 6705,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "cf021eabe3dd3a2e2bcae2aafd6d030ba377b04f5517e7cfe8c2644d650004c6",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028363730352c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028363730352c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028363730352c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b07-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1304940,
+          "raw_bytes": 6767616,
+          "sha256": "76982aa6a45bd512e2d50fbb6cbce049f9c14daf1d8a5f10f4d14694f0827d20"
+        },
+        {
+          "name": "b07-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1305247,
+          "raw_bytes": 6767616,
+          "sha256": "b7488825660ac5b0013183572989dcb80dff0decb1acbe1d534afeabdccae8fe"
+        },
+        {
+          "name": "b07-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1305028,
+          "raw_bytes": 6767616,
+          "sha256": "7f591da762cc9e4f0d2805cb8490b906d3ee1c9ecf124e22b002e8563c31cd25"
+        },
+        {
+          "name": "b07-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1304995,
+          "raw_bytes": 6767616,
+          "sha256": "a26f1ee725a11b3d614da0bc45798f03d47a3c2a309e22b09c96f9f962f0ba77"
+        },
+        {
+          "name": "b07-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1305254,
+          "raw_bytes": 6767616,
+          "sha256": "af86f4857c0e0b9e8e11202465f8cd997dda7a1d5c24ec171fd1f2de54d4b33c"
+        },
+        {
+          "name": "b07-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1304383,
+          "raw_bytes": 6767616,
+          "sha256": "116ad8575b366e9c091ea2fcc3089655a48ca685b6083d9d2d8ff488a7f779f5"
+        },
+        {
+          "name": "b07-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1305709,
+          "raw_bytes": 6767616,
+          "sha256": "f24a3392d16f870e3aabb6c391f1b5ee6244e93711d44a30c2220163be813a6e"
+        },
+        {
+          "name": "b07-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1306421,
+          "raw_bytes": 6767616,
+          "sha256": "f139512894fe579b25fbd491b6df56e3192b49c30df71cdf189efeeeee663cd2"
+        },
+        {
+          "name": "b07-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1305156,
+          "raw_bytes": 6767616,
+          "sha256": "78c3986304c11f3e0f68402e8fdecd981fe1a5e76fa14902bbefa2ea3c7c683d"
+        },
+        {
+          "name": "b07-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1304988,
+          "raw_bytes": 6767616,
+          "sha256": "308fac20b9c838c8bace39c44274bd5c4a5b310ce72ce49c95f9ab8e4962c042"
+        },
+        {
+          "name": "b07-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1306435,
+          "raw_bytes": 6767616,
+          "sha256": "2374fec3b35e14c2a04866871e0425db97addce05f3dd5809109c11b2b875176"
+        },
+        {
+          "name": "b07-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1305117,
+          "raw_bytes": 6767616,
+          "sha256": "43e793f2f2e3c26954f9d15f126e2ca2be33f471b36caa33ab38dd271cf5f96f"
+        },
+        {
+          "name": "b07-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1304785,
+          "raw_bytes": 6767616,
+          "sha256": "14be9a749c87fd4506ed2058859fe57c14534e6a5243f080495a7a3378022473"
+        },
+        {
+          "name": "b07-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1306647,
+          "raw_bytes": 6767616,
+          "sha256": "60b7a5d6b5099bca8c9fa45298898b8fe711e295e94b4196d8d73f1288aa4218"
+        },
+        {
+          "name": "b07-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1307065,
+          "raw_bytes": 6767616,
+          "sha256": "9e5135029033b1e983cfb797719ff4cfa62e5c68b999783dc6678ca3961df53c"
+        },
+        {
+          "name": "b07-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1305013,
+          "raw_bytes": 6767616,
+          "sha256": "4519610f638b41d48635a1bfea0e70298cb9bb1aa12b17a7d33f38897191ad20"
+        },
+        {
+          "name": "b07-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1304826,
+          "raw_bytes": 6767616,
+          "sha256": "caf5db7db0f3b5f20d232543ca7e7e4cdf52a2aee154fecb3fec740032255dba"
+        },
+        {
+          "name": "b07-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1305635,
+          "raw_bytes": 6767616,
+          "sha256": "0cd513bf0517166f54dec54ab6d4c2dba81b1c2aafb6273ee29f62f35735b4c7"
+        },
+        {
+          "name": "b07-fit-018.z",
+          "start": 4608,
+          "parents": 256,
+          "bytes": 1304967,
+          "raw_bytes": 6767616,
+          "sha256": "2e2f0401cb029cb4154720e089af02c8ed4cadff8b5526be608956b1d3cd5b28"
+        },
+        {
+          "name": "b07-fit-019.z",
+          "start": 4864,
+          "parents": 256,
+          "bytes": 1306477,
+          "raw_bytes": 6767616,
+          "sha256": "fe415400fa7661ae930cc67ed39619081e476bfad26e3f1788d0722606170426"
+        },
+        {
+          "name": "b07-fit-020.z",
+          "start": 5120,
+          "parents": 256,
+          "bytes": 1305053,
+          "raw_bytes": 6767616,
+          "sha256": "981bbc90c348a3c1f7f9581f24ea7dfcfea823bd714804c73d1691d667cb5321"
+        },
+        {
+          "name": "b07-fit-021.z",
+          "start": 5376,
+          "parents": 256,
+          "bytes": 1306419,
+          "raw_bytes": 6767616,
+          "sha256": "9dbc3fa8a666d865d56eacdd0e1ecf565ded4ad1ca36fede535591a5d69c96a3"
+        },
+        {
+          "name": "b07-fit-022.z",
+          "start": 5632,
+          "parents": 256,
+          "bytes": 1304745,
+          "raw_bytes": 6767616,
+          "sha256": "90b4110ddb5e4b2f5e8ca21900b6a69c441574955158b1bf5ef44f41e1da1fae"
+        },
+        {
+          "name": "b07-fit-023.z",
+          "start": 5888,
+          "parents": 256,
+          "bytes": 1304892,
+          "raw_bytes": 6767616,
+          "sha256": "9a94f554c69c131094c3bf54188c6a3135901945b3f91703802e21912342b5cf"
+        },
+        {
+          "name": "b07-fit-024.z",
+          "start": 6144,
+          "parents": 256,
+          "bytes": 1305647,
+          "raw_bytes": 6767616,
+          "sha256": "82d0775baff6fded2eccffee6c8012909a3b9d91d0f680b1f09012ddca4c9044"
+        },
+        {
+          "name": "b07-fit-025.z",
+          "start": 6400,
+          "parents": 256,
+          "bytes": 1305057,
+          "raw_bytes": 6767616,
+          "sha256": "adcd981b51a02b693b3d9070f182778bece669f4ee181d1d2d0f6afe6e7040d1"
+        },
+        {
+          "name": "b07-fit-026.z",
+          "start": 6656,
+          "parents": 49,
+          "bytes": 250078,
+          "raw_bytes": 1295364,
+          "sha256": "5328fd2dccacd19981340dc31d617de3432e389e38a80b29980b2fb303568a66"
+        }
+      ]
+    },
+    "b07/dev_even": {
+      "parents": 559,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "2eea0eea5b32a09a88847dbcf90d3b9f7d0c8dc8ae8c9d90d23fbacfb3805a80",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283535392c2036342c203237292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283535392c2036342c20333836292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a20283535392c292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b07-dev_even-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1304912,
+          "raw_bytes": 6767616,
+          "sha256": "1ebd64ffa088b67d35de658df13e771220069831e623ea3703f39dc4bb3dcd9b"
+        },
+        {
+          "name": "b07-dev_even-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1304354,
+          "raw_bytes": 6767616,
+          "sha256": "b0ec2cc55487646788ec9d470f7752514e5e0f9952eaabe2aa385700ec9bc734"
+        },
+        {
+          "name": "b07-dev_even-002.z",
+          "start": 512,
+          "parents": 47,
+          "bytes": 239197,
+          "raw_bytes": 1242492,
+          "sha256": "4749c36d312b1a273c30c53899a4f0afa8b507cf929a58a9833ae3e1ae06f5a2"
+        }
+      ]
+    },
+    "b08/fit": {
+      "parents": 4842,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "5043ae3a799284ced1cbb03d2847bc96b91cb04f3c3659c37a7d07ef67da6732",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343834322c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343834322c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028343834322c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b08-fit-000.z",
+          "start": 0,
+          "parents": 256,
+          "bytes": 1302160,
+          "raw_bytes": 6767616,
+          "sha256": "4f14c6b081f33217ffa2963249f7269bbd6a30f6bef948f91cdb2ea886f9f765"
+        },
+        {
+          "name": "b08-fit-001.z",
+          "start": 256,
+          "parents": 256,
+          "bytes": 1302384,
+          "raw_bytes": 6767616,
+          "sha256": "2904137d48f1df93c078ea15ed66e7b02327136fe5020a890c14f021d02a028e"
+        },
+        {
+          "name": "b08-fit-002.z",
+          "start": 512,
+          "parents": 256,
+          "bytes": 1301789,
+          "raw_bytes": 6767616,
+          "sha256": "92bfd3b39d83f3dcc0a4bd562fa9fd98167cb1a25f4df15628aae89e6a635f7b"
+        },
+        {
+          "name": "b08-fit-003.z",
+          "start": 768,
+          "parents": 256,
+          "bytes": 1304257,
+          "raw_bytes": 6767616,
+          "sha256": "51625e8034d8def043f0374c59081239ded90678872b4019e51bf9990bd357e1"
+        },
+        {
+          "name": "b08-fit-004.z",
+          "start": 1024,
+          "parents": 256,
+          "bytes": 1303125,
+          "raw_bytes": 6767616,
+          "sha256": "25a1ca692e59f951d45d078f98d07d2965fed2e37e9f075f2db61a333e370d12"
+        },
+        {
+          "name": "b08-fit-005.z",
+          "start": 1280,
+          "parents": 256,
+          "bytes": 1302066,
+          "raw_bytes": 6767616,
+          "sha256": "2e3f913da6bae9531f7c5963de123fe5acdd3bdb885b476085027f677244ad61"
+        },
+        {
+          "name": "b08-fit-006.z",
+          "start": 1536,
+          "parents": 256,
+          "bytes": 1303202,
+          "raw_bytes": 6767616,
+          "sha256": "9c5a60e28e4fecaf4b51707b80e71ee65c1cc943cdf8025cd24787bd7eed7f52"
+        },
+        {
+          "name": "b08-fit-007.z",
+          "start": 1792,
+          "parents": 256,
+          "bytes": 1302661,
+          "raw_bytes": 6767616,
+          "sha256": "1217b8752be50d988ea4435f8d7bc799854c0c95544b383fe243f0acf6568c6c"
+        },
+        {
+          "name": "b08-fit-008.z",
+          "start": 2048,
+          "parents": 256,
+          "bytes": 1302392,
+          "raw_bytes": 6767616,
+          "sha256": "e530119f62bfb3e3e80695b0de4d4091eee5b860a94a42f06f48138ff047a814"
+        },
+        {
+          "name": "b08-fit-009.z",
+          "start": 2304,
+          "parents": 256,
+          "bytes": 1302980,
+          "raw_bytes": 6767616,
+          "sha256": "49c283bc0c5cf534d0efb0bf50783c91a388b69c434d3bc26dc6e00e8f4c6709"
+        },
+        {
+          "name": "b08-fit-010.z",
+          "start": 2560,
+          "parents": 256,
+          "bytes": 1302001,
+          "raw_bytes": 6767616,
+          "sha256": "75ef73337442871771ed79b33bc491e9b4f573190447a8990a003051c930cbb8"
+        },
+        {
+          "name": "b08-fit-011.z",
+          "start": 2816,
+          "parents": 256,
+          "bytes": 1301829,
+          "raw_bytes": 6767616,
+          "sha256": "86b7d6ef09954465ff89d323e9bfc610499eb7f523ae59c55e69ac78db5fe7df"
+        },
+        {
+          "name": "b08-fit-012.z",
+          "start": 3072,
+          "parents": 256,
+          "bytes": 1302283,
+          "raw_bytes": 6767616,
+          "sha256": "88200b873ad6d7b54851e3c3aeaa45efef026248ca58e869bcda157b0f30e314"
+        },
+        {
+          "name": "b08-fit-013.z",
+          "start": 3328,
+          "parents": 256,
+          "bytes": 1301752,
+          "raw_bytes": 6767616,
+          "sha256": "bb3838bac1486608405b3c24f446f0e0604fd6162a2104cfd4317c1014bd3b1b"
+        },
+        {
+          "name": "b08-fit-014.z",
+          "start": 3584,
+          "parents": 256,
+          "bytes": 1302542,
+          "raw_bytes": 6767616,
+          "sha256": "3391f3cbb0c1838ead704769d22e76f9e5c1d452a9df86ad296bf8cb75b30fb2"
+        },
+        {
+          "name": "b08-fit-015.z",
+          "start": 3840,
+          "parents": 256,
+          "bytes": 1302386,
+          "raw_bytes": 6767616,
+          "sha256": "472b44eac4534fadd7354f960d0289d10d2c4fad2a2c06935d4c32288d4012b5"
+        },
+        {
+          "name": "b08-fit-016.z",
+          "start": 4096,
+          "parents": 256,
+          "bytes": 1302635,
+          "raw_bytes": 6767616,
+          "sha256": "3fca6d2252fb13d78c0ea58f44f32e31dd07b2ea7125766861a331aca89f06b7"
+        },
+        {
+          "name": "b08-fit-017.z",
+          "start": 4352,
+          "parents": 256,
+          "bytes": 1302280,
+          "raw_bytes": 6767616,
+          "sha256": "fd15f627163614e46741558a5ca7154cc4f742662d2e7369f0d04c36e4b4a6b8"
+        },
+        {
+          "name": "b08-fit-018.z",
+          "start": 4608,
+          "parents": 234,
+          "bytes": 1190204,
+          "raw_bytes": 6186024,
+          "sha256": "661b21d4c646f2cadf7cbab739f54a9af0ead02309b15ed1fcb1a55070b36b07"
+        }
+      ]
+    },
+    "b08/dev_even": {
+      "parents": 62,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "4f7b608caed628af40c0de6182762a68d25614ee23d1ea9587f457b3a0343aea",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202836322c2036342c203237292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202836322c2036342c20333836292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202836322c292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b08-dev_even-000.z",
+          "start": 0,
+          "parents": 62,
+          "bytes": 315956,
+          "raw_bytes": 1639032,
+          "sha256": "f51354e6e494a53f6b723591840f255c3037df6c226d3920596719be3c664456"
+        }
+      ]
+    },
+    "b09/fit": {
+      "parents": 59,
+      "source_role": "fit",
+      "source_slice": "all",
+      "source_native_row_i8le_sha256": "4e558781ba0163db9368182a75c2738b11b4a7f5b8edb2b045f08edcfe3fc491",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202835392c2036342c203237292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202835392c2036342c20333836292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202835392c292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b09-fit-000.z",
+          "start": 0,
+          "parents": 59,
+          "bytes": 299487,
+          "raw_bytes": 1559724,
+          "sha256": "9672dda5192e84226570f99eb6d5d07e0c2e06fa0b7c5f5b20bf80ae46c2e894"
+        }
+      ]
+    },
+    "b09/dev_even": {
+      "parents": 5,
+      "source_role": "dev",
+      "source_slice": "0::2",
+      "source_native_row_i8le_sha256": "ffe4d64c074c29738f9bfcac3e443e4c4bc319be5d4326cb79377ea99413206e",
+      "header_hex": {
+        "V": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028352c2036342c203237292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "E": "934e554d5059010076007b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028352c2036342c20333836292c207d202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a",
+        "parent": "934e554d5059010076007b276465736372273a20273c6934272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a2028352c292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+      },
+      "shards": [
+        {
+          "name": "b09-dev_even-000.z",
+          "start": 0,
+          "parents": 5,
+          "bytes": 25319,
+          "raw_bytes": 132180,
+          "sha256": "81815361182bb31dc85da84435d5f32fd99cc234c5ca899458c6ae0977004f80"
+        }
+      ]
+    }
+  },
+  "input_manifest": {
+    "schema": "hero-full-v2-offline-training-input-1",
+    "rosters_sha256": "ea3bf383c291c07ecb1e98784d66f34c708fdb248fe4152e66f48d9899d70a8d",
+    "stream_receipts": {
+      "0": "eec91a1d4b609ea8b31e8e80d7e5c09918c08e97b585a91cbb317d59d6dc93d3",
+      "1": "a46159b3985b57ac20ccab781d769bfc7f830c2a00c4feb1fa1e9138e7938d68",
+      "2": "7ec210781522abd85a04d1b94011879f4e0fd1153c81051fde8de77dce47756f",
+      "3": "d1e8ed8e4e81cd808f763fefcc3a101d3001a34ba74c9ac5642c3b6d67e960ad",
+      "4": "556e2019e946aa52962cb7bffd131d72ff91e39671a459f4a376070f5b995749",
+      "5": "fd0e534cf73f126097ca3414c63cd7297a000b79bd5208d8af96f7f88f78c484",
+      "7": "4978dab305ed8152f210f5a3fb8b332b7163f902a11ecf087d0d63595a07ac4d",
+      "8": "e74cc91ecf670fd03447759ade5a3fc8b919116a2479030b450f863273219692",
+      "9": "2372c80b6f9f9df38d96ccf682e180ab6fb189327044bcaa59573d2451bb4fee"
+    },
+    "files": {
+      "b00/fit/V.npy": "7ab8d42fef5bcda6169453c4cab4abe5a4b76ef489926a87710871424861abc5",
+      "b00/fit/E.npy": "a529fc220dd55bc656718e408b0810c92546125c5644fa70bac03dafe4eb2e52",
+      "b00/fit/parent.npy": "efe3bb760b2e60013a992193acf4d868f910a24434e7d625ae9153ea0e926a17",
+      "b00/dev_even/V.npy": "56b7385aec687b64bec0159b614cc9331a27ffe8e78a90c5fc3addb4a6bf6f32",
+      "b00/dev_even/E.npy": "3c9440ca4c7a8c87f1360584be5f998d8837dd909c7513e269ef30b67c5477a1",
+      "b00/dev_even/parent.npy": "ce55bf08baf4278d88fa14269d50f1833d630d22241bdde9d9467a90a14761f8",
+      "b01/fit/V.npy": "cf4a6f276b718d5c9cf16f01ef2a7600a1987ed8e500d28c977b972555245b5a",
+      "b01/fit/E.npy": "6c4549512b60246a1bbe41c293417157f740222a10077ef144c7baa95023529d",
+      "b01/fit/parent.npy": "615d58cb2bfc8a56cf515052a1ebca73a5683bd64724032484670392cfa54e6d",
+      "b01/dev_even/V.npy": "a9c5df2c2fea51dedbb2c51f81ed20f8e8834575ac798a6b63e0df3412d258bc",
+      "b01/dev_even/E.npy": "8d40bd8831a2b9ac88e95e9871b4b123fcea7971d2b4eb0ca9b204298d6cf67d",
+      "b01/dev_even/parent.npy": "ee5b6273a33aa6943c2c09b5843d032637310c3e13b0a1f3a000211358cf07f8",
+      "b02/fit/V.npy": "4be0c01e52b7f45dc1aa24fdb45f8a4aef827fd8716985db9791e09acc30e2af",
+      "b02/fit/E.npy": "054f27d7e70ced7a50246c4e6d3a0bb9da91ae4cfe4b68e8d5ca38ab6770d396",
+      "b02/fit/parent.npy": "b8a2504b8945c122610b7df3138e36b8dbff91cf3f30ed589ed29d0729b60144",
+      "b02/dev_even/V.npy": "ba7cf108f0667537ef8abb7bfa3b7ec6e7d725ccc896d1e1f68071d064c8490d",
+      "b02/dev_even/E.npy": "b4160f0a2b8760f7c71849360156f14404315c007569682b8e0e2fa05e10b0ec",
+      "b02/dev_even/parent.npy": "c324361ac20f5704d908fe36f16bc69fd264e82f32f328b16515dfd72ce78766",
+      "b03/fit/V.npy": "d5eeb5890470e8e2fd2052e24d23007701a3327a32bf6619cdbc6039547ddd34",
+      "b03/fit/E.npy": "cdde8025c9006fe2e8c637ef848bea52114d90bfc0951da782078ef54fe8320d",
+      "b03/fit/parent.npy": "400132124bca6779f33f2e2bb5f775077f7ea76c8286f4c615f24b6c56295845",
+      "b03/dev_even/V.npy": "64f8d0ee7ee1bde25830141237d9d6410c9c1fbead1c49ab88003c9dd82f5ede",
+      "b03/dev_even/E.npy": "a428cf36f34205c4e175911d4b92aede0946984fd55dfc79e14610be71c6446f",
+      "b03/dev_even/parent.npy": "766983286feed95c3581b6ccee2ab7084bc3ac79abb947ca0f0c36472d98a081",
+      "b04/fit/V.npy": "8edc8a3a3481057dd1b1b23bd1dd00aaf93abcfc08bc2cf6b9bc2bebd6c19840",
+      "b04/fit/E.npy": "bb32f086d58960e3ad77fec9ec156d25c8a604afc2aaef3b2859aeb67293e3e7",
+      "b04/fit/parent.npy": "b889f051cf7a19cffbe10bcdbb1e1cc9326a98936b878b397ccb09c49886d974",
+      "b04/dev_even/V.npy": "ec1870995927e776ecb42929e847c24f61106797fb025dfd90e4cd5354e37d82",
+      "b04/dev_even/E.npy": "1bf652d265738fb41e6d404c89f738d49dee5cdd2be8546fa971d0fe614404d7",
+      "b04/dev_even/parent.npy": "0b7be5afac966e2c40f39c12f24dc7cd3238ef765f010c75cadee88b79e0a47c",
+      "b05/fit/V.npy": "3a23847b5d22167cb1cd29c1e3ad41b6d03acf6a08a9c3675cb24551cffe9054",
+      "b05/fit/E.npy": "5030483a25718ca54541bb187e158322aea13471704c2b032366f79ff6670348",
+      "b05/fit/parent.npy": "141c52321660bc27f9829c3b5afde4570cfb340801a72d35af557c812b3b9cd8",
+      "b05/dev_even/V.npy": "994948a0bd4006e38faf54dc41db8a6dd63c4a5550515fc5a9424dc7b6ffc43c",
+      "b05/dev_even/E.npy": "1159d4093625b57bfe03d8669240665a305a7def420a6bf55a958cddd9365d5b",
+      "b05/dev_even/parent.npy": "e7b2517ad366d8320e287af9258c224ce7409ca4121d4f035bb7fef98985b859",
+      "b07/fit/V.npy": "01e760ffd2973671172e4f01a506c3b4f470f99fad80379dcabc700a5da793ca",
+      "b07/fit/E.npy": "2307607c2e7b6fc1032a55f2a694cde2d95d74ff29bc221750d8073366a0a0f3",
+      "b07/fit/parent.npy": "665e488ffee987c375fb6a73c7520577bcf2284df6491eb93b237feb688113fe",
+      "b07/dev_even/V.npy": "2c38112c69211bdca488ca860b06ea67e6cddd8720e2751a580ce8728f4c9c85",
+      "b07/dev_even/E.npy": "9fda898c7a67e48cdc72ac18d0ee5c7cfac430bd371763f22d74b37e1b669c28",
+      "b07/dev_even/parent.npy": "fd959518efa9d1f231613bca4a25b54b40eb54a5da4841efcb0624a2182ceb1b",
+      "b08/fit/V.npy": "5885ee73ba96b93841aec23d9c45466d6cfcf3ab2901cc2019ac8143341b6be6",
+      "b08/fit/E.npy": "0cf2a76492968da856bd22db5c2b70c9da97268d39ff007b47f12ef5acc230ff",
+      "b08/fit/parent.npy": "c4410e1f48616eaddd279dda9e211e32df068e500f17828680db793e40916849",
+      "b08/dev_even/V.npy": "3c44c6e05450347a24259f52197c0805639ba0c4dae3b42b27559d6f0dbcbd28",
+      "b08/dev_even/E.npy": "17512b5186cfecc2a90740148e928c19f3d1f403c7fa26beed5dc70f73ab46d8",
+      "b08/dev_even/parent.npy": "c255c876203fb8b5eba1beafe4962abddd07cb078442780726a348341300121a",
+      "b09/fit/V.npy": "e6ea8a1510e2a10debd2a764964cf57ba7998373542f265e76b11a2c32f4f9db",
+      "b09/fit/E.npy": "10b7c33f1355aeed4ba6493bcc4f1cbcbb7096c545a9102232c09bd7b590d5bf",
+      "b09/fit/parent.npy": "d1dd9a0fce364f92d61f8900fc30573f9734c495c8f0bf31d4f41a60e128f37e",
+      "b09/dev_even/V.npy": "6b661203ceb87b95865a5df3840300975fccf5bfa3231593eb18d11dda0f1ba4",
+      "b09/dev_even/E.npy": "8d1a0293352b5d2819aaf60a8a85b392de15befc557d0e14822fcc185c8e97c1",
+      "b09/dev_even/parent.npy": "cfb96c1ebe4f124d6611dadc41ef21526dcd3d7961f787934d5f49141caf7922"
+    }
+  },
+  "input_manifest_sha256": "f894a7c23f6be299eaf58e43b696bac0409f01b8a7d17f34df156feefe68320f",
+  "shards": 238,
+  "stored_shard_bytes": 303560441,
+  "restored_npy_bytes": 1557034440,
+  "restored_payload_bytes": 1557027528,
+  "largest_shard_bytes": 1337357,
+  "max_compressed_shard_bytes": 8388608,
+  "max_stored_bytes": 2147483648,
+  "max_restored_npy_bytes": 2147483648,
+  "source_stream_summary_sha256": "9eb4e9104751699fb5c61f96111933aec3c06915155c6b98d5047c3415c15563",
+  "source_receipts_commit": "26b32ee8d9d6f7787bcc4d8c4cd7ab9bbda98817",
+  "fit_dev_release_commit": "703000009b50c138e495073944c5856af5cc5308",
+  "encode_hash_decode_and_fsync_seconds": 17.461607553064823,
+  "uncompressed_payload_MB_per_second": 89.16862455351162,
+  "one_thread": true,
+  "incremental_fee_usd": 0,
+  "permitted_files": "restore only V,E,parent per registered beta and fit/even-dev; no native, I, anchors, odd dev or eval",
+  "compression": "zlib level 1 over packed V (7 bytes/anchor), packed E (97 bytes/anchor), raw little-endian int32 parent; first site in low two bits, pad zero",
+  "current_result_bytes_authorized": 0,
+  "future_main_result_upper_bound_bytes": 67108864,
+  "pilot_result_upper_bound_bytes": 131072,
+  "outputs": "No execution/egress now. A separate future Main release must enumerate allowed regular checkpoint/receipt files, enforce per-file and aggregate 64MiB-or-tighter bounds, collect size and SHA; no stdout, snapshots or volumes. Existing pilot remains independently capped at 128 KiB.",
+  "offline_unpack": "full_hero_transport.py restore --manifest FILE --sha256 DIGEST --shards EXCLUSIVE_DIR --output /tmp/hero-input --drop. Pin input_manifest_sha256 separately in training release.",
+  "selective_disk_restore_validated": [
+    "b00/fit",
+    "b09/dev_even"
+  ]
+}
