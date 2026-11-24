@@ -1,0 +1,26 @@
+{
+  "phase": "before audit species or scores; historical TRAIN, no claim of pristine population",
+  "public_design_commit": "1036785",
+  "hashes": {
+    "21-frozen-256.npz": "d018971db2cdad66d88a1fc094d5ed11f7b05917eae3e02dee3dcc39bec355fb",
+    "21-frozen-1024.npz": "005c5509b52680d7e4105725531222a68e57d23526901ca14dd9ebcaf5a864e4",
+    "21-frozen-4096.npz": "ca10153185829e4a13c3abac48157855f7e395b69b3b1d9d363c68b1d2b066ba"
+  },
+  "development_summary_sha": "4cc012e6a2b94488cc3237536d9b6a1454e6b5c42dd9cf4267f0ff497bcf6142",
+  "latest_common_update": 5120,
+  "seeds": [
+    2101,
+    2102,
+    2103
+  ],
+  "primary_fit_parents": 4096,
+  "primary_decoder": "fitted to the 512 development parents; no audit fitting; direction-marginal baseline on same dev parents",
+  "predicted_audit_mean_direct_minus_contrastive_category": "above +0.001",
+  "development_forecast_center_fit_calibrated": 0.002068611761613665,
+  "meaningful_margin_nat_per_face": 0.001,
+  "primary_rule": "Largest-rung seed-averaged hard log predictive score of direct minus contrastive, report 95% paired parent interval and separate seed CI; parent lower bound > +0.001 required for positive materiality. Report at all three rungs, fit calibration as prespecified sensitivity, and frozen fit-only teacher. One audit pass, no reselection.",
+  "references": [
+    "https://arxiv.org/abs/1905.06922",
+    "https://doi.org/10.1103/PhysRevLett.127.240603"
+  ]
+}

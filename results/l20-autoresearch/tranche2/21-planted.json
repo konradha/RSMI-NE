@@ -1,0 +1,37 @@
+{
+  "analytic_MI": 1.0934101012991997,
+  "direct_onehot_MI": 1.0934100944720007,
+  "planted_description": "4 equally likely tile words 0,1,3,4; 94% correct directional face letter, 2% each other, four letters rotated by J. Analytical maximum ln4+.94ln.94+.06ln.02.",
+  "gradient_checks": {
+    "direct": {
+      "analytic": 0.07595498859882355,
+      "finite_difference": 0.0759543306945674,
+      "abs_error": 6.579042561433157e-07
+    },
+    "contrastive": {
+      "analytic": 0.03966575860977173,
+      "finite_difference": 0.03966502845287323,
+      "abs_error": 7.301568984985352e-07
+    },
+    "distilled": {
+      "analytic": 0.733716607093811,
+      "finite_difference": 0.7337133089701334,
+      "abs_error": 3.298123677608622e-06
+    }
+  },
+  "learned_640_updates": {
+    "direct": {
+      "hard_MI_nats": 1.0934101012991997,
+      "recovered_all_four": true
+    },
+    "contrastive": {
+      "hard_MI_nats": 1.0934101012991997,
+      "recovered_all_four": true
+    },
+    "distilled": {
+      "hard_MI_nats": 1.0934101012991997,
+      "recovered_all_four": true
+    }
+  },
+  "seconds": 4.562147507444024
+}

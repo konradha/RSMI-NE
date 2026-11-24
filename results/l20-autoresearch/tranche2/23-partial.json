@@ -1,0 +1,994 @@
+{
+  "status": "Exploratory development partial identification only; original primary failed the >=90% coverage gate. No audit or revised primary.",
+  "design_sha256": "869b24d42a8693ee57df2cc6b74cc9bc8de372b22db6786f8d3d521b07ac0c3e",
+  "script_sha256": "38d194ee5519aaaad32696313d5bee306a109a937ab5c4afc4f50a8765a74f11",
+  "primary_receipt_sha256": "285820da76e722262f792c946d709b198826963836e8813a65c3fd4c6872c68e",
+  "primary_evidence_sha256": "1abe3e205acf460371777683f0004739effbf125131f8f11a9c688cf6112031e",
+  "supplement_evidence_sha256": "ce86bd611d9ec7687902a2b281548171e3935fca73daf95ced2fd4f077cd2b70",
+  "supplement_evidence_file": "23-partial-blocks.npz",
+  "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416",
+  "weight_parent_positions": [
+    256,
+    768
+  ],
+  "work_parent_positions": [
+    4096,
+    4608
+  ],
+  "n_blocks": 16,
+  "work_parents_per_block": 32,
+  "independent_weight_parents_per_block": 32,
+  "arms": [
+    "inventory",
+    "optimized",
+    "affine"
+  ],
+  "primary_retained_mass_range": [
+    0.6827109375,
+    0.684584228515625,
+    0.68638671875
+  ],
+  "excluded_inventories_descending_mass": [
+    {
+      "nA": 3,
+      "nB": 3,
+      "one_parent_mass": 0.176577392578125,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 4,
+      "nB": 2,
+      "one_parent_mass": 0.061984619140625,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 3,
+      "nB": 4,
+      "one_parent_mass": 0.02503173828125,
+      "failing_arm_label_and_minimum": [
+        [
+          "affine",
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "nA": 4,
+      "nB": 0,
+      "one_parent_mass": 0.017611083984374998,
+      "failing_arm_label_and_minimum": [
+        [
+          "affine",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 3,
+      "nB": 1,
+      "one_parent_mass": 0.01585302734375,
+      "failing_arm_label_and_minimum": [
+        [
+          "affine",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 1,
+      "nB": 4,
+      "one_parent_mass": 0.0065263671875,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          1,
+          2
+        ],
+        [
+          "optimized",
+          2,
+          1
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 5,
+      "nB": 1,
+      "one_parent_mass": 0.005372314453125001,
+      "failing_arm_label_and_minimum": [
+        [
+          "affine",
+          0,
+          0
+        ],
+        [
+          "affine",
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 2,
+      "nB": 2,
+      "one_parent_mass": 0.00324169921875,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "nA": 3,
+      "nB": 0,
+      "one_parent_mass": 0.0019020996093750003,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "nA": 1,
+      "nB": 3,
+      "one_parent_mass": 0.0003544921875,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 2,
+      "nB": 1,
+      "one_parent_mass": 0.00034228515625,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 6,
+      "nB": 0,
+      "one_parent_mass": 0.00017626953125000002,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "affine",
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 3,
+      "nB": 5,
+      "one_parent_mass": 0.00012280273437500003,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          1
+        ],
+        [
+          "affine",
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "nA": 0,
+      "nB": 5,
+      "one_parent_mass": 0.00011035156250000002,
+      "failing_arm_label_and_minimum": [
+        [
+          "affine",
+          0,
+          1
+        ],
+        [
+          "affine",
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "nA": 5,
+      "nB": 2,
+      "one_parent_mass": 8.129882812500002e-05,
+      "failing_arm_label_and_minimum": [
+        [
+          "optimized",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          2
+        ],
+        [
+          "affine",
+          2,
+          3
+        ],
+        [
+          "affine",
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "nA": 2,
+      "nB": 0,
+      "one_parent_mass": 5.859375000000001e-05,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          3
+        ],
+        [
+          "optimized",
+          0,
+          2
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "affine",
+          0,
+          1
+        ],
+        [
+          "affine",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "nA": 0,
+      "nB": 4,
+      "one_parent_mass": 5.102539062500002e-05,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          3
+        ],
+        [
+          "optimized",
+          0,
+          3
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ],
+        [
+          "affine",
+          0,
+          1
+        ],
+        [
+          "affine",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "nA": 1,
+      "nB": 2,
+      "one_parent_mass": 1.171875e-05,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ],
+        [
+          "affine",
+          0,
+          0
+        ],
+        [
+          "affine",
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 4,
+      "nB": 4,
+      "one_parent_mass": 3.90625e-06,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ],
+        [
+          "affine",
+          2,
+          0
+        ],
+        [
+          "affine",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 1,
+      "nB": 1,
+      "one_parent_mass": 1.220703125e-06,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ],
+        [
+          "affine",
+          0,
+          0
+        ],
+        [
+          "affine",
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 6,
+      "nB": 1,
+      "one_parent_mass": 1.220703125e-06,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          1,
+          0
+        ],
+        [
+          "optimized",
+          2,
+          0
+        ],
+        [
+          "optimized",
+          3,
+          0
+        ],
+        [
+          "affine",
+          2,
+          0
+        ],
+        [
+          "affine",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "nA": 1,
+      "nB": 0,
+      "one_parent_mass": 2.44140625e-07,
+      "failing_arm_label_and_minimum": [
+        [
+          "inventory",
+          0,
+          0
+        ],
+        [
+          "optimized",
+          0,
+          0
+        ],
+        [
+          "affine",
+          0,
+          0
+        ],
+        [
+          "affine",
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "matched_cross_pairs_over_all_cells": [
+    25585007577,
+    9622826697,
+    8441014120
+  ],
+  "possible_cells_per_arm": [
+    45,
+    131,
+    115
+  ],
+  "empty_in_either_half_cell_count_range": [
+    [
+      12,
+      14
+    ],
+    [
+      42,
+      49
+    ],
+    [
+      26,
+      30
+    ]
+  ],
+  "empty_in_both_halves_cell_count_range": [
+    [
+      10,
+      14
+    ],
+    [
+      38,
+      44
+    ],
+    [
+      22,
+      27
+    ]
+  ],
+  "largest_cell_bound": [
+    384,
+    384,
+    372
+  ],
+  "largest_missing_cell_bound": [
+    288,
+    336,
+    288
+  ],
+  "missing_mass_mean": [
+    8.789062500000001e-06,
+    3.8574218750000014e-05,
+    2.7099609375000007e-05
+  ],
+  "missing_mass_CI_approximate": [
+    [
+      8.789062500000001e-06,
+      4.335124090939142e-06,
+      1.324300090906086e-05,
+      1.6534407681250384e-06
+    ],
+    [
+      3.8574218750000014e-05,
+      2.8145382939964653e-05,
+      4.9003054560035375e-05,
+      3.8715089228256e-06
+    ],
+    [
+      2.7099609375000007e-05,
+      1.5122651266002221e-05,
+      3.907656748399779e-05,
+      4.446220175666581e-06
+    ]
+  ],
+  "distribution_free_conditional_missing_mass_upper95": [
+    0.00803310960504635,
+    0.008208553690561901,
+    0.008145354757132182
+  ],
+  "distribution_free_conditional_missing_radius_upper95": [
+    2.3076388738322864,
+    2.7190465744742176,
+    2.3289872215711807
+  ],
+  "independent_weights": {
+    "work_supported_center": [
+      25.38018185811896,
+      22.9990874488874,
+      22.826241237924588
+    ],
+    "work_missing_radius_mean": [
+      0.0016845703125000005,
+      0.0060732421875,
+      0.004939453125000001
+    ],
+    "work_empirical_identified_intervals": [
+      [
+        25.378497287806464,
+        25.38186642843146
+      ],
+      [
+        22.9930142066999,
+        23.0051606910749
+      ],
+      [
+        22.821301784799587,
+        22.831180691049585
+      ]
+    ],
+    "gain": [
+      {
+        "contrast": "inventory_minus_optimized",
+        "coefficients": [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "supported_center": 2.3810944092315616,
+        "missing_only_interval": [
+          2.3733365967315616,
+          2.3888522217315615
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          2.3690762321365524,
+          2.393615690863097
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -2.645591039074942,
+          7.407779857538065
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "inventory_minus_affine",
+        "coefficients": [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        "supported_center": 2.5539406201943775,
+        "missing_only_interval": [
+          2.5473165967568776,
+          2.560564643631877
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          2.5425122102782582,
+          2.566586164033756
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -2.0826854752090895,
+          7.1905667155978445
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "affine_minus_optimized",
+        "coefficients": [
+          0.0,
+          -1.0,
+          1.0
+        ],
+        "supported_center": -0.17284621096281572,
+        "missing_only_interval": [
+          -0.1838589062753157,
+          -0.16183351565031573
+        ],
+        "worst_case_direction_at_empirical_mass": "negative",
+        "block_interval": [
+          -0.19144646991494663,
+          -0.15574366539572587
+        ],
+        "direction_with_block_uncertainty": "negative",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -5.220880007008215,
+          4.875187585082583
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      }
+    ],
+    "gain_minus_material_margin": [
+      {
+        "contrast": "inventory_minus_optimized",
+        "coefficients": [
+          0.95,
+          -1.0,
+          0.0
+        ],
+        "supported_center": 1.1120853163256128,
+        "missing_only_interval": [
+          1.1044117323412377,
+          1.119758900309988
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          1.1002062679110078,
+          1.1244453569455066
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -3.799218188289277,
+          6.023388820940502
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "inventory_minus_affine",
+        "coefficients": [
+          0.95,
+          0.0,
+          -1.0
+        ],
+        "supported_center": 1.2849315272884285,
+        "missing_only_interval": [
+          1.2783917323665537,
+          1.2914713222103034
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          1.2736888382347837,
+          1.297626332458319
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -3.236312624423425,
+          5.806175679000281
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "affine_minus_optimized",
+        "coefficients": [
+          -0.05,
+          -1.0,
+          1.0
+        ],
+        "supported_center": -1.441855303868764,
+        "missing_only_interval": [
+          -1.4529522276968891,
+          -1.430758380040639
+        ],
+        "worst_case_direction_at_empirical_mass": "negative",
+        "block_interval": [
+          -1.4604263213756374,
+          -1.4245850476380257
+        ],
+        "direction_with_block_uncertainty": "negative",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -6.605271043605777,
+          3.7215604358682484
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      }
+    ]
+  },
+  "original_pooled_one_parent_weights_sensitivity": {
+    "work_supported_center": [
+      25.37591559288461,
+      22.99471731369254,
+      22.820927248159222
+    ],
+    "work_missing_radius_mean": [
+      0.0012773437500000003,
+      0.0042246093750000005,
+      0.0034291992187500003
+    ],
+    "work_empirical_identified_intervals": [
+      [
+        25.37463824913461,
+        25.377192936634607
+      ],
+      [
+        22.99049270431754,
+        22.998941923067537
+      ],
+      [
+        22.817498048940468,
+        22.824356447377966
+      ]
+    ],
+    "gain": [
+      {
+        "contrast": "inventory_minus_optimized",
+        "coefficients": [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "supported_center": 2.3811982791920694,
+        "missing_only_interval": [
+          2.3756963260670694,
+          2.3867002323170694
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          2.3704297517729924,
+          2.393488657854766
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -2.645487169114434,
+          7.407883727498573
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "inventory_minus_affine",
+        "coefficients": [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        "supported_center": 2.554988344725393,
+        "missing_only_interval": [
+          2.550281801756643,
+          2.5596948876941434
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          2.545652440576739,
+          2.565538785643006
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -2.081637750678074,
+          7.19161444012886
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "affine_minus_optimized",
+        "coefficients": [
+          0.0,
+          -1.0,
+          1.0
+        ],
+        "supported_center": -0.17379006553332377,
+        "missing_only_interval": [
+          -0.18144387412707375,
+          -0.1661362569395738
+        ],
+        "worst_case_direction_at_empirical_mass": "negative",
+        "block_interval": [
+          -0.18765523867507458,
+          -0.16040684945595793
+        ],
+        "direction_with_block_uncertainty": "negative",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -5.221823861578723,
+          4.874243730512075
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      }
+    ],
+    "gain_minus_material_margin": [
+      {
+        "contrast": "inventory_minus_optimized",
+        "coefficients": [
+          0.95,
+          -1.0,
+          0.0
+        ],
+        "supported_center": 1.1124024995478379,
+        "missing_only_interval": [
+          1.106964413610338,
+          1.1178405854853377
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          1.1018388584978132,
+          1.1244346997850059
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -3.7989010050670515,
+          6.023706004162728
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "inventory_minus_affine",
+        "coefficients": [
+          0.95,
+          0.0,
+          -1.0
+        ],
+        "supported_center": 1.2861925650811616,
+        "missing_only_interval": [
+          1.2815498892999115,
+          1.2908352408624117
+        ],
+        "worst_case_direction_at_empirical_mass": "positive",
+        "block_interval": [
+          1.2769897107129224,
+          1.296563849941179
+        ],
+        "direction_with_block_uncertainty": "positive",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -3.2350515866306915,
+          5.807436716793015
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      },
+      {
+        "contrast": "affine_minus_optimized",
+        "coefficients": [
+          -0.05,
+          -1.0,
+          1.0
+        ],
+        "supported_center": -1.4425858451775548,
+        "missing_only_interval": [
+          -1.4503035209588049,
+          -1.4348681693963048
+        ],
+        "worst_case_direction_at_empirical_mass": "negative",
+        "block_interval": [
+          -1.4564743708625385,
+          -1.4292260758750026
+        ],
+        "direction_with_block_uncertainty": "negative",
+        "strict_mass_sensitivity_at_estimated_supported_center": [
+          -6.6060015849145675,
+          3.720829894559458
+        ],
+        "direction_with_95pct_mass_upper_at_estimated_center": "unresolved"
+      }
+    ]
+  },
+  "interpretation": "No omitted cells are imputed. Block intervals combine the measured missing radius with work- and mass-parent sampling error; Student-t approximation, not a finite-sample guarantee. Conservative missing-radius-only sensitivity covers the conditional expected missing radius for these 16 supports via valid independent-fit-parent bounds. Its center is estimated, not exact. Missing-cell assignments can be correlated across arms; triangle limits deliberately need not be jointly attainable. No surface tension or phase inference."
+}

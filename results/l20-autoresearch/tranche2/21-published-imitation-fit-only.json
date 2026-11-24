@@ -1,0 +1,74 @@
+{
+  "context": "Auxiliary direct capacity test requested separately. The old pooled teacher (historical attainable 0.025972 bits) saw overlapping historical TRAIN parents; its labels are not an independent gold standard. Only fit V frequencies and published map labels enter this fit. No development/audit agreement or face relevance measured; does not enter estimator comparison, model selection or predictions.",
+  "source_sha256": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "fit_parents": 4096,
+  "seconds": 22.9816609560512,
+  "paired_seeds": {
+    "2101": {
+      "0": {
+        "fit_agreement": 0.2480698236154808,
+        "fit_CE_nats": 1.4465080499649048
+      },
+      "640": {
+        "fit_agreement": 0.9937333989660146,
+        "fit_CE_nats": 0.04906456172466278
+      },
+      "1280": {
+        "fit_agreement": 0.9979482427122264,
+        "fit_CE_nats": 0.017012711614370346
+      },
+      "2560": {
+        "fit_agreement": 0.9989489751369547,
+        "fit_CE_nats": 0.006559288129210472
+      },
+      "5120": {
+        "fit_agreement": 0.9997395024828393,
+        "fit_CE_nats": 0.002323474735021591
+      }
+    },
+    "2102": {
+      "0": {
+        "fit_agreement": 0.24983447312345675,
+        "fit_CE_nats": 1.441863775253296
+      },
+      "640": {
+        "fit_agreement": 0.9929062505405284,
+        "fit_CE_nats": 0.0479094572365284
+      },
+      "1280": {
+        "fit_agreement": 0.9975393071721612,
+        "fit_CE_nats": 0.017710695043206215
+      },
+      "2560": {
+        "fit_agreement": 0.9988693852901065,
+        "fit_CE_nats": 0.0073525505140423775
+      },
+      "5120": {
+        "fit_agreement": 0.9997324224052306,
+        "fit_CE_nats": 0.0023698920849710703
+      }
+    },
+    "2103": {
+      "0": {
+        "fit_agreement": 0.30271777363358865,
+        "fit_CE_nats": 1.423235297203064
+      },
+      "640": {
+        "fit_agreement": 0.9933007817573696,
+        "fit_CE_nats": 0.04676695913076401
+      },
+      "1280": {
+        "fit_agreement": 0.9979389653643977,
+        "fit_CE_nats": 0.0166428554803133
+      },
+      "2560": {
+        "fit_agreement": 0.9990979009162118,
+        "fit_CE_nats": 0.006351542193442583
+      },
+      "5120": {
+        "fit_agreement": 0.9997468267015108,
+        "fit_CE_nats": 0.002210616134107113
+      }
+    }
+  }
+}

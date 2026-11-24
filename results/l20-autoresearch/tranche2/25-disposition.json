@@ -1,0 +1,373 @@
+{
+  "question": "#25 joint credit assignment across two hard categorical maps",
+  "design": "1036785",
+  "audit_release": "85cb688bcda16f7f615ff7a95dc010f2d454456f",
+  "source": {
+    "index": 9,
+    "beta": 3.05,
+    "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": "native TRAIN order only",
+    "fit_stop": 4096,
+    "dev_stop": 4608,
+    "audit_stop": 5120,
+    "rows": 5120,
+    "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416"
+  },
+  "margin_nats_per_face": 0.001,
+  "fit_marginal_log_score": -3.7898725739948254,
+  "dev_marginal_log_score": -3.7920651547164,
+  "largest_rung": {
+    "raw": {
+      "fit_absolute_log_score": -3.7867811161353973,
+      "dev_absolute_log_score": -3.791034622444227,
+      "fit_gain": 0.003091457859428194,
+      "development_gain": {
+        "mean": 0.0010305322721730127,
+        "se": 0.00010847627439911703,
+        "interval95": [
+          0.0008179187743507433,
+          0.0012431457699952821
+        ],
+        "mde80": 0.0003037335683175277
+      },
+      "audit_gain": {
+        "mean": 0.0012657203156831915,
+        "se": 0.00011531884420417852,
+        "interval95": [
+          0.0010396953810430016,
+          0.0014917452503233814
+        ],
+        "mde80": 0.00032289276377169983
+      },
+      "audit_geometric_mean_true_face_probability_ratio_vs_marginal": 1.0012665216777064
+    },
+    "frozen": {
+      "fit_absolute_log_score": -3.788679477456585,
+      "dev_absolute_log_score": -3.7913872064988303,
+      "fit_gain": 0.0011930965382403837,
+      "development_gain": {
+        "mean": 0.0006779482175697584,
+        "se": 5.9942839739989855e-05,
+        "interval95": [
+          0.0005604602516793782,
+          0.0007954361834601385
+        ],
+        "mde80": 0.0001678399512719716
+      },
+      "audit_gain": {
+        "mean": 0.0006896035129406744,
+        "se": 6.056189343656035e-05,
+        "interval95": [
+          0.0005709022018050161,
+          0.0008083048240763327
+        ],
+        "mde80": 0.00016957330162236897
+      },
+      "audit_geometric_mean_true_face_probability_ratio_vs_marginal": 1.0006898413441099
+    },
+    "joint": {
+      "fit_absolute_log_score": -3.7884800818461284,
+      "dev_absolute_log_score": -3.791476566521102,
+      "fit_gain": 0.0013924921486970472,
+      "development_gain": {
+        "mean": 0.0005885881952982035,
+        "se": 6.539768003760213e-05,
+        "interval95": [
+          0.0004604087424245033,
+          0.0007167676481719037
+        ],
+        "mde80": 0.000183113504105286
+      },
+      "audit_gain": {
+        "mean": 0.00064443112330554,
+        "se": 6.53344154254868e-05,
+        "interval95": [
+          0.0005163756690715859,
+          0.0007724865775394942
+        ],
+        "mde80": 0.00018293636319136302
+      },
+      "audit_geometric_mean_true_face_probability_ratio_vs_marginal": 1.0006446388136536
+    },
+    "rawlinear": {
+      "fit_absolute_log_score": -3.788595795149787,
+      "dev_absolute_log_score": -3.7907790094165166,
+      "fit_gain": 0.0012767788450383088,
+      "development_gain": {
+        "mean": 0.0012861452998837153,
+        "se": 7.092032233749723e-05,
+        "interval95": [
+          0.0011471414681022208,
+          0.0014251491316652099
+        ],
+        "mde80": 0.00019857690254499225
+      },
+      "audit_gain": {
+        "mean": 0.0013294563766636073,
+        "se": 7.22903710024777e-05,
+        "interval95": [
+          0.001187767249498751,
+          0.0014711455038284636
+        ],
+        "mde80": 0.00020241303880693756
+      },
+      "audit_geometric_mean_true_face_probability_ratio_vs_marginal": 1.001330340495548
+    }
+  },
+  "rungs": {
+    "256": {
+      "full_batch_faces": 256000,
+      "fit_development_wall_seconds": 3.7783495020121336,
+      "raw_suffstat_seconds_shared_across_seeds": 0.14029411599040031,
+      "paired_seed_mean_difference": {
+        "mean": -0.0004749464030271836,
+        "se": 4.398060194794063e-05,
+        "interval95": [
+          -0.0005611483828451472,
+          -0.00038874442320921995
+        ],
+        "mde80": 0.00012314568545423378
+      },
+      "arms": {
+        "raw": {
+          "fit_gain": 0.004154493685974867,
+          "development_gain": {
+            "mean": -0.002531210967927161,
+            "se": 0.00012084625963793119,
+            "interval95": [
+              -0.002768069636817506,
+              -0.002294352299036816
+            ],
+            "mde80": 0.0003383695269862073
+          },
+          "timed_post_init_seconds_per_seed": 0.1082320986315608
+        },
+        "frozen": {
+          "fit_gain": 0.0014515881045390096,
+          "development_gain": {
+            "mean": -0.00016272538171653838,
+            "se": 6.786516127047118e-05,
+            "interval95": [
+              -0.0002957410978066619,
+              -2.9709665626414877e-05
+            ],
+            "mde80": 0.0001900224515573193
+          },
+          "timed_post_init_seconds_per_seed": 0.04771991539746523
+        },
+        "joint": {
+          "fit_gain": 0.0020016810152915405,
+          "development_gain": {
+            "mean": -0.0006376717847437219,
+            "se": 7.725660700630718e-05,
+            "interval95": [
+              -0.0007890947344760839,
+              -0.0004862488350113598
+            ],
+            "mde80": 0.00021631849961766008
+          },
+          "timed_post_init_seconds_per_seed": 0.6711637796834111
+        }
+      }
+    },
+    "1024": {
+      "full_batch_faces": 1024000,
+      "fit_development_wall_seconds": 6.854517302010208,
+      "raw_suffstat_seconds_shared_across_seeds": 0.14994625002145767,
+      "paired_seed_mean_difference": {
+        "mean": -0.0002076843528970373,
+        "se": 4.130565175640888e-05,
+        "interval95": [
+          -0.0002886434303395987,
+          -0.0001267252754544759
+        ],
+        "mde80": 0.00011565582491794486
+      },
+      "arms": {
+        "raw": {
+          "fit_gain": 0.003402645956666678,
+          "development_gain": {
+            "mean": -0.00035211006824501553,
+            "se": 0.00011235836148056636,
+            "interval95": [
+              -0.0005723324567469256,
+              -0.0001318876797431055
+            ],
+            "mde80": 0.0003146034121455858
+          },
+          "timed_post_init_seconds_per_seed": 0.16814257390797138
+        },
+        "frozen": {
+          "fit_gain": 0.0011106907527594454,
+          "development_gain": {
+            "mean": 0.00037976378793158134,
+            "se": 5.9600601791807676e-05,
+            "interval95": [
+              0.0002629466084196383,
+              0.0004965809674435244
+            ],
+            "mde80": 0.00016688168501706148
+          },
+          "timed_post_init_seconds_per_seed": 0.11998640047386289
+        },
+        "joint": {
+          "fit_gain": 0.001649764208097403,
+          "development_gain": {
+            "mean": 0.00017207943503454406,
+            "se": 6.79502237032356e-05,
+            "interval95": [
+              3.88969965762023e-05,
+              0.0003052618734928858
+            ],
+            "mde80": 0.00019026062636905966
+          },
+          "timed_post_init_seconds_per_seed": 1.542833807412535
+        }
+      }
+    },
+    "4096": {
+      "full_batch_faces": 4096000,
+      "fit_development_wall_seconds": 11.467851338908076,
+      "raw_suffstat_seconds_shared_across_seeds": 0.19123771181330085,
+      "paired_seed_mean_difference": {
+        "mean": -8.936002227155488e-05,
+        "se": 2.7891532479529885e-05,
+        "interval95": [
+          -0.00014402742593143346,
+          -3.469261861167631e-05
+        ],
+        "mde80": 7.809629094268367e-05
+      },
+      "arms": {
+        "raw": {
+          "fit_gain": 0.003091457859428194,
+          "development_gain": {
+            "mean": 0.0010305322721730127,
+            "se": 0.00010847627439911703,
+            "interval95": [
+              0.0008179187743507433,
+              0.0012431457699952821
+            ],
+            "mde80": 0.0003037335683175277
+          },
+          "timed_post_init_seconds_per_seed": 0.3781904747399191
+        },
+        "frozen": {
+          "fit_gain": 0.0011930965382403837,
+          "development_gain": {
+            "mean": 0.0006779482175697584,
+            "se": 5.9942839739989855e-05,
+            "interval95": [
+              0.0005604602516793782,
+              0.0007954361834601385
+            ],
+            "mde80": 0.0001678399512719716
+          },
+          "timed_post_init_seconds_per_seed": 0.3950598502221207
+        },
+        "joint": {
+          "fit_gain": 0.0013924921486970472,
+          "development_gain": {
+            "mean": 0.0005885881952982035,
+            "se": 6.539768003760213e-05,
+            "interval95": [
+              0.0004604087424245033,
+              0.0007167676481719037
+            ],
+            "mde80": 0.000183113504105286
+          },
+          "timed_post_init_seconds_per_seed": 2.47834740128989
+        }
+      }
+    }
+  },
+  "largest_rung_seed_diagnostics": {
+    "251": {
+      "greedy_child_full_fit_iterations": 18,
+      "greedy_child_final_own_face_fit_nats": 0.0336092193757474,
+      "initial_final_training_joint_equals_frozen": true,
+      "realized_joint_child_mass_changed": 0.04566943359375,
+      "final_child_freq_fit": [
+        0.305193603515625,
+        0.20635498046875,
+        0.22440380859375,
+        0.264047607421875
+      ],
+      "final_H_dev_bits": 1.9910270089033835,
+      "actual_final_child_gradient_rms": 0.0004664313531225744,
+      "paired_audit": {
+        "mean": -3.879408553737176e-05,
+        "se": 4.183355265811171e-05,
+        "interval95": [
+          -0.00012078784874727071,
+          4.319967767252719e-05
+        ],
+        "mde80": 0.00011713394744271278
+      }
+    },
+    "252": {
+      "greedy_child_full_fit_iterations": 14,
+      "greedy_child_final_own_face_fit_nats": 0.03356067679364543,
+      "initial_final_training_joint_equals_frozen": true,
+      "realized_joint_child_mass_changed": 0.052405029296875,
+      "final_child_freq_fit": [
+        0.312260986328125,
+        0.206533935546875,
+        0.221592529296875,
+        0.259612548828125
+      ],
+      "final_H_dev_bits": 1.9974465914034214,
+      "actual_final_child_gradient_rms": 0.0004353624718029151,
+      "paired_audit": {
+        "mean": -6.034590299050902e-05,
+        "se": 5.8108969007532594e-05,
+        "interval95": [
+          -0.0001742394822452729,
+          5.354767626425486e-05
+        ],
+        "mde80": 0.00016270511322109124
+      }
+    },
+    "253": {
+      "greedy_child_full_fit_iterations": 12,
+      "greedy_child_final_own_face_fit_nats": 0.03350036529714406,
+      "initial_final_training_joint_equals_frozen": true,
+      "realized_joint_child_mass_changed": 0.052753662109375,
+      "final_child_freq_fit": [
+        0.28024951171875,
+        0.216221923828125,
+        0.24916748046875,
+        0.254361083984375
+      ],
+      "final_H_dev_bits": 1.9694250740258452,
+      "actual_final_child_gradient_rms": 0.00041291425728619166,
+      "paired_audit": {
+        "mean": -3.6377180377522524e-05,
+        "se": 3.811081165753553e-05,
+        "interval95": [
+          -0.00011107437122629215,
+          3.8320010471247105e-05
+        ],
+        "mde80": 0.00010671027264109948
+      }
+    }
+  },
+  "final_joint_minus_frozen": {
+    "mean": -4.517238963513444e-05,
+    "se": 2.6813497193333947e-05,
+    "interval95": [
+      -9.772684413406898e-05,
+      7.3820648638001e-06
+    ],
+    "mde80": 7.507779214133504e-05
+  },
+  "extension_rule_observed": {
+    "frozen": 2.2273640057051585e-05,
+    "joint": -1.3573824018930252e-05
+  },
+  "stopping": "Endpoint locked at four full-data sweeps for all arms/seeds. The preregistered extension required >=0.0001 nat/face dev increase (2->4) in either hierarchy arm; neither qualified. Shared first code stabilized in all three own-face fits. No convergence theorem for joint discrete optimization.",
+  "disposition": "Primary raw reference and lower-variance raw diagnostic both have strictly positive audit lower bounds. Joint training changed the actual shared child code and raised fit score, but did not reproduce a useful held-apart improvement; 95% upper endpoint below +0.001. All three realized paired audit estimates negative but zero is inside the prespecified seed-mean interval.",
+  "uncertainty": "Paired per-parent averaging across 1,000 correlated anchors and across three fixed seeds; normal 95% interval over 512 disjoint (chain_seed,chain_id) parents, MDE\u22482.8 SE (power 80% at two-sided 5%). Seed scatter descriptive; no independent-anchor or independent-seed inflation. Fit/development/audit split of historically reused TRAIN, not native unseen population.",
+  "limits": "No optimality or universal hierarchy verdict, no phase or scale-invariance claim. Conditional on fixed geometry, seeds, empirical-Bayes smoothing and hard-coordinate training. Top updates optimize fit with shared decoder; joint extra child work costs more time than frozen, so the comparison is update/anchor matched, not equal CPU seconds. Log-score gain over fit marginal is predictive and is not exact mutual information.",
+  "citation": "Lenggenhager, Goekmen et al., Phys. Rev. X 10, 011037 (2020), https://doi.org/10.1103/PhysRevX.10.011037"
+}

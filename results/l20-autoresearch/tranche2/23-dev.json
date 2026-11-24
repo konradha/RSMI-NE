@@ -1,0 +1,389 @@
+{
+  "design_sha256": "8e2229a94e997a5112658ecc8abad6dbf2dda7065415389b5ee02bc41c3a680f",
+  "script_sha256": "c051d1a527847ffec8d7a0f674ad0a292d55bf7167eb46ca3ea7975758c9df13",
+  "maps_sha256": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "support_sha256": "959894c97f85e7b2577d8fcc0060f558c571bb2436c6eae5e7cadd3407ad8c1c",
+  "hot": {
+    "phase": "dev",
+    "idx": 0,
+    "beta": 0.0,
+    "staged_bank_sha256": "70b48e53e308f961226f694bcb6e5f44992a464d072d9324a51e702988655fee",
+    "native_source_sha256": "0d2d07fa20a9fbf480775a248e1352aacdfdc3d7c3cb685fec22c52d709cafbf",
+    "native_train_positions": [
+      256,
+      512
+    ],
+    "block_size": 32,
+    "blocks": 8,
+    "anchors_per_parent": 8000,
+    "arms": [
+      "inventory",
+      "optimized",
+      "affine"
+    ],
+    "evidence_file": "23-dev-b00-blocks.npz",
+    "evidence_sha256": "3e6ab2364a14b71366e9c37e5ced84924faed250dedcaef67c399cc25a8947be",
+    "interval_columns": [
+      "mean",
+      "lower",
+      "upper",
+      "block_standard_error"
+    ],
+    "independent_owner_checks_and_nonzero_W": [
+      256,
+      230
+    ],
+    "toy_KL_identity": [
+      {
+        "beta": 0.0,
+        "interior_rows": [
+          0,
+          1,
+          2
+        ],
+        "W": 0.0,
+        "jeffreys": 0.0
+      },
+      {
+        "beta": 0.0,
+        "interior_rows": [
+          0,
+          2
+        ],
+        "W": 2.7755575615628914e-17,
+        "jeffreys": 0.0
+      },
+      {
+        "beta": 1.3,
+        "interior_rows": [
+          0,
+          1,
+          2
+        ],
+        "W": 3.9383926669414437,
+        "jeffreys": 2.559955233511938
+      },
+      {
+        "beta": 1.3,
+        "interior_rows": [
+          0,
+          2
+        ],
+        "W": 2.0002906468920214,
+        "jeffreys": 1.300188920479814
+      }
+    ],
+    "native_energy_checked_parents": 256,
+    "min_mean_max_common_mass": [
+      0.9971796875,
+      0.99743701171875,
+      0.99771875
+    ],
+    "additional_missing_inventories_per_block": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "matched_cross_pairs_per_arm": [
+      6921370271,
+      2671970252,
+      2651912615
+    ],
+    "work_CI95": [
+      [
+        -0.0437861746396223,
+        -0.12543966383410432,
+        0.03786731455485973,
+        0.0345312745310301
+      ],
+      [
+        -0.0409882047194996,
+        -0.11718790668266917,
+        0.03521149724366997,
+        0.03222486697911616
+      ],
+      [
+        -0.042579454454506234,
+        -0.11693652642071523,
+        0.03177761751170275,
+        0.03144561843858402
+      ]
+    ],
+    "work_CI_three_arm_simultaneous": [
+      [
+        -0.0437861746396223,
+        -0.1517845408317713,
+        0.06421219155252668,
+        0.0345312745310301
+      ],
+      [
+        -0.0409882047194996,
+        -0.1417731607273211,
+        0.05979675128832192,
+        0.03222486697911616
+      ],
+      [
+        -0.042579454454506234,
+        -0.1409272699171833,
+        0.05576836100817082,
+        0.03144561843858402
+      ]
+    ],
+    "gain_order": [
+      "inventory_minus_optimized",
+      "inventory_minus_affine",
+      "affine_minus_optimized"
+    ],
+    "gain_CI_simultaneous": [
+      [
+        -0.0027979699201227024,
+        -0.01404625593658801,
+        0.008450316096342605,
+        0.003596514152325638
+      ],
+      [
+        -0.0012067201851160706,
+        -0.017684680162055447,
+        0.015271239791823307,
+        0.005268644144696185
+      ],
+      [
+        -0.0015912497350066318,
+        -0.015785502795974682,
+        0.012603003325961419,
+        0.004538454297902459
+      ]
+    ],
+    "gain_fraction_of_inventory_work": null,
+    "cold_material_margin": null,
+    "gain_minus_margin_CI_simultaneous": null,
+    "significant_signed_direction": null,
+    "disposition": null,
+    "projected_80pct_detectable_increment_beyond_margin_for_512_parents": null,
+    "projected_80pct_detectable_fraction_of_W0": null,
+    "population_jeffreys_by_arm_at_cold_estimate": null,
+    "uncertainty": "Disjoint blocks of 32 parents; paired t approximation, not independent tiles or pair opportunities."
+  },
+  "cold": {
+    "phase": "dev",
+    "idx": 9,
+    "beta": 3.05,
+    "staged_bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416",
+    "native_source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "native_train_positions": [
+      4096,
+      4608
+    ],
+    "block_size": 32,
+    "blocks": 16,
+    "anchors_per_parent": 8000,
+    "arms": [
+      "inventory",
+      "optimized",
+      "affine"
+    ],
+    "evidence_file": "23-dev-b09-blocks.npz",
+    "evidence_sha256": "1abe3e205acf460371777683f0004739effbf125131f8f11a9c688cf6112031e",
+    "interval_columns": [
+      "mean",
+      "lower",
+      "upper",
+      "block_standard_error"
+    ],
+    "independent_owner_checks_and_nonzero_W": [
+      512,
+      481
+    ],
+    "toy_KL_identity": [
+      {
+        "beta": 0.0,
+        "interior_rows": [
+          0,
+          1,
+          2
+        ],
+        "W": 0.0,
+        "jeffreys": 0.0
+      },
+      {
+        "beta": 0.0,
+        "interior_rows": [
+          0,
+          2
+        ],
+        "W": 2.7755575615628914e-17,
+        "jeffreys": 0.0
+      },
+      {
+        "beta": 1.3,
+        "interior_rows": [
+          0,
+          1,
+          2
+        ],
+        "W": 3.9383926669414437,
+        "jeffreys": 2.559955233511938
+      },
+      {
+        "beta": 1.3,
+        "interior_rows": [
+          0,
+          2
+        ],
+        "W": 2.0002906468920214,
+        "jeffreys": 1.300188920479814
+      }
+    ],
+    "native_energy_checked_parents": 512,
+    "min_mean_max_common_mass": [
+      0.6827109375,
+      0.684584228515625,
+      0.68638671875
+    ],
+    "additional_missing_inventories_per_block": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "matched_cross_pairs_per_arm": [
+      16070362928,
+      6309568189,
+      5509916767
+    ],
+    "work_CI95": [
+      [
+        24.374009829602464,
+        24.36232201868175,
+        24.38569764052318,
+        0.005483503442558535
+      ],
+      [
+        21.968198888627974,
+        21.95692318498552,
+        21.979474592270428,
+        0.005290157426405932
+      ],
+      [
+        21.7254539019142,
+        21.712479734635686,
+        21.738428069192715,
+        0.0060870159021785865
+      ]
+    ],
+    "work_CI_three_arm_simultaneous": [
+      [
+        24.374009829602464,
+        24.359238700772295,
+        24.388780958432633,
+        0.005483503442558535
+      ],
+      [
+        21.968198888627974,
+        21.953948583563726,
+        21.982449193692222,
+        0.005290157426405932
+      ],
+      [
+        21.7254539019142,
+        21.70905706784193,
+        21.74185073598647,
+        0.0060870159021785865
+      ]
+    ],
+    "gain_order": [
+      "inventory_minus_optimized",
+      "inventory_minus_affine",
+      "affine_minus_optimized"
+    ],
+    "gain_CI_simultaneous": [
+      [
+        2.405810940974488,
+        2.3990184609632363,
+        2.4126034209857394,
+        0.002521580303946263
+      ],
+      [
+        2.648555927688266,
+        2.641856908442745,
+        2.6552549469337876,
+        0.002486884754505347
+      ],
+      [
+        -0.2427449867137783,
+        -0.25004218725669947,
+        -0.23544778617085713,
+        0.002708948297602105
+      ]
+    ],
+    "gain_fraction_of_inventory_work": [
+      0.09870394562870029,
+      0.10866311887966706,
+      -0.009959173250966784
+    ],
+    "cold_material_margin": 1.2187004914801234,
+    "gain_minus_margin_CI_simultaneous": [
+      [
+        1.1871104494943645,
+        1.1805058595403464,
+        1.1937150394483826,
+        0.0024518296581081864
+      ],
+      [
+        1.4298554362081428,
+        1.423094372862753,
+        1.4366164995535327,
+        0.0025099174583109577
+      ],
+      [
+        -1.4614454781939017,
+        -1.4685477529301998,
+        -1.4543432034576036,
+        0.002636585762284035
+      ]
+    ],
+    "significant_signed_direction": [
+      "positive",
+      "positive",
+      "negative"
+    ],
+    "disposition": [
+      "inadequate support",
+      "inadequate support",
+      "inadequate support"
+    ],
+    "projected_80pct_detectable_increment_beyond_margin_for_512_parents": [
+      0.008669030526145198,
+      0.008874413845287766,
+      0.009322279948141308
+    ],
+    "projected_80pct_detectable_fraction_of_W0": [
+      0.00035566698244359363,
+      0.0003640933070647123,
+      0.00038246804745353433
+    ],
+    "population_jeffreys_by_arm_at_cold_estimate": [
+      37.17036499014375,
+      33.501503305157655,
+      33.131317200419154
+    ],
+    "uncertainty": "Disjoint blocks of 32 parents; paired t approximation, not independent tiles or pair opportunities."
+  }
+}

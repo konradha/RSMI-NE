@@ -1,0 +1,64 @@
+{
+  "bank_meta": {
+    "index": 9,
+    "beta": 3.05,
+    "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+    "split": "native TRAIN order only",
+    "fit_stop": 4096,
+    "dev_stop": 4608,
+    "audit_stop": 5120,
+    "rows": 5120,
+    "bank_sha256": "e1ce4a730cb8c79106bfb278803238ca2847eaa2c03479bfcf8e26e8520f0416"
+  },
+  "folds": [
+    {
+      "fold": 256,
+      "n": 256,
+      "lineage_sha256": {
+        "parent": "8145b795a3eecef590885f191acc62b21ad149dbfc8d67b45b3d05682f2022b3",
+        "chain_id": "4f76a534d012ed56f4b048ec171fbb4f51830bec2cae577df097aea165b403f1",
+        "chain_seed": "d13c616992e464c9428a2eda00e38f5462c554672f82fdde578364293e7590fd"
+      }
+    },
+    {
+      "fold": 1024,
+      "n": 1024,
+      "lineage_sha256": {
+        "parent": "770f21592fdc0e00bd38c16f2c0f3489c77181e79a677f63d1258516e6786646",
+        "chain_id": "31645dd08b69056f050f012f94d3624b220faa3c53cad39e78d8631c2cbbb14a",
+        "chain_seed": "1c003b7782dc7ad7842eb9466b87e3c6046c6fe2eee50e3865b15372b7881d06"
+      }
+    },
+    {
+      "fold": 4096,
+      "n": 4096,
+      "lineage_sha256": {
+        "parent": "6b39eb0ae948a5097885e27f0f64eb0c8822e6f67afbb0ee342d43a131b32dc5",
+        "chain_id": "a8e7da20cca03c38eb0b92cac9f63c805153c83710125060d1df0074d1fce155",
+        "chain_seed": "7583f569c6baec243a37a7dc91f0ce30909ca1fd7344854892f8a3a8b96d221f"
+      }
+    },
+    {
+      "fold": "development",
+      "n": 512,
+      "lineage_sha256": {
+        "parent": "a25e310f1bcbbbbc94f1374d2b1e8eca79fc2cbf6cc4d5403b3cd550c7497530",
+        "chain_id": "f65d0925b583c9aa47eed83f8268259127ef33ac19beed08a74277e6c44b83be",
+        "chain_seed": "f93bd619d200c394be8536f7694091bffc967c41670a22925b669f88394414fb"
+      }
+    },
+    {
+      "fold": "audit",
+      "n": 512,
+      "lineage_sha256": {
+        "parent": "b3c1bc1cff2a2a0cbe088715b2b58b0e1aa63e7200031277e8ee201e8554016e",
+        "chain_id": "0c08d41032d1e515b34c0b93fb40c6e4d288364296e06d0f96951b61a7376ed9",
+        "chain_seed": "8c4462053879d988f7ea27207970750f05067326655857be60d0847eae6ee866"
+      }
+    }
+  ],
+  "all_disjoint_except_declared_fit_nesting": true,
+  "physical_species_read": "positions [0,4608) only before audit release",
+  "historical_teacher_only_postfit_fit_weighted_agreement": "ec838a3eb8e3b033ff980d38b91176404f81417969284feebff407ca76dc96c1",
+  "extract_wall_seconds": 0.35866136010736227
+}

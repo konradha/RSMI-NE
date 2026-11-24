@@ -1,0 +1,7 @@
+{
+  "nonphysical_categorical_rows": 81,
+  "finite_differences": 32,
+  "max_abs_score_change": 2.6497816882685017,
+  "max_abs_error": 8.881784197001252e-15,
+  "interpretation": "One occurrence per row: adjoint agrees with exact shared-word finite replacements. Actual TRAIN repeats can interact; all bulk updates are accepted only after exact recomputation of the hard forward score."
+}
