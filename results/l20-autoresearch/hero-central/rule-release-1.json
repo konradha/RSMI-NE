@@ -1,0 +1,37 @@
+{
+  "stage": "pilot fit and rule only",
+  "nomination_sha256": "e2fa8b81e7244d844065a4cc5624c44af84b96a702b3d5de0d21545963a5bc77",
+  "control_sha256": "c14fd84ea21d526780a8840e1d4cf50782b1bb4ac2f7f7b285d069bdf76bdb46",
+  "models": [
+    {
+      "seed": 6101,
+      "public": "results/l20-autoresearch/hero-central/models/affine-uniform-p4096-s6101-u32768.npz",
+      "sha256": "276fec54966b400149e6d12e523338842ec6c94817bf858a096969b3bf8836fe"
+    },
+    {
+      "seed": 6102,
+      "public": "results/l20-autoresearch/hero-central/models/affine-uniform-p4096-s6102-u32768.npz",
+      "sha256": "83b8d8cf3d9666447518e28a16c9438e782b262095497c6d31be545bfb55ef11"
+    },
+    {
+      "seed": 6103,
+      "public": "results/l20-autoresearch/hero-central/models/affine-uniform-p4096-s6103-u32768.npz",
+      "sha256": "ebadcb2c03524adadc6b70e0671ca7d9eb77b872a14838acf010bc4265393aab"
+    },
+    {
+      "seed": 6104,
+      "public": "results/l20-autoresearch/hero-central/models/affine-uniform-p4096-s6104-u32768.npz",
+      "sha256": "0ec77fab435bdf081d5aede10827335d1ef10fa4b36e0f6fd973aa6c531584a5"
+    },
+    {
+      "seed": 6105,
+      "public": "results/l20-autoresearch/hero-central/models/affine-uniform-p4096-s6105-u32768.npz",
+      "sha256": "35760556ef073ef8331d32b145bf65abc36554040aaf630d1cf1ebd00a99dce7"
+    }
+  ],
+  "banks": {
+    "fit": "4c8377a51e9c576b30e382e55127b8e2c6ee214ef68a31fa0ed6d35df257e3e2",
+    "rule": "fd8e25e527dba014f7ecd0ea6aa3b95bfa29042e9511898b31a38f4ede806887"
+  },
+  "instruction": "Single deterministic pilot distillation only. Never generalize this one-temperature pilot to the full-data branch. No eval/transfer."
+}

@@ -329,8 +329,12 @@ def _public_pin(path):
 
 def _release(stage, lock):
     from datetime import datetime, timezone
+    import signal
     cutoff = '2026-11-24T21:00:25+00:00' if stage == 'freeze' else '2026-11-24T21:45:25+00:00'
-    require(datetime.now(timezone.utc) < datetime.fromisoformat(cutoff), 'physical deadline expired')
+    remaining = (datetime.fromisoformat(cutoff)-datetime.now(timezone.utc)).total_seconds()
+    require(remaining > 0, 'physical deadline expired')
+    # Kill the CLI even if a long native/BLAS operation overruns its authorized window.
+    signal.setitimer(signal.ITIMER_REAL, remaining)
     path = PUBLIC/f'forecast-release-{stage}.json'
     require(sha(path) == lock, 'wrong release digest')
     _public_pin(path)
@@ -354,6 +358,16 @@ def _input(release, key, specific=None, public=False):
     if public:
         _public_pin(path)
     require(sha(path) == spec['sha256'], f'{key}: pinned bytes changed')
+    return path
+
+
+def _reference_critic(release):
+    path = _input(release,'critic',public=True)
+    nomination = PUBLIC/'nomination.json'
+    _public_pin(nomination)
+    rows = [r for r in json.loads(nomination.read_bytes())['models'] if r['seed'] == 6101]
+    require(len(rows) == 1 and (PUBLIC.parents[2]/rows[0]['public']).resolve() == path and
+            rows[0]['sha256'] == release['inputs']['critic']['sha256'], 'wrong reference critic')
     return path
 
 
@@ -408,9 +422,16 @@ def freeze(release, lock):
     require(not receipt.exists() and not model_path.exists(), 'forecast freeze already exists')
     require(release['critic_seed'] == 6101, 'use fixed lowest reference seed of nominated arm')
     rule_path = _input(release,'rule_spec','rule.json',public=True)
-    critic_path = _input(release,'critic')
-    banks_paths = {s:_input(release,s,f'{s}.npz') for s in SPLITS}
     spec = json.loads(rule_path.read_bytes())
+    require(spec['schema'] == 'hero-rule-1' and spec['symbolic_passed'] is True,
+            'no reproducible, adequately distilled symbolic nominee; refuse before bank access')
+    nominee = (spec['status'] == 'symbolic_nominee_only_pending_boundary_gate' and
+               spec['rediscovery'] is False and spec['residual_fraction'] >= .10)
+    conventional = spec['status'] == 'conventional_rediscovery_no_exam' and spec['rediscovery'] is True
+    require(nominee or (conventional and release['mode'] == 'nonconfirmatory'),
+            'only a nominee, or explicit dev-only conventional rediscovery, may enter freeze')
+    critic_path = _reference_critic(release)
+    banks_paths = {s:_input(release,s,f'{s}.npz') for s in SPLITS}
     write_json(ticket,dict(stage='freeze',release_sha256=lock))
     start = time.monotonic()
     banks = {s:_validate_keys(path,s,'discovery') for s,path in banks_paths.items()}
@@ -459,7 +480,7 @@ def issue(release, role, lock):
         require(json.loads(p.read_bytes())['passed'], 'previous gate failed')
     blind = _input(release,'blind',f'blind-{role}.npz')
     model_path = _input(release,'model','frozen-forecasts.npz')
-    critic_path = _input(release,'critic')
+    critic_path = _reference_critic(release)
     require(sha(model_path) == freeze_info['model_sha256'] and sha(critic_path) == freeze_info['critic_sha256'], 'model was not frozen')
     write_json(ticket,dict(stage='issue',role=role,release_sha256=lock))
     start = time.monotonic()
