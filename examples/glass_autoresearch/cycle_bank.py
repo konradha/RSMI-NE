@@ -124,7 +124,8 @@ def archive_rows(role, roster, pin):
     with ZipFile(path) as z:
         for name, val in [('beta', beta), ('axes', 'chain,z,y,x')]:
             with z.open(name + '.npy') as f:
-                require(np.lib.format.read_array(f, allow_pickle=False).item() == val, 'archive metadata')
+                item = np.lib.format.read_array(f, allow_pickle=False).item()
+                require((float(item) if name == 'beta' else item) == val, f'archive {name} metadata')
         for name, ref in [('chain_seed', seed), ('chain_id', chain)]:
             require(np.array_equal(selected_member(z, name, parent, ()), ref), 'roster/source lineage mismatch')
         state = selected_member(z, 'species', parent, (20, 20, 20)).reshape(len(parent), 8000)
