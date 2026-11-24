@@ -1,0 +1,711 @@
+index	beta	group	category	raw_rows	net_unique_first
+0	0	primary_route	dev	791	791
+0	0	primary_route	eval	791	791
+0	0	primary_route	exclude:R4_tripod_tune	0	0
+0	0	primary_route	exclude:cycle-boundary_cold	0	0
+0	0	primary_route	exclude:cycle-boundary_dev	0	0
+0	0	primary_route	exclude:cycle-boundary_fit	0	0
+0	0	primary_route	exclude:cycle-boundary_hot	1024	1024
+0	0	primary_route	exclude:cycle-boundary_pilot	0	0
+0	0	primary_route	exclude:cycle-boundary_transfer	0	0
+0	0	primary_route	exclude:fifteen_internal_calibration	128	128
+0	0	primary_route	exclude:hero-central_cold	0	0
+0	0	primary_route	exclude:hero-central_hot	1024	1024
+0	0	primary_route	exclude:hero-central_issue	0	0
+0	0	primary_route	exclude:hero-central_rule	0	0
+0	0	primary_route	exclude:hero-central_transfer	0	0
+0	0	primary_route	exclude:hero-central_tune	0	0
+0	0	primary_route	exclude:index6_permanent	0	0
+0	0	primary_route	exclude:native_TEST	4087	4087
+0	0	primary_route	exclude:native_validation	2042	2042
+0	0	primary_route	exclude:preflight_heldout	62	62
+0	0	primary_route	exclude:preparation	32	32
+0	0	primary_route	exclude:selected_04	128	128
+0	0	primary_route	exclude:spatial-cycle_calibration	0	0
+0	0	primary_route	exclude:spatial-cycle_cold	0	0
+0	0	primary_route	exclude:spatial-cycle_dev	0	0
+0	0	primary_route	exclude:spatial-cycle_fit	0	0
+0	0	primary_route	exclude:spatial-cycle_hot	1024	1024
+0	0	primary_route	exclude:spatial-cycle_transfer	0	0
+0	0	primary_route	exclude:tranche2_audit	255	255
+0	0	primary_route	exclude:tranche2_dev	250	250
+0	0	primary_route	fit	4746	4746
+0	0	overlapping_hold	index6_permanent	0	
+0	0	overlapping_hold	preparation	32	
+0	0	overlapping_hold	native_TEST	4096	
+0	0	overlapping_hold	native_validation	2048	
+0	0	overlapping_hold	duplicate_lineage	0	
+0	0	overlapping_hold	cycle-boundary_pilot	0	
+0	0	overlapping_hold	cycle-boundary_fit	0	
+0	0	overlapping_hold	cycle-boundary_dev	0	
+0	0	overlapping_hold	cycle-boundary_cold	0	
+0	0	overlapping_hold	cycle-boundary_hot	1024	
+0	0	overlapping_hold	cycle-boundary_transfer	0	
+0	0	overlapping_hold	spatial-cycle_cold	0	
+0	0	overlapping_hold	spatial-cycle_dev	0	
+0	0	overlapping_hold	spatial-cycle_fit	0	
+0	0	overlapping_hold	spatial-cycle_calibration	0	
+0	0	overlapping_hold	spatial-cycle_hot	1024	
+0	0	overlapping_hold	spatial-cycle_transfer	0	
+0	0	overlapping_hold	hero-central_hot	1024	
+0	0	overlapping_hold	hero-central_transfer	0	
+0	0	overlapping_hold	hero-central_tune	0	
+0	0	overlapping_hold	hero-central_rule	0	
+0	0	overlapping_hold	hero-central_cold	0	
+0	0	overlapping_hold	hero-central_issue	0	
+0	0	overlapping_hold	R4_tripod_tune	0	
+0	0	overlapping_hold	cold_issue_reserve	0	
+0	0	overlapping_hold	cold_rate_internal_tune	0	
+0	0	overlapping_hold	cold_supervised_calibration	0	
+0	0	overlapping_hold	fifteen_internal_calibration	128	
+0	0	overlapping_hold	physical_fork_ancestor	32	
+0	0	overlapping_hold	preflight_heldout	128	
+0	0	overlapping_hold	previous_fork_roster	0	
+0	0	overlapping_hold	selected_04	256	
+0	0	overlapping_hold	tranche2_audit	256	
+0	0	overlapping_hold	tranche2_dev	256	
+0	0	overlapping_history	R4_tripod_fit	0	
+0	0	overlapping_history	first_pass_generic_TRAIN	10240	
+0	0	overlapping_history	hero-central_fit	0	
+0	0	overlapping_history	preflight_fit	256	
+0	0	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+0	0	overlapping_history	tranche2_fit	256	
+1	0.338888888889	primary_route	dev	1277	1277
+1	0.338888888889	primary_route	eval	1277	1277
+1	0.338888888889	primary_route	exclude:R4_tripod_tune	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_cold	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_dev	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_fit	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_hot	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_pilot	0	0
+1	0.338888888889	primary_route	exclude:cycle-boundary_transfer	0	0
+1	0.338888888889	primary_route	exclude:fifteen_internal_calibration	0	0
+1	0.338888888889	primary_route	exclude:hero-central_cold	0	0
+1	0.338888888889	primary_route	exclude:hero-central_hot	0	0
+1	0.338888888889	primary_route	exclude:hero-central_issue	0	0
+1	0.338888888889	primary_route	exclude:hero-central_rule	0	0
+1	0.338888888889	primary_route	exclude:hero-central_transfer	0	0
+1	0.338888888889	primary_route	exclude:hero-central_tune	0	0
+1	0.338888888889	primary_route	exclude:index6_permanent	0	0
+1	0.338888888889	primary_route	exclude:native_TEST	4087	4087
+1	0.338888888889	primary_route	exclude:native_validation	2046	2046
+1	0.338888888889	primary_route	exclude:preflight_heldout	0	0
+1	0.338888888889	primary_route	exclude:preparation	32	32
+1	0.338888888889	primary_route	exclude:selected_04	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_calibration	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_cold	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_dev	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_fit	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_hot	0	0
+1	0.338888888889	primary_route	exclude:spatial-cycle_transfer	0	0
+1	0.338888888889	primary_route	exclude:tranche2_audit	0	0
+1	0.338888888889	primary_route	exclude:tranche2_dev	0	0
+1	0.338888888889	primary_route	fit	7665	7665
+1	0.338888888889	overlapping_hold	index6_permanent	0	
+1	0.338888888889	overlapping_hold	preparation	32	
+1	0.338888888889	overlapping_hold	native_TEST	4096	
+1	0.338888888889	overlapping_hold	native_validation	2048	
+1	0.338888888889	overlapping_hold	duplicate_lineage	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_pilot	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_fit	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_dev	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_cold	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_hot	0	
+1	0.338888888889	overlapping_hold	cycle-boundary_transfer	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_cold	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_dev	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_fit	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_calibration	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_hot	0	
+1	0.338888888889	overlapping_hold	spatial-cycle_transfer	0	
+1	0.338888888889	overlapping_hold	hero-central_hot	0	
+1	0.338888888889	overlapping_hold	hero-central_transfer	0	
+1	0.338888888889	overlapping_hold	hero-central_tune	0	
+1	0.338888888889	overlapping_hold	hero-central_rule	0	
+1	0.338888888889	overlapping_hold	hero-central_cold	0	
+1	0.338888888889	overlapping_hold	hero-central_issue	0	
+1	0.338888888889	overlapping_hold	R4_tripod_tune	0	
+1	0.338888888889	overlapping_hold	cold_issue_reserve	0	
+1	0.338888888889	overlapping_hold	cold_rate_internal_tune	0	
+1	0.338888888889	overlapping_hold	cold_supervised_calibration	0	
+1	0.338888888889	overlapping_hold	fifteen_internal_calibration	0	
+1	0.338888888889	overlapping_hold	physical_fork_ancestor	32	
+1	0.338888888889	overlapping_hold	preflight_heldout	0	
+1	0.338888888889	overlapping_hold	previous_fork_roster	0	
+1	0.338888888889	overlapping_hold	selected_04	0	
+1	0.338888888889	overlapping_hold	tranche2_audit	0	
+1	0.338888888889	overlapping_hold	tranche2_dev	0	
+1	0.338888888889	overlapping_history	R4_tripod_fit	0	
+1	0.338888888889	overlapping_history	first_pass_generic_TRAIN	10240	
+1	0.338888888889	overlapping_history	hero-central_fit	0	
+1	0.338888888889	overlapping_history	preflight_fit	0	
+1	0.338888888889	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+1	0.338888888889	overlapping_history	tranche2_fit	256	
+2	0.677777777778	primary_route	dev	1277	1277
+2	0.677777777778	primary_route	eval	1277	1277
+2	0.677777777778	primary_route	exclude:R4_tripod_tune	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_cold	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_dev	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_fit	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_hot	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_pilot	0	0
+2	0.677777777778	primary_route	exclude:cycle-boundary_transfer	0	0
+2	0.677777777778	primary_route	exclude:fifteen_internal_calibration	0	0
+2	0.677777777778	primary_route	exclude:hero-central_cold	0	0
+2	0.677777777778	primary_route	exclude:hero-central_hot	0	0
+2	0.677777777778	primary_route	exclude:hero-central_issue	0	0
+2	0.677777777778	primary_route	exclude:hero-central_rule	0	0
+2	0.677777777778	primary_route	exclude:hero-central_transfer	0	0
+2	0.677777777778	primary_route	exclude:hero-central_tune	0	0
+2	0.677777777778	primary_route	exclude:index6_permanent	0	0
+2	0.677777777778	primary_route	exclude:native_TEST	4089	4089
+2	0.677777777778	primary_route	exclude:native_validation	2045	2045
+2	0.677777777778	primary_route	exclude:preflight_heldout	0	0
+2	0.677777777778	primary_route	exclude:preparation	32	32
+2	0.677777777778	primary_route	exclude:selected_04	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_calibration	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_cold	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_dev	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_fit	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_hot	0	0
+2	0.677777777778	primary_route	exclude:spatial-cycle_transfer	0	0
+2	0.677777777778	primary_route	exclude:tranche2_audit	0	0
+2	0.677777777778	primary_route	exclude:tranche2_dev	0	0
+2	0.677777777778	primary_route	fit	7664	7664
+2	0.677777777778	overlapping_hold	index6_permanent	0	
+2	0.677777777778	overlapping_hold	preparation	32	
+2	0.677777777778	overlapping_hold	native_TEST	4096	
+2	0.677777777778	overlapping_hold	native_validation	2048	
+2	0.677777777778	overlapping_hold	duplicate_lineage	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_pilot	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_fit	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_dev	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_cold	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_hot	0	
+2	0.677777777778	overlapping_hold	cycle-boundary_transfer	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_cold	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_dev	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_fit	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_calibration	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_hot	0	
+2	0.677777777778	overlapping_hold	spatial-cycle_transfer	0	
+2	0.677777777778	overlapping_hold	hero-central_hot	0	
+2	0.677777777778	overlapping_hold	hero-central_transfer	0	
+2	0.677777777778	overlapping_hold	hero-central_tune	0	
+2	0.677777777778	overlapping_hold	hero-central_rule	0	
+2	0.677777777778	overlapping_hold	hero-central_cold	0	
+2	0.677777777778	overlapping_hold	hero-central_issue	0	
+2	0.677777777778	overlapping_hold	R4_tripod_tune	0	
+2	0.677777777778	overlapping_hold	cold_issue_reserve	0	
+2	0.677777777778	overlapping_hold	cold_rate_internal_tune	0	
+2	0.677777777778	overlapping_hold	cold_supervised_calibration	0	
+2	0.677777777778	overlapping_hold	fifteen_internal_calibration	0	
+2	0.677777777778	overlapping_hold	physical_fork_ancestor	32	
+2	0.677777777778	overlapping_hold	preflight_heldout	0	
+2	0.677777777778	overlapping_hold	previous_fork_roster	0	
+2	0.677777777778	overlapping_hold	selected_04	0	
+2	0.677777777778	overlapping_hold	tranche2_audit	0	
+2	0.677777777778	overlapping_hold	tranche2_dev	0	
+2	0.677777777778	overlapping_history	R4_tripod_fit	0	
+2	0.677777777778	overlapping_history	first_pass_generic_TRAIN	10240	
+2	0.677777777778	overlapping_history	hero-central_fit	0	
+2	0.677777777778	overlapping_history	preflight_fit	0	
+2	0.677777777778	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+2	0.677777777778	overlapping_history	tranche2_fit	256	
+3	1.016666666667	primary_route	dev	1277	1277
+3	1.016666666667	primary_route	eval	1277	1277
+3	1.016666666667	primary_route	exclude:R4_tripod_tune	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_cold	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_dev	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_fit	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_hot	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_pilot	0	0
+3	1.016666666667	primary_route	exclude:cycle-boundary_transfer	0	0
+3	1.016666666667	primary_route	exclude:fifteen_internal_calibration	0	0
+3	1.016666666667	primary_route	exclude:hero-central_cold	0	0
+3	1.016666666667	primary_route	exclude:hero-central_hot	0	0
+3	1.016666666667	primary_route	exclude:hero-central_issue	0	0
+3	1.016666666667	primary_route	exclude:hero-central_rule	0	0
+3	1.016666666667	primary_route	exclude:hero-central_transfer	0	0
+3	1.016666666667	primary_route	exclude:hero-central_tune	0	0
+3	1.016666666667	primary_route	exclude:index6_permanent	0	0
+3	1.016666666667	primary_route	exclude:native_TEST	4084	4084
+3	1.016666666667	primary_route	exclude:native_validation	2047	2047
+3	1.016666666667	primary_route	exclude:preflight_heldout	0	0
+3	1.016666666667	primary_route	exclude:preparation	32	32
+3	1.016666666667	primary_route	exclude:selected_04	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_calibration	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_cold	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_dev	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_fit	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_hot	0	0
+3	1.016666666667	primary_route	exclude:spatial-cycle_transfer	0	0
+3	1.016666666667	primary_route	exclude:tranche2_audit	0	0
+3	1.016666666667	primary_route	exclude:tranche2_dev	0	0
+3	1.016666666667	primary_route	fit	7667	7667
+3	1.016666666667	overlapping_hold	index6_permanent	0	
+3	1.016666666667	overlapping_hold	preparation	32	
+3	1.016666666667	overlapping_hold	native_TEST	4096	
+3	1.016666666667	overlapping_hold	native_validation	2048	
+3	1.016666666667	overlapping_hold	duplicate_lineage	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_pilot	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_fit	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_dev	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_cold	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_hot	0	
+3	1.016666666667	overlapping_hold	cycle-boundary_transfer	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_cold	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_dev	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_fit	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_calibration	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_hot	0	
+3	1.016666666667	overlapping_hold	spatial-cycle_transfer	0	
+3	1.016666666667	overlapping_hold	hero-central_hot	0	
+3	1.016666666667	overlapping_hold	hero-central_transfer	0	
+3	1.016666666667	overlapping_hold	hero-central_tune	0	
+3	1.016666666667	overlapping_hold	hero-central_rule	0	
+3	1.016666666667	overlapping_hold	hero-central_cold	0	
+3	1.016666666667	overlapping_hold	hero-central_issue	0	
+3	1.016666666667	overlapping_hold	R4_tripod_tune	0	
+3	1.016666666667	overlapping_hold	cold_issue_reserve	0	
+3	1.016666666667	overlapping_hold	cold_rate_internal_tune	0	
+3	1.016666666667	overlapping_hold	cold_supervised_calibration	0	
+3	1.016666666667	overlapping_hold	fifteen_internal_calibration	0	
+3	1.016666666667	overlapping_hold	physical_fork_ancestor	32	
+3	1.016666666667	overlapping_hold	preflight_heldout	0	
+3	1.016666666667	overlapping_hold	previous_fork_roster	0	
+3	1.016666666667	overlapping_hold	selected_04	0	
+3	1.016666666667	overlapping_hold	tranche2_audit	0	
+3	1.016666666667	overlapping_hold	tranche2_dev	0	
+3	1.016666666667	overlapping_history	R4_tripod_fit	0	
+3	1.016666666667	overlapping_history	first_pass_generic_TRAIN	10240	
+3	1.016666666667	overlapping_history	hero-central_fit	0	
+3	1.016666666667	overlapping_history	preflight_fit	0	
+3	1.016666666667	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+3	1.016666666667	overlapping_history	tranche2_fit	256	
+4	1.355555555556	primary_route	dev	1277	1277
+4	1.355555555556	primary_route	eval	1277	1277
+4	1.355555555556	primary_route	exclude:R4_tripod_tune	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_cold	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_dev	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_fit	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_hot	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_pilot	0	0
+4	1.355555555556	primary_route	exclude:cycle-boundary_transfer	0	0
+4	1.355555555556	primary_route	exclude:fifteen_internal_calibration	0	0
+4	1.355555555556	primary_route	exclude:hero-central_cold	0	0
+4	1.355555555556	primary_route	exclude:hero-central_hot	0	0
+4	1.355555555556	primary_route	exclude:hero-central_issue	0	0
+4	1.355555555556	primary_route	exclude:hero-central_rule	0	0
+4	1.355555555556	primary_route	exclude:hero-central_transfer	0	0
+4	1.355555555556	primary_route	exclude:hero-central_tune	0	0
+4	1.355555555556	primary_route	exclude:index6_permanent	0	0
+4	1.355555555556	primary_route	exclude:native_TEST	4085	4085
+4	1.355555555556	primary_route	exclude:native_validation	2045	2045
+4	1.355555555556	primary_route	exclude:preflight_heldout	0	0
+4	1.355555555556	primary_route	exclude:preparation	32	32
+4	1.355555555556	primary_route	exclude:selected_04	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_calibration	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_cold	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_dev	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_fit	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_hot	0	0
+4	1.355555555556	primary_route	exclude:spatial-cycle_transfer	0	0
+4	1.355555555556	primary_route	exclude:tranche2_audit	0	0
+4	1.355555555556	primary_route	exclude:tranche2_dev	0	0
+4	1.355555555556	primary_route	fit	7668	7668
+4	1.355555555556	overlapping_hold	index6_permanent	0	
+4	1.355555555556	overlapping_hold	preparation	32	
+4	1.355555555556	overlapping_hold	native_TEST	4096	
+4	1.355555555556	overlapping_hold	native_validation	2048	
+4	1.355555555556	overlapping_hold	duplicate_lineage	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_pilot	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_fit	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_dev	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_cold	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_hot	0	
+4	1.355555555556	overlapping_hold	cycle-boundary_transfer	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_cold	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_dev	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_fit	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_calibration	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_hot	0	
+4	1.355555555556	overlapping_hold	spatial-cycle_transfer	0	
+4	1.355555555556	overlapping_hold	hero-central_hot	0	
+4	1.355555555556	overlapping_hold	hero-central_transfer	0	
+4	1.355555555556	overlapping_hold	hero-central_tune	0	
+4	1.355555555556	overlapping_hold	hero-central_rule	0	
+4	1.355555555556	overlapping_hold	hero-central_cold	0	
+4	1.355555555556	overlapping_hold	hero-central_issue	0	
+4	1.355555555556	overlapping_hold	R4_tripod_tune	0	
+4	1.355555555556	overlapping_hold	cold_issue_reserve	0	
+4	1.355555555556	overlapping_hold	cold_rate_internal_tune	0	
+4	1.355555555556	overlapping_hold	cold_supervised_calibration	0	
+4	1.355555555556	overlapping_hold	fifteen_internal_calibration	0	
+4	1.355555555556	overlapping_hold	physical_fork_ancestor	32	
+4	1.355555555556	overlapping_hold	preflight_heldout	0	
+4	1.355555555556	overlapping_hold	previous_fork_roster	0	
+4	1.355555555556	overlapping_hold	selected_04	0	
+4	1.355555555556	overlapping_hold	tranche2_audit	0	
+4	1.355555555556	overlapping_hold	tranche2_dev	0	
+4	1.355555555556	overlapping_history	R4_tripod_fit	0	
+4	1.355555555556	overlapping_history	first_pass_generic_TRAIN	10240	
+4	1.355555555556	overlapping_history	hero-central_fit	0	
+4	1.355555555556	overlapping_history	preflight_fit	0	
+4	1.355555555556	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+4	1.355555555556	overlapping_history	tranche2_fit	256	
+5	1.694444444444	primary_route	dev	1277	1277
+5	1.694444444444	primary_route	eval	1277	1277
+5	1.694444444444	primary_route	exclude:R4_tripod_tune	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_cold	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_dev	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_fit	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_hot	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_pilot	0	0
+5	1.694444444444	primary_route	exclude:cycle-boundary_transfer	0	0
+5	1.694444444444	primary_route	exclude:fifteen_internal_calibration	0	0
+5	1.694444444444	primary_route	exclude:hero-central_cold	0	0
+5	1.694444444444	primary_route	exclude:hero-central_hot	0	0
+5	1.694444444444	primary_route	exclude:hero-central_issue	0	0
+5	1.694444444444	primary_route	exclude:hero-central_rule	0	0
+5	1.694444444444	primary_route	exclude:hero-central_transfer	0	0
+5	1.694444444444	primary_route	exclude:hero-central_tune	0	0
+5	1.694444444444	primary_route	exclude:index6_permanent	0	0
+5	1.694444444444	primary_route	exclude:native_TEST	4088	4088
+5	1.694444444444	primary_route	exclude:native_validation	2045	2045
+5	1.694444444444	primary_route	exclude:preflight_heldout	0	0
+5	1.694444444444	primary_route	exclude:preparation	32	32
+5	1.694444444444	primary_route	exclude:selected_04	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_calibration	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_cold	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_dev	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_fit	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_hot	0	0
+5	1.694444444444	primary_route	exclude:spatial-cycle_transfer	0	0
+5	1.694444444444	primary_route	exclude:tranche2_audit	0	0
+5	1.694444444444	primary_route	exclude:tranche2_dev	0	0
+5	1.694444444444	primary_route	fit	7665	7665
+5	1.694444444444	overlapping_hold	index6_permanent	0	
+5	1.694444444444	overlapping_hold	preparation	32	
+5	1.694444444444	overlapping_hold	native_TEST	4096	
+5	1.694444444444	overlapping_hold	native_validation	2048	
+5	1.694444444444	overlapping_hold	duplicate_lineage	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_pilot	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_fit	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_dev	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_cold	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_hot	0	
+5	1.694444444444	overlapping_hold	cycle-boundary_transfer	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_cold	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_dev	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_fit	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_calibration	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_hot	0	
+5	1.694444444444	overlapping_hold	spatial-cycle_transfer	0	
+5	1.694444444444	overlapping_hold	hero-central_hot	0	
+5	1.694444444444	overlapping_hold	hero-central_transfer	0	
+5	1.694444444444	overlapping_hold	hero-central_tune	0	
+5	1.694444444444	overlapping_hold	hero-central_rule	0	
+5	1.694444444444	overlapping_hold	hero-central_cold	0	
+5	1.694444444444	overlapping_hold	hero-central_issue	0	
+5	1.694444444444	overlapping_hold	R4_tripod_tune	0	
+5	1.694444444444	overlapping_hold	cold_issue_reserve	0	
+5	1.694444444444	overlapping_hold	cold_rate_internal_tune	0	
+5	1.694444444444	overlapping_hold	cold_supervised_calibration	0	
+5	1.694444444444	overlapping_hold	fifteen_internal_calibration	0	
+5	1.694444444444	overlapping_hold	physical_fork_ancestor	32	
+5	1.694444444444	overlapping_hold	preflight_heldout	0	
+5	1.694444444444	overlapping_hold	previous_fork_roster	0	
+5	1.694444444444	overlapping_hold	selected_04	0	
+5	1.694444444444	overlapping_hold	tranche2_audit	0	
+5	1.694444444444	overlapping_hold	tranche2_dev	0	
+5	1.694444444444	overlapping_history	R4_tripod_fit	0	
+5	1.694444444444	overlapping_history	first_pass_generic_TRAIN	10240	
+5	1.694444444444	overlapping_history	hero-central_fit	0	
+5	1.694444444444	overlapping_history	preflight_fit	0	
+5	1.694444444444	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+5	1.694444444444	overlapping_history	tranche2_fit	256	
+6	2.033333333333	primary_route	dev	0	0
+6	2.033333333333	primary_route	eval	0	0
+6	2.033333333333	primary_route	exclude:R4_tripod_tune	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_cold	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_dev	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_fit	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_hot	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_pilot	0	0
+6	2.033333333333	primary_route	exclude:cycle-boundary_transfer	0	0
+6	2.033333333333	primary_route	exclude:fifteen_internal_calibration	0	0
+6	2.033333333333	primary_route	exclude:hero-central_cold	0	0
+6	2.033333333333	primary_route	exclude:hero-central_hot	0	0
+6	2.033333333333	primary_route	exclude:hero-central_issue	0	0
+6	2.033333333333	primary_route	exclude:hero-central_rule	0	0
+6	2.033333333333	primary_route	exclude:hero-central_transfer	0	0
+6	2.033333333333	primary_route	exclude:hero-central_tune	0	0
+6	2.033333333333	primary_route	exclude:index6_permanent	16384	16384
+6	2.033333333333	primary_route	exclude:native_TEST	0	0
+6	2.033333333333	primary_route	exclude:native_validation	0	0
+6	2.033333333333	primary_route	exclude:preflight_heldout	0	0
+6	2.033333333333	primary_route	exclude:preparation	0	0
+6	2.033333333333	primary_route	exclude:selected_04	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_calibration	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_cold	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_dev	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_fit	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_hot	0	0
+6	2.033333333333	primary_route	exclude:spatial-cycle_transfer	0	0
+6	2.033333333333	primary_route	exclude:tranche2_audit	0	0
+6	2.033333333333	primary_route	exclude:tranche2_dev	0	0
+6	2.033333333333	primary_route	fit	0	0
+6	2.033333333333	overlapping_hold	index6_permanent	16384	
+6	2.033333333333	overlapping_hold	preparation	32	
+6	2.033333333333	overlapping_hold	native_TEST	4096	
+6	2.033333333333	overlapping_hold	native_validation	2048	
+6	2.033333333333	overlapping_hold	duplicate_lineage	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_pilot	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_fit	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_dev	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_cold	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_hot	0	
+6	2.033333333333	overlapping_hold	cycle-boundary_transfer	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_cold	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_dev	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_fit	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_calibration	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_hot	0	
+6	2.033333333333	overlapping_hold	spatial-cycle_transfer	0	
+6	2.033333333333	overlapping_hold	hero-central_hot	0	
+6	2.033333333333	overlapping_hold	hero-central_transfer	0	
+6	2.033333333333	overlapping_hold	hero-central_tune	0	
+6	2.033333333333	overlapping_hold	hero-central_rule	0	
+6	2.033333333333	overlapping_hold	hero-central_cold	0	
+6	2.033333333333	overlapping_hold	hero-central_issue	0	
+6	2.033333333333	overlapping_hold	R4_tripod_tune	0	
+6	2.033333333333	overlapping_hold	cold_issue_reserve	0	
+6	2.033333333333	overlapping_hold	cold_rate_internal_tune	0	
+6	2.033333333333	overlapping_hold	cold_supervised_calibration	0	
+6	2.033333333333	overlapping_hold	fifteen_internal_calibration	0	
+6	2.033333333333	overlapping_hold	physical_fork_ancestor	32	
+6	2.033333333333	overlapping_hold	preflight_heldout	0	
+6	2.033333333333	overlapping_hold	previous_fork_roster	0	
+6	2.033333333333	overlapping_hold	selected_04	0	
+6	2.033333333333	overlapping_hold	tranche2_audit	0	
+6	2.033333333333	overlapping_hold	tranche2_dev	0	
+6	2.033333333333	overlapping_history	R4_tripod_fit	0	
+6	2.033333333333	overlapping_history	first_pass_generic_TRAIN	10240	
+6	2.033333333333	overlapping_history	hero-central_fit	0	
+6	2.033333333333	overlapping_history	preflight_fit	0	
+6	2.033333333333	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+6	2.033333333333	overlapping_history	tranche2_fit	0	
+7	2.372222222222	primary_route	dev	1117	1117
+7	2.372222222222	primary_route	eval	1117	1117
+7	2.372222222222	primary_route	exclude:R4_tripod_tune	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_cold	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_dev	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_fit	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_hot	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_pilot	0	0
+7	2.372222222222	primary_route	exclude:cycle-boundary_transfer	0	0
+7	2.372222222222	primary_route	exclude:fifteen_internal_calibration	0	0
+7	2.372222222222	primary_route	exclude:hero-central_cold	0	0
+7	2.372222222222	primary_route	exclude:hero-central_hot	0	0
+7	2.372222222222	primary_route	exclude:hero-central_issue	0	0
+7	2.372222222222	primary_route	exclude:hero-central_rule	0	0
+7	2.372222222222	primary_route	exclude:hero-central_transfer	1024	1024
+7	2.372222222222	primary_route	exclude:hero-central_tune	0	0
+7	2.372222222222	primary_route	exclude:index6_permanent	0	0
+7	2.372222222222	primary_route	exclude:native_TEST	4088	4088
+7	2.372222222222	primary_route	exclude:native_validation	2045	2045
+7	2.372222222222	primary_route	exclude:preflight_heldout	0	0
+7	2.372222222222	primary_route	exclude:preparation	32	32
+7	2.372222222222	primary_route	exclude:selected_04	256	256
+7	2.372222222222	primary_route	exclude:spatial-cycle_calibration	0	0
+7	2.372222222222	primary_route	exclude:spatial-cycle_cold	0	0
+7	2.372222222222	primary_route	exclude:spatial-cycle_dev	0	0
+7	2.372222222222	primary_route	exclude:spatial-cycle_fit	0	0
+7	2.372222222222	primary_route	exclude:spatial-cycle_hot	0	0
+7	2.372222222222	primary_route	exclude:spatial-cycle_transfer	0	0
+7	2.372222222222	primary_route	exclude:tranche2_audit	0	0
+7	2.372222222222	primary_route	exclude:tranche2_dev	0	0
+7	2.372222222222	primary_route	fit	6705	6705
+7	2.372222222222	overlapping_hold	index6_permanent	0	
+7	2.372222222222	overlapping_hold	preparation	32	
+7	2.372222222222	overlapping_hold	native_TEST	4096	
+7	2.372222222222	overlapping_hold	native_validation	2048	
+7	2.372222222222	overlapping_hold	duplicate_lineage	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_pilot	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_fit	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_dev	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_cold	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_hot	0	
+7	2.372222222222	overlapping_hold	cycle-boundary_transfer	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_cold	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_dev	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_fit	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_calibration	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_hot	0	
+7	2.372222222222	overlapping_hold	spatial-cycle_transfer	0	
+7	2.372222222222	overlapping_hold	hero-central_hot	0	
+7	2.372222222222	overlapping_hold	hero-central_transfer	1024	
+7	2.372222222222	overlapping_hold	hero-central_tune	0	
+7	2.372222222222	overlapping_hold	hero-central_rule	0	
+7	2.372222222222	overlapping_hold	hero-central_cold	0	
+7	2.372222222222	overlapping_hold	hero-central_issue	0	
+7	2.372222222222	overlapping_hold	R4_tripod_tune	0	
+7	2.372222222222	overlapping_hold	cold_issue_reserve	0	
+7	2.372222222222	overlapping_hold	cold_rate_internal_tune	0	
+7	2.372222222222	overlapping_hold	cold_supervised_calibration	0	
+7	2.372222222222	overlapping_hold	fifteen_internal_calibration	0	
+7	2.372222222222	overlapping_hold	physical_fork_ancestor	32	
+7	2.372222222222	overlapping_hold	preflight_heldout	0	
+7	2.372222222222	overlapping_hold	previous_fork_roster	0	
+7	2.372222222222	overlapping_hold	selected_04	768	
+7	2.372222222222	overlapping_hold	tranche2_audit	0	
+7	2.372222222222	overlapping_hold	tranche2_dev	0	
+7	2.372222222222	overlapping_history	R4_tripod_fit	0	
+7	2.372222222222	overlapping_history	first_pass_generic_TRAIN	10240	
+7	2.372222222222	overlapping_history	hero-central_fit	0	
+7	2.372222222222	overlapping_history	preflight_fit	0	
+7	2.372222222222	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+7	2.372222222222	overlapping_history	tranche2_fit	256	
+8	2.711111111111	primary_route	dev	124	124
+8	2.711111111111	primary_route	eval	124	124
+8	2.711111111111	primary_route	exclude:R4_tripod_tune	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_cold	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_dev	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_fit	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_hot	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_pilot	0	0
+8	2.711111111111	primary_route	exclude:cycle-boundary_transfer	1024	1024
+8	2.711111111111	primary_route	exclude:fifteen_internal_calibration	128	128
+8	2.711111111111	primary_route	exclude:hero-central_cold	1024	1024
+8	2.711111111111	primary_route	exclude:hero-central_hot	0	0
+8	2.711111111111	primary_route	exclude:hero-central_issue	256	256
+8	2.711111111111	primary_route	exclude:hero-central_rule	512	512
+8	2.711111111111	primary_route	exclude:hero-central_transfer	0	0
+8	2.711111111111	primary_route	exclude:hero-central_tune	512	512
+8	2.711111111111	primary_route	exclude:index6_permanent	0	0
+8	2.711111111111	primary_route	exclude:native_TEST	4076	4076
+8	2.711111111111	primary_route	exclude:native_validation	2039	2039
+8	2.711111111111	primary_route	exclude:preflight_heldout	0	0
+8	2.711111111111	primary_route	exclude:preparation	64	64
+8	2.711111111111	primary_route	exclude:selected_04	128	128
+8	2.711111111111	primary_route	exclude:spatial-cycle_calibration	0	0
+8	2.711111111111	primary_route	exclude:spatial-cycle_cold	0	0
+8	2.711111111111	primary_route	exclude:spatial-cycle_dev	0	0
+8	2.711111111111	primary_route	exclude:spatial-cycle_fit	0	0
+8	2.711111111111	primary_route	exclude:spatial-cycle_hot	0	0
+8	2.711111111111	primary_route	exclude:spatial-cycle_transfer	1024	1024
+8	2.711111111111	primary_route	exclude:tranche2_audit	252	252
+8	2.711111111111	primary_route	exclude:tranche2_dev	255	255
+8	2.711111111111	primary_route	fit	4842	4842
+8	2.711111111111	overlapping_hold	index6_permanent	0	
+8	2.711111111111	overlapping_hold	preparation	64	
+8	2.711111111111	overlapping_hold	native_TEST	4096	
+8	2.711111111111	overlapping_hold	native_validation	2048	
+8	2.711111111111	overlapping_hold	duplicate_lineage	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_pilot	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_fit	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_dev	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_cold	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_hot	0	
+8	2.711111111111	overlapping_hold	cycle-boundary_transfer	1024	
+8	2.711111111111	overlapping_hold	spatial-cycle_cold	0	
+8	2.711111111111	overlapping_hold	spatial-cycle_dev	0	
+8	2.711111111111	overlapping_hold	spatial-cycle_fit	0	
+8	2.711111111111	overlapping_hold	spatial-cycle_calibration	0	
+8	2.711111111111	overlapping_hold	spatial-cycle_hot	0	
+8	2.711111111111	overlapping_hold	spatial-cycle_transfer	1024	
+8	2.711111111111	overlapping_hold	hero-central_hot	0	
+8	2.711111111111	overlapping_hold	hero-central_transfer	0	
+8	2.711111111111	overlapping_hold	hero-central_tune	512	
+8	2.711111111111	overlapping_hold	hero-central_rule	512	
+8	2.711111111111	overlapping_hold	hero-central_cold	1024	
+8	2.711111111111	overlapping_hold	hero-central_issue	256	
+8	2.711111111111	overlapping_hold	R4_tripod_tune	0	
+8	2.711111111111	overlapping_hold	cold_issue_reserve	0	
+8	2.711111111111	overlapping_hold	cold_rate_internal_tune	0	
+8	2.711111111111	overlapping_hold	cold_supervised_calibration	0	
+8	2.711111111111	overlapping_hold	fifteen_internal_calibration	128	
+8	2.711111111111	overlapping_hold	physical_fork_ancestor	64	
+8	2.711111111111	overlapping_hold	preflight_heldout	0	
+8	2.711111111111	overlapping_hold	previous_fork_roster	256	
+8	2.711111111111	overlapping_hold	selected_04	256	
+8	2.711111111111	overlapping_hold	tranche2_audit	256	
+8	2.711111111111	overlapping_hold	tranche2_dev	256	
+8	2.711111111111	overlapping_history	R4_tripod_fit	0	
+8	2.711111111111	overlapping_history	first_pass_generic_TRAIN	10240	
+8	2.711111111111	overlapping_history	hero-central_fit	4096	
+8	2.711111111111	overlapping_history	preflight_fit	0	
+8	2.711111111111	overlapping_history	related_3cube_face_RSMI_TRAIN	0	
+8	2.711111111111	overlapping_history	tranche2_fit	256	
+9	3.05	primary_route	dev	9	9
+9	3.05	primary_route	eval	9	9
+9	3.05	primary_route	exclude:R4_tripod_tune	297	297
+9	3.05	primary_route	exclude:cycle-boundary_cold	1024	1024
+9	3.05	primary_route	exclude:cycle-boundary_dev	512	512
+9	3.05	primary_route	exclude:cycle-boundary_fit	3072	3072
+9	3.05	primary_route	exclude:cycle-boundary_hot	0	0
+9	3.05	primary_route	exclude:cycle-boundary_pilot	256	256
+9	3.05	primary_route	exclude:cycle-boundary_transfer	0	0
+9	3.05	primary_route	exclude:fifteen_internal_calibration	102	102
+9	3.05	primary_route	exclude:hero-central_cold	0	0
+9	3.05	primary_route	exclude:hero-central_hot	0	0
+9	3.05	primary_route	exclude:hero-central_issue	0	0
+9	3.05	primary_route	exclude:hero-central_rule	0	0
+9	3.05	primary_route	exclude:hero-central_transfer	0	0
+9	3.05	primary_route	exclude:hero-central_tune	0	0
+9	3.05	primary_route	exclude:index6_permanent	0	0
+9	3.05	primary_route	exclude:native_TEST	4090	4090
+9	3.05	primary_route	exclude:native_validation	2045	2045
+9	3.05	primary_route	exclude:preflight_heldout	38	38
+9	3.05	primary_route	exclude:preparation	32	32
+9	3.05	primary_route	exclude:selected_04	99	99
+9	3.05	primary_route	exclude:spatial-cycle_calibration	384	384
+9	3.05	primary_route	exclude:spatial-cycle_cold	1024	1024
+9	3.05	primary_route	exclude:spatial-cycle_dev	512	512
+9	3.05	primary_route	exclude:spatial-cycle_fit	2048	2048
+9	3.05	primary_route	exclude:spatial-cycle_hot	0	0
+9	3.05	primary_route	exclude:spatial-cycle_transfer	0	0
+9	3.05	primary_route	exclude:tranche2_audit	403	403
+9	3.05	primary_route	exclude:tranche2_dev	369	369
+9	3.05	primary_route	fit	59	59
+9	3.05	overlapping_hold	index6_permanent	0	
+9	3.05	overlapping_hold	preparation	32	
+9	3.05	overlapping_hold	native_TEST	4096	
+9	3.05	overlapping_hold	native_validation	2048	
+9	3.05	overlapping_hold	duplicate_lineage	0	
+9	3.05	overlapping_hold	cycle-boundary_pilot	256	
+9	3.05	overlapping_hold	cycle-boundary_fit	3072	
+9	3.05	overlapping_hold	cycle-boundary_dev	512	
+9	3.05	overlapping_hold	cycle-boundary_cold	1024	
+9	3.05	overlapping_hold	cycle-boundary_hot	0	
+9	3.05	overlapping_hold	cycle-boundary_transfer	0	
+9	3.05	overlapping_hold	spatial-cycle_cold	1024	
+9	3.05	overlapping_hold	spatial-cycle_dev	512	
+9	3.05	overlapping_hold	spatial-cycle_fit	2048	
+9	3.05	overlapping_hold	spatial-cycle_calibration	384	
+9	3.05	overlapping_hold	spatial-cycle_hot	0	
+9	3.05	overlapping_hold	spatial-cycle_transfer	0	
+9	3.05	overlapping_hold	hero-central_hot	0	
+9	3.05	overlapping_hold	hero-central_transfer	0	
+9	3.05	overlapping_hold	hero-central_tune	0	
+9	3.05	overlapping_hold	hero-central_rule	0	
+9	3.05	overlapping_hold	hero-central_cold	0	
+9	3.05	overlapping_hold	hero-central_issue	0	
+9	3.05	overlapping_hold	R4_tripod_tune	2048	
+9	3.05	overlapping_hold	cold_issue_reserve	1024	
+9	3.05	overlapping_hold	cold_rate_internal_tune	1024	
+9	3.05	overlapping_hold	cold_supervised_calibration	2560	
+9	3.05	overlapping_hold	fifteen_internal_calibration	128	
+9	3.05	overlapping_hold	physical_fork_ancestor	32	
+9	3.05	overlapping_hold	preflight_heldout	758	
+9	3.05	overlapping_hold	previous_fork_roster	576	
+9	3.05	overlapping_hold	selected_04	256	
+9	3.05	overlapping_hold	tranche2_audit	512	
+9	3.05	overlapping_hold	tranche2_dev	512	
+9	3.05	overlapping_history	R4_tripod_fit	8192	
+9	3.05	overlapping_history	first_pass_generic_TRAIN	10240	
+9	3.05	overlapping_history	hero-central_fit	0	
+9	3.05	overlapping_history	preflight_fit	3936	
+9	3.05	overlapping_history	related_3cube_face_RSMI_TRAIN	10240	
+9	3.05	overlapping_history	tranche2_fit	4096	
