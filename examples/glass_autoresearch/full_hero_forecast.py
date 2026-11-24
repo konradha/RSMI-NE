@@ -32,6 +32,8 @@ NAMES = dict(rule='pooled-rule.json', forecast_design='pooled-forecast-design.js
              design='design.json', lineage='lineage.json', nomination='nomination.json')
 FREEZE = 'pooled-forecast-freeze.json'
 MODEL = 'pooled-forecast-model.npz'
+DISCOVERY = dict(NAMES, rule='discovery-v21-pooled-rule.json', nomination='discovery-v21-nomination.json',
+                 amendment='discovery-v21-design.json', panel='discovery-v21-panel.json')
 
 
 def key(method, target):
@@ -147,16 +149,16 @@ def welch(summaries, n_project=None):
     return interval(mu,float(np.sqrt(v.sum())/len(v)),df)
 
 
-def projected_power(stats, exam_n):
+def projected_power(stats, exam_n, family=1):
     w = welch(stats, exam_n)
     se, df = w['se'], w['df']
     power = (None if se is None else 1. if se == 0 else
-             float(nct.sf(t.ppf(.975,df),df,MATERIAL/se)))
+             float(nct.sf(t.ppf(1-.025/family,df),df,MATERIAL/se)))
     return dict(projected_se=se, projected_df=df, alternative_true_g=.02, margin=MATERIAL,
                 probability_lower95_above_margin=power, projected_parent_n=list(exam_n))
 
 
-def losses(y, pred, variance):
+def losses(y, pred, variance, family=len(NONZERO)):
     require(variance>1e-8, 'degenerate FIT f')
     result = {}
     for j,target in enumerate(TARGETS):
@@ -167,13 +169,13 @@ def losses(y, pred, variance):
             effect = (by_method[baseline]-by_method[new])/variance
             row[name] = parents(effect)
             if name=='g':
-                row['g_bonferroni_nonzero_family'] = parents(effect, len(NONZERO))
+                row['g_bonferroni_nonzero_family'] = parents(effect, family)
         result[target] = row
     return result
 
 
-def panel_summary(per_beta):
-    return {target: {metric:welch([per_beta[b][target][metric] for b in NONZERO])
+def panel_summary(per_beta, nonzero=NONZERO):
+    return {target: {metric:welch([per_beta[b][target][metric] for b in nonzero])
             for metric in (*('mse_'+m for m in METHODS), 'g','vs_inventory','noI_g')}
             for target in TARGETS}
 
@@ -193,8 +195,9 @@ def match(path, digest):
     return path
 
 
-def checkpoint(nomination):
-    require(nomination['schema']=='hero-full-v2-nomination-1' and nomination['status']=='qualified'
+def checkpoint(nomination, discovery=False):
+    schema='discovery-v21-nomination-1' if discovery else 'hero-full-v2-nomination-1'
+    require(nomination['schema']==schema and nomination['status']=='qualified'
             and nomination['primary_seed']==6101 and nomination['denominator']==1, 'no qualified full-data reference critic')
     name = '{arch}-{law}-d1-s6101-u{updates}.npz'.format(**nomination)
     ck = nomination['checkpoints']['6101']
@@ -205,24 +208,35 @@ def checkpoint(nomination):
     return weights, sha(path)
 
 
-def common(rev):
+def common(rev, discovery=False):
     require(re.fullmatch(r'[0-9a-f]{40}',rev) is not None and
             subprocess.run(['git','-C',str(ROOT),'merge-base','--is-ancestor',rev,'HEAD']).returncode==0,
             'expected immutable release commit in branch ancestry')
     for filename in ('full_hero_forecast.py','full_hero_rule.py','full_hero_stream.py','hero_forecast.py',
                      'hero_train.py','hero_rule.py','hero_bank.py'):
         committed(Path(__file__).resolve().with_name(filename), rev)
-    paths = {k:pin(name,rev) for k,name in NAMES.items()}
+    paths = {k:pin(name,rev) for k,name in (DISCOVERY if discovery else NAMES).items()}
+    indices=INDICES
+    roles=('fit','dev','eval')
+    if discovery:
+        panel=readj(paths['panel'])
+        indices=tuple(panel['eligible_indices'])
+        require(panel['schema']=='hero-full-v2.1-prospective-panel-1' and tuple(panel['training_indices'])==INDICES
+                and len(indices)>=2 and 0 in indices
+                and tuple(b for b in INDICES if panel['by_index'][str(b)]['eligible'])==indices
+                and panel['lineage_sha256']==sha(paths['lineage']) and panel['design_sha256']==sha(paths['amendment']),
+                'invalid or ineligible frozen discovery panel')
+        roles=('fit','dev')  # power uses counts only, not evaluation parent IDs
     lin = readj(paths['lineage'])
     require(lin['duplicate_excess_rows']==lin['unresolved_identities']==0 and lin['per_beta']['6']['eval']==0,
             'whole-parent distinctness or barred-beta seal not established')
     rp = match(WORK/'rosters.npz',lin['rosters_sha256'])
     with np.load(rp,allow_pickle=False) as z:
-        rosters = {(b,s):z[f'b{b:02}_{s}'] for b in INDICES for s in ('fit','dev','eval')}
-    for b in INDICES:
-        rows = [rosters[b,s] for s in ('fit','dev','eval')]
+        rosters = {(b,s):z[f'b{b:02}_{s}'] for b in indices for s in roles}
+    for b in indices:
+        rows = [rosters[b,s] for s in roles]
         require(all(r.ndim==1 and len(r)==lin['per_beta'][str(b)][s] and len(r)>0
-                    for r,s in zip(rows,('fit','dev','eval'))) and len(np.unique(np.concatenate(rows)))==sum(map(len,rows)),
+                    for r,s in zip(rows,roles)) and len(np.unique(np.concatenate(rows)))==sum(map(len,rows)),
                 'overlap, missing parents or bad lineage counts')
     return paths,rosters,lin
 
@@ -264,35 +278,53 @@ def discovery_blocks(data, spec, critic, parity):
         yield i,design(i,e,critic),targets(v,spec)
 
 
-def freeze(rev):
+def freeze(rev, discovery=False):
     start, cpu = time.monotonic(), time.process_time()
     cutoff('fit-dev')
-    paths,rosters,lin = common(rev)
-    release = pin('pooled-forecast-release.json',rev)
+    paths,rosters,lin = common(rev,discovery)
+    release = pin('discovery-v21-forecast-release.json' if discovery else 'pooled-forecast-release.json',rev)
     r = readj(release)
-    require(r['stage']=='forecast-fit' and r['rosters_sha256']==lin['rosters_sha256'], 'missing forecast authorization')
+    stage='discovery-v21-forecast-fit' if discovery else 'forecast-fit'
+    require(r['stage']==stage and r['rosters_sha256']==lin['rosters_sha256']
+            and (not discovery or r['exam_authorized'] is False), 'missing forecast authorization')
     for k,path in paths.items(): match(path,r[k+'_sha256'])
     prep=pin('stream-release-1.json',rev)
     pr=readj(prep)
     require(pr['stage']=='fit-dev' and all(pr[k]==r[k] for k in ('design_sha256','lineage_sha256','rosters_sha256')),
             'wrong fit/dev stream release')
     prep_digest=sha(prep)
-    dest = PUB/FREEZE; artifact = PUB/MODEL
+    dest = PUB/('discovery-v21-forecast.json' if discovery else FREEZE)
+    artifact = PUB/('discovery-v21-forecast-coefficients.npz' if discovery else MODEL)
     require(not dest.exists() and not artifact.exists(), 'forecast freeze already spent')
     spec = readj(paths['rule']); nom = readj(paths['nomination'])
+    indices=tuple(b for b in INDICES if (b,'fit') in rosters)
+    nonzero=tuple(b for b in indices if b!=0)
+    if discovery:
+        panel_hash=sha(paths['panel'])
+        require(nom['schema']=='discovery-v21-nomination-1' and nom['scope']=='development-only'
+                and nom['panel_sha256']==panel_hash and tuple(nom['eligible_indices'])==indices,
+                'wrong discovery nomination or panel')
+        require(spec['schema']=='discovery-v21-rule-1' and spec['source']['panel_sha256']==panel_hash
+                and tuple(spec['source']['panel_indices'])==indices
+                and spec['source']['nomination_sha256']==sha(paths['nomination']), 'wrong discovery rule provenance')
     meta = dict(stage='forecast-freeze', release_sha256=sha(release), rule_sha256=sha(paths['rule']),
                 nomination_sha256=sha(paths['nomination']), lineage_sha256=sha(paths['lineage']),
                 forecast_design_sha256=sha(paths['forecast_design']), rosters_sha256=lin['rosters_sha256'],
-                index6='barred; not identifiable', indices=INDICES, margin=MATERIAL, incremental_usd=0)
+                index6='barred; not identifiable', indices=indices, margin=MATERIAL, incremental_usd=0)
+    if discovery:
+        meta.update(stage='discovery-v21-forecast-development', scope='nonconfirmatory development only',
+                    panel_sha256=panel_hash, amendment_sha256=sha(paths['amendment']), exam_authorized=False,
+                    excluded_training_indices=[b for b in INDICES if b not in indices],
+                    excluded_scope='eligible for original training only; no discovery or physical inference on excluded indices')
     if not (spec.get('feature') and spec.get('fit_sd',0)>0 and spec.get('sign') in (-1,1)
             and spec.get('conventional_model') and nom.get('status')=='qualified'):
         savej(dest,dict(**meta, passed=False, primary='no valid qualified prediction', development='no defined descriptor/projection or no nominated critic',
                         first_failed_gate=spec['status'], wall_seconds=time.monotonic()-start))
         return
-    critic,critic_hash = checkpoint(nom)
+    critic,critic_hash = checkpoint(nom,discovery)
     counts = np.zeros(CELL**2,dtype=np.int32)
     gram = [None,None]; dev_data = {}; coverage = {}; fit_seconds = {}; digests = {}
-    for b in INDICES:
+    for b in indices:
         tick = time.monotonic(); pilot = []
         for split,parity in (('fit',None),('dev',0)):
             data,receipt = stream(b,'fit-dev',split,rev,rosters[b,split],('I','E','V'),lin['rosters_sha256'],prep_digest)
@@ -307,30 +339,39 @@ def freeze(rev):
                 if split=='fit': add_support(counts,i)
             expected_n = len(rosters[b,split][::1 if parity is None else 2])
             require(rows==Q*expected_n and rows>0, 'missing FIT/even DEV parents')
-            j = int(split=='dev'); accum/=rows*len(INDICES)
+            j = int(split=='dev'); accum/=rows*len(indices)
             if gram[j] is None: gram[j]=accum
             else: gram[j]+=accum
             pilot.append(expected_n)
         coverage[b] = dict(beta=lin['per_beta'][str(b)]['beta'],fit_parents=pilot[0],even_dev_parents=pilot[1],
-                           odd_dev_parents=len(rosters[b,'dev'][1::2]),exam_parents=len(rosters[b,'eval']),anchors_per_parent=Q)
+                           odd_dev_parents=len(rosters[b,'dev'][1::2]),exam_parents=lin['per_beta'][str(b)]['eval'],anchors_per_parent=Q)
         fit_seconds[b] = time.monotonic()-tick
     weights,alpha = ridge_grid(*gram)
     var = (np.diag(gram[0])[-3:]-gram[0][0,-3:]**2).clip(min=0)
     variance = float(var[0]); residual_fraction = float(var[2]/variance) if variance>1e-8 else None
     require(variance>1e-8 and np.isclose(variance,spec['fit_variance'],rtol=2e-6,atol=1e-8)
             and np.isclose(residual_fraction,spec['residual_fraction'],rtol=2e-6,atol=1e-8), 'rule and forecast FIT moments disagree')
-    per = {}; support = {}; odd_seconds = {}
+    per = {}; support = {}; odd_seconds = {}; canonical=None
     for b,data in dev_data.items():
-        tick = time.monotonic(); truth=[]; pp={}; supported=0
+        tick = time.monotonic(); truth=[]; pp={}; supported=0; null_inventory=[]
         for i,x,y in discovery_blocks(data,spec,critic,1):
             truth.append(y); pred=predict(x,weights)
             for k,v in pred.items(): pp.setdefault(k,[]).append(v)
             supported+=int((counts[inventory_codes(i)]>=8).sum())
+            if discovery and b==0: null_inventory.append(i)
         y = np.concatenate(truth); pred={k:np.concatenate(v) for k,v in pp.items()}
         require(len(y)==coverage[b]['odd_dev_parents']*Q, 'odd DEV incomplete')
-        per[b]=losses(y,pred,variance); support[b]=supported/len(y); odd_seconds[b]=time.monotonic()-tick
-    macro = panel_summary(per); f=macro['f']
-    power = projected_power([per[b]['f']['g'] for b in NONZERO],[coverage[b]['exam_parents'] for b in NONZERO])
+        per[b]=losses(y,pred,variance,len(nonzero)); support[b]=supported/len(y)
+        if null_inventory:
+            canonical=exact_inventory_null(np.concatenate(null_inventory),y[:,0].reshape(-1,Q),pred['m1']-pred['m0'],variance)
+        odd_seconds[b]=time.monotonic()-tick
+    macro = panel_summary(per,nonzero); f=macro['f']
+    power = projected_power([per[b]['f']['g'] for b in nonzero],[coverage[b]['exam_parents'] for b in nonzero])
+    if discovery:
+        meta.update(odd_dev_beta0_exact_inventory=canonical, projected_power_by_index={
+                b:dict(pointwise=projected_power([per[b]['f']['g']],[coverage[b]['exam_parents']]),
+                       simultaneous_nonzero=projected_power([per[b]['f']['g']],[coverage[b]['exam_parents']],len(nonzero)) if b else None)
+                for b in indices})
     gates = dict(symbolic=bool(spec['eligible_for_forecast_gate'] and spec['symbolic_passed'] and not spec['rediscovery']),
                  distinct_residual=residual_fraction>=.10, dev_raw=passes(f['g'],0) and f['g']['point']>=MATERIAL,
                  dev_vs_inventory=passes(f['vs_inventory'],0) and f['vs_inventory']['point']>=MATERIAL,
@@ -340,12 +381,14 @@ def freeze(rev):
     cutoff('fit-dev')
     with artifact.open('xb') as out:
         np.savez_compressed(out,**weights,fit_inventory_parent_counts=counts)
-    savej(dest,dict(**meta, passed=passed, gates=gates, first_failed_gate=next((k for k,v in gates.items() if not v),None),
-            primary=('single frozen prediction eligible for blind issuance' if passed else 'no valid qualified physical prediction; no exam'),
+    primary=('development diagnostic only; no assessment or blind issuance is authorized' if discovery else
+             'single frozen prediction eligible for blind issuance' if passed else 'no valid qualified physical prediction; no exam')
+    savej(dest,dict(**meta, passed=passed and not discovery, development_thresholds_met=passed, gates=gates,
+            first_failed_gate=next((k for k,v in gates.items() if not v),None), primary=primary,
             development='odd DEV; nonconfirmatory single selected descriptor, shared with symbolic selection',
             feature=spec['feature'], feature_sign=spec['sign'], fit_variances=dict(zip(TARGETS,var.tolist())),
             symbolic_status=spec['status'],
-            residual_fraction=residual_fraction, critic_seed=6101, critic_sha256=critic_hash, model_file=MODEL,
+            residual_fraction=residual_fraction, critic_seed=6101, critic_sha256=critic_hash, model_file=artifact.name,
             model_sha256=sha(artifact), stream_sha256=digests, coverage_by_index=coverage, odd_dev_support=support,
             odd_dev_pointwise_and_simultaneous=per, odd_dev_macro=macro, projected_power=power,
             selection=alpha, alphas=ALPHAS, targets=TARGETS, methods=METHODS, fit_and_even_seconds=fit_seconds,
@@ -494,7 +537,7 @@ def fixtures():
 def main():
     cli=argparse.ArgumentParser(description=__doc__); sub=cli.add_subparsers(dest='cmd',required=True)
     test=sub.add_parser('fixtures'); test.add_argument('--publish',action='store_true')
-    for mode in ('freeze','issue','score'):
+    for mode in ('freeze','discovery-v21','issue','score'):
         p=sub.add_parser(mode); p.add_argument('--release-commit',required=True)
         if mode=='issue': p.add_argument('--index',type=int,choices=INDICES,required=True)
     a=cli.parse_args()
@@ -502,6 +545,7 @@ def main():
         result=fixtures(); print(json.dumps(result,indent=2,allow_nan=False),flush=True)
         if a.publish: savej(PUB/'pooled-forecast-fixtures.json',result)
     elif a.cmd=='freeze': freeze(a.release_commit)
+    elif a.cmd=='discovery-v21': freeze(a.release_commit,discovery=True)
     elif a.cmd=='issue': issue(a.index,a.release_commit)
     else: score(a.release_commit)
 

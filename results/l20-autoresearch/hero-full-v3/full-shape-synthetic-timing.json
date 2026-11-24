@@ -1,0 +1,103 @@
+{
+ "source": "independent generated synthetic ternary arrays only",
+ "registered_shape": "ten betas, 6144/1024 pseudo-parents each fit/dev, 64 anchors, 27/386 ternary sites",
+ "packed_input": "lossless E2 in RAM; random batch decode; not local native filesystem or H100 IO",
+ "physical_parents": 0,
+ "device": {
+  "torch_version": "2.11.0+cu130",
+  "numpy_version": "2.4.4",
+  "cuda_build": "13.0",
+  "cuda_is_available": false,
+  "effective_device": "cpu",
+  "gpu": null,
+  "cpu_threads": 1,
+  "cuda_event_train_ms": null
+ },
+ "generation_sec": 3.3610217929817736,
+ "support_construction_sec": 0.5975464941002429,
+ "evaluation_group_construction_sec": 0.09996930789202452,
+ "peak_process_RSS_KiB": 2486036,
+ "actual_optimizer_measurements": {
+  "affine-uniform": {
+   "wall_sec": 1.595090702176094,
+   "cpu_sec": 1.5950209130000008,
+   "host_batch_sec": 0.4595419601537287,
+   "groups_per_second": 10271.516207603878,
+   "updates": 2048,
+   "dev_evaluation_wall_sec": 0.28099222714081407,
+   "distinct_positive_parent_counts": [
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144
+   ]
+  },
+  "affine-matched": {
+   "wall_sec": 1.8258200730197132,
+   "cpu_sec": 1.8257085120000003,
+   "host_batch_sec": 0.7090008286759257,
+   "groups_per_second": 8973.501957891502,
+   "updates": 2048,
+   "dev_evaluation_wall_sec": 0.27911176811903715,
+   "distinct_positive_parent_counts": [
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144
+   ]
+  },
+  "tanh-uniform": {
+   "wall_sec": 1.734443153720349,
+   "cpu_sec": 1.7343296400000021,
+   "host_batch_sec": 0.4396909358911216,
+   "groups_per_second": 9446.25943194311,
+   "updates": 2048,
+   "dev_evaluation_wall_sec": 0.28493647323921323,
+   "distinct_positive_parent_counts": [
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144
+   ]
+  },
+  "tanh-matched": {
+   "wall_sec": 1.9237549020908773,
+   "cpu_sec": 1.9236138849999982,
+   "host_batch_sec": 0.6015697857365012,
+   "groups_per_second": 8516.677453137441,
+   "updates": 2048,
+   "dev_evaluation_wall_sec": 0.2879106900654733,
+   "distinct_positive_parent_counts": [
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144,
+    6144
+   ]
+  }
+ },
+ "wall_sec": 15.378673467319459
+}
