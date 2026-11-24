@@ -1,0 +1,86 @@
+{
+  "design_commit": "1036785",
+  "checkpoint": 4,
+  "seeds": [
+    251,
+    252,
+    253
+  ],
+  "rung": 4096,
+  "extension_trigger_dev_change_2_to_4": {
+    "frozen": 2.2273640057051585e-05,
+    "joint": -1.3573824018930252e-05
+  },
+  "sha256": {
+    "25-model-raw-251-4.npz": "6937e2a96014dba64953c328e81fcfae300db8238fad02af843737370c78d80b",
+    "25-model-raw-252-4.npz": "005287d4fc069a05e284092c66fd43e4b2f8fa32896b34fd57770103c0751669",
+    "25-model-raw-253-4.npz": "05bb253e889c5bccfbad6529a2a805083b4581abd2106654e09cc4b26b18a2c1",
+    "25-model-frozen-251-4.npz": "8db6d889357d9e119d467b89c055a871174e6b37720f490d0f7df3bf64430c1d",
+    "25-model-frozen-252-4.npz": "59c3e07f4cb8170f3db7d98169e4ee77e759b6996f66eb32654d276b7f337753",
+    "25-model-frozen-253-4.npz": "3359dfd20af454860a3f162373a1a7375bf3a99be37d0db3861ee601c37377a1",
+    "25-model-joint-251-4.npz": "95d34652386f73890a745bb119f34bddc02bc2289319a3d1beb9a41ef8baf1af",
+    "25-model-joint-252-4.npz": "814c57b47071dd6b39deecbba3fd13a2fa922a192924d7ca9baf62b1fd02c99b",
+    "25-model-joint-253-4.npz": "af4b80d303c37df85ad055bc6667c040aa1de138a7a59722aedfbfc12c02eb98"
+  },
+  "dev": {
+    "raw": {
+      "mean": 0.0010305322721730127,
+      "se": 0.00010847627439911703,
+      "interval95": [
+        0.0008179187743507433,
+        0.0012431457699952821
+      ],
+      "mde80": 0.0003037335683175277
+    },
+    "joint": {
+      "mean": 0.0005885881952982035,
+      "se": 6.539768003760213e-05,
+      "interval95": [
+        0.0004604087424245033,
+        0.0007167676481719037
+      ],
+      "mde80": 0.000183113504105286
+    },
+    "frozen": {
+      "mean": 0.0006779482175697584,
+      "se": 5.9942839739989855e-05,
+      "interval95": [
+        0.0005604602516793782,
+        0.0007954361834601385
+      ],
+      "mde80": 0.0001678399512719716
+    },
+    "joint_minus_frozen": {
+      "mean": -8.936002227155488e-05,
+      "se": 2.7891532479529885e-05,
+      "interval95": [
+        -0.00014402742593143346,
+        -3.469261861167631e-05
+      ],
+      "mde80": 7.809629094268367e-05
+    }
+  },
+  "primary": "mean over three paired seed scores for each of 512 different archive TRAIN parents, then mean over parents; 95% normal parent interval, 80% approximate MDE; native chain keys disjoint.",
+  "prediction": "Positive raw score.",
+  "paired_prediction": "Below practical margin.",
+  "margin_nats_per_face": 0.001,
+  "audit": "positions 4608:5120 once, fixed hard rules and frozen decoders; no retention of best seeds or checkpoints; held-apart historical TRAIN, not pristine.",
+  "diagnostic": {
+    "arm": "post-small-pilot fit/development-only design: D4 pooled direct linear raw readout, 8 fixed Lloyd iterations",
+    "dev": {
+      "mean": 0.0012861452998837153,
+      "se": 7.092032233749723e-05,
+      "interval95": [
+        0.0011471414681022208,
+        0.0014251491316652099
+      ],
+      "mde80": 0.00019857690254499225
+    },
+    "prediction": "positive",
+    "sha256": {
+      "25-model-rawlinear-251-8.npz": "304d6306d2db5c1af8801d2e5a0f876683d9d55a349ccfeb73e3af038c3a89cf",
+      "25-model-rawlinear-252-8.npz": "5accd6b2d9492298089ed4d9729951e2e7a832a2cfba0d22f1a40a9f141199dc",
+      "25-model-rawlinear-253-8.npz": "ac5263ae4ab2d7a2234f5092e4dfe7fb4615a812b4b4d6008d4c6d53b2a63116"
+    }
+  }
+}
