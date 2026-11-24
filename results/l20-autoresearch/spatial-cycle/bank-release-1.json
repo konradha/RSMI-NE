@@ -1,0 +1,6 @@
+{
+  "number": 1, "stage":"bank-extraction", "roles":["fit","dev"],
+  "decision":"Permit local CPU diagnostic only, to distinguish an untrained raw benchmark from a useful or unsuccessful archived environment code at fixed K=4. Release source preparation, not assessment. No raw fitting, no physical probe scores until hard encoder freeze and independent calibration. Do not extract cold, hot, transfer, or calibration from this release.",
+  "lineage_sha256":"3c402d7e88ecd89e1d9581d2ca86e094c4a8130167fd5e871144319cf24220c7", "control_file":"space-control.json", "control_sha256":"dc14f47e12d8987556ac29a61e724e0220b7c1cc2dcad57958d63cfdbdc40ce3", "control_passed":true,
+  "freeze_commit":"ceb5a389cbd9710a8e974b90058a784291dc7f23", "scope":"Data compiler checks occupancy words and label lookup; label-free learner reads only separate exact-key files and receives no physical target performance. 512 parents on dev, not an independent discovery exam. The raw failure leaves no comparison of targeted or label-free to raw on the archive. No paid spend or exposure."
+}
