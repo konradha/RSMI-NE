@@ -291,10 +291,11 @@ def issued(role, rows, a, rev):
             and md['opportunities']==a.size and md['prediction_sha256']==sha(path),'issued prediction manifest does not cover blind bank')
     with np.load(path,allow_pickle=False) as z:
         require(np.array_equal(rows,z['parent']) and np.array_equal(a,z['anchor']), 'prediction row/anchor mismatch')
-        forecast=[n for n in z.files if n.lower().startswith(('m0','m1'))]
-        require(all(any(n.lower().startswith(stem) for n in forecast) for stem in ('m0','m1')),'missing signed forecast pair')
-        for n in forecast:
-            v=z[n]; require(v.shape[:2]==a.shape and v.dtype.kind=='f' and np.isfinite(v).all(),'incomplete or nonfinite '+n)
+        for name in ('r4_m0','r4_m1','r5_m0','r5_m1'):
+            require(name in z.files, 'missing signed prediction '+name)
+            v=z[name]
+            require(v.shape==(*a.shape,3) and v.dtype==np.float64 and np.isfinite(v).all(),
+                    'incomplete f/residual/conventional predictions: '+name)
     return md['prediction_sha256']
 
 
