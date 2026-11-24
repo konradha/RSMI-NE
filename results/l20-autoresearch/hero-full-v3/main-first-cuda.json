@@ -1,0 +1,94 @@
+{
+  "scope": "Actual main H100 first optimizer checkpoint; not a scientific conclusion or complete sweep",
+  "provider": {
+    "at_utc": "2026-11-24T15:18:18.399+00:00",
+    "app_id": "ap-4dUWVTMiybzg2OW7b84Yto",
+    "sandbox_id": "sb-DOLeyCRBAwONrUtUXGAa6f",
+    "image_id": "im-1aUX0dAUmmZQ583Ohg7Icu"
+  },
+  "transport": {
+    "at_utc": "2026-11-24T15:18:36.772+00:00",
+    "sandbox_id": "sb-DOLeyCRBAwONrUtUXGAa6f",
+    "attempts_authorized": 1,
+    "input_bytes": 433115600,
+    "packed_sha256": "00960adcf8365bd6e8d6088b770e60e38bacaa3fa4087df67d3f042b2ac3994c",
+    "child_deadline_unix": 1795538215,
+    "sdk_exec_timeout_s": 4743,
+    "create_to_handle_s": 8.356916806194931,
+    "upload_s": 18.37229149695486
+  },
+  "checkpoint_receipt_sha256": "44f68612af9271f38369d7f8c227e61c8f88d5126ef23c6c93798eafbfe4eb74",
+  "name": "affine-uniform-d1-s6101-u1024.json",
+  "gpu": {
+    "name": "NVIDIA H100 80GB HBM3",
+    "capability": [
+      9,
+      0
+    ],
+    "total_memory_bytes": 85031190528,
+    "visible_device_count": 1
+  },
+  "torch": "2.5.1+cu124",
+  "optimizer_steps": 1024,
+  "elapsed_train_s": 1.5134798499999995,
+  "cuda_forward_backward_adam_ms": 1198.3055992126465,
+  "accepted_groups_per_s": 5412.691817469524,
+  "per_beta": {
+    "0": {
+      "n_positive_slots": 6560,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "1": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "2": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "3": {
+      "n_positive_slots": 6560,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "4": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "5": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "6": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "7": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "8": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    },
+    "9": {
+      "n_positive_slots": 6552,
+      "distinct_positive_parents": 6144,
+      "full_roster_exposed": true
+    }
+  },
+  "gross_reserved_usd": {
+    "main": "6.15",
+    "inclusive_pilot_ceiling": "1.05",
+    "future_refit": "4.27"
+  },
+  "test_rows_opened": 0
+}
