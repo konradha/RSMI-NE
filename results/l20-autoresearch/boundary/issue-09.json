@@ -1,0 +1,16 @@
+{
+  "index": 9,
+  "signature": [
+    3,
+    3,
+    5
+  ],
+  "lock_sha256": "85191d473f6640a217302388fb9c10578868f056731cf280ab28fefa45e46969",
+  "bank_sha256": "331b5ac96175980cae80e5a7114e905182dda4ff7e721800e74eee35a7275f53",
+  "bank_meta_sha256": "850679b6c4e1fe8752b133bcce64d2109271de63b7c5f9c1b5a82daf13120dba",
+  "learned_model": "patch_mlp_0.02",
+  "strongest_baseline": "intercept",
+  "rows": 1024,
+  "issue_sha256": "c3e47f1183f18a2812dc0a2eb318a81d95a884fa2c8e5ed38d3db057b3c510db",
+  "estimand": "P(vacancy tripod | either matched arrangement, shell). One center-blind anchor per parent; not an eligibility or independent replica recurrence probability."
+}

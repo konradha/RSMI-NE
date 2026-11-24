@@ -1,0 +1,87 @@
+{
+  "issue_sha256": "c3e47f1183f18a2812dc0a2eb318a81d95a884fa2c8e5ed38d3db057b3c510db",
+  "cold_model_lock_sha256": "85191d473f6640a217302388fb9c10578868f056731cf280ab28fefa45e46969",
+  "pair_table_sha256": "908b9f42a236eae04c9d16fa48010b20aefd7b98f432c7a4089d99930ac8ec92",
+  "source_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "cavity_protocol_sha256": "e8ff17868fd407282c579d4eca2ad6a67aa9a5d527741abdf8b9f022a2fe2bea",
+  "signature": [
+    3,
+    3,
+    5
+  ],
+  "parents": 1024,
+  "disjoint_pairs": 512,
+  "quantiles": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    1
+  ],
+  "learned_forecast_quantiles": [
+    0.3817412257194519,
+    0.38277482986450195,
+    0.3830143213272095,
+    0.3832966834306717,
+    0.38352441042661667,
+    0.3837510049343109,
+    0.38430753350257874
+  ],
+  "packing_forecast_quantiles": [
+    0.3830525931332581,
+    0.3830525931332581,
+    0.3830525931332581,
+    0.3830525931332581,
+    0.3830525931332581,
+    0.3830525931332581,
+    0.3830525931332581
+  ],
+  "fraction_disagree_on_more_likely_arrangement": 0.0,
+  "matched_high_minus_low_prediction": 0.0006182815413922071,
+  "matched_high_minus_low_baseline": 0.0,
+  "train_counts_T_tripod": [
+    77991,
+    48533
+  ],
+  "train_eligible_per_anchor": 0.001544482421875,
+  "homogeneous_yield_scenarios": [
+    {
+      "replicas_per_boundary": 16,
+      "expected_eligible_endpoints": 25.3048,
+      "expected_boundaries_eligible_in_both_starts": 0.15465086968257064
+    },
+    {
+      "replicas_per_boundary": 32,
+      "expected_eligible_endpoints": 50.6096,
+      "expected_boundaries_eligible_in_both_starts": 0.611024647812844
+    },
+    {
+      "replicas_per_boundary": 64,
+      "expected_eligible_endpoints": 101.2192,
+      "expected_boundaries_eligible_in_both_starts": 2.38475992352033
+    },
+    {
+      "replicas_per_boundary": 128,
+      "expected_eligible_endpoints": 202.4384,
+      "expected_boundaries_eligible_in_both_starts": 9.084255288571695
+    },
+    {
+      "replicas_per_boundary": 256,
+      "expected_eligible_endpoints": 404.8768,
+      "expected_boundaries_eligible_in_both_starts": 32.99510635084438
+    },
+    {
+      "replicas_per_boundary": 512,
+      "expected_eligible_endpoints": 809.7536,
+      "expected_boundaries_eligible_in_both_starts": 109.35253644229982
+    },
+    {
+      "replicas_per_boundary": 1024,
+      "expected_eligible_endpoints": 1619.5072,
+      "expected_boundaries_eligible_in_both_starts": 306.14801367222043
+    }
+  ],
+  "scenario_limit": "No cavity simulations. Scenarios assume independent draws, homogeneous event rate and no equilibration cost. They are planning illustrations, not a power guarantee. Pairing depends only on issued shell forecasts and row IDs."
+}

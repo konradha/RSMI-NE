@@ -38,11 +38,15 @@ def figure(o):
         for m,fc,ec in [(occupied,'#326178','#326178'),(~occupied,'white','#bc5120')]:ax.scatter(*xy[m].T,s=85,facecolor=fc,edgecolor=ec,linewidths=1.6)
         ax.set(xlim=(-1.2,1.2),ylim=(-1.2,1.25),aspect='equal',title=title);ax.axis('off')
     fig.axes[1].legend(handles=[Line2D([],[],marker='o',mfc='white',mec='#bc5120',ls='',label='vacant'),Line2D([],[],marker='o',color='#326178',ls='',label='occupied')],loc='lower center',bbox_to_anchor=(.5,-.16),ncol=2,frameon=False,fontsize=8)
-    bx=fig.add_subplot(gs[:,1]);y=np.arange(3);draw=[('learned_minus_strongest','Learned − packing','#a54217',.1),('strongest_minus_intercept','Packing − prevalence','#326178',-.1)]
-    for field,label,color,shift in draw:
-        vals=[r[field] for r in allrows];v=np.array([[u['estimate'],u['lo'],u['hi']] for u in vals])*1000;m,l,h=v.T;bx.errorbar(m,y+shift,xerr=[m-l,h-m],fmt='o',c=color,capsize=3,label=label)
+    from boundary_models import ratio_interval
+    bx=fig.add_subplot(gs[:,1]);y=np.arange(3);templates=[]
+    for r in allrows:
+        with np.load(o/f"parents-{r['index']:02}.npz",allow_pickle=False) as z:
+            templates.append(ratio_interval(z['log_score_sum_templates']-z['log_score_sum_intercept'],z['eligible_weight']))
+    for vals,label,color,shift in [(templates,'Crystal templates − prevalence','#326178',-.12),([r['learned_minus_strongest'] for r in allrows],'Learned − selected control','#a54217',.12)]:
+        v=np.array([[u['estimate'],u['lo'],u['hi']] for u in vals])*1000;m,l,h=v.T;bx.errorbar(m,y+shift,xerr=[m-l,h-m],fmt='o',c=color,capsize=3,label=label)
     bx.axvline(0,lw=.8,c='.45');bx.axvline(1,lw=.8,c='.5',ls='--');bx.set(yticks=y,yticklabels=['0\ncontrol','2.711\ntransfer','3.05\nprimary'],xlabel='Log-score gain (millinats / matched center)',ylabel='β',title='One archived interior per anchor');bx.legend(frameon=False,fontsize=8)
-    cx=fig.add_subplot(gs[:,2]);q=np.array(s['quantiles']);cx.plot(q,np.array(s['learned_forecast_quantiles'])*100,'o-',label='Learned',c='#a54217');cx.plot(q,np.array(s['packing_forecast_quantiles'])*100,'s--',label='Packing comparator',c='#326178');cx.set(xlabel='Quantile among issued boundaries',ylabel='P(tripod | either matched shape) (%)',title='1,024 predictions, no cavity outcomes');cx.legend(frameon=False,fontsize=8)
+    cx=fig.add_subplot(gs[:,2]);q=np.array(s['quantiles']);cx.plot(q,np.array(s['learned_forecast_quantiles'])*100,'o-',label='Learned',c='#a54217');cx.plot(q,np.array(s['packing_forecast_quantiles'])*100,'s--',label='Selected control: '+allrows[-1]['strongest_baseline'],c='#326178');cx.set(xlabel='Quantile among issued boundaries',ylabel='P(tripod | either matched shape) (%)',title='1,024 predictions, no cavity outcomes');cx.legend(frameon=False,fontsize=8)
     for ax in (bx,cx):ax.spines[['top','right']].set_visible(False)
     fig.savefig(dest,dpi=165);plt.close(fig)
 
