@@ -1,0 +1,52 @@
+{
+  "scope": "secondary source FIT/DEV only; no X or q; not a promotion route",
+  "b": 9,
+  "r": 4,
+  "fit_parents": 6139,
+  "fit_stars": 42487,
+  "dev_parents": 2046,
+  "dev_stars": 14332,
+  "columns": 933,
+  "rank_at_relative_eigenvalue_cutoff_1e_10": 591,
+  "ridge": 1e-06,
+  "measure": "1 - parent-weighted development squared reconstruction error / error around FIT mean; unbounded linear outputs, not probabilities; percentile CI resamples DEVELOPMENT parents conditional on one fit.",
+  "summary": {
+    "all_indicators": {
+      "r2": 0.8765240601204201,
+      "lo": 0.8760274463321075,
+      "hi": 0.8770516360499747
+    },
+    "vacancy": {
+      "r2": 0.9279887794670943,
+      "lo": 0.9274313467765768,
+      "hi": 0.9285278594969095
+    },
+    "A": {
+      "r2": 0.8460142990933103,
+      "lo": 0.8452948154778771,
+      "hi": 0.8467010917270105
+    },
+    "B": {
+      "r2": 0.8634143403256946,
+      "lo": 0.8627962006187357,
+      "hi": 0.8640338085487728
+    },
+    "plant_raw": {
+      "r2": 0.9343264587124807,
+      "lo": 0.9320439242256202,
+      "hi": 0.9365242172156547
+    },
+    "plant_minus_fit_bin_mean": {
+      "r2": 0.9334248813274016,
+      "lo": 0.931118150182175,
+      "hi": 0.9356979673998367
+    }
+  },
+  "site_indicator_r2_quantiles": [
+    0.7961680806358156,
+    0.8207533118720701,
+    0.8624978103394769,
+    0.9513956758365698,
+    0.9999999591825508
+  ]
+}

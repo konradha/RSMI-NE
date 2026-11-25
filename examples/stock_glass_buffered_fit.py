@@ -37,6 +37,9 @@ def parent_weights(parent):
 def ave(a,w):return np.einsum('i,ij->j',w,a,dtype='d',optimize=False)/w.sum()
 
 def init_plant(s,q,w):
+    # The fit bank stores categorical masses as float32. Make each a double-precision law
+    # before constructing the exactly normalized synthetic conditional; do not weaken its check.
+    q=q.astype('d');q/=q.sum(1,keepdims=True)
     ix=bins(s);size=1600;t=plant_t(s);tot=np.bincount(ix,w,minlength=size);active=tot>0;mean=ave(q,w);mean=(1-1e-9)*mean+1e-9/210
     nuisance=np.tile(mean,(size,1));avg=np.full(size,np.average(t,weights=w));avg[active]=np.bincount(ix,t*w,minlength=size)[active]/tot[active]
     mass=np.zeros((size,210));np.add.at(mass,ix,w[:,None]*q);nuisance[active]=.998*mass[active]/tot[active,None]+.002*mean
@@ -130,20 +133,30 @@ def fit_pair(tr,dv,r,label,b,frac,rows):
         print('FIT',label,b,r,frac,name,saved['models'][name]['epoch'],round(best,6),flush=True)
     return saved
 
-def freeze(bankdir):
+def freeze(bankdir,resume=False):
     bankdir.mkdir(parents=True,exist_ok=True);rows=[];shuffles=[];idx={};fit_hashes={}
+    if resume:
+        with (OUT/'dev.csv').open() as f:rows=list(csv.DictReader(f))
     for b in (0,9):
         for side in ('fit','dev'):
             p=WORK/f'b{b:02}-{side}.npz';fit_hashes[p.name]=digest(p)
     dry=data(9,'fit',4,'physical');plant=init_plant(dry['s'],dry['q'],dry['w']);del dry;np.savez_compressed(bankdir/'plant.npz',**plant)
     for label,b,r in SCENARIOS:
         for frac in ((1.,.25,.5) if label=='physical' and r==4 else (1.,)):
+            dest=bankdir/f'{label}-b{b:02}-r{r}.pt'
+            done=[v for v in rows if (v['label'],int(v['b']),int(v['r']),float(v['fraction']))==(label,b,r,frac)]
+            if done:
+                assert len(done)==3*2*len(EPOCHS)
+                if frac==1.:idx[dest.name]=digest(dest)
+                if label=='shuffle':
+                    for side in ('fit','dev'):shuffles.append(dict(side=side,**data(b,side,r,label)['stats']))
+                continue
             tr=data(b,'fit',r,label,plant,frac);dv=data(b,'dev',r,label,plant);saved=fit_pair(tr,dv,r,label,b,frac,rows)
             if tr['stats']:shuffles += [dict(side=side,**d['stats']) for side,d in [('fit',tr),('dev',dv)]]
             if frac==1.:
-                dest=bankdir/f'{label}-b{b:02}-r{r}.pt';torch.save(saved,dest);idx[dest.name]=digest(dest)
+                torch.save(saved,dest);idx[dest.name]=digest(dest)
             dump_csv(OUT/'dev.csv',rows)
     (OUT/'freeze.json').write_text(json.dumps(dict(design=digest(OUT/'design.md'),roster=digest(OUT/'roster.npz'),fit_banks=fit_hashes,heads=idx,plant_sha=digest(bankdir/'plant.npz'),fit_plant_oracle_bits=float(plant['achieved']),fit_plant_a=float(plant['a']),shuffle=shuffles,torch=torch.__version__,cpu_threads=torch.get_num_threads()),indent=2)+'\n')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--threads',type=int,default=4);p.add_argument('--work',type=Path,default=WORK);args=p.parse_args();WORK=args.work;torch.set_num_threads(args.threads);torch.set_num_interop_threads(1);freeze(OUT/'heads')
+    p=argparse.ArgumentParser();p.add_argument('--threads',type=int,default=4);p.add_argument('--work',type=Path,default=WORK);p.add_argument('--resume',action='store_true',help='Reuse completed head files and full DEV traces after interruption');args=p.parse_args();WORK=args.work;torch.set_num_threads(args.threads);torch.set_num_interop_threads(1);freeze(OUT/'heads',args.resume)
