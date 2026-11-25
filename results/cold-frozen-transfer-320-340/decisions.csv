@@ -1,0 +1,19 @@
+seed,view,endpoint,retained,specificity,n
+6101,primary,3.2,True,unresolved: rare support,127
+6101,primary,3.4,True,unresolved: rare support,128
+6101,primary,3.40 minus 3.20,,unresolved: rare support,
+6101,all,3.2,True,unresolved: interval,127
+6101,all,3.4,True,unresolved: interval,128
+6101,all,3.40 minus 3.20,,unresolved: interval,
+6102,primary,3.2,True,unresolved: rare support,127
+6102,primary,3.4,True,unresolved: rare support,128
+6102,primary,3.40 minus 3.20,,unresolved: rare support,
+6102,all,3.2,True,unresolved: interval,127
+6102,all,3.4,True,unresolved: interval,128
+6102,all,3.40 minus 3.20,,below +.01,
+6103,primary,3.2,True,unresolved: rare support,127
+6103,primary,3.4,True,unresolved: rare support,128
+6103,primary,3.40 minus 3.20,,unresolved: rare support,
+6103,all,3.2,True,unresolved: interval,127
+6103,all,3.4,True,unresolved: interval,128
+6103,all,3.40 minus 3.20,,below +.01,

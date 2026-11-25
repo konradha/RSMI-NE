@@ -1,0 +1,732 @@
+{
+  "design_sha256": "4adb0ab2f0d2b612b45e8aa078d68294958fdd06fc3d16d409b1dbd7d82b8b61",
+  "pins": {
+    "plan": "79ef691dde0e5dbd9301ecfaf54ad8d41141bccda7b68aa5729160b9a3125848",
+    "head": "f57c83b4c1d71ccba492344dbf5b3505bbd894d39e7e113f1548e573e178f8d9",
+    "300M": "78ebe00d17bb8977435ec9aa7f6e76622bfd09a2b7becf36e90169f2171da863",
+    "500M": "6cb0fd868aa0bd9ee725a1fcb66c26867457105e0a0addfd5d560b68bd7fcd75",
+    "source_test": "193cad764dbcf9fda731b46edce3626a07e8436176807810fd4c22e3e8c8aadd",
+    "stock_checkpoints": "abe6192fd7ac37f35518a5e20e1204639927402b8a5bd0f0a233f5456ce269fc",
+    "code_maps": "0be544b43e3bf18778166bb0f42bb2617f759bdc168acb857e317799e76eadd7",
+    "linear": "3c0b3cb0e0b67a62a6426a711009fdcfb636957f8280c646abf5d592ee875872",
+    "transfer05": "1e62446f3ebcae888c73f064362aa066a1d24f3e8b59e7cd97531acb76f1ab08",
+    "heads07": "ed6307bc3312bec4d53e837e7c9f16ce11120f50f59e1dd0ff2bfa82a1029008"
+  },
+  "artifacts": {
+    "frozen.npz": "6719e14f27b05ac7ba9a1cb3b4eeb336c59c7cebefbf6b64a16249f9be96251f",
+    "target-10-300.npz": "2330e43fb3cd4ca3bb76d2a726261a24aa2cfb58d9162f26f067a49d97c2518c",
+    "target-11-300.npz": "574d1e083f9b0b6f7fd2de3655050ba99d394e8eec31be02ecabe823adc13a52",
+    "target-10-500.npz": "cfe9ea9d665c02b0491cd8940314cda6c9219d8a1d7e8be6ba6e41f8f70e2a25",
+    "target-11-500.npz": "e27e1466e2325c582439911f0d5a26db54e73a13974d761c4fb1c38c6a613548"
+  },
+  "source": {
+    "prepared_sha256": "105dd7a653d32dc036284b3fd459998066e097ccb8170d5c2260acd666680051",
+    "geometry_sha256": "576606e81a088cb1e05ceb9aa258c7863caea8ea9795ffda8d813bfd133e9cc6",
+    "rosters": {
+      "b00-train.npz": {
+        "roster_sha256": "421a9985985ea52fdec185961e772e584c56115a4178c49d3475c364d714e713",
+        "bank_sha256": "5c9c044a324fd05b7b483088f78034990ad3b0c21818d511325ca6e09ba887c8"
+      },
+      "b00-test.npz": {
+        "roster_sha256": "ca0717bb4931a66719adb9a99b70202b0104e9daba9a7f3b06452e7e9be7e009",
+        "bank_sha256": "fea6c0f973f422a098c732e3bfaa88c5d815f55983470f8be064254f39555c8c"
+      },
+      "b01-train.npz": {
+        "roster_sha256": "214a8d0eb933f9147392430c86af15c8ce137426dea5cb47646a8320eb4a7397",
+        "bank_sha256": "209c1f396445d61ff3b3df26b1d110b30dc4b4b1682ea6d73ac81c53d40b1885"
+      },
+      "b01-test.npz": {
+        "roster_sha256": "ab58c170d9ba4f8aa9b56202506c021909b5811a0352c5a12f3aae27ab3f34ac",
+        "bank_sha256": "c691b32afeb4b72939940436b05eafecf186fea7bf6b0eacd917d9f26e793407"
+      },
+      "b02-train.npz": {
+        "roster_sha256": "fc3775ed744aeb8fdfc4a06b4da18c03e7f081299b5f55bde372e48cb80decc2",
+        "bank_sha256": "6899455e7eec14a1b417571f32f73a19a38b278191e4a50bcc222581331af735"
+      },
+      "b02-test.npz": {
+        "roster_sha256": "454c857b837e757af602806df2b5dea8a6c4520aa9dd141925bed150b2e6d0b8",
+        "bank_sha256": "e6e58f495a3205ed26280f3dc655d21ec48f8dedfa8b741fa3364fd0f1318ee3"
+      },
+      "b03-train.npz": {
+        "roster_sha256": "b5abbc59841e6b54fb3e103fabd548c2e7a860a6b5a736f4206c872c274d6827",
+        "bank_sha256": "00a7513235839e671b5283da28ddaf8d52320f753eeea155b4115b16a7fb59a8"
+      },
+      "b03-test.npz": {
+        "roster_sha256": "43e074532029ccb5c644b955fb6d5018b8d4aea33b4877bf7b3646fa5c506fa2",
+        "bank_sha256": "c5c9d076685178b296ab059bde239b25aa8a40e7d1083f0c6f90317d80ff93fd"
+      },
+      "b04-train.npz": {
+        "roster_sha256": "8b11332d00b310b9727c24972779ed3e2368dea8034ada6a8a4da4a4fe772556",
+        "bank_sha256": "04b25e4a28450829f4aa45c4fc57694b24eea83744b7d8b42f37cdcf3c92357f"
+      },
+      "b04-test.npz": {
+        "roster_sha256": "77ffb56b588dddb2cf83abe564e351b3cfec9481f9e73298f932b51012200004",
+        "bank_sha256": "26e608264564f9f90c0a588600ed77eda354e49478382b5abbed8fc7ec5ba29e"
+      },
+      "b05-train.npz": {
+        "roster_sha256": "bda83d65ffb1bc00a2181f6b38eec4774d8f8a4761b49a749637fc6fc8d74938",
+        "bank_sha256": "7a8c8d371f493bdddc21cd1fe994a61a073259be8b83db26768e03ab0b9eb9fa"
+      },
+      "b05-test.npz": {
+        "roster_sha256": "5f69c6c5d4713b37905970c117423167438a06a0813003e52eb6433b1857da6f",
+        "bank_sha256": "3877c71abec74c89319af0d1db3dcfcb0a118fb04260b14a604bb1651f44cbe6"
+      },
+      "b06-train.npz": {
+        "roster_sha256": "3b1a86e0738305013112a299551d06770509c840b47bb2d8d1b08f4bcfc2b640",
+        "bank_sha256": "c46ede23beb3c93532ef9dbcb42760a0672c80e1d846eb9d6199618eadce73f1"
+      },
+      "b06-test.npz": {
+        "roster_sha256": "f78193e7089b1cf7f498956ab311142600d65ead14c9f09913828c9e95dbd3e9",
+        "bank_sha256": "704a37292fd08e11eee745400e26e46f63bc3bb4e404501ee64e68fdef02d881"
+      },
+      "b07-train.npz": {
+        "roster_sha256": "a3527f6bd388ed70cfa32d52bb023ce874a17f335ed29d3e9532a4ae9cf67a54",
+        "bank_sha256": "bd6c06f98ce2c74de60e6db00365ecbf9d86dd96d2dc60f9ece692b328dcc40e"
+      },
+      "b07-test.npz": {
+        "roster_sha256": "cb1ca47a7b94024982948bdbb180f59fe7e5339ce8949e50eaa27c7735256c7d",
+        "bank_sha256": "c17f437460f05afb8754e3e25ee27c182ffb428fa50c1616337a2585c230770f"
+      },
+      "b08-train.npz": {
+        "roster_sha256": "d934f0942ed56c170e0e95cce1230ab2240cf8fcdd8a9cbd6572ca4ad0620b43",
+        "bank_sha256": "f01f386d4b93eb2d3ad451e75b47af87c6b3391ee4e76735e7d65fa961ec3fa3"
+      },
+      "b08-test.npz": {
+        "roster_sha256": "bcc9c2d917798c6b6ea3a36c9a610b6aebdecca1c3a41522cc95ff548afef71c",
+        "bank_sha256": "10d7a349e507cd768e31e98d8bec61a36a1fc70f1ccafcfefcf216d09bbe63dc"
+      },
+      "b09-train.npz": {
+        "roster_sha256": "e6dfe107cf10ce75eea0887493cc78b5a5f19d2842ce91c0b15d79ad7acbc245",
+        "bank_sha256": "b24a85c857291dbd70915752c5edb40377edab29198f427b06bf923616e27ed9"
+      },
+      "b09-test.npz": {
+        "roster_sha256": "ea13720616522035a011b1d0e3b7c3480ef530bd61e1d295c4281bca58fd4d7b",
+        "bank_sha256": "193cad764dbcf9fda731b46edce3626a07e8436176807810fd4c22e3e8c8aadd"
+      }
+    },
+    "parents": 163840,
+    "source_test_eligible": 8187,
+    "source_test_roster": 8192
+  },
+  "frozen": {
+    "first_updates_sha256": "ebed63f6d7c8f5eeed749f9543a4fde02f40c2414572e34d0c24ffa5aeb3336a",
+    "seeds": [
+      {
+        "seed": 6101,
+        "update": 10218,
+        "kernel_sha256": "c539ab52fc248daa73d421453c8de1db5e39f1ecc5e3c6eb96ee0a3966a2c106",
+        "states": 210,
+        "signs": 420,
+        "sign_mismatches": 0,
+        "membership_mismatches": 0,
+        "near_zero_signs": 0,
+        "max_logit_error": 0.0,
+        "counts": [
+          92,
+          43,
+          51,
+          24
+        ],
+        "labels_sha256": "f46f892452551288b474e90f37aff06f65982bd2e3a19d1f39328783a6bcbff7",
+        "coeffs_sha256": "f6440ffdea14ab49d6f12cc089360bf58ad723bf8b10e945cb2247e0f315110c",
+        "null_labels_sha256": "a03b271c5d215749694863c41ab82ca392442043de89848fd9aea88aa081a5b8"
+      },
+      {
+        "seed": 6102,
+        "update": 10218,
+        "kernel_sha256": "a1c9cc14b464818d605976fc8e1cb410b9d286c20dac4b552291b80d80a17cf9",
+        "states": 210,
+        "signs": 420,
+        "sign_mismatches": 0,
+        "membership_mismatches": 0,
+        "near_zero_signs": 0,
+        "max_logit_error": 0.0,
+        "counts": [
+          53,
+          47,
+          61,
+          49
+        ],
+        "labels_sha256": "bc70decf0991c1c98522d67b1495be73c14d7efa442afb974d87c774a290c0bc",
+        "coeffs_sha256": "643e54f3b73426ff8e37ed32051acfe92ce08b8a4a0cca985a70cc2804238f46",
+        "null_labels_sha256": "0a5871f0ca4099677e89b0e0c5be3502c55003623acc9ecfa0a44e02dab5a8ba"
+      },
+      {
+        "seed": 6103,
+        "update": 10218,
+        "kernel_sha256": "409cf2504b431cb1c354b17d72a99dfd2463dbff776527d0a7df3cf4ece221b8",
+        "states": 210,
+        "signs": 420,
+        "sign_mismatches": 0,
+        "membership_mismatches": 0,
+        "near_zero_signs": 0,
+        "max_logit_error": 0.0,
+        "counts": [
+          67,
+          46,
+          54,
+          43
+        ],
+        "labels_sha256": "8eedd851c2509d1ecfab3b93340342b34af3bd5b99064acf00c1736a2fb5c5d5",
+        "coeffs_sha256": "94454c03352f59d542d87f6ac121f615ff6a06eb565d64e47061000311490ea9",
+        "null_labels_sha256": "93bcc29e54758e824ed5a5f91e86fb02d500083a7cb6e8375412dc9f3a8bb3ce"
+      }
+    ],
+    "linear_sha256": "6c6f9b19f357cbe082fe9074c4473e32a830665f2335db32d7d0a62ab2e5a102"
+  },
+  "native": [
+    {
+      "age_M": 300,
+      "checkpoint": "batch-00000000/00000000000300000000-78ebe00d17bb8977435ec9aa7f6e76622bfd09a2b7becf36e90169f2171da863.npz",
+      "sha256": "78ebe00d17bb8977435ec9aa7f6e76622bfd09a2b7becf36e90169f2171da863",
+      "distinct_parents": 256,
+      "duplicate_rows": 0,
+      "site_masks_checked": 12288000,
+      "energy_mismatches": 0,
+      "composition_per_parent": [
+        2000,
+        2400,
+        3600
+      ]
+    },
+    {
+      "age_M": 500,
+      "checkpoint": "batch-00000000/00000000000500000000-6cb0fd868aa0bd9ee725a1fcb66c26867457105e0a0addfd5d560b68bd7fcd75.npz",
+      "sha256": "6cb0fd868aa0bd9ee725a1fcb66c26867457105e0a0addfd5d560b68bd7fcd75",
+      "distinct_parents": 256,
+      "duplicate_rows": 0,
+      "site_masks_checked": 12288000,
+      "energy_mismatches": 0,
+      "composition_per_parent": [
+        2000,
+        2400,
+        3600
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "bank": "target-10-300.npz",
+      "candidate_priority_sha256": "e4ea1778109a37c7a0f21d3f52900188a241f55477e38b00902a4493f242f0c7",
+      "index": 10,
+      "beta": "3.20",
+      "age_M": 300,
+      "roster": 128,
+      "eligible": 128,
+      "missed": 0,
+      "excluded_ids": [],
+      "candidates": 27648,
+      "eligible_stars": 820,
+      "eligible_count_histogram": [
+        0,
+        0,
+        3,
+        6,
+        19,
+        24,
+        18,
+        21,
+        17,
+        8,
+        5,
+        1,
+        5,
+        0,
+        0,
+        0,
+        1
+      ],
+      "shift_axis_histograms": [
+        [
+          7,
+          11,
+          7,
+          7,
+          11,
+          6,
+          7,
+          6,
+          3,
+          7,
+          3,
+          4,
+          8,
+          3,
+          7,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          7,
+          4,
+          8,
+          9,
+          5,
+          6,
+          3,
+          4,
+          9,
+          7,
+          8,
+          11,
+          5,
+          8,
+          7,
+          4,
+          6,
+          8,
+          1
+        ],
+        [
+          7,
+          4,
+          6,
+          4,
+          5,
+          3,
+          13,
+          3,
+          6,
+          5,
+          4,
+          6,
+          8,
+          13,
+          10,
+          7,
+          5,
+          8,
+          8,
+          3
+        ]
+      ],
+      "primary_wraps": 36,
+      "roster_sha256": "838694049e24a374f258db35470cdfeaa942c28d7af0ac06baeb764835229263",
+      "energy_sha256": "4a30902f777372aa9ef6ceba332966b49dc6d884f2f53138538490cd802c254c",
+      "shifts_sha256": "df91cd8cacd8121d8ee9c316d98fef5167b3037771933f7803a83a87dac1ba06",
+      "selected_anchors_sha256": "5bfe3f7f02215adc8a8a7b8b0b46a4af0aefc8f0a272449d1e424d4304c07ea2",
+      "full_H_audit": {
+        "parent": 0,
+        "id": [
+          202611251283,
+          0
+        ],
+        "beta": 3.2,
+        "anchor": [
+          3,
+          1,
+          1
+        ],
+        "periodic_wrap": false,
+        "full_energies": 210,
+        "cubic_transforms": 48,
+        "max_integer_delta_error": 0
+      }
+    },
+    {
+      "bank": "target-11-300.npz",
+      "candidate_priority_sha256": "9efb4820fd898063c3ab2b2404b67d17b91108f43066e7e28d12e7b1eca73eef",
+      "index": 11,
+      "beta": "3.40",
+      "age_M": 300,
+      "roster": 128,
+      "eligible": 128,
+      "missed": 0,
+      "excluded_ids": [],
+      "candidates": 27648,
+      "eligible_stars": 735,
+      "eligible_count_histogram": [
+        0,
+        2,
+        9,
+        19,
+        12,
+        21,
+        20,
+        15,
+        11,
+        8,
+        4,
+        4,
+        3
+      ],
+      "shift_axis_histograms": [
+        [
+          4,
+          9,
+          11,
+          3,
+          6,
+          10,
+          5,
+          7,
+          5,
+          9,
+          7,
+          7,
+          6,
+          6,
+          5,
+          3,
+          8,
+          8,
+          4,
+          5
+        ],
+        [
+          5,
+          3,
+          3,
+          4,
+          6,
+          13,
+          4,
+          5,
+          10,
+          5,
+          7,
+          5,
+          6,
+          6,
+          10,
+          3,
+          16,
+          4,
+          8,
+          5
+        ],
+        [
+          7,
+          10,
+          6,
+          4,
+          4,
+          4,
+          9,
+          12,
+          5,
+          7,
+          10,
+          8,
+          7,
+          5,
+          6,
+          6,
+          5,
+          3,
+          4,
+          6
+        ]
+      ],
+      "primary_wraps": 28,
+      "roster_sha256": "5e010d7b6322f73b11321da3b3c931de70ac64ab50f9f521ef479c64ee0dead0",
+      "energy_sha256": "b97c763564d3d574a0d806f6f18c2800c6e3cf7d5572ebcbe74a115da2f96d67",
+      "shifts_sha256": "474eadc1eba450ad5921c7ef8a4de0e50ff0a627fbe15643daa2a64e853e15af",
+      "selected_anchors_sha256": "4d1d0f8ff27aae97e674d605ed87eeb85380a341f6f83fc18a4cab1dc16f77ff",
+      "full_H_audit": {
+        "parent": 0,
+        "id": [
+          202611251283,
+          1
+        ],
+        "beta": 3.4,
+        "anchor": [
+          3,
+          16,
+          5
+        ],
+        "periodic_wrap": false,
+        "full_energies": 210,
+        "cubic_transforms": 48,
+        "max_integer_delta_error": 0
+      }
+    },
+    {
+      "bank": "target-10-500.npz",
+      "candidate_priority_sha256": "e4ea1778109a37c7a0f21d3f52900188a241f55477e38b00902a4493f242f0c7",
+      "index": 10,
+      "beta": "3.20",
+      "age_M": 500,
+      "roster": 128,
+      "eligible": 127,
+      "missed": 1,
+      "excluded_ids": [
+        [
+          202611251283,
+          224
+        ]
+      ],
+      "candidates": 27648,
+      "eligible_stars": 780,
+      "eligible_count_histogram": [
+        1,
+        1,
+        8,
+        6,
+        18,
+        20,
+        24,
+        20,
+        8,
+        11,
+        5,
+        2,
+        2,
+        0,
+        0,
+        2
+      ],
+      "shift_axis_histograms": [
+        [
+          7,
+          11,
+          7,
+          7,
+          11,
+          6,
+          7,
+          6,
+          3,
+          7,
+          3,
+          4,
+          8,
+          3,
+          7,
+          7,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          7,
+          4,
+          8,
+          9,
+          5,
+          6,
+          3,
+          4,
+          9,
+          7,
+          8,
+          11,
+          5,
+          8,
+          7,
+          4,
+          6,
+          8,
+          1
+        ],
+        [
+          7,
+          4,
+          6,
+          4,
+          5,
+          3,
+          13,
+          3,
+          6,
+          5,
+          4,
+          6,
+          8,
+          13,
+          10,
+          7,
+          5,
+          8,
+          8,
+          3
+        ]
+      ],
+      "primary_wraps": 38,
+      "roster_sha256": "838694049e24a374f258db35470cdfeaa942c28d7af0ac06baeb764835229263",
+      "energy_sha256": "4df529f99811891a6205e392c4050e443e63c04e43e69baf87231e4a5f9db526",
+      "shifts_sha256": "df91cd8cacd8121d8ee9c316d98fef5167b3037771933f7803a83a87dac1ba06",
+      "selected_anchors_sha256": "8a1a34a7b752a98e68dfaae368dfcf5ec5503c9c0616482052d8c9c6fd4d0acc",
+      "full_H_audit": {
+        "parent": 0,
+        "id": [
+          202611251283,
+          0
+        ],
+        "beta": 3.2,
+        "anchor": [
+          3,
+          10,
+          10
+        ],
+        "periodic_wrap": false,
+        "full_energies": 210,
+        "cubic_transforms": 48,
+        "max_integer_delta_error": 0
+      }
+    },
+    {
+      "bank": "target-11-500.npz",
+      "candidate_priority_sha256": "9efb4820fd898063c3ab2b2404b67d17b91108f43066e7e28d12e7b1eca73eef",
+      "index": 11,
+      "beta": "3.40",
+      "age_M": 500,
+      "roster": 128,
+      "eligible": 128,
+      "missed": 0,
+      "excluded_ids": [],
+      "candidates": 27648,
+      "eligible_stars": 764,
+      "eligible_count_histogram": [
+        0,
+        3,
+        8,
+        5,
+        21,
+        16,
+        25,
+        14,
+        17,
+        12,
+        3,
+        4
+      ],
+      "shift_axis_histograms": [
+        [
+          4,
+          9,
+          11,
+          3,
+          6,
+          10,
+          5,
+          7,
+          5,
+          9,
+          7,
+          7,
+          6,
+          6,
+          5,
+          3,
+          8,
+          8,
+          4,
+          5
+        ],
+        [
+          5,
+          3,
+          3,
+          4,
+          6,
+          13,
+          4,
+          5,
+          10,
+          5,
+          7,
+          5,
+          6,
+          6,
+          10,
+          3,
+          16,
+          4,
+          8,
+          5
+        ],
+        [
+          7,
+          10,
+          6,
+          4,
+          4,
+          4,
+          9,
+          12,
+          5,
+          7,
+          10,
+          8,
+          7,
+          5,
+          6,
+          6,
+          5,
+          3,
+          4,
+          6
+        ]
+      ],
+      "primary_wraps": 40,
+      "roster_sha256": "5e010d7b6322f73b11321da3b3c931de70ac64ab50f9f521ef479c64ee0dead0",
+      "energy_sha256": "d171b7ffac25ec34694c0db0fd693a8ed2147469aea3eefdb1eaf85bc6b67859",
+      "shifts_sha256": "474eadc1eba450ad5921c7ef8a4de0e50ff0a627fbe15643daa2a64e853e15af",
+      "selected_anchors_sha256": "583e4fc25b0b3bc36b7993cdae326a99db3308ad7c11505347d8c878aa5d4969",
+      "full_H_audit": {
+        "parent": 0,
+        "id": [
+          202611251283,
+          1
+        ],
+        "beta": 3.4,
+        "anchor": [
+          14,
+          8,
+          5
+        ],
+        "periodic_wrap": false,
+        "full_energies": 210,
+        "cubic_transforms": 48,
+        "max_integer_delta_error": 0
+      }
+    }
+  ],
+  "age_pairs": [
+    {
+      "index": 10,
+      "beta": "3.20",
+      "roster": 128,
+      "complete": 127,
+      "unchanged": 0,
+      "changed": 127,
+      "incomplete_ids": [
+        [
+          202611251283,
+          224
+        ]
+      ],
+      "unchanged_ids": []
+    },
+    {
+      "index": 11,
+      "beta": "3.40",
+      "roster": 128,
+      "complete": 128,
+      "unchanged": 2,
+      "changed": 126,
+      "incomplete_ids": [],
+      "unchanged_ids": [
+        [
+          202611251283,
+          53
+        ],
+        [
+          202611251283,
+          185
+        ]
+      ]
+    }
+  ],
+  "source_target_identity_overlap": 0,
+  "target_parents": 256,
+  "native_axes": "chain,z,y,x",
+  "star_order": "center,-z,+z,-y,+y,-x,+x"
+}
