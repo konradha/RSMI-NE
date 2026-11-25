@@ -45,11 +45,11 @@ Both native snapshots had zero recomputed energy mismatches, correct low-bit dec
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
-python3 examples/stock_glass_cold_transfer.py --source-banks \"$BANK\"
+python3 examples/stock_glass_cold_transfer.py --source-banks "$BANK"
 python3 examples/stock_glass_cold_figures.py
 ```
 
-To rebuild bank extraction in a new directory, pass `--prep \"$PREP\" --out \"$OUT\"` to the first command and `--out \"$OUT\"` to the second, where `PREP` contains the original, hash-pinned `plan.json` and `batch-00000000` snapshots.
+To rebuild bank extraction in a new directory, pass `--prep "$PREP" --out "$OUT"` to the first command and `--out "$OUT"` to the second, where `PREP` contains the original, hash-pinned `plan.json` and `batch-00000000` snapshots.
 
 ## What transferred
 
