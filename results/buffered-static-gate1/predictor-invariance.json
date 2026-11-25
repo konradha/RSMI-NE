@@ -1,0 +1,101 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "label": "physical",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "physical",
+      "r": 2,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "physical",
+      "r": 5,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "observed_fit",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "shuffle",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "plant",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "nullplant",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    },
+    {
+      "label": "beta0",
+      "r": 4,
+      "hidden_changes": 23550,
+      "parents": 3,
+      "predictors": [
+        "composition",
+        "base",
+        "rich"
+      ],
+      "max_absolute_prediction_change": 0
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "verdict": "INCONCLUSIVE_FAILED_CONTROL",
+  "disposition": "STOP; Gate 2 not authorized",
+  "primary_gap": 4,
+  "source_b": 9,
+  "independent_transfer_b": 8,
+  "margin_bits": 0.01,
+  "bootstrap_replicates": 2048,
+  "interval": "pointwise two-sided 95% whole-parent percentile; shared resamples within each cohort",
+  "power_scope": "conditional detection proxy at zero gain null; not prospective refit power, and not power for lower bound >.01",
+  "physical_exclusion": false,
+  "primary_rule": "intersection of all checks; descriptive arms cannot rescue a failed primary",
+  "failed_checks": [
+    "authenticated_crystals",
+    "b09_soft_gain",
+    "b09_soft_support",
+    "b09_native_gain",
+    "b09_native_support",
+    "b08_soft_gain",
+    "b08_soft_support",
+    "b08_native_gain",
+    "b08_native_support"
+  ],
+  "checks": [
+    {
+      "name": "authenticated_crystals",
+      "group": "control",
+      "pass_check": false,
+      "criterion": "audited flag must be true"
+    },
+    {
+      "name": "hidden_feature_invariance",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "audited flag must be true"
+    },
+    {
+      "name": "hidden_prediction_invariance",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "audited flag must be true"
+    },
+    {
+      "name": "b09_soft_gain",
+      "group": "primary",
+      "pass_check": false,
+      "criterion": "lo > 0.01",
+      "arm": "physical/9/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b09_soft_support",
+      "group": "support",
+      "pass_check": false,
+      "criterion": "kish_abs >= 100.0",
+      "arm": "physical/9/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b09_native_gain",
+      "group": "primary",
+      "pass_check": false,
+      "criterion": "lo > 0.0",
+      "arm": "physical/9/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b09_native_support",
+      "group": "support",
+      "pass_check": false,
+      "criterion": "kish_abs >= 100.0",
+      "arm": "physical/9/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b09_agreement_lo",
+      "group": "agreement",
+      "pass_check": true,
+      "criterion": "lo > -0.01",
+      "arm": "physical/9/4/all/soft_minus_native/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b09_agreement_hi",
+      "group": "agreement",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "physical/9/4/all/soft_minus_native/rich_minus_base",
+      "value": 0.0,
+      "n": 4095
+    },
+    {
+      "name": "b08_soft_gain",
+      "group": "primary",
+      "pass_check": false,
+      "criterion": "lo > 0.01",
+      "arm": "physical/8/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "b08_soft_support",
+      "group": "support",
+      "pass_check": false,
+      "criterion": "kish_abs >= 100.0",
+      "arm": "physical/8/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "b08_native_gain",
+      "group": "primary",
+      "pass_check": false,
+      "criterion": "lo > 0.0",
+      "arm": "physical/8/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "b08_native_support",
+      "group": "support",
+      "pass_check": false,
+      "criterion": "kish_abs >= 100.0",
+      "arm": "physical/8/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "b08_agreement_lo",
+      "group": "agreement",
+      "pass_check": true,
+      "criterion": "lo > -0.01",
+      "arm": "physical/8/4/all/soft_minus_native/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "b08_agreement_hi",
+      "group": "agreement",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "physical/8/4/all/soft_minus_native/rich_minus_base",
+      "value": 0.0,
+      "n": 4094
+    },
+    {
+      "name": "contact_soft",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "lo > 0.0",
+      "arm": "physical/9/2/all/soft/rich_minus_prior",
+      "value": 3.7992645823078095,
+      "n": 4095
+    },
+    {
+      "name": "shuffle_soft",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "shuffle/9/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4084
+    },
+    {
+      "name": "nullplant_soft",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "nullplant/9/4/all/soft/rich_minus_base",
+      "value": 0.00011878648339930023,
+      "n": 4095
+    },
+    {
+      "name": "beta0_soft",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "beta0/0/4/all/soft/rich_minus_base",
+      "value": 0.0,
+      "n": 4096
+    },
+    {
+      "name": "plant_soft",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "lo > 0.0",
+      "arm": "plant/9/4/all/soft/rich_minus_base",
+      "value": 0.003105170642923374,
+      "n": 4095
+    },
+    {
+      "name": "contact_native",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "lo > 0.0",
+      "arm": "physical/9/2/all/native/rich_minus_prior",
+      "value": 3.795305181855331,
+      "n": 4095
+    },
+    {
+      "name": "shuffle_native",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "shuffle/9/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4084
+    },
+    {
+      "name": "nullplant_native",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "nullplant/9/4/all/native/rich_minus_base",
+      "value": 0.0001635728279667414,
+      "n": 4095
+    },
+    {
+      "name": "beta0_native",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "hi < 0.01",
+      "arm": "beta0/0/4/all/native/rich_minus_base",
+      "value": 0.0,
+      "n": 4096
+    },
+    {
+      "name": "plant_native",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "lo > 0.0",
+      "arm": "plant/9/4/all/native/rich_minus_base",
+      "value": 0.002704111406803549,
+      "n": 4095
+    },
+    {
+      "name": "plant_oracle_margin_low",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "estimate >= 0.0075",
+      "arm": "plant/9/4/all/soft/oracle_minus_nuisance",
+      "value": 0.009906021039456604,
+      "n": 4095
+    },
+    {
+      "name": "plant_oracle_margin_high",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "estimate <= 0.0125",
+      "arm": "plant/9/4/all/soft/oracle_minus_nuisance",
+      "value": 0.009906021039456604,
+      "n": 4095
+    },
+    {
+      "name": "plant_joint_power",
+      "group": "control",
+      "pass_check": true,
+      "criterion": "conditional joint detection proxy >= 0.8",
+      "value": 1.0
+    }
+  ]
+}

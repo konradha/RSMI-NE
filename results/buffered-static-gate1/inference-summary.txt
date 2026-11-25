@@ -1,0 +1,91 @@
+INCONCLUSIVE_FAILED_CONTROL
+STOP; Gate 2 not authorized
+
+All numbers below: signed bits/star [two-sided 95% whole-parent percentile interval].
+Parent is the unit. Soft and native are paired, not independent replications.
+Required R4 physical increments (rich minus frozen strongest conventional):
+  b09 soft: +0.00000 [+0.00000, +0.00000], N=4095, Kish(|increment|)=0.0.
+  b09 native: +0.00000 [+0.00000, +0.00000], N=4095, Kish(|increment|)=0.0.
+  b09 soft_minus_native: +0.00000 [+0.00000, +0.00000], N=4095, Kish(|increment|)=0.0.
+  b08 soft: +0.00000 [+0.00000, +0.00000], N=4094, Kish(|increment|)=0.0.
+  b08 native: +0.00000 [+0.00000, +0.00000], N=4094, Kish(|increment|)=0.0.
+  b08 soft_minus_native: +0.00000 [+0.00000, +0.00000], N=4094, Kish(|increment|)=0.0.
+  b09 minus independent b08 increment, soft: +0.00000 [+0.00000, +0.00000].
+  b09 minus independent b08 increment, native: +0.00000 [+0.00000, +0.00000].
+  b09 minus independent b08 increment, soft_minus_native: +0.00000 [+0.00000, +0.00000].
+
+Required contact, null and recovery checks:
+  physical, b09 R2, rich_minus_prior, soft: +3.82792 [+3.79926, +3.85586] (N=4095).
+  physical, b09 R2, rich_minus_prior, native: +3.82434 [+3.79531, +3.85341] (N=4095).
+  shuffle, b09 R4, rich_minus_base, soft: +0.00000 [+0.00000, +0.00000] (N=4084).
+  shuffle, b09 R4, rich_minus_base, native: +0.00000 [+0.00000, +0.00000] (N=4084).
+  beta0, b00 R4, rich_minus_base, soft: +0.00000 [+0.00000, +0.00000] (N=4096).
+  beta0, b00 R4, rich_minus_base, native: +0.00000 [+0.00000, +0.00000] (N=4096).
+  nullplant, b09 R4, rich_minus_base, soft: +0.00012 [+0.00011, +0.00012] (N=4095).
+  nullplant, b09 R4, rich_minus_base, native: +0.00010 [+0.00004, +0.00016] (N=4095).
+  plant, b09 R4, rich_minus_base, soft: +0.00317 [+0.00311, +0.00324] (N=4095).
+  plant, b09 R4, rich_minus_base, native: +0.00367 [+0.00270, +0.00455] (N=4095).
+Sector-uniform oracle absolute log score is -7.71424552 bits/star on every β=0 soft/native target.
+  de novo β=0 rich minus exact sector-uniform, soft: +0.00000 [+0.00000, +0.00000].
+  de novo β=0 rich minus exact sector-uniform, native: +0.00000 [+0.00000, +0.00000].
+
+Plant decomposition (soft scoring):
+  plant oracle_minus_nuisance: +0.00991 [+0.00975, +0.01007].
+  nullplant oracle_minus_nuisance: +0.00000 [+0.00000, +0.00000].
+  paired on minus off, oracle_minus_nuisance: +0.00991 [+0.00975, +0.01007].
+  plant base_minus_nuisance: -0.11345 [-0.11723, -0.10972].
+  nullplant base_minus_nuisance: -0.11962 [-0.12341, -0.11589].
+  paired on minus off, base_minus_nuisance: +0.00617 [+0.00600, +0.00633].
+  plant oracle_minus_base: +0.12336 [+0.11957, +0.12718].
+  nullplant oracle_minus_base: +0.11962 [+0.11589, +0.12341].
+  paired on minus off, oracle_minus_base: +0.00374 [+0.00363, +0.00385].
+  plant rich_minus_base: +0.00317 [+0.00311, +0.00324].
+  nullplant rich_minus_base: +0.00012 [+0.00011, +0.00012].
+  paired on minus off, rich_minus_base: +0.00306 [+0.00299, +0.00313].
+Base − nuisance is signed performance relative to the known mass model. It can be negative.
+Oracle − fitted base includes nuisance approximation error; its on–off change is also reported.
+Thus neither the imposed oracle KL nor total residual is automatically a beyond-base plant increment.
+Conditional bootstrap detection proxy: soft 1.000, noisy native 1.000, joint 1.000.
+  Conventional-input linear reconstruction, all_indicators, source DEV R² 0.8765 [0.8760, 0.8771].
+  Conventional-input linear reconstruction, plant_minus_fit_bin_mean, source DEV R² 0.9334 [0.9311, 0.9357].
+This measures predictability of a shell feature, not the portion of its score gain the conventional decoder captured.
+One frozen fit and one held plant realization. This is not prospective power over data generation/refits;
+the detection event is both lower bounds >0, not a lower bound >.01 at a true effect of .01.
+
+Benefit of exact training, identical R4 source parents (q-trained minus native-trained score):
+  base, soft: +0.00023 [-0.00023, +0.00070].
+  base, native: +0.00032 [-0.00023, +0.00085].
+  base, soft_minus_native: -0.00008 [-0.00034, +0.00017].
+  rich, soft: +0.00023 [-0.00023, +0.00070].
+  rich, native: +0.00032 [-0.00023, +0.00085].
+  rich, soft_minus_native: -0.00008 [-0.00034, +0.00017].
+  rich_minus_base, soft: +0.00000 [+0.00000, +0.00000].
+  rich_minus_base, native: +0.00000 [+0.00000, +0.00000].
+  rich_minus_base, soft_minus_native: +0.00000 [+0.00000, +0.00000].
+
+Source R4 fit diagnostics (bits/star; lower loss is better).
+  base, 1535 training parents: affine epoch 0, fit 7.11610, DEV 7.15525.
+  composition, 1535 training parents: tanh epoch 1, fit 7.11585, DEV 7.15520.
+  rich, 1535 training parents: affine epoch 0, fit 7.11610, DEV 7.15525.
+  base, 3071 training parents: affine epoch 0, fit 7.12176, DEV 7.14812.
+  composition, 3071 training parents: affine epoch 0, fit 7.12176, DEV 7.14812.
+  rich, 3071 training parents: affine epoch 0, fit 7.12176, DEV 7.14812.
+  base, 6139 training parents: affine epoch 0, fit 7.12147, DEV 7.14332; frozen held 7.13115.
+  composition, 6139 training parents: affine epoch 0, fit 7.12147, DEV 7.14332; frozen held 7.13115.
+  rich, 6139 training parents: affine epoch 0, fit 7.12147, DEV 7.14332; frozen held 7.13115.
+The nested fitting-parent curves use the same DEV population, not new evaluations.
+The epoch-16 cap limits any claim about the best achievable decoder.
+
+R4 calibration: total variation (TV) of category marginals and parent-weighted top-state reliability gaps.
+  physical b09: 210/210 native states; TV(native, exact) 0.00820, TV(native, rich) 0.04638; native binned absolute top-confidence gap 0.00151.
+  physical b08: 210/210 native states; TV(native, exact) 0.00935, TV(native, rich) 0.06561; native binned absolute top-confidence gap 0.00223.
+  beta0 b00: 210/210 native states; TV(native, exact) 0.01906, TV(native, rich) 0.01906; native binned absolute top-confidence gap 0.00004.
+
+Mandatory checks not satisfied: authenticated_crystals, b09_soft_gain, b09_soft_support, b09_native_gain, b09_native_support, b08_soft_gain, b08_soft_support, b08_native_gain, b08_native_support.
+No physical null, length, or phase conclusion. Two gaps and a fitted score increment do not identify conditional MI.
+
+Numerical sources: inference-estimates.csv (absolute, paired gains, signed/gross/squared support);
+independent-transfer.csv; nested-precision.csv; paired-fit-controls.csv; plant-detection.csv;
+parent-scores.zip (per-parent score banks; higher is better); calibration-summary.csv (category and confidence gaps);
+dev.csv: source checkpoint grid; dev-held-linkage.csv: selected fit/DEV loss and corresponding full frozen held loss.
+decision.json contains each frozen criterion and its measured value or explicit failure.
