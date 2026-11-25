@@ -1,0 +1,43 @@
+{
+  "design": "ce09753ca5fb84f143f5cda22ffa2ad81d9e2be9165739bd79688f12f17d7092",
+  "roster": "2c82ec7a7d830fad9f55af5872634e6fdc3d6fbac8e32f2c5da5bc4ac6f04b15",
+  "fit_banks": {
+    "b00-fit.npz": "cb3e4e27b9054985cd2abb70db56ab20f9e1f9c8f0ccf9b137414b4db858dc36",
+    "b00-dev.npz": "d4133d016eed6d87905a6f42f8446ee334f5d8448935cd1e4f42790fec5cacc8",
+    "b09-fit.npz": "345ca1ff7001d6d9a992b85393626cb40df276af924415bbe7cdae8428310024",
+    "b09-dev.npz": "b767167ff307d2f0ce1a020620652d9a010ec7e915861267f4ea466a5b59878b"
+  },
+  "heads": {
+    "physical-b09-r4.pt": "a62daed6d107bdfdb41b6791456117e88b00d79d3f11569f8386980c0238b314",
+    "physical-b09-r2.pt": "3f535dd5966c9cf2bd9a4f5fdb2bbce28fd847f12cef71f290cb6baf810c035e",
+    "physical-b09-r5.pt": "7b82a1353686016aae916b5a0fec33fdac4900a293f7fa68b2208c0e48259ccb",
+    "observed_fit-b09-r4.pt": "73729969bd183ef92c8f5e183d4f2e5e5cb15b9b706b2f1bb38276d1bdf9ec75",
+    "shuffle-b09-r4.pt": "81320a4e9530c1014956e3dc23e0b53c3f1cd67501c95dcf2fe643e75f25eb1f",
+    "plant-b09-r4.pt": "cb7e5589ce7d33f06e2b956eb6410b35e886b41ae71bed70cf0b5d83947657b9",
+    "nullplant-b09-r4.pt": "d46b875c9ddf2ae749cb198c24d407ff5ec754c1ffa183a93909fbbc205ff200",
+    "beta0-b00-r4.pt": "95d04c7a1315beb15656d8b39c56e25fec4d0bdf8a9e333179c4e75f423d75a9"
+  },
+  "plant_sha": "7941aa41f8ac51f266d74e39c5b6146a04996a0167959618158218f391e75d7c",
+  "fit_plant_oracle_bits": 0.010000000000004446,
+  "fit_plant_a": 0.38380472854950765,
+  "shuffle": [
+    {
+      "side": "fit",
+      "eligible": 6139,
+      "retained": 6128,
+      "bins": 41,
+      "raw_vacancy_abs_diff": 1.1654699738903394,
+      "raw_A_abs_diff": 1.1889686684073106
+    },
+    {
+      "side": "dev",
+      "eligible": 2046,
+      "retained": 2038,
+      "bins": 34,
+      "raw_vacancy_abs_diff": 1.0942100098135428,
+      "raw_A_abs_diff": 1.1766437684003925
+    }
+  ],
+  "torch": "2.5.1+cpu",
+  "cpu_threads": 4
+}

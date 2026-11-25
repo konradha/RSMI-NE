@@ -54,13 +54,22 @@ def score(label,b,r,d,saved,dest):
     return [dict(**key,**v) for v in cal],[dict(**key,**v) for v in topcal],dict(**key,n=n,stars=len(q),native_supported_states=int(np.sum(counts>0)),teacher_min=float(teacher.mean(0).min()),total_variation_obs_exact=float(np.abs(actual.mean(0)-teacher.mean(0)).sum()/2),**d['stats'])
 
 
+def load_head(path,sha):
+    assert f.digest(path)==sha
+    # DEV loss metadata is a NumPy float64. Keep the restricted weights loader.
+    with torch.serialization.safe_globals([np.core.multiarray.scalar,np.dtype,type(np.dtype('f8'))]):
+        return torch.load(path,map_location='cpu',weights_only=True)
+
 def run(betas):
     lock=json.loads((f.OUT/'freeze.json').read_bytes());assert lock['design']==f.digest(f.OUT/'design.md') and lock['roster']==f.digest(f.OUT/'roster.npz');path=f.OUT/'heads';dest=f.WORK/'scores';dest.mkdir(exist_ok=True,parents=True)
     assert lock['plant_sha']==f.digest(path/'plant.npz');plant=dict(np.load(path/'plant.npz'));saves=[]
     for label,train_b,r in f.SCENARIOS:
-        name=f'{label}-b{train_b:02}-r{r}.pt';assert lock['heads'][name]==f.digest(path/name);saves.append((label,train_b,r,torch.load(path/name,map_location='cpu',weights_only=True)))
+        name=f'{label}-b{train_b:02}-r{r}.pt';saves.append((label,train_b,r,load_head(path/name,lock['heads'][name])))
     invariant(saves)
     for b in betas:
+        audit=json.loads((f.OUT/f'bank-audit-b{b:02}-assess.json').read_bytes())
+        assert audit['frozen_receipt_sha256']==f.digest(f.OUT/'freeze.json') and audit['roster_sha256']==lock['roster']
+        assert audit['sha256']==f.digest(f.WORK/f'b{b:02}-assess.npz') and audit['side']=='assess' and audit['beta_index']==b
         cats=[];tops=[];coverage=[]
         for label,t,r,saved in saves:
             if label!='physical' and b!=t:continue
