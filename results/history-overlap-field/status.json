@@ -5,7 +5,7 @@
   "gate_receipt": "gate.json",
   "gate_parent_delta": 0.2199140842484355,
   "gate_parent_ci95": [0.10234211211503574, 0.33359623039210784],
-  "paid_admission": "No H100 dispatched; live workspace allowance reconciliation required",
+  "paid_admission": "Authorized to submit one H100 after refreshing metered usage, rates and project ledger under $2.22 hard bound; $165 workspace reference is user-stated, not independently verified",
   "gpu_id": null,
   "optimizer_updates": 0,
   "modal_spend_usd": 0,

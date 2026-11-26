@@ -1,0 +1,12 @@
+{
+  "authority": "Supervisor/user correction following CPU gate; one bounded training sandbox, not an additional budget.",
+  "cpu_gate_commit": "2567a6b74d1ac33874e935f3871ad97bd48f297f",
+  "workspace_reference_usd": 165,
+  "workspace_limit_independently_verified": false,
+  "project_envelope_usd": 25,
+  "max_all_in_usd": 2.22,
+  "max_h100_sandboxes": 1,
+  "max_concurrent_workers_on_that_gpu": 6,
+  "retries": 0,
+  "admission": "Before submission requery current workspace metered usage, rates and project ledger. Projected gross bound must fit both $165 reference minus metered and original $25 envelope minus project gross, and must not exceed $2.22. Actual provider limits remain unchanged; honor any refusal. No owner screenshot required. This file is not a device allocation or first-step receipt."
+}
