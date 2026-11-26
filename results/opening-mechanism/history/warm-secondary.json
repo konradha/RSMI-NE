@@ -1,0 +1,635 @@
+{
+  "cuts": "630be6099d7757a462a37630b4680a8168571a367af626da0665af24f4bef9aa",
+  "note": "Probe/preparation parents linked to native local forks only, neither pseudo-histories for the release nor part of cold gate. Means aggregate siblings, paired ages, then independent parents. Beta zero has no defined normalized opening score. Horizons differ by beta.",
+  "results": [
+    {
+      "all_site_terminal_risk": 0.9998324239417995,
+      "beta": 0.0,
+      "common_terminal": 1024,
+      "diagnostic": null,
+      "index": 0,
+      "mode": "all_sites"
+    },
+    {
+      "all_site_terminal_risk": 0.9998463541666669,
+      "beta": 0.338888888889,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 24,
+        "ci95": [
+          -0.0001740436540432898,
+          0.0003742846794111941
+        ],
+        "ci_width": 0.0005483283334544839,
+        "coverage": 0.021788194444444447,
+        "high_minus_low": 8.387382362572138e-05,
+        "interpretation": "inadequate support",
+        "margin_pass": false,
+        "paired_supported": 24,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": false
+      },
+      "index": 1,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9998463541666669,
+      "beta": 0.338888888889,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 24,
+        "ci95": [
+          -0.00010581239087087763,
+          0.0004944964600864919
+        ],
+        "ci_width": 0.0006003088509573695,
+        "coverage": 0.010447916666666666,
+        "high_minus_low": 0.0001795519108175615,
+        "interpretation": "inadequate support",
+        "margin_pass": false,
+        "paired_supported": 23,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": false
+      },
+      "index": 1,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9998463541666669,
+      "beta": 0.338888888889,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 24,
+        "ci95": [
+          -0.00011943295849003062,
+          5.799592071365356e-05
+        ],
+        "ci_width": 0.00017742887920368418,
+        "coverage": 0.0942777777777778,
+        "high_minus_low": -3.0019235482417472e-05,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 24,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 1,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.99934375,
+      "beta": 0.677777777778,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          0.00011998836705953846,
+          0.0007588280944717209
+        ],
+        "ci_width": 0.0006388397274121825,
+        "coverage": 0.08368589743589745,
+        "high_minus_low": 0.00043632877004777206,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 2,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.99934375,
+      "beta": 0.677777777778,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          0.00012728645801854806,
+          0.0008831451537450561
+        ],
+        "ci_width": 0.000755858695726508,
+        "coverage": 0.062022435897435904,
+        "high_minus_low": 0.0004963512827966596,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 2,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.99934375,
+      "beta": 0.677777777778,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          -0.00015804870536829363,
+          0.00013425891624897895
+        ],
+        "ci_width": 0.0002923076216172726,
+        "coverage": 0.19596474358974358,
+        "high_minus_low": -1.6046712052250826e-05,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 2,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9972488425925926,
+      "beta": 1.016666666667,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          0.0005639456127180328,
+          0.001584863918834156
+        ],
+        "ci_width": 0.0010209183061161233,
+        "coverage": 0.1440030864197531,
+        "high_minus_low": 0.0010766318341787413,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 27,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 3,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9972488425925926,
+      "beta": 1.016666666667,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          0.0007397939837014782,
+          0.0017489574216662275
+        ],
+        "ci_width": 0.0010091634379647493,
+        "coverage": 0.11433024691358025,
+        "high_minus_low": 0.0012492259520261698,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 27,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 3,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9972488425925926,
+      "beta": 1.016666666667,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          -0.00020420089736437248,
+          0.00033246370471882823
+        ],
+        "ci_width": 0.0005366646020832007,
+        "coverage": 0.28226851851851853,
+        "high_minus_low": 6.689926455489332e-05,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 27,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 3,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9865721153846155,
+      "beta": 1.355555555556,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          0.004779496670289235,
+          0.0068034515222476655
+        ],
+        "ci_width": 0.0020239548519584306,
+        "coverage": 0.22282051282051285,
+        "high_minus_low": 0.0057666321067430144,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 4,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9865721153846155,
+      "beta": 1.355555555556,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          0.0052267467023757695,
+          0.007394674463590392
+        ],
+        "ci_width": 0.0021679277612146226,
+        "coverage": 0.17991987179487182,
+        "high_minus_low": 0.006282011610276306,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 4,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9865721153846155,
+      "beta": 1.355555555556,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 26,
+        "ci95": [
+          -0.0006912380898444231,
+          0.0008098349926846684
+        ],
+        "ci_width": 0.0015010730825290915,
+        "coverage": 0.3519038461538461,
+        "high_minus_low": 7.047943789723493e-05,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 26,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 4,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9075058333333333,
+      "beta": 1.694444444444,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          0.03543809288654977,
+          0.03995219612490303
+        ],
+        "ci_width": 0.004514103238353259,
+        "coverage": 0.32265,
+        "high_minus_low": 0.03765730235726944,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 25,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 5,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9075058333333333,
+      "beta": 1.694444444444,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          0.037478323139352426,
+          0.042055364222717065
+        ],
+        "ci_width": 0.0045770410833646386,
+        "coverage": 0.26536000000000004,
+        "high_minus_low": 0.03976460299366627,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 25,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 5,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9075058333333333,
+      "beta": 1.694444444444,
+      "common_terminal": 4096,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          -0.0014763487213964373,
+          0.0024816988245511236
+        ],
+        "ci_width": 0.003958047545947561,
+        "coverage": 0.40125666666666665,
+        "high_minus_low": 0.0005328640635565707,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 25,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 5,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9033766666666666,
+      "beta": 2.033333333333,
+      "common_terminal": 32768,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          0.03852429396405236,
+          0.04609275048639476
+        ],
+        "ci_width": 0.0075684565223424,
+        "coverage": 0.40457,
+        "high_minus_low": 0.0423350841665852,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 25,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 6,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9033766666666666,
+      "beta": 2.033333333333,
+      "common_terminal": 32768,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          0.04136773729814826,
+          0.04962347471861481
+        ],
+        "ci_width": 0.00825573742046655,
+        "coverage": 0.34378333333333333,
+        "high_minus_low": 0.04553837528625529,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 25,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 6,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9033766666666666,
+      "beta": 2.033333333333,
+      "common_terminal": 32768,
+      "diagnostic": {
+        "all_parents": 25,
+        "ci95": [
+          -0.00014757200512865252,
+          0.005150208867441042
+        ],
+        "ci_width": 0.005297780872569694,
+        "coverage": 0.43266000000000004,
+        "high_minus_low": 0.002485255421732728,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 25,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 6,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9118948412698413,
+      "beta": 2.372222222222,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 21,
+        "ci95": [
+          0.029188030548441365,
+          0.03611719122135516
+        ],
+        "ci_width": 0.006929160672913798,
+        "coverage": 0.49940476190476185,
+        "high_minus_low": 0.03262626810093759,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 21,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 7,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.9118948412698413,
+      "beta": 2.372222222222,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 21,
+        "ci95": [
+          0.030929855064619823,
+          0.03783117472547012
+        ],
+        "ci_width": 0.006901319660850294,
+        "coverage": 0.4427420634920635,
+        "high_minus_low": 0.03438983375718744,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 21,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 7,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.9118948412698413,
+      "beta": 2.372222222222,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 21,
+        "ci95": [
+          0.0004012382350493639,
+          0.004121407541647327
+        ],
+        "ci_width": 0.0037201693065979633,
+        "coverage": 0.4579880952380953,
+        "high_minus_low": 0.0023821706203585986,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 21,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 7,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.07168518518518519,
+      "beta": 3.05,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          0.03296387357234297,
+          0.037171005490280004
+        ],
+        "ci_width": 0.004207131917937035,
+        "coverage": 0.5499753086419753,
+        "high_minus_low": 0.035099087398981946,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 27,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 9,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.07168518518518519,
+      "beta": 3.05,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          0.031097496671423096,
+          0.03538958650156362
+        ],
+        "ci_width": 0.004292089830140521,
+        "coverage": 0.5069135802469136,
+        "high_minus_low": 0.033270120681182944,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 27,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 9,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.07168518518518519,
+      "beta": 3.05,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 27,
+        "ci95": [
+          -0.0030082290460236413,
+          0.0012641002944022556
+        ],
+        "ci_width": 0.004272329340425897,
+        "coverage": 0.48526234567901233,
+        "high_minus_low": -0.0009737717573008202,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 27,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 9,
+      "mode": "packing"
+    },
+    {
+      "all_site_terminal_risk": 0.31732993197278914,
+      "beta": 2.711111111111,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 49,
+        "ci95": [
+          0.13514678006936262,
+          0.14250902068993965
+        ],
+        "ci_width": 0.007362240620577026,
+        "coverage": 0.536906462585034,
+        "high_minus_low": 0.13863931305193467,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 49,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 8,
+      "mode": "opening"
+    },
+    {
+      "all_site_terminal_risk": 0.31732993197278914,
+      "beta": 2.711111111111,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 49,
+        "ci95": [
+          0.13398365490763892,
+          0.1415098829408442
+        ],
+        "ci_width": 0.0075262280332052955,
+        "coverage": 0.4863945578231293,
+        "high_minus_low": 0.13755787847919032,
+        "interpretation": "meaningful positive contrast",
+        "margin_pass": true,
+        "paired_supported": 49,
+        "pass_all": true,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 8,
+      "mode": "opening+packing"
+    },
+    {
+      "all_site_terminal_risk": 0.31732993197278914,
+      "beta": 2.711111111111,
+      "common_terminal": 524288,
+      "diagnostic": {
+        "all_parents": 49,
+        "ci95": [
+          0.003608776195246427,
+          0.010367546769153217
+        ],
+        "ci_width": 0.00675877057390679,
+        "coverage": 0.47124999999999995,
+        "high_minus_low": 0.006949219402688947,
+        "interpretation": "interval excludes meaningful positive contrast",
+        "margin_pass": false,
+        "paired_supported": 49,
+        "pass_all": false,
+        "precision_pass": true,
+        "support_pass": true
+      },
+      "index": 8,
+      "mode": "packing"
+    }
+  ]
+}

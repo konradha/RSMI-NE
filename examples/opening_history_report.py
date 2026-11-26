@@ -1,7 +1,6 @@
 """Parent-clustered physical contrasts. Ages never enter uncertainty as independent draws."""
 import csv
 import json
-from collections import defaultdict
 
 import matplotlib
 matplotlib.use('Agg')
@@ -9,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from opening_history_match import MODES
-from opening_history_stage import OUT, native, save_json
+from opening_history_stage import OUT, save_json
 
 
 MEASURES = ('all_sites', 'marginal_low', 'marginal_high', 'matched_low_risk', 'matched_high_risk')

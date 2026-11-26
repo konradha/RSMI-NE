@@ -1,0 +1,10 @@
+{
+  "binning": "0 exact zero; 1 positive smaller than 2^-128; 2..136 left-closed powers of two; final 137 >= 2^7",
+  "columns": "CSR per native_row in cold-origin-moments.csv; flat_bin = Vh_bin*n_bins + V2O_bin",
+  "digest": "feff3cc0934337f39920a3821ab407b8acf9f6c40fd28f271174c8b9720aea00",
+  "distinct_parents": 256,
+  "forks": 512,
+  "n_bins": 138,
+  "occupied_sites": 3072000,
+  "population": "Cold local-all origins only, independent of static release, both ages of each parent; do not pool ages as independent."
+}

@@ -1,6 +1,5 @@
 """Frozen physical history workflow; --qualified-library must be the verified oracle build."""
 import argparse
-import csv
 import json
 from pathlib import Path
 
@@ -106,6 +105,9 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('action',choices=['freeze','development','held-source','transfer'])
     ap.add_argument('--qualified-library',required=True,type=Path); a=ap.parse_args()
+    qual = json.loads((OUT.parent/'oracle-qualification.json').read_bytes())
+    if not qual['qualified'] or native.sha(Path(__file__).with_name('opening_oracle.cpp')) != qual['source_sha256']['opening_oracle.cpp']:
+        raise ValueError('oracle source not qualified')
     if native.sha(OUT/'protocol.json') != LOCK or native.sha(SPLIT) != json.loads((OUT/'staging.json').read_bytes())['roster_sha256']:
         raise ValueError('invalid protocol or roster')
     origin = np.load(SCRATCH/'origins.npy',mmap_mode='r')

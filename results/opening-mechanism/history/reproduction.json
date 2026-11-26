@@ -1,0 +1,17 @@
+{
+  "environment": "Linux, /usr/bin/python3 with numpy and matplotlib; OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1. Run from the stock repository root. Input sibling checkout at ~/code/lattice-exploration; local-only intermediates in ~/rsmi-work/opening-mechanism/history, not the published release. No simulation, training, GPU or network required.",
+  "order": [
+    "python3 examples/opening_history_stage.py",
+    "python3 examples/opening_history_warm.py stage",
+    "Qualify the native oracle following ../oracle-method.md; use the shared library produced by that qualification (below: /tmp/opening_oracle.so). Do not extract endpoint state fields before source cuts have been frozen.",
+    "python3 examples/opening_history_cold.py freeze --qualified-library /tmp/opening_oracle.so",
+    "python3 examples/opening_history_cold.py development --qualified-library /tmp/opening_oracle.so",
+    "python3 examples/opening_history_cold.py held-source --qualified-library /tmp/opening_oracle.so",
+    "python3 examples/opening_history_cold.py transfer --qualified-library /tmp/opening_oracle.so",
+    "python3 examples/opening_history_origins.py",
+    "python3 examples/opening_history_warm.py score --qualified-library /tmp/opening_oracle.so"
+  ],
+  "lock": "protocol.json (SHA-256 fbca6a0587fd26fe3cb06d888cdde9a1b8a3c631b9084db57e15e07342c94694) predates processing. fit-lock.json identifies the 48 source-fit families, the physical code and empirical cut archive; no target-specific thresholds.",
+  "cold": "transfer-decision.json is the physical release gate. For each phase, *-forks.csv has separate age, matching support, observed return/censor diagnostics and absolute primary risks. *-parents.csv has the two fork-age contrasts and their paired mean for each parent; *-curves.csv reports equal-parent cumulative observed risks. *-parent-curves.npz includes the complete per-parent trajectories of summary statistics, plus coordinates. Parent confidence intervals refer to high-minus-low risk differences (multiply by 100 for percentage points), not single-site sampling. Cold-origin-moments and sparse joint distributions summarize only the independent cold cohort, separately from the static release.",
+  "warm": "warm-staging.json reports source provenance, exclusion and each beta's common grid. warm-eligible-forks.csv contains only selected non-reserve child IDs. warm-parents.csv and warm-parent-curves.csv aggregate stochastic siblings and paired ages before treating parents as observations. warm-secondary.json reports absolute risk and matched contrast after the last common power-of-two checkpoint. Diagnostic intervals across different horizons are not pooled and do not override the cold gate. No endpoint values from reserve families were selected or scored."
+}
