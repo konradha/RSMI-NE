@@ -1,7 +1,11 @@
 {
-  "state": "started",
+  "state": "gate_passed",
   "experiment": "history-overlap-field",
-  "gate": "not evaluated",
+  "gate": "passed",
+  "gate_receipt": "gate.json",
+  "gate_parent_delta": 0.2199140842484355,
+  "gate_parent_ci95": [0.10234211211503574, 0.33359623039210784],
+  "paid_admission": "No H100 dispatched; live workspace allowance reconciliation required",
   "gpu_id": null,
   "optimizer_updates": 0,
   "modal_spend_usd": 0,
