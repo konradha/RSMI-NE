@@ -37,6 +37,7 @@
   "numerical_gate": "no_go",
   "downstream_comparison": "not_run",
   "terminal_decision": "stop",
-  "publication": "awaiting verified remote push",
+  "publication": "pushed to feature/stock-rsmi-glass-gpu",
+  "terminal_scientific_commit": "aa7fd0b6b5e142d46e65b51bb1bd968a4fecd510",
   "evidence": "census-receipt.json"
 }
