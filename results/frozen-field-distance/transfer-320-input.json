@@ -1,0 +1,19 @@
+{
+  "cohort": "transfer-320",
+  "parents": 128,
+  "unique": 128,
+  "parents_with_star": 128,
+  "sites": 1024000,
+  "eligible_stars": 30178,
+  "eligible_per_parent_range": [
+    199,
+    277
+  ],
+  "ids_sha256": "838694049e24a374f258db35470cdfeaa942c28d7af0ac06baeb764835229263",
+  "ordered_rows_sha256": "9b59a02d9b6e79b216dbbbea99ed0c2ae99a36cc6e986992525a27864950b2b9",
+  "species_archive_sha256": "6cb0fd868aa0bd9ee725a1fcb66c26867457105e0a0addfd5d560b68bd7fcd75",
+  "star_bank_sha256": "f499ca41ad03e59360bd9f56270e5be720b4742aa772453048a0a355cdef7298",
+  "metadata_sha256": "36d64bf0ebf34292f744408b74fa43c12cc5f6111c0c5602f9dff3583c33c82b",
+  "reserve_outcomes_accessed": 0,
+  "native_axis_order": "z,y,x"
+}

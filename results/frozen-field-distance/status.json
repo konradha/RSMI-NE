@@ -1,9 +1,23 @@
 {
-  "phase":"pre_outcome_design",
-  "study":"frozen stock cavity operators at disjoint stars",
-  "source_train_parents_completed":0,
-  "held_or_transfer_parents_scored":0,
-  "eta_utc":null,
-  "gpu_seconds":0,
-  "new_trajectories":0
+  "phase": "complete",
+  "decision": "no distinct propagating residual at the registered scale; random-control specificity comparison limited",
+  "decision_receipt": "decision.json",
+  "stopped": true,
+  "source_train_normalization_parents": 8192,
+  "spatial_parents_completed": 16640,
+  "target_spatial_parents": 16640,
+  "by_cohort": {
+    "source-train": 8192,
+    "source-test": 4096,
+    "beta-zero": 4096,
+    "transfer-320": 128,
+    "transfer-340": 128
+  },
+  "throughput_parents_per_second": 2172.873717609322,
+  "elapsed_seconds": 7.658061241731048,
+  "stage_and_prepare_seconds": 3.4059647009707987,
+  "eta_utc": "2026-11-26T11:51:18.558145+00:00",
+  "workers": 7,
+  "gpu_seconds": 0,
+  "new_trajectories": 0
 }

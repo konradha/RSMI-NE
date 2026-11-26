@@ -1,0 +1,19 @@
+{
+  "cohort": "source-test",
+  "parents": 4096,
+  "unique": 4096,
+  "parents_with_star": 4096,
+  "sites": 32768000,
+  "eligible_stars": 1042346,
+  "eligible_per_parent_range": [
+    206,
+    325
+  ],
+  "ids_sha256": "f73a6508bd1fb04f102db1acdead97ea26d2e026cf455579c6d1a014f55eacc8",
+  "ordered_rows_sha256": "1eb31628adca190783869bd03dfaeee180b58671b41f55e145e83d2235c608c4",
+  "species_archive_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "star_bank_sha256": "12a6e28fc25eb7a92ae247721c62483edc23ca1da4fe30b3ebaa65a6fa2e90c8",
+  "metadata_sha256": "8b0c734adb49717ca1bcbd4cd8a3faaa0ad7cfcf3aaae427be2dd2f1077cca74",
+  "reserve_outcomes_accessed": 0,
+  "native_axis_order": "z,y,x"
+}

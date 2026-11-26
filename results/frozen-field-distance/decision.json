@@ -1,0 +1,33 @@
+{
+  "reproducible_novel_direction": false,
+  "direction_decisions": {
+    "L": {
+      "positive": false,
+      "negative": false,
+      "all_physical_positive_margins": false,
+      "all_physical_negative_margins": false,
+      "beta_zero_intervals_equivalent": true,
+      "all_72_intervals_defined": true
+    },
+    "T": {
+      "positive": false,
+      "negative": false,
+      "all_physical_positive_margins": false,
+      "all_physical_negative_margins": false,
+      "beta_zero_intervals_equivalent": true,
+      "all_72_intervals_defined": true
+    }
+  },
+  "matched_nulls_in_caliper_all_seeds": false,
+  "residual_variance_pass_all_seeds": false,
+  "raw_conditional_residual_intervals_inside_margin_all_physical": true,
+  "max_abs_simultaneous_raw_residual_endpoint": 0.0011170850842990064,
+  "practical_margin": 0.01,
+  "simultaneous_family_size": 72,
+  "primary_support_all": true,
+  "primary_precision_all": false,
+  "input_parents": 16640,
+  "scope": "Only this signed d=5/6 two-point, frozen 223-sector vector field; not arbitrary nonlinear dependencies, all encoders or all temperatures.",
+  "gpu_seconds": 0,
+  "new_mcmc": 0
+}

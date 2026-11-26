@@ -28,11 +28,12 @@ def main():
                 for seed,color in zip(SEEDS,COL):
                     z=sub[sub.model==f'{mode}_s{seed}'].sort_values('distance');ax.fill_between(z.distance.to_numpy(),z.low.to_numpy(),z.high.to_numpy(),color=color,alpha=.13,lw=0);ax.plot(z.distance,z['mean'],color=color,marker='o',ms=2.6,lw=1.3,label=str(seed))
                 if mode=='total':
-                    z=sub[sub.model=='packing_enriched'].sort_values('distance');ax.plot(z.distance,z['mean'],color='.15',ls='--',lw=1.3,label='Ordinary packing')
+                    for model,ls,color,key in [('packing_basic','--','.15','Arm differences'),('packing_enriched',':','.3','Enriched span (equal weights)')]:
+                        z=sub[sub.model==model].sort_values('distance');ax.plot(z.distance,z['mean'],color=color,ls=ls,lw=1.4,label=key)
                 if i==0:ax.set_title(label,loc='left',fontsize=10,weight='bold')
                 if j==0:ax.set_ylabel(('Longitudinal L' if i==0 else 'Transverse T')+'\nnormalized covariance')
                 ax.set_xticks(range(3,10));ax.tick_params(labelsize=8)
-        handles,leg=axes[0,0].get_legend_handles_labels();fig.legend(handles,leg,loc='lower center',ncol=4,frameon=False,bbox_to_anchor=(.51,.004));fig.text(.51,.10,'Periodic axial center separation d (lattice sites); shaded interval = registered d=5,6',ha='center',fontsize=10);fig.savefig(OUT/f'{plot}.png',dpi=175);plt.close(fig)
+        handles,leg=axes[0,0].get_legend_handles_labels();fig.legend(handles,leg,loc='lower center',ncol=len(leg),frameon=False,bbox_to_anchor=(.51,.004));fig.text(.51,.10,'Periodic axial center separation d (lattice sites); shaded interval = registered d=5,6',ha='center',fontsize=10);fig.savefig(OUT/f'{plot}.png',dpi=175);plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(13,5.3),sharey=True);fig.subplots_adjust(left=.155,right=.98,top=.77,bottom=.16,wspace=.12)
     fig.text(.155,.945,'Did an independent residual propagate across the gap?',fontsize=17,weight='bold');fig.text(.155,.875,'Pooled d=5,6  ·  simultaneous 95% parent intervals (72 comparisons)  ·  shaded area: ±0.01 of total source TRAIN variance',fontsize=10)
     ys=np.arange(8)[::-1];yt=[lab.split(' · ')[0]+'   '+pol for lab in LABELS for pol in ('L','T')]
@@ -44,7 +45,7 @@ def main():
         ax.set_yticks(ys,yt);ax.tick_params(axis='y',length=0);ax.set_xlabel('Signed covariance');ax.set_xlim(min(-.011,ax.get_xlim()[0]),max(.011,ax.get_xlim()[1]))
     fig.legend(*axes[0].get_legend_handles_labels(),loc='lower center',ncol=3,frameon=False);fig.savefig(OUT/'primary-intervals.png',dpi=175);plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(9.8,4.4),layout='constrained');x=np.arange(3);ax=axes[0];ax.bar(x-.17,[100*m[str(s)]['basic_residual_fraction'] for s in SEEDS],.34,color='#7499b8',label='After arm differences');ax.bar(x+.17,[100*m[str(s)]['enriched_residual_fraction'] for s in SEEDS],.34,color='#3a7254',label='After enriched packing');ax.axhline(1,color='.35',ls=':',label='1% support floor');ax.set(xticks=x,xticklabels=SEEDS,ylabel='Percent of original component variance',title='What is left of the frozen vector field?');ax.legend(fontsize=8,frameon=False)
-    ax=axes[1];r=pd.read_csv(OUT/'random-matching.csv');
+    ax=axes[1];
     for j,s in enumerate(SEEDS):
         k=m[str(s)]; ax.plot([j,j],[k['power_T1u']+k['selected_mean_T1u_power_minus_true'],k['power_T1u']],color='.6',zorder=0);ax.scatter(j,k['power_T1u'],color=COL[j],s=45,label='Frozen encoder' if j==0 else None);ax.scatter(j,k['power_T1u']+k['selected_mean_T1u_power_minus_true'],marker='x',color='.15',s=45,label='Mean of 8 TRAIN-matched shuffles' if j==0 else None)
     ax.set(xticks=x,xticklabels=SEEDS,ylabel='Fraction of category span in T1u',title='Do random partitions match its symmetry?');ax.legend(fontsize=8,frameon=False);[a.spines[['top','right']].set_visible(False) for a in axes];fig.savefig(OUT/'train-specificity.png',dpi=175);plt.close(fig)
