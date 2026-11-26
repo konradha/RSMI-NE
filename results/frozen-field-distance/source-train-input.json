@@ -1,0 +1,20 @@
+{
+  "cohort": "source-train",
+  "parents": 8192,
+  "unique": 8192,
+  "parents_with_star": 8192,
+  "sites": 65536000,
+  "eligible_stars": 2083286,
+  "eligible_per_parent_range": [
+    194,
+    317
+  ],
+  "ids_sha256": "34c79dc692d34580832f62e5868d6c6347d9466117ae834dab66c7ee5c1243d5",
+  "ordered_rows_sha256": "3662aeb823d716beafe61a92cae00bf872e02241f904d41fa05748c7efd688dd",
+  "species_archive_sha256": "f1ec9cb1dc837d58e9be4914dfc0b3cfb5760ece2f4e2ce995a0bc3e03261dca",
+  "star_bank_sha256": "7853765787df48bd3e482d896b3c9a55d86e37052d7a708151ac99e6bcf7b4fb",
+  "metadata_sha256": "29eb5b6d19dfaab6459f586a57108825f90d2549255216dddc2ffc06b428902c",
+  "reserve_outcomes_accessed": 0,
+  "native_axis_order": "z,y,x",
+  "train_mass_sha256": "d7014a58237bc2fa907ec09ffa26fbd6b39320feb87d040a75abbc50a1e48165"
+}
