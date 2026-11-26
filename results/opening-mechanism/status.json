@@ -1,0 +1,12 @@
+{
+  "phase": "intake_before_outcomes",
+  "target_release_parents": 163840,
+  "completed_release_parents": 0,
+  "completed_release_occupied_sites": 0,
+  "first_timed_shard": null,
+  "eta_utc": null,
+  "physical_gate": "not_evaluated",
+  "numerical_gate": "not_evaluated",
+  "downstream_comparison": "locked",
+  "terminal_decision": null
+}
