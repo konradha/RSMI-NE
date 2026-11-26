@@ -46,6 +46,9 @@ def route(tag):
 
 def make_bank(tag,runs,staged,scratch):
     b,_,n=COHORTS[tag]; rows,keys=route(tag); scratch.mkdir(parents=True,exist_ok=True)
+    if tag!='source-train':
+        gate=json.loads((OUT/'admission.json').read_text())
+        need(gate['held_spatial_scoring_permitted'] and all(sha(OUT/f)==h for f,h in gate['pins'].items()),'held access not qualified')
     if b<10:
         m=json.loads(INDEX.read_text())['rows'][b];f=staged/f'b{b:02d}.npy';source=runs/m['source'];need(sha(f)==m['staged_sha256'] and sha(source)==m['archive_sha256'],'archive/staging digest');
         with np.load(source) as z:np.testing.assert_array_equal(np.column_stack([z['chain_seed'][rows],z['chain_id'][rows]]),keys)
@@ -57,7 +60,7 @@ def make_bank(tag,runs,staged,scratch):
     hm=np.zeros(210);nel=np.zeros(n,np.uint16);audit=False
     for i,k in enumerate(rows):
         x=native[k];s=star_states(x);out[i]=s;v=s[s>=0];nel[i]=len(v)
-        if len(v):hm+=np.bincount(v,minlength=210)/len(v)
+        if tag=='source-train' and len(v):hm+=np.bincount(v,minlength=210)/len(v)
         if not audit:
             # Independent lookup for every center in this first admitted parent, including wrapped/ineligible stars.
             xyz=np.indices((20,20,20)).reshape(3,-1).T;loc=(xyz[:,None]+C)%20;states=x[tuple(loc.transpose(2,0,1))];ok=((states==0).sum(1)==2)&((states==1).sum(1)==2);np.testing.assert_array_equal(s.ravel()>=0,ok);np.testing.assert_array_equal(X[s.ravel()[ok]],states[ok]);audit=True

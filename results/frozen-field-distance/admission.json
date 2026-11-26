@@ -1,0 +1,19 @@
+{
+  "held_spatial_scoring_permitted": true,
+  "pins": {
+    "design.md": "c30d15cd13b366b88eb1658bc1ea2bb284c4df90d8a5c1693a79d9188cca6741",
+    "pair-fixture-design.json": "e91a2eca8343c526e52b5f3fe159ca7697445d08937751d14ab44f8850410496",
+    "pair-qualification.json": "074a5a07360ebfcaf032d211e7fefd781653aeeb0e2bfb7e76c0589a4491387a",
+    "map-lock.json": "83e6398c39536d59cb1b4fb9656b55b67c0423e4fac01e2e3241d68e5170316e",
+    "fields.npz": "c1456bffacf636fe90a61775e74c1c535a2fce2250cd5fb6ef523a465b9a7225",
+    "mapping-receipt.json": "8a7b5693266f507f40b1d10908420981651c12974b1c1466ef4e2ac48443fc91",
+    "train-mass.npy": "d7014a58237bc2fa907ec09ffa26fbd6b39320feb87d040a75abbc50a1e48165"
+  },
+  "scope": "Apply locked estimators and report; not permission to infer specificity when TRAIN matching or residual-variance requirements fail.",
+  "training_only_warnings": [
+    "Seed 6101 retains less than 1% of TRAIN total variance after enriched packing.",
+    "All three entropy/power-matched controls miss the frozen T1u-power caliper."
+  ],
+  "new_trajectories": 0,
+  "gpu_seconds": 0
+}

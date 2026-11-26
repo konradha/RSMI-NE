@@ -1,0 +1,229 @@
+{
+  "qualification_passed": true,
+  "checks": {
+    "plant_within_margin_of_analytic_target": true,
+    "plant_signed_detection": true,
+    "null_spurious_practical_promotion": false
+  },
+  "sha256": {
+    "pair-fixture-design.json": "e91a2eca8343c526e52b5f3fe159ca7697445d08937751d14ab44f8850410496",
+    "field_distance_pairs.py": "4eda8cdf08fc36970d8c0cafc8692d89b3692b26f360da5ed4ac7253a599e38d",
+    "field_distance_pairs_qualify.py": "9997ff70acd22253127626cfec4b273c476ceb3245f9449339e5422e034d0e86"
+  },
+  "estimator_audit": {
+    "minimum_star_site_distances": {
+      "3": 1,
+      "4": 2,
+      "5": 3,
+      "6": 4,
+      "7": 5,
+      "8": 6,
+      "9": 7
+    },
+    "oracle_max_absolute_error": {
+      "true": 5.835609773185979e-15,
+      "shuffled": 5.370703881624195e-15
+    },
+    "supported_counts_match": true,
+    "orthogonal_copy_rotation_invariant": true,
+    "constant_field_zero": true,
+    "permutation_histogram_preserved": true,
+    "selection_fixture": {
+      "counts": [
+        [
+          800,
+          2000,
+          2000
+        ]
+      ],
+      "axis0_endpoint_means": [
+        2.0,
+        -1.0
+      ],
+      "naive_global_mean_L": -0.6675010429703797,
+      "exact_joint_centered_L": 0.0
+    },
+    "unsupported_one_axis_counts": [
+      [
+        1,
+        14,
+        14
+      ]
+    ],
+    "empty_and_one_pair_return_nan": true
+  },
+  "analytic_population": {
+    "L": 0.02525969649444768,
+    "T": -0.0227325929206753,
+    "iid": 0.0,
+    "variance": 1.0,
+    "distances": [
+      5,
+      6
+    ]
+  },
+  "independent_parents": 128,
+  "root_seed": 711526,
+  "inference": {
+    "parent_unit": "one synthetic cube",
+    "alpha": 0.05,
+    "simultaneous_factor": 72,
+    "critical": 3.4771399431851857,
+    "practical_effect": 0.01
+  },
+  "support": {
+    "min_parent_eligible": 1191,
+    "max_parent_eligible": 1375,
+    "minimum_per_parent_primary_axis": 161,
+    "pooled_primary_counts": [
+      [
+        26238,
+        26316,
+        26154
+      ],
+      [
+        26115,
+        25984,
+        26131
+      ]
+    ]
+  },
+  "results": {
+    "plant": {
+      "raw": {
+        "L": {
+          "mean": 0.022947989923191404,
+          "sd_across_parents": 0.03157886764813937,
+          "lo": 0.01324258324157528,
+          "hi": 0.032653396604807525,
+          "halfwidth": 0.009705406681616124,
+          "excludes_zero": true,
+          "beyond_practical_margin": true,
+          "inside_equivalence_margin": false
+        },
+        "T": {
+          "mean": -0.02305802289042255,
+          "sd_across_parents": 0.016999467924932444,
+          "lo": -0.028282616483229203,
+          "hi": -0.017833429297615895,
+          "halfwidth": 0.005224593592806655,
+          "excludes_zero": true,
+          "beyond_practical_margin": true,
+          "inside_equivalence_margin": false
+        }
+      },
+      "shuffled": {
+        "L": {
+          "mean": 0.0003329565795707861,
+          "sd_across_parents": 0.027651184519969525,
+          "lo": -0.008165321255623368,
+          "hi": 0.00883123441476494,
+          "halfwidth": 0.008498277835194154,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        },
+        "T": {
+          "mean": -0.002168433039824229,
+          "sd_across_parents": 0.023397054949347903,
+          "lo": -0.009359252418330986,
+          "hi": 0.005022386338682529,
+          "halfwidth": 0.007190819378506758,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        }
+      },
+      "paired": {
+        "L": {
+          "mean": 0.0226150333436206,
+          "sd_across_parents": 0.04236466819785283,
+          "lo": 0.009594733237447637,
+          "hi": 0.03563533344979356,
+          "halfwidth": 0.013020300106172963,
+          "excludes_zero": true,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": false
+        },
+        "T": {
+          "mean": -0.02088958985059832,
+          "sd_across_parents": 0.028820619729353892,
+          "lo": -0.029747280329125332,
+          "hi": -0.01203189937207131,
+          "halfwidth": 0.008857690478527011,
+          "excludes_zero": true,
+          "beyond_practical_margin": true,
+          "inside_equivalence_margin": false
+        }
+      }
+    },
+    "iid": {
+      "raw": {
+        "L": {
+          "mean": -0.0018113602097605556,
+          "sd_across_parents": 0.02774246720889578,
+          "lo": -0.010337692743713768,
+          "hi": 0.006714972324192657,
+          "halfwidth": 0.008526332533953213,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": false
+        },
+        "T": {
+          "mean": -0.0010784330461904368,
+          "sd_across_parents": 0.017123398082745073,
+          "lo": -0.006341115166904119,
+          "hi": 0.0041842490745232445,
+          "halfwidth": 0.0052626821207136815,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        }
+      },
+      "shuffled": {
+        "L": {
+          "mean": -0.00029991931900659577,
+          "sd_across_parents": 0.026440140676443787,
+          "lo": -0.00842599656925111,
+          "hi": 0.007826157931237917,
+          "halfwidth": 0.008126077250244513,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        },
+        "T": {
+          "mean": -0.0014631605742689978,
+          "sd_across_parents": 0.022612750330171107,
+          "lo": -0.008412932826697778,
+          "hi": 0.0054866116781597815,
+          "halfwidth": 0.006949772252428779,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        }
+      },
+      "paired": {
+        "L": {
+          "mean": -0.0015114408907539588,
+          "sd_across_parents": 0.038260134556463564,
+          "lo": -0.013270259151791645,
+          "hi": 0.010247377370283726,
+          "halfwidth": 0.011758818261037685,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": false
+        },
+        "T": {
+          "mean": 0.00038472752807856104,
+          "sd_across_parents": 0.02921400140604815,
+          "lo": -0.008593864345519172,
+          "hi": 0.009363319401676295,
+          "halfwidth": 0.008978591873597733,
+          "excludes_zero": false,
+          "beyond_practical_margin": false,
+          "inside_equivalence_margin": true
+        }
+      }
+    }
+  }
+}
