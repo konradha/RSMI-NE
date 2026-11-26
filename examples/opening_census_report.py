@@ -29,7 +29,13 @@ def report(scratch,out):
     np.savez_compressed(out/'census-distributions.npz',joint_counts=hj,positive_edges=EDGES,group_order=np.array(['fit','dev','assess','reserve:fixed tallies only']),native_rows=native,group=ret_group,parent_moments=retained,moment_names=np.asarray(MOMENTS))
     # Model-free sampling errors: each parent contributes its own all-site mean; reserve includes sums/squares only.
     means=sums/N;se=np.sqrt(np.maximum(0,squares-sums**2/N)/(N*(N-1)))
-    betas=np.array([float(r['beta']) for r in manifest['rows']]); data=[]
+    betas=np.array([float(r['beta']) for r in manifest['rows']])
+    # At beta zero, h counts unlike neighbors. O counts x-y-z nonbacktracking
+    # paths with y matching the occupied center's species and z not matching.
+    # This identity uses uniform fixed-inventory sampling, not independent sites.
+    expected=np.array([sum(n/FILLED*2*(8000-n)/7999 for n in (2400,3600)),
+                       sum(n/FILLED*(30/9)*(n-1)/7999*(8000-n)/7998 for n in (2400,3600))])
+    dump(out/'beta-zero-check.json',dict(reference='uniform 2400 A, 3600 B, 2000 vacant; sampling without replacement',metrics=list(MOMENTS[:2]),expected=expected.tolist(),observed=means[0,:2].tolist(),parent_se=se[0,:2].tolist(),difference_in_parent_se=((means[0,:2]-expected)/se[0,:2]).tolist(),scope='descriptive external control, not used to change inclusion or fit'))
     with (out/'census-temperature.csv').open('w') as f:
         wr=csv.writer(f);wr.writerow(['beta_index','beta','parents','occupied_sites','metric','mean','parent_se','ci95_low','ci95_high'])
         for i in range(10):
@@ -52,6 +58,14 @@ def report(scratch,out):
     for b,ax in enumerate(axes.flat):
         vals=co[b].T/(N*FILLED);im=ax.imshow(np.ma.masked_equal(vals,0),origin='lower',cmap=cmap,norm=LogNorm(1/(N*FILLED),1),interpolation='nearest',aspect='equal');ax.set(xticks=range(nc),yticks=range(nc),xticklabels=labels,yticklabels=labels,title=f'β = {betas[b]:.3f}');ax.tick_params(labelsize=7,axis='x',labelrotation=70);ax.tick_params(labelsize=7,axis='y');
     fig.supxlabel('Instantaneous Vh · exact zero or log₂ bin');fig.supylabel('Opening V²O · exact zero or log₂ bin');fig.suptitle('Joint mobility and opening across the complete L20 release',fontweight='bold');fig.colorbar(im,ax=axes.ravel().tolist(),shrink=.70,label='Fraction of all occupied origins');fig.savefig(out/'census-joint.png',dpi=175);plt.close(fig)
+    # Distinguish rare cells from common ones and large opening from nonzero opening.
+    support=co.sum(2); upper=co[:,:,lookup[int(np.where(EDGES==2**-8)[0][0])+2]:].sum(2)
+    pct=np.divide(100*upper,support,out=np.full(support.shape,np.nan),where=support>0)
+    fig,axes=plt.subplots(1,2,figsize=(11,4.6),sharey=True,layout='constrained')
+    charts=((np.ma.masked_equal(support.T,0),LogNorm(1,N*FILLED),'Occupied-site support','Observed sites'),(np.ma.masked_invalid(pct.T),None,'Opening within the same mobility bin','Percent with V²O ≥ 2⁻⁸'))
+    for ax,(v,norm,title,label) in zip(axes,charts):
+        im=ax.imshow(v,origin='lower',aspect='auto',interpolation='nearest',norm=norm,cmap=cmap,**({'vmin':0,'vmax':100} if norm is None else {}));ax.set(xticks=range(10),xticklabels=[f'{b:.2f}' for b in betas],yticks=range(nc),yticklabels=labels,xlabel='Inverse temperature β',title=title);ax.tick_params(axis='x',labelrotation=45);fig.colorbar(im,ax=ax,shrink=.85,label=label)
+    axes[0].set_ylabel('Instantaneous Vh · exact zero or log₂ bin');fig.suptitle('How much opening remains at comparable instantaneous mobility?',fontweight='bold');fig.savefig(out/'census-within-h.png',dpi=175);plt.close(fig)
     dump(out/'census-receipt.json',dict(complete=True,distinct_parents=10*N,occupied_centers=10*N*FILLED,parents_with_retained_individual_distributions=int(cnt.sum()),reserve_parents_fixed_aggregates_only=10*N//4,per_parent_sparse_shards='Regenerate from pinned native files; compressed non-reserve row distributions stored in the local shard cache; each shard has a SHA256 in shard-digests.json.',digest_manifest_sha256=sha(out/'shard-digests.json'),released_arrays_sha256=sha(out/'census-distributions.npz'),interval='Mean ±1.96 parent SE (large-N descriptive marginal); no site bootstrap.',within_h='Marginal empirical conditional on mobility bin; see history analysis for exact incident barriers. No causal claim.'))
     print(f'REDUCED {10*N*FILLED:,} occupied centers from {10*N:,} independent parents',flush=True)
 

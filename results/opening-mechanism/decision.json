@@ -1,0 +1,14 @@
+{
+  "scope": "Downstream compact initial-surroundings predictor; independent of completing archive descriptions.",
+  "physical_gate_pass": false,
+  "physical_receipt": "history/transfer-decision.json",
+  "physical_reason": "Well-supported opening contrasts were positive in the held source and target. The 3.40 packing-adjusted 95% parent interval [0.004546,0.005380] is below the registered 0.02 absolute first-observed risk margin at 1M sweeps.",
+  "numerical_gate_pass": false,
+  "numerical_receipt": "numerics/decision.json",
+  "numerical_reason": "Stock scalar failures and one-step optimizer disagreement on fixed numerical controls. Historical failing critic tensors were not retained.",
+  "predictive_comparison": "no_go",
+  "new_predictive_fits": 0,
+  "new_physical_trajectories": 0,
+  "gpu_device_seconds": 0,
+  "scope_of_inference": "The opening observable carries a detectable conditional association, not a causal cage lifetime or a phase. Failure of the practical margin is not absence of association."
+}
