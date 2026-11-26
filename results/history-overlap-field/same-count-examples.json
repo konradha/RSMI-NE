@@ -1,0 +1,144 @@
+{
+  "parent": 236,
+  "matched_blocks": 128,
+  "rows": [
+    {
+      "anchor": [
+        8,
+        2,
+        10
+      ],
+      "bonds_zyx": [
+        2,
+        2,
+        0
+      ],
+      "flat_index": 3250,
+      "ternary": [
+        [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        1,
+        15,
+        0
+      ],
+      "bonds_zyx": [
+        0,
+        0,
+        0
+      ],
+      "flat_index": 700,
+      "ternary": [
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      ]
+    }
+  ],
+  "source": "beta=3.20 FIT only; 500M preparation, target Q=.80",
+  "lag": 37642814,
+  "n_initially_occupied": 20,
+  "n_changed": 4,
+  "selection": "First rank-ordered eligible parent; maximum NN changed-changed edges, then minimum edges among nonoverlapping centers. Lexicographic tie breaks. No shell or fitted code used.",
+  "bank_sha256": "f28a4cbc2b134a5394f95ab56976ff0d49820243673c6a8708c55c224b367790"
+}

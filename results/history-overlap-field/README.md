@@ -18,3 +18,15 @@
 **What the CPU gate tests.** Within each source development parent, regress center and shell activity separately on their initial occupied fractions, then compare their true spatial correlation to the displaced one. Only the 16 per-parent differences enter the primary interval; 128,000 overlapping translations supply spatial coverage, not 128,000 standard-error units. A positive gate licenses the more difficult count-and-shape-conditional RSMI test. It does not answer it.
 
 **GPU protocol.** One bounded H100, three paired independent starts (6101–6103), true and displaced-shell stock fits, 32,768 genuine Adam updates per fit minimum. A common, source-DEV-only paired improvement rule can extend all six to 65,536. Conditioning of physical held readouts, entropy matching, admissible numerical precision and no TEST selection are fixed in the design. A missing H100, a numerical failure or an incomplete fit is not a scientific zero. No new MCMC or access to the closed static Gate 2.
+
+**Examples without a learned code.** These [two nonoverlapping blocks](same-count-examples.png) came from the same β=3.20 FIT parent, same starting occupancy (20) and same change count (4). Their changes form four adjacent bonds versus none. They were selected by center geometry alone from 128 eligible translations, not by shell activity. They illustrate why a shape-controlled test is necessary; they are not RSMI discoveries. [Exact coordinates and ternary arrays](same-count-examples.json).
+
+**Offline gate reproduction** from the fork root with the pinned `lattice-exploration` mirror and CPU NumPy/Matplotlib:
+
+```sh
+out=results/history-overlap-field
+work="$HOME/rsmi-work/history-overlap-field"
+OPENBLAS_NUM_THREADS=1 python3 examples/stock_glass_history_maps.py train --scratch "$work" --out "$out"
+OPENBLAS_NUM_THREADS=1 python3 examples/stock_glass_history_gate.py --work "$work" --out "$out"
+python3 examples/stock_glass_history_shapes.py --bank "$work/b0-a500-q80-fit.npz" --out "$out"
+```
