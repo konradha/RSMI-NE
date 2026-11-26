@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "distinct_parents": 163840,
+  "occupied_centers": 983040000,
+  "parents_with_retained_individual_distributions": 122880,
+  "reserve_parents_fixed_aggregates_only": 40960,
+  "nonreserve_joint_distributions": [
+    {
+      "beta_index": 0,
+      "parents": 12288,
+      "file": "parent-distributions/beta-00.npz",
+      "sha256": "091f90552d93fe9e751f7ab7d3f6fb817a4506b46e6370ff2528c2e21f47d7fd"
+    },
+    {
+      "beta_index": 1,
+      "parents": 12288,
+      "file": "parent-distributions/beta-01.npz",
+      "sha256": "4bc0e7f62c79b314505a6a04eb6f1f119b472b51861d518a280e1348707c97aa"
+    },
+    {
+      "beta_index": 2,
+      "parents": 12288,
+      "file": "parent-distributions/beta-02.npz",
+      "sha256": "0922a886d6df6b8d2b4fc8757c79727909f25cecd48cd38b08c991dc63c97617"
+    },
+    {
+      "beta_index": 3,
+      "parents": 12288,
+      "file": "parent-distributions/beta-03.npz",
+      "sha256": "a0baf0703c1af6c7a98e1ed419d6e5af5a8d989aee70e0a2e6d92d45db112eb8"
+    },
+    {
+      "beta_index": 4,
+      "parents": 12288,
+      "file": "parent-distributions/beta-04.npz",
+      "sha256": "07936a8ed284f8be86e561509e94f1e2f8dba0d9472676c9f236bec4047d5094"
+    },
+    {
+      "beta_index": 5,
+      "parents": 12288,
+      "file": "parent-distributions/beta-05.npz",
+      "sha256": "742ac660adadaf4e58f4f352c5a1d47e604048786350b3d26d56c887fb650d78"
+    },
+    {
+      "beta_index": 6,
+      "parents": 12288,
+      "file": "parent-distributions/beta-06.npz",
+      "sha256": "98def0513925987041c7732acdf0f0307609a8920d3b526a6ad610dce59ba858"
+    },
+    {
+      "beta_index": 7,
+      "parents": 12288,
+      "file": "parent-distributions/beta-07.npz",
+      "sha256": "d54e4ac23cbd0651656f1ce1edad009c9c012dbbc570d28c3d1cb2b5bfef92d7"
+    },
+    {
+      "beta_index": 8,
+      "parents": 12288,
+      "file": "parent-distributions/beta-08.npz",
+      "sha256": "4d8c4805d9bd51978772704768f4a4ce5f393258e68114afea1e4309ffb61ab3"
+    },
+    {
+      "beta_index": 9,
+      "parents": 12288,
+      "file": "parent-distributions/beta-09.npz",
+      "sha256": "8abe40e034326c65f5b7884e737595888dbc44ec3f6aa9f07ccad722b918e637"
+    }
+  ],
+  "format": "For row j take offsets[j]:offsets[j+1]; cell = h_bin*138 + opening_bin, count is occupied centers. Bins: zero, positive < 2^-128, then dyadic, last >= 2^7. Map native_row with inputs.json.",
+  "digest_manifest_sha256": "7a1eaff4d0f3506062dec37ce17cc9499b37ca204493dad36bbf473f9611c79b",
+  "released_arrays_sha256": "03ed7d18cdf020fc14e0a2466f0d98c8ded83ba4c6f04e52f9e1d85fce94f041",
+  "interval": "Mean \u00b11.96 parent SE (large-N descriptive marginal); no site bootstrap.",
+  "within_h": "Marginal empirical conditional on mobility bin; see history analysis for exact incident barriers. No causal claim."
+}

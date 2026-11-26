@@ -1,0 +1,24 @@
+{
+  "reference": "uniform 2400 A, 3600 B, 2000 vacant; sampling without replacement",
+  "metrics": [
+    "mean_Vh",
+    "mean_V2O"
+  ],
+  "expected": [
+    1.2201525190648832,
+    0.7750364477813624
+  ],
+  "observed": [
+    1.2201761610243056,
+    0.7749788253219034
+  ],
+  "parent_se": [
+    5.046179754268338e-05,
+    3.19337085470804e-05
+  ],
+  "difference_in_parent_se": [
+    0.46851203432449817,
+    -1.8044399501547568
+  ],
+  "scope": "descriptive external control, not used to change inclusion or fit"
+}
