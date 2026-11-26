@@ -1,0 +1,9 @@
+{
+  "state": "started",
+  "experiment": "history-overlap-field",
+  "gate": "not evaluated",
+  "gpu_id": null,
+  "optimizer_updates": 0,
+  "modal_spend_usd": 0,
+  "scope": "Existing local-only physical histories; closed static Gate 2 excluded. No new MCMC."
+}
