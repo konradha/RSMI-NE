@@ -1,0 +1,181 @@
+{
+  "batch_size": 48,
+  "cap_nats": 3.871201010907891,
+  "records": [
+    {
+      "source": "true-s6101-first.json",
+      "sha256": "4302b4c44a5dec208632b42a1ac7497d0c55ead6ea991871aecb246a2f939a9a",
+      "record": "first",
+      "arm": "true",
+      "seed": 6101,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.0036938712000846863,
+        -0.0036938712000846863
+      ]
+    },
+    {
+      "source": "true-s6101-progress.json",
+      "sha256": "bd41e1db1eb78da6d182e44010bdff892d6919db0f37c9390fc4150f277bd0fc",
+      "record": "progress",
+      "arm": "true",
+      "seed": 6101,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.0036938712000846863,
+        -0.0036938712000846863
+      ]
+    },
+    {
+      "source": "displaced-s6101-first.json",
+      "sha256": "f9b9a28e7522013b862d5102f14651f7617b3e033ba350712739fc84138bddd8",
+      "record": "first",
+      "arm": "displaced",
+      "seed": 6101,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        0.0018997807055711746,
+        0.0018997807055711746
+      ]
+    },
+    {
+      "source": "displaced-s6101-progress.json",
+      "sha256": "bdc21af5de2751d32457246b60aa9abf9dcd48ace9758f74e03b60c20fdc47cb",
+      "record": "progress",
+      "arm": "displaced",
+      "seed": 6101,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        0.0018997807055711746,
+        0.0018997807055711746
+      ]
+    },
+    {
+      "source": "true-s6102-first.json",
+      "sha256": "657971ac94483cb4185bdd128748e6e4036f7ec13ecbab0082528e86e8729317",
+      "record": "first",
+      "arm": "true",
+      "seed": 6102,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.0037074480205774307,
+        -0.0037074480205774307
+      ]
+    },
+    {
+      "source": "true-s6102-progress.json",
+      "sha256": "746f6e5a6774ed9dc7bbc945a2126b7980b4e5b54e9967e70d8bc320dc932440",
+      "record": "progress",
+      "arm": "true",
+      "seed": 6102,
+      "adam_iteration": 1024,
+      "accepted_range_nats": [
+        -0.0896008238196373,
+        0.11717939376831055
+      ]
+    },
+    {
+      "source": "displaced-s6102-first.json",
+      "sha256": "74617b3715ee52e3a47846762db172a4176bebd458837ce5c1bff900051d0df9",
+      "record": "first",
+      "arm": "displaced",
+      "seed": 6102,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.0037018610164523125,
+        -0.0037018610164523125
+      ]
+    },
+    {
+      "source": "displaced-s6102-progress.json",
+      "sha256": "fd93ef638d052912d606181717cb898a479035c679b073fe9bee2a9d7964f79f",
+      "record": "progress",
+      "arm": "displaced",
+      "seed": 6102,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.0037018610164523125,
+        -0.0037018610164523125
+      ]
+    },
+    {
+      "source": "displaced-s6102-failure.json",
+      "sha256": "b7bbaac3fb55c2cc075369baf50791e4941e738a395c067c4187b8d26ee82270",
+      "record": "failure",
+      "arm": "displaced",
+      "seed": 6102,
+      "adam_iteration": 718,
+      "accepted_range_nats": [
+        -2.0,
+        2.0
+      ],
+      "rejected_nats": 4.0,
+      "excess_nats": 0.12879898909210885
+    },
+    {
+      "source": "true-s6103-first.json",
+      "sha256": "cb33c14250b30a8ec104d6a1b7ed29a1aa7efbf9b7ac21e8abcccaf793083b0d",
+      "record": "first",
+      "arm": "true",
+      "seed": 6103,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        -0.010562524199485779,
+        -0.010562524199485779
+      ]
+    },
+    {
+      "source": "true-s6103-progress.json",
+      "sha256": "4094ef7af51b5b0ea9d0d99df5b0487c0cd4d95524bd7fbf71438d81a53a15cf",
+      "record": "progress",
+      "arm": "true",
+      "seed": 6103,
+      "adam_iteration": 1024,
+      "accepted_range_nats": [
+        -0.11756998300552368,
+        0.08795282244682312
+      ]
+    },
+    {
+      "source": "displaced-s6103-first.json",
+      "sha256": "de949509789019f34f659c77c63f8fc577e7387cdb3ef24ff14a3123f44a4562",
+      "record": "first",
+      "arm": "displaced",
+      "seed": 6103,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        0.006208464503288269,
+        0.006208464503288269
+      ]
+    },
+    {
+      "source": "displaced-s6103-progress.json",
+      "sha256": "aad0db050ea2bf3d6476437edd6790769f23594edaccfb12fbd04190d9ab9bb2",
+      "record": "progress",
+      "arm": "displaced",
+      "seed": 6103,
+      "adam_iteration": 1,
+      "accepted_range_nats": [
+        0.006208464503288269,
+        0.006208464503288269
+      ]
+    },
+    {
+      "source": "displaced-s6103-failure.json",
+      "sha256": "b540e0c434cb77c2efa20e335b756204e0dfcb8e5ecb95fff7d4d9b778fcf9d5",
+      "record": "failure",
+      "arm": "displaced",
+      "seed": 6103,
+      "adam_iteration": 1023,
+      "accepted_range_nats": [
+        -2.0,
+        2.0
+      ],
+      "rejected_nats": 4.0,
+      "excess_nats": 0.12879898909210885
+    }
+  ],
+  "scheduled_portables_present": [],
+  "prior_score_matrices_available": false,
+  "prior_failing_model_and_adam_state_available": false
+}

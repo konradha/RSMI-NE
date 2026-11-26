@@ -1,0 +1,56 @@
+{
+  "comparison_allowed": false,
+  "stock_numeric_gate_pass": false,
+  "historical_failure_resolved": false,
+  "retained_rejections": 2,
+  "cap_nats": 3.871201010907891,
+  "measured_runtime_cases": 234,
+  "failed_tests": {
+    "reference_ok": 0,
+    "scalar_ok": 70,
+    "gradient_ok": 0,
+    "adam_ok": 22
+  },
+  "stock_above_cap": 8,
+  "stock_equals_4": 4,
+  "nonfinite_gradients": 0,
+  "nonfinite_parameter_or_adam": 0,
+  "independent_controls_nats": {
+    "independent": {
+      "n": 32,
+      "mean": -0.2561427483443437,
+      "sd": 0.12552194974298442,
+      "min": -0.4968520375364247,
+      "max": -0.025667155342508963
+    },
+    "deranged": {
+      "n": 32,
+      "mean": -0.2405177483443437,
+      "sd": 0.09153226948520668,
+      "min": -0.39604418062053925,
+      "max": -0.02722706651256601
+    },
+    "paired_minus_deranged": {
+      "n": 32,
+      "mean": -0.015625,
+      "sd": 0.1650628478113672,
+      "min": -0.37500000000000044,
+      "max": 0.22916666666666652
+    }
+  },
+  "versions": {
+    "tensorflow": "2.18.1",
+    "tensorflow_probability": "0.25.0",
+    "numpy": "1.26.4",
+    "tf_keras": "tf_keras.src.optimizers.adam",
+    "device": "CPU"
+  },
+  "sha256": {
+    "rsmine/mi_estimator/VBMI_bounds.py": "55257287659e38ba5650fba7bc861904e8ed35e4bb12c9c167d0548c3ef3c25d",
+    "rsmine/coarsegrainer/cg_optimisers.py": "f63f582d3f2d9dfd2fe23211fc1da37065779ec7d07c168788dfaddc2376365a",
+    "examples/stock_glass_history_gpu.py": "b993b83c9f7fe0fa60314af1e44e28352be3093abba77c2d9fbc8e1cbad81c2f",
+    "examples/opening_numerics.py": "d6216f8d15cb8f73422d35201e1fc9a5c8de334efbb6dd351e234fd8d7df0a4a",
+    "results/opening-mechanism/numerics/lock.json": "2774d11a36a2451cb9a2dcaef52e0f9ba930ad0bc415b5b0be9dc9130fc37bb8",
+    "tfp/mutual_information.py": "fc8a6e184a20fe4d0f747587ecafcec3c824a38d7dd2b65ae5dcc39eb033f59a"
+  }
+}
