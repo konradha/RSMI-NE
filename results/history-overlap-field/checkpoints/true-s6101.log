@@ -1,0 +1,11 @@
+2026-11-26 11:09:01.760924: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1795691341.783487      33 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1795691341.790658      33 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+I0000 00:00:1795691352.664350      33 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4096 MB memory:  -> device: 0, name: NVIDIA H100 80GB HBM3, pci bus id: 0000:d8:00.0, compute capability: 9.0
+  0%|          | 0/65536 [00:00<?, ?it/s]Len dat:  65536
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795691362.791379      93 service.cc:148] XLA service 0x2aed1eccda90 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1795691362.791433      93 service.cc:156]   StreamExecutor device (0): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+I0000 00:00:1795691362.840239      93 cuda_dnn.cc:529] Loaded cuDNN version 90300
+I0000 00:00:1795691362.910370      93 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.

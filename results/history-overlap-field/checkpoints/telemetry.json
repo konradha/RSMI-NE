@@ -1,0 +1,10 @@
+[
+  {
+    "elapsed_s": 10.019069993000016,
+    "gpu": "GPU-ed1028ba-709c-d125-f9c1-886bc4b17ceb, NVIDIA H100 80GB HBM3, 0, 4, 81559, 72.14"
+  },
+  {
+    "elapsed_s": 20.09674499000002,
+    "gpu": "GPU-ed1028ba-709c-d125-f9c1-886bc4b17ceb, NVIDIA H100 80GB HBM3, 3, 27959, 81559, 120.93"
+  }
+]

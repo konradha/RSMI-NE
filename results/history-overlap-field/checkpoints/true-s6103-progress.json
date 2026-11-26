@@ -1,0 +1,27 @@
+{
+  "arm": "true",
+  "seed": 6103,
+  "adam_iterations": 1024,
+  "callback_steps": 1024,
+  "epoch": 8192,
+  "positives": 49152,
+  "parents": 48,
+  "unique_origins_per_parent": 1024,
+  "stream_sha256": "d0bbe336b2853c60a6c15b7ca46f5443e872ff3c63fc0b4e8913fe7bce0915d5",
+  "pid": 37,
+  "cpu": [
+    4
+  ],
+  "device": "NVIDIA H100 80GB HBM3",
+  "uuid": "ed1028ba-709c-d125-f9c1-886bc4b17ceb",
+  "training_start": 167.816460099,
+  "first_cuda_monotonic": 173.640840584,
+  "now_monotonic": 177.588654937,
+  "setup_s": 4.411748468000013,
+  "elapsed_s": 9.772196479999991,
+  "checkpoint_evaluation_and_wait_s": 0.0,
+  "train_mi_range_nats": [
+    -0.11756998300552368,
+    0.08795282244682312
+  ]
+}

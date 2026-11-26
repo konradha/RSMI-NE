@@ -1,0 +1,30 @@
+{
+  "arm": "displaced",
+  "seed": 6103,
+  "adam_iterations": 1023,
+  "callback_steps": 1023,
+  "epoch": 8192,
+  "positives": 49104,
+  "parents": 48,
+  "unique_origins_per_parent": 1023,
+  "stream_sha256": "d0bbe336b2853c60a6c15b7ca46f5443e872ff3c63fc0b4e8913fe7bce0915d5",
+  "pid": 38,
+  "cpu": [
+    5
+  ],
+  "device": "NVIDIA H100 80GB HBM3",
+  "uuid": "ed1028ba-709c-d125-f9c1-886bc4b17ceb",
+  "training_start": 168.873897323,
+  "first_cuda_monotonic": 174.612483812,
+  "now_monotonic": 179.104758659,
+  "setup_s": 5.501794998999998,
+  "elapsed_s": 10.230862843000011,
+  "checkpoint_evaluation_and_wait_s": 0.0,
+  "train_mi_range_nats": [
+    -2.0,
+    2.0
+  ],
+  "complete": false,
+  "error": "FloatingPointError('invalid stock training bound 4.0 at Adam step 1023')",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/stock-glass/stock_glass_history_gpu.py\", line 240, in worker\n    try: core.train_RSMI_optimiser(cg, critic, opt, dict(N_samples=EPOCH*BATCH, dimension=3), V=V, E=E, optimizer=adam, use_GPU=True)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/stock-glass/rsmine/coarsegrainer/cg_optimisers.py\", line 209, in train_RSMI_optimiser\n    pbar.update(1) # update progress bar for each iteration step\n    ^^^^^^^^^^^^^^\n  File \"/tmp/stock-glass/stock_glass_history_gpu.py\", line 216, in observe\n    raise FloatingPointError(f'invalid stock training bound {value} at Adam step {int(adam.iterations)}')\nFloatingPointError: invalid stock training bound 4.0 at Adam step 1023\n"
+}

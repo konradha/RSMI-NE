@@ -1,13 +1,16 @@
 """Source-only physical readout fits and admission-locked, whole-parent history scoring.
 
 No TensorFlow training or sampling: the six face targets are simultaneous observations.
-Run with OPENBLAS_NUM_THREADS=2. See results/history-overlap-field/design.md.
+Run with OPENBLAS_NUM_THREADS=1; six independent faces run concurrently. See results/history-overlap-field/design.md.
 """
 import argparse
 import csv
 import hashlib
 import itertools
 import json
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -155,33 +158,56 @@ def solve(fun, shape):
     return result.x.reshape(shape), [int(result.nit), err, float(result.fun)]
 
 
+def identical_features(d):
+    """Exact sufficient groups: identical parent bulk, exact counts and all 12 shape terms."""
+    order = np.argsort(d.shape_key.reshape(-1, 8000), axis=1, kind='stable')
+    order += np.arange(len(d.ids))[:, None]*8000
+    order = order.ravel()
+    cuts = np.r_[True, d.shape_key[order[1:]] != d.shape_key[order[:-1]]]
+    cuts[::8000] = True
+    first = np.flatnonzero(cuts)
+    inverse = np.empty(len(order), dtype='i4')
+    inverse[order] = np.cumsum(cuts, dtype='i4') - 1
+    return order[first], inverse, np.diff(np.r_[first, len(order)])
+
+
 def fit_base(d):
     mu = d.raw.mean(0, dtype=float).astype('f4')
     sd = np.maximum(d.raw.std(0, dtype=float), 1e-8).astype('f4')
     x = (d.raw-mu)/sd
     counts = np.bincount(d.grid, minlength=28**2)
     model = dict(mu=mu, sd=sd, cell_counts=counts, ids=d.ids)
-    offsets, slopes, priors, diag = [], [], [], []
-    for face in range(6):
+    first, _, multiplicity = identical_features(d)
+    xx = x[first].astype(float); grid = d.grid[first]; mass = multiplicity / len(d.v)
+    def per_face(face):
         y = d.y[:, face].astype(int)
         tab = np.bincount(d.grid*50+y, minlength=28**2*50).reshape(-1, 50)
         prior = (tab.sum(0)+.5)/(len(y)+25.)
         offset = np.log((tab+prior)/(counts[:, None]+1.))
         yx = np.array([np.bincount(y, weights=col, minlength=50) for col in x.T])/len(y)
+        off_observed = (tab*offset).sum()/len(y)
         def loss(v):
             w = v.reshape(x.shape[1], 50)
-            val = .5*RIDGE*(v@v)
+            val = .5*RIDGE*(v@v) - (yx*w).sum() - off_observed
             grad = RIDGE*w - yx
-            for j in range(0, len(y), 8192):
-                sl = slice(j, j+8192)
-                logits = offset[d.grid[sl]] + x[sl] @ w
-                den = logsumexp(logits, axis=1)
-                val += (den-logits[np.arange(len(den)), y[sl]]).sum()/len(y)
-                grad += x[sl].T @ np.exp(logits-den[:, None])/len(y)
+            for j in range(0, len(first), 4096):
+                sl = slice(j, j+4096)
+                logits = xx[sl] @ w + offset[grid[sl]]
+                peak = logits.max(1)
+                logits -= peak[:, None]
+                np.exp(logits, out=logits)
+                den = logits.sum(1)
+                val += mass[sl] @ (peak + np.log(den))
+                logits *= (mass[sl]/den)[:, None]
+                grad += xx[sl].T @ logits
             return val, grad.ravel()
         w, log = solve(loss, (x.shape[1], 50))
-        offsets.append(offset); slopes.append(w); priors.append(np.log(prior)); diag.append(log)
-    model.update(offset=np.stack(offsets), slopes=np.stack(slopes), prior=np.stack(priors), base_solver=np.array(diag))
+        print('BASE_FACE', FACES[face], 'iterations/gradient/NLL', log, flush=True)
+        return offset, w, np.log(prior), log
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        offsets, slopes, priors, diag = zip(*pool.map(per_face, range(6)))
+    model.update(offset=np.stack(offsets), slopes=np.stack(slopes), prior=np.stack(priors), base_solver=np.array(diag),
+                 exact_feature_groups=len(first))
     return model
 
 
@@ -190,13 +216,19 @@ def probabilities(d, model, x, face, sl):
     return np.exp(logits - logsumexp(logits, axis=1, keepdims=True))
 
 
-def symbol_fit(p, y, code):
+def symbol_fit(p, y, code, inverse):
     """Fit each four-row main effect to the same categorical offset. No class balancing."""
     weights = np.zeros((4, 50)); logs = []
     for j in range(4):
         have = code == j
         counts = np.bincount(y[have], minlength=50)/len(y)
-        pp = p[have] if p.ndim == 2 else p
+        if p.ndim == 2:
+            group_count = np.bincount(inverse[have], minlength=len(p))
+            observed = group_count > 0
+            pp = p[observed]
+            mass = group_count[observed] / len(y)
+        else:
+            pp = p
         def loss(w):
             peak = w.max(); e = np.exp(w-peak)
             den = pp @ e
@@ -204,8 +236,8 @@ def symbol_fit(p, y, code):
                 normal = (np.log(den)+peak)*counts.sum()
                 gr = pp*e/den*counts.sum()
             else:
-                normal = (np.log(den).sum()+peak*len(den))/len(y)
-                gr = (pp.T @ (1./den))*(e/len(y))
+                normal = mass @ np.log(den) + peak*counts.sum()
+                gr = (pp.T @ (mass/den))*e
             return normal-counts@w + .5*RIDGE*(w@w), gr-counts+RIDGE*w
         weights[j], log = solve(loss, (50,)) if have.any() else (np.zeros(50), [0, 0., 0.])
         logs.append(log)
@@ -229,15 +261,18 @@ def codes(d, ck, head):
 
 def fit_heads(d, model, batch):
     x = std_design(d, model)
-    for face in range(6):
-        p = probabilities(d, model, x, face, slice(None))
+    first, inverse, _ = identical_features(d)
+    def per_face(face):
+        p = probabilities(d, model, x, face, first)
         for record in batch:
             head, labels = record['head'], record['code']
             for k, h in enumerate(labels):
                 for mode, pp in enumerate((np.exp(model['prior'][face]), p)):
-                    w, log = symbol_fit(pp, d.y[:, face], h)
+                    w, log = symbol_fit(pp, d.y[:, face], h, inverse)
                     head['w'][mode, k, face] = w
                     head['solver'][mode, k, face] = log
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(per_face, range(6)))
 
 
 def physical_scores(d, model, batch):
@@ -246,24 +281,33 @@ def physical_scores(d, model, batch):
     targets = (d.y, d.target(True))
     for r in batch:
         r['scores'] = np.zeros((2, 2, 4, len(d.ids)))
-    for face in range(6):
-        for start in range(0, len(d.v), 8000):
-            parent = start//8000
-            sl = slice(start, start+8000)
+    params = {}
+    for face, mode in itertools.product(range(6), range(2)):
+        weights = np.stack([r['head']['w'][mode,:,face] for r in batch])
+        weights -= weights.max(-1, keepdims=True)
+        params[face, mode] = weights, np.exp(weights).reshape(-1, 50).T
+    def per_parent(parent):
+        sl = slice(parent*8000, (parent+1)*8000)
+        idx = np.arange(8000)
+        for face in range(6):
             ys = [t[sl, face] for t in targets]
-            idx = np.arange(8000)
             conditional = probabilities(d, model, x, face, sl)
             for mode, p in enumerate((np.exp(model['prior'][face]), conditional)):
+                weights, kernel = params[face, mode]
+                den = p @ kernel
                 base = [np.log(p[y] if not mode else p[idx, y]) for y in ys]
-                for r in batch:
+                base_mean = [v.mean() for v in base]
+                for j,r in enumerate(batch):
                     s = r['scores'][:, mode, :, parent]
-                    s[:, 0] += [u.mean() for u in base]
+                    s[:, 0] += base_mean
                     for k, h in enumerate(r['code'][:, sl]):
-                        w = r['head']['w'][mode, k, face]
-                        w = w - w.max(1, keepdims=True)
-                        norm = np.log((p @ np.exp(w).T)[idx, h] if mode else (p @ np.exp(w).T)[h])
+                        w = weights[j, k]
+                        four = den[..., (3*j+k)*4:(3*j+k+1)*4]
+                        norm = np.log(four[idx,h] if mode else four[h])
                         for t in range(2):
                             s[t, k+1] += (base[t]+w[h, ys[t]]-norm).mean()
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(per_parent, range(len(d.ids))))
     for r in batch:
         r['scores'] /= (6*LN2)
         if not np.isfinite(r['scores']).all():
@@ -272,6 +316,10 @@ def physical_scores(d, model, batch):
 
 def checkpoint(a, arm, seed, depth):
     p = a.checkpoints/f'{arm}-s{seed}-u{depth}.npz'
+    rec = json.loads(p.with_suffix('.json').read_text())
+    if (rec['valid'] is not True or rec['weights_and_adam_finite'] is not True
+            or rec['step'] != depth or rec['sha256'] != digest(p)):
+        raise ValueError(f'Unregistered or invalid six-arm training checkpoint: {p.name}')
     with np.load(p, allow_pickle=False) as z:
         ck = {k:z[k] for k in z.files}
     if int(ck['adam_iterations'].item()) != depth or not all(np.isfinite(v).all() for v in ck.values() if v.dtype.kind in 'fc'):
@@ -292,20 +340,19 @@ def fields(path):
         return {k:z[k] for k in z.files}
 
 
-def fit_examples(d, h):
-    """Label the pretraining illustration: first eligible FIT parent, compact/diffuse at 20 occupied, 4 changed."""
-    occ, changed = 20, 4
-    bond = d.raw[:, 1:4].sum(1)
-    for j in range(len(d.ids)):
-        ii = j*8000 + np.flatnonzero(d.grid[j*8000:(j+1)*8000] == occ*28+changed)
-        if not len(ii) or np.ptp(bond[ii]) == 0:
-            continue
-        pair = (ii[np.argmin(bond[ii])], ii[np.argmax(bond[ii])])
+def fit_examples(d, h, path):
+    """Append frozen symbols to the published pretraining FIT geometry; never reselect."""
+    fixed = json.loads(path.read_text())
+    occ, changed = fixed['n_initially_occupied'], fixed['n_changed']
+    j, = np.flatnonzero(d.ids == int(fixed['parent']))
+    pair = [8000*j + r['flat_index'] for r in fixed['rows']]
+    if all(d.grid[n] == 28*occ+changed and np.array_equal(d.v[n].reshape(3,3,3), r['ternary'])
+           for n,r in zip(pair, fixed['rows'])):
         return [dict(id=str(d.ids[j]), center=list(map(int, np.unravel_index(n%8000, (20,)*3))),
                      symbol=int(h[n]), initial_occupied=occ, changed=changed, axial_bonds=d.raw[n, 1:4].astype(int).tolist(),
                      face_counts=d.raw[n, 4:10].astype(int).tolist(), planes=d.raw[n, 10:13].astype(int).tolist(),
                      field_zyx=d.v[n].reshape(3, 3, 3).tolist()) for n in pair]
-    return []
+    raise ValueError('Published pretraining FIT representatives do not reproduce')
 
 
 def support(d, model):
@@ -370,6 +417,23 @@ def code_counts(labels):
     return np.stack([np.stack([np.bincount(hh, minlength=4) for hh in h.reshape(-1, 8000)]) for h in labels])
 
 
+def prepare_base(a):
+    dest = model_path(a)
+    if dest.exists() or (a.out/'readout-freeze.json').exists():
+        raise FileExistsError('Conditional source base is already fitted or frozen')
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    start = time.monotonic()
+    train = bank(a, 0, 500, 80, 'fit')
+    sha = digest(source_paths(a)['fit'])
+    model = fit_base(train)
+    np.savez_compressed(dest, **model, fit_sha256=sha)
+    np.savez_compressed(dest.parent/'fit-support.npz', **support(train, model))
+    dump(dest.parent/'base-receipt.json', dict(completed_utc=datetime.now(timezone.utc).isoformat(), seconds=time.monotonic()-start,
+         fit_map_sha256=sha, base_sha256=digest(dest), parents=len(train.ids), centers_per_parent=8000,
+         exact_feature_groups=model['exact_feature_groups'], face_order=FACES, face_solver=model['base_solver'].tolist(),
+         solver_columns=['iterations','max_abs_gradient','penalized_nll_nats'], test_access=False))
+
+
 def fit(a):
     if training_record(a, a.depth).exists() or (a.out/'readout-freeze.json').exists():
         raise FileExistsError('Readout already registered or frozen')
@@ -391,9 +455,10 @@ def fit(a):
         head = dict(w=np.empty((2, 3, 6, 4, 50)), solver=np.empty((2, 3, 6, 4, 3)))
         labels = codes(train, ck, head)
         head['fit_counts'] = code_counts(labels)
-        examples[f'{arm}-{seed}'] = fit_examples(train, labels[0])
+        examples[f'{arm}-{seed}'] = fit_examples(train, labels[0], a.out/'same-count-examples.json')
         batch.append(dict(arm=arm, seed=seed, ck=ck, cksha=digest(path), head=head, code=labels))
-    np.savez_compressed(basepath.parent/'fit-support.npz', **support(train, model))
+    if not (basepath.parent/'fit-support.npz').exists():
+        np.savez_compressed(basepath.parent/'fit-support.npz', **support(train, model))
     fit_heads(train, model, batch)
     dev = bank(a, 0, 500, 80, 'dev')
     if not set(train.ids).isdisjoint(dev.ids):
@@ -406,6 +471,9 @@ def fit(a):
     for r in batch:
         head, s = r['head'], r['scores']
         h, precision = critic_scores(dev, r)
+        ref = np.stack([r['ck'][f'dev_{arm}_scores'][:, 4:6].mean(0) for arm in ARMS])
+        if not np.allclose(h.mean(axis=-1), ref, rtol=2e-9, atol=1e-9):
+            raise ValueError(f'Host and checkpoint portable DEV estimates disagree: {h.mean(axis=-1)} vs {ref}')
         # Actual true-shell conditional DEV score; never use TEST to choose comparator.
         selected = int(np.argmax(s[0, 1, 2:].mean(axis=-1)))
         p = head_path(a, r['arm'], r['seed'], a.depth)
@@ -426,8 +494,16 @@ def freeze(a):
     if dest.exists():
         raise FileExistsError('Existing readout freeze must not be replaced')
     src = {k:digest(v) for k,v in source_paths(a).items()}
+    wave = json.loads((a.checkpoints/'wave.json').read_text())
+    decision = json.loads((a.checkpoints/'depth-decision.json').read_text())
+    gpu = json.loads((a.out/'gpu-completion.json').read_text())
+    if (wave['complete'] is not True or wave['workers']!=6 or decision['selected_depth']!=a.depth
+            or gpu['selected_depth']!=a.depth or gpu['actual_updates']!=6*a.depth):
+        raise ValueError('GPU wave incomplete or selected depth inconsistent; assessment forbidden')
     base = digest(model_path(a))
     lock = dict(selected_depth=a.depth, depths=depths, base_sha256=base, source_maps=src, heads={}, receipts={},
+                frozen_utc=datetime.now(timezone.utc).isoformat(), gpu_completion_sha256=digest(a.out/'gpu-completion.json'),
+                depth_decision_sha256=digest(a.checkpoints/'depth-decision.json'),
                 readout_script_sha256=digest(Path(__file__)), gpu_script_sha256=digest(Path(__file__).with_name('stock_glass_history_gpu.py')),
                 design_sha256=digest(a.out/'design.md'), split_sha256=digest(a.out/'split.csv'))
     for depth in depths:
@@ -456,6 +532,8 @@ def admit(a):
     lock = json.loads(freeze_path.read_text())
     if (lock['base_sha256'] != digest(model_path(a)) or lock['design_sha256'] != digest(a.out/'design.md')
             or lock['split_sha256'] != digest(a.out/'split.csv')
+            or lock['gpu_completion_sha256'] != digest(a.out/'gpu-completion.json')
+            or lock['depth_decision_sha256'] != digest(a.checkpoints/'depth-decision.json')
             or lock['readout_script_sha256'] != digest(Path(__file__))
             or lock['gpu_script_sha256'] != digest(Path(__file__).with_name('stock_glass_history_gpu.py'))):
         raise ValueError('Changed frozen implementation, design or readout base')
@@ -621,7 +699,7 @@ def assess(a):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('action', choices=('fit','freeze','assess'))
+    p.add_argument('action', choices=('base','fit','freeze','assess'))
     p.add_argument('--work', type=Path, default=WORK)
     p.add_argument('--out', type=Path, default=OUT)
     p.add_argument('--checkpoints', type=Path)
@@ -630,9 +708,9 @@ def main():
     a = p.parse_args()
     if a.checkpoints is None:
         a.checkpoints = a.out/'checkpoints'
-    if a.action!='assess' and a.depth is None:
+    if a.action in ('fit','freeze') and a.depth is None:
         p.error('--depth is required for fit and freeze')
-    {'fit':fit,'freeze':freeze,'assess':assess}[a.action](a)
+    {'base':prepare_base,'fit':fit,'freeze':freeze,'assess':assess}[a.action](a)
 
 
 if __name__ == '__main__':

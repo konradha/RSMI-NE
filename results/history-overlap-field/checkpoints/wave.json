@@ -1,0 +1,5 @@
+{
+  "complete": false,
+  "error": "RuntimeError('worker failure: [None, None, None, None, None, 1]')",
+  "wall_s": 27.16285806000002
+}

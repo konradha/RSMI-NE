@@ -1,0 +1,17 @@
+{
+  "kind": "local synthetic CPU engineering check, not a study fit or CUDA receipt",
+  "tensorflow": "2.18.1", "tensorflow_probability": "0.25.0", "legacy_keras": true,
+  "optimizer": "pinned stock train_RSMI_optimiser calling Adam.apply_gradients",
+  "synthetic_rows": 96, "synthetic_batch_size": 48, "synthetic_updates": 2,
+  "calls_on_real_study_outcomes": 0,
+  "observed": {
+    "parent_order": "Verified all 8192 batch rows are permutations of 48 indices; each parent's first 8000 origins form a permutation of all translations, last 192 equal first 192.",
+    "geometry": "Core, shell and displaced lookup indices exactly matched separate coordinate calculation at 19 seeded torus origins.",
+    "frozen_checkpoint": "Observed actual stock tqdm call site after Adam step 2, copied encoder/critic and checked first/final state; graceful DepthStop worked without restarting stock.",
+    "critic_topology": "Float32 independent E 772->32->32->32->8 and H 2->32->32->32->8. Three ReLUs per tower; dropout off during inference; each dense layer has kernel and bias. Score matrix rows=H, columns=E.",
+    "dev_panels": 128, "synthetic_dev_parents_per_panel": 16, "max_stock_vs_stable_true_difference_bits": 3.677352818972496e-7, "max_portable_vs_stable_true_difference_bits": 3.4595535290671275e-8,
+    "ordered_hard_codes": "Array of exported codes verified against 2*(logit0>=0)+(logit1>=0).",
+    "authorized_inputs": {"b0-a500-q80-fit.npz": "f28a4cbc2b134a5394f95ab56976ff0d49820243673c6a8708c55c224b367790", "b0-a500-q80-dev.npz": "89779fd5850f98db486e73fb5d112d5d4bd9dc5300bac3c8484043f8ff0319ec"},
+    "offline_wheel_manifest": "Matched pinned launch manifest exactly. No TEST bank read or synthesized."
+  }
+}

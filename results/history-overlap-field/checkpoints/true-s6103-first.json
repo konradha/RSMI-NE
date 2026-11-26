@@ -1,0 +1,48 @@
+{
+  "arm": "true",
+  "seed": 6103,
+  "adam_iterations": 1,
+  "callback_steps": 1,
+  "epoch": 8192,
+  "positives": 48,
+  "parents": 48,
+  "unique_origins_per_parent": 1,
+  "stream_sha256": "d0bbe336b2853c60a6c15b7ca46f5443e872ff3c63fc0b4e8913fe7bce0915d5",
+  "pid": 37,
+  "cpu": [
+    4
+  ],
+  "device": "NVIDIA H100 80GB HBM3",
+  "uuid": "ed1028ba-709c-d125-f9c1-886bc4b17ceb",
+  "training_start": 167.816460099,
+  "first_cuda_monotonic": 173.640840584,
+  "now_monotonic": 173.64232159,
+  "setup_s": 4.411748468000013,
+  "elapsed_s": 5.825862839999985,
+  "checkpoint_evaluation_and_wait_s": 0.0,
+  "train_mi_range_nats": [
+    -0.010562524199485779,
+    -0.010562524199485779
+  ],
+  "placement": [
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0",
+    "/job:localhost/replica:0/task:0/device:GPU:0"
+  ]
+}

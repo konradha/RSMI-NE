@@ -1,0 +1,19 @@
+{
+  "as_of_utc": "2026-11-26T11:09:57.688979+00:00",
+  "provider_api": "Authenticated Workspace.billing.report(start=2026-11-26T11:00Z,end=2026-11-26T12:00Z,resolution='h'), filtered by exact app ID",
+  "interval_open": true, "invoice_final": false,
+  "gross_reported_so_far_usd": "0.19626580",
+  "resource_breakdown_so_far_usd": {"H100": "0.16677779", "CPU": "0.01597689", "Memory": "0.01351111"},
+  "reported_project_cumulative_so_far_usd": "7.20304155", "project_remaining_on_reported_rows_usd": "17.79695845",
+  "observation": "App-attributed provider row was already available after termination. The billing hour was still open, so the row may not contain the entire final interval. It is not an invoice or proof of remaining workspace credit. Do not add it to the estimate below.",
+  "sandbox": "sb-GQZEBU37Dt4GOBETN0BXJr", "app": "ap-zhgY5crGUsSFqqDIAX2Da9",
+  "portal": "https://modal.com/id/sb-GQZEBU37Dt4GOBETN0BXJr",
+  "seconds_creation_request_through_termination": 185.2452321499586, "h100_wall_hours_local": 0.05145701,
+  "full_requested_host_plus_gpu_rate_usd_per_hour": "6.045200",
+  "conservative_wall_rate_estimate_usd_before_egress": "0.31106791",
+  "artifact_transfer_bytes": 3775, "artifact_egress_at_list_rate_usd": "0.00000014",
+  "assumed_max_egress_allowance_usd": "0.04000",
+  "estimated_actual_wall_cost_with_entire_egress_allowance_rounded_up_usd": "0.35106792",
+  "reservation_max_usd": "2.21795123", "hard_cap_usd": "2.22",
+  "reconcile_after_interval": "Using the authenticated Modal CLI environment, run python examples/stock_glass_history_dispatch.py billing after 2026-11-26T12:00Z. It filters by the actual app and writes billing.json. No allocation or retry."
+}

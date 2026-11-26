@@ -1,0 +1,25 @@
+2026-11-26 11:09:01.760850: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1795691341.783483      36 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1795691341.790460      36 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+I0000 00:00:1795691352.733492      36 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4096 MB memory:  -> device: 0, name: NVIDIA H100 80GB HBM3, pci bus id: 0000:d8:00.0, compute capability: 9.0
+  0%|          | 0/65536 [00:00<?, ?it/s]Len dat:  65536
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795691363.076913      96 service.cc:148] XLA service 0x2b3bbade4200 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1795691363.076996      96 service.cc:156]   StreamExecutor device (0): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+I0000 00:00:1795691363.100515      96 cuda_dnn.cc:529] Loaded cuDNN version 90300
+I0000 00:00:1795691363.171139      96 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+Traceback (most recent call last):
+  File "/tmp/stock-glass/stock_glass_history_gpu.py", line 320, in <module>
+    if a.cmd=='worker': worker(a.slot)
+                        ^^^^^^^^^^^^^^
+  File "/tmp/stock-glass/stock_glass_history_gpu.py", line 240, in worker
+    try: core.train_RSMI_optimiser(cg, critic, opt, dict(N_samples=EPOCH*BATCH, dimension=3), V=V, E=E, optimizer=adam, use_GPU=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/stock-glass/rsmine/coarsegrainer/cg_optimisers.py", line 209, in train_RSMI_optimiser
+    pbar.update(1) # update progress bar for each iteration step
+    ^^^^^^^^^^^^^^
+  File "/tmp/stock-glass/stock_glass_history_gpu.py", line 216, in observe
+    raise FloatingPointError(f'invalid stock training bound {value} at Adam step {int(adam.iterations)}')
+FloatingPointError: invalid stock training bound 4.0 at Adam step 718
+  0%|          | 0/65536 [00:08<?, ?it/s]

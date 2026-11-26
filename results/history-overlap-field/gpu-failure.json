@@ -1,0 +1,9 @@
+{
+  "error": "Displaced stock seeds 6102 and 6103 reported InfoNCE=4.0 nats above the mathematical maximum ln(48)=3.8712010109. Full per-worker exception traces in checkpoints/displaced-s6102-failure.json and displaced-s6103-failure.json. The wave stopped at its first observed worker exit.",
+  "app": "ap-zhgY5crGUsSFqqDIAX2Da9",
+  "observed_updates_lower_bound": 3791,
+  "completed_fits": 0,
+  "fixed_checkpoints_saved": 0,
+  "retry": false,
+  "readout_or_scientific_conclusion": null
+}

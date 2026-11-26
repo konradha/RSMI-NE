@@ -1,5 +1,5 @@
 {
-  "state": "gpu_running",
+  "state": "failed",
   "experiment": "history-overlap-field",
   "gate": "passed",
   "gate_receipt": "gate.json",
@@ -10,9 +10,14 @@
   ],
   "paid_admission": "released",
   "gpu_id": "sb-GQZEBU37Dt4GOBETN0BXJr",
-  "optimizer_updates": 0,
-  "modal_spend_usd": 0,
+  "optimizer_updates": 3791,
+  "optimizer_updates_semantics": "Attested lower bound. Two failed workers have exact final Adam iterations; four interrupted workers only last saved progress. No fit completed.",
+  "completed_fits": 0,
+  "modal_spend_usd": 0.19626580,
+  "modal_spend_semantics": "App-attributed provider gross reported so far, 2026-11-26T11:09:57.688979Z; open billing hour, not final. See billing-observed.json for estimate and later reconciliation.",
+  "test_unsealed": false,
   "scope": "Existing local-only physical histories; closed static Gate 2 excluded. No new MCMC.",
   "portal": "https://modal.com/id/sb-GQZEBU37Dt4GOBETN0BXJr",
-  "gross_reservation_usd": "2.217951222222222222222222222"
+  "gross_reservation_usd": "2.217951222222222222222222222",
+  "reason": "Two displaced fits returned stock InfoNCE=4.0 nats > ln(48)=3.8712010109, at Adam steps 718 and 1023. All six stopped before the first required checkpoint; sandbox terminated, no retry."
 }
