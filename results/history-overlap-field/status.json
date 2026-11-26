@@ -1,13 +1,18 @@
 {
-  "state": "gate_passed",
+  "state": "gpu_running",
   "experiment": "history-overlap-field",
   "gate": "passed",
   "gate_receipt": "gate.json",
   "gate_parent_delta": 0.2199140842484355,
-  "gate_parent_ci95": [0.10234211211503574, 0.33359623039210784],
-  "paid_admission": "Authorized to submit one H100 after refreshing metered usage, rates and project ledger under $2.22 hard bound; $165 workspace reference is user-stated, not independently verified",
-  "gpu_id": null,
+  "gate_parent_ci95": [
+    0.10234211211503574,
+    0.33359623039210784
+  ],
+  "paid_admission": "released",
+  "gpu_id": "sb-GQZEBU37Dt4GOBETN0BXJr",
   "optimizer_updates": 0,
   "modal_spend_usd": 0,
-  "scope": "Existing local-only physical histories; closed static Gate 2 excluded. No new MCMC."
+  "scope": "Existing local-only physical histories; closed static Gate 2 excluded. No new MCMC.",
+  "portal": "https://modal.com/id/sb-GQZEBU37Dt4GOBETN0BXJr",
+  "gross_reservation_usd": "2.217951222222222222222222222"
 }
