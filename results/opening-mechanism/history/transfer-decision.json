@@ -1,0 +1,107 @@
+{
+  "held_source": {
+    "opening": {
+      "all_parents": 64,
+      "ci95": [
+        0.01967784884648341,
+        0.02201464008053083
+      ],
+      "ci_width": 0.0023367912340474216,
+      "coverage": 0.5747669270833333,
+      "high_minus_low": 0.020847292480276985,
+      "interpretation": "interval straddles meaningful margin",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "opening+packing": {
+      "all_parents": 64,
+      "ci95": [
+        0.01831344828720773,
+        0.020561385808922042
+      ],
+      "ci_width": 0.0022479375217143126,
+      "coverage": 0.5367421875,
+      "high_minus_low": 0.019427665517519233,
+      "interpretation": "interval straddles meaningful margin",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "packing": {
+      "all_parents": 64,
+      "ci95": [
+        -0.0011051701608763113,
+        0.0008437968556789611
+      ],
+      "ci_width": 0.0019489670165552726,
+      "coverage": 0.4915481770833333,
+      "high_minus_low": -0.00013041938011507396,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    }
+  },
+  "interval": "parent percentile bootstrap, two-sided 95%",
+  "margin": 0.02,
+  "maximum_width": 0.04,
+  "pass_physical": false,
+  "true_transfer": {
+    "opening": {
+      "all_parents": 128,
+      "ci95": [
+        0.0048389859861103285,
+        0.0057490268451842585
+      ],
+      "ci_width": 0.00091004085907393,
+      "coverage": 0.601751953125,
+      "high_minus_low": 0.005286183693192262,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "opening+packing": {
+      "all_parents": 128,
+      "ci95": [
+        0.004545933242405418,
+        0.0053801687034161095
+      ],
+      "ci_width": 0.0008342354610106914,
+      "coverage": 0.5679459635416667,
+      "high_minus_low": 0.00495943222105244,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "packing": {
+      "all_parents": 128,
+      "ci95": [
+        -0.00047110709239104757,
+        0.0003287484410404511
+      ],
+      "ci_width": 0.0007998555334314987,
+      "coverage": 0.5013079427083333,
+      "high_minus_low": -7.896853911827473e-05,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    }
+  },
+  "unchanged_cuts_sha256": "630be6099d7757a462a37630b4680a8168571a367af626da0665af24f4bef9aa"
+}

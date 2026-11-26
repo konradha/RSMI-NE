@@ -1,0 +1,111 @@
+{
+  "cuts": "630be6099d7757a462a37630b4680a8168571a367af626da0665af24f4bef9aa",
+  "first_observed_by_terminal": 675594,
+  "max_within_stratum_vh_range": 0.0,
+  "note": "Observed checkpoint mismatch only; sampled return never erases an earlier event. Same-parent ages paired. The aggregate site coverage includes only pairs with both ages supported.",
+  "observed_returned_sites_full_grid": 599656,
+  "parent_curves_layout": "for each schedule_mode: [parent ordered by rank, age 300M/500M, measure, lag]",
+  "phase": "held-source",
+  "primary_gate": false,
+  "primary_lag": 1000000,
+  "protocol": "fbca6a0587fd26fe3cb06d888cdde9a1b8a3c631b9084db57e15e07342c94694",
+  "results": {
+    "decimated/opening+packing/all": {
+      "all_parents": 64,
+      "ci95": [
+        0.016599289659241626,
+        0.01881338716365335
+      ],
+      "ci_width": 0.0022140975044117224,
+      "coverage": 0.5367421875,
+      "high_minus_low": 0.017695400274814196,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening/all": {
+      "all_parents": 64,
+      "ci95": [
+        0.017760481693890554,
+        0.020017138668388633
+      ],
+      "ci_width": 0.0022566569744980787,
+      "coverage": 0.5747669270833333,
+      "high_minus_low": 0.018895058390537525,
+      "interpretation": "interval straddles meaningful margin",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/packing/all": {
+      "all_parents": 64,
+      "ci95": [
+        -0.0010113209056308368,
+        0.0008328866011011484
+      ],
+      "ci_width": 0.0018442075067319852,
+      "coverage": 0.4915481770833333,
+      "high_minus_low": -8.382048201324661e-05,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening+packing/all": {
+      "all_parents": 64,
+      "ci95": [
+        0.01831344828720773,
+        0.020561385808922042
+      ],
+      "ci_width": 0.0022479375217143126,
+      "coverage": 0.5367421875,
+      "high_minus_low": 0.019427665517519233,
+      "interpretation": "interval straddles meaningful margin",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening/all": {
+      "all_parents": 64,
+      "ci95": [
+        0.01967784884648341,
+        0.02201464008053083
+      ],
+      "ci_width": 0.0023367912340474216,
+      "coverage": 0.5747669270833333,
+      "high_minus_low": 0.020847292480276985,
+      "interpretation": "interval straddles meaningful margin",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/packing/all": {
+      "all_parents": 64,
+      "ci95": [
+        -0.0011051701608763113,
+        0.0008437968556789611
+      ],
+      "ci_width": 0.0019489670165552726,
+      "coverage": 0.4915481770833333,
+      "high_minus_low": -0.00013041938011507396,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    }
+  },
+  "right_censored_through_terminal": 92406
+}

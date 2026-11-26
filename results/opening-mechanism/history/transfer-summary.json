@@ -1,0 +1,399 @@
+{
+  "cuts": "630be6099d7757a462a37630b4680a8168571a367af626da0665af24f4bef9aa",
+  "first_observed_by_terminal": 640712,
+  "max_within_stratum_vh_range": 0.0,
+  "note": "Observed checkpoint mismatch only; sampled return never erases an earlier event. Same-parent ages paired. The aggregate site coverage includes only pairs with both ages supported.",
+  "observed_returned_sites_full_grid": 548557,
+  "parent_curves_layout": "for each schedule_mode: [parent ordered by rank, age 300M/500M, measure, lag]",
+  "phase": "transfer",
+  "primary_gate": false,
+  "primary_lag": 1000000,
+  "protocol": "fbca6a0587fd26fe3cb06d888cdde9a1b8a3c631b9084db57e15e07342c94694",
+  "results": {
+    "decimated/opening+packing/all": {
+      "all_parents": 128,
+      "ci95": [
+        0.004020558255086042,
+        0.004800108861590879
+      ],
+      "ci_width": 0.0007795506065048372,
+      "coverage": 0.5679459635416667,
+      "high_minus_low": 0.0044037003330022915,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening+packing/dev": {
+      "all_parents": 16,
+      "ci95": [
+        0.003471718465236488,
+        0.005429770796310738
+      ],
+      "ci_width": 0.00195805233107425,
+      "coverage": 0.5673229166666667,
+      "high_minus_low": 0.004428397273381075,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening+packing/fit": {
+      "all_parents": 48,
+      "ci95": [
+        0.004064026810305923,
+        0.005381988381116014
+      ],
+      "ci_width": 0.0013179615708100905,
+      "coverage": 0.567890625,
+      "high_minus_low": 0.0047160707167970845,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening+packing/test": {
+      "all_parents": 64,
+      "ci95": [
+        0.0036352451434991076,
+        0.004717760944310974
+      ],
+      "ci_width": 0.001082515800811866,
+      "coverage": 0.5681432291666667,
+      "high_minus_low": 0.0041632483100615,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening/all": {
+      "all_parents": 128,
+      "ci95": [
+        0.004257910683920462,
+        0.005114329319861711
+      ],
+      "ci_width": 0.0008564186359412487,
+      "coverage": 0.601751953125,
+      "high_minus_low": 0.004675967742293459,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening/dev": {
+      "all_parents": 16,
+      "ci95": [
+        0.003617678255702812,
+        0.005922718826001048
+      ],
+      "ci_width": 0.0023050405702982365,
+      "coverage": 0.6003333333333334,
+      "high_minus_low": 0.004744151945323616,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening/fit": {
+      "all_parents": 48,
+      "ci95": [
+        0.004288118069417097,
+        0.005602993311995584
+      ],
+      "ci_width": 0.0013148752425784869,
+      "coverage": 0.6013680555555555,
+      "high_minus_low": 0.004949182353692848,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/opening/test": {
+      "all_parents": 64,
+      "ci95": [
+        0.0038386024808043295,
+        0.005104358474968652
+      ],
+      "ci_width": 0.0012657559941643224,
+      "coverage": 0.60239453125,
+      "high_minus_low": 0.004454010732986376,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/packing/all": {
+      "all_parents": 128,
+      "ci95": [
+        -0.00046627329578236335,
+        0.0003234414507576577
+      ],
+      "ci_width": 0.000789714746540021,
+      "coverage": 0.5013079427083333,
+      "high_minus_low": -7.513997280860029e-05,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/packing/dev": {
+      "all_parents": 16,
+      "ci95": [
+        -0.001966550670110544,
+        -0.00024222385450572477
+      ],
+      "ci_width": 0.0017243268156048191,
+      "coverage": 0.4995,
+      "high_minus_low": -0.0011310342654012452,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/packing/fit": {
+      "all_parents": 48,
+      "ci95": [
+        -0.0003187433735064586,
+        0.0010577487987614147
+      ],
+      "ci_width": 0.0013764921722678734,
+      "coverage": 0.5030746527777777,
+      "high_minus_low": 0.0003647960704826381,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "decimated/packing/test": {
+      "all_parents": 64,
+      "ci95": [
+        -0.0006884054849130799,
+        0.0004070495963216416
+      ],
+      "ci_width": 0.0010954550812347214,
+      "coverage": 0.5004348958333333,
+      "high_minus_low": -0.00014111843212886787,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening+packing/all": {
+      "all_parents": 128,
+      "ci95": [
+        0.004545933242405418,
+        0.0053801687034161095
+      ],
+      "ci_width": 0.0008342354610106914,
+      "coverage": 0.5679459635416667,
+      "high_minus_low": 0.00495943222105244,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening+packing/dev": {
+      "all_parents": 16,
+      "ci95": [
+        0.0040667201651792126,
+        0.006297225128488912
+      ],
+      "ci_width": 0.0022305049633096997,
+      "coverage": 0.5673229166666667,
+      "high_minus_low": 0.005158989944011229,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening+packing/fit": {
+      "all_parents": 48,
+      "ci95": [
+        0.0046717439411164945,
+        0.006053309577374984
+      ],
+      "ci_width": 0.0013815656362584899,
+      "coverage": 0.567890625,
+      "high_minus_low": 0.005354846423963118,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening+packing/test": {
+      "all_parents": 64,
+      "ci95": [
+        0.00403994449235854,
+        0.005208455407548054
+      ],
+      "ci_width": 0.0011685109151895138,
+      "coverage": 0.5681432291666667,
+      "high_minus_low": 0.004612982138129734,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening/all": {
+      "all_parents": 128,
+      "ci95": [
+        0.0048389859861103285,
+        0.0057490268451842585
+      ],
+      "ci_width": 0.00091004085907393,
+      "coverage": 0.601751953125,
+      "high_minus_low": 0.005286183693192262,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening/dev": {
+      "all_parents": 16,
+      "ci95": [
+        0.004215834515644022,
+        0.0068180878544253035
+      ],
+      "ci_width": 0.0026022533387812814,
+      "coverage": 0.6003333333333334,
+      "high_minus_low": 0.00546266204816721,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening/fit": {
+      "all_parents": 48,
+      "ci95": [
+        0.004890475654714964,
+        0.006305892566928936
+      ],
+      "ci_width": 0.001415416912213972,
+      "coverage": 0.6013680555555555,
+      "high_minus_low": 0.005611184089713714,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/opening/test": {
+      "all_parents": 64,
+      "ci95": [
+        0.004348193452805145,
+        0.005679610071789059
+      ],
+      "ci_width": 0.0013314166189839138,
+      "coverage": 0.60239453125,
+      "high_minus_low": 0.004998313807057437,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/packing/all": {
+      "all_parents": 128,
+      "ci95": [
+        -0.00047110709239104757,
+        0.0003287484410404511
+      ],
+      "ci_width": 0.0007998555334314987,
+      "coverage": 0.5013079427083333,
+      "high_minus_low": -7.896853911827473e-05,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 128,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/packing/dev": {
+      "all_parents": 16,
+      "ci95": [
+        -0.0017990970641984403,
+        9.67374062778683e-05
+      ],
+      "ci_width": 0.0018958344704763086,
+      "coverage": 0.4995,
+      "high_minus_low": -0.0008860844826976324,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 16,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/packing/fit": {
+      "all_parents": 48,
+      "ci95": [
+        -0.0003224710527528265,
+        0.001018164201602761
+      ],
+      "ci_width": 0.0013406352543555876,
+      "coverage": 0.5030746527777777,
+      "high_minus_low": 0.0003415862763390012,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 48,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    },
+    "full/packing/test": {
+      "all_parents": 64,
+      "ci95": [
+        -0.000762407679895082,
+        0.000385820424389274
+      ],
+      "ci_width": 0.001148228104284356,
+      "coverage": 0.5004348958333333,
+      "high_minus_low": -0.00019260566481639228,
+      "interpretation": "interval excludes meaningful positive contrast",
+      "margin_pass": false,
+      "paired_supported": 64,
+      "pass_all": false,
+      "precision_pass": true,
+      "support_pass": true
+    }
+  },
+  "right_censored_through_terminal": 895288
+}
